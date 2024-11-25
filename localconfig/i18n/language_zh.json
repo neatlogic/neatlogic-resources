@@ -4689,6 +4689,9 @@
     }
   },
   "nmtan": {
+    "getdefaultnotifypolicyapi": {
+      "getname": "获取默认通知策略信息"
+    },
     "getnotifypolicydefaulttemplateapi": {
       "getname": "获取通知策略触发点默认模板"
     },
@@ -4698,6 +4701,9 @@
     "notifypolicycopyapi": {
       "getname": "复制通知策略"
     },
+    "notifypolicygetapi": {
+      "getname": "获取通知策略信息"
+    },
     "notifypolicyhandlerlistapi": {
       "getname": "通知策略分类列表"
     },
@@ -4706,6 +4712,9 @@
     },
     "notifypolicysearchapi": {
       "getname": "搜索通知策略"
+    },
+    "notifypolicysystemparamlist": {
+      "getname": "获取通知策略系统参数列表"
     }
   },
   "nmtar": {
