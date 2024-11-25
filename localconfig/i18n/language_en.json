@@ -4637,6 +4637,9 @@
     }
   },
   "nmtan": {
+    "getdefaultnotifypolicyapi": {
+      "getname": "Get default notification policy information"
+    },
     "getnotifypolicydefaulttemplateapi": {
       "getname": "Obtain default template for notification policy trigger points"
     },
@@ -4646,6 +4649,9 @@
     "notifypolicycopyapi": {
       "getname": "Copy notification policy"
     },
+    "notifypolicygetapi": {
+      "getname": "Get notification policy information"
+    },
     "notifypolicyhandlerlistapi": {
       "getname": "Notification Policy Classification List"
     },
@@ -4654,6 +4660,9 @@
     },
     "notifypolicysearchapi": {
       "getname": "Search notification policy"
+    },
+    "notifypolicysystemparamlist": {
+      "getname": "Get the list of notification policy system parameters"
     }
   },
   "nmtar": {
