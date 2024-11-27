@@ -3842,6 +3842,20 @@
       "getname": "Modify asynchronous creation of work order data"
     }
   },
+  "nmpapm": {
+    "activeprocesstaskstepapi": {
+      "getname": "Activate work order steps"
+    },
+    "updateprocesstaskconfigapi": {
+      "getname": "Update work order flowchart configuration"
+    },
+    "updateprocesstaskformconfigapi": {
+      "getname": "Update work order form configuration"
+    },
+    "updateprocesstaskstepstatusapi": {
+      "getname": "Update the status of work order steps"
+    }
+  },
   "nmpapt": {
     "testasynccreateprocesstaskapi": {
       "getname": "Test asynchronous creation of work orders"
@@ -5387,8 +5401,11 @@
       "processtaskid": "Work Order ID",
       "processtaskidlist": "Work Order Id List",
       "processtaskinfo": "Work Order Information",
+      "processtasknextstepid": "Next work order step ID",
+      "processtasknextstepname": "Next work order step name",
       "processtaskslalist": "SLA List",
       "processtaskstepid": "Work Order Step ID",
+      "processtaskstepname": "Work order step name",
       "processuuid": "Process uuid",
       "readcomponentlist": "Read only form attribute list",
       "redosteplist": "Redo Step List",
