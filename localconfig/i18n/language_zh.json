@@ -3892,6 +3892,20 @@
       "getname": "修改异步创建工单数据"
     }
   },
+  "nmpapm": {
+    "activeprocesstaskstepapi": {
+      "getname": "激活工单步骤"
+    },
+    "updateprocesstaskconfigapi": {
+      "getname": "更新工单流程图配置"
+    },
+    "updateprocesstaskformconfigapi": {
+      "getname": "更新工单表单配置"
+    },
+    "updateprocesstaskstepstatusapi": {
+      "getname": "更新工单步骤状态"
+    }
+  },
   "nmpapt": {
     "testasynccreateprocesstaskapi": {
       "getname": "测试异步创建工单"
@@ -5439,8 +5453,11 @@
       "processtaskid": "工单id",
       "processtaskidlist": "工单Id列表",
       "processtaskinfo": "工单信息",
+      "processtasknextstepid": "下一步工单步骤Id",
+      "processtasknextstepname": "下一步工单步骤名称",
       "processtaskslalist": "sla列表",
       "processtaskstepid": "工单步骤id",
+      "processtaskstepname": "工单步骤名称",
       "processuuid": "流程uuid",
       "readcomponentlist": "只读表单属性列表",
       "redosteplist": "重做步骤列表",
