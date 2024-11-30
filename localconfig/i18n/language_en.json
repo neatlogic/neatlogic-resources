@@ -1309,6 +1309,9 @@
     "runnerconnectrefusedexception": {
       "runnerconnectrefusedexceptiona": "Runner link failed: {0}"
     },
+    "runnergrouprunnerlistemptyexception": {
+      "runnergrouprunnerlistemptyexception": "Executor group: {0} ({1}) does not have an executor"
+    },
     "runnergrouprunnernotfoundexception": {
       "runnergrouprunnernotfoundexceptionid": "The actuator group \u0027{0}\u0027 does not exist or the runner is not configured",
       "runnergrouprunnernotfoundexceptionname": "RunnerGroup: {0} Runner not configured"

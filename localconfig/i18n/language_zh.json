@@ -1338,6 +1338,9 @@
     "runnerconnectrefusedexception": {
       "runnerconnectrefusedexceptiona": "Runner 链接失败： {0}"
     },
+    "runnergrouprunnerlistemptyexception": {
+      "runnergrouprunnerlistemptyexception": "执行器组: {0} ({1}) 不存在执行器"
+    },
     "runnergrouprunnernotfoundexception": {
       "runnergrouprunnernotfoundexceptionid": "执行器组“{0}”不存在或未配置runner",
       "runnergrouprunnernotfoundexceptionname": "runnerGroup: {0}未配置runner"
