@@ -1316,8 +1316,11 @@
       "runnergrouprunnernotfoundexceptionid": "The actuator group \u0027{0}\u0027 does not exist or the runner is not configured",
       "runnergrouprunnernotfoundexceptionname": "RunnerGroup: {0} Runner not configured"
     },
+    "runnernotfoundbytagentidexception": {
+      "runnernotfoundbytagentidexception": "Cannot find the corresponding runner for tag: \u0027{0} ({1})\u0027, please check logs/taggerAndNetty.log for abnormal heartbeat"
+    },
     "runnernotfoundbytagentrunneridexception": {
-      "runnernotfoundbytagentrunneridexception": "Could not find the corresponding runner for {0}. Please check logs/tagentRegisterAndNetty.log for abnormal heartbeat"
+      "runnernotfoundbytagentrunneridexception": "Unable to find the corresponding runner \u0027{1}\u0027 for tag \u0027{0}\u0027. Please check logs/taggentReginalAndNetty.log for abnormal heartbeat"
     },
     "runnernotfoundexception": {
       "runnernotfoundexception": {

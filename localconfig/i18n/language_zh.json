@@ -1345,8 +1345,11 @@
       "runnergrouprunnernotfoundexceptionid": "执行器组“{0}”不存在或未配置runner",
       "runnergrouprunnernotfoundexceptionname": "runnerGroup: {0}未配置runner"
     },
+    "runnernotfoundbytagentidexception": {
+      "runnernotfoundbytagentidexception": "未找到tagent:\u0027{0}({1})\u0027对应的runner,请查看logs/tagentRegisterAndNetty.log,心跳异常"
+    },
     "runnernotfoundbytagentrunneridexception": {
-      "runnernotfoundbytagentrunneridexception": "未找到{0}对应的runner,请查看logs/tagentRegisterAndNetty.log,心跳异常"
+      "runnernotfoundbytagentrunneridexception": "未找到tagent:\u0027{0}({1})\u0027对应的runner\u0027{2}\u0027,请查看logs/tagentRegisterAndNetty.log,心跳异常"
     },
     "runnernotfoundexception": {
       "runnernotfoundexception": {
