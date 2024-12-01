@@ -4884,6 +4884,9 @@
     "gettenantconfigapi": {
       "getname": "获取当前租户配置信息"
     },
+    "listactivetenantapi": {
+      "getname": "获取当前激活租户"
+    },
     "listtenantconfigapi": {
       "getname": "当前租户配置信息列表"
     },

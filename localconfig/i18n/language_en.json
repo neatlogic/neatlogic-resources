@@ -4832,6 +4832,9 @@
     "gettenantconfigapi": {
       "getname": "Obtain current tenant configuration information"
     },
+    "listactivetenantapi": {
+      "getname": "Get the current activated tenant"
+    },
     "listtenantconfigapi": {
       "getname": "List of current tenant configuration information"
     },
