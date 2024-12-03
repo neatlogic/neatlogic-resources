@@ -4407,6 +4407,11 @@
   "nmta": {
     "gettagentqueueinfoapi": {
       "getname": "获取tagent会话队列信息"
+    },
+    "importtagentinfotomongodbapi": {
+      "description": {
+        "desc": "导入tagent表数据进mongodb"
+      }
     }
   },
   "nmtaa": {

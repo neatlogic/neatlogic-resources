@@ -4357,6 +4357,11 @@
   "nmta": {
     "gettagentqueueinfoapi": {
       "getname": "Get tagent session queue information"
+    },
+    "importtagentinfotomongodbapi": {
+      "description": {
+        "desc": "Import tagent table data into MongoDB"
+      }
     }
   },
   "nmtaa": {
