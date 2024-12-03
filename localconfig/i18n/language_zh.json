@@ -103,6 +103,7 @@
     "email": "邮箱",
     "emailnotify": "邮件通知",
     "embed": "内置",
+    "enabledebugmode": "是否启用debug模式",
     "encoding": "编码",
     "enddate": "结束日期",
     "endtime": "结束时间",
@@ -3901,6 +3902,9 @@
   "nmpapm": {
     "activeprocesstaskstepapi": {
       "getname": "激活工单步骤"
+    },
+    "enableprocesstaskformdebugmodeapi": {
+      "getname": "启用工单表单debug模式"
     },
     "updateprocesstaskconfigapi": {
       "getname": "更新工单流程图配置"

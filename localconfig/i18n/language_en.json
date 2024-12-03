@@ -103,6 +103,7 @@
     "email": "mailbox",
     "emailnotify": "Email notification",
     "embed": "built-in",
+    "enabledebugmode": "Do you want to enable debug mode",
     "encoding": "coding",
     "enddate": "End date",
     "endtime": "End time",
@@ -3851,6 +3852,9 @@
   "nmpapm": {
     "activeprocesstaskstepapi": {
       "getname": "Activate work order steps"
+    },
+    "enableprocesstaskformdebugmodeapi": {
+      "getname": "Enable work order form debug mode"
     },
     "updateprocesstaskconfigapi": {
       "getname": "Update work order flowchart configuration"
