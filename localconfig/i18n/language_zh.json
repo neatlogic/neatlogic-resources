@@ -3826,6 +3826,9 @@
         }
       }
     },
+    "processtaskcanreactivatesteplistapi": {
+      "getname": "当前用户可以重新激活的步骤列表"
+    },
     "processtaskcompleteapi": {
       "getname": "流转工单"
     },
