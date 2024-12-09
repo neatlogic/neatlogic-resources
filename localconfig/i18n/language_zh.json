@@ -621,6 +621,11 @@
     }
   },
   "nfcc": {
+    "config": {
+      "loadnacosproperties": {
+        "jwtsecret": "  ✖nacos或config.properties请定义jwt密钥:jwt.secret"
+      }
+    },
     "inputfrom": {
       "api": "接口调用",
       "autocollect": "自动采集",

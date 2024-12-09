@@ -621,6 +621,11 @@
     }
   },
   "nfcc": {
+    "config": {
+      "loadnacosproperties": {
+        "jwtsecret": "✖nacos Or please define the JWT key as jwt.secret in the config.properties"
+      }
+    },
     "inputfrom": {
       "api": "Interface call",
       "autocollect": "Automatic collection",
