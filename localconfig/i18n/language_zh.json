@@ -1833,6 +1833,12 @@
         "id": "根据tagent账号id(“{0}”)找不到tagent账号",
         "ipport": "根据tagent的ip:{0},port:{1}找不到tagent账号"
       }
+    },
+    "tagentnotfoundexception": {
+      "tagentnotfoundexception": {
+        "ipport": "通过ip:“{0}”和port:“{1}”找不到tagent，请重新注册",
+        "tagentidipport": "找不到tagent(id:“{0}”,ip:“{1}”,port:“{2}”)，请重新注册"
+      }
     }
   },
   "nmaac": {
