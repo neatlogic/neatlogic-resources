@@ -4375,6 +4375,9 @@
     }
   },
   "nmta": {
+    "exporttagentapi": {
+      "getname": "Export Tagent List"
+    },
     "gettagentqueueinfoapi": {
       "getname": "Get tagent session queue information"
     },
@@ -5554,7 +5557,11 @@
       "sendplaninfo": "Send Plan Information"
     },
     "tagent": {
-      "name": "Tagent"
+      "name": "Tagent",
+      "osid": "OS type ID",
+      "runnergroupid": "Runner group ID",
+      "status": "Tagent status",
+      "version": "Tagent version"
     },
     "tenant": {
       "name": "Tenant"
