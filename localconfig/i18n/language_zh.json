@@ -4425,6 +4425,9 @@
     }
   },
   "nmta": {
+    "exporttagentapi": {
+      "getname": "导出Tagent列表"
+    },
     "gettagentqueueinfoapi": {
       "getname": "获取tagent会话队列信息"
     },
@@ -5606,7 +5609,11 @@
       "sendplaninfo": "发送计划信息"
     },
     "tagent": {
-      "name": "tagent模块"
+      "name": "tagent模块",
+      "osid": "OS类型id",
+      "runnergroupid": "runner组id",
+      "status": "tagent状态",
+      "version": "tagent版本"
     },
     "tenant": {
       "name": "系统配置"
