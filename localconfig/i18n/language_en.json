@@ -3821,6 +3821,9 @@
         }
       }
     },
+    "processtaskrepeatdeleteapi": {
+      "getname": "Unbind duplicate work orders"
+    },
     "processtaskrepeatsaveapi": {
       "getname": "Mark duplicate work order interface"
     },
@@ -5446,6 +5449,7 @@
       "processuuid": "Process uuid",
       "readcomponentlist": "Read only form attribute list",
       "redosteplist": "Redo Step List",
+      "repeatprocesstaskid": "Duplicate Event Work Order ID",
       "repeatprocesstaskidlist": "List of duplicate job IDs",
       "reporter": "Agent",
       "scoretemplate": "Scoring template",
