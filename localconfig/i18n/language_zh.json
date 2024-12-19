@@ -3871,6 +3871,9 @@
         }
       }
     },
+    "processtaskrepeatdeleteapi": {
+      "getname": "解绑重复工单"
+    },
     "processtaskrepeatsaveapi": {
       "getname": "标记重复工单接口"
     },
@@ -5498,6 +5501,7 @@
       "processuuid": "流程uuid",
       "readcomponentlist": "只读表单属性列表",
       "redosteplist": "重做步骤列表",
+      "repeatprocesstaskid": "重复事件工单id",
       "repeatprocesstaskidlist": "重复工单id列表",
       "reporter": "代报人",
       "scoretemplate": "评分模板",
