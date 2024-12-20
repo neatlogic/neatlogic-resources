@@ -1998,6 +1998,9 @@
     },
     "autoexecscriptsaveapi": {
       "getname": "保存脚本"
+    },
+    "createautoexecservicejobapi": {
+      "getname": "作业创建（来自服务）"
     }
   },
   "nmaat": {
@@ -5094,6 +5097,7 @@
       "execmode": "执行方式",
       "executeconfig": "执行目标",
       "executeparam": "执行参数",
+      "executeuser": "执行用户",
       "existrunnerorsqlexecmode": "存在Runner或SQL执行方式的阶段",
       "freeparam": "自由参数",
       "globalparam": "全局参数",

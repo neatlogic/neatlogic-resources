@@ -1970,6 +1970,9 @@
     },
     "autoexecscriptsaveapi": {
       "getname": "Save Script"
+    },
+    "createautoexecservicejobapi": {
+      "getname": "Homework creation (from service)"
     }
   },
   "nmaat": {
@@ -5042,6 +5045,7 @@
       "execmode": "Execution method",
       "executeconfig": "Execution Objectives",
       "executeparam": "Execution parameters",
+      "executeuser": "Execute user",
       "existrunnerorsqlexecmode": "Stage with Runner or SQL execution mode",
       "freeparam": "Free parameter",
       "globalparam": "Global parameters",
