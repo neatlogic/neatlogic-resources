@@ -1490,6 +1490,7 @@
     "itsmtenantconfig": {
       "displaymodeaftertimeout": "Display method after work order timeout, optional values naturalTime | workTime",
       "processtaskstepenablecomment": "Work order step reply function",
+      "processtasktablayout": "Global default tab layout for work order details page, The format is {\"layoutList\": [{\"key\": \"report\",\"top\": false},{\"key\": \"node\",\"top\": false},{\"key\": \"step\",\"top\": false},{\"key\": \"activity\",\"top\": false},{\"key\": \"relevance\",\"top\": false},{\"key\": \"markrepeat\",\"top\": false},{\"key\": \"file\",\"top\": false},{\"key\": \"reportingHistory\",\"top\": false}]}",
       "slatimedisplaymode": "Display method for work order timeliness, with optional values of naturalTime | workTime",
       "workcentercustomlimit": "The \u0027Personal Category\u0027 in the work order center exceeds the limit and cannot add custom categories",
       "workcenterprocesstasknewpage": "Click on the ticket center to open a new page. The default value is 0, which means it will not be opened by default",
