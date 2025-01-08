@@ -623,7 +623,7 @@
   "nfcc": {
     "config": {
       "loadnacosproperties": {
-        "jwtsecret": "  ✖nacos或config.properties请定义jwt密钥:jwt.secret"
+        "jwtsecret": "✖请在配置文件中定义jwt.secret参数"
       }
     },
     "inputfrom": {
@@ -1501,7 +1501,7 @@
   },
   "nfne": {
     "emailsendexception": {
-      "emailsendexception": "邮件发送失败,请重试"
+      "emailsendexception": "邮件发送失败，异常：{0}"
     }
   },
   "nfpa": {
