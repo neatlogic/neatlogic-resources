@@ -2024,7 +2024,7 @@
   "nmac": {
     "autoexecconfig": {
       "loadconfig": {
-        "autoexectoken": "✖请在配置文件中定义autoexec.token参数"
+        "autoexectoken": "✖请在配置文件中定义autoexec.token参数。如果autoexec-backend的config.ini中的server.username是autoexec，则server.password必须也和autoexec.token的值一致"
       }
     }
   },
