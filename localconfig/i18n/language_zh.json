@@ -650,6 +650,11 @@
       "keeponcreate": "继续创建"
     }
   },
+  "nfccs": {
+    "systemuserfactory": {
+      "repeatexception": "存在相同的虚拟系统用户，请联系管理员"
+    }
+  },
   "nfcdc": {
     "globalattrentityvo": {
       "entityfield": {

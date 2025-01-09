@@ -650,6 +650,11 @@
       "keeponcreate": "Continue creating"
     }
   },
+  "nfccs": {
+    "systemuserfactory": {
+      "repeatexception": "There are identical virtual system users, please contact the administrator"
+    }
+  },
   "nfcdc": {
     "globalattrentityvo": {
       "entityfield": {
