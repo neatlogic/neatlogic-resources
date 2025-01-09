@@ -2021,6 +2021,13 @@
       "getname": "保存自动化工具分类"
     }
   },
+  "nmac": {
+    "autoexecconfig": {
+      "loadconfig": {
+        "autoexectoken": "✖请在配置文件中定义autoexec.token参数"
+      }
+    }
+  },
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "自定义工具版本"

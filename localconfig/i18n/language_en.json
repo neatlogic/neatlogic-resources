@@ -1993,6 +1993,13 @@
       "getname": "Save Automation Tool Classification"
     }
   },
+  "nmac": {
+    "autoexecconfig": {
+      "loadconfig": {
+        "autoexectoken": "✖ Please define the autoexec.token parameter in the configuration file"
+      }
+    }
+  },
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "Custom Tool Version"
