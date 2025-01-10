@@ -1525,6 +1525,9 @@
       "processtaskstepenablecomment": "是否工单步骤回复功能",
       "processtasktablayout": "工单详情页全局默认tab布局，格式为{\"layoutList\": [{\"key\": \"report\",\"top\": false},{\"key\": \"node\",\"top\": false},{\"key\": \"step\",\"top\": false},{\"key\": \"activity\",\"top\": false},{\"key\": \"relevance\",\"top\": false},{\"key\": \"markrepeat\",\"top\": false},{\"key\": \"file\",\"top\": false},{\"key\": \"reportingHistory\",\"top\": false}]}",
       "slatimedisplaymode": "工单时效显示方式，可选值naturalTime|workTime",
+      "steplist": {
+        "show": "工单详情页是否默认展示步骤日志,1:展开，0:收起 默认是展开"
+      },
       "workcentercustomlimit": "工单中心“个人分类”超过限制无法添加自定义分类（拥有“工单中心管理权限”的用户不受限制）",
       "workcenterprocesstasknewpage": "工单中心点击工单是否打开新页面，默认值是 0，即默认不打开",
       "workcenterrefresh": "工单中心是否自动刷新，默认值为1（自动刷新）"
