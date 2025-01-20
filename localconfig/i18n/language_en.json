@@ -5029,6 +5029,11 @@
   "nmtc": {
     "regiontype": {
       "owner": "ReportPerson "
+    },
+    "updatetagentinfothread": {
+      "init": {
+        "mongodbexception": "Tenant: {0} is unable to connect to MongoDB. Please confirm that the MongoDB service is functioning properly and verify that the authentication information for the corresponding tenant in the MongoDB table of the netlogic library is correct before trying again"
+      }
     }
   },
   "nmtwh": {
