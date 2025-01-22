@@ -1318,7 +1318,8 @@
       "rolenamerepeatexception": "Role: \u0027{0}\u0027 already exists"
     },
     "runnerconnectrefusedexception": {
-      "runnerconnectrefusedexceptiona": "Runner link failed: {0}"
+      "runnerconnectrefusedexceptiona": "Runner link failed: {0}",
+      "runnerconnectrefusedexceptionmsg": "Runner: \u0027{0}\u0027 connection failed, please check if the runner service is functioning properly and try again. Exception message: {1}"
     },
     "runnergrouprunnerlistemptyexception": {
       "runnergrouprunnerlistemptyexception": "Executor group: {0} ({1}) does not have an executor"

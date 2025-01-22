@@ -1347,7 +1347,8 @@
       "rolenamerepeatexception": "角色：“{0}”已存在"
     },
     "runnerconnectrefusedexception": {
-      "runnerconnectrefusedexceptiona": "Runner 链接失败： {0}"
+      "runnerconnectrefusedexceptiona": "Runner 链接失败： {0}",
+      "runnerconnectrefusedexceptionmsg": "执行器（runner)：“{0}” 连接失败,请检查执行器服务正常后重试。异常信息:{1}"
     },
     "runnergrouprunnerlistemptyexception": {
       "runnergrouprunnerlistemptyexception": "执行器组: {0} ({1}) 不存在执行器"
