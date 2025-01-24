@@ -5085,7 +5085,7 @@
     },
     "updatetagentinfothread": {
       "init": {
-        "mongodbexception": "租户:{0} 无法连接mongodb，请确认mongdb服务正常，并核对neatlogic库mongodb表中对应租户的认证信息正确无误后重试"
+        "mongodbexception": "租户:{0} 无法连接mongodb，请确认mongdb服务正常，并核对neatlogic库中的mongodb表对应租户的认证信息正确无误后重试"
       }
     }
   },
