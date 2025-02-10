@@ -2585,7 +2585,7 @@
         "param": {
           "desc": {
             "groupby": "分组属性的uuid",
-            "mode": "搜索模式，支持page和api两种，主要影响返回的数据结构，page是默认模式，用于页面展示，api会返回字段名，用于api调用",
+            "mode": "搜索模式，支持page和api两种，主要影响返回的数据结构，page是默认模式，用于页面展示，api会返回字段名，用于api调用，api模式仅支持searchMode=normal这种场景",
             "searchmode": "normal:视图列表模式、group:视图列表分组模式、data:数据模式"
           }
         }

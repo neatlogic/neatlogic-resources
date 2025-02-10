@@ -2557,7 +2557,7 @@
         "param": {
           "desc": {
             "groupby": "Uuid of grouping attributes",
-            "mode": "Search mode, supporting both page and API, mainly affecting the returned data structure. Page is the default mode used for page display, and the API will return field names for API calls",
+            "mode": "Search mode supports two types: page and api, which mainly affect the structure of returned data. Page is the default mode for displaying on pages, while api returns field names for api calls. Api mode only supports scenarios where searchMode=normal.",
             "searchmode": "Normal: view list mode, group: view list group mode, data: data mode"
           }
         }
