@@ -1610,7 +1610,8 @@
         "pause": "Trigger notification when authorized users pause the current step",
         "reactivate": "Trigger notification when steps are reactivated after completion",
         "recover": "Trigger notification when authorized users restore the current step",
-        "retreat": "Before the work order is completed, a notification will be triggered when a user with permission from the previous step manually withdraws the work order, and the previous step will be reprocessed",
+        "retreat": "After the current step is completed and before the next step is completed, a notification is triggered when a user with permission for the current step manually withdraws the step, and the current step is reprocessed",
+        "revoke": "Before the current step is completed, a notification will be triggered when a user with permission from the previous step manually withdraws the step, and the previous step will be reprocessed",
         "start": "Trigger notification when steps start automatically or when the processor manually starts processing",
         "succeed": "Trigger notification upon completion of steps",
         "transfer": "Triggering notification when a user with step-by-step permission transfers the processing permission of the current step to another user",
@@ -1626,6 +1627,7 @@
         "reactivate": "Steps to reactivate",
         "recover": "Step recovery",
         "retreat": "Step withdrawal",
+        "revoke": "Step revoked",
         "start": "Step start",
         "succeed": "Step successful",
         "transfer": "Step transfer",
@@ -2557,7 +2559,7 @@
         "param": {
           "desc": {
             "groupby": "Uuid of grouping attributes",
-            "mode": "Search mode supports two types: page and api, which mainly affect the structure of returned data. Page is the default mode for displaying on pages, while api returns field names for api calls. Api mode only supports scenarios where searchMode=normal.",
+            "mode": "Search mode supports two types: page and api, which mainly affect the structure of returned data. Page is the default mode for displaying on pages, while api returns field names for api calls. Api mode only supports scenarios where searchMode\u003dnormal.",
             "searchmode": "Normal: view list mode, group: view list group mode, data: data mode"
           }
         }
