@@ -1525,6 +1525,7 @@
       "displaymodeaftertimeout": "工单时效超时后显示方式，可选值naturalTime|workTime",
       "processtaskstepenablecomment": "是否工单步骤回复功能",
       "processtasktablayout": "工单详情页全局默认tab布局，格式为{\"layoutList\": [{\"key\": \"report\",\"top\": false},{\"key\": \"node\",\"top\": false},{\"key\": \"step\",\"top\": false},{\"key\": \"activity\",\"top\": false},{\"key\": \"relevance\",\"top\": false},{\"key\": \"markrepeat\",\"top\": false},{\"key\": \"file\",\"top\": false},{\"key\": \"reportingHistory\",\"top\": false}]}",
+      "processtaskworkerpolicyisonlyonceexecute": "工单步骤处理人分配策略是否只分配一次处理人，默认为0，步骤重新激活时会重新分配处理人，如果设置为1，则步骤重新激活时会用旧处理人",
       "slatimedisplaymode": "工单时效显示方式，可选值naturalTime|workTime",
       "steplist": {
         "show": "工单详情页是否默认展示步骤日志,1:展开，0:收起 默认是展开"
