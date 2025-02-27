@@ -3829,6 +3829,9 @@
     "delayprocesstaskstepslaapi": {
       "getname": "延迟工单步骤时效"
     },
+    "deleteprocesstaskstepinoperationapi": {
+      "getname": "根据工单ID删除processtask_step_in_operation表数据"
+    },
     "processconditionlist": {
       "getname": "流程条件列表",
       "input": {
@@ -3893,6 +3896,9 @@
           }
         }
       }
+    },
+    "processtaskprocessablesteplist": {
+      "getname": "当前用户可处理的步骤列表接口"
     },
     "processtaskrepeatdeleteapi": {
       "getname": "解绑重复工单"
@@ -4113,6 +4119,11 @@
       "subprocesstitle": {
         "text": "子工单标题"
       }
+    }
+  },
+  "nmpsh": {
+    "clearprocesstaskstepinoperationstartuphandler": {
+      "getname": "清除工单步骤后台执行记录表数据"
     }
   },
   "nmpwh": {
