@@ -3779,6 +3779,9 @@
     "delayprocesstaskstepslaapi": {
       "getname": "Delay the timeliness of work order steps"
     },
+    "deleteprocesstaskstepinoperationapi": {
+      "getname": "Delete data from processtask_step\u0027in_operation table based on work order ID"
+    },
     "processconditionlist": {
       "getname": "Process Condition List",
       "input": {
@@ -3843,6 +3846,9 @@
           }
         }
       }
+    },
+    "processtaskprocessablesteplist": {
+      "getname": "List interface of steps that the current user can handle"
     },
     "processtaskrepeatdeleteapi": {
       "getname": "Unbind duplicate work orders"
@@ -4063,6 +4069,11 @@
       "subprocesstitle": {
         "text": "Sub work order title"
       }
+    }
+  },
+  "nmpsh": {
+    "clearprocesstaskstepinoperationstartuphandler": {
+      "getname": "Clear the backend execution record table data of the work order steps"
     }
   },
   "nmpwh": {
