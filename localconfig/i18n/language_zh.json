@@ -3182,6 +3182,17 @@
     "importdeployapppipelineapi": {
       "getname": "导入应用流水线"
     },
+    "replacedeployappbuildapi": {
+      "getname": "替换发布作业buildNo",
+      "input": {
+        "param": {
+          "desc": {
+            "jobid": "发布作业Id",
+            "newbuildno": "新buildNo"
+          }
+        }
+      }
+    },
     "savedeployapppipelineapi": {
       "getname": "保存应用流水线"
     },

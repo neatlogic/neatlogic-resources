@@ -3154,6 +3154,17 @@
     "importdeployapppipelineapi": {
       "getname": "Import application pipeline"
     },
+    "replacedeployappbuildapi": {
+      "getname": "Replace the published homework with buildNo",
+      "input": {
+        "param": {
+          "desc": {
+            "jobid": "Publish homework ID",
+            "newbuildno": "New buildNo"
+          }
+        }
+      }
+    },
     "savedeployapppipelineapi": {
       "getname": "Save application pipeline"
     },
