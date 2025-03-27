@@ -2907,10 +2907,10 @@
       "dataconversionconfigillegalexception": "数据转换节点模型映射信息不合法：{0}"
     },
     "dataconversionleftjoinsametablemultipletimesexception": {
-      "dataconversionleftjoinsametablemultipletimesexception": "配置路径：{0}，实际路径：{1}，表格组件：{2} 被重复关联"
+      "dataconversionleftjoinsametablemultipletimesexception_a": "表格组件：{0}被重复关联"
     },
     "dataconversionleftjointablehasmultiplerowsofdataexception": {
-      "dataconversionleftjointablehasmultiplerowsofdataexception": "配置路径：{0}，实际路径：{1}，关联表格组件：{2} 得到多行数据，结果数据为：{3}"
+      "dataconversionleftjointablehasmultiplerowsofdataexception_a": "关联表格组件：{0}得到多行数据，结果数据为：{1}"
     }
   },
   "nmcdac": {

@@ -2879,10 +2879,10 @@
       "dataconversionconfigillegalexception": "The mapping information of the data conversion node model is invalid: {0}"
     },
     "dataconversionleftjoinsametablemultipletimesexception": {
-      "dataconversionleftjoinsametablemultipletimesexception": "Configuration path: {0}, actual path: {1}, table component: {2} is repeatedly associated"
+      "dataconversionleftjoinsametablemultipletimesexception_a": "Table component: {0} is repeatedly associated"
     },
     "dataconversionleftjointablehasmultiplerowsofdataexception": {
-      "dataconversionleftjointablehasmultiplerowsofdataexception": "Configuration path: {0}, actual path: {1}, associated table component: {2} obtained multiple rows of data, resulting in data of {3}"
+      "dataconversionleftjointablehasmultiplerowsofdataexception_a": "The associated table component: {0} obtains multiple rows of data, and the resulting data is: {1}"
     }
   },
   "nmcdac": {
