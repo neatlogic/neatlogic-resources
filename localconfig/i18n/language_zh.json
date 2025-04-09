@@ -1507,7 +1507,8 @@
   },
   "nfne": {
     "emailsendexception": {
-      "emailsendexception": "邮件发送失败，异常：{0}"
+      "emailsendexception": "邮件发送失败，异常：{0}",
+      "emailsendexception_a": "邮件发送失败，异常：{0}，所有收件人：{1}"
     }
   },
   "nfpa": {
