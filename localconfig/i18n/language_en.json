@@ -1479,7 +1479,8 @@
   },
   "nfne": {
     "emailsendexception": {
-      "emailsendexception": "Email sending failed, Exception:{0}"
+      "emailsendexception": "Email sending failed, Exception:{0}",
+      "emailsendexception_a": "Email sending failed, exception: {0}, all recipients: {1}"
     }
   },
   "nfpa": {
