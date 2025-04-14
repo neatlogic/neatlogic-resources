@@ -4679,6 +4679,9 @@
     }
   },
   "nmtam": {
+    "deletemailserverapi": {
+      "getname": "Delete mail server"
+    },
     "exportmatrixapi": {
       "getname": "Export Matrix"
     },
@@ -4693,6 +4696,9 @@
           }
         }
       }
+    },
+    "listmailserverapi": {
+      "getname": "Query the email server information list"
     },
     "mailservergetapi": {
       "getname": "Email server information acquisition interface"
@@ -4732,6 +4738,12 @@
     },
     "matrixsearchapi": {
       "getname": "Query matrix list"
+    },
+    "updatemailserverisactiveapi": {
+      "getname": "Update the activation status of the email server"
+    },
+    "updatemailserverisdefaultapi": {
+      "getname": "Is updating the email server default"
     }
   },
   "nmtan": {
