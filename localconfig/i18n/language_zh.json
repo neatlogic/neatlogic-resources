@@ -1329,6 +1329,11 @@
       "eventsolutionnotfoundedittargetexception": "解决方案：{0}不存在"
     }
   },
+  "nfef": {
+    "mkdirpermissiondeniedexception": {
+      "mkdirpermissiondeniedexception": "没有创建文件夹权限"
+    }
+  },
   "nfeh": {
     "homepagenamerepeatexception": {
       "homepagenamerepeatexception": "首页配置：“{0}” 已存在"
@@ -1900,6 +1905,9 @@
   "nmaaj": {
     "autoexecjobinfogetapi": {
       "getname": "获取自动化作业详情"
+    },
+    "getautoexecjobqueuestatusapi": {
+      "getname": "获取作业排队状态"
     },
     "getautoexecjobstatusapi": {
       "description": {
@@ -5163,6 +5171,7 @@
       "freeparam": "自由参数",
       "globalparam": "全局参数",
       "groupdesc": "自动化平台",
+      "groupid": "阶段组id",
       "groupname": "自动化",
       "inputparamlist": "输入参数列表",
       "islib": "是否库文件",

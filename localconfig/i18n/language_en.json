@@ -1300,6 +1300,11 @@
       "eventsolutionnotfoundedittargetexception": "Solution: {0} does not exist"
     }
   },
+  "nfef": {
+    "mkdirpermissiondeniedexception": {
+      "mkdirpermissiondeniedexception": "No permission to create folder"
+    }
+  },
   "nfeh": {
     "homepagenamerepeatexception": {
       "homepagenamerepeatexception": "Homepage configuration: \u0027{0}\u0027 already exists"
@@ -1872,6 +1877,9 @@
   "nmaaj": {
     "autoexecjobinfogetapi": {
       "getname": "Obtain automation job details"
+    },
+    "getautoexecjobqueuestatusapi": {
+      "getname": "Get the queue status of homework"
     },
     "getautoexecjobstatusapi": {
       "description": {
@@ -5111,6 +5119,7 @@
       "freeparam": "Free parameter",
       "globalparam": "Global parameters",
       "groupdesc": "Automation platform",
+      "groupid": "Stage group ID",
       "groupname": "Automation",
       "inputparamlist": "Input parameter list",
       "islib": "Is it a library file",
