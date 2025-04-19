@@ -1067,6 +1067,9 @@
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "应用系统“{0}”，模块“{1}”未关联runner"
     },
+    "deploybatchjobfirewithrevokedandcheckedexception": {
+      "deploybatchjobfirewithrevokedandcheckedexception": "无法执行，批量执行的作业:{0}({1})都是\u0027已撤销\u0027或\u0027已验证\u0027的作业"
+    },
     "deployjobnotfoundexception": {
       "deployjobnotfoundexception": {
         "appmodule": "{0}下的{1}模块尚未执行过任何作业",
@@ -3275,6 +3278,25 @@
           },
           "drscenelist": {
             "desc": "场景列表"
+          }
+        }
+      }
+    },
+    "savebluegreenapi": {
+      "getname": "保存蓝绿"
+    },
+    "saveinstancebluegreenapi": {
+      "getname": "保存实例蓝绿"
+    },
+    "searchbluegreenapi": {
+      "getname": "查询蓝绿列表",
+      "input": {
+        "param": {
+          "desc": {
+            "isactive": "是否激活(0:禁用，1：激活)",
+            "keyword": "关键词",
+            "needpage": "是否需要分页，默认true",
+            "pagesize": "每页数据条目"
           }
         }
       }

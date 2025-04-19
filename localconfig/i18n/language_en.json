@@ -1045,6 +1045,9 @@
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "Application system \u0027{0}\u0027, module \u0027{1}\u0027 is not associated with a runner"
     },
+    "deploybatchjobfirewithrevokedandcheckedexception": {
+      "deploybatchjobfirewithrevokedandcheckedexception": "Cannot execute, batch executed jobs: {0} ({1}) are all \u0027revoked\u0027 or \u0027validated\u0027 jobs"
+    },
     "deployjobnotfoundexception": {
       "deployjobnotfoundexception": {
         "appmodule": "The {1} module under {0} has not executed any jobs yet",
@@ -3247,6 +3250,25 @@
           },
           "drscenelist": {
             "desc": "Scene List"
+          }
+        }
+      }
+    },
+    "savebluegreenapi": {
+      "getname": "Save blue-green"
+    },
+    "saveinstancebluegreenapi": {
+      "getname": "Save instance blue-green"
+    },
+    "searchbluegreenapi": {
+      "getname": "Search for blue-green list",
+      "input": {
+        "param": {
+          "desc": {
+            "isactive": "Is it activated (0: disabled, 1: activated)",
+            "keyword": "keyword",
+            "needpage": "Do you need pagination? Default is true",
+            "pagesize": "Each page contains data entries"
           }
         }
       }
