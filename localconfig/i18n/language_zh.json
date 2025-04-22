@@ -540,8 +540,14 @@
     }
   },
   "nfaej": {
+    "autoexecjobfirenextgroupexception": {
+      "autoexecjobfirenextgroupexception": "作业激活下一个阶段组{0}失败：{1}"
+    },
     "autoexecjobnotfoundedittargetexception": {
       "autoexecjobnotfoundedittargetexception": "作业：{0}不存在"
+    },
+    "autoexecjobtargetorrunnernotfoundexception": {
+      "autoexecjobtargetorrunnernotfoundexception": "不存在执行目标或执行器组。可能存在阶段的目标来源于上游阶段工具出参，然而上游阶段不存在或设置目标失败"
     }
   },
   "nfaes": {

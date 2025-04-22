@@ -540,8 +540,14 @@
     }
   },
   "nfaej": {
+    "autoexecjobfirenextgroupexception": {
+      "autoexecjobfirenextgroupexception": "Task activation for next stage group {0} failed: {1}"
+    },
     "autoexecjobnotfoundedittargetexception": {
       "autoexecjobnotfoundedittargetexception": "Assignment: {0} does not exist"
+    },
+    "autoexecjobtargetorrunnernotfoundexception": {
+      "autoexecjobtargetorrunnernotfoundexception": "There is no execution target or actuator group"
     }
   },
   "nfaes": {
