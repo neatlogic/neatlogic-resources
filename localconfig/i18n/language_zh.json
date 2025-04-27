@@ -483,6 +483,11 @@
       "autoexecjobphasenodenotfoundexceptionb": "作业阶段：“{0}” 节点“{1}”不存在",
       "autoexecjobphasenodenotfoundexceptionc": "作业剧本：“{0}” 节点“{1}” 资产id不存在"
     },
+    "autoexecjobrunnernotfoundexception": {
+      "autoexecjobrunnernotfoundexceptiona": "执行器（runner）id:{0}不存在",
+      "autoexecjobrunnernotfoundexceptionb": "根据作业id：{0}，作业阶段id：{1}，执行器（runner不存在",
+      "autoexecjobrunnernotfoundexceptionc": "执行器（runner）名:{0}不存在"
+    },
     "autoexecparamcannotbeemptyexception": {
       "autoexecparamcannotbeemptyexception": "阶段[{0}] 工具[{1}]的参数：{2}不能为空"
     },
