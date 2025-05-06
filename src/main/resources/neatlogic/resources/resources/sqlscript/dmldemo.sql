@@ -82,10 +82,6 @@ INSERT IGNORE INTO `autoexec_global_param` VALUES (651159933034500, 'sql.extname
 -- ----------------------------
 
 -- ----------------------------
--- Records of autoexec_job_phase_node_runner
--- ----------------------------
-
--- ----------------------------
 -- Records of autoexec_job_phase_operation
 -- ----------------------------
 
