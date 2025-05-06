@@ -3225,6 +3225,9 @@
     }
   },
   "nmdaae": {
+    "deletedeployappconfiginstanceapi": {
+      "getname": "删除发布应用配置的应用模块环境的实例"
+    },
     "listdeployappconfigenvattrapi": {
       "getname": "查询应用环境属性",
       "input": {
@@ -3274,6 +3277,9 @@
     }
   },
   "nmdab": {
+    "batchsaveinstancebluegreenapi": {
+      "getname": "批量保存实例蓝绿"
+    },
     "getsettingsapi": {
       "description": {
         "desc": "获取基础设置相关信息接口"

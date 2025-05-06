@@ -3197,6 +3197,9 @@
     }
   },
   "nmdaae": {
+    "deletedeployappconfiginstanceapi": {
+      "getname": "Delete instances of application module environments that publish application configurations"
+    },
     "listdeployappconfigenvattrapi": {
       "getname": "Query application environment properties",
       "input": {
@@ -3246,6 +3249,9 @@
     }
   },
   "nmdab": {
+    "batchsaveinstancebluegreenapi": {
+      "getname": "Batch save instances blue-green"
+    },
     "getsettingsapi": {
       "description": {
         "desc": "Interface for obtaining basic settings related information"
