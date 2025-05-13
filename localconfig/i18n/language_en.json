@@ -5053,6 +5053,9 @@
         }
       }
     },
+    "usergetforeditapi": {
+      "getname": "Retrieve user information (dedicated for editing page display)"
+    },
     "userprofilelistapi": {
       "getname": "User personalized query list interface"
     },

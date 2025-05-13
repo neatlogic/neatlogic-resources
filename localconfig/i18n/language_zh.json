@@ -5105,6 +5105,9 @@
         }
       }
     },
+    "usergetforeditapi": {
+      "getname": "获取用户信息(编辑页面回显专用)"
+    },
     "userprofilelistapi": {
       "getname": "用户个性化查询列表接口"
     },
