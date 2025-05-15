@@ -3243,6 +3243,9 @@
     },
     "savedeployappconfigenvattrapi": {
       "getname": "保存应用环境属性"
+    },
+    "savedeployappconfigenvdbapi": {
+      "getname": "保存发布应用配置资产配置项数据"
     }
   },
   "nmdaam": {

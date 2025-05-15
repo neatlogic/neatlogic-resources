@@ -3215,6 +3215,9 @@
     },
     "savedeployappconfigenvattrapi": {
       "getname": "Save application environment properties"
+    },
+    "savedeployappconfigenvdbapi": {
+      "getname": "Save and publish application configuration asset configuration item data"
     }
   },
   "nmdaam": {
