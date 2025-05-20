@@ -527,7 +527,8 @@
       "autoexecrunnergroupnotfoundbytagexception": "According to tag \u0027{0}\u0027, the actuator group cannot be found"
     },
     "autoexecrunnergrouptaginvalidexception": {
-      "autoexecrunnergrouptaginvalidexception": "The tag value \u0027{0}\u0027 for the actuator group is illegal and must be an array"
+      "autoexecrunnergrouptaginvalidexception": "The tag value \u0027{0}\u0027 for the actuator group is illegal and must be an array",
+      "autoexecrunnergrouptaginvalidexceptiona": "The tag value \u0027{1}\u0027 for the {0} executor group in homework stage is illegal. The tag does not exist or is not an array. If the page control has no value, it means that the tag has been deleted and the dropdown box needs to be cleared, reconfigured, and saved"
     },
     "autoexecrunnergrouptagnotmatchexception": {
       "autoexecrunnergrouptagnotmatchexception": "The actuator group \u0027{0}\u0027 is not within the range of label \u0027{1}\u0027"
@@ -2039,6 +2040,11 @@
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "Custom Tool Version"
+    }
+  },
+  "nmajsa": {
+    "autoexecjobsourcetypehandler": {
+      "getrunnermaplist": "school assignment"
     }
   },
   "nmas": {
