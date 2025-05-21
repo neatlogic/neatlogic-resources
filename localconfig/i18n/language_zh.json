@@ -475,6 +475,9 @@
     "autoexeccombopoperationnotfoundexception": {
       "autoexeccombopoperationnotfoundexception": "阶段[{0}] 工具[{1}]已被删除，请在组合工具中清理该工具并保存"
     },
+    "autoexecjobdeleteexception": {
+      "autoexecjobdeleteexception": "{0}({1})清理自动化作业失败"
+    },
     "autoexecjobnotsupportmultiparentexception": {
       "autoexecjobnotsupportmultiparentexception": "父作业{0}已经存在父作业,一个作业最多支持2个父作业"
     },

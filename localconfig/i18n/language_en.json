@@ -475,6 +475,9 @@
     "autoexeccombopoperationnotfoundexception": {
       "autoexeccombopoperationnotfoundexception": "The stage [{0}] tool [{1}] has been deleted. Please clean up the tool in the combination tool and save it"
     },
+    "autoexecjobdeleteexception": {
+      "autoexecjobdeleteexception": "{0}({1})Cleaning automated job failed"
+    },
     "autoexecjobnotsupportmultiparentexception": {
       "autoexecjobnotsupportmultiparentexception": "Parent job {0} already exists, and currently does not support 2 parent jobs"
     },
