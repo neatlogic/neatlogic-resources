@@ -29,6 +29,7 @@
     "authoritylist": "授权对象",
     "authtype": "授权类型",
     "authuuid": "授权对象uuid",
+    "autostart": "是否自动开始",
     "avatar": "头像",
     "basicauth": "Basic认证",
     "bearerauth": "Bearer Token",
@@ -36,6 +37,7 @@
     "branch": "分支",
     "bug": "缺陷",
     "buildinauth": "内部验证",
+    "button": "按钮",
     "cacheandvalid": "缓存但重新验证",
     "canceled": "已取消",
     "catalog": "目录",
@@ -107,6 +109,7 @@
     "encoding": "编码",
     "enddate": "结束日期",
     "endtime": "结束时间",
+    "endtimewindow": "结束时间窗口",
     "enum": "枚举",
     "errorinfo": "错误信息",
     "errormsg": "异常信息",
@@ -238,6 +241,8 @@
     "path": "路径",
     "pc": "电脑端",
     "phone": "电话号码",
+    "planstartdate": "计划开始日期",
+    "planstartendtime": "计划起止时间",
     "planstarttime": "计划时间",
     "policy": "策略",
     "prefix": "前缀",
@@ -296,6 +301,7 @@
     "startloadschedulejob": "开始加载模块 {0} 的定时作业...",
     "startloadstartupjob": "开始为 {1} 执行启动作业 {0} ...",
     "starttime": "开始时间",
+    "starttimewindow": "开始时间窗口",
     "startupjob": "启动作业",
     "startuser": "开始用户",
     "status": "状态",
@@ -2082,6 +2088,50 @@
     "autoexec": {
       "loopitems": "循环项",
       "loopitemvar": "循环项变量"
+    }
+  },
+  "nmca": {
+    "changecompleteapi": {
+      "getname": "完成变更"
+    },
+    "changepauseapi": {
+      "getname": "暂停变更"
+    },
+    "changerecoverapi": {
+      "getname": "恢复变更"
+    },
+    "changerestartapi": {
+      "getname": "重新开始变更"
+    },
+    "changestartapi": {
+      "getname": "开始变更"
+    },
+    "changestepabortapi": {
+      "getname": "取消变更步骤"
+    },
+    "changestepcommentapi": {
+      "getname": "回复变更步骤"
+    },
+    "changestepcommentdeleteapi": {
+      "getname": "删除变更步骤回复"
+    },
+    "changestepcommenteditapi": {
+      "getname": "编辑变更步骤回复"
+    },
+    "changestepcompleteapi": {
+      "getname": "完成变更步骤"
+    },
+    "changestepstartapi": {
+      "getname": "开始变更步骤"
+    },
+    "changestepupdateapi": {
+      "getname": "更新变更步骤"
+    },
+    "changestepworkerbatchupdateapi": {
+      "getname": "批量更新变更步骤处理人"
+    },
+    "changeupdateapi": {
+      "getname": "更新变更"
     }
   },
   "nmcaa": {
@@ -3937,8 +3987,20 @@
         }
       }
     },
+    "processtaskautomaticcompleteapi": {
+      "getname": "流转自动化处理步骤"
+    },
     "processtaskcanreactivatesteplistapi": {
       "getname": "当前用户可以重新激活的步骤列表"
+    },
+    "processtaskcommentapi": {
+      "getname": "回复工单"
+    },
+    "processtaskcommentdeleteapi": {
+      "getname": "删除工单回复"
+    },
+    "processtaskcommenteditapi": {
+      "getname": "编辑工单回复"
     },
     "processtaskcompleteapi": {
       "getname": "流转工单"
@@ -3969,8 +4031,23 @@
         }
       }
     },
+    "processtaskfocusupdateapi": {
+      "getname": "切换工单关注状态"
+    },
+    "processtaskfocususerupdateapi": {
+      "getname": "更新工单关注人"
+    },
     "processtaskprocessablesteplist": {
       "getname": "当前用户可处理的步骤列表接口"
+    },
+    "processtaskreapprovalapi": {
+      "getname": "重审工单步骤"
+    },
+    "processtaskrelationdeleteapi": {
+      "getname": "删除工单关联"
+    },
+    "processtaskrelationsaveapi": {
+      "getname": "保存工单关联"
     },
     "processtaskrepeatdeleteapi": {
       "getname": "解绑重复工单"
@@ -3978,8 +4055,17 @@
     "processtaskrepeatsaveapi": {
       "getname": "标记重复工单接口"
     },
+    "processtaskretreatapi": {
+      "getname": "上一步发起的撤回动作"
+    },
+    "processtaskscoreapi": {
+      "getname": "工单评分"
+    },
     "processtaskstartapi": {
       "getname": "开始工单步骤"
+    },
+    "processtaskstartprocessapi": {
+      "getname": "上报提交工单"
     },
     "processtaskstepdraftsaveapi": {
       "getname": "工单步骤暂存接口"
@@ -3989,6 +4075,15 @@
         "desc": "工单步骤基本信息获取接口，当前步骤名称、激活时间、状态、处理人、协助处理人、处理时效、表单属性显示控制等"
       },
       "getname": "工单步骤基本信息获取接口"
+    },
+    "processtasksteppauseapi": {
+      "getname": "暂停工单步骤"
+    },
+    "processtasksteprecoverapi": {
+      "getname": "恢复工单步骤"
+    },
+    "processtaskstepredoapi": {
+      "getname": "重做步骤"
     },
     "processtaskstepstartifnecessaryapi": {
       "getname": "如果需要，开始工单步骤"
@@ -4004,6 +4099,15 @@
         }
       }
     },
+    "processtasktransferknowledgeauditapi": {
+      "getname": "记录工单转知识活动"
+    },
+    "processtaskupdateapi": {
+      "getname": "更新工单信息"
+    },
+    "processtaskurgeapi": {
+      "getname": "催办工单"
+    },
     "redoasynccreateprocesstaskapi": {
       "getname": "重做异步创建工单"
     },
@@ -4017,6 +4121,11 @@
     },
     "updateasynccreateprocesstaskapi": {
       "getname": "修改异步创建工单数据"
+    }
+  },
+  "nmpapd": {
+    "processtaskimportfromjsonapi": {
+      "getname": "导入工单数据(通过固定格式json文件，目前用于同步老工单数据到本系统)"
     }
   },
   "nmpapm": {
@@ -4037,6 +4146,15 @@
     }
   },
   "nmpapt": {
+    "processtasksteptaskcompleteapi": {
+      "getname": "任务完成"
+    },
+    "processtasksteptaskfiledeleteapi": {
+      "getname": "删除任务附件"
+    },
+    "processtasksteptaskfilesaveapi": {
+      "getname": "上传任务附件"
+    },
     "testasynccreateprocesstaskapi": {
       "getname": "测试异步创建工单"
     }
@@ -5262,6 +5380,8 @@
     "change": {
       "changecreate": "创建变更",
       "changehandle": "处理变更",
+      "changeid": "变更id",
+      "changestepid": "变更步骤id",
       "name": "变更模块"
     },
     "ciview": {
@@ -5566,6 +5686,7 @@
     },
     "itsm": {
       "actionlist": "操作列表",
+      "assignworkerlist": "指定步骤处理人信息列表",
       "automatic": "外部调用",
       "caneditfocususer": "是否有权限修改工单关注人",
       "cataloginfo": "服务目录信息",
@@ -5602,6 +5723,7 @@
       "groupname": "IT服务",
       "handlerstepinfo": "处理器特有的步骤信息",
       "hidecomponentlist": "隐藏表单属性列表",
+      "isfocus": "是否关注工单",
       "ishasoldformprop": "是否存在旧工单表单信息",
       "isshowbaseinfo": "工单详情页是否默认展开基本信息",
       "isshowprocesstaskstepcommenteditortoolbar": "是否显示工单步骤回复富文本编辑器工具栏",
@@ -5621,17 +5743,20 @@
       "processtaskid": "工单id",
       "processtaskidlist": "工单Id列表",
       "processtaskinfo": "工单信息",
-      "processtasknextstepid": "下一步工单步骤Id",
+      "processtasknextstepid": "激活下一步骤Id",
       "processtasknextstepname": "下一步工单步骤名称",
+      "processtaskrelationid": "工单关联id",
       "processtaskslalist": "sla列表",
       "processtaskstepid": "工单步骤id",
       "processtaskstepname": "工单步骤名称",
       "processuuid": "流程uuid",
       "readcomponentlist": "只读表单属性列表",
       "redosteplist": "重做步骤列表",
+      "relationprocesstaskidlist": "关联工单id列表",
       "repeatprocesstaskid": "重复事件工单id",
       "repeatprocesstaskidlist": "重复工单id列表",
       "reporter": "代报人",
+      "scoredimensionlist": "评分维度及分数列表",
       "scoretemplate": "评分模板",
       "scoretemplatedimensionlist": "评分维度列表",
       "serialnumber": "工单号",
@@ -5639,14 +5764,17 @@
       "sourcechanneluuid": "来源服务uuid",
       "start": "开始",
       "startprocesstaskstep": "工单开始步骤信息",
+      "steptaskuserlist": "任务处理人列表",
       "submitterinfo": "工单提交人信息",
       "submittername": "工单提交人名称",
       "submitteruuid": "工单提交人Uuid",
       "targetprocesstaskstepid": "目标步骤ID",
+      "taskconfigid": "子任务策略id",
       "timer": "定时节点",
       "tranferreportdirection": "转报/关联方向",
       "tranferreportprocesstasklist": "转报工单信息列表",
-      "workcenterprocesstasksortindex": "工单中心工单排序下标"
+      "workcenterprocesstasksortindex": "工单中心工单排序下标",
+      "worker": "处理人或组"
     },
     "knowledge": {
       "circleinfo": "知识圈信息",

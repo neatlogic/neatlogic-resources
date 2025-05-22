@@ -29,6 +29,7 @@
     "authoritylist": "Authorized object",
     "authtype": "Authorization Type",
     "authuuid": "Authorized object uuid",
+    "autostart": "Does it start automatically",
     "avatar": "Avatar",
     "basicauth": "Basic authentication",
     "bearerauth": "Bearer Token",
@@ -36,6 +37,7 @@
     "branch": "branch",
     "bug": "defect",
     "buildinauth": "Internal verification",
+    "button": "button",
     "cacheandvalid": "Cache but revalidate",
     "canceled": "Canceled",
     "catalog": "catalogue",
@@ -107,6 +109,7 @@
     "encoding": "coding",
     "enddate": "End date",
     "endtime": "End time",
+    "endtimewindow": "End time window",
     "enum": "enumeration",
     "errorinfo": "error message",
     "errormsg": "Abnormal information",
@@ -238,6 +241,8 @@
     "path": "path",
     "pc": "Computer side",
     "phone": "Telephone number",
+    "planstartdate": "Start date",
+    "planstartendtime": "Planned start and end time",
     "planstarttime": "Planned time",
     "policy": "strategy",
     "prefix": "prefix",
@@ -296,6 +301,7 @@
     "startloadschedulejob": "Start to load schedule job of {0}...",
     "startloadstartupjob": "Start to run startup job {0} for {1} ...",
     "starttime": "start time",
+    "starttimewindow": "Start time window",
     "startupjob": "Startup Job",
     "startuser": "Start user",
     "status": "state",
@@ -2054,6 +2060,50 @@
     "autoexec": {
       "loopitems": "Loop item",
       "loopitemvar": "Loop term variable"
+    }
+  },
+  "nmca": {
+    "changecompleteapi": {
+      "getname": "Complete the change"
+    },
+    "changepauseapi": {
+      "getname": "Suspend changes"
+    },
+    "changerecoverapi": {
+      "getname": "Restore changes"
+    },
+    "changerestartapi": {
+      "getname": "Restart the change"
+    },
+    "changestartapi": {
+      "getname": "Start Change"
+    },
+    "changestepabortapi": {
+      "getname": "Cancel change steps"
+    },
+    "changestepcommentapi": {
+      "getname": "Reply to Change Steps"
+    },
+    "changestepcommentdeleteapi": {
+      "getname": "Reply to delete change steps"
+    },
+    "changestepcommenteditapi": {
+      "getname": "Reply to editing change steps"
+    },
+    "changestepcompleteapi": {
+      "getname": "Complete the change steps"
+    },
+    "changestepstartapi": {
+      "getname": "Start the change process"
+    },
+    "changestepupdateapi": {
+      "getname": "Update and change steps"
+    },
+    "changestepworkerbatchupdateapi": {
+      "getname": "Batch update change steps handler"
+    },
+    "changeupdateapi": {
+      "getname": "Update and Change"
     }
   },
   "nmcaa": {
@@ -3887,8 +3937,20 @@
         }
       }
     },
+    "processtaskautomaticcompleteapi": {
+      "getname": "Automated processing steps for circulation"
+    },
     "processtaskcanreactivatesteplistapi": {
       "getname": "List of steps that the current user can reactivate"
+    },
+    "processtaskcommentapi": {
+      "getname": "Reply to work order"
+    },
+    "processtaskcommentdeleteapi": {
+      "getname": "Delete work order reply"
+    },
+    "processtaskcommenteditapi": {
+      "getname": "Edit work order reply"
     },
     "processtaskcompleteapi": {
       "getname": "Transfer work order"
@@ -3919,8 +3981,23 @@
         }
       }
     },
+    "processtaskfocusupdateapi": {
+      "getname": "Switch work order attention status"
+    },
+    "processtaskfocususerupdateapi": {
+      "getname": "Update work order followers"
+    },
     "processtaskprocessablesteplist": {
       "getname": "List interface of steps that the current user can handle"
+    },
+    "processtaskreapprovalapi": {
+      "getname": "Review work order steps"
+    },
+    "processtaskrelationdeleteapi": {
+      "getname": "Delete work order association"
+    },
+    "processtaskrelationsaveapi": {
+      "getname": "Save work order association"
     },
     "processtaskrepeatdeleteapi": {
       "getname": "Unbind duplicate work orders"
@@ -3928,8 +4005,17 @@
     "processtaskrepeatsaveapi": {
       "getname": "Mark duplicate work order interface"
     },
+    "processtaskretreatapi": {
+      "getname": "The recall action initiated in the previous step"
+    },
+    "processtaskscoreapi": {
+      "getname": "Work order rating"
+    },
     "processtaskstartapi": {
       "getname": "Start work order steps"
+    },
+    "processtaskstartprocessapi": {
+      "getname": "Report and submit work order"
     },
     "processtaskstepdraftsaveapi": {
       "getname": "Work order step temporary storage interface"
@@ -3939,6 +4025,15 @@
         "desc": "Interface for obtaining basic information of work order steps, including current step name, activation time, status, handler, assistance handler, processing time, form attribute display control, etc"
       },
       "getname": "Interface for obtaining basic information of work order steps"
+    },
+    "processtasksteppauseapi": {
+      "getname": "Pause work order steps"
+    },
+    "processtasksteprecoverapi": {
+      "getname": "Steps to restore work order"
+    },
+    "processtaskstepredoapi": {
+      "getname": "Redo steps"
     },
     "processtaskstepstartifnecessaryapi": {
       "getname": "If necessary, start the work order steps"
@@ -3954,6 +4049,15 @@
         }
       }
     },
+    "processtasktransferknowledgeauditapi": {
+      "getname": "Record work order to knowledge activities"
+    },
+    "processtaskupdateapi": {
+      "getname": "Update work order information"
+    },
+    "processtaskurgeapi": {
+      "getname": "Urgent work order"
+    },
     "redoasynccreateprocesstaskapi": {
       "getname": "Redo asynchronous creation of work orders"
     },
@@ -3967,6 +4071,11 @@
     },
     "updateasynccreateprocesstaskapi": {
       "getname": "Modify asynchronous creation of work order data"
+    }
+  },
+  "nmpapd": {
+    "processtaskimportfromjsonapi": {
+      "getname": "Import work order data (using a fixed format JSON file, currently used to synchronize old work order data to this system)"
     }
   },
   "nmpapm": {
@@ -3987,6 +4096,15 @@
     }
   },
   "nmpapt": {
+    "processtasksteptaskcompleteapi": {
+      "getname": "Mission accomplished"
+    },
+    "processtasksteptaskfiledeleteapi": {
+      "getname": "Delete task attachments"
+    },
+    "processtasksteptaskfilesaveapi": {
+      "getname": "Upload task attachments"
+    },
     "testasynccreateprocesstaskapi": {
       "getname": "Test asynchronous creation of work orders"
     }
@@ -5210,6 +5328,8 @@
     "change": {
       "changecreate": "Create Change",
       "changehandle": "Handling changes",
+      "changeid": "Change ID",
+      "changestepid": "Change step ID",
       "name": "Change"
     },
     "ciview": {
@@ -5514,6 +5634,7 @@
     },
     "itsm": {
       "actionlist": "Action List",
+      "assignworkerlist": "List of designated step handlers\u0027 information",
       "automatic": "external call",
       "caneditfocususer": "Do you have permission to modify the work order followers",
       "cataloginfo": "Service Catalog Information",
@@ -5550,6 +5671,7 @@
       "groupname": "ITSM",
       "handlerstepinfo": "Processor specific step information",
       "hidecomponentlist": "Hide Form Property List",
+      "isfocus": "Do you pay attention to work orders",
       "ishasoldformprop": "Is there any old work order form information",
       "isshowbaseinfo": "Is the basic information expanded by default on the work order details page",
       "isshowprocesstaskstepcommenteditortoolbar": "Show work order step reply rich text editor toolbar",
@@ -5569,17 +5691,20 @@
       "processtaskid": "Work Order ID",
       "processtaskidlist": "Work Order Id List",
       "processtaskinfo": "Work Order Information",
-      "processtasknextstepid": "Next work order step ID",
+      "processtasknextstepid": "Activate the next step ID",
       "processtasknextstepname": "Next work order step name",
+      "processtaskrelationid": "Work order associated ID",
       "processtaskslalist": "SLA List",
       "processtaskstepid": "Work Order Step ID",
       "processtaskstepname": "Work order step name",
       "processuuid": "Process uuid",
       "readcomponentlist": "Read only form attribute list",
       "redosteplist": "Redo Step List",
+      "relationprocesstaskidlist": "List of associated work order IDs",
       "repeatprocesstaskid": "Duplicate Event Work Order ID",
       "repeatprocesstaskidlist": "List of duplicate job IDs",
       "reporter": "Agent",
+      "scoredimensionlist": "Rating dimensions and score list",
       "scoretemplate": "Scoring template",
       "scoretemplatedimensionlist": "Rating dimension list",
       "serialnumber": "Work order number",
@@ -5587,14 +5712,17 @@
       "sourcechanneluuid": "Source service uuid",
       "start": "start",
       "startprocesstaskstep": "Work order start step information",
+      "steptaskuserlist": "Task handler list",
       "submitterinfo": "Work order submitter information",
       "submittername": "Work order submitter name",
       "submitteruuid": "Work order submitter Uuid",
       "targetprocesstaskstepid": "Target Step ID",
+      "taskconfigid": "Subtask strategy ID",
       "timer": "Timed nodes",
       "tranferreportdirection": "Transfer/Related Direction",
       "tranferreportprocesstasklist": "Report Work Order Information List",
-      "workcenterprocesstasksortindex": "Work Order Center Work Order Sorting Index"
+      "workcenterprocesstasksortindex": "Work Order Center Work Order Sorting Index",
+      "worker": "Processing person or group"
     },
     "knowledge": {
       "circleinfo": "Knowledge Circle Information",
