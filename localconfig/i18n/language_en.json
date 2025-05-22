@@ -5014,11 +5014,17 @@
     }
   },
   "nmtau": {
+    "cleansubmitkeyapi": {
+      "getname": "Manually clear duplicate SubmitKeyMap submissions"
+    },
     "deleteuserdataapi": {
       "getname": "Delete user data"
     },
     "getcurrentusertokenapi": {
       "getname": "Obtain the user\u0027s own token"
+    },
+    "getsubmitkeyinfoapi": {
+      "getname": "Get duplicate SubmitKeyMap submissions"
     },
     "getuserdataapi": {
       "getname": "Obtain user data"

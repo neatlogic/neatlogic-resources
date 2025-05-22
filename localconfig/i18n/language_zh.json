@@ -5066,11 +5066,17 @@
     }
   },
   "nmtau": {
+    "cleansubmitkeyapi": {
+      "getname": "手动清理重复提交SubmitKeyMap"
+    },
     "deleteuserdataapi": {
       "getname": "删除用户数据"
     },
     "getcurrentusertokenapi": {
       "getname": "获取用户自己的令牌"
+    },
+    "getsubmitkeyinfoapi": {
+      "getname": "获取重复提交SubmitKeyMap"
     },
     "getuserdataapi": {
       "getname": "获取用户数据"
