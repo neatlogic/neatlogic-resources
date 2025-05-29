@@ -1603,6 +1603,10 @@
     "processnotfoundedittargetexception": {
       "processnotfoundedittargetexception": "Process: {0} does not exist"
     },
+    "processtasknextstepillegalexception": {
+      "processtasknextstepillegalexception": "{1} Not the next step of step: {0}",
+      "processtasknextstepillegalexception_a": "The starting step of work order: {0} does not have a next step"
+    },
     "processtasknotfoundedittargetexception": {
       "processtasknotfoundedittargetexception": "Work order: {0} does not exist"
     },
