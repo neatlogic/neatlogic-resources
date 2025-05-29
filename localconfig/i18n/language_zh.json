@@ -646,7 +646,9 @@
       "autocollect": "自动采集",
       "excel": "excel导入",
       "itsm": "流程修改",
+      "mobile": "移动端",
       "page": "页面操作",
+      "pc": "PC端",
       "relative": "级联更新",
       "unknown": "未知"
     },
