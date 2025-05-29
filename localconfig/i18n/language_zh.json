@@ -1398,6 +1398,9 @@
         "ipresourceid": "ip: {0}({1})找不到匹配的runner，请核对runner组配置",
         "noparam": "找不到匹配的runner，请核对runner组配置 或者 没有配置runner map"
       }
+    },
+    "runnerurlisnullexception": {
+      "runnerurlisnullexception": "ID为：{0}的runner的url是空的"
     }
   },
   "nfes": {
@@ -1526,6 +1529,12 @@
     },
     "knowledgetemplatenotfoundedittargetexception": {
       "knowledgetemplatenotfoundedittargetexception": "知识模版：{0}不存在"
+    }
+  },
+  "nfme": {
+    "matrixviewsqlirregularexception": {
+      "matrixviewsqlirregularexception": "sql 非法{0}",
+      "matrixviewsqlirregularexception_a": "配置文件不是合法的XML文件"
     }
   },
   "nfne": {
