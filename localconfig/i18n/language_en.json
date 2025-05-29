@@ -1375,6 +1375,9 @@
         "ipresourceid": "IP: {0}({1}) Unable to find a matching runner, please verify the runner group configuration",
         "noparam": "Unable to find a matching runner. Please verify the runner group configuration or if there is no runner map configured"
       }
+    },
+    "runnerurlisnullexception": {
+      "runnerurlisnullexception": "The URL of the runner with ID {0} is empty"
     }
   },
   "nfes": {
@@ -1504,6 +1507,12 @@
     },
     "knowledgetemplatenotfoundedittargetexception": {
       "knowledgetemplatenotfoundedittargetexception": "Knowledge template: {0} does not exist"
+    }
+  },
+  "nfme": {
+    "matrixviewsqlirregularexception": {
+      "matrixviewsqlirregularexception": "SQL illegal {0}",
+      "matrixviewsqlirregularexception_a": "The configuration file is not a valid XML file"
     }
   },
   "nfne": {
@@ -1967,8 +1976,22 @@
     }
   },
   "nmaaje": {
+    "informautoexecjobphaseroundendapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "seqno": "Blue green batch"
+          }
+        }
+      }
+    },
     "updateautoexecjobphasestatusapi": {
-      "getname": "Callback Update Job Stage Status"
+      "getname": "Callback Update Job Stage Status",
+      "input": {
+        "param": {
+          "desc": "Execution ID"
+        }
+      }
     },
     "updateautoexecjobstatusapi": {
       "getname": "Callback update job status"
@@ -5132,11 +5155,17 @@
     }
   },
   "nmtau": {
+    "cleansubmitkeyapi": {
+      "getname": "Manually clear duplicate SubmitKeyMap submissions"
+    },
     "deleteuserdataapi": {
       "getname": "Delete user data"
     },
     "getcurrentusertokenapi": {
       "getname": "Obtain the user\u0027s own token"
+    },
+    "getsubmitkeyinfoapi": {
+      "getname": "Get duplicate SubmitKeyMap submissions"
     },
     "getuserdataapi": {
       "getname": "Obtain user data"

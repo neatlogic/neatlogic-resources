@@ -1404,6 +1404,9 @@
         "ipresourceid": "ip: {0}({1})找不到匹配的runner，请核对runner组配置",
         "noparam": "找不到匹配的runner，请核对runner组配置 或者 没有配置runner map"
       }
+    },
+    "runnerurlisnullexception": {
+      "runnerurlisnullexception": "ID为：{0}的runner的url是空的"
     }
   },
   "nfes": {
@@ -1532,6 +1535,12 @@
     },
     "knowledgetemplatenotfoundedittargetexception": {
       "knowledgetemplatenotfoundedittargetexception": "知识模版：{0}不存在"
+    }
+  },
+  "nfme": {
+    "matrixviewsqlirregularexception": {
+      "matrixviewsqlirregularexception": "sql 非法{0}",
+      "matrixviewsqlirregularexception_a": "配置文件不是合法的XML文件"
     }
   },
   "nfne": {
@@ -1995,8 +2004,22 @@
     }
   },
   "nmaaje": {
+    "informautoexecjobphaseroundendapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "seqno": "蓝绿批次"
+          }
+        }
+      }
+    },
     "updateautoexecjobphasestatusapi": {
-      "getname": "回调更新作业阶段状态"
+      "getname": "回调更新作业阶段状态",
+      "input": {
+        "param": {
+          "desc": "执行id"
+        }
+      }
     },
     "updateautoexecjobstatusapi": {
       "getname": "回调更新作业状态"
@@ -5184,11 +5207,17 @@
     }
   },
   "nmtau": {
+    "cleansubmitkeyapi": {
+      "getname": "手动清理重复提交SubmitKeyMap"
+    },
     "deleteuserdataapi": {
       "getname": "删除用户数据"
     },
     "getcurrentusertokenapi": {
       "getname": "获取用户自己的令牌"
+    },
+    "getsubmitkeyinfoapi": {
+      "getname": "获取重复提交SubmitKeyMap"
     },
     "getuserdataapi": {
       "getname": "获取用户数据"
