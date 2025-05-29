@@ -1625,6 +1625,10 @@
     "processnotfoundedittargetexception": {
       "processnotfoundedittargetexception": "流程：{0}不存在"
     },
+    "processtasknextstepillegalexception": {
+      "processtasknextstepillegalexception": "{1}不是步骤：{0}的下一步骤",
+      "processtasknextstepillegalexception_a": "工单：{0}的开始步骤没有下一步骤"
+    },
     "processtasknotfoundedittargetexception": {
       "processtasknotfoundedittargetexception": "工单：{0}不存在"
     },
