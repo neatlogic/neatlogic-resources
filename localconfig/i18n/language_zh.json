@@ -1989,8 +1989,22 @@
     }
   },
   "nmaaje": {
+    "informautoexecjobphaseroundendapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "seqno": "蓝绿批次"
+          }
+        }
+      }
+    },
     "updateautoexecjobphasestatusapi": {
-      "getname": "回调更新作业阶段状态"
+      "getname": "回调更新作业阶段状态",
+      "input": {
+        "param": {
+          "desc": "执行id"
+        }
+      }
     },
     "updateautoexecjobstatusapi": {
       "getname": "回调更新作业状态"

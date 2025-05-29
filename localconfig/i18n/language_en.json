@@ -1961,8 +1961,22 @@
     }
   },
   "nmaaje": {
+    "informautoexecjobphaseroundendapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "seqno": "Blue green batch"
+          }
+        }
+      }
+    },
     "updateautoexecjobphasestatusapi": {
-      "getname": "Callback Update Job Stage Status"
+      "getname": "Callback Update Job Stage Status",
+      "input": {
+        "param": {
+          "desc": "Execution ID"
+        }
+      }
     },
     "updateautoexecjobstatusapi": {
       "getname": "Callback update job status"
