@@ -646,7 +646,9 @@
       "autocollect": "Automatic collection",
       "excel": "Excel import",
       "itsm": "Process modification",
+      "mobile": "mobile terminal",
       "page": "Page Operations",
+      "pc": "PC end",
       "relative": "update cascade ",
       "unknown": "unknown"
     },
