@@ -1059,6 +1059,13 @@
     }
   },
   "nfde": {
+    "databaseconnectionfailedexception": {
+      "configisempty": "The database connection configuration config is empty",
+      "fileidlistisempty": "The fileIdList in the {0} database connection configuration config is empty"
+    },
+    "databasenotfoundexception": {
+      "databasenotfoundexception": "Database: {0} does not exist"
+    },
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "Application system \u0027{0}\u0027, module \u0027{1}\u0027 is not associated with a runner"
     },
@@ -4582,6 +4589,9 @@
     "adddocumentonlineconfigapi": {
       "getname": "Add mapping relationship between online help documents and module menus"
     },
+    "deletedatabaseapi": {
+      "getname": "Delete database configuration information"
+    },
     "deletedocumentonlineconfigapi": {
       "getname": "Delete the mapping relationship between online help documents and module menus"
     },
@@ -4590,6 +4600,9 @@
     },
     "exportdocumentonlineconfigapi": {
       "getname": "Export online help document configuration file"
+    },
+    "getdatabaseapi": {
+      "getname": "Retrieve database configuration information"
     },
     "getdocumentonlineapi": {
       "getname": "Obtain a single online help document"
@@ -4606,8 +4619,14 @@
     "getdocumentonlineunclassifiedlistapi": {
       "getname": "Query the list of unclassified online help documents"
     },
+    "savadatabaseapi": {
+      "getname": "Save database configuration information"
+    },
     "savedocumentonlineconfigapi": {
       "getname": "Save the mapping relationship between online help documents and module menus"
+    },
+    "searchdatabaseapi": {
+      "getname": "Query database configuration information list"
     },
     "searchdatasourceapi": {
       "getname": "Query Data Warehouse Data Source"

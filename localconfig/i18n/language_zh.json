@@ -1081,6 +1081,13 @@
     }
   },
   "nfde": {
+    "databaseconnectionfailedexception": {
+      "configisempty": "数据库连接配置config为空",
+      "fileidlistisempty": "{0}数据库连接配置config中fileIdList为空"
+    },
+    "databasenotfoundexception": {
+      "databasenotfoundexception": "数据库：{0} 不存在"
+    },
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "应用系统“{0}”，模块“{1}”未关联runner"
     },
@@ -4634,6 +4641,9 @@
     "adddocumentonlineconfigapi": {
       "getname": "添加在线帮助文档与模块菜单的映射关系"
     },
+    "deletedatabaseapi": {
+      "getname": "删除数据库配置信息"
+    },
     "deletedocumentonlineconfigapi": {
       "getname": "删除在线帮助文档与模块菜单的映射关系"
     },
@@ -4642,6 +4652,9 @@
     },
     "exportdocumentonlineconfigapi": {
       "getname": "导出在线帮助文档配置文件"
+    },
+    "getdatabaseapi": {
+      "getname": "获取数据库配置信息"
     },
     "getdocumentonlineapi": {
       "getname": "获取单个在线帮助文档"
@@ -4658,8 +4671,14 @@
     "getdocumentonlineunclassifiedlistapi": {
       "getname": "查询未分类的在线帮助文档列表"
     },
+    "savadatabaseapi": {
+      "getname": "保存数据库配置信息"
+    },
     "savedocumentonlineconfigapi": {
       "getname": "保存在线帮助文档与模块菜单的映射关系"
+    },
+    "searchdatabaseapi": {
+      "getname": "查询数据库配置信息列表"
     },
     "searchdatasourceapi": {
       "getname": "查询数据仓库数据源"
