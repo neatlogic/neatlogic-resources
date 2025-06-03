@@ -4637,6 +4637,9 @@
       "mydoservice": {
         "error": "Unable to find document with docID {0}"
       }
+    },
+    "testdatabaseapi": {
+      "getname": "Test database connection"
     }
   },
   "nmtae": {

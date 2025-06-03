@@ -4689,6 +4689,9 @@
       "mydoservice": {
         "error": "找不到docID为{0}的文档"
       }
+    },
+    "testdatabaseapi": {
+      "getname": "测试数据库连接"
     }
   },
   "nmtae": {
