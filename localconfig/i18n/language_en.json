@@ -1064,6 +1064,9 @@
       "configisempty": "The database connection configuration config is empty",
       "fileidlistisempty": "The fileIdList in the {0} database connection configuration config is empty"
     },
+    "databasenamerepeatexception": {
+      "databasenamerepeatexception": "Database name: {0} already exists"
+    },
     "databasenotfoundexception": {
       "databasenotfoundexception": "Database: {0} does not exist"
     },

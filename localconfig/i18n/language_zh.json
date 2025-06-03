@@ -1086,6 +1086,9 @@
       "configisempty": "数据库连接配置config为空",
       "fileidlistisempty": "{0}数据库连接配置config中fileIdList为空"
     },
+    "databasenamerepeatexception": {
+      "databasenamerepeatexception": "数据库名称：{0} 已存在"
+    },
     "databasenotfoundexception": {
       "databasenotfoundexception": "数据库：{0} 不存在"
     },
