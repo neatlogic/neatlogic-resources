@@ -903,6 +903,7 @@
         "name": {
           "connectionid": "Data connection ID",
           "cron": "Timing strategy",
+          "databaseid": "Database ID",
           "datacount": "Data volume",
           "dbtype": "Database type",
           "expireunit": "Effective time unit",
