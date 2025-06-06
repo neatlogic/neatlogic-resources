@@ -1855,7 +1855,10 @@
     "reportstatementnotfoundedittargetexception": {
       "reportstatementnotfoundedittargetexception": "Large screen report: {0} does not exist"
     },
-    "systemattrtype": "System Properties"
+    "systemattrtype": "System Properties",
+    "systemattrtypea": {
+      "getenumname": "System attribute type"
+    }
   },
   "nfs": {
     "scriptrunnermanager": {
@@ -2000,7 +2003,8 @@
       "getname": "Callback Update Job Stage Status",
       "input": {
         "param": {
-          "desc": "Execution ID"
+          "desc": "Execution ID",
+          "needinform": "Do I need to inform during failure or termination"
         }
       }
     },
