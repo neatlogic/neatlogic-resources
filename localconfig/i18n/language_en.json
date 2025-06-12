@@ -478,6 +478,9 @@
     "autoexecjobdeleteexception": {
       "autoexecjobdeleteexception": "{0}({1})Cleaning automated job failed"
     },
+    "autoexecjobexecutepermissiondeniedexception": {
+      "autoexecjobexecutepermissiondeniedexception": "Current user: {1} is not the executing user of the current job ({0}): {2}, please refresh the page and take over the job again"
+    },
     "autoexecjobnotsupportmultiparentexception": {
       "autoexecjobnotsupportmultiparentexception": "Parent job {0} already exists, and currently does not support 2 parent jobs"
     },

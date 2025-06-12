@@ -478,6 +478,9 @@
     "autoexecjobdeleteexception": {
       "autoexecjobdeleteexception": "{0}({1})清理自动化作业失败"
     },
+    "autoexecjobexecutepermissiondeniedexception": {
+      "autoexecjobexecutepermissiondeniedexception": "当前用户：{1} 不是当前作业({0})的执行用户：{2},请刷新页面，重新接管作业"
+    },
     "autoexecjobnotsupportmultiparentexception": {
       "autoexecjobnotsupportmultiparentexception": "父作业{0}已经存在父作业,一个作业最多支持2个父作业"
     },
