@@ -798,10 +798,16 @@
     "reltypenotfoundexception": {
       "reltypenotfoundexception": "关系类型：{0} 不存在"
     },
+    "resourcecenteraccountnotprivateexception": {
+      "resourcecenteraccountnotprivateexception": "账号：“{0}”不是私有类型"
+    },
     "resourcecenteraccountprotocolnotfoundexception": {
       "resourcecenteraccountprotocolnotfoundexception": {
         "id": "协议：{0}不存在"
       }
+    },
+    "resourcecenterresourcenotexistaccountexception": {
+      "resourcecenterresourcenotexistaccountexception": "资源“{0}”中不存在账号“{1}”"
     },
     "resourcecenterviewconfigexception": {
       "resourcecenterviewconfigexception": "视图{0}中声明字段：{1}，但在配置文件中没有找到定义"
@@ -907,6 +913,15 @@
       "versionandproductmanagerdesc": "可以查看应用(版本中心),版本中心可以添加版本和管理制品",
       "view": "查看配置",
       "viewdesc": "可以查看应用(一键发布、应用配置)"
+    },
+    "deployappconfigactiontype": {
+      "env": {
+        "description": "创建发布作业环境的权限和应用配置对应环境相关配置修改的权限(同时需要“编辑配置”权限)",
+        "text": "环境"
+      },
+      "operation": {
+        "text": "操作"
+      }
     },
     "deploytenantconfig": {
       "gitlabwebhookcallbackhost": "gitlab webhook回调主机地址"
@@ -2785,6 +2800,9 @@
     "accountprotocolsaveapi": {
       "getname": "保存账号管理协议"
     },
+    "accountsaveapi": {
+      "getname": "保存资源中心账号"
+    },
     "appenvlistapi": {
       "getname": "查询应用模块环境列表"
     },
@@ -2809,6 +2827,12 @@
   "nmcarr": {
     "exportresourceapi": {
       "getname": "导出资产清单列表"
+    },
+    "resourceaccountaccesstestapi": {
+      "getname": "测试账号可用性"
+    },
+    "resourceaccountsaveapi": {
+      "getname": "保存资源账号"
     },
     "resourcelistapi": {
       "getname": "查询资源中心数据列表"
@@ -3282,6 +3306,9 @@
     }
   },
   "nmdaae": {
+    "deletedeployappconfigenvdbprivateaccountapi": {
+      "getname": "删除发布应用配置DB私有账号"
+    },
     "deletedeployappconfiginstanceapi": {
       "getname": "删除发布应用配置的应用模块环境的实例"
     },
@@ -3303,6 +3330,12 @@
     },
     "savedeployappconfigenvdbapi": {
       "getname": "保存发布应用配置资产配置项数据"
+    },
+    "savedeployappconfigenvdbprivateaccountapi": {
+      "getname": "保存发布应用配置DB私有账号"
+    },
+    "savedeployappconfigenvdbpublicaccountapi": {
+      "getname": "保存发布应用配置DB公共账号"
     }
   },
   "nmdaam": {
@@ -5345,6 +5378,7 @@
     },
     "cmdb": {
       "abbrname": "简称",
+      "accountidlist": "账号ID列表",
       "addid": "id，不提供代表添加",
       "alertlevel": "级别",
       "allowedit": "是否允许编辑",
