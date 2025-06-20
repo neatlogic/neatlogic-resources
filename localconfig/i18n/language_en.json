@@ -798,10 +798,16 @@
     "reltypenotfoundexception": {
       "reltypenotfoundexception": "Relationship type: {0} does not exist"
     },
+    "resourcecenteraccountnotprivateexception": {
+      "resourcecenteraccountnotprivateexception": "Account: \u0027{0}\u0027 is not a private type"
+    },
     "resourcecenteraccountprotocolnotfoundexception": {
       "resourcecenteraccountprotocolnotfoundexception": {
         "id": "Protocol: {0} does not exist"
       }
+    },
+    "resourcecenterresourcenotexistaccountexception": {
+      "resourcecenterresourcenotexistaccountexception": "Account \u0027{1}\u0027 does not exist in resource \u0027{0}\u0027"
     },
     "resourcecenterviewconfigexception": {
       "resourcecenterviewconfigexception": "Field declared in view {0}: {1}, but definition not found in configuration file"
@@ -885,6 +891,15 @@
       "versionandproductmanagerdesc": "You can view the application (version center), which allows you to add versions and manage artifacts",
       "view": "View configuration",
       "viewdesc": "Application viewing permission, can view applications (one click publishing, application configuration)"
+    },
+    "deployappconfigactiontype": {
+      "env": {
+        "description": "The permission to create and publish job environments and the permission to modify environment related configurations corresponding to application configurations (also requires the \"Edit Configuration\" permission)",
+        "text": "environment"
+      },
+      "operation": {
+        "text": "operate"
+      }
     },
     "deploytenantconfig": {
       "gitlabwebhookcallbackhost": "Gitlab webhook callback host address"
@@ -2757,6 +2772,9 @@
     "accountprotocolsaveapi": {
       "getname": "Save Account Management Agreement"
     },
+    "accountsaveapi": {
+      "getname": "Save Resource Center Account"
+    },
     "appenvlistapi": {
       "getname": "Query the list of application module environments"
     },
@@ -2781,6 +2799,12 @@
   "nmcarr": {
     "exportresourceapi": {
       "getname": "Export asset inventory list"
+    },
+    "resourceaccountaccesstestapi": {
+      "getname": "Test account availability"
+    },
+    "resourceaccountsaveapi": {
+      "getname": "Save resource account"
     },
     "resourcelistapi": {
       "getname": "Query Resource Center Data List"
@@ -3254,6 +3278,9 @@
     }
   },
   "nmdaae": {
+    "deletedeployappconfigenvdbprivateaccountapi": {
+      "getname": "Delete private account for publishing application configuration DB"
+    },
     "deletedeployappconfiginstanceapi": {
       "getname": "Delete instances of application module environments that publish application configurations"
     },
@@ -3275,6 +3302,12 @@
     },
     "savedeployappconfigenvdbapi": {
       "getname": "Save and publish application configuration asset configuration item data"
+    },
+    "savedeployappconfigenvdbprivateaccountapi": {
+      "getname": "Save and publish application configuration DB private account"
+    },
+    "savedeployappconfigenvdbpublicaccountapi": {
+      "getname": "Save and publish application configuration DB public account"
     }
   },
   "nmdaam": {
@@ -5293,6 +5326,7 @@
     },
     "cmdb": {
       "abbrname": "for short",
+      "accountidlist": "Account ID List",
       "addid": "ID, do not provide a representative to add",
       "alertlevel": "level",
       "allowedit": "Allow editing",
