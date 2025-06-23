@@ -530,8 +530,16 @@
     "autoexecprofileisnotfoundexception": {
       "autoexecprofileisnotfoundexception": "The preset parameter set {0} does not exist"
     },
+    "autoexecrunnergroupnotfoundbytagandruleexception": {
+      "autoexecrunnergroupnotfoundbytagandruleexception": "The homework cannot find an executor group that meets the rule based on the executor group label \u0027{0}\u0027",
+      "autoexecrunnergroupnotfoundbytagandruleexceptionphase": "According to the actuator group label \u0027{1}\u0027 set in the homework stage \u0027{0}\u0027, no actuator group that meets the rules was found"
+    },
     "autoexecrunnergroupnotfoundbytagexception": {
-      "autoexecrunnergroupnotfoundbytagexception": "According to tag \u0027{0}\u0027, the actuator group cannot be found"
+      "autoexecrunnergroupnotfoundbytagexception": "According to tag \u0027{0}\u0027, the actuator group cannot be found",
+      "autoexecrunnergroupnotfoundbytagexceptionphase": "According to the actuator group label \u0027{1}\u0027 set in the homework stage \u0027{0}\u0027, the actuator group cannot be found"
+    },
+    "autoexecrunnergrouprulenotmatchexception": {
+      "autoexecrunnergrouprulenotmatchexception": "The executor group \u0027{1} ({2})\u0027 set by {0} does not meet the rules"
     },
     "autoexecrunnergrouptaginvalidexception": {
       "autoexecrunnergrouptaginvalidexception": "The tag value \u0027{0}\u0027 for the actuator group is illegal and must be an array",
@@ -851,6 +859,13 @@
           "isvalid": "Is it legal",
           "modules": "Module List",
           "purchaser": "Customer Name"
+        }
+      }
+    },
+    "rolevo": {
+      "entityfield": {
+        "name": {
+          "ruleprefix": "Rule prefix"
         }
       }
     }
@@ -1375,6 +1390,10 @@
     "runnerconnectrefusedexception": {
       "runnerconnectrefusedexceptiona": "Runner link failed: {0}",
       "runnerconnectrefusedexceptionmsg": "Runner: \u0027{0}\u0027 connection failed, please check if the runner service is functioning properly and try again. Exception message: {1}"
+    },
+    "runnergroupnotfoundexception": {
+      "runnergroupnotfoundexception": "The actuator group does not exist. Please configure the actuator group first",
+      "runnergroupnotfoundexceptionname": "Executor group: {0} does not exist"
     },
     "runnergrouprunnerlistemptyexception": {
       "runnergrouprunnerlistemptyexception": "Executor group: {0} ({1}) does not have an executor"
@@ -4960,6 +4979,18 @@
     },
     "rolesaveapi": {
       "getname": "Save role information"
+    },
+    "runnergroupsaveapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "groupnetworklist": "Runner Group Network Segment List",
+            "name": "Runner group name",
+            "rule": "Runner rules",
+            "runnerlist": "Associated runner list"
+          }
+        }
+      }
     },
     "runnerregisterapi": {
       "description": {

@@ -530,15 +530,23 @@
     "autoexecprofileisnotfoundexception": {
       "autoexecprofileisnotfoundexception": "预置参数集{0}不存在"
     },
+    "autoexecrunnergroupnotfoundbytagandruleexception": {
+      "autoexecrunnergroupnotfoundbytagandruleexception": "不存在标签为“{0}”（作业设置）且满足规则的执行器组",
+      "autoexecrunnergroupnotfoundbytagandruleexceptionphase": "不存在标签为“{1}”（阶段”{0}“设置）且满足规则的执行器组"
+    },
     "autoexecrunnergroupnotfoundbytagexception": {
-      "autoexecrunnergroupnotfoundbytagexception": "作业根据执行器组标签“{0}”，找不到执行器组"
+      "autoexecrunnergroupnotfoundbytagexception": "不存在标签为“{0}”（作业设置）的执行器组",
+      "autoexecrunnergroupnotfoundbytagexceptionphase": "不存在标签为“{1}”（阶段“{0}”设置）的执行器组"
+    },
+    "autoexecrunnergrouprulenotmatchexception": {
+      "autoexecrunnergrouprulenotmatchexception": "{0}设置的执行器组“{1}({2})”,不满足规则"
     },
     "autoexecrunnergrouptaginvalidexception": {
       "autoexecrunnergrouptaginvalidexception": "作业执行器组标签值“{0}”非法，标签不存在或不是数组。如果页面控件没有值，说明该标签已被删除，需要清空下拉框，重新配置保存",
       "autoexecrunnergrouptaginvalidexceptiona": "作业阶段{0}执行器组标签值“{1}”非法，标签不存在或不是数组。如果页面控件没有值，说明该标签已被删除，需要清空下拉框，重新配置保存"
     },
     "autoexecrunnergrouptagnotmatchexception": {
-      "autoexecrunnergrouptagnotmatchexception": "找不到同时满足：{0}声明的执行器组“{1}“和{2}声明的标签“{3}”的执行器组"
+      "autoexecrunnergrouptagnotmatchexception": "执行器组“{1}“（{0}指定）不存在标签“{3}”（{2}指定）"
     },
     "autoexecserviceisnotcatalogexception": {
       "autoexecserviceisnotcatalogexception": "服务：{0}不是目录"
@@ -851,6 +859,13 @@
           "isvalid": "是否合法",
           "modules": "模块列表",
           "purchaser": "客户名称"
+        }
+      }
+    },
+    "rolevo": {
+      "entityfield": {
+        "name": {
+          "ruleprefix": "规则前缀"
         }
       }
     },
@@ -1404,6 +1419,10 @@
     "runnerconnectrefusedexception": {
       "runnerconnectrefusedexceptiona": "Runner 链接失败： {0}",
       "runnerconnectrefusedexceptionmsg": "执行器（runner)：“{0}” 连接失败,请检查执行器服务正常后重试。异常信息:{1}"
+    },
+    "runnergroupnotfoundexception": {
+      "runnergroupnotfoundexception": "执行器组不存在，请先配置执行器组",
+      "runnergroupnotfoundexceptionname": "执行器组: {0} 不存在"
     },
     "runnergrouprunnerlistemptyexception": {
       "runnergrouprunnerlistemptyexception": "执行器组: {0} ({1}) 不存在执行器"
@@ -5012,6 +5031,18 @@
     },
     "rolesaveapi": {
       "getname": "保存角色信息"
+    },
+    "runnergroupsaveapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "groupnetworklist": "runner组 网段列表",
+            "name": "runner 分组名",
+            "rule": "runner 规则",
+            "runnerlist": "关联的runner列表"
+          }
+        }
+      }
     },
     "runnerregisterapi": {
       "description": {
