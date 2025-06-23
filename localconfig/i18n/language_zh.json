@@ -561,6 +561,9 @@
     }
   },
   "nfaej": {
+    "autoexecinputoutofcountexception": {
+      "autoexecinputoutofcountexception": "执行目标，如果是筛选类型：“输入文本”，数量不能大于{0}"
+    },
     "autoexecjobfirenextgroupexception": {
       "autoexecjobfirenextgroupexception": "作业激活下一个阶段组{0}失败：{1}"
     },
