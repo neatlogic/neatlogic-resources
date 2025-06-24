@@ -550,6 +550,9 @@
     },
     "autoexecserviceisnotcatalogexception": {
       "autoexecserviceisnotcatalogexception": "服务：{0}不是目录"
+    },
+    "runnergroupmatchrulenotfoundexception": {
+      "runnergroupmatchrulenotfoundexception": "不存在满足规则的执行器组"
     }
   },
   "nfaec": {

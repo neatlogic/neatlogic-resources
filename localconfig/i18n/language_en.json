@@ -550,6 +550,9 @@
     },
     "autoexecserviceisnotcatalogexception": {
       "autoexecserviceisnotcatalogexception": "Service: {0} is not a directory"
+    },
+    "runnergroupmatchrulenotfoundexception": {
+      "runnergroupmatchrulenotfoundexception": "There is no executor group that meets the rules"
     }
   },
   "nfaec": {
