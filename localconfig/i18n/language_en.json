@@ -1587,7 +1587,7 @@
       "displaymodeaftertimeout": "Display method after work order timeout, optional values naturalTime | workTime",
       "processtaskstepautoapprovalshow": "Do you want to display the automatic approval function for work order steps",
       "processtaskstepenablecomment": "Work order step reply function",
-      "processtasktablayout": "Global default tab layout for work order details page, The format is {\"layoutList\": [{\"key\": \"report\",\"top\": false},{\"key\": \"node\",\"top\": false},{\"key\": \"step\",\"top\": false},{\"key\": \"activity\",\"top\": false},{\"key\": \"relevance\",\"top\": false},{\"key\": \"markrepeat\",\"top\": false},{\"key\": \"file\",\"top\": false},{\"key\": \"reportingHistory\",\"top\": false}]}",
+      "processtasktablayout": "Global default tab layout for work order details page",
       "processtaskworkerpolicyisonlyonceexecute": "Is the work order step handler allocation strategy only assigned once, with a default of 0? When the step is reactivated, the handler will be reassigned. If set to 1, the old handler will be used when the step is reactivated",
       "slatimedisplaymode": "Display method for work order timeliness, with optional values of naturalTime | workTime",
       "steplist": {
