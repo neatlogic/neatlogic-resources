@@ -2024,6 +2024,10 @@
       "getname": "组合工具创建作业",
       "input": {
         "param": {
+          "desc": {
+            "parallelcount": "并发数",
+            "parallelpolicy": "并发策略"
+          },
           "roundcount": "分组数"
         }
       }
@@ -5008,6 +5012,9 @@
     }
   },
   "nmtar": {
+    "checkrunnerstatusapi": {
+      "getname": "检查runner状态"
+    },
     "deleteregionapi": {
       "getname": "删除地域"
     },

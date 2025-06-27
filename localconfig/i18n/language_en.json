@@ -1996,6 +1996,10 @@
       "getname": "Create homework with combination tools",
       "input": {
         "param": {
+          "desc": {
+            "parallelcount": "Concurrency Level",
+            "parallelpolicy": "Concurrency Strategy"
+          },
           "roundcount": "Number of groups"
         }
       }
@@ -4956,6 +4960,9 @@
     }
   },
   "nmtar": {
+    "checkrunnerstatusapi": {
+      "getname": "Check the status of the runner"
+    },
     "deleteregionapi": {
       "getname": "Delete Region"
     },
