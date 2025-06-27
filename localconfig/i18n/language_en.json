@@ -4647,6 +4647,9 @@
         }
       }
     },
+    "searchchangelogauditlistapi": {
+      "getname": "Query the list of database change records"
+    },
     "searchchangelogversionapi": {
       "getname": "Query Change Version Log List",
       "output": {
