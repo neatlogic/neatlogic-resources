@@ -4702,6 +4702,9 @@
         }
       }
     },
+    "searchchangelogauditlistapi": {
+      "getname": "查询数据库变更记录列表"
+    },
     "searchchangelogversionapi": {
       "getname": "查询变更版本日志列表",
       "output": {
