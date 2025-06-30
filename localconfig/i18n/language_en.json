@@ -495,6 +495,9 @@
       "autoexecjobrunnernotfoundexceptionb": "According to homework ID: {0}, homework stage ID: {1}, executor (runner does not exist)",
       "autoexecjobrunnernotfoundexceptionc": "Runner name: {0} does not exist"
     },
+    "autoexecparallelcountisrequiredexception": {
+      "autoexecparallelcountisrequiredexception": "The concurrent quantity must be set"
+    },
     "autoexecparamcannotbeemptyexception": {
       "autoexecparamcannotbeemptyexception": "Parameter of stage [{0}] tool [{1}]: {2} cannot be empty"
     },
