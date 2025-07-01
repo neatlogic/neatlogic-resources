@@ -294,7 +294,8 @@
     "startloadconfig": "Start to load config from {0}...",
     "startloadmodule": "Start to initialize module...",
     "startloadschedulejob": "Start to load schedule job of {0}...",
-    "startloadstartupjob": "Start to run startup job {0} for {1} ...",
+    "startloadstartupjob": "The startup job {0} for tenant {1} has been completed.",
+    "startloadstartupjobforall": "The global startup job {0} has been completed.",
     "starttime": "start time",
     "startupjob": "Startup Job",
     "startuser": "Start user",
@@ -475,6 +476,12 @@
     "autoexeccombopoperationnotfoundexception": {
       "autoexeccombopoperationnotfoundexception": "The stage [{0}] tool [{1}] has been deleted. Please clean up the tool in the combination tool and save it"
     },
+    "autoexecjobdeleteexception": {
+      "autoexecjobdeleteexception": "{0}({1})Cleaning automated job failed"
+    },
+    "autoexecjobexecutepermissiondeniedexception": {
+      "autoexecjobexecutepermissiondeniedexception": "Current user: {1} is not the executing user of the current job ({0}): {2}, please refresh the page and take over the job again"
+    },
     "autoexecjobnotsupportmultiparentexception": {
       "autoexecjobnotsupportmultiparentexception": "Parent job {0} already exists, and currently does not support 2 parent jobs"
     },
@@ -487,6 +494,9 @@
       "autoexecjobrunnernotfoundexceptiona": "Runner id: {0} does not exist",
       "autoexecjobrunnernotfoundexceptionb": "According to homework ID: {0}, homework stage ID: {1}, executor (runner does not exist)",
       "autoexecjobrunnernotfoundexceptionc": "Runner name: {0} does not exist"
+    },
+    "autoexecparallelcountisrequiredexception": {
+      "autoexecparallelcountisrequiredexception": "The concurrent quantity must be set"
     },
     "autoexecparamcannotbeemptyexception": {
       "autoexecparamcannotbeemptyexception": "Parameter of stage [{0}] tool [{1}]: {2} cannot be empty"
@@ -523,17 +533,29 @@
     "autoexecprofileisnotfoundexception": {
       "autoexecprofileisnotfoundexception": "The preset parameter set {0} does not exist"
     },
+    "autoexecrunnergroupnotfoundbytagandruleexception": {
+      "autoexecrunnergroupnotfoundbytagandruleexception": "The homework cannot find an executor group that meets the rule based on the executor group label \u0027{0}\u0027",
+      "autoexecrunnergroupnotfoundbytagandruleexceptionphase": "According to the actuator group label \u0027{1}\u0027 set in the homework stage \u0027{0}\u0027, no actuator group that meets the rules was found"
+    },
     "autoexecrunnergroupnotfoundbytagexception": {
-      "autoexecrunnergroupnotfoundbytagexception": "According to tag \u0027{0}\u0027, the actuator group cannot be found"
+      "autoexecrunnergroupnotfoundbytagexception": "According to tag \u0027{0}\u0027, the actuator group cannot be found",
+      "autoexecrunnergroupnotfoundbytagexceptionphase": "According to the actuator group label \u0027{1}\u0027 set in the homework stage \u0027{0}\u0027, the actuator group cannot be found"
+    },
+    "autoexecrunnergrouprulenotmatchexception": {
+      "autoexecrunnergrouprulenotmatchexception": "The executor group \u0027{1} ({2})\u0027 set by {0} does not meet the rules"
     },
     "autoexecrunnergrouptaginvalidexception": {
-      "autoexecrunnergrouptaginvalidexception": "The tag value \u0027{0}\u0027 for the actuator group is illegal and must be an array"
+      "autoexecrunnergrouptaginvalidexception": "The tag value \u0027{0}\u0027 for the actuator group is illegal and must be an array",
+      "autoexecrunnergrouptaginvalidexceptiona": "The tag value \u0027{1}\u0027 for the {0} executor group in homework stage is illegal. The tag does not exist or is not an array. If the page control has no value, it means that the tag has been deleted and the dropdown box needs to be cleared, reconfigured, and saved"
     },
     "autoexecrunnergrouptagnotmatchexception": {
       "autoexecrunnergrouptagnotmatchexception": "The actuator group \u0027{0}\u0027 is not within the range of label \u0027{1}\u0027"
     },
     "autoexecserviceisnotcatalogexception": {
       "autoexecserviceisnotcatalogexception": "Service: {0} is not a directory"
+    },
+    "runnergroupmatchrulenotfoundexception": {
+      "runnergroupmatchrulenotfoundexception": "There is no executor group that meets the rules"
     }
   },
   "nfaec": {
@@ -545,6 +567,9 @@
     }
   },
   "nfaej": {
+    "autoexecinputoutofcountexception": {
+      "autoexecinputoutofcountexception": "Execution target, if it is a filtering type: \u0027Input Text\u0027, the quantity cannot exceed {0}"
+    },
     "autoexecjobfirenextgroupexception": {
       "autoexecjobfirenextgroupexception": "Task activation for next stage group {0} failed: {1}"
     },
@@ -642,7 +667,9 @@
       "autocollect": "Automatic collection",
       "excel": "Excel import",
       "itsm": "Process modification",
+      "mobile": "mobile terminal",
       "page": "Page Operations",
+      "pc": "PC end",
       "relative": "update cascade ",
       "unknown": "unknown"
     },
@@ -788,10 +815,16 @@
     "reltypenotfoundexception": {
       "reltypenotfoundexception": "Relationship type: {0} does not exist"
     },
+    "resourcecenteraccountnotprivateexception": {
+      "resourcecenteraccountnotprivateexception": "Account: \u0027{0}\u0027 is not a private type"
+    },
     "resourcecenteraccountprotocolnotfoundexception": {
       "resourcecenteraccountprotocolnotfoundexception": {
         "id": "Protocol: {0} does not exist"
       }
+    },
+    "resourcecenterresourcenotexistaccountexception": {
+      "resourcecenterresourcenotexistaccountexception": "Account \u0027{1}\u0027 does not exist in resource \u0027{0}\u0027"
     },
     "resourcecenterviewconfigexception": {
       "resourcecenterviewconfigexception": "Field declared in view {0}: {1}, but definition not found in configuration file"
@@ -837,6 +870,13 @@
           "purchaser": "Customer Name"
         }
       }
+    },
+    "rolevo": {
+      "entityfield": {
+        "name": {
+          "ruleprefix": "Rule prefix"
+        }
+      }
     }
   },
   "nfda": {
@@ -876,6 +916,15 @@
       "view": "View configuration",
       "viewdesc": "Application viewing permission, can view applications (one click publishing, application configuration)"
     },
+    "deployappconfigactiontype": {
+      "env": {
+        "description": "The permission to create and publish job environments and the permission to modify environment related configurations corresponding to application configurations (also requires the \"Edit Configuration\" permission)",
+        "text": "environment"
+      },
+      "operation": {
+        "text": "operate"
+      }
+    },
     "deploytenantconfig": {
       "gitlabwebhookcallbackhost": "Gitlab webhook callback host address"
     }
@@ -897,6 +946,7 @@
         "name": {
           "connectionid": "Data connection ID",
           "cron": "Timing strategy",
+          "databaseid": "Database ID",
           "datacount": "Data volume",
           "dbtype": "Database type",
           "expireunit": "Effective time unit",
@@ -1053,6 +1103,16 @@
     }
   },
   "nfde": {
+    "databaseconnectionfailedexception": {
+      "configisempty": "The database connection configuration config is empty",
+      "fileidlistisempty": "The fileIdList in the {0} database connection configuration config is empty"
+    },
+    "databasenamerepeatexception": {
+      "databasenamerepeatexception": "Database name: {0} already exists"
+    },
+    "databasenotfoundexception": {
+      "databasenotfoundexception": "Database: {0} does not exist"
+    },
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "Application system \u0027{0}\u0027, module \u0027{1}\u0027 is not associated with a runner"
     },
@@ -1340,6 +1400,10 @@
       "runnerconnectrefusedexceptiona": "Runner link failed: {0}",
       "runnerconnectrefusedexceptionmsg": "Runner: \u0027{0}\u0027 connection failed, please check if the runner service is functioning properly and try again. Exception message: {1}"
     },
+    "runnergroupnotfoundexception": {
+      "runnergroupnotfoundexception": "The actuator group does not exist. Please configure the actuator group first",
+      "runnergroupnotfoundexceptionname": "Executor group: {0} does not exist"
+    },
     "runnergrouprunnerlistemptyexception": {
       "runnergrouprunnerlistemptyexception": "Executor group: {0} ({1}) does not have an executor"
     },
@@ -1365,6 +1429,9 @@
         "ipresourceid": "IP: {0}({1}) Unable to find a matching runner, please verify the runner group configuration",
         "noparam": "Unable to find a matching runner. Please verify the runner group configuration or if there is no runner map configured"
       }
+    },
+    "runnerurlisnullexception": {
+      "runnerurlisnullexception": "The URL of the runner with ID {0} is empty"
     }
   },
   "nfes": {
@@ -1496,6 +1563,12 @@
       "knowledgetemplatenotfoundedittargetexception": "Knowledge template: {0} does not exist"
     }
   },
+  "nfme": {
+    "matrixviewsqlirregularexception": {
+      "matrixviewsqlirregularexception": "SQL illegal {0}",
+      "matrixviewsqlirregularexception_a": "The configuration file is not a valid XML file"
+    }
+  },
   "nfne": {
     "emailsendexception": {
       "emailsendexception": "Email sending failed, Exception:{0}",
@@ -1517,7 +1590,7 @@
       "displaymodeaftertimeout": "Display method after work order timeout, optional values naturalTime | workTime",
       "processtaskstepautoapprovalshow": "Do you want to display the automatic approval function for work order steps",
       "processtaskstepenablecomment": "Work order step reply function",
-      "processtasktablayout": "Global default tab layout for work order details page, The format is {\"layoutList\": [{\"key\": \"report\",\"top\": false},{\"key\": \"node\",\"top\": false},{\"key\": \"step\",\"top\": false},{\"key\": \"activity\",\"top\": false},{\"key\": \"relevance\",\"top\": false},{\"key\": \"markrepeat\",\"top\": false},{\"key\": \"file\",\"top\": false},{\"key\": \"reportingHistory\",\"top\": false}]}",
+      "processtasktablayout": "Global default tab layout for work order details page",
       "processtaskworkerpolicyisonlyonceexecute": "Is the work order step handler allocation strategy only assigned once, with a default of 0? When the step is reactivated, the handler will be reassigned. If set to 1, the old handler will be used when the step is reactivated",
       "slatimedisplaymode": "Display method for work order timeliness, with optional values of naturalTime | workTime",
       "steplist": {
@@ -1583,6 +1656,10 @@
     },
     "processnotfoundedittargetexception": {
       "processnotfoundedittargetexception": "Process: {0} does not exist"
+    },
+    "processtasknextstepillegalexception": {
+      "processtasknextstepillegalexception": "{1} Not the next step of step: {0}",
+      "processtasknextstepillegalexception_a": "The starting step of work order: {0} does not have a next step"
     },
     "processtasknotfoundedittargetexception": {
       "processtasknotfoundedittargetexception": "Work order: {0} does not exist"
@@ -1825,7 +1902,10 @@
     "reportstatementnotfoundedittargetexception": {
       "reportstatementnotfoundedittargetexception": "Large screen report: {0} does not exist"
     },
-    "systemattrtype": "System Properties"
+    "systemattrtype": "System Properties",
+    "systemattrtypea": {
+      "getenumname": "System attribute type"
+    }
   },
   "nfs": {
     "scriptrunnermanager": {
@@ -1919,6 +1999,10 @@
       "getname": "Create homework with combination tools",
       "input": {
         "param": {
+          "desc": {
+            "parallelcount": "Concurrency Level",
+            "parallelpolicy": "Concurrency Strategy"
+          },
           "roundcount": "Number of groups"
         }
       }
@@ -1957,8 +2041,23 @@
     }
   },
   "nmaaje": {
+    "informautoexecjobphaseroundendapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "seqno": "Blue green batch"
+          }
+        }
+      }
+    },
     "updateautoexecjobphasestatusapi": {
-      "getname": "Callback Update Job Stage Status"
+      "getname": "Callback Update Job Stage Status",
+      "input": {
+        "param": {
+          "desc": "Execution ID",
+          "needinform": "Do I need to inform during failure or termination"
+        }
+      }
     },
     "updateautoexecjobstatusapi": {
       "getname": "Callback update job status"
@@ -2039,6 +2138,11 @@
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "Custom Tool Version"
+    }
+  },
+  "nmajsa": {
+    "autoexecjobsourcetypehandler": {
+      "getrunnermaplist": "school assignment"
     }
   },
   "nmas": {
@@ -2700,6 +2804,9 @@
     "accountprotocolsaveapi": {
       "getname": "Save Account Management Agreement"
     },
+    "accountsaveapi": {
+      "getname": "Save Resource Center Account"
+    },
     "appenvlistapi": {
       "getname": "Query the list of application module environments"
     },
@@ -2724,6 +2831,12 @@
   "nmcarr": {
     "exportresourceapi": {
       "getname": "Export asset inventory list"
+    },
+    "resourceaccountaccesstestapi": {
+      "getname": "Test account availability"
+    },
+    "resourceaccountsaveapi": {
+      "getname": "Save resource account"
     },
     "resourcelistapi": {
       "getname": "Query Resource Center Data List"
@@ -3197,6 +3310,9 @@
     }
   },
   "nmdaae": {
+    "deletedeployappconfigenvdbprivateaccountapi": {
+      "getname": "Delete private account for publishing application configuration DB"
+    },
     "deletedeployappconfiginstanceapi": {
       "getname": "Delete instances of application module environments that publish application configurations"
     },
@@ -3215,6 +3331,15 @@
     },
     "savedeployappconfigenvattrapi": {
       "getname": "Save application environment properties"
+    },
+    "savedeployappconfigenvdbapi": {
+      "getname": "Save and publish application configuration asset configuration item data"
+    },
+    "savedeployappconfigenvdbprivateaccountapi": {
+      "getname": "Save and publish application configuration DB private account"
+    },
+    "savedeployappconfigenvdbpublicaccountapi": {
+      "getname": "Save and publish application configuration DB public account"
     }
   },
   "nmdaam": {
@@ -4525,6 +4650,9 @@
         }
       }
     },
+    "searchchangelogauditlistapi": {
+      "getname": "Query the list of database change records"
+    },
     "searchchangelogversionapi": {
       "getname": "Query Change Version Log List",
       "output": {
@@ -4541,6 +4669,9 @@
     "adddocumentonlineconfigapi": {
       "getname": "Add mapping relationship between online help documents and module menus"
     },
+    "deletedatabaseapi": {
+      "getname": "Delete database configuration information"
+    },
     "deletedocumentonlineconfigapi": {
       "getname": "Delete the mapping relationship between online help documents and module menus"
     },
@@ -4549,6 +4680,9 @@
     },
     "exportdocumentonlineconfigapi": {
       "getname": "Export online help document configuration file"
+    },
+    "getdatabaseapi": {
+      "getname": "Retrieve database configuration information"
     },
     "getdocumentonlineapi": {
       "getname": "Obtain a single online help document"
@@ -4565,8 +4699,14 @@
     "getdocumentonlineunclassifiedlistapi": {
       "getname": "Query the list of unclassified online help documents"
     },
+    "savadatabaseapi": {
+      "getname": "Save database configuration information"
+    },
     "savedocumentonlineconfigapi": {
       "getname": "Save the mapping relationship between online help documents and module menus"
+    },
+    "searchdatabaseapi": {
+      "getname": "Query database configuration information list"
     },
     "searchdatasourceapi": {
       "getname": "Query Data Warehouse Data Source"
@@ -4576,6 +4716,9 @@
       "mydoservice": {
         "error": "Unable to find document with docID {0}"
       }
+    },
+    "testdatabaseapi": {
+      "getname": "Test database connection"
     }
   },
   "nmtae": {
@@ -4823,6 +4966,9 @@
     }
   },
   "nmtar": {
+    "checkrunnerstatusapi": {
+      "getname": "Check the status of the runner"
+    },
     "deleteregionapi": {
       "getname": "Delete Region"
     },
@@ -4852,6 +4998,18 @@
     },
     "rolesaveapi": {
       "getname": "Save role information"
+    },
+    "runnergroupsaveapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "groupnetworklist": "Runner Group Network Segment List",
+            "name": "Runner group name",
+            "rule": "Runner rules",
+            "runnerlist": "Associated runner list"
+          }
+        }
+      }
     },
     "runnerregisterapi": {
       "description": {
@@ -4931,6 +5089,18 @@
         }
       }
     },
+    "jobtestapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "jobgroup": "Timed homework grouping",
+            "jobhandlerclassname": "HandlerClassName corresponding to timed assignments",
+            "jobid": "Unique key for timed homework",
+            "type": "Private: Internal jobs refer to jobs that start automatically upon system startup (jobBase), while public: External jobs refer to jobs dynamically added to a page (PublicJobBase). Default private internal job"
+          }
+        }
+      }
+    },
     "saveserverapi": {
       "getname": "Save server information"
     },
@@ -5002,11 +5172,17 @@
     }
   },
   "nmtau": {
+    "cleansubmitkeyapi": {
+      "getname": "Manually clear duplicate SubmitKeyMap submissions"
+    },
     "deleteuserdataapi": {
       "getname": "Delete user data"
     },
     "getcurrentusertokenapi": {
       "getname": "Obtain the user\u0027s own token"
+    },
+    "getsubmitkeyinfoapi": {
+      "getname": "Get duplicate SubmitKeyMap submissions"
     },
     "getuserdataapi": {
       "getname": "Obtain user data"
@@ -5052,6 +5228,9 @@
           }
         }
       }
+    },
+    "usergetforeditapi": {
+      "getname": "Retrieve user information (dedicated for editing page display)"
     },
     "userprofilelistapi": {
       "getname": "User personalized query list interface"
@@ -5209,6 +5388,7 @@
     },
     "cmdb": {
       "abbrname": "for short",
+      "accountidlist": "Account ID List",
       "addid": "ID, do not provide a representative to add",
       "alertlevel": "level",
       "allowedit": "Allow editing",

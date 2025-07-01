@@ -2550,11 +2550,6 @@ INSERT IGNORE INTO `tagent` VALUES (1020350199349249, '192.168.3.90', 3939, 'loc
 INSERT IGNORE INTO `tagent_account` VALUES (1020350199349250, '192.168.3.90_3939_tagent', '{RC4}8442d0e098a095d2f0c65091f5038a3d', 541908162068480, 'system', '2023-11-08 19:33:42', 'system', '2023-11-08 19:54:13');
 
 -- ----------------------------
--- Records of tagent_account_ip
--- ----------------------------
-INSERT IGNORE INTO `tagent_account_ip` VALUES (1020350199349250, '192.168.3.90');
-
--- ----------------------------
 -- Records of tagent_ip
 -- ----------------------------
 INSERT IGNORE INTO `tagent_ip` VALUES (2232024, 1020350199349249, '192.168.3.90');

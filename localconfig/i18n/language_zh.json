@@ -294,7 +294,8 @@
     "startloadconfig": "开始从 {0} 加载配置...",
     "startloadmodule": "开始初始化模块...",
     "startloadschedulejob": "开始加载模块 {0} 的定时作业...",
-    "startloadstartupjob": "开始为 {1} 执行启动作业 {0} ...",
+    "startloadstartupjob": "租户 {1} 的启动作业 {0} 已执行完毕",
+    "startloadstartupjobforall": "全局启动作业 {0} 已执行完毕",
     "starttime": "开始时间",
     "startupjob": "启动作业",
     "startuser": "开始用户",
@@ -475,6 +476,12 @@
     "autoexeccombopoperationnotfoundexception": {
       "autoexeccombopoperationnotfoundexception": "阶段[{0}] 工具[{1}]已被删除，请在组合工具中清理该工具并保存"
     },
+    "autoexecjobdeleteexception": {
+      "autoexecjobdeleteexception": "{0}({1})清理自动化作业失败"
+    },
+    "autoexecjobexecutepermissiondeniedexception": {
+      "autoexecjobexecutepermissiondeniedexception": "当前用户：{1} 不是当前作业({0})的执行用户：{2},请刷新页面，重新接管作业"
+    },
     "autoexecjobnotsupportmultiparentexception": {
       "autoexecjobnotsupportmultiparentexception": "父作业{0}已经存在父作业,一个作业最多支持2个父作业"
     },
@@ -487,6 +494,9 @@
       "autoexecjobrunnernotfoundexceptiona": "执行器（runner）id:{0}不存在",
       "autoexecjobrunnernotfoundexceptionb": "根据作业id：{0}，作业阶段id：{1}，执行器（runner不存在",
       "autoexecjobrunnernotfoundexceptionc": "执行器（runner）名:{0}不存在"
+    },
+    "autoexecparallelcountisrequiredexception": {
+      "autoexecparallelcountisrequiredexception": "并发数量必须设置"
     },
     "autoexecparamcannotbeemptyexception": {
       "autoexecparamcannotbeemptyexception": "阶段[{0}] 工具[{1}]的参数：{2}不能为空"
@@ -523,17 +533,29 @@
     "autoexecprofileisnotfoundexception": {
       "autoexecprofileisnotfoundexception": "预置参数集{0}不存在"
     },
+    "autoexecrunnergroupnotfoundbytagandruleexception": {
+      "autoexecrunnergroupnotfoundbytagandruleexception": "不存在标签为“{0}”（作业设置）且满足规则的执行器组",
+      "autoexecrunnergroupnotfoundbytagandruleexceptionphase": "不存在标签为“{1}”（阶段”{0}“设置）且满足规则的执行器组"
+    },
     "autoexecrunnergroupnotfoundbytagexception": {
-      "autoexecrunnergroupnotfoundbytagexception": "根据标签“{0}”，找不到执行器组"
+      "autoexecrunnergroupnotfoundbytagexception": "不存在标签为“{0}”（作业设置）的执行器组",
+      "autoexecrunnergroupnotfoundbytagexceptionphase": "不存在标签为“{1}”（阶段“{0}”设置）的执行器组"
+    },
+    "autoexecrunnergrouprulenotmatchexception": {
+      "autoexecrunnergrouprulenotmatchexception": "{0}设置的执行器组“{1}({2})”,不满足规则"
     },
     "autoexecrunnergrouptaginvalidexception": {
-      "autoexecrunnergrouptaginvalidexception": "执行器组标签值“{0}”非法，标签不存在或不是数组。如果页面控件没有值，说明该标签已被删除，需要清空下拉框，重新配置保存"
+      "autoexecrunnergrouptaginvalidexception": "作业执行器组标签值“{0}”非法，标签不存在或不是数组。如果页面控件没有值，说明该标签已被删除，需要清空下拉框，重新配置保存",
+      "autoexecrunnergrouptaginvalidexceptiona": "作业阶段{0}执行器组标签值“{1}”非法，标签不存在或不是数组。如果页面控件没有值，说明该标签已被删除，需要清空下拉框，重新配置保存"
     },
     "autoexecrunnergrouptagnotmatchexception": {
-      "autoexecrunnergrouptagnotmatchexception": "执行器组“{0}”没有以下标签“{1}”"
+      "autoexecrunnergrouptagnotmatchexception": "执行器组“{1}“（{0}指定）不存在标签“{3}”（{2}指定）"
     },
     "autoexecserviceisnotcatalogexception": {
       "autoexecserviceisnotcatalogexception": "服务：{0}不是目录"
+    },
+    "runnergroupmatchrulenotfoundexception": {
+      "runnergroupmatchrulenotfoundexception": "不存在满足规则的执行器组"
     }
   },
   "nfaec": {
@@ -545,6 +567,9 @@
     }
   },
   "nfaej": {
+    "autoexecinputoutofcountexception": {
+      "autoexecinputoutofcountexception": "执行目标，如果是筛选类型：“输入文本”，数量不能大于{0}"
+    },
     "autoexecjobfirenextgroupexception": {
       "autoexecjobfirenextgroupexception": "作业激活下一个阶段组{0}失败：{1}"
     },
@@ -642,7 +667,9 @@
       "autocollect": "自动采集",
       "excel": "excel导入",
       "itsm": "流程修改",
+      "mobile": "移动端",
       "page": "页面操作",
+      "pc": "PC端",
       "relative": "级联更新",
       "unknown": "未知"
     },
@@ -788,10 +815,16 @@
     "reltypenotfoundexception": {
       "reltypenotfoundexception": "关系类型：{0} 不存在"
     },
+    "resourcecenteraccountnotprivateexception": {
+      "resourcecenteraccountnotprivateexception": "账号：“{0}”不是私有类型"
+    },
     "resourcecenteraccountprotocolnotfoundexception": {
       "resourcecenteraccountprotocolnotfoundexception": {
         "id": "协议：{0}不存在"
       }
+    },
+    "resourcecenterresourcenotexistaccountexception": {
+      "resourcecenterresourcenotexistaccountexception": "资源“{0}”中不存在账号“{1}”"
     },
     "resourcecenterviewconfigexception": {
       "resourcecenterviewconfigexception": "视图{0}中声明字段：{1}，但在配置文件中没有找到定义"
@@ -835,6 +868,13 @@
           "isvalid": "是否合法",
           "modules": "模块列表",
           "purchaser": "客户名称"
+        }
+      }
+    },
+    "rolevo": {
+      "entityfield": {
+        "name": {
+          "ruleprefix": "规则前缀"
         }
       }
     },
@@ -898,6 +938,15 @@
       "view": "查看配置",
       "viewdesc": "可以查看应用(一键发布、应用配置)"
     },
+    "deployappconfigactiontype": {
+      "env": {
+        "description": "创建发布作业环境的权限和应用配置对应环境相关配置修改的权限(同时需要“编辑配置”权限)",
+        "text": "环境"
+      },
+      "operation": {
+        "text": "操作"
+      }
+    },
     "deploytenantconfig": {
       "gitlabwebhookcallbackhost": "gitlab webhook回调主机地址"
     }
@@ -919,6 +968,7 @@
         "name": {
           "connectionid": "数据连接id",
           "cron": "定时策略",
+          "databaseid": "数据库Id",
           "datacount": "数据量",
           "dbtype": "数据库类型",
           "expireunit": "有效时间单位",
@@ -1075,6 +1125,16 @@
     }
   },
   "nfde": {
+    "databaseconnectionfailedexception": {
+      "configisempty": "数据库连接配置config为空",
+      "fileidlistisempty": "{0}数据库连接配置config中fileIdList为空"
+    },
+    "databasenamerepeatexception": {
+      "databasenamerepeatexception": "数据库名称：{0} 已存在"
+    },
+    "databasenotfoundexception": {
+      "databasenotfoundexception": "数据库：{0} 不存在"
+    },
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "应用系统“{0}”，模块“{1}”未关联runner"
     },
@@ -1369,6 +1429,10 @@
       "runnerconnectrefusedexceptiona": "Runner 链接失败： {0}",
       "runnerconnectrefusedexceptionmsg": "执行器（runner)：“{0}” 连接失败,请检查执行器服务正常后重试。异常信息:{1}"
     },
+    "runnergroupnotfoundexception": {
+      "runnergroupnotfoundexception": "执行器组不存在，请先配置执行器组",
+      "runnergroupnotfoundexceptionname": "执行器组: {0} 不存在"
+    },
     "runnergrouprunnerlistemptyexception": {
       "runnergrouprunnerlistemptyexception": "执行器组: {0} ({1}) 不存在执行器"
     },
@@ -1394,6 +1458,9 @@
         "ipresourceid": "ip: {0}({1})找不到匹配的runner，请核对runner组配置",
         "noparam": "找不到匹配的runner，请核对runner组配置 或者 没有配置runner map"
       }
+    },
+    "runnerurlisnullexception": {
+      "runnerurlisnullexception": "ID为：{0}的runner的url是空的"
     }
   },
   "nfes": {
@@ -1524,6 +1591,12 @@
       "knowledgetemplatenotfoundedittargetexception": "知识模版：{0}不存在"
     }
   },
+  "nfme": {
+    "matrixviewsqlirregularexception": {
+      "matrixviewsqlirregularexception": "sql 非法{0}",
+      "matrixviewsqlirregularexception_a": "配置文件不是合法的XML文件"
+    }
+  },
   "nfne": {
     "emailsendexception": {
       "emailsendexception": "邮件发送失败，异常：{0}",
@@ -1545,7 +1618,7 @@
       "displaymodeaftertimeout": "工单时效超时后显示方式，可选值naturalTime|workTime",
       "processtaskstepautoapprovalshow": "是否显示工单步骤自动审批功能",
       "processtaskstepenablecomment": "是否工单步骤回复功能",
-      "processtasktablayout": "工单详情页全局默认tab布局，格式为{\"layoutList\": [{\"key\": \"report\",\"top\": false},{\"key\": \"node\",\"top\": false},{\"key\": \"step\",\"top\": false},{\"key\": \"activity\",\"top\": false},{\"key\": \"relevance\",\"top\": false},{\"key\": \"markrepeat\",\"top\": false},{\"key\": \"file\",\"top\": false},{\"key\": \"reportingHistory\",\"top\": false}]}",
+      "processtasktablayout": "工单详情页全局默认tab布局",
       "processtaskworkerpolicyisonlyonceexecute": "工单步骤处理人分配策略是否只分配一次处理人，默认为0，步骤重新激活时会重新分配处理人，如果设置为1，则步骤重新激活时会用旧处理人",
       "slatimedisplaymode": "工单时效显示方式，可选值naturalTime|workTime",
       "steplist": {
@@ -1611,6 +1684,10 @@
     },
     "processnotfoundedittargetexception": {
       "processnotfoundedittargetexception": "流程：{0}不存在"
+    },
+    "processtasknextstepillegalexception": {
+      "processtasknextstepillegalexception": "{1}不是步骤：{0}的下一步骤",
+      "processtasknextstepillegalexception_a": "工单：{0}的开始步骤没有下一步骤"
     },
     "processtasknotfoundedittargetexception": {
       "processtasknotfoundedittargetexception": "工单：{0}不存在"
@@ -1853,7 +1930,10 @@
     "reportstatementnotfoundedittargetexception": {
       "reportstatementnotfoundedittargetexception": "大屏报表：{0}不存在"
     },
-    "systemattrtype": "系统属性"
+    "systemattrtype": "系统属性",
+    "systemattrtypea": {
+      "getenumname": "系统属性类型"
+    }
   },
   "nfs": {
     "scriptrunnermanager": {
@@ -1947,6 +2027,10 @@
       "getname": "组合工具创建作业",
       "input": {
         "param": {
+          "desc": {
+            "parallelcount": "并发数",
+            "parallelpolicy": "并发策略"
+          },
           "roundcount": "分组数"
         }
       }
@@ -1985,8 +2069,23 @@
     }
   },
   "nmaaje": {
+    "informautoexecjobphaseroundendapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "seqno": "蓝绿批次"
+          }
+        }
+      }
+    },
     "updateautoexecjobphasestatusapi": {
-      "getname": "回调更新作业阶段状态"
+      "getname": "回调更新作业阶段状态",
+      "input": {
+        "param": {
+          "desc": "执行id",
+          "needinform": "失败、中止时是否需要inform"
+        }
+      }
     },
     "updateautoexecjobstatusapi": {
       "getname": "回调更新作业状态"
@@ -2067,6 +2166,11 @@
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "自定义工具版本"
+    }
+  },
+  "nmajsa": {
+    "autoexecjobsourcetypehandler": {
+      "getrunnermaplist": "作业"
     }
   },
   "nmas": {
@@ -2728,6 +2832,9 @@
     "accountprotocolsaveapi": {
       "getname": "保存账号管理协议"
     },
+    "accountsaveapi": {
+      "getname": "保存资源中心账号"
+    },
     "appenvlistapi": {
       "getname": "查询应用模块环境列表"
     },
@@ -2752,6 +2859,12 @@
   "nmcarr": {
     "exportresourceapi": {
       "getname": "导出资产清单列表"
+    },
+    "resourceaccountaccesstestapi": {
+      "getname": "测试账号可用性"
+    },
+    "resourceaccountsaveapi": {
+      "getname": "保存资源账号"
     },
     "resourcelistapi": {
       "getname": "查询资源中心数据列表"
@@ -3225,6 +3338,9 @@
     }
   },
   "nmdaae": {
+    "deletedeployappconfigenvdbprivateaccountapi": {
+      "getname": "删除发布应用配置DB私有账号"
+    },
     "deletedeployappconfiginstanceapi": {
       "getname": "删除发布应用配置的应用模块环境的实例"
     },
@@ -3243,6 +3359,15 @@
     },
     "savedeployappconfigenvattrapi": {
       "getname": "保存应用环境属性"
+    },
+    "savedeployappconfigenvdbapi": {
+      "getname": "保存发布应用配置资产配置项数据"
+    },
+    "savedeployappconfigenvdbprivateaccountapi": {
+      "getname": "保存发布应用配置DB私有账号"
+    },
+    "savedeployappconfigenvdbpublicaccountapi": {
+      "getname": "保存发布应用配置DB公共账号"
     }
   },
   "nmdaam": {
@@ -4577,6 +4702,9 @@
         }
       }
     },
+    "searchchangelogauditlistapi": {
+      "getname": "查询数据库变更记录列表"
+    },
     "searchchangelogversionapi": {
       "getname": "查询变更版本日志列表",
       "output": {
@@ -4593,6 +4721,9 @@
     "adddocumentonlineconfigapi": {
       "getname": "添加在线帮助文档与模块菜单的映射关系"
     },
+    "deletedatabaseapi": {
+      "getname": "删除数据库配置信息"
+    },
     "deletedocumentonlineconfigapi": {
       "getname": "删除在线帮助文档与模块菜单的映射关系"
     },
@@ -4601,6 +4732,9 @@
     },
     "exportdocumentonlineconfigapi": {
       "getname": "导出在线帮助文档配置文件"
+    },
+    "getdatabaseapi": {
+      "getname": "获取数据库配置信息"
     },
     "getdocumentonlineapi": {
       "getname": "获取单个在线帮助文档"
@@ -4617,8 +4751,14 @@
     "getdocumentonlineunclassifiedlistapi": {
       "getname": "查询未分类的在线帮助文档列表"
     },
+    "savadatabaseapi": {
+      "getname": "保存数据库配置信息"
+    },
     "savedocumentonlineconfigapi": {
       "getname": "保存在线帮助文档与模块菜单的映射关系"
+    },
+    "searchdatabaseapi": {
+      "getname": "查询数据库配置信息列表"
     },
     "searchdatasourceapi": {
       "getname": "查询数据仓库数据源"
@@ -4628,6 +4768,9 @@
       "mydoservice": {
         "error": "找不到docID为{0}的文档"
       }
+    },
+    "testdatabaseapi": {
+      "getname": "测试数据库连接"
     }
   },
   "nmtae": {
@@ -4875,6 +5018,9 @@
     }
   },
   "nmtar": {
+    "checkrunnerstatusapi": {
+      "getname": "检查runner状态"
+    },
     "deleteregionapi": {
       "getname": "删除地域"
     },
@@ -4904,6 +5050,18 @@
     },
     "rolesaveapi": {
       "getname": "保存角色信息"
+    },
+    "runnergroupsaveapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "groupnetworklist": "runner组 网段列表",
+            "name": "runner 分组名",
+            "rule": "runner 规则",
+            "runnerlist": "关联的runner列表"
+          }
+        }
+      }
     },
     "runnerregisterapi": {
       "description": {
@@ -4983,6 +5141,18 @@
         }
       }
     },
+    "jobtestapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "jobgroup": "定时作业分组",
+            "jobhandlerclassname": "定时作业对应的handlerClassName",
+            "jobid": "定时作业唯一键",
+            "type": "private：内部作业即系统启动就自启动的作业（jobBase），public：外部作业即页面动态添加的作业（PublicJobBase）。默认private内部作业"
+          }
+        }
+      }
+    },
     "saveserverapi": {
       "getname": "保存服务器信息"
     },
@@ -5054,11 +5224,17 @@
     }
   },
   "nmtau": {
+    "cleansubmitkeyapi": {
+      "getname": "手动清理重复提交SubmitKeyMap"
+    },
     "deleteuserdataapi": {
       "getname": "删除用户数据"
     },
     "getcurrentusertokenapi": {
       "getname": "获取用户自己的令牌"
+    },
+    "getsubmitkeyinfoapi": {
+      "getname": "获取重复提交SubmitKeyMap"
     },
     "getuserdataapi": {
       "getname": "获取用户数据"
@@ -5104,6 +5280,9 @@
           }
         }
       }
+    },
+    "usergetforeditapi": {
+      "getname": "获取用户信息(编辑页面回显专用)"
     },
     "userprofilelistapi": {
       "getname": "用户个性化查询列表接口"
@@ -5261,6 +5440,7 @@
     },
     "cmdb": {
       "abbrname": "简称",
+      "accountidlist": "账号ID列表",
       "addid": "id，不提供代表添加",
       "alertlevel": "级别",
       "allowedit": "是否允许编辑",
