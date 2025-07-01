@@ -5141,6 +5141,18 @@
         }
       }
     },
+    "jobtestapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "jobgroup": "定时作业分组",
+            "jobhandlerclassname": "定时作业对应的handlerClassName",
+            "jobid": "定时作业唯一键",
+            "type": "private：内部作业即系统启动就自启动的作业（jobBase），public：外部作业即页面动态添加的作业（PublicJobBase）。默认private内部作业"
+          }
+        }
+      }
+    },
     "saveserverapi": {
       "getname": "保存服务器信息"
     },

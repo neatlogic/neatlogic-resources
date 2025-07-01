@@ -5089,6 +5089,18 @@
         }
       }
     },
+    "jobtestapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "jobgroup": "Timed homework grouping",
+            "jobhandlerclassname": "HandlerClassName corresponding to timed assignments",
+            "jobid": "Unique key for timed homework",
+            "type": "Private: Internal jobs refer to jobs that start automatically upon system startup (jobBase), while public: External jobs refer to jobs dynamically added to a page (PublicJobBase). Default private internal job"
+          }
+        }
+      }
+    },
     "saveserverapi": {
       "getname": "Save server information"
     },
