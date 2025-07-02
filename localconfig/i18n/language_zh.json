@@ -131,6 +131,7 @@
     "filepath": "文件路径",
     "filepathlist": "附件路径列表",
     "filepathprefix": "附件路径前缀",
+    "filesize": "文件大小",
     "filetype": "附件类型",
     "filter": "过滤条件",
     "focususerlist": "关注人列表",
@@ -1242,6 +1243,9 @@
   "nfe": {
     "confignotfoundexception": {
       "confignotfoundexception": "nacos获取不到配置且本地config.properties获取失败,请确认nacos服务是否正常或config.properties文件是否存在,如果存在,文件权限是否正常"
+    },
+    "systempropertynotfoundexception": {
+      "systempropertynotfoundexception": "系统属性“{0}”不存在"
     }
   },
   "nfea": {
@@ -1404,6 +1408,13 @@
     }
   },
   "nfef": {
+    "filenotfoundexception": {
+      "filenotfoundexception": "附件“{0}”不存在",
+      "getmessage": {
+        "directory": "“{0}”是一个目录",
+        "nonexistent": "文件或目录“{0}”不存在"
+      }
+    },
     "mkdirpermissiondeniedexception": {
       "mkdirpermissiondeniedexception": "没有创建文件夹权限"
     }
@@ -4916,8 +4927,17 @@
     }
   },
   "nmtal": {
+    "exportlogfileapi": {
+      "getname": "导出日志文件"
+    },
     "getlicenseapi": {
       "getname": "获取许可信息"
+    },
+    "getlogcontentapi": {
+      "getname": "获取应用日志文件内容"
+    },
+    "getlogfilenamelistapi": {
+      "getname": "获取应用日志文件名称列表"
     }
   },
   "nmtam": {
