@@ -131,6 +131,7 @@
     "filepath": "File Path",
     "filepathlist": "Attachment path list",
     "filepathprefix": "Attachment path prefix",
+    "filesize": "file size",
     "filetype": "Attachment Type",
     "filter": "Filter conditions",
     "focususerlist": "List of followers",
@@ -1216,6 +1217,9 @@
   "nfe": {
     "confignotfoundexception": {
       "confignotfoundexception": "NACOS cannot obtain the configuration and the local config.properties acquisition failed. Please confirm if the NACOS service is functioning properly or if the config.properties file exists, and if so, if the file permissions are normal"
+    },
+    "systempropertynotfoundexception": {
+      "systempropertynotfoundexception": "The system property \u0027{0}\u0027 does not exist"
     }
   },
   "nfea": {
@@ -1378,6 +1382,13 @@
     }
   },
   "nfef": {
+    "filenotfoundexception": {
+      "filenotfoundexception": "Attachment \u0027{0}\u0027 does not exist",
+      "getmessage": {
+        "directory": "\u0027{0}\u0027 is a directory",
+        "nonexistent": "The file or directory \u0027{0}\u0027 does not exist"
+      }
+    },
     "mkdirpermissiondeniedexception": {
       "mkdirpermissiondeniedexception": "No permission to create folder"
     }
@@ -4870,8 +4881,17 @@
     }
   },
   "nmtal": {
+    "exportlogfileapi": {
+      "getname": "Export Log File"
+    },
     "getlicenseapi": {
       "getname": "Obtaining License Information"
+    },
+    "getlogcontentapi": {
+      "getname": "Retrieve the content of the application log file"
+    },
+    "getlogfilenamelistapi": {
+      "getname": "Get a list of application log file names"
     }
   },
   "nmtam": {
