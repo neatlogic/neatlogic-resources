@@ -4614,6 +4614,9 @@
     }
   },
   "nmta": {
+    "batchdeletetagentapi": {
+      "getname": "Batch delete tags"
+    },
     "exporttagentapi": {
       "getname": "Export Tagent List"
     },
