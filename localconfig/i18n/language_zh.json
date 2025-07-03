@@ -934,6 +934,7 @@
       "execute": "执行",
       "executedesc": "可以查看应用(一键发布、应用配置、定时作业)、执行创建作业(一键发布、定时作业)",
       "pipeline": "超级流水线",
+      "pipelinedesc": "可以替添加、编辑和删除应用的超级流水线(应用配置)和执行应用的超级流水线",
       "versionandproductmanager": "版本\u0026制品管理",
       "versionandproductmanagerdesc": "可以查看应用(版本中心),版本中心可以添加版本和管理制品",
       "view": "查看配置",
