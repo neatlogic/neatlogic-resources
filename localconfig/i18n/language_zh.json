@@ -4669,6 +4669,9 @@
     }
   },
   "nmta": {
+    "batchdeletetagentapi": {
+      "getname": "批量删除tagent"
+    },
     "exporttagentapi": {
       "getname": "导出Tagent列表"
     },
