@@ -1116,6 +1116,9 @@
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "Application system \u0027{0}\u0027, module \u0027{1}\u0027 is not associated with a runner"
     },
+    "deployappscenarioauthexception": {
+      "deployappscenarioauthexception": "You do not have [scene permission] for scene: {2} ({3}) under system: {0} ({1})"
+    },
     "deploybatchjobfirewithrevokedandcheckedexception": {
       "deploybatchjobfirewithrevokedandcheckedexception": "Cannot execute, batch executed jobs: {0} ({1}) are all \u0027revoked\u0027 or \u0027validated\u0027 jobs"
     },
@@ -1437,6 +1440,9 @@
   "nfes": {
     "dmlsqlexecuteexception": {
       "dmlsqlexecuteexception": "Tenant:{0} Module:{1} dmlSql:{2} execution failed"
+    },
+    "schedulepublicauthexception": {
+      "schedulepublicauthexception": "No permission to test this scheduled job"
     }
   },
   "nfet": {
