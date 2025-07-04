@@ -1141,7 +1141,7 @@
       "deployappconfigmodulerunnernotfoundexception": "应用系统“{0}”，模块“{1}”未关联runner"
     },
     "deployapppipelineauthexception": {
-      "deployapppipelineauthexceptiona": "您没有全局流水线{0}({1})的执行权限或没有系统：{2}({3})下的【流水线权限】",
+      "deployapppipelineauthexceptiona": "您没有全局流水线{0}({1})的执行权限或没有应用系统：{2}({3})的【流水线权限】",
       "deployapppipelineauthexceptionb": "您没有全局流水线{0}({1})的执行权限"
     },
     "deployappscenarioauthexception": {
