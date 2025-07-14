@@ -131,6 +131,7 @@
     "filepath": "File Path",
     "filepathlist": "Attachment path list",
     "filepathprefix": "Attachment path prefix",
+    "filesize": "file size",
     "filetype": "Attachment Type",
     "filter": "Filter conditions",
     "focususerlist": "List of followers",
@@ -910,7 +911,8 @@
       "editdesc": "Application configuration permissions allow for viewing applications (one click publishing, application configuration), executing job creation (one click publishing), and editing other functions besides \"permissions\" (application configuration)",
       "execute": "implement",
       "executedesc": "Can view applications (one click publishing, application configuration) and execute creation tasks (one click publishing)",
-      "pipeline": "Super assembly line",
+      "pipeline": "Super pipeline for adding, editing, and deleting applications (application configuration) and executing applications",
+      "pipelinedesc": "Super pipeline for adding, editing, and deleting applications (application configuration) and executing applications",
       "versionandproductmanager": "Version\u0026Product Management",
       "versionandproductmanagerdesc": "You can view the application (version center), which allows you to add versions and manage artifacts",
       "view": "View configuration",
@@ -1116,6 +1118,9 @@
     "deployappconfigmodulerunnernotfoundexception": {
       "deployappconfigmodulerunnernotfoundexception": "Application system \u0027{0}\u0027, module \u0027{1}\u0027 is not associated with a runner"
     },
+    "deployappscenarioauthexception": {
+      "deployappscenarioauthexception": "You do not have [scene permission] for scene: {2} ({3}) under system: {0} ({1})"
+    },
     "deploybatchjobfirewithrevokedandcheckedexception": {
       "deploybatchjobfirewithrevokedandcheckedexception": "Cannot execute, batch executed jobs: {0} ({1}) are all \u0027revoked\u0027 or \u0027validated\u0027 jobs"
     },
@@ -1213,6 +1218,9 @@
   "nfe": {
     "confignotfoundexception": {
       "confignotfoundexception": "NACOS cannot obtain the configuration and the local config.properties acquisition failed. Please confirm if the NACOS service is functioning properly or if the config.properties file exists, and if so, if the file permissions are normal"
+    },
+    "systempropertynotfoundexception": {
+      "systempropertynotfoundexception": "The system property \u0027{0}\u0027 does not exist"
     }
   },
   "nfea": {
@@ -1375,6 +1383,13 @@
     }
   },
   "nfef": {
+    "filenotfoundexception": {
+      "filenotfoundexception": "Attachment \u0027{0}\u0027 does not exist",
+      "getmessage": {
+        "directory": "\u0027{0}\u0027 is a directory",
+        "nonexistent": "The file or directory \u0027{0}\u0027 does not exist"
+      }
+    },
     "mkdirpermissiondeniedexception": {
       "mkdirpermissiondeniedexception": "No permission to create folder"
     }
@@ -1437,6 +1452,9 @@
   "nfes": {
     "dmlsqlexecuteexception": {
       "dmlsqlexecuteexception": "Tenant:{0} Module:{1} dmlSql:{2} execution failed"
+    },
+    "schedulepublicauthexception": {
+      "schedulepublicauthexception": "No permission to test this scheduled job"
     }
   },
   "nfet": {
@@ -4597,6 +4615,9 @@
     }
   },
   "nmta": {
+    "batchdeletetagentapi": {
+      "getname": "Batch delete tags"
+    },
     "exporttagentapi": {
       "getname": "Export Tagent List"
     },
@@ -4864,8 +4885,17 @@
     }
   },
   "nmtal": {
+    "exportlogfileapi": {
+      "getname": "Export Log File"
+    },
     "getlicenseapi": {
       "getname": "Obtaining License Information"
+    },
+    "getlogcontentapi": {
+      "getname": "Retrieve the content of the application log file"
+    },
+    "getlogfilenamelistapi": {
+      "getname": "Get a list of application log file names"
     }
   },
   "nmtam": {
