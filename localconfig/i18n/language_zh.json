@@ -1576,6 +1576,13 @@
       "done": "重建完毕"
     }
   },
+  "nfhc": {
+    "heartbeatmanager": {
+      "myinit": {
+        "startupfailureprompt": "启动失败，服务器ID:{0}已经被服务器({1})使用，请修改类路径下config/serverid.conf文件中数值"
+      }
+    }
+  },
   "nfie": {
     "exportnoauthexception": {
       "exportnoauthexception": "没有导出权限"
