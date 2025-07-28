@@ -1544,6 +1544,13 @@
       "done": "Reconstruction completed"
     }
   },
+  "nfhc": {
+    "heartbeatmanager": {
+      "myinit": {
+        "startupfailureprompt": "Startup failed, server ID: {0} is already in use by server ({1}), please modify the values in the config/serviceid.exe file under the class path"
+      }
+    }
+  },
   "nfie": {
     "exportnoauthexception": {
       "exportnoauthexception": "No export permission"
