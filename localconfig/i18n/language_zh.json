@@ -5409,6 +5409,10 @@
   },
   "term": {
     "appsystemidlist": "应用系统id列表",
+    "informant": {
+      "name": "故障诊断",
+      "groupname": "故障诊断"
+    },
     "autoexec": {
       "allphasesarerunnerorsqlexecmode": "所有阶段都是Runner或SQL执行方式",
       "assignexecuser": "指定执行用户",

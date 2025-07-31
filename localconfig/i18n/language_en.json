@@ -5353,6 +5353,10 @@
   },
   "term": {
     "appsystemidlist": "Application System ID List",
+    "informant": {
+      "name": "Informant",
+      "groupname": "Informant"
+    },
     "autoexec": {
       "allphasesarerunnerorsqlexecmode": "All stages are Runner or SQL execution mode",
       "assignexecuser": "Specify Execution User",
