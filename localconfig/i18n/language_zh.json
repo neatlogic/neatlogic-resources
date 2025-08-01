@@ -5409,10 +5409,6 @@
   },
   "term": {
     "appsystemidlist": "应用系统id列表",
-    "informant": {
-      "name": "故障诊断",
-      "groupname": "故障诊断"
-    },
     "autoexec": {
       "allphasesarerunnerorsqlexecmode": "所有阶段都是Runner或SQL执行方式",
       "assignexecuser": "指定执行用户",
@@ -5447,6 +5443,7 @@
       "needexecuteuser": "执行页面是否需要设置执行用户",
       "needprotocol": "执行页面是否需要设置连接协议",
       "needroundcount": "执行页面是否需要设置分批数量",
+      "needrunnergroup": "执行页面是否需要设置runner组",
       "outputparamlist": "输出参数列表",
       "passthroughenv": "返回参数",
       "phase": "作业剧本Name",
@@ -5764,6 +5761,10 @@
       },
       "userotherinfo": "用户其他信息",
       "viplevel": "用户等级"
+    },
+    "informant": {
+      "groupname": "故障诊断",
+      "name": "故障诊断"
     },
     "inspect": {
       "fields": "数据结构列表",

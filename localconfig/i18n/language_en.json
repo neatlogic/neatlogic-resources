@@ -5353,10 +5353,6 @@
   },
   "term": {
     "appsystemidlist": "Application System ID List",
-    "informant": {
-      "name": "Informant",
-      "groupname": "Informant"
-    },
     "autoexec": {
       "allphasesarerunnerorsqlexecmode": "All stages are Runner or SQL execution mode",
       "assignexecuser": "Specify Execution User",
@@ -5391,6 +5387,7 @@
       "needexecuteuser": "Do you need to set the execution user for the execution page",
       "needprotocol": "Do you need to set a connection protocol for the execution page",
       "needroundcount": "Do you need to set the batch quantity for the execution page",
+      "needrunnergroup": "Do you need to set up a runner group on the execution page",
       "outputparamlist": "Output parameter list",
       "passthroughenv": "Return parameters",
       "phase": "Assignment Script Name",
@@ -5708,6 +5705,10 @@
       },
       "userotherinfo": "Other user information",
       "viplevel": "User level"
+    },
+    "informant": {
+      "groupname": "Informant",
+      "name": "Informant"
     },
     "inspect": {
       "fields": "Data Structure List",
