@@ -579,6 +579,24 @@
     },
     "autoexecjobtargetorrunnernotfoundexception": {
       "autoexecjobtargetorrunnernotfoundexception": "There is no execution target or actuator group"
+    },
+    "executeusermappingmodeparaminvalidexception": {
+      "executeusermappingmodeparaminvalidexception": "The type (mappingMode) in the parameter value \u0027{0}\u0027 of the executing user (executionerConfig. executionerUser) is invalid. The executing user type (mappingMode) configured in the job layer of the composite tool is\u0027 {1} \u0027"
+    },
+    "executeuservalueparamnullexception": {
+      "executeuservalueparamnullexception": "The parameter for \u0027execute Config. execute User. value\u0027 cannot be empty"
+    },
+    "jobparamnullexception": {
+      "jobparamnullexception": "The homework parameter \u0027{0}\u0027 cannot be empty"
+    },
+    "protocolidparamnullexception": {
+      "protocolidparamnullexception": "The input parameter for the protocol (executionerConfig. protocol Id) cannot be empty"
+    },
+    "runnergroupmappingmodeparaminvalidexception": {
+      "runnergroupmappingmodeparaminvalidexception": "The type (mappingMode) in the parameter value \u0027{0}\u0027 of the runnerGroup is invalid. The mapped type (mappingMode) configured in the job layer of the composite tool is\u0027 {1} \u0027"
+    },
+    "runnergroupparamnullexception": {
+      "runnergroupparamnullexception": "Runner Group (runnerGroup. value) parameter cannot be empty"
     }
   },
   "nfaes": {

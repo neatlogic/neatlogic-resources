@@ -579,6 +579,24 @@
     },
     "autoexecjobtargetorrunnernotfoundexception": {
       "autoexecjobtargetorrunnernotfoundexception": "不存在执行目标或执行器组。可能存在阶段的目标来源于上游阶段工具出参，然而上游阶段不存在或设置目标失败"
+    },
+    "executeusermappingmodeparaminvalidexception": {
+      "executeusermappingmodeparaminvalidexception": "执行用户(executeConfig.executeUser)入参值“{0}”中的类型(mappingMode)不合法，组合工具作业层配置的执行用户类型(mappingMode)为“{1}”"
+    },
+    "executeuservalueparamnullexception": {
+      "executeuservalueparamnullexception": "执行用户(executeConfig.executeUser.value)入参不能为空"
+    },
+    "jobparamnullexception": {
+      "jobparamnullexception": "作业参数“{0}”不能为空"
+    },
+    "protocolidparamnullexception": {
+      "protocolidparamnullexception": "协议(executeConfig.protocolId)入参不能为空"
+    },
+    "runnergroupmappingmodeparaminvalidexception": {
+      "runnergroupmappingmodeparaminvalidexception": "执行器组(runnerGroup)入参值“{0}”中的类型(mappingMode)不合法，组合工具作业层配置的执行器组类型(mappingMode)为“{1}”"
+    },
+    "runnergroupparamnullexception": {
+      "runnergroupparamnullexception": "执行器组(runnerGroup.value)入参不能为空"
     }
   },
   "nfaes": {
