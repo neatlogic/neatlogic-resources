@@ -834,6 +834,9 @@
     "reltypenotfoundexception": {
       "reltypenotfoundexception": "Relationship type: {0} does not exist"
     },
+    "resourceaccountaccesstesthostexception": {
+      "resourceaccountaccesstesthostexception": "\u0027{0}\u0027 does not meet the IP format and attempts to resolve domain names have failed"
+    },
     "resourcecenteraccountnotprivateexception": {
       "resourcecenteraccountnotprivateexception": "Account: \u0027{0}\u0027 is not a private type"
     },

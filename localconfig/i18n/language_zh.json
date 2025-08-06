@@ -834,6 +834,9 @@
     "reltypenotfoundexception": {
       "reltypenotfoundexception": "关系类型：{0} 不存在"
     },
+    "resourceaccountaccesstesthostexception": {
+      "resourceaccountaccesstesthostexception": "“{0}”不满足ip格式且尝试域名解析失败,请自行指定runner测试"
+    },
     "resourcecenteraccountnotprivateexception": {
       "resourcecenteraccountnotprivateexception": "账号：“{0}”不是私有类型"
     },
