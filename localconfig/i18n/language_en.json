@@ -593,6 +593,10 @@
       "jobparamrunnergroupnullexception": "The executor group is illegal, the value of the mapping job parameter \u0027{0}\u0027 is empty",
       "jobparamrunnergroupnullexceptiona": "Illegal executor group, stage \u0027{0}\u0027 refers to job parameter \u0027{1}\u0027 with an empty value"
     },
+    "jobparamrunnergrouptagnullexception": {
+      "jobparamrunnergrouptagnullexception": "Illegal actuator group label, stage \u0027{0}\u0027 refers to job parameter \u0027{1}\u0027 with an empty value",
+      "jobparamrunnergrouptagnullexceptiona": "The tag of the actuator group is illegal, and the value of the reference job parameter \u0027{0}\u0027 is empty"
+    },
     "protocolidparamnullexception": {
       "protocolidparamnullexception": "The input parameter for the protocol (executionerConfig. protocol Id) cannot be empty"
     },
