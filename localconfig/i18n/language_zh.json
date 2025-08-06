@@ -589,6 +589,9 @@
     "jobparamnullexception": {
       "jobparamnullexception": "作业参数“{0}”不能为空"
     },
+    "jobparamrunnergroupnullexception": {
+      "jobparamrunnergroupnullexception": "执行器组非法，映射作业参数“{0}”的值为空"
+    },
     "protocolidparamnullexception": {
       "protocolidparamnullexception": "协议(executeConfig.protocolId)入参不能为空"
     },
