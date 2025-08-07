@@ -597,6 +597,11 @@
       "jobparamrunnergrouptagnullexception": "Illegal actuator group label, stage \u0027{0}\u0027 refers to job parameter \u0027{1}\u0027 with an empty value",
       "jobparamrunnergrouptagnullexceptiona": "The tag of the actuator group is illegal, and the value of the reference job parameter \u0027{0}\u0027 is empty"
     },
+    "jobparamusernamenullexception": {
+      "jobparamusernamenullexception": "Execution user illegal, stage \u0027{0}\u0027 refers to job parameter \u0027{1}\u0027 with an empty value",
+      "jobparamusernamenullexceptiona": "Illegal user execution, stage group \u0027{0}\u0027 refers to job parameter \u0027{1}\u0027 with an empty value",
+      "jobparamusernamenullexceptionb": "Executing user illegal, referencing job parameter \u0027{0}\u0027 with empty value"
+    },
     "protocolidparamnullexception": {
       "protocolidparamnullexception": "The input parameter for the protocol (executionerConfig. protocol Id) cannot be empty"
     },

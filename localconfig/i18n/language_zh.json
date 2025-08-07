@@ -546,8 +546,8 @@
       "autoexecrunnergrouprulenotmatchexception": "{0}设置的执行器组“{1}({2})”,不满足规则"
     },
     "autoexecrunnergrouptaginvalidexception": {
-      "autoexecrunnergrouptaginvalidexception": "作业执行器组标签值“{0}”非法，标签不存在或不是数组。如果页面控件没有值，说明该标签已被删除，需要清空下拉框，重新配置保存",
-      "autoexecrunnergrouptaginvalidexceptiona": "作业阶段{0}执行器组标签值“{1}”非法，标签不存在或不是数组。如果页面控件没有值，说明该标签已被删除，需要清空下拉框，重新配置保存"
+      "autoexecrunnergrouptaginvalidexception": "作业执行器组标签值“{0}”非法",
+      "autoexecrunnergrouptaginvalidexceptiona": "作业阶段{0}执行器组标签值“{1}”非法"
     },
     "autoexecrunnergrouptagnotmatchexception": {
       "autoexecrunnergrouptagnotmatchexception": "执行器组“{1}“（{0}指定）不存在标签“{3}”（{2}指定）"
@@ -596,6 +596,11 @@
     "jobparamrunnergrouptagnullexception": {
       "jobparamrunnergrouptagnullexception": "执行器组标签非法，阶段“{0}”引用作业参数“{1}”的值为空",
       "jobparamrunnergrouptagnullexceptiona": "执行器组标签非法，引用作业参数“{0}”的值为空"
+    },
+    "jobparamusernamenullexception": {
+      "jobparamusernamenullexception": "执行用户非法，阶段“{0}”引用作业参数“{1}”的值为空",
+      "jobparamusernamenullexceptiona": "执行用户非法，阶段组“{0}”引用作业参数“{1}”的值为空",
+      "jobparamusernamenullexceptionb": "执行用户非法，引用作业参数“{0}”的值为空"
     },
     "protocolidparamnullexception": {
       "protocolidparamnullexception": "协议(executeConfig.protocolId)入参不能为空"
