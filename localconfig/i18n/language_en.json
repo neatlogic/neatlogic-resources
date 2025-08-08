@@ -586,6 +586,9 @@
     "executeuservalueparamnullexception": {
       "executeuservalueparamnullexception": "The parameter for \u0027execute Config. execute User. value\u0027 cannot be empty"
     },
+    "jobparamnodenullexception": {
+      "jobparamnodenullexception": "Execution target is illegal, the value of the reference job parameter \u0027{1}\u0027 is empty"
+    },
     "jobparamnullexception": {
       "jobparamnullexception": "The homework parameter \u0027{0}\u0027 cannot be empty"
     },
