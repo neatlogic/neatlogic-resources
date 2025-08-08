@@ -586,6 +586,9 @@
     "executeuservalueparamnullexception": {
       "executeuservalueparamnullexception": "执行用户(executeConfig.executeUser.value)入参不能为空"
     },
+    "jobparamnodenullexception": {
+      "jobparamnodenullexception": "执行目标非法，引用{1}"
+    },
     "jobparamnullexception": {
       "jobparamnullexception": "作业参数“{0}”不能为空"
     },
