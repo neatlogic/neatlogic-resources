@@ -1178,14 +1178,14 @@
       "deployappconfigmodulerunnernotfoundexception": "应用系统“{0}”，模块“{1}”未关联runner"
     },
     "deployapppipelineauthexception": {
-      "deployapppipelineauthexceptiona": "您没有全局流水线{0}({1})的执行权限或没有应用系统：{2}({3})的【流水线权限】",
-      "deployapppipelineauthexceptionb": "您没有全局流水线{0}({1})的执行权限"
+      "deployapppipelineauthexceptiona": "您没有全局流水线“{0}({1})”的执行权限或没有应用系统：“{2}({3})”的【流水线权限】",
+      "deployapppipelineauthexceptionb": "您没有全局流水线“{0}({1})”的执行权限"
     },
     "deployappscenarioauthexception": {
-      "deployappscenarioauthexception": "您没有系统：{0}({1})下的场景：{2}({3})的【场景权限】"
+      "deployappscenarioauthexception": "您没有系统：“{0}({1})”下的场景：“{2}({3})”的【场景权限】"
     },
     "deploybatchjobfirewithrevokedandcheckedexception": {
-      "deploybatchjobfirewithrevokedandcheckedexception": "无法执行，批量执行的作业:{0}({1})都是\u0027已撤销\u0027或\u0027已验证\u0027的作业"
+      "deploybatchjobfirewithrevokedandcheckedexception": "无法执行，批量执行的作业:“{0}({1})”都是\u0027已撤销\u0027或\u0027已验证\u0027的作业"
     },
     "deployjobnotfoundexception": {
       "deployjobnotfoundexception": {
