@@ -5308,6 +5308,14 @@
     "deleteuserdataapi": {
       "getname": "删除用户数据"
     },
+    "deleteusersessionapi": {
+      "getname": "删除用户会话",
+      "input": {
+        "param": {
+          "uuidlist": "用户uuidList"
+        }
+      }
+    },
     "getcurrentusertokenapi": {
       "getname": "获取用户自己的令牌"
     },

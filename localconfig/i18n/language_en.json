@@ -5252,6 +5252,14 @@
     "deleteuserdataapi": {
       "getname": "Delete user data"
     },
+    "deleteusersessionapi": {
+      "getname": "Delete user session",
+      "input": {
+        "param": {
+          "uuidlist": "User uuidList"
+        }
+      }
+    },
     "getcurrentusertokenapi": {
       "getname": "Obtain the user\u0027s own token"
     },
