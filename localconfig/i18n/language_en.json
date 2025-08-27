@@ -499,6 +499,9 @@
     "autoexecparallelcountisrequiredexception": {
       "autoexecparallelcountisrequiredexception": "The concurrent quantity must be set"
     },
+    "autoexecparallelpolicyinvalidexception": {
+      "autoexecparallelpolicyinvalidexception": "Concurrent policy \u0027{0}\u0027 is illegal"
+    },
     "autoexecparamcannotbeemptyexception": {
       "autoexecparamcannotbeemptyexception": "Parameter of stage [{0}] tool [{1}]: {2} cannot be empty"
     },

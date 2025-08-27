@@ -499,6 +499,9 @@
     "autoexecparallelcountisrequiredexception": {
       "autoexecparallelcountisrequiredexception": "并发数量必须设置"
     },
+    "autoexecparallelpolicyinvalidexception": {
+      "autoexecparallelpolicyinvalidexception": "并发策略“{0}”非法"
+    },
     "autoexecparamcannotbeemptyexception": {
       "autoexecparamcannotbeemptyexception": "阶段[{0}] 工具[{1}]的参数：{2}不能为空"
     },
