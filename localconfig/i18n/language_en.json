@@ -467,6 +467,11 @@
       "waiting": "Pending review"
     }
   },
+  "nfadc": {
+    "autoexeccombopversionvo": {
+      "precondition": "pre-filter"
+    }
+  },
   "nfae": {
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "Tool directory: {0} does not exist"

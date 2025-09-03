@@ -467,6 +467,11 @@
       "waiting": "待审核"
     }
   },
+  "nfadc": {
+    "autoexeccombopversionvo": {
+      "precondition": "前置过滤器"
+    }
+  },
   "nfae": {
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "工具目录：{0}不存在"
