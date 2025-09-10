@@ -932,10 +932,6 @@
       "sqltype": "版本序号",
       "timecost": "耗时（毫秒）"
     },
-    "tenantmodulevo": {
-      "ddlstatus": "ddl执行状态,1:成功 0:失败",
-      "dmlstatus": "dml执行状态,1:成功 0:失败"
-    },
     "tenantvo": {
       "authmongodb": "认证 mongodb",
       "expiredate": "有效期限",
