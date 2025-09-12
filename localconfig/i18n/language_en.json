@@ -1992,6 +1992,9 @@
         "ipport": "According to the IP: {0} and port: {1} of the agent, the agent account cannot be found"
       }
     },
+    "tagentipconflictexception": {
+      "tagentipconflictexception": "Tagent IP port conflict, there is already a tagent {0}:{1}"
+    },
     "tagentnotfoundexception": {
       "tagentnotfoundexception": {
         "ipport": "Tagent cannot be found through IP: \u0027{0}\u0027 and port: \u0027{1}\u0027, please register again",

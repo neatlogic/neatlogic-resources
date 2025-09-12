@@ -2020,6 +2020,9 @@
         "ipport": "根据tagent的ip:{0},port:{1}找不到tagent账号"
       }
     },
+    "tagentipconflictexception": {
+      "tagentipconflictexception": "tagent ip端口冲突，已存在tagent {0}:{1}"
+    },
     "tagentnotfoundexception": {
       "tagentnotfoundexception": {
         "ipport": "通过ip:“{0}”和port:“{1}”找不到tagent，请重新注册",
