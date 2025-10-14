@@ -196,6 +196,9 @@
     "level": "arrangement",
     "lft": "Left encoding",
     "locktime": "Lock time",
+    "logger": {
+      "level": "log level"
+    },
     "loglist": "Log List",
     "long": "long integer",
     "mailaddress": "Email address",
@@ -4951,6 +4954,12 @@
     },
     "getlogfilenamelistapi": {
       "getname": "Get a list of application log file names"
+    },
+    "getloggerstatusapi": {
+      "getname": "Query log status"
+    },
+    "updateloggerlevelapi": {
+      "getname": "Modify log level"
     }
   },
   "nmtam": {
@@ -5273,6 +5282,9 @@
     },
     "getcurrentusertokenapi": {
       "getname": "Obtain the user\u0027s own token"
+    },
+    "getserverinfoapi": {
+      "getname": "Retrieve server information"
     },
     "getsubmitkeyinfoapi": {
       "getname": "Get duplicate SubmitKeyMap submissions"

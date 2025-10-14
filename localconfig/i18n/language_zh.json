@@ -196,6 +196,9 @@
     "level": "层次",
     "lft": "左编码",
     "locktime": "锁定时间",
+    "logger": {
+      "level": "日志级别"
+    },
     "loglist": "日志列表",
     "long": "长整数",
     "mailaddress": "邮箱地址",
@@ -5003,6 +5006,12 @@
     },
     "getlogfilenamelistapi": {
       "getname": "获取应用日志文件名称列表"
+    },
+    "getloggerstatusapi": {
+      "getname": "查询日志状态"
+    },
+    "updateloggerlevelapi": {
+      "getname": "修改日志级别"
     }
   },
   "nmtam": {
@@ -5325,6 +5334,9 @@
     },
     "getcurrentusertokenapi": {
       "getname": "获取用户自己的令牌"
+    },
+    "getserverinfoapi": {
+      "getname": "获取服务器信息"
     },
     "getsubmitkeyinfoapi": {
       "getname": "获取重复提交SubmitKeyMap"
