@@ -1273,6 +1273,9 @@
     "deploypipelinenotfoundedittargetexception": {
       "deploypipelinenotfoundedittargetexception": "id为{0}的流水线不存在"
     },
+    "deploypipelineparamcannotbeemptyexception": {
+      "deploypipelineparamcannotbeemptyexception": "第{0}通道，第{1}组，第{2}作业模板的作业参数“{3}({4})”不能为空"
+    },
     "importdeploypipelineappnameinconsistencyexception": {
       "importdeploypipelineappnameinconsistencyexception": "导入失败，导入包中的应用名称与当前应用名称不一致，不支持将{0}应用的流水线配置导入{1}应用"
     }

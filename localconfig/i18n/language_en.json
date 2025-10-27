@@ -1251,6 +1251,9 @@
     "deploypipelinenotfoundedittargetexception": {
       "deploypipelinenotfoundedittargetexception": "The pipeline with id {0} does not exist"
     },
+    "deploypipelineparamcannotbeemptyexception": {
+      "deploypipelineparamcannotbeemptyexception": "The job parameters\u0027 {3} ({4}) \u0027for channel {0}, group {1}, and job template {2} cannot be empty"
+    },
     "importdeploypipelineappnameinconsistencyexception": {
       "importdeploypipelineappnameinconsistencyexception": "Import failed. The application name in the import package is inconsistent with the current application name. Importing the pipeline configuration of {0} application into {1} application is not supported"
     }
