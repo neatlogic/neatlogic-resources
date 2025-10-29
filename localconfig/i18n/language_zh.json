@@ -90,6 +90,7 @@
     "double": "双精度浮点数",
     "dropdownlist": "下拉选择",
     "dslexpression": "dsl表达式",
+    "duration": "持续时间",
     "edit": "编辑",
     "editable": "是否可编辑",
     "editauthoritylist": "编辑权限列表",
@@ -5012,6 +5013,9 @@
     },
     "getloggerstatusapi": {
       "getname": "查询日志状态"
+    },
+    "searchloginauditapi": {
+      "getname": "登录记录列表"
     },
     "updateloggerlevelapi": {
       "getname": "修改日志级别"

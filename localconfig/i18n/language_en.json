@@ -90,6 +90,7 @@
     "double": "Double-precision floating-point format",
     "dropdownlist": "Dropdown selection",
     "dslexpression": "DSL expression",
+    "duration": "duration",
     "edit": "edit",
     "editable": "Editable or not",
     "editauthoritylist": "Edit Permission List",
@@ -4960,6 +4961,9 @@
     },
     "getloggerstatusapi": {
       "getname": "Query log status"
+    },
+    "searchloginauditapi": {
+      "getname": "Login record list"
     },
     "updateloggerlevelapi": {
       "getname": "Modify log level"
