@@ -445,10 +445,10 @@
         "date": "日期时间选择器",
         "filepath": "可输出文件路径参数",
         "json": "支持json对象和json数组，输入内容需是合法Json格式",
-        "select": "单选下拉选择器",
         "node": "将节点的相关信息生成脚本变量，但不会分派到该节点执行",
         "phase": "可选择阶段",
         "radio": "单选选择器",
+        "select": "单选下拉选择器",
         "textarea": "可输入字符串、数字",
         "time": "时间选择器",
         "userselect": "用于选择系统用户、分组、角色"
@@ -736,6 +736,11 @@
     }
   },
   "nfccs": {
+    "systemuser": {
+      "anonymous": "匿名用户",
+      "autoexec": "自动化用户",
+      "system": "系统"
+    },
     "systemuserfactory": {
       "repeatexception": "存在相同的虚拟系统用户，请联系管理员"
     }

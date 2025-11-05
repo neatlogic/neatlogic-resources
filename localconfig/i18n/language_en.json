@@ -736,6 +736,11 @@
     }
   },
   "nfccs": {
+    "systemuser": {
+      "anonymous": "Anonymous user",
+      "autoexec": "Automated users",
+      "system": "system"
+    },
     "systemuserfactory": {
       "repeatexception": "There are identical virtual system users, please contact the administrator"
     }
