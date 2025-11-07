@@ -1314,6 +1314,11 @@
       }
     }
   },
+  "nfed": {
+    "tenantmongoclientnotfoundexception": {
+      "tenantmongoclientnotfoundexception": "Tenant: {0} failed to obtain MongoDB Client. Please verify the MongoDB table authentication data of the tenant corresponding to the nearlogic library, restart the service, and try again"
+    }
+  },
   "nfee": {
     "approvalpolicy": {
       "description": {

@@ -1343,6 +1343,11 @@
       }
     }
   },
+  "nfed": {
+    "tenantmongoclientnotfoundexception": {
+      "tenantmongoclientnotfoundexception": "获取mongoClient失败，请核对neatlogic库{0}租户的mongodb表认证数据，重启服务再重试"
+    }
+  },
   "nfee": {
     "approvalpolicy": {
       "description": {
