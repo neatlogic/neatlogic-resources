@@ -196,6 +196,7 @@
     "layout": "layout",
     "level": "arrangement",
     "lft": "Left encoding",
+    "loadcommercialmodulefail": "Failed to load the commercial module {0}",
     "locktime": "Lock time",
     "logger": {
       "level": "log level"

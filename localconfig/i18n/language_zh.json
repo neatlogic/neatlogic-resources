@@ -196,6 +196,7 @@
     "layout": "布局",
     "level": "层次",
     "lft": "左编码",
+    "loadcommercialmodulefail": "加载商业版模块 {0} 失败, 请核对许可权限信息，联系厂商更换",
     "locktime": "锁定时间",
     "logger": {
       "level": "日志级别"
