@@ -1582,6 +1582,9 @@
     },
     "tenantinvalidexception": {
       "tenantinvalidexception": "租户{0}认证非法"
+    },
+    "updateteamfoundmultiexception": {
+      "updateteamfoundmultiexception": "存在多个分组“{0}”, 请用 uuid 更新"
     }
   },
   "nfeu": {

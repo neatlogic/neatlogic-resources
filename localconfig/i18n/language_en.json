@@ -1553,6 +1553,9 @@
     },
     "tenantinvalidexception": {
       "tenantinvalidexception": "Tenant {0} is illegal"
+    },
+    "updateteamfoundmultiexception": {
+      "updateteamfoundmultiexception": "There are multiple groups\u0027 {0} \u0027, please update with uuid"
     }
   },
   "nfeu": {
