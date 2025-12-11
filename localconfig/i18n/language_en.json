@@ -1277,6 +1277,9 @@
     "confignotfoundexception": {
       "confignotfoundexception": "NACOS cannot obtain the configuration and the local config.properties acquisition failed. Please confirm if the NACOS service is functioning properly or if the config.properties file exists, and if so, if the file permissions are normal"
     },
+    "loadbalanceexception": {
+      "loadbalanceexception": "Backend node drift, permission server ID \u0027{0}\u0027, current server ID \u0027{1}\u0027, please contact the administrator!"
+    },
     "systempropertynotfoundexception": {
       "systempropertynotfoundexception": "The system property \u0027{0}\u0027 does not exist"
     }
