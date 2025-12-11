@@ -2052,6 +2052,9 @@
         "ipport": "通过ip:“{0}”和port:“{1}”找不到tagent，请重新注册",
         "tagentidipport": "找不到tagent(id:“{0}”,ip:“{1}”,port:“{2}”)，请重新注册"
       }
+    },
+    "tagentpkgversionanddefaultversionarenotfoundexception": {
+      "tagentpkgversionanddefaultversionarenotfoundexception": "版本为：{0}的安装包和对应版本的默认安装包都不存在,请检查对应的安装包版本、os版本和cpu架构"
     }
   },
   "nmaac": {

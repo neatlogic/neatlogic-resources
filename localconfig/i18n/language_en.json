@@ -2024,6 +2024,9 @@
         "ipport": "Tagent cannot be found through IP: \u0027{0}\u0027 and port: \u0027{1}\u0027, please register again",
         "tagentidipport": "Cannot find tagent (id: \"{0}\", ip: \"{1}\", port: \"{2}\"), please register again"
       }
+    },
+    "tagentpkgversionanddefaultversionarenotfoundexception": {
+      "tagentpkgversionanddefaultversionarenotfoundexception": "The installation package with version {0} and the corresponding default installation package do not exist. Please check the version, OS version, and CPU architecture of the corresponding installation package"
     }
   },
   "nmaac": {
