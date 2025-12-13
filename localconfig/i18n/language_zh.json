@@ -1207,6 +1207,9 @@
         "autoexecjobid": "根据自动化作业id:{0},找不到发布作业id"
       }
     },
+    "documentonlinejarnameillegalexception": {
+      "documentonlinejarnameillegalexception": "在线文档Jar名称：{0}不合法"
+    },
     "documentonlinenotfoundexception": {
       "documentonlinenotfoundexception": "在线帮助文档：“{0}”不存在"
     },
@@ -4853,6 +4856,15 @@
     },
     "getdocumentonlineunclassifiedlistapi": {
       "getname": "查询未分类的在线帮助文档列表"
+    },
+    "importdocumentonlinejarapi": {
+      "getname": "导入在线帮助文档jar包"
+    },
+    "loaddocumentonlineoutsidewarapi": {
+      "getname": "从war包外部加载在线文档"
+    },
+    "loaddocumentonlinewithinwarapi": {
+      "getname": "从war包内部加载在线文档"
     },
     "savadatabaseapi": {
       "getname": "保存数据库配置信息"
