@@ -1185,6 +1185,9 @@
         "autoexecjobid": "According to automated job ID: {0}, the publishing job ID cannot be found"
       }
     },
+    "documentonlinejarnameillegalexception": {
+      "documentonlinejarnameillegalexception": "Online document Jar name: {0} is illegal"
+    },
     "documentonlinenotfoundexception": {
       "documentonlinenotfoundexception": "Online help document: {0} does not exist"
     },
@@ -4801,6 +4804,15 @@
     },
     "getdocumentonlineunclassifiedlistapi": {
       "getname": "Query the list of unclassified online help documents"
+    },
+    "importdocumentonlinejarapi": {
+      "getname": "Import online help document jar package"
+    },
+    "loaddocumentonlineoutsidewarapi": {
+      "getname": "Load online documents from outside the war package"
+    },
+    "loaddocumentonlinewithinwarapi": {
+      "getname": "Load online documents from within the war package"
     },
     "savadatabaseapi": {
       "getname": "Save database configuration information"
