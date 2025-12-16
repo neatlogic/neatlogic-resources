@@ -1528,7 +1528,8 @@
   },
   "nfet": {
     "licenseinvalidexception": {
-      "licenseinvalidexception": "The current license lacks authorization to access module {0}, and attempts to access will be denied. Please check the license information to confirm if you should have the access permission. If it is indeed missing, please contact the manufacturer for replacement or avoid accessing any functions under this module."
+      "licenseinvalidexception": "The current license lacks authorization to access module {0}, and attempts to access will be denied. Please check the license information to confirm if you should have the access permission. If it is indeed missing, please contact the manufacturer for replacement or avoid accessing any functions under this module.",
+      "licenseinvalidexceptiona": "Illegal license"
     },
     "paramirregularexception": {
       "paramirregularexception": {
@@ -4996,6 +4997,9 @@
     },
     "searchloginauditapi": {
       "getname": "Login record list"
+    },
+    "updatelicenseexpiredateapi": {
+      "getname": "Modify license expiration date"
     },
     "updateloggerlevelapi": {
       "getname": "Modify log level"
