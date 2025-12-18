@@ -5502,6 +5502,14 @@
       }
     }
   },
+  "nmts": {
+    "serverserviceimpl": {
+      "postotherserverapi": {
+        "notfound": "找不到serverId为“{0}”的应用服务器",
+        "nothost": "serverId为“{0}”的应用服务器的`server_status`表中对应数据没有配置host"
+      }
+    }
+  },
   "nmtwh": {
     "regiondispatcher": {
       "getname": "地域分组分派器"

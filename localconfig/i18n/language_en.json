@@ -5450,6 +5450,14 @@
       }
     }
   },
+  "nmts": {
+    "serverserviceimpl": {
+      "postotherserverapi": {
+        "notfound": "Cannot find application server with server ID \u0027{0}\u0027",
+        "nothost": "The corresponding data in the \u0027serverless\u0027 table of the application server with server ID\u0027 {0} \u0027is not configured with a host"
+      }
+    }
+  },
   "nmtwh": {
     "regiondispatcher": {
       "getname": "Regional grouping allocator"
