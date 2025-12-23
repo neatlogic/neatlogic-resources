@@ -694,7 +694,9 @@
       "loginneedlock": "登录是否需要检查是否锁定用户，默认为0，不需要检查",
       "minimumchromebrowserversion": "chrome浏览器最低版本，低于该设置版本会跳转至浏览器版本不兼容页面，默认95",
       "minimumfirefoxbrowserversion": "firefox浏览器最低版本，低于该设置版本会跳转至浏览器版本不兼容页面，默认0",
-      "mobilefiledownloadenabled": "是否允许移动端下载附件"
+      "mobilefiledownloadenabled": "是否允许移动端下载附件",
+      "passwordexpiredays": "用户密码有效期(天)，超过有效期则强制跳转改密码页面",
+      "passwordneedexpiredcheck": "是否需要检验用户密码有效期，默认为0，不需要检查"
     }
   },
   "nfcal": {
@@ -1603,6 +1605,9 @@
     },
     "loginlockedexception": {
       "loginlockedexception": "登录失败已超过“{0}”次，账号已锁定，请于“{1}”后重试"
+    },
+    "userpasswordexpiredexception": {
+      "userpasswordexpiredexception": "用户密码已过期，请修改密码"
     }
   },
   "nfew": {

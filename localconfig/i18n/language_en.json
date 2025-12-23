@@ -694,7 +694,9 @@
       "loginneedlock": "Is it necessary to check if the user is locked when logging in? The default value is 0, and there is no need to check",
       "minimumchromebrowserversion": "The minimum version of Chrome browser. If the setting is lower than this version, it will redirect to a page that is incompatible with the browser version. The default is 95",
       "minimumfirefoxbrowserversion": "Firefox browser minimum version, below this setting version will redirect to browser version incompatible page, default 0",
-      "mobilefiledownloadenabled": "Do you allow mobile devices to download attachments"
+      "mobilefiledownloadenabled": "Do you allow mobile devices to download attachments",
+      "passwordexpiredays": "User password validity period (days), if it exceeds the validity period, it will be forcibly redirected to the password change page",
+      "passwordneedexpiredcheck": "Do you need to verify the validity period of the user password? It defaults to 0 and does not need to be checked"
     }
   },
   "nfcal": {
@@ -1574,6 +1576,9 @@
     },
     "loginlockedexception": {
       "loginlockedexception": "Login failed more than the limit (\u0027{0}\u0027 times), account locked, please try again after \u0027{1}\u0027"
+    },
+    "userpasswordexpiredexception": {
+      "userpasswordexpiredexception": "The user password has expired, please change the password"
     }
   },
   "nfew": {
