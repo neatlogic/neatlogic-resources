@@ -2067,6 +2067,13 @@
       "tagentpkgversionanddefaultversionarenotfoundexception": "版本为：{0}的安装包和对应版本的默认安装包都不存在,请检查对应的安装包版本、os版本和cpu架构"
     }
   },
+  "nfwe": {
+    "worktimerangenotfoundexception": {
+      "worktimerangenotfoundexception_a": "服务时间:“{0}”没有设置排班时间或日历",
+      "worktimerangenotfoundexception_b": "服务时间:“{0}”的“{1}”年份没有设置排班日历",
+      "worktimerangenotfoundexception_c": "服务时间:“{0}”的“{1}”年份排班截止时间为“{2}”，需要追加排班日历"
+    }
+  },
   "nmaac": {
     "autoexeccatalogsaveapi": {
       "getname": "保存工具目录"
