@@ -689,6 +689,9 @@
     "frameworktenantconfig": {
       "apiqps": "每秒向服务器发送的请求数量峰值（不分接口）",
       "disabledmodulegrouplist": "禁用的模块组列表，页面将不显示被禁用的模块（多个模块请以英文逗号隔开）",
+      "loginlockedfailedcount": "登录失败次数限制(次)。超过次数则锁定用户，无法登录，等自动解锁",
+      "loginlockedtime": "登录锁定时长(分钟)。锁定用户后，超过这个时间后才允许登录",
+      "loginneedlock": "登录是否需要检查是否锁定用户，默认为0，不需要检查",
       "minimumchromebrowserversion": "chrome浏览器最低版本，低于该设置版本会跳转至浏览器版本不兼容页面，默认95",
       "minimumfirefoxbrowserversion": "firefox浏览器最低版本，低于该设置版本会跳转至浏览器版本不兼容页面，默认0",
       "mobilefiledownloadenabled": "是否允许移动端下载附件"
@@ -1597,6 +1600,9 @@
   "nfeu": {
     "ipsubnetmaskexception": {
       "ipsubnetmaskexception": "ip:{0} 匹配执行器组时异常，请检查执行器组网段/子网掩码配置后，重试！异常网段/子网掩码:{1}"
+    },
+    "loginlockedexception": {
+      "loginlockedexception": "登录失败已超过“{0}”次，账号已锁定，请于“{1}”后重试"
     }
   },
   "nfew": {
@@ -4759,6 +4765,9 @@
     },
     "gettagentqueueinfoapi": {
       "getname": "获取tagent会话队列信息"
+    },
+    "heartbeatapi": {
+      "getname": "心跳"
     },
     "importtagentinfotomongodbapi": {
       "description": {

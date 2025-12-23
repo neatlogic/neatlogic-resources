@@ -689,6 +689,9 @@
     "frameworktenantconfig": {
       "apiqps": "Peak number of requests sent to the server per second (regardless of interface)",
       "disabledmodulegrouplist": "List of disabled module groups, page does not display disabled modules",
+      "loginlockedfailedcount": "Login failure limit (times). If the number of times exceeds, the user will be locked and unable to log in, waiting for automatic unlocking",
+      "loginlockedtime": "Login lock duration (minutes). After locking the user, login is only allowed after exceeding this time limit",
+      "loginneedlock": "Is it necessary to check if the user is locked when logging in? The default value is 0, and there is no need to check",
       "minimumchromebrowserversion": "The minimum version of Chrome browser. If the setting is lower than this version, it will redirect to a page that is incompatible with the browser version. The default is 95",
       "minimumfirefoxbrowserversion": "Firefox browser minimum version, below this setting version will redirect to browser version incompatible page, default 0",
       "mobilefiledownloadenabled": "Do you allow mobile devices to download attachments"
@@ -1568,6 +1571,9 @@
   "nfeu": {
     "ipsubnetmaskexception": {
       "ipsubnetmaskexception": "IP: {0} encountered an exception when matching the actuator group. Please check the network segment/subnet mask configuration of the actuator group and try again! Abnormal network segment/subnet mask: {1}"
+    },
+    "loginlockedexception": {
+      "loginlockedexception": "Login failed more than the limit (\u0027{0}\u0027 times), account locked, please try again after \u0027{1}\u0027"
     }
   },
   "nfew": {
@@ -4709,6 +4715,9 @@
     },
     "gettagentqueueinfoapi": {
       "getname": "Get tagent session queue information"
+    },
+    "heartbeatapi": {
+      "getname": "heartbeat"
     },
     "importtagentinfotomongodbapi": {
       "description": {
