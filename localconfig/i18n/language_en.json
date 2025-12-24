@@ -2044,6 +2044,13 @@
       "tagentpkgversionanddefaultversionarenotfoundexception": "The installation package with version {0} and the corresponding default installation package do not exist. Please check the version, OS version, and CPU architecture of the corresponding installation package"
     }
   },
+  "nfwe": {
+    "worktimerangenotfoundexception": {
+      "worktimerangenotfoundexception_a": "Service time: \u0027{0}\u0027 has no scheduled time or calendar set",
+      "worktimerangenotfoundexception_b": "Service time: The \u0027{1}\u0027 year of \u0027{0}\u0027 does not have a scheduling calendar set",
+      "worktimerangenotfoundexception_c": "Service time: The deadline for scheduling in the \"{1}\" year of \"{0}\" is \"{2}\", and a scheduling calendar needs to be added"
+    }
+  },
   "nmaac": {
     "autoexeccatalogsaveapi": {
       "getname": "Save Tool Catalog"
