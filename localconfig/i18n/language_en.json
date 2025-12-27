@@ -781,6 +781,11 @@
       "attrvalueirregularexception_b": "The value \"{4}\" of property \"{2} ({3})\" in model \"{0} ({1})\" is not a valid {5} type. Configuration path: {6}, actual path: {7}"
     }
   },
+  "nfceb": {
+    "batchimportmouldismustexception": {
+      "batchimportmouldismustexception": "Please fill in the template correctly and choose the appropriate import mode: [Add only] No ID is required; [Update only] ID must be filled in"
+    }
+  },
   "nfcec": {
     "attrentityvalueemptyexception": {
       "attrentityvalueemptyexception_a": "The value of attribute \u0027{0}\u0027 cannot be empty",
