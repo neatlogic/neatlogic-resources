@@ -4853,6 +4853,9 @@
     "searchdatasourceapi": {
       "getname": "Query Data Warehouse Data Source"
     },
+    "searchdatasourcedbtypeapi": {
+      "getname": "Search for data warehouse database types"
+    },
     "searchdocumentonlineapi": {
       "getname": "Keyword search for online help documents",
       "mydoservice": {
@@ -5825,6 +5828,7 @@
       "formuuid": "Form uuid",
       "formversionuuid": "Form version uuid",
       "groupname": "Framework",
+      "integration": "integrated configuration",
       "integrationuuid": "Integrated UUID",
       "issuetime": "Issuance time",
       "matrixattr": "Matrix Properties",
