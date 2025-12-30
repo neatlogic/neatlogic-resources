@@ -4905,6 +4905,9 @@
     "searchdatasourceapi": {
       "getname": "查询数据仓库数据源"
     },
+    "searchdatasourcedbtypeapi": {
+      "getname": "搜索数据仓库数据库类型"
+    },
     "searchdocumentonlineapi": {
       "getname": "关键字搜索在线帮助文档",
       "mydoservice": {
@@ -5877,6 +5880,7 @@
       "formuuid": "表单uuid",
       "formversionuuid": "表单版本uuid",
       "groupname": "系统配置",
+      "integration": "集成配置",
       "integrationuuid": "集成UUID",
       "issuetime": "下发时间",
       "matrixattr": "矩阵属性",
