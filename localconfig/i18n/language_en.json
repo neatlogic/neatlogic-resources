@@ -5476,6 +5476,11 @@
       }
     }
   },
+  "nmteu": {
+    "userpasswordrepeatexception": {
+      "userpasswordrepeatexception": "The new password is the same as the old password. Please confirm and try again"
+    }
+  },
   "nmts": {
     "serverserviceimpl": {
       "postotherserverapi": {

@@ -5528,6 +5528,11 @@
       }
     }
   },
+  "nmteu": {
+    "userpasswordrepeatexception": {
+      "userpasswordrepeatexception": "新密码和旧密码相同,请确认后重试"
+    }
+  },
   "nmts": {
     "serverserviceimpl": {
       "postotherserverapi": {
