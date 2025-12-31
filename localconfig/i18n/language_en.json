@@ -391,6 +391,9 @@
     "worktimeuuid": "Working Time Window Uuid",
     "year": "particular year"
   },
+  "config": {
+    "receiveconfiginfo": "Reloaded nacos configuration"
+  },
   "enum": {
     "rdm": {
       "fullindextype": {

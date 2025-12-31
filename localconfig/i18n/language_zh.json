@@ -391,6 +391,9 @@
     "worktimeuuid": "服务时间窗口uuid",
     "year": "年份"
   },
+  "config": {
+    "receiveconfiginfo": "重新加载了 nacos 配置"
+  },
   "enum": {
     "rdm": {
       "fullindextype": {
