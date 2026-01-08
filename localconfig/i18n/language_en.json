@@ -5305,6 +5305,9 @@
         }
       }
     },
+    "getmiddlewareconfigapi": {
+      "getname": "Query middleware configuration"
+    },
     "gettenantconfigapi": {
       "getname": "Obtain current tenant configuration information"
     },
