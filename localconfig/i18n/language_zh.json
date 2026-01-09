@@ -5357,6 +5357,9 @@
         }
       }
     },
+    "getmiddlewareconfigapi": {
+      "getname": "查询中间件配置"
+    },
     "gettenantconfigapi": {
       "getname": "获取当前租户配置信息"
     },
