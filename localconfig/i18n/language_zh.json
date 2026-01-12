@@ -839,6 +839,9 @@
       "ciuniqueruleattrtypeirregularexception_b": "模型“{0}({1})”的唯一规则属性“{2}({3})”不能是一个表达式属性",
       "ciuniqueruleattrtypeirregularexception_c": "模型“{0}({1})”的唯一规则属性“{2}({3})”不能是一个表达式属性，配置路径：{4}，实际路径：{5}"
     },
+    "customviewcichangeexception": {
+      "customviewcichangeexception": "自定义视图“{0}”使用到的模型发生改变导致视图查询失败，请重新编辑视图配置"
+    },
     "downwardcinotfoundexception": {
       "downwardcinotfoundexception": "在配置项模型“{0}({1})”的下游模型中找不到配置项模型“{2}”",
       "downwardcinotfoundexception_b": "在配置项模型“{0}({1})”的下游模型中找不到配置项模型“{2}”，配置路径：{3}，实际路径：{4}"

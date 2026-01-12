@@ -839,6 +839,9 @@
       "ciuniqueruleattrtypeirregularexception_b": "The unique rule attribute \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 cannot be an expression attribute",
       "ciuniqueruleattrtypeirregularexception_c": "The unique rule property \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 cannot be an expression property, configured path: {4}, actual path: {5}"
     },
+    "customviewcichangeexception": {
+      "customviewcichangeexception": "The model used in the custom view \u0027{0}\u0027 has changed, causing the view query to fail. Please re edit the view configuration"
+    },
     "downwardcinotfoundexception": {
       "downwardcinotfoundexception": "Unable to find configuration item model \u0027{2}\u0027 in the downstream model of configuration item model \u0027{0} ({1})\u0027",
       "downwardcinotfoundexception_b": "Configuration item model \u0027{2}\u0027 cannot be found in the downstream model of configuration item model \u0027{0} ({1})\u0027, configuration path: {3}, actual path: {4}"
