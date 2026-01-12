@@ -679,7 +679,7 @@
         "neatlogicdb": "neatlogic库连接不上,请核对{0}的db.driverClassName、db.url、db.username、db.password配置无误后重启"
       },
       "initdmlsql": {
-        "tenant": "开始初始化数据库..."
+        "tenant": "开始初始化数据库数据..."
       }
     },
     "neatlogicdispatcherservlet": {
