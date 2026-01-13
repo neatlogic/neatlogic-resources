@@ -1312,6 +1312,9 @@
         "apiauthname": "”{0} \"Interface permission\" {1} \"does not exist",
         "authname": "Permission \u0027{0}\u0027 does not exist"
       }
+    },
+    "notsupportbasicauthexception": {
+      "notsupportbasicauthexception": "This interface does not support basic authentication"
     }
   },
   "nfeal": {

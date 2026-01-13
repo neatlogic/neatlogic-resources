@@ -1341,6 +1341,9 @@
         "apiauthname": "”{0}“接口权限“{1}”不存在",
         "authname": "权限“{0}”不存在"
       }
+    },
+    "notsupportbasicauthexception": {
+      "notsupportbasicauthexception": "该接口不支持 basic 认证"
     }
   },
   "nfeal": {
