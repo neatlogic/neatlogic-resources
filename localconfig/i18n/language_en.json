@@ -86,7 +86,7 @@
     "description": "describe",
     "displaymode": "display mode",
     "displaytype": "Display Type",
-    "doing": "doing",
+    "doing": "In progress",
     "done": "done",
     "double": "Double-precision floating-point format",
     "dropdownlist": "Dropdown selection",
@@ -121,6 +121,7 @@
     "expired": "overdue",
     "expireddays": "Number of timeout days",
     "expressionlist": "Expression List",
+    "failed": "failure",
     "failedcount": "Number of errors",
     "failedload": "is failed",
     "favorcount": "Likes",
@@ -360,6 +361,7 @@
     "uncommited": "Unsubmitted",
     "unique": "only",
     "uniquename": "Unique identification",
+    "unreadcount": "Unread count",
     "upwardnamelist": "Upper level name list",
     "user": "user",
     "userenname": "User English Name",
@@ -670,6 +672,10 @@
     "notify_config_modify": {
       "getauthdisplayname": "Notification Configuration Management Permissions",
       "getauthintroduction": "Modify notification configuration"
+    },
+    "user_export_file_modify": {
+      "getauthdisplayname": "Export file management permissions",
+      "getauthintroduction": "All users have access to view, download, and delete exported files"
     }
   },
   "nfb": {
@@ -2058,6 +2064,20 @@
     },
     "tagentpkgversionanddefaultversionarenotfoundexception": {
       "tagentpkgversionanddefaultversionarenotfoundexception": "The installation package with version {0} and the corresponding default installation package do not exist. Please check the version, OS version, and CPU architecture of the corresponding installation package"
+    }
+  },
+  "nfue": {
+    "userexportfiledeletedeniedexception": {
+      "userexportfiledeletedeniedexception": "You do not have permission to delete the {0} file"
+    },
+    "userexportfiledownloaddeniedexception": {
+      "userexportfiledownloaddeniedexception": "You do not have permission to download the {0} file"
+    },
+    "userexportfilenotfoundexception": {
+      "userexportfilenotfoundexception": "The user exported file \u0027{0}\u0027 does not exist"
+    },
+    "userexportfiletypenotfoundexception": {
+      "userexportfiletypenotfoundexception": "The user exported file type \u0027{0}\u0027 does not exist"
     }
   },
   "nfwe": {
@@ -5358,6 +5378,9 @@
     "deleteuserdataapi": {
       "getname": "Delete user data"
     },
+    "deleteuserexportfileapi": {
+      "getname": "Delete user exported files"
+    },
     "deleteusersessionapi": {
       "getname": "Delete user session",
       "input": {
@@ -5365,6 +5388,9 @@
           "uuidlist": "User uuidList"
         }
       }
+    },
+    "exportuserexportfileapi": {
+      "getname": "Export user files"
     },
     "getcurrentusertokenapi": {
       "getname": "Obtain the user\u0027s own token"
@@ -5377,6 +5403,9 @@
     },
     "getuserdataapi": {
       "getname": "Obtain user data"
+    },
+    "getuserexportfileunreadcountapi": {
+      "getname": "Number of unread user exported files"
     },
     "getusertokenapi": {
       "getname": "Obtain the user\u0027s token"
@@ -5393,6 +5422,17 @@
     },
     "resetusertokenapi": {
       "getname": "Reset user\u0027s token"
+    },
+    "searchuserexportfileapi": {
+      "getname": "User exported file list",
+      "input": {
+        "param": {
+          "desc": "Do you want to view everyone\u0027s data"
+        }
+      }
+    },
+    "updateuserexportfileisreadapi": {
+      "getname": "Update user exported files to read"
     },
     "userdatasaveapi": {
       "getname": "Save user data"
