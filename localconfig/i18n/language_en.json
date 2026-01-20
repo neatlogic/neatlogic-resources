@@ -776,6 +776,9 @@
     "cmdbtenantconfig": {
       "isresourcecenterauth": "Is the asset list controlled by model permissions and group permissions"
     },
+    "cmdbuserexportfiletype": {
+      "customviewdata": "Customize View Data"
+    },
     "codehubprojectsourcesyncerrorexception": {
       "codehubprojectsourcesyncerrorexception": "Failed to obtain project list from source {0}"
     },
@@ -1734,6 +1737,10 @@
     "processtaskgroupsearch": {
       "processusertype": "Work order stakeholders"
     },
+    "processuserexportfiletype": {
+      "process": "flowchart",
+      "workcenterdata": "Work Order Center Data"
+    },
     "userprofile": {
       "processtasksuccess": "Service reported successfully"
     },
@@ -2033,6 +2040,9 @@
     "reportstatementnotfoundedittargetexception": {
       "reportstatementnotfoundedittargetexception": "Large screen report: {0} does not exist"
     },
+    "reportuserexportfiletype": {
+      "reportdata": "report data"
+    },
     "systemattrtype": "System Properties",
     "systemattrtypea": {
       "getenumname": "System attribute type"
@@ -2064,6 +2074,11 @@
     },
     "tagentpkgversionanddefaultversionarenotfoundexception": {
       "tagentpkgversionanddefaultversionarenotfoundexception": "The installation package with version {0} and the corresponding default installation package do not exist. Please check the version, OS version, and CPU architecture of the corresponding installation package"
+    }
+  },
+  "nfuc": {
+    "frameworkuserexportfiletype": {
+      "matrixdata": "Matrix data"
     }
   },
   "nfue": {
