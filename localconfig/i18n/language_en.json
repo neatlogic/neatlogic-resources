@@ -86,7 +86,7 @@
     "description": "describe",
     "displaymode": "display mode",
     "displaytype": "Display Type",
-    "doing": "In progress",
+    "doing": "doing",
     "done": "done",
     "double": "Double-precision floating-point format",
     "dropdownlist": "Dropdown selection",
