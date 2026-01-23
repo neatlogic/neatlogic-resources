@@ -1212,6 +1212,12 @@
         "autoexecjobid": "According to automated job ID: {0}, the publishing job ID cannot be found"
       }
     },
+    "deployversionnotfoundexception": {
+      "deployversionnotfoundexception": {
+        "b": "The release version \u0027{0}\u0027 does not exist",
+        "c": "Publishing \u0027{0}/{1}/{2}\u0027 does not exist"
+      }
+    },
     "documentonlinejarnameillegalexception": {
       "documentonlinejarnameillegalexception": "Online document Jar name: {0} is illegal"
     },
@@ -3730,6 +3736,14 @@
   "nmdap": {
     "getpipelineapi": {
       "getname": "Obtain detailed information about the super assembly line"
+    },
+    "savepipelineapi": {
+      "getname": "Save Super Pipeline",
+      "input": {
+        "param": {
+          "desc": "default version"
+        }
+      }
     }
   },
   "nmdas": {
@@ -3818,6 +3832,9 @@
     },
     "getdeployversiontheadapi": {
       "getname": "Query Release Version Header Configuration"
+    },
+    "listdeploypipelinejobtemplateversionapi": {
+      "getname": "Obtain a version list based on the super assembly line job template"
     },
     "savedeployversioncommitanalyzeapi": {
       "description": {

@@ -1234,6 +1234,13 @@
         "autoexecjobid": "根据自动化作业id:{0},找不到发布作业id"
       }
     },
+    "deployversionnotfoundexception": {
+      "deployversionnotfoundexception": {
+        "b": "发布版本“{0}”不存在",
+        "c": "“{0}/{1}/{2}”的发布版本不存在",
+        "d": "“{0}/{1}”的发布版本不存在"
+      }
+    },
     "documentonlinejarnameillegalexception": {
       "documentonlinejarnameillegalexception": "在线文档Jar名称：{0}不合法"
     },
@@ -3758,6 +3765,14 @@
   "nmdap": {
     "getpipelineapi": {
       "getname": "获取超级流水线详细信息"
+    },
+    "savepipelineapi": {
+      "getname": "保存超级流水线",
+      "input": {
+        "param": {
+          "desc": "默认版本"
+        }
+      }
     }
   },
   "nmdas": {
@@ -3846,6 +3861,9 @@
     },
     "getdeployversiontheadapi": {
       "getname": "查询发布版本表头配置"
+    },
+    "listdeploypipelinejobtemplateversionapi": {
+      "getname": "根据超级流水线作业模板获取版本列表"
     },
     "savedeployversioncommitanalyzeapi": {
       "description": {
