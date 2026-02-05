@@ -4873,6 +4873,23 @@
         }
       }
     },
+    "apimanagesaveapi": {
+      "getname": "保存接口配置信息",
+      "input": {
+        "param": {
+          "desc": {
+            "apitype": "API类型",
+            "config": "json格式,配置信息",
+            "expire": "使用期限",
+            "handler": "处理器",
+            "needaudit": "是否保存调用记录",
+            "qps": "每秒访问几次，大于0生效",
+            "timeout": "请求时效",
+            "username": "用户名称"
+          }
+        }
+      }
+    },
     "authmanagesearchapi": {
       "getname": "权限管理列表查询接口",
       "input": {

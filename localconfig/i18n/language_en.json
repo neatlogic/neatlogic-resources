@@ -4822,6 +4822,23 @@
         }
       }
     },
+    "apimanagesaveapi": {
+      "getname": "Save interface configuration information",
+      "input": {
+        "param": {
+          "desc": {
+            "apitype": "API type",
+            "config": "JSON format, configuration information",
+            "expire": "Validity period",
+            "handler": "processor",
+            "needaudit": "Do you want to save the call record",
+            "qps": "Visited several times per second, effective if greater than 0",
+            "timeout": "prescription of claim",
+            "username": "Username"
+          }
+        }
+      }
+    },
     "authmanagesearchapi": {
       "getname": "Permission Management List Query Interface",
       "input": {
