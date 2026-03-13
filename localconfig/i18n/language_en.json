@@ -5064,6 +5064,16 @@
     }
   },
   "nmtai": {
+    "authintegrationapi": {
+      "getname": "Integrated execution authorization save interface",
+      "input": {
+        "param": {
+          "desc": {
+            "authoritylist": "Authorized objects, multiple choices allowed, format [\\ \"user # userUuid \\\", \\ \"team # teamUuid \\\", \\ \"role # roleUuid \\\", \\ \"common # alluser \\\"]"
+          }
+        }
+      }
+    },
     "exportapi": {
       "getname": "Universal export interface"
     },

@@ -5117,6 +5117,16 @@
     }
   },
   "nmtai": {
+    "authintegrationapi": {
+      "getname": "集成执行授权保存接口",
+      "input": {
+        "param": {
+          "desc": {
+            "authoritylist": "授权对象，可多选，格式[\\\"user#userUuid\\\",\\\"team#teamUuid\\\",\\\"role#roleUuid\\\",\\\"common#alluser\\\"]"
+          }
+        }
+      }
+    },
     "exportapi": {
       "getname": "通用导出接口"
     },
