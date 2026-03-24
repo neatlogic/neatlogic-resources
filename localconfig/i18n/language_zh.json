@@ -625,6 +625,9 @@
       "jobparamusernamenullexceptiona": "执行用户非法，阶段组“{0}”引用作业参数“{1}”的值为空",
       "jobparamusernamenullexceptionb": "执行用户非法，引用作业参数“{0}”的值为空"
     },
+    "jobparamvalidexception": {
+      "jobparamvalidexception": "作业参数: {0} 非法"
+    },
     "protocolidparamnullexception": {
       "protocolidparamnullexception": "协议(executeConfig.protocolId)入参不能为空"
     },
