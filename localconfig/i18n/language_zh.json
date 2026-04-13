@@ -1720,6 +1720,9 @@
     "inspectbaselinetemplateparampermissiondeniedexception": {
       "inspectbaselinetemplateparampermissiondeniedexception": "当前用户没有该层级的基线模板参数编辑权限，请联系管理员或层级授权人"
     },
+    "inspectbaselinetemplatehaschildexception": {
+      "inspectbaselinetemplatehaschildexception": "层级“{0}”存在子层级，暂不允许删除"
+    },
     "inspectdefinitionnotfoundedittargetexception": {
       "inspectdefinitionnotfoundedittargetexception": "巡检定义：{0}不存在"
     },

@@ -1691,6 +1691,9 @@
     "inspectbaselinetemplateparampermissiondeniedexception": {
       "inspectbaselinetemplateparampermissiondeniedexception": "The current user does not have permission to edit baseline template parameters for this hierarchy. Please contact the administrator or hierarchy owner"
     },
+    "inspectbaselinetemplatehaschildexception": {
+      "inspectbaselinetemplatehaschildexception": "Hierarchy \"{0}\" has child hierarchies and cannot be deleted"
+    },
     "inspectdefinitionnotfoundedittargetexception": {
       "inspectdefinitionnotfoundedittargetexception": "Inspection definition: {0} does not exist"
     },
