@@ -1485,6 +1485,12 @@
       "extramenurootnotallowedexception": "Root node not allowed to be deleted"
     }
   },
+  "nfia": {
+    "inspect_baseline_template_modify": {
+      "getauthdisplayname": "Baseline Management Permissions",
+      "getauthintroduction": "Used to maintain baseline template hierarchy, description, and edit authorization"
+    }
+  },
   "nfeec": {
     "eventsolutionnotfoundedittargetexception": {
       "eventsolutionnotfoundedittargetexception": "Solution: {0} does not exist"
@@ -1681,6 +1687,9 @@
     },
     "importnoauthexception": {
       "importnoauthexception": "No import permission"
+    },
+    "inspectbaselinetemplateparampermissiondeniedexception": {
+      "inspectbaselinetemplateparampermissiondeniedexception": "The current user does not have permission to edit baseline template parameters for this hierarchy. Please contact the administrator or hierarchy owner"
     },
     "inspectdefinitionnotfoundedittargetexception": {
       "inspectdefinitionnotfoundedittargetexception": "Inspection definition: {0} does not exist"

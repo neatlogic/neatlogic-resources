@@ -1515,6 +1515,12 @@
       "extramenurootnotallowedexception": "根节点不允许删除"
     }
   },
+  "nfia": {
+    "inspect_baseline_template_modify": {
+      "getauthdisplayname": "基线管理权限",
+      "getauthintroduction": "用于维护基线模板层级、描述和编辑授权"
+    }
+  },
   "nfeec": {
     "eventsolutionnotfoundedittargetexception": {
       "eventsolutionnotfoundedittargetexception": "解决方案：{0}不存在"
@@ -1710,6 +1716,9 @@
     },
     "importnoauthexception": {
       "importnoauthexception": "没有导入权限"
+    },
+    "inspectbaselinetemplateparampermissiondeniedexception": {
+      "inspectbaselinetemplateparampermissiondeniedexception": "当前用户没有该层级的基线模板参数编辑权限，请联系管理员或层级授权人"
     },
     "inspectdefinitionnotfoundedittargetexception": {
       "inspectdefinitionnotfoundedittargetexception": "巡检定义：{0}不存在"
