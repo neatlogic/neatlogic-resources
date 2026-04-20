@@ -1515,12 +1515,6 @@
       "extramenurootnotallowedexception": "根节点不允许删除"
     }
   },
-  "nfia": {
-    "inspect_baseline_template_modify": {
-      "getauthdisplayname": "基线管理权限",
-      "getauthintroduction": "用于维护基线模板层级、描述和编辑授权"
-    }
-  },
   "nfeec": {
     "eventsolutionnotfoundedittargetexception": {
       "eventsolutionnotfoundedittargetexception": "解决方案：{0}不存在"
@@ -1704,6 +1698,12 @@
       }
     }
   },
+  "nfia": {
+    "inspect_baseline_template_modify": {
+      "getauthdisplayname": "基线管理权限",
+      "getauthintroduction": "用于维护基线模板层级、描述和编辑授权"
+    }
+  },
   "nfie": {
     "exportnoauthexception": {
       "exportnoauthexception": "没有导出权限"
@@ -1717,11 +1717,11 @@
     "importnoauthexception": {
       "importnoauthexception": "没有导入权限"
     },
-    "inspectbaselinetemplateparampermissiondeniedexception": {
-      "inspectbaselinetemplateparampermissiondeniedexception": "当前用户没有该层级的基线模板参数编辑权限，请联系管理员或层级授权人"
-    },
     "inspectbaselinetemplatehaschildexception": {
       "inspectbaselinetemplatehaschildexception": "层级“{0}”存在子层级，暂不允许删除"
+    },
+    "inspectbaselinetemplateparampermissiondeniedexception": {
+      "inspectbaselinetemplateparampermissiondeniedexception": "当前用户没有该层级的基线模板参数编辑权限，请联系管理员或层级授权人"
     },
     "inspectdefinitionnotfoundedittargetexception": {
       "inspectdefinitionnotfoundedittargetexception": "巡检定义：{0}不存在"
@@ -1751,6 +1751,9 @@
     "matrixviewsqlirregularexception": {
       "matrixviewsqlirregularexception": "sql 非法{0}",
       "matrixviewsqlirregularexception_a": "配置文件不是合法的XML文件"
+    },
+    "montargetalreadyexistexception": {
+      "montargetalreadyexistexception": "监控目标已存在: "
     }
   },
   "nfne": {
@@ -4032,6 +4035,11 @@
     },
     "listinspectappenvapi": {
       "getname": "获取发起应用巡检的环境列表"
+    }
+  },
+  "nmice": {
+    "inspectbaselinesnapshotnotfoundexception": {
+      "inspectbaselinesnapshotnotfoundexception": "巡检基线快照“{0}”不存在"
     }
   },
   "nmkac": {
