@@ -5317,6 +5317,9 @@
         }
       }
     },
+    "getrunnerwaitingdetailapi": {
+      "getname": "获取 runner 排队详情"
+    },
     "moveregiontreeapi": {
       "getname": "移动地域树",
       "input": {
