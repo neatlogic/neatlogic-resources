@@ -4926,6 +4926,20 @@
           }
         }
       }
+    },
+    "authmodulegetapi": {
+      "description": {
+        "desc": "根据用户获取模块以及对应的权限列表"
+      },
+      "getname": "获取用户模块对应权限",
+      "output": {
+        "param": {
+          "desc": {
+            "authdisplayname": "权限名",
+            "authintroduction": "权限介绍"
+          }
+        }
+      }
     }
   },
   "nmtac": {
@@ -5210,6 +5224,9 @@
     "exportmatrixapi": {
       "getname": "导出矩阵"
     },
+    "getmodulemanagesettingapi": {
+      "getname": "获取模块管理显示设置"
+    },
     "importmatrixapi": {
       "getname": "导入矩阵",
       "output": {
@@ -5263,6 +5280,9 @@
     },
     "matrixsearchapi": {
       "getname": "查询矩阵列表"
+    },
+    "savemodulemanagesettingapi": {
+      "getname": "保存模块管理显示设置"
     },
     "updatemailserverisactiveapi": {
       "getname": "更新邮件服务器激活状态"

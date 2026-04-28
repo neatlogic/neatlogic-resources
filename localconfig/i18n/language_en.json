@@ -4875,6 +4875,20 @@
           }
         }
       }
+    },
+    "authmodulegetapi": {
+      "description": {
+        "desc": "According to the user\u0027s module and corresponding permission list"
+      },
+      "getname": "Obtain the corresponding permissions for the user module",
+      "output": {
+        "param": {
+          "desc": {
+            "authdisplayname": "permission name",
+            "authintroduction": "Permission Introduction"
+          }
+        }
+      }
     }
   },
   "nmtac": {
@@ -5157,6 +5171,9 @@
     "exportmatrixapi": {
       "getname": "Export Matrix"
     },
+    "getmodulemanagesettingapi": {
+      "getname": "Get module management display settings"
+    },
     "importmatrixapi": {
       "getname": "Import Matrix",
       "output": {
@@ -5210,6 +5227,9 @@
     },
     "matrixsearchapi": {
       "getname": "Query matrix list"
+    },
+    "savemodulemanagesettingapi": {
+      "getname": "Save module management display settings"
     },
     "updatemailserverisactiveapi": {
       "getname": "Update the activation status of the email server"
