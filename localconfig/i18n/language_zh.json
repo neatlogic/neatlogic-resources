@@ -6264,6 +6264,11 @@
       "reportinstanceid": "报表实例id",
       "sendplaninfo": "发送计划信息"
     },
+    "resourcepool": {
+      "groupdesc": "资源池管理模块",
+      "groupname": "资源池",
+      "name": "资源池管理"
+    },
     "tagent": {
       "name": "tagent模块",
       "osid": "OS类型id",

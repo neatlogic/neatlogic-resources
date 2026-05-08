@@ -6211,6 +6211,11 @@
       "reportinstanceid": "Report instance ID",
       "sendplaninfo": "Send Plan Information"
     },
+    "resourcepool": {
+      "groupdesc": "Resource Pool Management Module",
+      "groupname": "resource pool",
+      "name": "Resource Pool Management"
+    },
     "tagent": {
       "name": "Tagent",
       "osid": "OS type ID",
