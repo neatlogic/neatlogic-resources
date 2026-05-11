@@ -1683,7 +1683,7 @@
       "importexporthandlernotfoundexception": "Import export processor: {0} cannot be found"
     },
     "importexporttypeinconsistencyexception": {
-      "importexporttypeinconsistencyexception": "The import type is inconsistent with the target type, and data of type {0} cannot be imported into type {1}"
+      "importexporttypeinconsistencyexception": "Import file exception, please import {0}"
     },
     "importnoauthexception": {
       "importnoauthexception": "No import permission"
