@@ -5677,7 +5677,15 @@
   },
   "term": {
     "ai": {
-      "ai": "AI"
+      "ai": "AI",
+      "conditiondescription": "Configure condition control flow",
+      "llm": "large model",
+      "llmdescription": "Prompt word generation and reasoning",
+      "rag": "RAG Search",
+      "ragdescription": "Retrieve relevant content from the knowledge base",
+      "tooldescription": "Call Tool or external capability",
+      "workflowend": "Process ended",
+      "workflowstart": "Process Entry"
     },
     "alert": {
       "aggregatealertitemlist": "Aggregate Alarm Detail List",
