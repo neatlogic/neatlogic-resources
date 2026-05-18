@@ -6274,7 +6274,7 @@
     },
     "resourcepool": {
       "groupdesc": "Resource Pool Management Module",
-      "groupname": "resource pool",
+      "groupname": "Resource pool",
       "name": "Resource Pool Management"
     },
     "tagent": {
