@@ -6057,8 +6057,9 @@
       "drapptypeappsystem": "业务应用",
       "drapptypebasicservices": "基础服务",
       "drapptypenetwork": "网络",
+      "groupname": "灾切管理平台",
       "highavailabilityscenelist": "高可用场景列表",
-      "name": "灾备切换模块",
+      "name": "灾切",
       "orgid": "容灾组织ID",
       "publicapplicationidlist": "公共服务ID列表",
       "publicapplicationlist": "公共服务列表",
@@ -6232,6 +6233,10 @@
     "master": {
       "groupname": "租户管理",
       "name": "租户管理"
+    },
+    "monitor": {
+      "groupname": "监控模块",
+      "name": "监控"
     },
     "notify": {
       "handler": "通知策略处理器",

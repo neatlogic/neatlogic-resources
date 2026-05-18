@@ -6004,8 +6004,9 @@
       "drapptypeappsystem": "Application system",
       "drapptypebasicservices": "Basic services",
       "drapptypenetwork": "Network",
+      "groupname": "Disaster Management Platform",
       "highavailabilityscenelist": "High availability scenario list",
-      "name": "Disaster recovery switching module",
+      "name": "DR",
       "orgid": "Disaster recovery organization ID",
       "publicapplicationidlist": "Public Service ID List",
       "publicapplicationlist": "Public Service List",
@@ -6179,6 +6180,10 @@
     "master": {
       "groupname": "Master",
       "name": "Master"
+    },
+    "monitor": {
+      "groupname": "Monitor Platform",
+      "name": "Monitor"
     },
     "notify": {
       "handler": "Notification Policy Processor",
