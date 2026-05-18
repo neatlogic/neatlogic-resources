@@ -6070,7 +6070,18 @@
     },
     "informant": {
       "groupname": "Informant",
-      "name": "Informant"
+      "name": "Informant",
+      "status": {
+        "offline": "offline",
+        "online": "online",
+        "running": "In progress",
+        "skiped": "Skipped",
+        "upgradefailed": "Upgrade failed",
+        "upgradesuccess": "Upgrade successful",
+        "upgrading": "Upgrading",
+        "waittorun": "Pending execution",
+        "waittoupgrade": "To be upgraded"
+      }
     },
     "inspect": {
       "fields": "Data Structure List",

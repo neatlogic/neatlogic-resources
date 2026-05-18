@@ -6123,7 +6123,18 @@
     },
     "informant": {
       "groupname": "故障诊断",
-      "name": "故障诊断"
+      "name": "故障诊断",
+      "status": {
+        "offline": "离线",
+        "online": "在线",
+        "running": "执行中",
+        "skiped": "已跳过",
+        "upgradefailed": "升级失败",
+        "upgradesuccess": "升级成功",
+        "upgrading": "升级中",
+        "waittorun": "待执行",
+        "waittoupgrade": "待升级"
+      }
     },
     "inspect": {
       "fields": "数据结构列表",
