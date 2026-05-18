@@ -1,4 +1,12 @@
 {
+  "alert": {
+    "alert": {
+      "teammemberaccount": "Processing group member accounts"
+    },
+    "term": {
+      "workerteammembername": "Processing group member names"
+    }
+  },
   "cmdb": {
     "ci": "model",
     "cimodify": "Model modification"
@@ -485,6 +493,7 @@
     }
   },
   "nfae": {
+    "alertattr": "unique key",
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "Tool directory: {0} does not exist"
     },
@@ -5667,6 +5676,34 @@
     "ismine": "Is it mine"
   },
   "term": {
+    "ai": {
+      "ai": "AI"
+    },
+    "alert": {
+      "aggregatealertitemlist": "Aggregate Alarm Detail List",
+      "aggregatealertlisthtml": "Aggregate alarm list HTML",
+      "aggregatecount": "Aggregate alarm quantity",
+      "alertcenter": "Alarm Center",
+      "createtimetext": "Creation time (text)",
+      "extendattr": "extended attributes",
+      "isclosename": "Do you want to close the name",
+      "issubalert": "Is it a sub alarm",
+      "levelname": "Level Name",
+      "simillaralertcount": "Number of similar alarms",
+      "updatetime": "Update time",
+      "updatetimetext": "Update time (text)",
+      "workeraccount": "Processor account",
+      "workeremail": "Processor\u0027s email",
+      "workerphone": "Handler\u0027s phone",
+      "workerteam": "treatment group",
+      "workerteamaccountphone": "Handling group members\u0027 phone numbers",
+      "workerteamemail": "Processing group email",
+      "workerteamleaderphone": "Handling group calls\u0026leader calls",
+      "workerteammemberemail": "Handling group members\u0027 email addresses",
+      "workerteamphone": "Handling group phone calls",
+      "workerteamuuid": "Processing group uuid",
+      "workeruuid": "Processing person\u0027s uuid"
+    },
     "appsystemidlist": "Application System ID List",
     "autoexec": {
       "allphasesarerunnerorsqlexecmode": "All stages are Runner or SQL execution mode",

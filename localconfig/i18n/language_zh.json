@@ -1,4 +1,12 @@
 {
+  "alert": {
+    "alert": {
+      "teammemberaccount": "处理组成员账号"
+    },
+    "term": {
+      "workerteammembername": "处理组成员名称"
+    }
+  },
   "cmdb": {
     "ci": "模型",
     "cimodify": "模型修改"
@@ -485,6 +493,7 @@
     }
   },
   "nfae": {
+    "alertattr": "唯一键",
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "工具目录：{0}不存在"
     },
@@ -5720,6 +5729,34 @@
     "ismine": "是否我的"
   },
   "term": {
+    "ai": {
+      "ai": "人工智能"
+    },
+    "alert": {
+      "aggregatealertitemlist": "聚合告警明细列表",
+      "aggregatealertlisthtml": "聚合告警列表HTML",
+      "aggregatecount": "聚合告警数量",
+      "alertcenter": "告警中心",
+      "createtimetext": "创建时间（文本）",
+      "extendattr": "扩展属性",
+      "isclosename": "是否关闭名称",
+      "issubalert": "是否子告警",
+      "levelname": "级别名称",
+      "simillaralertcount": "相似告警数量",
+      "updatetime": "更新时间",
+      "updatetimetext": "更新时间（文本）",
+      "workeraccount": "处理人账号",
+      "workeremail": "处理人邮箱",
+      "workerphone": "处理人电话",
+      "workerteam": "处理组",
+      "workerteamaccountphone": "处理组成员电话",
+      "workerteamemail": "处理组邮箱",
+      "workerteamleaderphone": "处理组电话\u0026领导电话",
+      "workerteammemberemail": "处理组成员邮箱",
+      "workerteamphone": "处理组电话",
+      "workerteamuuid": "处理组uuid",
+      "workeruuid": "处理人uuid"
+    },
     "appsystemidlist": "应用系统id列表",
     "autoexec": {
       "allphasesarerunnerorsqlexecmode": "所有阶段都是Runner或SQL执行方式",
