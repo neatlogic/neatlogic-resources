@@ -5730,7 +5730,15 @@
   },
   "term": {
     "ai": {
-      "ai": "人工智能"
+      "ai": "人工智能",
+      "conditiondescription": "配置条件控制流转",
+      "llm": "大模型",
+      "llmdescription": "提示词生成与推理",
+      "rag": "RAG检索",
+      "ragdescription": "从知识库检索相关内容",
+      "tooldescription": "调用 Tool 或外部能力",
+      "workflowend": "流程结束",
+      "workflowstart": "流程入口"
     },
     "alert": {
       "aggregatealertitemlist": "聚合告警明细列表",
