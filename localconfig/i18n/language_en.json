@@ -306,6 +306,7 @@
     "sourcelist": "Source List",
     "sourcename": "Source Chinese Name",
     "specifyversionid": "Specify version ID",
+    "sql": "SQL statement",
     "startdate": "Start date",
     "startloadcommercialmodule": "Success to loaded commercial module {0}",
     "startloadconfig": "Start to load config from {0}...",
@@ -5096,6 +5097,9 @@
     "gethomepageapi": {
       "getname": "Get homepage configuration information"
     },
+    "getsqlexplainapi": {
+      "getname": "Get SQL Execution Plan"
+    },
     "getusersessionqueueinfoapi": {
       "getname": "Retrieve user session queue information"
     },
@@ -5107,6 +5111,17 @@
     },
     "savehomepageapi": {
       "getname": "Save homepage configuration information"
+    },
+    "searchsqlauditapi": {
+      "getname": "Time consumption for obtaining SQL"
+    },
+    "togglesqlinterceptorapi": {
+      "getname": "Control System SQL Tracking",
+      "input": {
+        "param": {
+          "desc": "Need to count SQL URLs based on HTTP requests, where * represents all URLs"
+        }
+      }
     }
   },
   "nmtai": {
