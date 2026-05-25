@@ -306,6 +306,7 @@
     "sourcelist": "来源列表",
     "sourcename": "来源中文名",
     "specifyversionid": "指定版本ID",
+    "sql": "sql语句",
     "startdate": "开始日期",
     "startloadcommercialmodule": "成功加载商业版模块 {0}",
     "startloadconfig": "开始从 {0} 加载配置...",
@@ -5149,6 +5150,9 @@
     "gethomepageapi": {
       "getname": "获取默认首页配置信息"
     },
+    "getsqlexplainapi": {
+      "getname": "获取SQL执行计划"
+    },
     "getusersessionqueueinfoapi": {
       "getname": "获取用户会话队列信息"
     },
@@ -5160,6 +5164,17 @@
     },
     "savehomepageapi": {
       "getname": "保存默认首页配置信息"
+    },
+    "searchsqlauditapi": {
+      "getname": "获取SQL耗时"
+    },
+    "togglesqlinterceptorapi": {
+      "getname": "控制系统SQL追踪",
+      "input": {
+        "param": {
+          "desc": "需要按HTTP请求统计SQL的URL，*代表全部URL"
+        }
+      }
     }
   },
   "nmtai": {
