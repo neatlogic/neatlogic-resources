@@ -1534,6 +1534,11 @@
       "policyrepeatexception": "There is a duplicate license rule {0}"
     }
   },
+  "nfem": {
+    "subscribehandlerisembedexception": {
+      "subscribehandlerisembedexception": "System subscription processor: {0} is not allowed for custom subscriptions"
+    }
+  },
   "nfer": {
     "rolenamerepeatexception": {
       "rolenamerepeatexception": "Role: \u0027{0}\u0027 already exists"

@@ -1565,6 +1565,11 @@
       "policyrepeatexception": "存在重复license规则{0}"
     }
   },
+  "nfem": {
+    "subscribehandlerisembedexception": {
+      "subscribehandlerisembedexception": "系统订阅处理器：{0}不允许用于自定义订阅"
+    }
+  },
   "nfer": {
     "rolenamerepeatexception": {
       "rolenamerepeatexception": "角色：“{0}”已存在"
