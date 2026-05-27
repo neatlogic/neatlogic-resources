@@ -1537,6 +1537,9 @@
   "nfem": {
     "subscribehandlerisembedexception": {
       "subscribehandlerisembedexception": "System subscription processor: {0} is not allowed for custom subscriptions"
+    },
+    "subscribeissystemexception": {
+      "subscribeissystemexception": "System subscription: {0} does not allow modification or deletion"
     }
   },
   "nfer": {

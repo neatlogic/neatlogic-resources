@@ -1568,6 +1568,9 @@
   "nfem": {
     "subscribehandlerisembedexception": {
       "subscribehandlerisembedexception": "系统订阅处理器：{0}不允许用于自定义订阅"
+    },
+    "subscribeissystemexception": {
+      "subscribeissystemexception": "系统订阅：{0}不允许修改或删除"
     }
   },
   "nfer": {
