@@ -12,6 +12,7 @@
     "cimodify": "模型修改"
   },
   "common": {
+    "aborted": "已中止",
     "account": "账号",
     "action": "动作",
     "actiontime": "操作时间",

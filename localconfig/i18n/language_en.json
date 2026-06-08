@@ -12,6 +12,7 @@
     "cimodify": "Model modification"
   },
   "common": {
+    "aborted": "Aborted",
     "account": "Account",
     "action": "action",
     "actiontime": "Operation time",
