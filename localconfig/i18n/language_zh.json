@@ -4106,6 +4106,9 @@
     }
   },
   "nmkaf": {
+    "cancelsyncfeishuwikidocumentapi": {
+      "getname": "取消同步文档"
+    },
     "getfeishuappcredentialsapi": {
       "getname": "获取飞书应用凭证"
     },

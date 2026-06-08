@@ -4076,6 +4076,9 @@
     }
   },
   "nmkaf": {
+    "cancelsyncfeishuwikidocumentapi": {
+      "getname": "Cancel document synchronization"
+    },
     "getfeishuappcredentialsapi": {
       "getname": "Obtain Feishu application credentials"
     },
