@@ -12,6 +12,7 @@
     "cimodify": "Model modification"
   },
   "common": {
+    "aborted": "Aborted",
     "account": "Account",
     "action": "action",
     "actiontime": "Operation time",
@@ -242,6 +243,7 @@
     "nostatus": "Stateless",
     "notifytype": "Notification Type",
     "notstart": "Not started yet",
+    "notsynced": "Not synced",
     "number": "number",
     "object": "Any object",
     "oldvalue": "Old value",
@@ -335,6 +337,7 @@
     "statusuniquename": "State Unique Identification",
     "steplist": "Step List",
     "string": "character string",
+    "succeed": "Successfully completed",
     "successload": "is loaded",
     "superadmin": "Super administrator",
     "switch": "switch",
@@ -408,6 +411,7 @@
     "viewable": "Can I view it",
     "viewauthoritylist": "View permission list",
     "viewcount": "View volume",
+    "waiting": "In line",
     "wechatnotify": "WeChat notification",
     "widgetlist": "Component List",
     "worker": "Processed by",
@@ -1732,6 +1736,11 @@
     },
     "inspectnewproblemcustomviewnotfoundedittargetexception": {
       "inspectnewproblemcustomviewnotfoundedittargetexception": "The latest issue in the inspection is that the personal view classification {0} does not exist"
+    }
+  },
+  "nfkc": {
+    "status": {
+      "unsupported": "There are unsupported controls"
     }
   },
   "nfke": {
@@ -4070,6 +4079,59 @@
     },
     "knowledgedocumentversiondeleteapi": {
       "getname": "Delete Document Version"
+    }
+  },
+  "nmkaf": {
+    "cancelsyncfeishuwikidocumentapi": {
+      "getname": "Cancel document synchronization"
+    },
+    "getfeishuappcredentialsapi": {
+      "getname": "Obtain Feishu application credentials"
+    },
+    "getfeishudocumentinfoapi": {
+      "getname": "Obtain Feishu document information",
+      "input": {
+        "param": {
+          "desc": {
+            "nodetoken": "Feishu Document nodeToken"
+          }
+        }
+      }
+    },
+    "listfeishuwikispaceapi": {
+      "getname": "Get the list of Feishu Wiki spaces"
+    },
+    "savefeishuappcredentialsapi": {
+      "getname": "Save Feishu application credentials",
+      "input": {
+        "param": {
+          "desc": {
+            "knowledgecircleid": "Knowledge Circle ID"
+          }
+        }
+      }
+    },
+    "searchfeishuwikinodeapi": {
+      "getname": "Get the node list of Feishu Wiki",
+      "input": {
+        "param": {
+          "desc": {
+            "parentnodetoken": "Parent node nodeToken",
+            "spaceid": "Wiki Space ID"
+          }
+        }
+      }
+    },
+    "syncfeishuwikidocumentapi": {
+      "getname": "Synchronize Feishu Wiki documents",
+      "input": {
+        "param": {
+          "desc": {
+            "nodetokenlist": "Node Token List",
+            "spaceidlist": "Space ID List"
+          }
+        }
+      }
     }
   },
   "nmkat": {

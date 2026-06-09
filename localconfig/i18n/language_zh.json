@@ -12,6 +12,7 @@
     "cimodify": "模型修改"
   },
   "common": {
+    "aborted": "已中止",
     "account": "账号",
     "action": "动作",
     "actiontime": "操作时间",
@@ -242,6 +243,7 @@
     "nostatus": "无状态",
     "notifytype": "通知类型",
     "notstart": "未开始",
+    "notsynced": "未同步",
     "number": "数字",
     "object": "任意对象",
     "oldvalue": "旧值",
@@ -335,6 +337,7 @@
     "statusuniquename": "状态唯一标识",
     "steplist": "步骤列表",
     "string": "字符串",
+    "succeed": "已成功",
     "successload": "执行完毕",
     "superadmin": "超级管理员",
     "switch": "开关",
@@ -408,6 +411,7 @@
     "viewable": "是否可查看",
     "viewauthoritylist": "查看权限列表",
     "viewcount": "浏览量",
+    "waiting": "排队中",
     "wechatnotify": "微信通知",
     "widgetlist": "组件列表",
     "worker": "处理人",
@@ -1762,6 +1766,11 @@
     },
     "inspectnewproblemcustomviewnotfoundedittargetexception": {
       "inspectnewproblemcustomviewnotfoundedittargetexception": "巡检最新问题个人视图分类{0}不存在"
+    }
+  },
+  "nfkc": {
+    "status": {
+      "unsupported": "有不支持控件"
     }
   },
   "nfke": {
@@ -4100,6 +4109,59 @@
     },
     "knowledgedocumentversiondeleteapi": {
       "getname": "删除文档版本"
+    }
+  },
+  "nmkaf": {
+    "cancelsyncfeishuwikidocumentapi": {
+      "getname": "取消同步文档"
+    },
+    "getfeishuappcredentialsapi": {
+      "getname": "获取飞书应用凭证"
+    },
+    "getfeishudocumentinfoapi": {
+      "getname": "获取飞书文档信息",
+      "input": {
+        "param": {
+          "desc": {
+            "nodetoken": "飞书文档nodeToken"
+          }
+        }
+      }
+    },
+    "listfeishuwikispaceapi": {
+      "getname": "获取飞书 Wiki 空间列表"
+    },
+    "savefeishuappcredentialsapi": {
+      "getname": "保存飞书应用凭证",
+      "input": {
+        "param": {
+          "desc": {
+            "knowledgecircleid": "知识圈ID"
+          }
+        }
+      }
+    },
+    "searchfeishuwikinodeapi": {
+      "getname": "获取飞书Wiki节点列表",
+      "input": {
+        "param": {
+          "desc": {
+            "parentnodetoken": "父节点nodeToken",
+            "spaceid": "Wiki空间ID"
+          }
+        }
+      }
+    },
+    "syncfeishuwikidocumentapi": {
+      "getname": "同步飞书Wiki文档",
+      "input": {
+        "param": {
+          "desc": {
+            "nodetokenlist": "节点token列表",
+            "spaceidlist": "空间ID列表"
+          }
+        }
+      }
     }
   },
   "nmkat": {
