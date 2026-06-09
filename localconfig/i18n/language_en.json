@@ -1519,6 +1519,12 @@
     },
     "mkdirpermissiondeniedexception": {
       "mkdirpermissiondeniedexception": "No permission to create folder"
+    },
+    "uploadfilefailedexception": {
+      "uploadfilefailedexception": {
+        "a": "Upload file failed, error: {0}",
+        "b": "Upload to file {0} failed, error: {1}"
+      }
     }
   },
   "nfeh": {

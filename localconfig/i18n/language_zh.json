@@ -1550,6 +1550,12 @@
     },
     "mkdirpermissiondeniedexception": {
       "mkdirpermissiondeniedexception": "没有创建文件夹权限"
+    },
+    "uploadfilefailedexception": {
+      "uploadfilefailedexception": {
+        "a": "上传文件失败，错误：{0}",
+        "b": "上传到{0}文件失败，错误：{1}"
+      }
     }
   },
   "nfeh": {
