@@ -5251,6 +5251,9 @@
     "exportlogfileapi": {
       "getname": "Export Log File"
     },
+    "exportloginauditapi": {
+      "getname": "Export login record list"
+    },
     "getlicenseapi": {
       "getname": "Obtaining License Information"
     },
