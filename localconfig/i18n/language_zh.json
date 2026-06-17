@@ -5305,6 +5305,9 @@
     "exportlogfileapi": {
       "getname": "导出日志文件"
     },
+    "exportloginauditapi": {
+      "getname": "导出登录记录列表"
+    },
     "getlicenseapi": {
       "getname": "获取许可信息"
     },
