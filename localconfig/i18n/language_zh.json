@@ -135,6 +135,8 @@
     "failedcount": "错误次数",
     "failedload": "执行失败",
     "favorcount": "点赞量",
+    "featurename": "功能名称",
+    "featurepath": "功能路径",
     "file": "文件",
     "fileid": "文件ID",
     "fileidlist": "附件ID列表",
@@ -370,6 +372,7 @@
     "time": "时间",
     "timecost": "耗时",
     "timeoutpoint": "超时时间点",
+    "timerange": "时间范围",
     "timeunit": "时间单位",
     "title": "标题",
     "toomanyoption": "选项过多，其余选项不予展示",
@@ -5179,6 +5182,9 @@
     "downloadimageapi": {
       "getname": "图片下载接口"
     },
+    "exportfeatureusageauditapi": {
+      "getname": "导出功能使用统计数据"
+    },
     "formcopyapi": {
       "getname": "复制表单"
     },
@@ -5219,11 +5225,20 @@
     "listformtagapi": {
       "getname": "表单扩展数据标签列表"
     },
+    "savefeatureusageauditapi": {
+      "getname": "保存功能使用审计"
+    },
     "saveformversiondefaultsceneapi": {
       "getname": "设置表单版本默认场景"
     },
     "saveformversionscenereadonlyapi": {
       "getname": "设置表单版本场景只读"
+    },
+    "searchfeatureapi": {
+      "getname": "查询统计功能使用次数列表"
+    },
+    "searchfeatureusageauditapi": {
+      "getname": "查询功能使用审计列表"
     }
   },
   "nmtah": {

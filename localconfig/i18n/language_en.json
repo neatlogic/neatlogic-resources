@@ -135,6 +135,8 @@
     "failedcount": "Number of errors",
     "failedload": "is failed",
     "favorcount": "Likes",
+    "featurename": "Function Name",
+    "featurepath": "functional path",
     "file": "file",
     "fileid": "File ID",
     "fileidlist": "Attachment ID List",
@@ -370,6 +372,7 @@
     "time": "time",
     "timecost": "time consuming",
     "timeoutpoint": "Time out point",
+    "timerange": "time range",
     "timeunit": "Time unit",
     "title": "title",
     "toomanyoption": "Too many options, other options will not be displayed",
@@ -5125,6 +5128,9 @@
     "downloadimageapi": {
       "getname": "Image download interface"
     },
+    "exportfeatureusageauditapi": {
+      "getname": "Export function uses statistical data"
+    },
     "formcopyapi": {
       "getname": "Copy Form"
     },
@@ -5165,11 +5171,20 @@
     "listformtagapi": {
       "getname": "Form Extended Data Label List"
     },
+    "savefeatureusageauditapi": {
+      "getname": "Save function usage audit"
+    },
     "saveformversiondefaultsceneapi": {
       "getname": "Set the default scenario for form version"
     },
     "saveformversionscenereadonlyapi": {
       "getname": "Set form version scenario read-only"
+    },
+    "searchfeatureapi": {
+      "getname": "List of usage times for query and statistics function"
+    },
+    "searchfeatureusageauditapi": {
+      "getname": "Query function using audit list"
     }
   },
   "nmtah": {
