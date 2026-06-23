@@ -5129,6 +5129,9 @@
       "getname": "Image download interface"
     },
     "exportfeatureusageauditapi": {
+      "getname": "Export function usage record data"
+    },
+    "exportfeatureusagestatisticsapi": {
       "getname": "Export function uses statistical data"
     },
     "formcopyapi": {

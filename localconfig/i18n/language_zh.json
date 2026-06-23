@@ -5183,6 +5183,9 @@
       "getname": "图片下载接口"
     },
     "exportfeatureusageauditapi": {
+      "getname": "导出功能使用记录数据"
+    },
+    "exportfeatureusagestatisticsapi": {
       "getname": "导出功能使用统计数据"
     },
     "formcopyapi": {
