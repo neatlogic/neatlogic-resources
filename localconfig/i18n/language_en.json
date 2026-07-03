@@ -60,7 +60,7 @@
     "collectcount": "Collection volume",
     "collector": "Collector",
     "color": "colour",
-    "comment": "comment",
+    "comment": "Comment",
     "commentcount": "Number of comments",
     "commitcheck": "Submit for review",
     "common": "public",
@@ -69,12 +69,12 @@
     "configfilepath": "Configuration file path",
     "configfilepathlist": "Configuration file path list",
     "configlist": "Configuration List",
-    "content": "content",
+    "content": "Content",
     "count": "quantity",
     "create": "establish",
     "createdate": "Created on",
     "createrobject": "Creator Object",
-    "createtime": "Creation time",
+    "createtime": "Creation Time",
     "createuser": "creator",
     "createusername": "Creator Name",
     "creator": "Creating Users",
@@ -163,7 +163,8 @@
     "hmac": "Hmac certification",
     "homeurl": "Application server address",
     "icon": "icon",
-    "id": "id",
+    "id": "ID",
+    "ip": "IP",
     "importtargettype": "Import Target Type",
     "includelist": "Used to require echo parameters",
     "index": "subscript",
@@ -314,7 +315,7 @@
     "singleselect": "Single-select dropdown",
     "sla": "prescription",
     "sort": "sort",
-    "source": "source",
+    "source": "Source",
     "sourcelist": "Source List",
     "sourcename": "Source Chinese Name",
     "specifyversionid": "Specify version ID",
@@ -329,7 +330,7 @@
     "starttime": "start time",
     "startupjob": "Startup Job",
     "startuser": "Start user",
-    "status": "state",
+    "status": "Status",
     "statuscolor": "Status Color",
     "statusdescription": "Status description",
     "statusid": "Status ID",
@@ -344,7 +345,7 @@
     "superadmin": "Super administrator",
     "switch": "switch",
     "tablelist": "Table List",
-    "tag": "label",
+    "tag": "Tag",
     "tagid": "Tag ID",
     "tagidlist": "Tag ID List",
     "taglist": "Label List",
@@ -369,17 +370,17 @@
     "textarea": "text field",
     "textbox": "Text Box",
     "theadlist": "thead list",
-    "time": "time",
+    "time": "Time",
     "timecost": "time consuming",
     "timeoutpoint": "Time out point",
     "timerange": "time range",
     "timeunit": "Time unit",
-    "title": "title",
+    "title": "Title",
     "toomanyoption": "Too many options, other options will not be displayed",
     "trigger": "Trigger point",
     "triggertime": "Trigger time",
     "triggertype": "Trigger type",
-    "type": "type",
+    "type": "Type",
     "typeid": "Type ID",
     "typename": "Type Name",
     "typeuuid": "type uuid",
@@ -417,7 +418,7 @@
     "waiting": "In line",
     "wechatnotify": "WeChat notification",
     "widgetlist": "Component List",
-    "worker": "Processed by",
+    "worker": "Processed By",
     "worktimename": "Working Time Window Name",
     "worktimeuuid": "Working Time Window Uuid",
     "year": "particular year"
@@ -510,7 +511,7 @@
     }
   },
   "nfae": {
-    "alertattr": "unique key",
+    "alertattr": "Unique Key",
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "Tool directory: {0} does not exist"
     },
@@ -2419,13 +2420,113 @@
           }
         }
       },
+      "message": {
+        "analyzefailed": "Log analysis failed: {0}",
+        "datasetnotconfigured": "The log analysis assistant tool instance has no custom knowledge base configured.",
+        "missinganswer": "The model response is missing answer.",
+        "modelnotconfigured": "The log analysis assistant tool instance has no model configured.",
+        "modelunavailable": "The model configured for the log analysis assistant tool instance is unavailable.",
+        "noenabledtool": "No enabled log analysis assistant tool instance was found. Add and enable one in AI > Tool Management.",
+        "questionrequired": "Enter the question to analyze.",
+        "selectedlogrequired": "Select the log content to analyze.",
+        "toolnotfound": "The log analysis assistant tool instance does not exist."
+      },
+      "progress": {
+        "callmodel": "Starting model analysis generation",
+        "checkconfig": "Checking log analysis assistant configuration",
+        "configchecked": "Configuration check completed",
+        "datasetsearched": "Knowledge base search completed",
+        "parseresult": "Model analysis result parsed",
+        "preparecontext": "Preparing log context and retrieval question",
+        "searchdataset": "Searching bound knowledge bases",
+        "start": "Starting log analysis"
+      },
       "streamapi": {
         "description": "Return automation log analysis progress and final result through SSE",
         "getname": "Stream automation job log analysis with AI assistant"
       },
       "tool": {
         "description": "Analyze failure causes, evidence, and handling suggestions from the selected automation job logs, job context, and administrator-bound custom knowledge bases.",
-        "label": "Automation log analysis assistant"
+        "label": "Automation Log Analysis Assistant",
+        "param": {
+          "conversationsummary": "Earlier conversation summary",
+          "logcontext": "Job, phase, node, executor, and other context as a JSON string",
+          "messagelist": "Recent conversation history as a JSON string",
+          "question": "Current user question about the log snippet",
+          "selectedlog": "Log snippet selected by the user"
+        }
+      }
+    },
+    "autoexecscriptaiassistant": {
+      "configapi": {
+        "getname": "Get Script Writing Configuration",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledscripttypelist": "Enabled script type list",
+              "enabledtoolcount": "Number of enabled tool instances",
+              "enabledtoollist": "Enabled tool instance list",
+              "isaiavailable": "Whether AI is available",
+              "toolname": "Tool handler name"
+            }
+          }
+        }
+      },
+      "generateapi": {
+        "description": "Handle script Q&A, analysis, generation, and modification requests with the script AI assistant",
+        "getname": "Handle Script Request With AI Assistant"
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "Earlier conversation summary",
+            "language": "Script language",
+            "messagelist": "Recent conversation history",
+            "requirement": "Current user input",
+            "scriptcontext": "Script context",
+            "scripttype": "Script type"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "Message",
+            "output": "Generation result"
+          }
+        }
+      },
+      "message": {
+        "generatefailed": "Script generation failed: {0}",
+        "missinganswer": "The model response is missing answer.",
+        "missinganswerorcode": "The model response is missing answer or candidateCode/code.",
+        "missingcode": "The model response is missing candidateCode/code.",
+        "modelbusy": "The model is busy. Try again later.",
+        "modelnotconfigured": "The script writing tool instance has no model configured.",
+        "modelunavailable": "The model configured for the script writing tool instance is unavailable.",
+        "noenabledtool": "No enabled script writing tool instance was found. Add and enable one in AI > Tool Management.",
+        "requirementrequired": "Enter the current script requirement.",
+        "toolnotfound": "The script writing tool instance does not exist."
+      },
+      "scripttype": {
+        "auto": "Auto Detect",
+        "collect": "Collection Script",
+        "deploybuild": "Deployment Build Script",
+        "library": "Tool Library Script",
+        "normal": "Normal Script"
+      },
+      "tool": {
+        "description": "Explain, analyze, troubleshoot, suggest, generate, or continuously modify NeatLogic custom script content based on user requirements and script context; does not save, validate, test, or execute scripts.",
+        "label": "Script Writing",
+        "limitscripttype": "Current tool instance is limited to script type: {0}",
+        "param": {
+          "conversationsummary": "Earlier conversation summary",
+          "language": "Script language or parser, such as bash/python/powershell",
+          "messagelist": "Recent conversation history as a JSON string",
+          "requirement": "Current user question, analysis, generation, or modification request for the script",
+          "scriptcontext": "Script context as a JSON string, including baseCode, workingCode, parameters, execution mode, and related data",
+          "scripttype": "Script type. Options: normal/collect/library/deploy_build"
+        }
       }
     }
   },
@@ -2435,6 +2536,158 @@
     }
   },
   "nmai": {
+    "aitool": {
+      "executeaiworkflowtool": {
+        "desc": {
+          "description": "Description",
+          "formfields": "Form fields",
+          "main": "Select and execute an authorized AI workflow based on the conversation context. The first call returns only a confirmation request; execution starts after the user confirms.",
+          "name": "Name",
+          "noworkflow": "No executable workflow is configured for this tool instance.",
+          "paramrequirement": "Parameter requirements: workflowId must come from the list above; text is the natural language input; form is the workflow form field object; fileList is the image attachment list from the current session in id/name format, and id must be the real numeric ID from the attachment list, not a placeholder such as image attachment ID; reason explains why this workflow and these parameters were selected.",
+          "required": "required",
+          "textinput": "Text input",
+          "workflowlist": "Available workflows:"
+        },
+        "label": "Execute AI Workflow",
+        "message": {
+          "attachmentunreadable": "The attachment does not belong to the current session or the current user has no permission to read it, fileId={0}. Available image attachments: {1}",
+          "confirmworkflow": "Please confirm whether to execute the AI workflow: {0}",
+          "failedinstruction": "Tell the user that the workflow did not complete successfully, explain why the current request cannot be completed based on the error, and do not present the failed result as successful.",
+          "fileidinvalid": "fileList[{0}].id must be a real numeric ID from the current session attachment list, not a placeholder: {1}. Available image attachments: {2}",
+          "filelistnotarray": "fileList must be an object array in id/name format. Available image attachments: {0}",
+          "missingcontext": "Missing AI chat session context, unable to execute the AI workflow",
+          "missingworkflowid": "Missing workflowId, unable to execute the AI workflow",
+          "multipleimageattachments": "Multiple image attachments exist. Please explicitly choose the attachment to pass into the workflow. Available image attachments: {0}",
+          "notimageattachment": "execute_ai_workflow.fileList only accepts image attachments from the current session. fileId={0} is not an available image attachment. Available image attachments: {1}",
+          "succeedinstruction": "Summarize a concise conclusion for the user based on the final workflow output, and do not expand unrelated execution logs.",
+          "tasknotfound": "Task not found",
+          "timeout": "AI workflow execution timed out",
+          "unauthorizedworkflow": "This tool instance is not authorized to execute the selected workflow",
+          "unnamedimage": "Unnamed image",
+          "unsuccessful": "AI workflow did not complete successfully: {0}"
+        },
+        "param": {
+          "filelist": "Current session image attachment list in id/name format. id must be a real numeric ID from the attachment list, not a placeholder.",
+          "form": "Extracted workflow form parameters as a JSON object. Optional.",
+          "reason": "Reason for selecting this workflow and these parameters",
+          "text": "Extracted natural language input. Optional.",
+          "workflowid": "Workflow ID to execute. It must come from the workflow list authorized for this tool instance."
+        }
+      },
+      "mcpcalltool": {
+        "desc": {
+          "main": "Call a configured HTTP MCP tool.",
+          "withconfig": {
+            "prefix": "Call the configured HTTP MCP tool",
+            "separator": ": ",
+            "suffix": "."
+          }
+        },
+        "label": "MCP Tool Call",
+        "message": {
+          "confirm": "Confirm execution of MCP tool: {0}",
+          "confirmoption": "Confirm execution",
+          "executefailed": "MCP tool execution failed",
+          "integrationhandlernotfound": "MCP integration handler does not exist: {0}",
+          "integrationmappernotinit": "IntegrationMapper is not initialized",
+          "integrationnotfound": "MCP integration configuration does not exist: {0}",
+          "integrationnotmcp": "The integration configuration is not an MCP type: {0}",
+          "missingtoolname": "Missing MCP tool name"
+        }
+      },
+      "ragsearchtool": {
+        "desc": {
+          "followup": "If the hit result already provides objectId or key business identifiers in meta, use those fields to call detail tools for complete information instead of searching again.",
+          "main": "This tool performs semantic retrieval within the configured knowledge bases and returns the knowledge snippets most relevant to the user question.\nIt applies to product documentation Q&A, operation guide retrieval, rule knowledge lookup, and similar scenarios.\nIf the current question clearly depends on knowledge base content, call this tool before answering.\n\nReturned result structure:\n1. The returned object contains:\n- matches: hit result list\n- bestMatch: best hit result, with the same structure as an item in matches\n\n2. Each item in matches contains these common fields:\n- datasetId: knowledge base ID\n- datasetName: knowledge base name\n- handler: knowledge base handler name\n- chunkId: hit chunk ID\n- sourceId: source record ID\n- objectId: business object ID\n- objectType: business object type\n- name: business object name\n- content: matched text snippet\n- status: chunk status\n- score: match score\n- meta: knowledge base custom extension information",
+          "metafields": "3. Meta field descriptions for currently configured knowledge bases:"
+        },
+        "label": "Knowledge Base Search",
+        "message": {
+          "missingquery": "Missing query, unable to perform knowledge base search",
+          "nodataset": "No available knowledge base is configured for the current tool instance",
+          "nohit": "No relevant content was found in the knowledge base"
+        },
+        "param": {
+          "query": "User question or search query"
+        }
+      },
+      "readattachmentcontenttool": {
+        "desc": {
+          "main": "Call this tool when the user question requires reading Word, Excel, PDF, TXT, or Markdown content from attachments in the current context.\nOnly read fileId or fileIdList from the attachment list in the current context. Do not guess fileId.\nImage attachments are not read by this tool; image content is provided directly to the model as multimodal input.\nReturned content may be truncated. For Excel files, sheetName and maxRows can be provided to control the read range."
+        },
+        "label": "Read Attachment Content",
+        "message": {
+          "batchfailed": "No usable text content was parsed from the attachment: {0}",
+          "emptycontent": "Attachment content is empty or cannot be read",
+          "filenotfound": "Attachment does not exist or the file path is empty",
+          "filetypeunsupported": "Unsupported attachment type: {0}",
+          "imageunsupported": "Image attachments cannot be read through the text attachment tool. Answer directly based on the provided image content.",
+          "missingfileid": "Missing valid fileId or fileIdList, unable to read the attachment",
+          "nocontent": "No usable text content was parsed from the attachment",
+          "nocontentshort": "No usable text content was parsed",
+          "sessioncannotread": "The current session is not allowed to read this attachment",
+          "usercannotread": "The current user is not allowed to read this attachment"
+        },
+        "output": {
+          "contentlist": "Per-attachment read result list"
+        },
+        "param": {
+          "fileid": "File ID from the current context attachment list",
+          "fileidlist": "Array of file IDs from the current context attachment list, used for batch document reading",
+          "maxrows": "Maximum number of Excel rows to read. Only fill this for Excel attachments when needed.",
+          "query": "Question or focus to extract from the attachment. Optional.",
+          "sheetname": "Excel sheet name. Only fill this for Excel attachments when needed."
+        }
+      },
+      "sendemailtool": {
+        "desc": {
+          "main": "Only used for sending emails. Use this tool only when the user explicitly asks to send an email."
+        },
+        "label": "Send Email",
+        "message": {
+          "frompassword": "{0} email password",
+          "missingparams": "Missing {0}, unable to execute the current tool",
+          "noauth": "The current user does not have permission to execute this tool",
+          "nomailserver": "No active mail server is configured, unable to execute the current tool",
+          "paramseparator": ", "
+        },
+        "param": {
+          "body": "Email body",
+          "cc": "CC email address",
+          "from": "Sender email address. If this parameter is not provided, the platform default mailbox is used as the sender.",
+          "password": "Sender email password",
+          "subject": "Email subject",
+          "to": "Recipient email address"
+        }
+      },
+      "testprogresstool": {
+        "desc": {
+          "main": "Only used to test real-time progress returned during AI tool execution.\nUse this tool when the user explicitly asks to test tool progress, tool progress, or SSE process data.\nThe tool waits step by step, continuously outputs process data, and finally returns the test result."
+        },
+        "label": "Test Progress Tool",
+        "message": {
+          "defaulttopic": "Test AI tool process data",
+          "done": "Test progress tool execution completed",
+          "failed": "Test progress tool execution failed",
+          "interrupted": "Test progress tool was interrupted",
+          "missingcontext": "Missing AI chat session context, unable to test process callbacks",
+          "simulatefailed": "Simulated failure at step {0} as requested by parameters",
+          "stepprogressfailed": "Test tool simulated failure at step {0}",
+          "stepprogressrunning": "Test tool processing: {0}/{1}",
+          "summary": "Test progress tool execution {0}",
+          "summaryfailed": "failed",
+          "summarysucceed": "completed",
+          "timeout": "Test progress tool execution timed out"
+        },
+        "param": {
+          "failatstep": "Optional. Specify which step should simulate a failure. If omitted or less than 1, no failure is simulated.",
+          "intervalms": "Wait time in milliseconds for each step. Default 1000, maximum 3000.",
+          "stepcount": "Number of test steps. Default 5, maximum 20.",
+          "topic": "Test topic or description for this run"
+        }
+      }
+    },
     "common": {
       "param": {
         "desc": {
@@ -5878,7 +6131,7 @@
     "isneedpage": "Do you need pagination"
   },
   "page": {
-    "isclose": "Whether to close",
+    "isclose": "Whether To Close",
     "ismine": "Is it mine"
   },
   "term": {
@@ -5898,40 +6151,77 @@
       "aggregatealertlisthtml": "Aggregate alarm list HTML",
       "aggregatecount": "Aggregate alarm quantity",
       "alertcenter": "Alarm Center",
-      "createtimetext": "Creation time (text)",
+      "createtimetext": "Creation Time (Text)",
       "event": {
         "alertclosedesc": "When the alarm is closed, trigger this event",
-        "alertclosename": "Close the alarm",
+        "alertclosename": "Close Alarm",
         "alertdeletedesc": "When the alarm is deleted, this event is triggered",
-        "alertdeletename": "Delete alarm",
+        "alertdeletename": "Delete Alarm",
         "alertopendesc": "When the alarm is reopened, trigger this event",
-        "alertopenname": "Open the alarm",
+        "alertopenname": "Open Alarm",
         "alertsuppressdesc": "When the blocking strategy is successfully triggered, this event is triggered",
-        "alertsuppressname": "Block alarms",
+        "alertsuppressname": "Block Alarms",
+        "applyhandlerdesc": "Assign the alarm to handlers or teams. Handlers and users in assigned teams can update the alarm status, close the alarm, or delete the alarm.",
+        "applyhandlername": "Assign Handler",
+        "cancelintervalhandlerdesc": "Cancel scheduled jobs created by scheduled dispatch plugins in the current alarm type.",
+        "cancelintervalhandlername": "Cancel Scheduled Dispatch",
+        "closehandlerdesc": "Closed alarms cannot be modified, and new alarms will no longer be mounted under closed alarms.",
+        "closehandlername": "Close Alarm",
+        "conditionhandlerdesc": "Trigger other event plugins conditionally through configured condition groups, such as sending notifications or assigning handlers.",
+        "conditionhandlername": "Condition Branch",
         "convergedesc": "When saved as a convergence alarm (with parent alarm present), this event is triggered",
         "convergeindesc": "When a parent alarm has a child alarm added, this event is triggered",
-        "convergeinname": "Add sub alarm",
-        "convergename": "Convergence alarm",
+        "convergeinname": "Add Sub Alarm",
+        "convergename": "Convergence Alarm",
         "convergeoutdesc": "When a parent alarm has a child alarm removed or deleted, this event is triggered",
-        "convergeoutname": "Sub alarm removal",
+        "convergeoutname": "Sub Alarm Removal",
+        "deletehandlerdesc": "Physically delete alarm information. Deleted alarms cannot be restored. Use with caution.",
+        "deletehandlername": "Delete Alarm",
+        "emailhandlerdesc": "Send email through SMTP. Mail server information must be configured in System Administration, and recipient email addresses cannot be empty.",
+        "emailhandlername": "Send Mail",
+        "integrationhandlerdesc": "Call RESTful APIs of third-party systems.",
+        "integrationhandlername": "Call Integration",
+        "intervalhandlerdesc": "Configure time policies to delay or periodically call other event plugins, such as sending notifications or assigning handlers.",
+        "intervalhandlername": "Scheduled Dispatch",
         "inputdesc": "When the alarm is connected, this event is triggered after being converted by the conversion plugin. At this moment, it can be determined whether the alarm needs to be saved to the database",
-        "inputname": "Access alarm",
+        "inputname": "Access Alarm",
+        "listhandlerplugin": "List Alert Event Plugins",
+        "markhandlerdesc": "Add custom tags to the alarm. Existing tags remain unchanged.",
+        "markhandlername": "Add Tag",
+        "openhandlerdesc": "Reopen a closed alarm. If the alarm is already open, this event will not be triggered.",
+        "openhandlername": "Open Alarm",
+        "parentplugin": "Parent Plugin Unique Key",
         "savedesc": "When saving as a new alarm, trigger this event",
-        "savename": "Create an alarm",
+        "savename": "Create Alarm",
+        "savehandlerdesc": "Save the alarm to the database. If there is an unclosed alarm with the same Unique Key, it will be automatically mounted as a sub alarm.",
+        "savehandlername": "Create Alarm",
+        "unactionhandlerdesc": "Remove custom operations that are already associated with the alarm.",
+        "unactionhandlername": "Remove Custom Operation",
+        "unmarkhandlerdesc": "Remove selected tags.",
+        "unmarkhandlername": "Remove Tag",
+        "updatehandlerdesc": "Update the alarm status. If the alarm status does not change, this event will not be executed.",
+        "updatehandlername": "Update Status",
         "statuschangedesc": "When the alarm status changes, trigger this event",
-        "statuschangename": "Update alarm status"
+        "statuschangename": "Update Alarm Status",
+        "eventname": "Event Unique Key",
+        "actionhandlerdesc": "Add custom operations to the alarm.",
+        "actionhandlername": "Add Custom Operation"
       },
-      "extendattr": "extended attributes",
+      "alarmhealthstatus": "Alarm Health Status",
+      "category": "Category",
+      "closetime": "Close Time",
+      "closetimetext": "Close Time (Text)",
+      "extendattr": "Extended Attributes",
       "isclosename": "Do you want to close the name",
-      "issubalert": "Is it a sub alarm",
+      "issubalert": "Sub Alarm",
       "levelname": "Level Name",
       "simillaralertcount": "Number of similar alarms",
-      "updatetime": "Update time",
-      "updatetimetext": "Update time (text)",
+      "updatetime": "Update Time",
+      "updatetimetext": "Update Time (Text)",
       "workeraccount": "Processor account",
       "workeremail": "Processor\u0027s email",
       "workerphone": "Handler\u0027s phone",
-      "workerteam": "treatment group",
+      "workerteam": "Treatment Group",
       "workerteamaccountphone": "Handling group members\u0027 phone numbers",
       "workerteamemail": "Processing group email",
       "workerteamleaderphone": "Handling group calls\u0026leader calls",
@@ -6016,7 +6306,7 @@
       "abbrname": "for short",
       "accountidlist": "Account ID List",
       "addid": "ID, do not provide a representative to add",
-      "alertlevel": "level",
+      "alertlevel": "Level",
       "allowedit": "Allow editing",
       "append": "New addition",
       "appmoduleabbrname": "Application Module Abbreviation",
