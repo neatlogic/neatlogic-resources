@@ -164,7 +164,6 @@
     "homeurl": "Application server address",
     "icon": "icon",
     "id": "ID",
-    "ip": "IP",
     "importtargettype": "Import Target Type",
     "includelist": "Used to require echo parameters",
     "index": "subscript",
@@ -173,6 +172,7 @@
     "inputfrom": "Update method",
     "inputfromname": "Change method name",
     "int": "int",
+    "ip": "IP",
     "isactive": "Activate or not",
     "isactived": "Activated",
     "isactivepriority": "Whether to enable priority",
@@ -2412,6 +2412,17 @@
           }
         }
       },
+      "message": {
+        "analyzefailed": "Log analysis failed: {0}",
+        "datasetnotconfigured": "The log analysis assistant tool instance has no custom knowledge base configured.",
+        "missinganswer": "The model response is missing answer.",
+        "modelnotconfigured": "The log analysis assistant tool instance has no model configured.",
+        "modelunavailable": "The model configured for the log analysis assistant tool instance is unavailable.",
+        "noenabledtool": "No enabled log analysis assistant tool instance was found. Add and enable one in AI \u003e Tool Management.",
+        "questionrequired": "Enter the question to analyze.",
+        "selectedlogrequired": "Select the log content to analyze.",
+        "toolnotfound": "The log analysis assistant tool instance does not exist."
+      },
       "output": {
         "param": {
           "desc": {
@@ -2419,17 +2430,6 @@
             "output": "Analysis result"
           }
         }
-      },
-      "message": {
-        "analyzefailed": "Log analysis failed: {0}",
-        "datasetnotconfigured": "The log analysis assistant tool instance has no custom knowledge base configured.",
-        "missinganswer": "The model response is missing answer.",
-        "modelnotconfigured": "The log analysis assistant tool instance has no model configured.",
-        "modelunavailable": "The model configured for the log analysis assistant tool instance is unavailable.",
-        "noenabledtool": "No enabled log analysis assistant tool instance was found. Add and enable one in AI > Tool Management.",
-        "questionrequired": "Enter the question to analyze.",
-        "selectedlogrequired": "Select the log content to analyze.",
-        "toolnotfound": "The log analysis assistant tool instance does not exist."
       },
       "progress": {
         "callmodel": "Starting model analysis generation",
@@ -2473,7 +2473,7 @@
         }
       },
       "generateapi": {
-        "description": "Handle script Q&A, analysis, generation, and modification requests with the script AI assistant",
+        "description": "Handle script Q\u0026A, analysis, generation, and modification requests with the script AI assistant",
         "getname": "Handle Script Request With AI Assistant"
       },
       "input": {
@@ -2488,14 +2488,6 @@
           }
         }
       },
-      "output": {
-        "param": {
-          "desc": {
-            "message": "Message",
-            "output": "Generation result"
-          }
-        }
-      },
       "message": {
         "generatefailed": "Script generation failed: {0}",
         "missinganswer": "The model response is missing answer.",
@@ -2504,9 +2496,17 @@
         "modelbusy": "The model is busy. Try again later.",
         "modelnotconfigured": "The script writing tool instance has no model configured.",
         "modelunavailable": "The model configured for the script writing tool instance is unavailable.",
-        "noenabledtool": "No enabled script writing tool instance was found. Add and enable one in AI > Tool Management.",
+        "noenabledtool": "No enabled script writing tool instance was found. Add and enable one in AI \u003e Tool Management.",
         "requirementrequired": "Enter the current script requirement.",
         "toolnotfound": "The script writing tool instance does not exist."
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "Message",
+            "output": "Generation result"
+          }
+        }
       },
       "scripttype": {
         "auto": "Auto Detect",
@@ -2551,7 +2551,7 @@
         },
         "label": "Execute AI Workflow",
         "message": {
-          "attachmentunreadable": "The attachment does not belong to the current session or the current user has no permission to read it, fileId={0}. Available image attachments: {1}",
+          "attachmentunreadable": "The attachment does not belong to the current session or the current user has no permission to read it, fileId\u003d{0}. Available image attachments: {1}",
           "confirmworkflow": "Please confirm whether to execute the AI workflow: {0}",
           "failedinstruction": "Tell the user that the workflow did not complete successfully, explain why the current request cannot be completed based on the error, and do not present the failed result as successful.",
           "fileidinvalid": "fileList[{0}].id must be a real numeric ID from the current session attachment list, not a placeholder: {1}. Available image attachments: {2}",
@@ -2559,7 +2559,7 @@
           "missingcontext": "Missing AI chat session context, unable to execute the AI workflow",
           "missingworkflowid": "Missing workflowId, unable to execute the AI workflow",
           "multipleimageattachments": "Multiple image attachments exist. Please explicitly choose the attachment to pass into the workflow. Available image attachments: {0}",
-          "notimageattachment": "execute_ai_workflow.fileList only accepts image attachments from the current session. fileId={0} is not an available image attachment. Available image attachments: {1}",
+          "notimageattachment": "execute_ai_workflow.fileList only accepts image attachments from the current session. fileId\u003d{0} is not an available image attachment. Available image attachments: {1}",
           "succeedinstruction": "Summarize a concise conclusion for the user based on the final workflow output, and do not expand unrelated execution logs.",
           "tasknotfound": "Task not found",
           "timeout": "AI workflow execution timed out",
@@ -2599,7 +2599,7 @@
       "ragsearchtool": {
         "desc": {
           "followup": "If the hit result already provides objectId or key business identifiers in meta, use those fields to call detail tools for complete information instead of searching again.",
-          "main": "This tool performs semantic retrieval within the configured knowledge bases and returns the knowledge snippets most relevant to the user question.\nIt applies to product documentation Q&A, operation guide retrieval, rule knowledge lookup, and similar scenarios.\nIf the current question clearly depends on knowledge base content, call this tool before answering.\n\nReturned result structure:\n1. The returned object contains:\n- matches: hit result list\n- bestMatch: best hit result, with the same structure as an item in matches\n\n2. Each item in matches contains these common fields:\n- datasetId: knowledge base ID\n- datasetName: knowledge base name\n- handler: knowledge base handler name\n- chunkId: hit chunk ID\n- sourceId: source record ID\n- objectId: business object ID\n- objectType: business object type\n- name: business object name\n- content: matched text snippet\n- status: chunk status\n- score: match score\n- meta: knowledge base custom extension information",
+          "main": "This tool performs semantic retrieval within the configured knowledge bases and returns the knowledge snippets most relevant to the user question.\nIt applies to product documentation Q\u0026A, operation guide retrieval, rule knowledge lookup, and similar scenarios.\nIf the current question clearly depends on knowledge base content, call this tool before answering.\n\nReturned result structure:\n1. The returned object contains:\n- matches: hit result list\n- bestMatch: best hit result, with the same structure as an item in matches\n\n2. Each item in matches contains these common fields:\n- datasetId: knowledge base ID\n- datasetName: knowledge base name\n- handler: knowledge base handler name\n- chunkId: hit chunk ID\n- sourceId: source record ID\n- objectId: business object ID\n- objectType: business object type\n- name: business object name\n- content: matched text snippet\n- status: chunk status\n- score: match score\n- meta: knowledge base custom extension information",
           "metafields": "3. Meta field descriptions for currently configured knowledge bases:"
         },
         "label": "Knowledge Base Search",
@@ -6150,9 +6150,15 @@
       "aggregatealertitemlist": "Aggregate Alarm Detail List",
       "aggregatealertlisthtml": "Aggregate alarm list HTML",
       "aggregatecount": "Aggregate alarm quantity",
+      "alarmhealthstatus": "Alarm Health Status",
       "alertcenter": "Alarm Center",
+      "category": "Category",
+      "closetime": "Close Time",
+      "closetimetext": "Close Time (Text)",
       "createtimetext": "Creation Time (Text)",
       "event": {
+        "actionhandlerdesc": "Add custom operations to the alarm.",
+        "actionhandlername": "Add Custom Operation",
         "alertclosedesc": "When the alarm is closed, trigger this event",
         "alertclosename": "Close Alarm",
         "alertdeletedesc": "When the alarm is deleted, this event is triggered",
@@ -6179,12 +6185,13 @@
         "deletehandlername": "Delete Alarm",
         "emailhandlerdesc": "Send email through SMTP. Mail server information must be configured in System Administration, and recipient email addresses cannot be empty.",
         "emailhandlername": "Send Mail",
+        "eventname": "Event Unique Key",
+        "inputdesc": "When the alarm is connected, this event is triggered after being converted by the conversion plugin. At this moment, it can be determined whether the alarm needs to be saved to the database",
+        "inputname": "Access Alarm",
         "integrationhandlerdesc": "Call RESTful APIs of third-party systems.",
         "integrationhandlername": "Call Integration",
         "intervalhandlerdesc": "Configure time policies to delay or periodically call other event plugins, such as sending notifications or assigning handlers.",
         "intervalhandlername": "Scheduled Dispatch",
-        "inputdesc": "When the alarm is connected, this event is triggered after being converted by the conversion plugin. At this moment, it can be determined whether the alarm needs to be saved to the database",
-        "inputname": "Access Alarm",
         "listhandlerplugin": "List Alert Event Plugins",
         "markhandlerdesc": "Add custom tags to the alarm. Existing tags remain unchanged.",
         "markhandlername": "Add Tag",
@@ -6192,25 +6199,18 @@
         "openhandlername": "Open Alarm",
         "parentplugin": "Parent Plugin Unique Key",
         "savedesc": "When saving as a new alarm, trigger this event",
-        "savename": "Create Alarm",
         "savehandlerdesc": "Save the alarm to the database. If there is an unclosed alarm with the same Unique Key, it will be automatically mounted as a sub alarm.",
         "savehandlername": "Create Alarm",
+        "savename": "Create Alarm",
+        "statuschangedesc": "When the alarm status changes, trigger this event",
+        "statuschangename": "Update Alarm Status",
         "unactionhandlerdesc": "Remove custom operations that are already associated with the alarm.",
         "unactionhandlername": "Remove Custom Operation",
         "unmarkhandlerdesc": "Remove selected tags.",
         "unmarkhandlername": "Remove Tag",
         "updatehandlerdesc": "Update the alarm status. If the alarm status does not change, this event will not be executed.",
-        "updatehandlername": "Update Status",
-        "statuschangedesc": "When the alarm status changes, trigger this event",
-        "statuschangename": "Update Alarm Status",
-        "eventname": "Event Unique Key",
-        "actionhandlerdesc": "Add custom operations to the alarm.",
-        "actionhandlername": "Add Custom Operation"
+        "updatehandlername": "Update Status"
       },
-      "alarmhealthstatus": "Alarm Health Status",
-      "category": "Category",
-      "closetime": "Close Time",
-      "closetimetext": "Close Time (Text)",
       "extendattr": "Extended Attributes",
       "isclosename": "Do you want to close the name",
       "issubalert": "Sub Alarm",
@@ -6491,7 +6491,7 @@
       "ispublic": "Public ownership or not",
       "issnapshot": "Is it a snapshot",
       "isstarttemplate": "Start template or not",
-      "name": "Architecture diagram",
+      "name": "Architecture Diagram",
       "needcheck": "Do you need to review",
       "owner": "Owner",
       "parentid": "Parent node ID",
@@ -6545,6 +6545,9 @@
       "eventtypeid": "Saved Event Type ID",
       "eventtypelist": "Associated event types",
       "name": "Event"
+    },
+    "fileservice": {
+      "name": "File Service"
     },
     "framework": {
       "agentid": "Enterprise Application ID",
@@ -6792,7 +6795,7 @@
     },
     "resourcepool": {
       "groupdesc": "Resource Pool Management Module",
-      "groupname": "Resource pool",
+      "groupname": "Resource Pool",
       "name": "Resource Pool Management"
     },
     "tagent": {

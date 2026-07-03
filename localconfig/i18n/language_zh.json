@@ -164,7 +164,6 @@
     "homeurl": "应用服务器地址",
     "icon": "图标",
     "id": "id",
-    "ip": "ip",
     "importtargettype": "导入目标类型",
     "includelist": "用于需要回显参数",
     "index": "下标",
@@ -173,6 +172,7 @@
     "inputfrom": "更新方式",
     "inputfromname": "变更方式名称",
     "int": "整形",
+    "ip": "ip",
     "isactive": "是否激活",
     "isactived": "已激活",
     "isactivepriority": "是否启用优先级",
@@ -2442,6 +2442,17 @@
           }
         }
       },
+      "message": {
+        "analyzefailed": "日志分析失败：{0}",
+        "datasetnotconfigured": "日志分析助手工具实例未配置自定义知识库。",
+        "missinganswer": "模型返回内容缺少 answer。",
+        "modelnotconfigured": "日志分析助手工具实例未配置模型。",
+        "modelunavailable": "日志分析助手工具实例配置的模型不可用。",
+        "noenabledtool": "未找到已启用的日志分析助手工具实例，请在 AI \u003e 工具管理 中新增并启用日志分析助手工具实例。",
+        "questionrequired": "请输入需要分析的问题。",
+        "selectedlogrequired": "请选择需要分析的日志内容。",
+        "toolnotfound": "日志分析助手工具实例不存在。"
+      },
       "output": {
         "param": {
           "desc": {
@@ -2449,17 +2460,6 @@
             "output": "分析结果"
           }
         }
-      },
-      "message": {
-        "analyzefailed": "日志分析失败：{0}",
-        "datasetnotconfigured": "日志分析助手工具实例未配置自定义知识库。",
-        "missinganswer": "模型返回内容缺少 answer。",
-        "modelnotconfigured": "日志分析助手工具实例未配置模型。",
-        "modelunavailable": "日志分析助手工具实例配置的模型不可用。",
-        "noenabledtool": "未找到已启用的日志分析助手工具实例，请在 AI > 工具管理 中新增并启用日志分析助手工具实例。",
-        "questionrequired": "请输入需要分析的问题。",
-        "selectedlogrequired": "请选择需要分析的日志内容。",
-        "toolnotfound": "日志分析助手工具实例不存在。"
       },
       "progress": {
         "callmodel": "开始调用模型生成分析结果",
@@ -2518,14 +2518,6 @@
           }
         }
       },
-      "output": {
-        "param": {
-          "desc": {
-            "message": "提示信息",
-            "output": "生成结果"
-          }
-        }
-      },
       "message": {
         "generatefailed": "编写脚本生成失败：{0}",
         "missinganswer": "模型返回内容缺少 answer。",
@@ -2534,9 +2526,17 @@
         "modelbusy": "模型繁忙，请稍后重试。",
         "modelnotconfigured": "编写脚本工具实例未配置模型。",
         "modelunavailable": "编写脚本工具实例配置的模型不可用。",
-        "noenabledtool": "未找到已启用的编写脚本工具实例，请在 AI > 工具管理 中新增并启用编写脚本工具实例。",
+        "noenabledtool": "未找到已启用的编写脚本工具实例，请在 AI \u003e 工具管理 中新增并启用编写脚本工具实例。",
         "requirementrequired": "请输入本轮脚本需求。",
         "toolnotfound": "编写脚本工具实例不存在。"
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "提示信息",
+            "output": "生成结果"
+          }
+        }
       },
       "scripttype": {
         "auto": "自动识别",
@@ -2581,7 +2581,7 @@
         },
         "label": "执行AI工作流",
         "message": {
-          "attachmentunreadable": "附件不属于当前会话或当前用户无权读取，fileId={0}。可用图片附件：{1}",
+          "attachmentunreadable": "附件不属于当前会话或当前用户无权读取，fileId\u003d{0}。可用图片附件：{1}",
           "confirmworkflow": "请确认是否执行AI工作流：{0}",
           "failedinstruction": "请告知用户工作流未成功，并结合错误原因说明当前无法完成，不要把失败结果表述为成功。",
           "fileidinvalid": "fileList[{0}].id 必须是当前会话附件清单中的真实数字id，不能使用占位文本：{1}。可用图片附件：{2}",
@@ -2589,7 +2589,7 @@
           "missingcontext": "缺少AI聊天会话上下文，无法执行AI工作流",
           "missingworkflowid": "缺少 workflowId，无法执行AI工作流",
           "multipleimageattachments": "存在多个图片附件，请明确选择要传入工作流的附件。可用图片附件：{0}",
-          "notimageattachment": "execute_ai_workflow.fileList 只接受当前会话图片附件，fileId={0} 不是可用图片附件。可用图片附件：{1}",
+          "notimageattachment": "execute_ai_workflow.fileList 只接受当前会话图片附件，fileId\u003d{0} 不是可用图片附件。可用图片附件：{1}",
           "succeedinstruction": "请根据工作流最终输出整理给用户一个简洁结论，不要展开无关的执行日志。",
           "tasknotfound": "任务不存在",
           "timeout": "AI工作流执行超时",
@@ -6204,9 +6204,15 @@
       "aggregatealertitemlist": "聚合告警明细列表",
       "aggregatealertlisthtml": "聚合告警列表HTML",
       "aggregatecount": "聚合告警数量",
+      "alarmhealthstatus": "告警健康状态",
       "alertcenter": "告警中心",
+      "category": "分类",
+      "closetime": "关闭时间",
+      "closetimetext": "关闭时间文本",
       "createtimetext": "创建时间（文本）",
       "event": {
+        "actionhandlerdesc": "为告警添加自定义操作。",
+        "actionhandlername": "添加自定义操作",
         "alertclosedesc": "告警关闭时，触发此事件",
         "alertclosename": "关闭告警",
         "alertdeletedesc": "告警删除时，触发此事件",
@@ -6233,12 +6239,13 @@
         "deletehandlername": "删除告警",
         "emailhandlerdesc": "用 SMTP 方式发送邮件，需要到系统管理中配置邮件服务器信息，收件用户邮箱地址不能为空。",
         "emailhandlername": "发送邮件",
+        "eventname": "事件唯一标识",
+        "inputdesc": "告警接入时，经过转换插件转换后触发此事件，这个时刻可以决定告警是否需要保存到数据库",
+        "inputname": "接入告警",
         "integrationhandlerdesc": "用于调用第三方系统的 RESTful 接口。",
         "integrationhandlername": "调用集成",
         "intervalhandlerdesc": "配置时间策略，延缓或周期性地调用其他事件插件，例如发通知、分配处理人等。",
         "intervalhandlername": "定时调度",
-        "inputdesc": "告警接入时，经过转换插件转换后触发此事件，这个时刻可以决定告警是否需要保存到数据库",
-        "inputname": "接入告警",
         "listhandlerplugin": "列出所有告警事件插件",
         "markhandlerdesc": "给告警打上自定义标签，如果标签已存在则保持不变。",
         "markhandlername": "添加标签",
@@ -6246,25 +6253,18 @@
         "openhandlername": "打开告警",
         "parentplugin": "父插件唯一标识",
         "savedesc": "以新告警的方式保存时，触发此事件",
-        "savename": "创建告警",
         "savehandlerdesc": "保存告警到数据库，如果有唯一键相同的未关闭告警，将自动挂靠作为其子告警。",
         "savehandlername": "创建告警",
+        "savename": "创建告警",
+        "statuschangedesc": "告警状态发生变化时，触发此事件",
+        "statuschangename": "更新告警状态",
         "unactionhandlerdesc": "删除告警已经关联的自定义操作。",
         "unactionhandlername": "删除自定义操作",
         "unmarkhandlerdesc": "移除选中的标签。",
         "unmarkhandlername": "移除标签",
         "updatehandlerdesc": "修改告警状态，如果告警状态没有变化，不会执行此事件。",
-        "updatehandlername": "修改状态",
-        "statuschangedesc": "告警状态发生变化时，触发此事件",
-        "statuschangename": "更新告警状态",
-        "eventname": "事件唯一标识",
-        "actionhandlerdesc": "为告警添加自定义操作。",
-        "actionhandlername": "添加自定义操作"
+        "updatehandlername": "修改状态"
       },
-      "alarmhealthstatus": "告警健康状态",
-      "category": "分类",
-      "closetime": "关闭时间",
-      "closetimetext": "关闭时间文本",
       "extendattr": "扩展属性",
       "isclosename": "是否关闭名称",
       "issubalert": "是否子告警",
@@ -6599,6 +6599,9 @@
       "eventtypeid": "保存的事件类型ID",
       "eventtypelist": "关联的事件类型",
       "name": "事件模块"
+    },
+    "fileservice": {
+      "name": "文件服务管理"
     },
     "framework": {
       "agentid": "企业应用ID",
