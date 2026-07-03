@@ -2378,11 +2378,96 @@
       "loadconfig": {
         "autoexectoken": "✖ Please define the autoexec.token parameter in the configuration file"
       }
+    },
+    "autoexecjoblogaiassistant": {
+      "analyzeapi": {
+        "description": "Analyze selected automation job logs with context and bound knowledge bases",
+        "getname": "Analyze automation job logs with AI assistant"
+      },
+      "configapi": {
+        "getname": "Get automation log analysis assistant configuration",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "Number of enabled tool instances",
+              "enabledtoollist": "Enabled tool instance list",
+              "isaiavailable": "Whether AI is available",
+              "isconfigcomplete": "Whether model and knowledge base configuration is complete",
+              "isdatasetconfigured": "Whether a knowledge base is configured",
+              "ismodelconfigured": "Whether a model is configured",
+              "toolname": "Tool handler name"
+            }
+          }
+        }
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "Earlier conversation summary",
+            "logcontext": "Log context",
+            "messagelist": "Recent conversation history",
+            "question": "Current user input",
+            "selectedlog": "Selected log snippet"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "Message",
+            "output": "Analysis result"
+          }
+        }
+      },
+      "streamapi": {
+        "description": "Return automation log analysis progress and final result through SSE",
+        "getname": "Stream automation job log analysis with AI assistant"
+      },
+      "tool": {
+        "description": "Analyze failure causes, evidence, and handling suggestions from the selected automation job logs, job context, and administrator-bound custom knowledge bases.",
+        "label": "Automation log analysis assistant"
+      }
     }
   },
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "Custom Tool Version"
+    }
+  },
+  "nmai": {
+    "common": {
+      "param": {
+        "desc": {
+          "datasetid": "Dataset ID"
+        }
+      }
+    },
+    "getdocumentonlinetreeforselectapi": {
+      "getname": "Get online document RAG selection tree",
+      "output": {
+        "param": {
+          "desc": {
+            "children": "Child nodes",
+            "text": "Node name",
+            "value": "Node value"
+          }
+        }
+      }
+    },
+    "searchragdatasetapi": {
+      "getname": "Search LLM knowledge bases"
+    },
+    "testragrecallapi": {
+      "getname": "Test RAG recall results",
+      "input": {
+        "param": {
+          "desc": {
+            "minscore": "Match score threshold",
+            "question": "Test question",
+            "size": "Number of returned records"
+          }
+        }
+      }
     }
   },
   "nmajsa": {

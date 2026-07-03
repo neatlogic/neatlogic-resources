@@ -2408,11 +2408,96 @@
       "loadconfig": {
         "autoexectoken": "✖请在配置文件中定义autoexec.token参数。如果autoexec-backend的config.ini中的server.username是autoexec，则server.password必须也和autoexec.token的值一致"
       }
+    },
+    "autoexecjoblogaiassistant": {
+      "analyzeapi": {
+        "description": "自动化日志分析助手根据选中日志、上下文和绑定知识库生成分析结果",
+        "getname": "自动化日志分析助手分析日志"
+      },
+      "configapi": {
+        "getname": "获取自动化日志分析助手配置",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "已启用工具实例数量",
+              "enabledtoollist": "已启用工具实例列表",
+              "isaiavailable": "AI是否可用",
+              "isconfigcomplete": "模型和知识库配置是否完整",
+              "isdatasetconfigured": "是否已配置知识库",
+              "ismodelconfigured": "是否已配置模型",
+              "toolname": "工具处理器名称"
+            }
+          }
+        }
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "较早对话摘要",
+            "logcontext": "日志上下文",
+            "messagelist": "最近几轮对话历史",
+            "question": "本轮用户输入",
+            "selectedlog": "选中的日志片段"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "提示信息",
+            "output": "分析结果"
+          }
+        }
+      },
+      "streamapi": {
+        "description": "自动化日志分析助手通过SSE返回分析过程和最终结果",
+        "getname": "自动化日志分析助手流式分析日志"
+      },
+      "tool": {
+        "description": "根据用户选中的自动化作业日志、作业上下文和管理员绑定的自定义知识库，分析失败原因、证据和处理建议。",
+        "label": "自动化日志分析助手"
+      }
     }
   },
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "自定义工具版本"
+    }
+  },
+  "nmai": {
+    "common": {
+      "param": {
+        "desc": {
+          "datasetid": "数据集id"
+        }
+      }
+    },
+    "getdocumentonlinetreeforselectapi": {
+      "getname": "获取在线文档RAG选择树",
+      "output": {
+        "param": {
+          "desc": {
+            "children": "子节点",
+            "text": "节点名称",
+            "value": "节点值"
+          }
+        }
+      }
+    },
+    "searchragdatasetapi": {
+      "getname": "搜索大模型知识库"
+    },
+    "testragrecallapi": {
+      "getname": "测试RAG召回结果",
+      "input": {
+        "param": {
+          "desc": {
+            "minscore": "匹配度阈值",
+            "question": "测试问题",
+            "size": "返回条数"
+          }
+        }
+      }
     }
   },
   "nmajsa": {
