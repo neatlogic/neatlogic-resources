@@ -737,7 +737,8 @@
       "minimumfirefoxbrowserversion": "Firefox browser minimum version, below this setting version will redirect to browser version incompatible page, default 0",
       "mobilefiledownloadenabled": "Do you allow mobile devices to download attachments",
       "passwordexpiredays": "User password validity period (days), if it exceeds the validity period, it will be forcibly redirected to the password change page",
-      "passwordneedexpiredcheck": "Do you need to verify the validity period of the user password? It defaults to 0 and does not need to be checked"
+      "passwordneedexpiredcheck": "Do you need to verify the validity period of the user password? It defaults to 0 and does not need to be checked",
+      "tenantdefaultlanguage": "Tenant default language. Supported values: zh/en"
     }
   },
   "nfcal": {
@@ -6218,6 +6219,7 @@
       "closetimetext": "Close Time (Text)",
       "createtimetext": "Creation Time (Text)",
       "api": {
+        "deletealerteventhandlertype": "Delete Alert Event Handler Type",
         "deletealertsuppressions": "Delete Alert Suppression Policy",
         "deletealertsubscribe": "Delete Alert Subscription",
         "deletealerttopo": "Delete Alert Topology",
@@ -6229,10 +6231,12 @@
         "listalerttopo": "List Alert Topologies",
         "listalerttopowidget": "List Topology Elements",
         "runalertai": "Invoke AI",
+        "savealerteventhandlertype": "Save Alert Event Handler Type",
         "savealertsuppressions": "Save Alert Suppression Policy",
         "savealertsubscribe": "Save Alert Subscription",
         "savealerttopo": "Save Alert Topology",
         "savealerttopowidget": "Save Topology Element",
+        "searchalerteventhandlertype": "Search Alert Event Handler Types",
         "searchalertsuppressions": "Search Alert Suppression Policies",
         "searchalertsuppressionaudit": "Search Alert Suppression Records",
         "searchalertsubscribe": "Search Alert Subscriptions",

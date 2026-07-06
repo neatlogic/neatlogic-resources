@@ -738,7 +738,8 @@
       "minimumfirefoxbrowserversion": "firefox浏览器最低版本，低于该设置版本会跳转至浏览器版本不兼容页面，默认0",
       "mobilefiledownloadenabled": "是否允许移动端下载附件",
       "passwordexpiredays": "用户密码有效期(天)，超过有效期则强制跳转改密码页面",
-      "passwordneedexpiredcheck": "是否需要检验用户密码有效期，默认为0，不需要检查"
+      "passwordneedexpiredcheck": "是否需要检验用户密码有效期，默认为0，不需要检查",
+      "tenantdefaultlanguage": "租户默认语言，支持 zh/en"
     }
   },
   "nfcal": {
@@ -6272,6 +6273,7 @@
       "closetimetext": "关闭时间文本",
       "createtimetext": "创建时间（文本）",
       "api": {
+        "deletealerteventhandlertype": "删除告警事件插件类型",
         "deletealertsuppressions": "删除告警屏蔽策略",
         "deletealertsubscribe": "删除告警订阅",
         "deletealerttopo": "删除告警拓扑",
@@ -6283,10 +6285,12 @@
         "listalerttopo": "列出所有告警拓扑",
         "listalerttopowidget": "列出所有拓扑图元",
         "runalertai": "调用AI",
+        "savealerteventhandlertype": "保存告警事件插件类型",
         "savealertsuppressions": "保存告警屏蔽策略",
         "savealertsubscribe": "保存告警订阅",
         "savealerttopo": "保存告警拓扑",
         "savealerttopowidget": "保存拓扑图元",
+        "searchalerteventhandlertype": "搜索告警事件插件类型",
         "searchalertsuppressions": "搜索告警屏蔽策略",
         "searchalertsuppressionaudit": "搜索告警屏蔽记录",
         "searchalertsubscribe": "搜索告警订阅",
