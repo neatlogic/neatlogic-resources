@@ -2519,6 +2519,68 @@
         }
       }
     },
+    "autoexectoolrecommendaiassistant": {
+      "configapi": {
+        "getname": "Get Automation Tool Recommendation Assistant Configuration",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "Number of enabled tool instances",
+              "enabledtoollist": "Enabled tool instance list",
+              "isaiavailable": "Whether AI is available",
+              "isconfigcomplete": "Whether model and knowledge base configuration is complete",
+              "isdatasetconfigured": "Whether a knowledge base is configured",
+              "ismodelconfigured": "Whether a model is configured",
+              "toolname": "Tool handler name"
+            }
+          }
+        }
+      },
+      "recommendapi": {
+        "description": "Recommend tool library tools from the current phase context and authorized candidate pool",
+        "getname": "Recommend Automation Tools With AI Assistant"
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "Earlier conversation summary",
+            "messagelist": "Recent conversation history",
+            "recommendcontext": "Current add-tool context",
+            "requirement": "Current user requirement for tool recommendation"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "The tool recommendation assistant tool instance has no knowledge base configured.",
+        "missinganswer": "The model response is missing answer.",
+        "modelnotconfigured": "The tool recommendation assistant tool instance has no model configured.",
+        "modelunavailable": "The model configured for the tool recommendation assistant tool instance is unavailable.",
+        "nocandidate": "No tool library tools can be recommended under the current filters. Adjust execution mode, category, risk level, or keyword and try again.",
+        "noenabledtool": "No enabled tool recommendation assistant tool instance was found. Add and enable one in AI > Tool Management.",
+        "recommendcontextrequired": "Current add-tool context is missing.",
+        "recommendfailed": "Tool recommendation failed: {0}",
+        "requirementrequired": "Enter the requirement for tool recommendation.",
+        "toolnotfound": "The tool recommendation assistant tool instance does not exist."
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "Message",
+            "output": "Recommendation result"
+          }
+        }
+      },
+      "tool": {
+        "description": "Recommend tool library tools suitable for the current phase from the add-tool context, execution mode, filters, authorized tool library candidate pool, and administrator-bound knowledge bases; does not recommend custom tools, save, or execute.",
+        "label": "Tool Recommendation Assistant",
+        "param": {
+          "conversationsummary": "Earlier conversation summary",
+          "messagelist": "Recent conversation history as a JSON string",
+          "recommendcontext": "Current add-tool context as a JSON string, including execution mode, phase, upstream outputs, filters, and excluded tool IDs",
+          "requirement": "Current user requirement for tool recommendation"
+        }
+      }
+    },
     "autoexecscriptaiassistant": {
       "configapi": {
         "getname": "Get Script Writing Configuration",

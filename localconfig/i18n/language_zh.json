@@ -2549,6 +2549,68 @@
         }
       }
     },
+    "autoexectoolrecommendaiassistant": {
+      "configapi": {
+        "getname": "获取自动化工具库推荐助手配置",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "已启用工具实例数量",
+              "enabledtoollist": "已启用工具实例列表",
+              "isaiavailable": "AI是否可用",
+              "isconfigcomplete": "模型和知识库配置是否完整",
+              "isdatasetconfigured": "是否已配置知识库",
+              "ismodelconfigured": "是否已配置模型",
+              "toolname": "工具处理器名称"
+            }
+          }
+        }
+      },
+      "recommendapi": {
+        "description": "自动化工具库推荐助手根据当前阶段上下文和授权候选池推荐工具库工具",
+        "getname": "自动化工具库推荐助手推荐工具"
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "较早对话摘要",
+            "messagelist": "最近几轮对话历史",
+            "recommendcontext": "当前新增工具上下文",
+            "requirement": "本轮用户输入的工具推荐需求"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "工具库推荐助手工具实例未配置知识库。",
+        "missinganswer": "模型返回内容缺少 answer。",
+        "modelnotconfigured": "工具库推荐助手工具实例未配置模型。",
+        "modelunavailable": "工具库推荐助手工具实例配置的模型不可用。",
+        "nocandidate": "当前筛选条件下没有可推荐的工具库工具，请调整执行方式、分类、操作级别或关键词后重试。",
+        "noenabledtool": "未找到已启用的工具库推荐助手工具实例，请在 AI > 工具管理 中新增并启用工具库推荐助手工具实例。",
+        "recommendcontextrequired": "缺少当前新增工具上下文。",
+        "recommendfailed": "工具库推荐失败：{0}",
+        "requirementrequired": "请输入需要推荐工具的需求。",
+        "toolnotfound": "工具库推荐助手工具实例不存在。"
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "提示信息",
+            "output": "推荐结果"
+          }
+        }
+      },
+      "tool": {
+        "description": "根据组合工具新增工具页的阶段上下文、执行方式、筛选条件、授权工具库候选池和管理员绑定知识库，推荐适合加入当前阶段的工具库工具；不推荐自定义工具，不保存、不执行。",
+        "label": "工具库推荐助手",
+        "param": {
+          "conversationsummary": "较早对话摘要",
+          "messagelist": "最近几轮对话历史JSON字符串",
+          "recommendcontext": "当前新增工具上下文JSON字符串，包含执行方式、阶段、上游输出、筛选条件和排除工具ID",
+          "requirement": "本轮用户输入的工具推荐需求"
+        }
+      }
+    },
     "autoexecscriptaiassistant": {
       "configapi": {
         "getname": "获取编写脚本配置",
