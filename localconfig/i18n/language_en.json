@@ -2457,6 +2457,67 @@
         }
       }
     },
+    "autoexectoolusageaiassistant": {
+      "configapi": {
+        "getname": "Get Automation Tool Usage Assistant Configuration",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "Number of enabled tool instances",
+              "enabledtoollist": "Enabled tool instance list",
+              "isaiavailable": "Whether AI is available",
+              "isconfigcomplete": "Whether model and knowledge base configuration is complete",
+              "isdatasetconfigured": "Whether a knowledge base is configured",
+              "ismodelconfigured": "Whether a model is configured",
+              "toolname": "Tool handler name"
+            }
+          }
+        }
+      },
+      "explainapi": {
+        "description": "Explain a single tool library tool from the current tool context and bound knowledge bases",
+        "getname": "Explain Automation Tool Usage With AI Assistant"
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "Earlier conversation summary",
+            "messagelist": "Recent conversation history",
+            "question": "Current user input",
+            "toolcontext": "Current tool context"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "The tool usage assistant tool instance has no knowledge base configured.",
+        "explainfailed": "Tool usage explanation failed: {0}",
+        "missinganswer": "The model response is missing answer.",
+        "modelnotconfigured": "The tool usage assistant tool instance has no model configured.",
+        "modelunavailable": "The model configured for the tool usage assistant tool instance is unavailable.",
+        "noenabledtool": "No enabled tool usage assistant tool instance was found. Add and enable one in AI > Tool Management.",
+        "questionrequired": "Enter the question to explain.",
+        "toolcontextrequired": "Current tool context is missing.",
+        "toolnotfound": "The tool usage assistant tool instance does not exist."
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "Message",
+            "output": "Explanation result"
+          }
+        }
+      },
+      "tool": {
+        "description": "Explain the purpose, parameter mappings, risks, and configuration suggestions for the current single built-in tool library tool in the combination tool editor, based on context and administrator-bound knowledge bases; does not evaluate the whole combination tool, save, or execute.",
+        "label": "Tool Usage Assistant",
+        "param": {
+          "conversationsummary": "Earlier conversation summary",
+          "messagelist": "Recent conversation history as a JSON string",
+          "question": "Current user question about the selected tool",
+          "toolcontext": "Current tool context as a JSON string, including tool name, parameters, mappings, failure policy, and phase information"
+        }
+      }
+    },
     "autoexecscriptaiassistant": {
       "configapi": {
         "getname": "Get Script Writing Configuration",
@@ -6156,6 +6217,33 @@
       "closetime": "Close Time",
       "closetimetext": "Close Time (Text)",
       "createtimetext": "Creation Time (Text)",
+      "api": {
+        "deletealertsuppressions": "Delete Alert Suppression Policy",
+        "deletealertsubscribe": "Delete Alert Subscription",
+        "deletealerttopo": "Delete Alert Topology",
+        "getalertsuppressions": "Get Alert Suppression Policy",
+        "getalertsubscribe": "Get Alert Subscription",
+        "getalerttopo": "Get Alert Topology",
+        "getalerttopowidget": "Get Topology Element",
+        "listalertsubscribehandler": "List Alert Subscription Handlers",
+        "listalerttopo": "List Alert Topologies",
+        "listalerttopowidget": "List Topology Elements",
+        "runalertai": "Invoke AI",
+        "savealertsuppressions": "Save Alert Suppression Policy",
+        "savealertsubscribe": "Save Alert Subscription",
+        "savealerttopo": "Save Alert Topology",
+        "savealerttopowidget": "Save Topology Element",
+        "searchalertsuppressions": "Search Alert Suppression Policies",
+        "searchalertsuppressionaudit": "Search Alert Suppression Records",
+        "searchalertsubscribe": "Search Alert Subscriptions",
+        "searchalertsubscribeaudit": "Search Alert Subscription Audit",
+        "searchalertsubscribetriggeraudit": "Search Alert Subscription Trigger Records",
+        "searchalerttopo": "Search Alert Topologies",
+        "searchalerttopowidget": "Search Topology Elements",
+        "searchsimilaralert": "Search Similar Alerts",
+        "togglealertsubscribeactive": "Toggle Alert Subscription Activation",
+        "togglealertsuppressionactive": "Toggle Alert Suppression Activation"
+      },
       "event": {
         "actionhandlerdesc": "Add custom operations to the alarm.",
         "actionhandlername": "Add Custom Operation",
@@ -6202,14 +6290,50 @@
         "savehandlerdesc": "Save the alarm to the database. If there is an unclosed alarm with the same Unique Key, it will be automatically mounted as a sub alarm.",
         "savehandlername": "Create Alarm",
         "savename": "Create Alarm",
+        "scripthandlerdesc": "Modify alert data through scripts.",
+        "scripthandlername": "Modify Alert Data",
+        "similarhandlerdesc": "Analyze alert content similarity, record similar high-frequency alerts, and add prompt tags.",
+        "similarhandlername": "Similar Analysis",
         "statuschangedesc": "When the alarm status changes, trigger this event",
         "statuschangename": "Update Alarm Status",
+        "subscribehandlerdesc": "Trigger all configured subscriptions.",
+        "subscribehandlername": "Trigger Subscription",
         "unactionhandlerdesc": "Remove custom operations that are already associated with the alarm.",
         "unactionhandlername": "Remove Custom Operation",
         "unmarkhandlerdesc": "Remove selected tags.",
         "unmarkhandlername": "Remove Tag",
         "updatehandlerdesc": "Update the alarm status. If the alarm status does not change, this event will not be executed.",
-        "updatehandlername": "Update Status"
+        "updatehandlername": "Update Status",
+        "vectorhandlerdesc": "Vectorize alert content and save it to vector data for subsequent similarity queries.",
+        "vectorhandlername": "Alert Semantic Vectorization"
+      },
+      "param": {
+        "actionhandler": "Action Handler",
+        "actionlist": "Action List",
+        "actiontypeid": "Action Type ID",
+        "agenttype": "Agent Type",
+        "alerteventauditid": "Alert Event Audit ID",
+        "alertid": "Alert ID",
+        "alertsubscribeid": "Alert Subscription ID",
+        "alertsuppressionid": "Alert Suppression Policy ID",
+        "condition": "Condition",
+        "content": "Content",
+        "event": "Event",
+        "eventhandler": "Event Handler",
+        "eventhandlertypeidlist": "Event Handler Type ID List",
+        "name": "Name",
+        "starttimerange": "Start Time Range",
+        "subscribeid": "Subscription ID",
+        "suppressionid": "Suppression Policy ID",
+        "suppressiontimerange": "Suppression Time Range",
+        "text": "Name",
+        "timelist": "Time List",
+        "uniquekey": "Unique Key",
+        "value": "Value"
+      },
+      "subscribe": {
+        "emailhandlername": "Send Mail",
+        "integrationhandlername": "Call Integration"
       },
       "extendattr": "Extended Attributes",
       "isclosename": "Do you want to close the name",

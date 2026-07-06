@@ -2487,6 +2487,67 @@
         }
       }
     },
+    "autoexectoolusageaiassistant": {
+      "configapi": {
+        "getname": "获取自动化工具使用解释助手配置",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "已启用工具实例数量",
+              "enabledtoollist": "已启用工具实例列表",
+              "isaiavailable": "AI是否可用",
+              "isconfigcomplete": "模型和知识库配置是否完整",
+              "isdatasetconfigured": "是否已配置知识库",
+              "ismodelconfigured": "是否已配置模型",
+              "toolname": "工具处理器名称"
+            }
+          }
+        }
+      },
+      "explainapi": {
+        "description": "自动化工具使用解释助手根据当前工具上下文和绑定知识库解释单个工具库工具",
+        "getname": "自动化工具使用解释助手解释工具"
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "较早对话摘要",
+            "messagelist": "最近几轮对话历史",
+            "question": "本轮用户输入",
+            "toolcontext": "当前工具上下文"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "工具使用解释助手工具实例未配置知识库。",
+        "explainfailed": "工具使用解释失败：{0}",
+        "missinganswer": "模型返回内容缺少 answer。",
+        "modelnotconfigured": "工具使用解释助手工具实例未配置模型。",
+        "modelunavailable": "工具使用解释助手工具实例配置的模型不可用。",
+        "noenabledtool": "未找到已启用的工具使用解释助手工具实例，请在 AI > 工具管理 中新增并启用工具使用解释助手工具实例。",
+        "questionrequired": "请输入需要解释的问题。",
+        "toolcontextrequired": "缺少当前工具上下文。",
+        "toolnotfound": "工具使用解释助手工具实例不存在。"
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "提示信息",
+            "output": "解释结果"
+          }
+        }
+      },
+      "tool": {
+        "description": "根据组合工具编辑页中当前单个内置工具库工具的上下文和管理员绑定知识库，解释工具用途、参数映射、风险和配置建议；不评估整个组合工具，不保存、不执行。",
+        "label": "工具使用解释助手",
+        "param": {
+          "conversationsummary": "较早对话摘要",
+          "messagelist": "最近几轮对话历史JSON字符串",
+          "question": "本轮用户对当前工具的解释问题",
+          "toolcontext": "当前工具上下文JSON字符串，包含工具名称、参数、映射、失败策略和阶段信息"
+        }
+      }
+    },
     "autoexecscriptaiassistant": {
       "configapi": {
         "getname": "获取编写脚本配置",
@@ -6210,6 +6271,33 @@
       "closetime": "关闭时间",
       "closetimetext": "关闭时间文本",
       "createtimetext": "创建时间（文本）",
+      "api": {
+        "deletealertsuppressions": "删除告警屏蔽策略",
+        "deletealertsubscribe": "删除告警订阅",
+        "deletealerttopo": "删除告警拓扑",
+        "getalertsuppressions": "获取告警屏蔽策略",
+        "getalertsubscribe": "获取告警订阅",
+        "getalerttopo": "获取拓扑配置",
+        "getalerttopowidget": "获取拓扑图元",
+        "listalertsubscribehandler": "返回订阅处理器列表",
+        "listalerttopo": "列出所有告警拓扑",
+        "listalerttopowidget": "列出所有拓扑图元",
+        "runalertai": "调用AI",
+        "savealertsuppressions": "保存告警屏蔽策略",
+        "savealertsubscribe": "保存告警订阅",
+        "savealerttopo": "保存告警拓扑",
+        "savealerttopowidget": "保存拓扑图元",
+        "searchalertsuppressions": "搜索告警屏蔽策略",
+        "searchalertsuppressionaudit": "搜索告警屏蔽记录",
+        "searchalertsubscribe": "搜索告警订阅",
+        "searchalertsubscribeaudit": "搜索告警订阅审计",
+        "searchalertsubscribetriggeraudit": "搜索告警订阅触发记录",
+        "searchalerttopo": "搜索拓扑图",
+        "searchalerttopowidget": "搜索拓扑图元",
+        "searchsimilaralert": "查找相似告警",
+        "togglealertsubscribeactive": "切换订阅激活状态",
+        "togglealertsuppressionactive": "切换屏蔽策略激活状态"
+      },
       "event": {
         "actionhandlerdesc": "为告警添加自定义操作。",
         "actionhandlername": "添加自定义操作",
@@ -6256,14 +6344,50 @@
         "savehandlerdesc": "保存告警到数据库，如果有唯一键相同的未关闭告警，将自动挂靠作为其子告警。",
         "savehandlername": "创建告警",
         "savename": "创建告警",
+        "scripthandlerdesc": "通过脚本修改告警数据。",
+        "scripthandlername": "修改告警数据",
+        "similarhandlerdesc": "对告警内容进行相似性分析，记录相似的高频告警，并加上提示标签。",
+        "similarhandlername": "相似性分析",
         "statuschangedesc": "告警状态发生变化时，触发此事件",
         "statuschangename": "更新告警状态",
+        "subscribehandlerdesc": "触发所有配置好的订阅。",
+        "subscribehandlername": "触发订阅",
         "unactionhandlerdesc": "删除告警已经关联的自定义操作。",
         "unactionhandlername": "删除自定义操作",
         "unmarkhandlerdesc": "移除选中的标签。",
         "unmarkhandlername": "移除标签",
         "updatehandlerdesc": "修改告警状态，如果告警状态没有变化，不会执行此事件。",
-        "updatehandlername": "修改状态"
+        "updatehandlername": "修改状态",
+        "vectorhandlerdesc": "对告警内容进行向量化处理，并保存到向量数据，便于后续的相似度查询。",
+        "vectorhandlername": "告警语义向量化"
+      },
+      "param": {
+        "actionhandler": "动作插件",
+        "actionlist": "动作列表",
+        "actiontypeid": "动作类型id",
+        "agenttype": "Agent类型",
+        "alerteventauditid": "告警事件审计id",
+        "alertid": "告警id",
+        "alertsubscribeid": "告警订阅id",
+        "alertsuppressionid": "告警屏蔽策略id",
+        "condition": "条件",
+        "content": "内容",
+        "event": "事件",
+        "eventhandler": "事件插件",
+        "eventhandlertypeidlist": "插件类型id列表",
+        "name": "名称",
+        "starttimerange": "开始时间范围",
+        "subscribeid": "订阅id",
+        "suppressionid": "屏蔽策略id",
+        "suppressiontimerange": "屏蔽时间范围",
+        "text": "名称",
+        "timelist": "时间列表",
+        "uniquekey": "唯一标识",
+        "value": "值"
+      },
+      "subscribe": {
+        "emailhandlername": "发送邮件",
+        "integrationhandlername": "调用集成"
       },
       "extendattr": "扩展属性",
       "isclosename": "是否关闭名称",
