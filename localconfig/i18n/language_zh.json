@@ -1801,7 +1801,7 @@
       "matrixviewsqlirregularexception_a": "配置文件不是合法的XML文件"
     },
     "montargetalreadyexistexception": {
-      "montargetalreadyexistexception": "监控目标已存在: "
+      "montargetalreadyexistexception": "监控目标已存在: {0}"
     }
   },
   "nfne": {

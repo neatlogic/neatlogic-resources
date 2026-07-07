@@ -1771,7 +1771,7 @@
       "matrixviewsqlirregularexception_a": "The configuration file is not a valid XML file"
     },
     "montargetalreadyexistexception": {
-      "montargetalreadyexistexception": "The monitoring target already exists:"
+      "montargetalreadyexistexception": "The monitoring target already exists: {0}"
     }
   },
   "nfne": {
