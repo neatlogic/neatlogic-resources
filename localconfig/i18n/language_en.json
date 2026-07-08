@@ -1519,6 +1519,9 @@
     }
   },
   "nfef": {
+    "filenamenotnullexception": {
+      "filenamenotnullexception": "Upload file name cannot be empty"
+    },
     "filenotfoundexception": {
       "filenotfoundexception": "Attachment \u0027{0}\u0027 does not exist",
       "getmessage": {
@@ -2458,129 +2461,6 @@
         }
       }
     },
-    "autoexectoolusageaiassistant": {
-      "configapi": {
-        "getname": "Get Automation Tool Usage Assistant Configuration",
-        "output": {
-          "param": {
-            "desc": {
-              "enabledtoolcount": "Number of enabled tool instances",
-              "enabledtoollist": "Enabled tool instance list",
-              "isaiavailable": "Whether AI is available",
-              "isconfigcomplete": "Whether model and knowledge base configuration is complete",
-              "isdatasetconfigured": "Whether a knowledge base is configured",
-              "ismodelconfigured": "Whether a model is configured",
-              "toolname": "Tool handler name"
-            }
-          }
-        }
-      },
-      "explainapi": {
-        "description": "Explain a single tool library tool from the current tool context and bound knowledge bases",
-        "getname": "Explain Automation Tool Usage With AI Assistant"
-      },
-      "input": {
-        "param": {
-          "desc": {
-            "conversationsummary": "Earlier conversation summary",
-            "messagelist": "Recent conversation history",
-            "question": "Current user input",
-            "toolcontext": "Current tool context"
-          }
-        }
-      },
-      "message": {
-        "datasetnotconfigured": "The tool usage assistant tool instance has no knowledge base configured.",
-        "explainfailed": "Tool usage explanation failed: {0}",
-        "missinganswer": "The model response is missing answer.",
-        "modelnotconfigured": "The tool usage assistant tool instance has no model configured.",
-        "modelunavailable": "The model configured for the tool usage assistant tool instance is unavailable.",
-        "noenabledtool": "No enabled tool usage assistant tool instance was found. Add and enable one in AI > Tool Management.",
-        "questionrequired": "Enter the question to explain.",
-        "toolcontextrequired": "Current tool context is missing.",
-        "toolnotfound": "The tool usage assistant tool instance does not exist."
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "message": "Message",
-            "output": "Explanation result"
-          }
-        }
-      },
-      "tool": {
-        "description": "Explain the purpose, parameter mappings, risks, and configuration suggestions for the current single built-in tool library tool in the combination tool editor, based on context and administrator-bound knowledge bases; does not evaluate the whole combination tool, save, or execute.",
-        "label": "Tool Usage Assistant",
-        "param": {
-          "conversationsummary": "Earlier conversation summary",
-          "messagelist": "Recent conversation history as a JSON string",
-          "question": "Current user question about the selected tool",
-          "toolcontext": "Current tool context as a JSON string, including tool name, parameters, mappings, failure policy, and phase information"
-        }
-      }
-    },
-    "autoexectoolrecommendaiassistant": {
-      "configapi": {
-        "getname": "Get Automation Tool Recommendation Assistant Configuration",
-        "output": {
-          "param": {
-            "desc": {
-              "enabledtoolcount": "Number of enabled tool instances",
-              "enabledtoollist": "Enabled tool instance list",
-              "isaiavailable": "Whether AI is available",
-              "isconfigcomplete": "Whether model and knowledge base configuration is complete",
-              "isdatasetconfigured": "Whether a knowledge base is configured",
-              "ismodelconfigured": "Whether a model is configured",
-              "toolname": "Tool handler name"
-            }
-          }
-        }
-      },
-      "recommendapi": {
-        "description": "Recommend tool library tools from the current phase context and authorized candidate pool",
-        "getname": "Recommend Automation Tools With AI Assistant"
-      },
-      "input": {
-        "param": {
-          "desc": {
-            "conversationsummary": "Earlier conversation summary",
-            "messagelist": "Recent conversation history",
-            "recommendcontext": "Current add-tool context",
-            "requirement": "Current user requirement for tool recommendation"
-          }
-        }
-      },
-      "message": {
-        "datasetnotconfigured": "The tool recommendation assistant tool instance has no knowledge base configured.",
-        "missinganswer": "The model response is missing answer.",
-        "modelnotconfigured": "The tool recommendation assistant tool instance has no model configured.",
-        "modelunavailable": "The model configured for the tool recommendation assistant tool instance is unavailable.",
-        "nocandidate": "No tool library tools can be recommended under the current filters. Adjust execution mode, category, risk level, or keyword and try again.",
-        "noenabledtool": "No enabled tool recommendation assistant tool instance was found. Add and enable one in AI > Tool Management.",
-        "recommendcontextrequired": "Current add-tool context is missing.",
-        "recommendfailed": "Tool recommendation failed: {0}",
-        "requirementrequired": "Enter the requirement for tool recommendation.",
-        "toolnotfound": "The tool recommendation assistant tool instance does not exist."
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "message": "Message",
-            "output": "Recommendation result"
-          }
-        }
-      },
-      "tool": {
-        "description": "Recommend tool library tools suitable for the current phase from the add-tool context, execution mode, filters, authorized tool library candidate pool, and administrator-bound knowledge bases; does not recommend custom tools, save, or execute.",
-        "label": "Tool Recommendation Assistant",
-        "param": {
-          "conversationsummary": "Earlier conversation summary",
-          "messagelist": "Recent conversation history as a JSON string",
-          "recommendcontext": "Current add-tool context as a JSON string, including execution mode, phase, upstream outputs, filters, and excluded tool IDs",
-          "requirement": "Current user requirement for tool recommendation"
-        }
-      }
-    },
     "autoexecscriptaiassistant": {
       "configapi": {
         "getname": "Get Script Writing Configuration",
@@ -2650,6 +2530,129 @@
           "requirement": "Current user question, analysis, generation, or modification request for the script",
           "scriptcontext": "Script context as a JSON string, including baseCode, workingCode, parameters, execution mode, and related data",
           "scripttype": "Script type. Options: normal/collect/library/deploy_build"
+        }
+      }
+    },
+    "autoexectoolrecommendaiassistant": {
+      "configapi": {
+        "getname": "Get Automation Tool Recommendation Assistant Configuration",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "Number of enabled tool instances",
+              "enabledtoollist": "Enabled tool instance list",
+              "isaiavailable": "Whether AI is available",
+              "isconfigcomplete": "Whether model and knowledge base configuration is complete",
+              "isdatasetconfigured": "Whether a knowledge base is configured",
+              "ismodelconfigured": "Whether a model is configured",
+              "toolname": "Tool handler name"
+            }
+          }
+        }
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "Earlier conversation summary",
+            "messagelist": "Recent conversation history",
+            "recommendcontext": "Current add-tool context",
+            "requirement": "Current user requirement for tool recommendation"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "The tool recommendation assistant tool instance has no knowledge base configured.",
+        "missinganswer": "The model response is missing answer.",
+        "modelnotconfigured": "The tool recommendation assistant tool instance has no model configured.",
+        "modelunavailable": "The model configured for the tool recommendation assistant tool instance is unavailable.",
+        "nocandidate": "No tool library tools can be recommended under the current filters. Adjust execution mode, category, risk level, or keyword and try again.",
+        "noenabledtool": "No enabled tool recommendation assistant tool instance was found. Add and enable one in AI \u003e Tool Management.",
+        "recommendcontextrequired": "Current add-tool context is missing.",
+        "recommendfailed": "Tool recommendation failed: {0}",
+        "requirementrequired": "Enter the requirement for tool recommendation.",
+        "toolnotfound": "The tool recommendation assistant tool instance does not exist."
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "Message",
+            "output": "Recommendation result"
+          }
+        }
+      },
+      "recommendapi": {
+        "description": "Recommend tool library tools from the current phase context and authorized candidate pool",
+        "getname": "Recommend Automation Tools With AI Assistant"
+      },
+      "tool": {
+        "description": "Recommend tool library tools suitable for the current phase from the add-tool context, execution mode, filters, authorized tool library candidate pool, and administrator-bound knowledge bases; does not recommend custom tools, save, or execute.",
+        "label": "Tool Recommendation Assistant",
+        "param": {
+          "conversationsummary": "Earlier conversation summary",
+          "messagelist": "Recent conversation history as a JSON string",
+          "recommendcontext": "Current add-tool context as a JSON string, including execution mode, phase, upstream outputs, filters, and excluded tool IDs",
+          "requirement": "Current user requirement for tool recommendation"
+        }
+      }
+    },
+    "autoexectoolusageaiassistant": {
+      "configapi": {
+        "getname": "Get Automation Tool Usage Assistant Configuration",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "Number of enabled tool instances",
+              "enabledtoollist": "Enabled tool instance list",
+              "isaiavailable": "Whether AI is available",
+              "isconfigcomplete": "Whether model and knowledge base configuration is complete",
+              "isdatasetconfigured": "Whether a knowledge base is configured",
+              "ismodelconfigured": "Whether a model is configured",
+              "toolname": "Tool handler name"
+            }
+          }
+        }
+      },
+      "explainapi": {
+        "description": "Explain a single tool library tool from the current tool context and bound knowledge bases",
+        "getname": "Explain Automation Tool Usage With AI Assistant"
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "Earlier conversation summary",
+            "messagelist": "Recent conversation history",
+            "question": "Current user input",
+            "toolcontext": "Current tool context"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "The tool usage assistant tool instance has no knowledge base configured.",
+        "explainfailed": "Tool usage explanation failed: {0}",
+        "missinganswer": "The model response is missing answer.",
+        "modelnotconfigured": "The tool usage assistant tool instance has no model configured.",
+        "modelunavailable": "The model configured for the tool usage assistant tool instance is unavailable.",
+        "noenabledtool": "No enabled tool usage assistant tool instance was found. Add and enable one in AI \u003e Tool Management.",
+        "questionrequired": "Enter the question to explain.",
+        "toolcontextrequired": "Current tool context is missing.",
+        "toolnotfound": "The tool usage assistant tool instance does not exist."
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "Message",
+            "output": "Explanation result"
+          }
+        }
+      },
+      "tool": {
+        "description": "Explain the purpose, parameter mappings, risks, and configuration suggestions for the current single built-in tool library tool in the combination tool editor, based on context and administrator-bound knowledge bases; does not evaluate the whole combination tool, save, or execute.",
+        "label": "Tool Usage Assistant",
+        "param": {
+          "conversationsummary": "Earlier conversation summary",
+          "messagelist": "Recent conversation history as a JSON string",
+          "question": "Current user question about the selected tool",
+          "toolcontext": "Current tool context as a JSON string, including tool name, parameters, mappings, failure policy, and phase information"
         }
       }
     }
@@ -6276,17 +6279,13 @@
       "aggregatecount": "Aggregate alarm quantity",
       "alarmhealthstatus": "Alarm Health Status",
       "alertcenter": "Alarm Center",
-      "category": "Category",
-      "closetime": "Close Time",
-      "closetimetext": "Close Time (Text)",
-      "createtimetext": "Creation Time (Text)",
       "api": {
         "deletealerteventhandlertype": "Delete Alert Event Handler Type",
-        "deletealertsuppressions": "Delete Alert Suppression Policy",
         "deletealertsubscribe": "Delete Alert Subscription",
+        "deletealertsuppressions": "Delete Alert Suppression Policy",
         "deletealerttopo": "Delete Alert Topology",
-        "getalertsuppressions": "Get Alert Suppression Policy",
         "getalertsubscribe": "Get Alert Subscription",
+        "getalertsuppressions": "Get Alert Suppression Policy",
         "getalerttopo": "Get Alert Topology",
         "getalerttopowidget": "Get Topology Element",
         "listalertsubscribehandler": "List Alert Subscription Handlers",
@@ -6294,22 +6293,26 @@
         "listalerttopowidget": "List Topology Elements",
         "runalertai": "Invoke AI",
         "savealerteventhandlertype": "Save Alert Event Handler Type",
-        "savealertsuppressions": "Save Alert Suppression Policy",
         "savealertsubscribe": "Save Alert Subscription",
+        "savealertsuppressions": "Save Alert Suppression Policy",
         "savealerttopo": "Save Alert Topology",
         "savealerttopowidget": "Save Topology Element",
         "searchalerteventhandlertype": "Search Alert Event Handler Types",
-        "searchalertsuppressions": "Search Alert Suppression Policies",
-        "searchalertsuppressionaudit": "Search Alert Suppression Records",
         "searchalertsubscribe": "Search Alert Subscriptions",
         "searchalertsubscribeaudit": "Search Alert Subscription Audit",
         "searchalertsubscribetriggeraudit": "Search Alert Subscription Trigger Records",
+        "searchalertsuppressionaudit": "Search Alert Suppression Records",
+        "searchalertsuppressions": "Search Alert Suppression Policies",
         "searchalerttopo": "Search Alert Topologies",
         "searchalerttopowidget": "Search Topology Elements",
         "searchsimilaralert": "Search Similar Alerts",
         "togglealertsubscribeactive": "Toggle Alert Subscription Activation",
         "togglealertsuppressionactive": "Toggle Alert Suppression Activation"
       },
+      "category": "Category",
+      "closetime": "Close Time",
+      "closetimetext": "Close Time (Text)",
+      "createtimetext": "Creation Time (Text)",
       "event": {
         "actionhandlerdesc": "Add custom operations to the alarm.",
         "actionhandlername": "Add Custom Operation",
@@ -6373,6 +6376,10 @@
         "vectorhandlerdesc": "Vectorize alert content and save it to vector data for subsequent similarity queries.",
         "vectorhandlername": "Alert Semantic Vectorization"
       },
+      "extendattr": "Extended Attributes",
+      "isclosename": "Do you want to close the name",
+      "issubalert": "Sub Alarm",
+      "levelname": "Level Name",
       "param": {
         "actionhandler": "Action Handler",
         "actionlist": "Action List",
@@ -6397,15 +6404,11 @@
         "uniquekey": "Unique Key",
         "value": "Value"
       },
+      "simillaralertcount": "Number of similar alarms",
       "subscribe": {
         "emailhandlername": "Send Mail",
         "integrationhandlername": "Call Integration"
       },
-      "extendattr": "Extended Attributes",
-      "isclosename": "Do you want to close the name",
-      "issubalert": "Sub Alarm",
-      "levelname": "Level Name",
-      "simillaralertcount": "Number of similar alarms",
       "updatetime": "Update Time",
       "updatetimetext": "Update Time (Text)",
       "workeraccount": "Processor account",

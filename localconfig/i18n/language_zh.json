@@ -1550,6 +1550,9 @@
     }
   },
   "nfef": {
+    "filenamenotnullexception": {
+      "filenamenotnullexception": "上传文件名不能为空"
+    },
     "filenotfoundexception": {
       "filenotfoundexception": "附件“{0}”不存在",
       "getmessage": {
@@ -2488,129 +2491,6 @@
         }
       }
     },
-    "autoexectoolusageaiassistant": {
-      "configapi": {
-        "getname": "获取自动化工具使用解释助手配置",
-        "output": {
-          "param": {
-            "desc": {
-              "enabledtoolcount": "已启用工具实例数量",
-              "enabledtoollist": "已启用工具实例列表",
-              "isaiavailable": "AI是否可用",
-              "isconfigcomplete": "模型和知识库配置是否完整",
-              "isdatasetconfigured": "是否已配置知识库",
-              "ismodelconfigured": "是否已配置模型",
-              "toolname": "工具处理器名称"
-            }
-          }
-        }
-      },
-      "explainapi": {
-        "description": "自动化工具使用解释助手根据当前工具上下文和绑定知识库解释单个工具库工具",
-        "getname": "自动化工具使用解释助手解释工具"
-      },
-      "input": {
-        "param": {
-          "desc": {
-            "conversationsummary": "较早对话摘要",
-            "messagelist": "最近几轮对话历史",
-            "question": "本轮用户输入",
-            "toolcontext": "当前工具上下文"
-          }
-        }
-      },
-      "message": {
-        "datasetnotconfigured": "工具使用解释助手工具实例未配置知识库。",
-        "explainfailed": "工具使用解释失败：{0}",
-        "missinganswer": "模型返回内容缺少 answer。",
-        "modelnotconfigured": "工具使用解释助手工具实例未配置模型。",
-        "modelunavailable": "工具使用解释助手工具实例配置的模型不可用。",
-        "noenabledtool": "未找到已启用的工具使用解释助手工具实例，请在 AI > 工具管理 中新增并启用工具使用解释助手工具实例。",
-        "questionrequired": "请输入需要解释的问题。",
-        "toolcontextrequired": "缺少当前工具上下文。",
-        "toolnotfound": "工具使用解释助手工具实例不存在。"
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "message": "提示信息",
-            "output": "解释结果"
-          }
-        }
-      },
-      "tool": {
-        "description": "根据组合工具编辑页中当前单个内置工具库工具的上下文和管理员绑定知识库，解释工具用途、参数映射、风险和配置建议；不评估整个组合工具，不保存、不执行。",
-        "label": "工具使用解释助手",
-        "param": {
-          "conversationsummary": "较早对话摘要",
-          "messagelist": "最近几轮对话历史JSON字符串",
-          "question": "本轮用户对当前工具的解释问题",
-          "toolcontext": "当前工具上下文JSON字符串，包含工具名称、参数、映射、失败策略和阶段信息"
-        }
-      }
-    },
-    "autoexectoolrecommendaiassistant": {
-      "configapi": {
-        "getname": "获取自动化工具库推荐助手配置",
-        "output": {
-          "param": {
-            "desc": {
-              "enabledtoolcount": "已启用工具实例数量",
-              "enabledtoollist": "已启用工具实例列表",
-              "isaiavailable": "AI是否可用",
-              "isconfigcomplete": "模型和知识库配置是否完整",
-              "isdatasetconfigured": "是否已配置知识库",
-              "ismodelconfigured": "是否已配置模型",
-              "toolname": "工具处理器名称"
-            }
-          }
-        }
-      },
-      "recommendapi": {
-        "description": "自动化工具库推荐助手根据当前阶段上下文和授权候选池推荐工具库工具",
-        "getname": "自动化工具库推荐助手推荐工具"
-      },
-      "input": {
-        "param": {
-          "desc": {
-            "conversationsummary": "较早对话摘要",
-            "messagelist": "最近几轮对话历史",
-            "recommendcontext": "当前新增工具上下文",
-            "requirement": "本轮用户输入的工具推荐需求"
-          }
-        }
-      },
-      "message": {
-        "datasetnotconfigured": "工具库推荐助手工具实例未配置知识库。",
-        "missinganswer": "模型返回内容缺少 answer。",
-        "modelnotconfigured": "工具库推荐助手工具实例未配置模型。",
-        "modelunavailable": "工具库推荐助手工具实例配置的模型不可用。",
-        "nocandidate": "当前筛选条件下没有可推荐的工具库工具，请调整执行方式、分类、操作级别或关键词后重试。",
-        "noenabledtool": "未找到已启用的工具库推荐助手工具实例，请在 AI > 工具管理 中新增并启用工具库推荐助手工具实例。",
-        "recommendcontextrequired": "缺少当前新增工具上下文。",
-        "recommendfailed": "工具库推荐失败：{0}",
-        "requirementrequired": "请输入需要推荐工具的需求。",
-        "toolnotfound": "工具库推荐助手工具实例不存在。"
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "message": "提示信息",
-            "output": "推荐结果"
-          }
-        }
-      },
-      "tool": {
-        "description": "根据组合工具新增工具页的阶段上下文、执行方式、筛选条件、授权工具库候选池和管理员绑定知识库，推荐适合加入当前阶段的工具库工具；不推荐自定义工具，不保存、不执行。",
-        "label": "工具库推荐助手",
-        "param": {
-          "conversationsummary": "较早对话摘要",
-          "messagelist": "最近几轮对话历史JSON字符串",
-          "recommendcontext": "当前新增工具上下文JSON字符串，包含执行方式、阶段、上游输出、筛选条件和排除工具ID",
-          "requirement": "本轮用户输入的工具推荐需求"
-        }
-      }
-    },
     "autoexecscriptaiassistant": {
       "configapi": {
         "getname": "获取编写脚本配置",
@@ -2680,6 +2560,129 @@
           "requirement": "本轮用户对脚本的提问、分析、生成或修改要求",
           "scriptcontext": "脚本上下文JSON字符串，包含baseCode、workingCode、参数、执行方式等",
           "scripttype": "脚本类型，可选 normal/collect/library/deploy_build"
+        }
+      }
+    },
+    "autoexectoolrecommendaiassistant": {
+      "configapi": {
+        "getname": "获取自动化工具库推荐助手配置",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "已启用工具实例数量",
+              "enabledtoollist": "已启用工具实例列表",
+              "isaiavailable": "AI是否可用",
+              "isconfigcomplete": "模型和知识库配置是否完整",
+              "isdatasetconfigured": "是否已配置知识库",
+              "ismodelconfigured": "是否已配置模型",
+              "toolname": "工具处理器名称"
+            }
+          }
+        }
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "较早对话摘要",
+            "messagelist": "最近几轮对话历史",
+            "recommendcontext": "当前新增工具上下文",
+            "requirement": "本轮用户输入的工具推荐需求"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "工具库推荐助手工具实例未配置知识库。",
+        "missinganswer": "模型返回内容缺少 answer。",
+        "modelnotconfigured": "工具库推荐助手工具实例未配置模型。",
+        "modelunavailable": "工具库推荐助手工具实例配置的模型不可用。",
+        "nocandidate": "当前筛选条件下没有可推荐的工具库工具，请调整执行方式、分类、操作级别或关键词后重试。",
+        "noenabledtool": "未找到已启用的工具库推荐助手工具实例，请在 AI \u003e 工具管理 中新增并启用工具库推荐助手工具实例。",
+        "recommendcontextrequired": "缺少当前新增工具上下文。",
+        "recommendfailed": "工具库推荐失败：{0}",
+        "requirementrequired": "请输入需要推荐工具的需求。",
+        "toolnotfound": "工具库推荐助手工具实例不存在。"
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "提示信息",
+            "output": "推荐结果"
+          }
+        }
+      },
+      "recommendapi": {
+        "description": "自动化工具库推荐助手根据当前阶段上下文和授权候选池推荐工具库工具",
+        "getname": "自动化工具库推荐助手推荐工具"
+      },
+      "tool": {
+        "description": "根据组合工具新增工具页的阶段上下文、执行方式、筛选条件、授权工具库候选池和管理员绑定知识库，推荐适合加入当前阶段的工具库工具；不推荐自定义工具，不保存、不执行。",
+        "label": "工具库推荐助手",
+        "param": {
+          "conversationsummary": "较早对话摘要",
+          "messagelist": "最近几轮对话历史JSON字符串",
+          "recommendcontext": "当前新增工具上下文JSON字符串，包含执行方式、阶段、上游输出、筛选条件和排除工具ID",
+          "requirement": "本轮用户输入的工具推荐需求"
+        }
+      }
+    },
+    "autoexectoolusageaiassistant": {
+      "configapi": {
+        "getname": "获取自动化工具使用解释助手配置",
+        "output": {
+          "param": {
+            "desc": {
+              "enabledtoolcount": "已启用工具实例数量",
+              "enabledtoollist": "已启用工具实例列表",
+              "isaiavailable": "AI是否可用",
+              "isconfigcomplete": "模型和知识库配置是否完整",
+              "isdatasetconfigured": "是否已配置知识库",
+              "ismodelconfigured": "是否已配置模型",
+              "toolname": "工具处理器名称"
+            }
+          }
+        }
+      },
+      "explainapi": {
+        "description": "自动化工具使用解释助手根据当前工具上下文和绑定知识库解释单个工具库工具",
+        "getname": "自动化工具使用解释助手解释工具"
+      },
+      "input": {
+        "param": {
+          "desc": {
+            "conversationsummary": "较早对话摘要",
+            "messagelist": "最近几轮对话历史",
+            "question": "本轮用户输入",
+            "toolcontext": "当前工具上下文"
+          }
+        }
+      },
+      "message": {
+        "datasetnotconfigured": "工具使用解释助手工具实例未配置知识库。",
+        "explainfailed": "工具使用解释失败：{0}",
+        "missinganswer": "模型返回内容缺少 answer。",
+        "modelnotconfigured": "工具使用解释助手工具实例未配置模型。",
+        "modelunavailable": "工具使用解释助手工具实例配置的模型不可用。",
+        "noenabledtool": "未找到已启用的工具使用解释助手工具实例，请在 AI \u003e 工具管理 中新增并启用工具使用解释助手工具实例。",
+        "questionrequired": "请输入需要解释的问题。",
+        "toolcontextrequired": "缺少当前工具上下文。",
+        "toolnotfound": "工具使用解释助手工具实例不存在。"
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "message": "提示信息",
+            "output": "解释结果"
+          }
+        }
+      },
+      "tool": {
+        "description": "根据组合工具编辑页中当前单个内置工具库工具的上下文和管理员绑定知识库，解释工具用途、参数映射、风险和配置建议；不评估整个组合工具，不保存、不执行。",
+        "label": "工具使用解释助手",
+        "param": {
+          "conversationsummary": "较早对话摘要",
+          "messagelist": "最近几轮对话历史JSON字符串",
+          "question": "本轮用户对当前工具的解释问题",
+          "toolcontext": "当前工具上下文JSON字符串，包含工具名称、参数、映射、失败策略和阶段信息"
         }
       }
     }
@@ -6330,17 +6333,13 @@
       "aggregatecount": "聚合告警数量",
       "alarmhealthstatus": "告警健康状态",
       "alertcenter": "告警中心",
-      "category": "分类",
-      "closetime": "关闭时间",
-      "closetimetext": "关闭时间文本",
-      "createtimetext": "创建时间（文本）",
       "api": {
         "deletealerteventhandlertype": "删除告警事件插件类型",
-        "deletealertsuppressions": "删除告警屏蔽策略",
         "deletealertsubscribe": "删除告警订阅",
+        "deletealertsuppressions": "删除告警屏蔽策略",
         "deletealerttopo": "删除告警拓扑",
-        "getalertsuppressions": "获取告警屏蔽策略",
         "getalertsubscribe": "获取告警订阅",
+        "getalertsuppressions": "获取告警屏蔽策略",
         "getalerttopo": "获取拓扑配置",
         "getalerttopowidget": "获取拓扑图元",
         "listalertsubscribehandler": "返回订阅处理器列表",
@@ -6348,22 +6347,26 @@
         "listalerttopowidget": "列出所有拓扑图元",
         "runalertai": "调用AI",
         "savealerteventhandlertype": "保存告警事件插件类型",
-        "savealertsuppressions": "保存告警屏蔽策略",
         "savealertsubscribe": "保存告警订阅",
+        "savealertsuppressions": "保存告警屏蔽策略",
         "savealerttopo": "保存告警拓扑",
         "savealerttopowidget": "保存拓扑图元",
         "searchalerteventhandlertype": "搜索告警事件插件类型",
-        "searchalertsuppressions": "搜索告警屏蔽策略",
-        "searchalertsuppressionaudit": "搜索告警屏蔽记录",
         "searchalertsubscribe": "搜索告警订阅",
         "searchalertsubscribeaudit": "搜索告警订阅审计",
         "searchalertsubscribetriggeraudit": "搜索告警订阅触发记录",
+        "searchalertsuppressionaudit": "搜索告警屏蔽记录",
+        "searchalertsuppressions": "搜索告警屏蔽策略",
         "searchalerttopo": "搜索拓扑图",
         "searchalerttopowidget": "搜索拓扑图元",
         "searchsimilaralert": "查找相似告警",
         "togglealertsubscribeactive": "切换订阅激活状态",
         "togglealertsuppressionactive": "切换屏蔽策略激活状态"
       },
+      "category": "分类",
+      "closetime": "关闭时间",
+      "closetimetext": "关闭时间文本",
+      "createtimetext": "创建时间（文本）",
       "event": {
         "actionhandlerdesc": "为告警添加自定义操作。",
         "actionhandlername": "添加自定义操作",
@@ -6427,6 +6430,10 @@
         "vectorhandlerdesc": "对告警内容进行向量化处理，并保存到向量数据，便于后续的相似度查询。",
         "vectorhandlername": "告警语义向量化"
       },
+      "extendattr": "扩展属性",
+      "isclosename": "是否关闭名称",
+      "issubalert": "是否子告警",
+      "levelname": "级别名称",
       "param": {
         "actionhandler": "动作插件",
         "actionlist": "动作列表",
@@ -6451,15 +6458,11 @@
         "uniquekey": "唯一标识",
         "value": "值"
       },
+      "simillaralertcount": "相似告警数量",
       "subscribe": {
         "emailhandlername": "发送邮件",
         "integrationhandlername": "调用集成"
       },
-      "extendattr": "扩展属性",
-      "isclosename": "是否关闭名称",
-      "issubalert": "是否子告警",
-      "levelname": "级别名称",
-      "simillaralertcount": "相似告警数量",
       "updatetime": "更新时间",
       "updatetimetext": "更新时间（文本）",
       "workeraccount": "处理人账号",
