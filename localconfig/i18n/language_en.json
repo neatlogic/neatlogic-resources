@@ -512,6 +512,42 @@
   },
   "nfae": {
     "alertattr": "Unique Key",
+    "execrtoolauditinvalidexception": {
+      "execrtoolauditinvalidexception": "The execrtool audit serial is invalid or already executed"
+    },
+    "execrtoolauditnotfoundexception": {
+      "execrtoolauditnotfoundexception": "The execrtool audit record does not exist: {0}"
+    },
+    "execrtoolauditpayloademptyexception": {
+      "execrtoolauditpayloademptyexception": "The execrtool audit payload is empty"
+    },
+    "execrtoolauthoritydeniedexception": {
+      "execrtoolauthoritydeniedexception": "The current user is not authorized to execute by execrtool"
+    },
+    "execrtoolauthorityiteminvalidexception": {
+      "execrtoolauthorityiteminvalidexception": "The execrtool authority item is invalid"
+    },
+    "execrtoolcommonauthorityuuidinvalidexception": {
+      "execrtoolcommonauthorityuuidinvalidexception": "The execrtool common authority UUID must be alluser"
+    },
+    "execrtooloperationmodenotsupportedexception": {
+      "execrtooloperationmodenotsupportedexception": "Execrtool does not support execution mode: {0}"
+    },
+    "execrtooloperationtypenotsupportedexception": {
+      "execrtooloperationtypenotsupportedexception": "Execrtool only supports script/tool operation objects: {0}"
+    },
+    "execrtoolparamvalueinvalidexception": {
+      "execrtoolparamvalueinvalidexception": "The value of execrtool parameter \"{0}\" is invalid"
+    },
+    "execrtoolresourcenotfoundexception": {
+      "execrtoolresourcenotfoundexception": "No resource was found by IP: {0}"
+    },
+    "execrtoolrunnerunavailableexception": {
+      "execrtoolrunnerunavailableexception": "No healthy runner is available for execrtool execution"
+    },
+    "execrtoolstdoutreservedexception": {
+      "execrtoolstdoutreservedexception": "_stdout is reserved by execrtool"
+    },
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "Tool directory: {0} does not exist"
     },
@@ -706,6 +742,26 @@
     "user_export_file_modify": {
       "getauthdisplayname": "Export file management permissions",
       "getauthintroduction": "All users have access to view, download, and delete exported files"
+    }
+  },
+  "nffs": {
+    "fileservicebindingcomboprequiredexception": {
+      "fileservicebindingcomboprequiredexception": "The file service {0} action can only bind a combination tool"
+    },
+    "fileservicebindingexecutetoolrequiredexception": {
+      "fileservicebindingexecutetoolrequiredexception": "The file service {0} action can only bind an execution tool"
+    },
+    "fileservicebindinglibscriptdeniedexception": {
+      "fileservicebindinglibscriptdeniedexception": "File service actions cannot bind library files: {0}"
+    },
+    "fileservicebindingoperationtypenotsupportedexception": {
+      "fileservicebindingoperationtypenotsupportedexception": "Unsupported file service binding object type: {0}"
+    },
+    "fileserviceexecrtoolauthoritynotfoundexception": {
+      "fileserviceexecrtoolauthoritynotfoundexception": "The execution tool has no execrtool execution authorization configured: {0}"
+    },
+    "fileserviceexecrtoolnotenabledexception": {
+      "fileserviceexecrtoolnotenabledexception": "Direct execution capability for execution tools is not enabled in the current environment"
     }
   },
   "nfb": {

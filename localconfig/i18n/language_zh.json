@@ -513,6 +513,42 @@
   },
   "nfae": {
     "alertattr": "唯一键",
+    "execrtoolauditinvalidexception": {
+      "execrtoolauditinvalidexception": "execrtool审计流水无效或已执行"
+    },
+    "execrtoolauditnotfoundexception": {
+      "execrtoolauditnotfoundexception": "execrtool调用记录不存在：{0}"
+    },
+    "execrtoolauditpayloademptyexception": {
+      "execrtoolauditpayloademptyexception": "execrtool审计执行入参为空"
+    },
+    "execrtoolauthoritydeniedexception": {
+      "execrtoolauthoritydeniedexception": "当前用户未获得execrtool执行授权"
+    },
+    "execrtoolauthorityiteminvalidexception": {
+      "execrtoolauthorityiteminvalidexception": "execrtool授权项不合法"
+    },
+    "execrtoolcommonauthorityuuidinvalidexception": {
+      "execrtoolcommonauthorityuuidinvalidexception": "execrtool公共授权对象必须为alluser"
+    },
+    "execrtooloperationmodenotsupportedexception": {
+      "execrtooloperationmodenotsupportedexception": "execrtool不支持执行方式：{0}"
+    },
+    "execrtooloperationtypenotsupportedexception": {
+      "execrtooloperationtypenotsupportedexception": "execrtool仅支持script/tool执行对象：{0}"
+    },
+    "execrtoolparamvalueinvalidexception": {
+      "execrtoolparamvalueinvalidexception": "execrtool参数“{0}”的值不合法"
+    },
+    "execrtoolresourcenotfoundexception": {
+      "execrtoolresourcenotfoundexception": "通过IP：{0}找不到资产"
+    },
+    "execrtoolrunnerunavailableexception": {
+      "execrtoolrunnerunavailableexception": "没有可用于execrtool执行的健康runner"
+    },
+    "execrtoolstdoutreservedexception": {
+      "execrtoolstdoutreservedexception": "_stdout为execrtool保留出参"
+    },
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "工具目录：{0}不存在"
     },
@@ -707,6 +743,26 @@
     "user_export_file_modify": {
       "getauthdisplayname": "导出文件管理权限",
       "getauthintroduction": "对所有用户的导出文件有查看、下载、删除权限"
+    }
+  },
+  "nffs": {
+    "fileservicebindingcomboprequiredexception": {
+      "fileservicebindingcomboprequiredexception": "文件服务{0}动作只能绑定组合工具"
+    },
+    "fileservicebindingexecutetoolrequiredexception": {
+      "fileservicebindingexecutetoolrequiredexception": "文件服务{0}动作只能绑定执行工具"
+    },
+    "fileservicebindinglibscriptdeniedexception": {
+      "fileservicebindinglibscriptdeniedexception": "文件服务动作不能绑定库文件：{0}"
+    },
+    "fileservicebindingoperationtypenotsupportedexception": {
+      "fileservicebindingoperationtypenotsupportedexception": "不支持的文件服务绑定对象类型：{0}"
+    },
+    "fileserviceexecrtoolauthoritynotfoundexception": {
+      "fileserviceexecrtoolauthoritynotfoundexception": "执行工具未配置execrtool执行授权：{0}"
+    },
+    "fileserviceexecrtoolnotenabledexception": {
+      "fileserviceexecrtoolnotenabledexception": "当前环境未启用执行工具直接执行能力"
     }
   },
   "nfb": {
