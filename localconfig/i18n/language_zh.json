@@ -2770,6 +2770,18 @@
     }
   },
   "nmai": {
+    "aiagentrunner": {
+      "message": {
+        "emptyjson": "智能助手返回为空，未生成合法JSON",
+        "imagenotfound": "未找到可分析的图片",
+        "invalidjsonobject": "智能助手返回不是合法JSON对象",
+        "pendingtoolinvalid": "待确认工具调用数据不完整",
+        "pendingtoolnotfound": "待确认工具调用不存在",
+        "tooliterationerror": "出错了: 工具调用轮次超过上限({0})",
+        "tooliterationlimit": "工具调用轮次超过上限({0})",
+        "toolunauthorized": "工具不存在或未授权"
+      }
+    },
     "aitool": {
       "executeaiworkflowtool": {
         "desc": {
