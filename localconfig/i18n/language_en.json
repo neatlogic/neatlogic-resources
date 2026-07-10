@@ -2719,6 +2719,18 @@
     }
   },
   "nmai": {
+    "aiagentrunner": {
+      "message": {
+        "emptyjson": "The AI assistant returned empty content and did not generate valid JSON",
+        "imagenotfound": "No analyzable image was found",
+        "invalidjsonobject": "The AI assistant response is not a valid JSON object",
+        "pendingtoolinvalid": "The pending tool call data is incomplete",
+        "pendingtoolnotfound": "The pending tool call does not exist",
+        "tooliterationerror": "An error occurred: tool calls exceeded the maximum number of iterations ({0})",
+        "tooliterationlimit": "Tool calls exceeded the maximum number of iterations ({0})",
+        "toolunauthorized": "The tool does not exist or is not authorized"
+      }
+    },
     "aitool": {
       "executeaiworkflowtool": {
         "desc": {
