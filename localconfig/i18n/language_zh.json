@@ -2465,6 +2465,27 @@
     }
   },
   "nmac": {
+    "autoexecaiassistant": {
+      "agent": {
+        "joblog": {"description": "结合日志选区、作业上下文和知识库分析自动化作业问题", "label": "自动化作业日志分析助手"},
+        "script": {"description": "结合编辑器上下文解释、生成、修改和修复自动化脚本", "label": "自动化脚本助手"},
+        "toolrecommend": {"description": "根据组合工具阶段上下文和授权候选池推荐工具库工具", "label": "自动化工具库推荐助手"},
+        "toolusage": {"description": "结合工具详情和知识库解释自动化工具的使用方法", "label": "自动化工具使用解释助手"}
+      },
+      "field": {
+        "answer": "回答内容", "candidatecode": "完整候选脚本", "noticelist": "注意事项", "responsetype": "code或answer", "summary": "摘要"
+      },
+      "message": {
+        "invalidoutput": "智能助手返回内容不是合法的 JSON 对象。"
+      },
+      "preload": {
+        "failed": "知识库检索失败",
+        "missing": "智能助手未绑定已启用的知识库检索工具",
+        "nohit": "知识库中没有召回匹配内容",
+        "start": "正在检索绑定的知识库",
+        "unavailable": "知识库检索工具不可用"
+      }
+    },
     "autoexecconfig": {
       "loadconfig": {
         "autoexectoken": "✖请在配置文件中定义autoexec.token参数。如果autoexec-backend的config.ini中的server.username是autoexec，则server.password必须也和autoexec.token的值一致"

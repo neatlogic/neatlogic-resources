@@ -2435,6 +2435,27 @@
     }
   },
   "nmac": {
+    "autoexecaiassistant": {
+      "agent": {
+        "joblog": {"description": "Analyze automation job issues with selected logs, job context, and knowledge bases", "label": "Automation Job Log Analysis Assistant"},
+        "script": {"description": "Explain, generate, modify, and fix automation scripts with editor context", "label": "Automation Script Assistant"},
+        "toolrecommend": {"description": "Recommend tool library tools from phase context and the authorized candidate pool", "label": "Automation Tool Recommendation Assistant"},
+        "toolusage": {"description": "Explain automation tool usage with tool details and knowledge bases", "label": "Automation Tool Usage Assistant"}
+      },
+      "field": {
+        "answer": "Answer", "candidatecode": "Complete candidate script", "noticelist": "Notices", "responsetype": "code or answer", "summary": "Summary"
+      },
+      "message": {
+        "invalidoutput": "The AI assistant response is not a valid JSON object."
+      },
+      "preload": {
+        "failed": "Knowledge base retrieval failed",
+        "missing": "No active knowledge base search tool is bound to the assistant",
+        "nohit": "No matching content was found in the knowledge base",
+        "start": "Searching bound knowledge bases",
+        "unavailable": "The knowledge base search tool is unavailable"
+      }
+    },
     "autoexecconfig": {
       "loadconfig": {
         "autoexectoken": "✖ Please define the autoexec.token parameter in the configuration file"
