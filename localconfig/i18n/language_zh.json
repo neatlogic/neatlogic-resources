@@ -6445,6 +6445,7 @@
         "searchalertsubscribeaudit": "搜索告警订阅审计",
         "searchalertsubscribetriggeraudit": "搜索告警订阅触发记录",
         "searchalertsuppressionaudit": "搜索告警屏蔽记录",
+        "searchalertsuppressionconfigaudit": "搜索告警屏蔽策略修改记录",
         "searchalertsuppressions": "搜索告警屏蔽策略",
         "searchalerttopo": "搜索拓扑图",
         "searchalerttopowidget": "搜索拓扑图元",

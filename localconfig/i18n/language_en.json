@@ -6391,6 +6391,7 @@
         "searchalertsubscribeaudit": "Search Alert Subscription Audit",
         "searchalertsubscribetriggeraudit": "Search Alert Subscription Trigger Records",
         "searchalertsuppressionaudit": "Search Alert Suppression Records",
+        "searchalertsuppressionconfigaudit": "Search Alert Suppression Policy Change Records",
         "searchalertsuppressions": "Search Alert Suppression Policies",
         "searchalerttopo": "Search Alert Topologies",
         "searchalerttopowidget": "Search Topology Elements",
