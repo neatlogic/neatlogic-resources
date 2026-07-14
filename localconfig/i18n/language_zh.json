@@ -2477,13 +2477,6 @@
       },
       "message": {
         "invalidoutput": "智能助手返回内容不是合法的 JSON 对象。"
-      },
-      "preload": {
-        "failed": "知识库检索失败",
-        "missing": "智能助手未绑定已启用的知识库检索工具",
-        "nohit": "知识库中没有召回匹配内容",
-        "start": "正在检索绑定的知识库",
-        "unavailable": "知识库检索工具不可用"
       }
     },
     "autoexecconfig": {

@@ -2447,13 +2447,6 @@
       },
       "message": {
         "invalidoutput": "The AI assistant response is not a valid JSON object."
-      },
-      "preload": {
-        "failed": "Knowledge base retrieval failed",
-        "missing": "No active knowledge base search tool is bound to the assistant",
-        "nohit": "No matching content was found in the knowledge base",
-        "start": "Searching bound knowledge bases",
-        "unavailable": "The knowledge base search tool is unavailable"
       }
     },
     "autoexecconfig": {
