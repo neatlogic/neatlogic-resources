@@ -2732,6 +2732,21 @@
       "script_document_version": "Custom Tool Version"
     }
   },
+  "nmautoexec": {
+    "autoexecskilltool": {
+      "description": "Execute the Autoexec operation specified by the Skill. Map custom tools to script and tool-library tools to tool. The model must provide the exact type, name, and business parameters, and provide a target IP only when the operation requires a target.",
+      "executefailed": "Autoexec tool execution failed",
+      "invalidmcpresponse": "The MCP service returned an invalid response",
+      "label": "Skill Autoexec Tool Executor",
+      "missingrequestcontext": "No request context is available for calling the MCP service",
+      "param": {
+        "ip": "Target machine IP. Required only for target or runner_target tools; omit it for runner tools.",
+        "operationtype": "Operation type from the Skill. Use script for a custom tool and tool for a tool-library tool.",
+        "param": "Business parameter object for the Autoexec tool. Extract all fields and values from the Skill.",
+        "toolname": "Exact unique name of the custom tool or tool-library tool specified by the Skill."
+      }
+    }
+  },
   "nmai": {
     "aiagentrunner": {
       "message": {
