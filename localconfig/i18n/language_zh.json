@@ -128,6 +128,8 @@
     "excludelist": "用于过滤回显参数",
     "executable": "是否可执行",
     "executeauthoritylist": "执行权限列表",
+    "execrtoolauthorityuuidlist": "直接执行权限对象UUID列表",
+    "execrtoolauthoritystatus": "直接执行权限状态",
     "expired": "过期",
     "expireddays": "超时天数",
     "expressionlist": "表达式列表",
