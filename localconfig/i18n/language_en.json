@@ -126,10 +126,10 @@
     "example": "example",
     "excludeid": "Exclude ID",
     "excludelist": "Used to filter echo parameters",
+    "execrtoolauthoritystatus": "Direct execution permission status",
+    "execrtoolauthorityuuidlist": "Direct execution permission object UUID list",
     "executable": "Executable or not",
     "executeauthoritylist": "Execution permission list",
-    "execrtoolauthorityuuidlist": "Direct execution permission object UUID list",
-    "execrtoolauthoritystatus": "Direct execution permission status",
     "expired": "overdue",
     "expireddays": "Number of timeout days",
     "expressionlist": "Expression List",
@@ -514,42 +514,6 @@
   },
   "nfae": {
     "alertattr": "Unique Key",
-    "execrtoolauditinvalidexception": {
-      "execrtoolauditinvalidexception": "The execrtool audit serial is invalid or already executed"
-    },
-    "execrtoolauditnotfoundexception": {
-      "execrtoolauditnotfoundexception": "The execrtool audit record does not exist: {0}"
-    },
-    "execrtoolauditpayloademptyexception": {
-      "execrtoolauditpayloademptyexception": "The execrtool audit payload is empty"
-    },
-    "execrtoolauthoritydeniedexception": {
-      "execrtoolauthoritydeniedexception": "The current user is not authorized to execute by execrtool"
-    },
-    "execrtoolauthorityiteminvalidexception": {
-      "execrtoolauthorityiteminvalidexception": "The execrtool authority item is invalid"
-    },
-    "execrtoolcommonauthorityuuidinvalidexception": {
-      "execrtoolcommonauthorityuuidinvalidexception": "The execrtool common authority UUID must be alluser"
-    },
-    "execrtooloperationmodenotsupportedexception": {
-      "execrtooloperationmodenotsupportedexception": "Execrtool does not support execution mode: {0}"
-    },
-    "execrtooloperationtypenotsupportedexception": {
-      "execrtooloperationtypenotsupportedexception": "Execrtool only supports script/tool operation objects: {0}"
-    },
-    "execrtoolparamvalueinvalidexception": {
-      "execrtoolparamvalueinvalidexception": "The value of execrtool parameter \"{0}\" is invalid"
-    },
-    "execrtoolresourcenotfoundexception": {
-      "execrtoolresourcenotfoundexception": "No resource was found by IP: {0}"
-    },
-    "execrtoolrunnerunavailableexception": {
-      "execrtoolrunnerunavailableexception": "No healthy runner is available for execrtool execution"
-    },
-    "execrtoolstdoutreservedexception": {
-      "execrtoolstdoutreservedexception": "_stdout is reserved by execrtool"
-    },
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "Tool directory: {0} does not exist"
     },
@@ -639,6 +603,42 @@
     },
     "autoexecserviceisnotcatalogexception": {
       "autoexecserviceisnotcatalogexception": "Service: {0} is not a directory"
+    },
+    "execrtoolauditinvalidexception": {
+      "execrtoolauditinvalidexception": "The execrtool audit serial is invalid or already executed"
+    },
+    "execrtoolauditnotfoundexception": {
+      "execrtoolauditnotfoundexception": "The execrtool audit record does not exist: {0}"
+    },
+    "execrtoolauditpayloademptyexception": {
+      "execrtoolauditpayloademptyexception": "The execrtool audit payload is empty"
+    },
+    "execrtoolauthoritydeniedexception": {
+      "execrtoolauthoritydeniedexception": "The current user is not authorized to execute by execrtool"
+    },
+    "execrtoolauthorityiteminvalidexception": {
+      "execrtoolauthorityiteminvalidexception": "The execrtool authority item is invalid"
+    },
+    "execrtoolcommonauthorityuuidinvalidexception": {
+      "execrtoolcommonauthorityuuidinvalidexception": "The execrtool common authority UUID must be alluser"
+    },
+    "execrtooloperationmodenotsupportedexception": {
+      "execrtooloperationmodenotsupportedexception": "Execrtool does not support execution mode: {0}"
+    },
+    "execrtooloperationtypenotsupportedexception": {
+      "execrtooloperationtypenotsupportedexception": "Execrtool only supports script/tool operation objects: {0}"
+    },
+    "execrtoolparamvalueinvalidexception": {
+      "execrtoolparamvalueinvalidexception": "The value of execrtool parameter \"{0}\" is invalid"
+    },
+    "execrtoolresourcenotfoundexception": {
+      "execrtoolresourcenotfoundexception": "No resource was found by IP: {0}"
+    },
+    "execrtoolrunnerunavailableexception": {
+      "execrtoolrunnerunavailableexception": "No healthy runner is available for execrtool execution"
+    },
+    "execrtoolstdoutreservedexception": {
+      "execrtoolstdoutreservedexception": "_stdout is reserved by execrtool"
     },
     "runnergroupmatchrulenotfoundexception": {
       "runnergroupmatchrulenotfoundexception": "There is no executor group that meets the rules"
@@ -746,26 +746,6 @@
       "getauthintroduction": "All users have access to view, download, and delete exported files"
     }
   },
-  "nffs": {
-    "fileservicebindingcomboprequiredexception": {
-      "fileservicebindingcomboprequiredexception": "The file service {0} action can only bind a combination tool"
-    },
-    "fileservicebindingexecutetoolrequiredexception": {
-      "fileservicebindingexecutetoolrequiredexception": "The file service {0} action can only bind an execution tool"
-    },
-    "fileservicebindinglibscriptdeniedexception": {
-      "fileservicebindinglibscriptdeniedexception": "File service actions cannot bind library files: {0}"
-    },
-    "fileservicebindingoperationtypenotsupportedexception": {
-      "fileservicebindingoperationtypenotsupportedexception": "Unsupported file service binding object type: {0}"
-    },
-    "fileserviceexecrtoolauthoritynotfoundexception": {
-      "fileserviceexecrtoolauthoritynotfoundexception": "The execution tool has no execrtool execution authorization configured: {0}"
-    },
-    "fileserviceexecrtoolnotenabledexception": {
-      "fileserviceexecrtoolnotenabledexception": "Direct execution capability for execution tools is not enabled in the current environment"
-    }
-  },
   "nfb": {
     "moduleinitializer": {
       "checkchangelog": {
@@ -788,6 +768,7 @@
     "frameworktenantconfig": {
       "apiqps": "Peak number of requests sent to the server per second (regardless of interface)",
       "disabledmodulegrouplist": "List of disabled module groups, page does not display disabled modules",
+      "isdebug": "Whether to debug mode, default 0, do not debug. If debugging, the mobile authentication failure page will display authentication related information",
       "loginlockedfailedcount": "Login failure limit (times). If the number of times exceeds, the user will be locked and unable to log in, waiting for automatic unlocking",
       "loginlockedtime": "Login lock duration (minutes). After locking the user, login is only allowed after exceeding this time limit",
       "loginneedlock": "Is it necessary to check if the user is locked when logging in? The default value is 0, and there is no need to check",
@@ -1765,6 +1746,26 @@
       "done": "Reconstruction completed"
     }
   },
+  "nffs": {
+    "fileservicebindingcomboprequiredexception": {
+      "fileservicebindingcomboprequiredexception": "The file service {0} action can only bind a combination tool"
+    },
+    "fileservicebindingexecutetoolrequiredexception": {
+      "fileservicebindingexecutetoolrequiredexception": "The file service {0} action can only bind an execution tool"
+    },
+    "fileservicebindinglibscriptdeniedexception": {
+      "fileservicebindinglibscriptdeniedexception": "File service actions cannot bind library files: {0}"
+    },
+    "fileservicebindingoperationtypenotsupportedexception": {
+      "fileservicebindingoperationtypenotsupportedexception": "Unsupported file service binding object type: {0}"
+    },
+    "fileserviceexecrtoolauthoritynotfoundexception": {
+      "fileserviceexecrtoolauthoritynotfoundexception": "The execution tool has no execrtool execution authorization configured: {0}"
+    },
+    "fileserviceexecrtoolnotenabledexception": {
+      "fileserviceexecrtoolnotenabledexception": "Direct execution capability for execution tools is not enabled in the current environment"
+    }
+  },
   "nfhc": {
     "heartbeatmanager": {
       "myinit": {
@@ -2439,13 +2440,29 @@
   "nmac": {
     "autoexecaiassistant": {
       "agent": {
-        "joblog": {"description": "Analyze automation job issues with selected logs, job context, and knowledge bases", "label": "Automation Job Log Analysis Assistant"},
-        "script": {"description": "Explain, generate, modify, and fix automation scripts with editor context", "label": "Automation Script Assistant"},
-        "toolrecommend": {"description": "Recommend tool library tools from phase context and the authorized candidate pool", "label": "Automation Tool Recommendation Assistant"},
-        "toolusage": {"description": "Explain automation tool usage with tool details and knowledge bases", "label": "Automation Tool Usage Assistant"}
+        "joblog": {
+          "description": "Analyze automation job issues with selected logs, job context, and knowledge bases",
+          "label": "Automation Job Log Analysis Assistant"
+        },
+        "script": {
+          "description": "Explain, generate, modify, and fix automation scripts with editor context",
+          "label": "Automation Script Assistant"
+        },
+        "toolrecommend": {
+          "description": "Recommend tool library tools from phase context and the authorized candidate pool",
+          "label": "Automation Tool Recommendation Assistant"
+        },
+        "toolusage": {
+          "description": "Explain automation tool usage with tool details and knowledge bases",
+          "label": "Automation Tool Usage Assistant"
+        }
       },
       "field": {
-        "answer": "Answer", "candidatecode": "Complete candidate script", "noticelist": "Notices", "responsetype": "code or answer", "summary": "Summary"
+        "answer": "Answer",
+        "candidatecode": "Complete candidate script",
+        "noticelist": "Notices",
+        "responsetype": "code or answer",
+        "summary": "Summary"
       },
       "message": {
         "invalidoutput": "The AI assistant response is not a valid JSON object."
@@ -2734,21 +2751,6 @@
       "script_document_version": "Custom Tool Version"
     }
   },
-  "nmautoexec": {
-    "autoexecskilltool": {
-      "description": "Execute the Autoexec operation specified by the Skill. Map custom tools to script and tool-library tools to tool. The model must provide the exact type, name, and business parameters, and provide a target IP only when the operation requires a target.",
-      "executefailed": "Autoexec tool execution failed",
-      "invalidmcpresponse": "The MCP service returned an invalid response",
-      "label": "Skill Autoexec Tool Executor",
-      "missingrequestcontext": "No request context is available for calling the MCP service",
-      "param": {
-        "ip": "Target machine IP. Required only for target or runner_target tools; omit it for runner tools.",
-        "operationtype": "Operation type from the Skill. Use script for a custom tool and tool for a tool-library tool.",
-        "param": "Business parameter object for the Autoexec tool. Extract all fields and values from the Skill.",
-        "toolname": "Exact unique name of the custom tool or tool-library tool specified by the Skill."
-      }
-    }
-  },
   "nmai": {
     "aiagentrunner": {
       "message": {
@@ -2958,6 +2960,21 @@
     "autoexec": {
       "loopitems": "Loop item",
       "loopitemvar": "Loop term variable"
+    }
+  },
+  "nmautoexec": {
+    "autoexecskilltool": {
+      "description": "Execute the Autoexec operation specified by the Skill. Map custom tools to script and tool-library tools to tool. The model must provide the exact type, name, and business parameters, and provide a target IP only when the operation requires a target.",
+      "executefailed": "Autoexec tool execution failed",
+      "invalidmcpresponse": "The MCP service returned an invalid response",
+      "label": "Skill Autoexec Tool Executor",
+      "missingrequestcontext": "No request context is available for calling the MCP service",
+      "param": {
+        "ip": "Target machine IP. Required only for target or runner_target tools; omit it for runner tools.",
+        "operationtype": "Operation type from the Skill. Use script for a custom tool and tool for a tool-library tool.",
+        "param": "Business parameter object for the Autoexec tool. Extract all fields and values from the Skill.",
+        "toolname": "Exact unique name of the custom tool or tool-library tool specified by the Skill."
+      }
     }
   },
   "nmcaa": {

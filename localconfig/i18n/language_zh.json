@@ -126,10 +126,10 @@
     "example": "范例",
     "excludeid": "排除id",
     "excludelist": "用于过滤回显参数",
+    "execrtoolauthoritystatus": "直接执行权限状态",
+    "execrtoolauthorityuuidlist": "直接执行权限对象UUID列表",
     "executable": "是否可执行",
     "executeauthoritylist": "执行权限列表",
-    "execrtoolauthorityuuidlist": "直接执行权限对象UUID列表",
-    "execrtoolauthoritystatus": "直接执行权限状态",
     "expired": "过期",
     "expireddays": "超时天数",
     "expressionlist": "表达式列表",
@@ -515,42 +515,6 @@
   },
   "nfae": {
     "alertattr": "唯一键",
-    "execrtoolauditinvalidexception": {
-      "execrtoolauditinvalidexception": "execrtool审计流水无效或已执行"
-    },
-    "execrtoolauditnotfoundexception": {
-      "execrtoolauditnotfoundexception": "execrtool调用记录不存在：{0}"
-    },
-    "execrtoolauditpayloademptyexception": {
-      "execrtoolauditpayloademptyexception": "execrtool审计执行入参为空"
-    },
-    "execrtoolauthoritydeniedexception": {
-      "execrtoolauthoritydeniedexception": "当前用户未获得execrtool执行授权"
-    },
-    "execrtoolauthorityiteminvalidexception": {
-      "execrtoolauthorityiteminvalidexception": "execrtool授权项不合法"
-    },
-    "execrtoolcommonauthorityuuidinvalidexception": {
-      "execrtoolcommonauthorityuuidinvalidexception": "execrtool公共授权对象必须为alluser"
-    },
-    "execrtooloperationmodenotsupportedexception": {
-      "execrtooloperationmodenotsupportedexception": "execrtool不支持执行方式：{0}"
-    },
-    "execrtooloperationtypenotsupportedexception": {
-      "execrtooloperationtypenotsupportedexception": "execrtool仅支持script/tool执行对象：{0}"
-    },
-    "execrtoolparamvalueinvalidexception": {
-      "execrtoolparamvalueinvalidexception": "execrtool参数“{0}”的值不合法"
-    },
-    "execrtoolresourcenotfoundexception": {
-      "execrtoolresourcenotfoundexception": "通过IP：{0}找不到资产"
-    },
-    "execrtoolrunnerunavailableexception": {
-      "execrtoolrunnerunavailableexception": "没有可用于execrtool执行的健康runner"
-    },
-    "execrtoolstdoutreservedexception": {
-      "execrtoolstdoutreservedexception": "_stdout为execrtool保留出参"
-    },
     "autoexeccatalognotfoundexception": {
       "autoexeccatalognotfoundexception": "工具目录：{0}不存在"
     },
@@ -640,6 +604,42 @@
     },
     "autoexecserviceisnotcatalogexception": {
       "autoexecserviceisnotcatalogexception": "服务：{0}不是目录"
+    },
+    "execrtoolauditinvalidexception": {
+      "execrtoolauditinvalidexception": "execrtool审计流水无效或已执行"
+    },
+    "execrtoolauditnotfoundexception": {
+      "execrtoolauditnotfoundexception": "execrtool调用记录不存在：{0}"
+    },
+    "execrtoolauditpayloademptyexception": {
+      "execrtoolauditpayloademptyexception": "execrtool审计执行入参为空"
+    },
+    "execrtoolauthoritydeniedexception": {
+      "execrtoolauthoritydeniedexception": "当前用户未获得execrtool执行授权"
+    },
+    "execrtoolauthorityiteminvalidexception": {
+      "execrtoolauthorityiteminvalidexception": "execrtool授权项不合法"
+    },
+    "execrtoolcommonauthorityuuidinvalidexception": {
+      "execrtoolcommonauthorityuuidinvalidexception": "execrtool公共授权对象必须为alluser"
+    },
+    "execrtooloperationmodenotsupportedexception": {
+      "execrtooloperationmodenotsupportedexception": "execrtool不支持执行方式：{0}"
+    },
+    "execrtooloperationtypenotsupportedexception": {
+      "execrtooloperationtypenotsupportedexception": "execrtool仅支持script/tool执行对象：{0}"
+    },
+    "execrtoolparamvalueinvalidexception": {
+      "execrtoolparamvalueinvalidexception": "execrtool参数“{0}”的值不合法"
+    },
+    "execrtoolresourcenotfoundexception": {
+      "execrtoolresourcenotfoundexception": "通过IP：{0}找不到资产"
+    },
+    "execrtoolrunnerunavailableexception": {
+      "execrtoolrunnerunavailableexception": "没有可用于execrtool执行的健康runner"
+    },
+    "execrtoolstdoutreservedexception": {
+      "execrtoolstdoutreservedexception": "_stdout为execrtool保留出参"
     },
     "runnergroupmatchrulenotfoundexception": {
       "runnergroupmatchrulenotfoundexception": "不存在满足规则的执行器组"
@@ -747,26 +747,6 @@
       "getauthintroduction": "对所有用户的导出文件有查看、下载、删除权限"
     }
   },
-  "nffs": {
-    "fileservicebindingcomboprequiredexception": {
-      "fileservicebindingcomboprequiredexception": "文件服务{0}动作只能绑定组合工具"
-    },
-    "fileservicebindingexecutetoolrequiredexception": {
-      "fileservicebindingexecutetoolrequiredexception": "文件服务{0}动作只能绑定执行工具"
-    },
-    "fileservicebindinglibscriptdeniedexception": {
-      "fileservicebindinglibscriptdeniedexception": "文件服务动作不能绑定库文件：{0}"
-    },
-    "fileservicebindingoperationtypenotsupportedexception": {
-      "fileservicebindingoperationtypenotsupportedexception": "不支持的文件服务绑定对象类型：{0}"
-    },
-    "fileserviceexecrtoolauthoritynotfoundexception": {
-      "fileserviceexecrtoolauthoritynotfoundexception": "执行工具未配置execrtool执行授权：{0}"
-    },
-    "fileserviceexecrtoolnotenabledexception": {
-      "fileserviceexecrtoolnotenabledexception": "当前环境未启用执行工具直接执行能力"
-    }
-  },
   "nfb": {
     "moduleinitializer": {
       "checkchangelog": {
@@ -789,6 +769,7 @@
     "frameworktenantconfig": {
       "apiqps": "每秒向服务器发送的请求数量峰值（不分接口）",
       "disabledmodulegrouplist": "禁用的模块组列表，页面将不显示被禁用的模块（多个模块请以英文逗号隔开）",
+      "isdebug": "是否调试模式，默认0，不调试。如果调试则移动端认证失败页面展示认证相关信息",
       "loginlockedfailedcount": "登录失败次数限制(次)。超过次数则锁定用户，无法登录，等自动解锁",
       "loginlockedtime": "登录锁定时长(分钟)。锁定用户后，超过这个时间后才允许登录",
       "loginneedlock": "登录是否需要检查是否锁定用户，默认为0，不需要检查",
@@ -1795,6 +1776,26 @@
       "done": "重建完毕"
     }
   },
+  "nffs": {
+    "fileservicebindingcomboprequiredexception": {
+      "fileservicebindingcomboprequiredexception": "文件服务{0}动作只能绑定组合工具"
+    },
+    "fileservicebindingexecutetoolrequiredexception": {
+      "fileservicebindingexecutetoolrequiredexception": "文件服务{0}动作只能绑定执行工具"
+    },
+    "fileservicebindinglibscriptdeniedexception": {
+      "fileservicebindinglibscriptdeniedexception": "文件服务动作不能绑定库文件：{0}"
+    },
+    "fileservicebindingoperationtypenotsupportedexception": {
+      "fileservicebindingoperationtypenotsupportedexception": "不支持的文件服务绑定对象类型：{0}"
+    },
+    "fileserviceexecrtoolauthoritynotfoundexception": {
+      "fileserviceexecrtoolauthoritynotfoundexception": "执行工具未配置execrtool执行授权：{0}"
+    },
+    "fileserviceexecrtoolnotenabledexception": {
+      "fileserviceexecrtoolnotenabledexception": "当前环境未启用执行工具直接执行能力"
+    }
+  },
   "nfhc": {
     "heartbeatmanager": {
       "myinit": {
@@ -2469,13 +2470,29 @@
   "nmac": {
     "autoexecaiassistant": {
       "agent": {
-        "joblog": {"description": "结合日志选区、作业上下文和知识库分析自动化作业问题", "label": "自动化作业日志分析助手"},
-        "script": {"description": "结合编辑器上下文解释、生成、修改和修复自动化脚本", "label": "自动化脚本助手"},
-        "toolrecommend": {"description": "根据组合工具阶段上下文和授权候选池推荐工具库工具", "label": "自动化工具库推荐助手"},
-        "toolusage": {"description": "结合工具详情和知识库解释自动化工具的使用方法", "label": "自动化工具使用解释助手"}
+        "joblog": {
+          "description": "结合日志选区、作业上下文和知识库分析自动化作业问题",
+          "label": "自动化作业日志分析助手"
+        },
+        "script": {
+          "description": "结合编辑器上下文解释、生成、修改和修复自动化脚本",
+          "label": "自动化脚本助手"
+        },
+        "toolrecommend": {
+          "description": "根据组合工具阶段上下文和授权候选池推荐工具库工具",
+          "label": "自动化工具库推荐助手"
+        },
+        "toolusage": {
+          "description": "结合工具详情和知识库解释自动化工具的使用方法",
+          "label": "自动化工具使用解释助手"
+        }
       },
       "field": {
-        "answer": "回答内容", "candidatecode": "完整候选脚本", "noticelist": "注意事项", "responsetype": "code或answer", "summary": "摘要"
+        "answer": "回答内容",
+        "candidatecode": "完整候选脚本",
+        "noticelist": "注意事项",
+        "responsetype": "code或answer",
+        "summary": "摘要"
       },
       "message": {
         "invalidoutput": "智能助手返回内容不是合法的 JSON 对象。"
@@ -2764,21 +2781,6 @@
       "script_document_version": "自定义工具版本"
     }
   },
-  "nmautoexec": {
-    "autoexecskilltool": {
-      "description": "根据 Skill 内容执行指定的 Autoexec 工具。自定义工具映射为 script，工具库工具映射为 tool；模型必须提供准确的类型、名称和业务参数，仅当工具需要目标时提供目标 IP。",
-      "executefailed": "自动化工具执行失败",
-      "invalidmcpresponse": "MCP 服务返回格式不正确",
-      "label": "Skill 自动化工具执行器",
-      "missingrequestcontext": "当前没有可用于调用 MCP 服务的请求上下文",
-      "param": {
-        "ip": "目标机器 IP。仅 target 或 runner_target 工具需要；runner 工具不要提供。",
-        "operationtype": "Skill 中的工具类型。自定义工具必须使用 script，工具库工具必须使用 tool。",
-        "param": "自动化工具业务入参对象，字段和值必须从 Skill 内容提取。",
-        "toolname": "要执行的自定义工具或工具库工具唯一名称，必须与 Skill 中指定的名称完全一致。"
-      }
-    }
-  },
   "nmai": {
     "aiagentrunner": {
       "message": {
@@ -2988,6 +2990,21 @@
     "autoexec": {
       "loopitems": "循环项",
       "loopitemvar": "循环项变量"
+    }
+  },
+  "nmautoexec": {
+    "autoexecskilltool": {
+      "description": "根据 Skill 内容执行指定的 Autoexec 工具。自定义工具映射为 script，工具库工具映射为 tool；模型必须提供准确的类型、名称和业务参数，仅当工具需要目标时提供目标 IP。",
+      "executefailed": "自动化工具执行失败",
+      "invalidmcpresponse": "MCP 服务返回格式不正确",
+      "label": "Skill 自动化工具执行器",
+      "missingrequestcontext": "当前没有可用于调用 MCP 服务的请求上下文",
+      "param": {
+        "ip": "目标机器 IP。仅 target 或 runner_target 工具需要；runner 工具不要提供。",
+        "operationtype": "Skill 中的工具类型。自定义工具必须使用 script，工具库工具必须使用 tool。",
+        "param": "自动化工具业务入参对象，字段和值必须从 Skill 内容提取。",
+        "toolname": "要执行的自定义工具或工具库工具唯一名称，必须与 Skill 中指定的名称完全一致。"
+      }
     }
   },
   "nmcaa": {
