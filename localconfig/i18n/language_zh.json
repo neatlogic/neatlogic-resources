@@ -128,6 +128,8 @@
     "excludelist": "用于过滤回显参数",
     "executable": "是否可执行",
     "executeauthoritylist": "执行权限列表",
+    "execrtoolauthorityuuidlist": "直接执行权限对象UUID列表",
+    "execrtoolauthoritystatus": "直接执行权限状态",
     "expired": "过期",
     "expireddays": "超时天数",
     "expressionlist": "表达式列表",
@@ -2761,6 +2763,21 @@
   "nmaf": {
     "autoexecfulltextindextype": {
       "script_document_version": "自定义工具版本"
+    }
+  },
+  "nmautoexec": {
+    "autoexecskilltool": {
+      "description": "根据 Skill 内容执行指定的 Autoexec 工具。自定义工具映射为 script，工具库工具映射为 tool；模型必须提供准确的类型、名称和业务参数，仅当工具需要目标时提供目标 IP。",
+      "executefailed": "自动化工具执行失败",
+      "invalidmcpresponse": "MCP 服务返回格式不正确",
+      "label": "Skill 自动化工具执行器",
+      "missingrequestcontext": "当前没有可用于调用 MCP 服务的请求上下文",
+      "param": {
+        "ip": "目标机器 IP。仅 target 或 runner_target 工具需要；runner 工具不要提供。",
+        "operationtype": "Skill 中的工具类型。自定义工具必须使用 script，工具库工具必须使用 tool。",
+        "param": "自动化工具业务入参对象，字段和值必须从 Skill 内容提取。",
+        "toolname": "要执行的自定义工具或工具库工具唯一名称，必须与 Skill 中指定的名称完全一致。"
+      }
     }
   },
   "nmai": {
