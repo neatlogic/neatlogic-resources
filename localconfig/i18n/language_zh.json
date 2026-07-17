@@ -2471,6 +2471,14 @@
   "nmac": {
     "autoexecaiassistant": {
       "agent": {
+        "execution": {
+          "description": "根据用户要求或召回的 Skill 串行调用自动化工具，并引用前序出参完成多步骤执行",
+          "label": "自动化执行助手"
+        },
+        "skillplanning": {
+          "description": "加载已发布 Skill 正文并生成等待用户确认的结构化执行计划",
+          "label": "自动化 Skill 规划助手"
+        },
         "joblog": {
           "description": "结合日志选区、作业上下文和知识库分析自动化作业问题",
           "label": "自动化作业日志分析助手"
@@ -2994,17 +3002,77 @@
     }
   },
   "nmautoexec": {
+    "autoexecskill": "自动化Skill",
+    "autoexecskillkey": "Skill Key",
+    "autoexecskillkeydescription": "Skill英文唯一标识",
+    "autoexecskilltitledescription": "Skill标题",
+    "autoexecskilldescriptiondescription": "Skill描述",
+    "autoexecskillpublishstatus": "发布异常状态",
+    "autoexecskillsearchapi": "查询自动化Skill",
+    "autoexecskillgetapi": "获取自动化Skill详情",
+    "autoexecskillsaveapi": "保存自动化Skill",
+    "autoexecskillsubmitapi": "提交自动化Skill审批",
+    "autoexecskillrevokeapi": "撤回自动化Skill审批",
+    "autoexecskillreviewapi": "审批自动化Skill",
+    "autoexecskillpublishapi": "发布自动化Skill",
+    "autoexecskillunpublishapi": "取消发布自动化Skill",
+    "autoexecskillenabledupdateapi": "更新自动化Skill启用状态",
+    "autoexecskillversionlistapi": "查询自动化Skill版本",
+    "autoexecskillauditlistapi": "查询自动化Skill活动",
+    "autoexecskillaiexecuteapi": "AI执行自动化Skill",
+    "autoexecskillaiexecutequestion": "AI执行问题",
+    "autoexecskillaiexecutequestionrequired": "请输入AI执行要求",
+    "autoexecskillplanapi": "规划自动化Skill执行",
+    "autoexecskillplantoken": "Skill执行计划令牌",
+    "autoexecskillplantokenrequired": "请先确认Skill执行计划",
+    "autoexecskillplantokeninvalid": "Skill执行计划令牌无效，请重新规划",
+    "autoexecskillplantokenexpired": "Skill执行计划已过期或发布版本已变化，请重新规划",
+    "autoexecskillplaninvalid": "Skill执行计划格式不正确，请重新规划",
+    "autoexecskillplanexecuteprohibited": "Skill规划阶段禁止执行业务工具",
+    "autoexecskillplanstepinvalid": "本次工具调用不符合已确认的Skill执行计划",
+    "autoexecskillcurrentnotrecalledexception": "本轮未召回当前自动化Skill“{0}”，已停止执行",
+    "autoexecskillexecutionscopeexception": "本次只允许执行自动化Skill“{0}”的发布版本“{1}”",
+    "autoexecskillnotfoundexception": "自动化Skill“{0}”不存在",
+    "autoexecskillversionnotfoundexception": "自动化Skill版本“{0}”不存在",
+    "autoexecskillukinvalidexception": "Skill Key“{0}”格式不正确，只允许英文字母和下划线且必须以字母开头",
+    "autoexecskillukrepeatexception": "Skill Key“{0}”已存在",
+    "autoexecskillukimmutableexception": "Skill Key创建后不能修改",
+    "autoexecskillversionnoteditableexception": "当前状态“{0}”的Skill版本不能编辑",
+    "autoexecskillcannotsubmitexception": "当前状态“{0}”的Skill版本不能提交审批",
+    "autoexecskillreviewactioninvalidexception": "不支持的Skill审批动作“{0}”",
+    "autoexecskillnotpublishedexception": "自动化Skill“{0}”尚未发布",
+    "autoexecskilldisabledexception": "自动化Skill“{0}”已禁用",
+    "autoexecskillversionchangedexception": "自动化Skill“{0}”的发布版本已变化，请重新确认执行计划",
+    "autoexecskillstatusinvalidexception": "当前Skill状态为“{0}”，要求状态为“{1}”",
+    "autoexecskillactionnotallowedexception": "当前状态“{1}”不允许执行Skill操作“{0}”",
+    "autoexecskillcontenthashconflictexception": "Skill内容Hash“{0}”冲突",
+    "autoexecskillragdatasetnotfoundexception": "尚未创建自动化Skill RAG数据集",
+    "autoexecskillragunavailableexception": "自动化Skill RAG服务暂时不可用",
+    "autoexecskillragverifyexception": "自动化Skill“{0}”发布后回读校验失败",
+    "autoexecskillragdeleteverifyexception": "自动化Skill“{0}”取消发布后回读校验失败",
     "autoexecskilltool": {
-      "description": "根据 Skill 内容执行指定的 Autoexec 工具。自定义工具映射为 script，工具库工具映射为 tool；模型必须提供准确的类型、名称和业务参数，仅当工具需要目标时提供目标 IP。",
+      "description": "两阶段 Skill 工具：先用 action=load 和 RAG 选出的 skillKey 读取数据库中当前已发布的 Skill Markdown；再用 action=execute 按正文逐步执行 Autoexec 工具。执行时自定义工具映射为 script，工具库工具映射为 tool；后续步骤引用前序出参时使用 $autoexecRef。每一步必须提供 isLastStep，且仅最后一步设为 true。",
       "executefailed": "自动化工具执行失败",
       "invalidmcpresponse": "MCP 服务返回格式不正确",
       "label": "Skill 自动化工具执行器",
       "missingrequestcontext": "当前没有可用于调用 MCP 服务的请求上下文",
+      "operationstart": "开始执行 Skill 工具",
+      "skillloadstart": "正在读取 Skill 正文",
       "param": {
+        "action": "操作类型。load：按 skillKey 读取当前启用的已发布 Skill Markdown；execute：执行 Markdown 中的一个 Autoexec 工具步骤。",
         "ip": "目标机器 IP。仅 target 或 runner_target 工具需要；runner 工具不要提供。",
+        "islaststep": "是否为本次执行的最后一步。仅最后一步必须设为 true，用于在返回结果后清理执行上下文。",
         "operationtype": "Skill 中的工具类型。自定义工具必须使用 script，工具库工具必须使用 tool。",
-        "param": "自动化工具业务入参对象，字段和值必须从 Skill 内容提取。",
+        "param": "自动化工具业务入参对象。普通值从 Skill 内容提取；引用前序出参时使用 $autoexecRef，支持 tool、key、path、defaultValue 和 onMissing。",
+        "skillkey": "RAG 召回结果中选出的 Skill Key。load 和 execute 都必须提供。",
+        "skillversion": "load 返回的当前已发布版本号。仅 action=execute 时必须原样提供。",
         "toolname": "要执行的自定义工具或工具库工具唯一名称，必须与 Skill 中指定的名称完全一致。"
+      }
+    },
+    "execrtoolapi": {
+      "param": {
+        "jobid": "跨步骤执行上下文 Snowflake ID",
+        "reserverunpath": "是否保留执行目录"
       }
     }
   },

@@ -2441,6 +2441,14 @@
   "nmac": {
     "autoexecaiassistant": {
       "agent": {
+        "execution": {
+          "description": "Execute automation tools serially from user requests or retrieved Skills, reusing outputs from previous steps",
+          "label": "Automation Execution Assistant"
+        },
+        "skillplanning": {
+          "description": "Load published Skill content and generate a structured execution plan for user confirmation",
+          "label": "Automation Skill Planning Assistant"
+        },
         "joblog": {
           "description": "Analyze automation job issues with selected logs, job context, and knowledge bases",
           "label": "Automation Job Log Analysis Assistant"
@@ -2964,17 +2972,77 @@
     }
   },
   "nmautoexec": {
+    "autoexecskill": "Autoexec Skill",
+    "autoexecskillkey": "Skill Key",
+    "autoexecskillkeydescription": "Unique English Skill identifier",
+    "autoexecskilltitledescription": "Skill title",
+    "autoexecskilldescriptiondescription": "Skill description",
+    "autoexecskillpublishstatus": "Publish Failure Status",
+    "autoexecskillsearchapi": "Search Autoexec Skills",
+    "autoexecskillgetapi": "Get Autoexec Skill Details",
+    "autoexecskillsaveapi": "Save Autoexec Skill",
+    "autoexecskillsubmitapi": "Submit Autoexec Skill",
+    "autoexecskillrevokeapi": "Revoke Autoexec Skill Submission",
+    "autoexecskillreviewapi": "Review Autoexec Skill",
+    "autoexecskillpublishapi": "Publish Autoexec Skill",
+    "autoexecskillunpublishapi": "Unpublish Autoexec Skill",
+    "autoexecskillenabledupdateapi": "Update Autoexec Skill Enabled Status",
+    "autoexecskillversionlistapi": "Search Autoexec Skill Versions",
+    "autoexecskillauditlistapi": "Search Autoexec Skill Activities",
+    "autoexecskillaiexecuteapi": "Execute Autoexec Skill with AI",
+    "autoexecskillaiexecutequestion": "AI Execution Question",
+    "autoexecskillaiexecutequestionrequired": "Enter the AI execution request",
+    "autoexecskillplanapi": "Plan Autoexec Skill Execution",
+    "autoexecskillplantoken": "Skill Execution Plan Token",
+    "autoexecskillplantokenrequired": "Confirm the Skill execution plan first",
+    "autoexecskillplantokeninvalid": "The Skill execution plan token is invalid; create a new plan",
+    "autoexecskillplantokenexpired": "The Skill execution plan expired or its published version changed; create a new plan",
+    "autoexecskillplaninvalid": "The Skill execution plan is invalid; create a new plan",
+    "autoexecskillplanexecuteprohibited": "Business tools cannot run during Skill planning",
+    "autoexecskillplanstepinvalid": "This tool call does not match the confirmed Skill execution plan",
+    "autoexecskillcurrentnotrecalledexception": "The current Autoexec Skill \"{0}\" was not recalled; execution stopped",
+    "autoexecskillexecutionscopeexception": "This request may only execute published version \"{1}\" of Autoexec Skill \"{0}\"",
+    "autoexecskillnotfoundexception": "Autoexec Skill \"{0}\" does not exist",
+    "autoexecskillversionnotfoundexception": "Autoexec Skill version \"{0}\" does not exist",
+    "autoexecskillukinvalidexception": "Skill Key \"{0}\" is invalid; use letters and underscores and start with a letter",
+    "autoexecskillukrepeatexception": "Skill Key \"{0}\" already exists",
+    "autoexecskillukimmutableexception": "Skill Key cannot be changed after creation",
+    "autoexecskillversionnoteditableexception": "A Skill version in status \"{0}\" cannot be edited",
+    "autoexecskillcannotsubmitexception": "A Skill version in status \"{0}\" cannot be submitted",
+    "autoexecskillreviewactioninvalidexception": "Unsupported Skill review action \"{0}\"",
+    "autoexecskillnotpublishedexception": "Autoexec Skill \"{0}\" is not published",
+    "autoexecskilldisabledexception": "Autoexec Skill \"{0}\" is disabled",
+    "autoexecskillversionchangedexception": "The published version of Autoexec Skill \"{0}\" changed; confirm the execution plan again",
+    "autoexecskillstatusinvalidexception": "The current Skill status is \"{0}\"; expected \"{1}\"",
+    "autoexecskillactionnotallowedexception": "Skill action \"{0}\" is not allowed in status \"{1}\"",
+    "autoexecskillcontenthashconflictexception": "Skill content hash \"{0}\" conflicts with existing content",
+    "autoexecskillragdatasetnotfoundexception": "No Autoexec Skill RAG dataset has been created",
+    "autoexecskillragunavailableexception": "The Autoexec Skill RAG service is unavailable",
+    "autoexecskillragverifyexception": "Read-back verification failed after publishing Autoexec Skill \"{0}\"",
+    "autoexecskillragdeleteverifyexception": "Read-back verification failed after unpublishing Autoexec Skill \"{0}\"",
     "autoexecskilltool": {
-      "description": "Execute the Autoexec operation specified by the Skill. Map custom tools to script and tool-library tools to tool. The model must provide the exact type, name, and business parameters, and provide a target IP only when the operation requires a target.",
+      "description": "Two-stage Skill tool. First use action=load with the skillKey selected by RAG to load the current published Skill Markdown from the database. Then use action=execute to run each Autoexec operation defined by that Markdown. Map custom tools to script and tool-library tools to tool. Use $autoexecRef for prior outputs, and set isLastStep to true only for the final step.",
       "executefailed": "Autoexec tool execution failed",
       "invalidmcpresponse": "The MCP service returned an invalid response",
       "label": "Skill Autoexec Tool Executor",
       "missingrequestcontext": "No request context is available for calling the MCP service",
+      "operationstart": "Starting Skill tool execution",
+      "skillloadstart": "Loading Skill content",
       "param": {
+        "action": "Action type. load reads the enabled published Skill Markdown by skillKey; execute runs one Autoexec operation from that Markdown.",
         "ip": "Target machine IP. Required only for target or runner_target tools; omit it for runner tools.",
+        "islaststep": "Whether this is the final execution step. Set it to true only for the final step so the execution context is cleaned after returning.",
         "operationtype": "Operation type from the Skill. Use script for a custom tool and tool for a tool-library tool.",
-        "param": "Business parameter object for the Autoexec tool. Extract all fields and values from the Skill.",
+        "param": "Business parameters for the Autoexec tool. Use ordinary Skill values or $autoexecRef with tool, key, path, defaultValue, and onMissing to reference an earlier output.",
+        "skillkey": "Skill Key selected from the RAG recall result. Required for load and execute.",
+        "skillversion": "Current published version returned by load. Required unchanged only for action=execute.",
         "toolname": "Exact unique name of the custom tool or tool-library tool specified by the Skill."
+      }
+    },
+    "execrtoolapi": {
+      "param": {
+        "jobid": "Cross-step execution context Snowflake ID",
+        "reserverunpath": "Whether to preserve the execution directory"
       }
     }
   },
