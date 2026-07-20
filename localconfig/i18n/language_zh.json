@@ -2877,6 +2877,10 @@
         },
         "param": {
           "query": "用户问题或检索语句"
+        },
+        "output": {
+          "matches": "命中结果列表；每项包含content、score及知识来源元数据",
+          "bestmatch": "最优命中对象；包含content、score及知识来源元数据"
         }
       },
       "readattachmentcontenttool": {
@@ -3028,8 +3032,34 @@
     "autoexecskillplantokeninvalid": "Skill执行计划令牌无效，请重新规划",
     "autoexecskillplantokenexpired": "Skill执行计划已过期或发布版本已变化，请重新规划",
     "autoexecskillplaninvalid": "Skill执行计划格式不正确，请重新规划",
+    "autoexecskillplaninvalidwithreason": "Skill执行计划格式不正确：{0}，请重新规划",
+    "autoexecskillplanreasonjsoninvalid": "计划内容不是有效的JSON对象",
+    "autoexecskillplanreasonplannull": "计划内容为空",
+    "autoexecskillplanreasonsteplistinvalid": "步骤列表格式不正确",
+    "autoexecskillplanreasonstepempty": "步骤为空",
+    "autoexecskillplanreasonsteplimit": "步骤数不能大于{0}，当前为{1}",
+    "autoexecskillplanreasonstepinvalid": "第{0}步不是有效的步骤对象",
+    "autoexecskillplanreasonoperationmissing": "第{0}步缺少工具类型或工具名称",
+    "autoexecskillplanreasonexecmodemissing": "第{0}步工具“{1}”未配置执行方式",
+    "autoexecskillplanreasonrunnerid": "第{0}步的执行器ID格式不正确",
+    "autoexecskillplanreasonreferenceexpression": "第{0}步包含字符串形式的步骤引用，引用必须使用结构化对象",
+    "autoexecskillplanreasonskillrefstructure": "第{0}步的跨步骤引用结构不正确",
+    "autoexecskillplanreasonskillrefsource": "第{0}步的跨步骤引用缺少有效的前序步骤或出参字段",
+    "autoexecskillplanreasonskillrefstep": "第{0}步引用的来源步骤{1}不存在",
+    "autoexecskillplanreasonoutputkey": "第{0}步引用的出参字段“{1}”未在来源步骤{2}的工具中声明",
+    "autoexecskillplanreasonautoreference": "第{0}步的工具出参引用结构不正确",
+    "autoexecskillplanreasonautoreferencefield": "第{0}步的工具出参引用缺少工具名称或出参字段",
+    "autoexecskillplanreasonpathdatatype": "第{0}步引用的取值路径必须是字符串",
+    "autoexecskillplanreasonpathinvalid": "第{0}步引用的取值路径“{1}”格式不正确",
+    "autoexecskillplanreasononmissing": "第{0}步引用的缺失策略“{1}”不受支持",
+    "autoexecskillplanreasonrunnerupdate": "第{0}步不能更新为指定执行器",
+    "autoexecskillplanreasonstepnotfound": "未找到计划中的第{0}步",
+    "autoexecskillplanreasoninformationtool": "第{0}步的信息工具“{1}”不存在或不可用",
+    "autoexecskillplanreasontoolnotfound": "第{0}步的工具“{1}”不存在、未激活或不可用",
+    "autoexecskillplanreasonoperationtype": "第{0}步的工具类型“{1}”不受支持",
     "autoexecskillplanexecuteprohibited": "Skill规划阶段禁止执行业务工具",
     "autoexecskillplanstepinvalid": "本次工具调用不符合已确认的Skill执行计划",
+    "autoexecskillrefparamtypemismatch": "第{0}步参数“{1}”引用“{2}”的结果与目标参数类型“{3}”不兼容",
     "autoexecskillcurrentnotrecalledexception": "本轮未召回当前自动化Skill“{0}”，已停止执行",
     "autoexecskillexecutionscopeexception": "本次只允许执行自动化Skill“{0}”的发布版本“{1}”",
     "autoexecskillnotfoundexception": "自动化Skill“{0}”不存在",
@@ -3064,6 +3094,7 @@
         "islaststep": "是否为本次执行的最后一步。仅最后一步必须设为 true，用于在返回结果后清理执行上下文。",
         "operationtype": "Skill 中的工具类型。自定义工具必须使用 script，工具库工具必须使用 tool。",
         "param": "自动化工具业务入参对象。普通值从 Skill 内容提取；引用前序出参时使用 $autoexecRef，支持 tool、key、path、defaultValue 和 onMissing。",
+        "runnerid": "执行计划中选定的 Runner 映射 ID。执行时由服务端按已确认计划覆盖。",
         "skillkey": "RAG 召回结果中选出的 Skill Key。load 和 execute 都必须提供。",
         "skillversion": "load 返回的当前已发布版本号。仅 action=execute 时必须原样提供。",
         "toolname": "要执行的自定义工具或工具库工具唯一名称，必须与 Skill 中指定的名称完全一致。"

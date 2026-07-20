@@ -2847,6 +2847,10 @@
         },
         "param": {
           "query": "User question or search query"
+        },
+        "output": {
+          "matches": "Matched result list; each item contains content, score, and source metadata",
+          "bestmatch": "Best matched object; contains content, score, and source metadata"
         }
       },
       "readattachmentcontenttool": {
@@ -2998,8 +3002,34 @@
     "autoexecskillplantokeninvalid": "The Skill execution plan token is invalid; create a new plan",
     "autoexecskillplantokenexpired": "The Skill execution plan expired or its published version changed; create a new plan",
     "autoexecskillplaninvalid": "The Skill execution plan is invalid; create a new plan",
+    "autoexecskillplaninvalidwithreason": "The Skill execution plan is invalid: {0}. Create a new plan",
+    "autoexecskillplanreasonjsoninvalid": "the plan content is not a valid JSON object",
+    "autoexecskillplanreasonplannull": "the plan content is empty",
+    "autoexecskillplanreasonsteplistinvalid": "the step list has an invalid format",
+    "autoexecskillplanreasonstepempty": "the step list is empty",
+    "autoexecskillplanreasonsteplimit": "the step count cannot exceed {0}; the current count is {1}",
+    "autoexecskillplanreasonstepinvalid": "step {0} is not a valid step object",
+    "autoexecskillplanreasonoperationmissing": "step {0} is missing the tool type or tool name",
+    "autoexecskillplanreasonexecmodemissing": "tool \"{1}\" in step {0} has no execution mode",
+    "autoexecskillplanreasonrunnerid": "the runner ID in step {0} has an invalid format",
+    "autoexecskillplanreasonreferenceexpression": "step {0} contains a string step reference; use a structured object instead",
+    "autoexecskillplanreasonskillrefstructure": "the cross-step reference in step {0} has an invalid structure",
+    "autoexecskillplanreasonskillrefsource": "the cross-step reference in step {0} is missing a valid prior step or output field",
+    "autoexecskillplanreasonskillrefstep": "source step {1}, referenced by step {0}, does not exist",
+    "autoexecskillplanreasonoutputkey": "output field \"{1}\", referenced by step {0}, is not declared by the tool in source step {2}",
+    "autoexecskillplanreasonautoreference": "the tool output reference in step {0} has an invalid structure",
+    "autoexecskillplanreasonautoreferencefield": "the tool output reference in step {0} is missing the tool name or output field",
+    "autoexecskillplanreasonpathdatatype": "the reference path in step {0} must be a string",
+    "autoexecskillplanreasonpathinvalid": "reference path \"{1}\" in step {0} has an invalid format",
+    "autoexecskillplanreasononmissing": "reference missing-value policy \"{1}\" in step {0} is not supported",
+    "autoexecskillplanreasonrunnerupdate": "step {0} cannot be updated to the specified runner",
+    "autoexecskillplanreasonstepnotfound": "step {0} was not found in the plan",
+    "autoexecskillplanreasoninformationtool": "information tool \"{1}\" in step {0} does not exist or is unavailable",
+    "autoexecskillplanreasontoolnotfound": "tool \"{1}\" in step {0} does not exist, is inactive, or is unavailable",
+    "autoexecskillplanreasonoperationtype": "tool type \"{1}\" in step {0} is not supported",
     "autoexecskillplanexecuteprohibited": "Business tools cannot run during Skill planning",
     "autoexecskillplanstepinvalid": "This tool call does not match the confirmed Skill execution plan",
+    "autoexecskillrefparamtypemismatch": "The result referenced by parameter \"{1}\" in step {0} from \"{2}\" is incompatible with target parameter type \"{3}\"",
     "autoexecskillcurrentnotrecalledexception": "The current Autoexec Skill \"{0}\" was not recalled; execution stopped",
     "autoexecskillexecutionscopeexception": "This request may only execute published version \"{1}\" of Autoexec Skill \"{0}\"",
     "autoexecskillnotfoundexception": "Autoexec Skill \"{0}\" does not exist",
@@ -3034,6 +3064,7 @@
         "islaststep": "Whether this is the final execution step. Set it to true only for the final step so the execution context is cleaned after returning.",
         "operationtype": "Operation type from the Skill. Use script for a custom tool and tool for a tool-library tool.",
         "param": "Business parameters for the Autoexec tool. Use ordinary Skill values or $autoexecRef with tool, key, path, defaultValue, and onMissing to reference an earlier output.",
+        "runnerid": "Runner mapping ID selected in the execution plan. The server overrides it with the confirmed plan value during execution.",
         "skillkey": "Skill Key selected from the RAG recall result. Required for load and execute.",
         "skillversion": "Current published version returned by load. Required unchanged only for action=execute.",
         "toolname": "Exact unique name of the custom tool or tool-library tool specified by the Skill."
