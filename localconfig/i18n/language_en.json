@@ -3021,6 +3021,7 @@
     "autoexecskillplanreasonoutputkey": "output field \"{1}\", referenced by step {0}, is not declared by the tool in source step {2}",
     "autoexecskillplanreasonautoreference": "the tool output reference in step {0} has an invalid structure",
     "autoexecskillplanreasonautoreferencefield": "the tool output reference in step {0} is missing the tool name or output field",
+    "autoexecskillplanreasonautoreferencesource": "tool \"{1}\", referenced by step {0}, has no available preceding execution step",
     "autoexecskillplanreasonpathdatatype": "the reference path in step {0} must be a string",
     "autoexecskillplanreasonpathinvalid": "reference path \"{1}\" in step {0} has an invalid format",
     "autoexecskillplanreasononmissing": "reference missing-value policy \"{1}\" in step {0} is not supported",

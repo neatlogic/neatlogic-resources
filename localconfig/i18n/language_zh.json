@@ -3051,6 +3051,7 @@
     "autoexecskillplanreasonoutputkey": "第{0}步引用的出参字段“{1}”未在来源步骤{2}的工具中声明",
     "autoexecskillplanreasonautoreference": "第{0}步的工具出参引用结构不正确",
     "autoexecskillplanreasonautoreferencefield": "第{0}步的工具出参引用缺少工具名称或出参字段",
+    "autoexecskillplanreasonautoreferencesource": "第{0}步引用的工具“{1}”没有可用的前序执行步骤",
     "autoexecskillplanreasonpathdatatype": "第{0}步引用的取值路径必须是字符串",
     "autoexecskillplanreasonpathinvalid": "第{0}步引用的取值路径“{1}”格式不正确",
     "autoexecskillplanreasononmissing": "第{0}步引用的缺失策略“{1}”不受支持",
