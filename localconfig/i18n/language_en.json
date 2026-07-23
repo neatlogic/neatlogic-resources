@@ -6117,6 +6117,24 @@
     "checkrunnerstatusapi": {
       "getname": "Check the status of the runner"
     },
+    "getrunnerversionapi": {
+      "description": "Get runner version information",
+      "getname": "Get runner version information",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "runner id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "Version information list"
+          }
+        }
+      }
+    },
     "deleteregionapi": {
       "getname": "Delete Region"
     },

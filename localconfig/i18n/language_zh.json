@@ -6171,6 +6171,24 @@
     "checkrunnerstatusapi": {
       "getname": "检查runner状态"
     },
+    "getrunnerversionapi": {
+      "description": "获取执行器版本信息",
+      "getname": "获取执行器版本信息",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "runner id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "版本信息列表"
+          }
+        }
+      }
+    },
     "deleteregionapi": {
       "getname": "删除地域"
     },
