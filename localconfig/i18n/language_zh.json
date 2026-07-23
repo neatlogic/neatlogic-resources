@@ -2800,6 +2800,8 @@
         "invalidjsonobject": "智能助手返回不是合法JSON对象",
         "pendingtoolinvalid": "待确认工具调用数据不完整",
         "pendingtoolnotfound": "待确认工具调用不存在",
+        "planincomplete": "受控执行尚未完成，请继续调用下一项必要工具，不要输出最终回答",
+        "toolbatchskipped": "前一工具调用未成功，当前工具未执行：{0}",
         "tooliterationerror": "出错了: 工具调用轮次超过上限({0})",
         "tooliterationlimit": "工具调用轮次超过上限({0})",
         "toolunauthorized": "工具不存在或未授权"
