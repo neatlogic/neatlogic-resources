@@ -2455,10 +2455,6 @@
           "description": "Load published Skill content and generate a structured execution plan for user confirmation",
           "label": "Automation Skill Planning Assistant"
         },
-        "skillmodeclassifier": {
-          "description": "Analyze Skill content and determine whether to use Fixed or Agentic execution mode",
-          "label": "Automation Skill Execution Mode Classification Assistant"
-        },
         "joblog": {
           "description": "Analyze automation job issues with selected logs, job context, and knowledge bases",
           "label": "Automation Job Log Analysis Assistant"
