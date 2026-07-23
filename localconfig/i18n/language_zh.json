@@ -2477,9 +2477,17 @@
           "description": "根据用户要求或召回的 Skill 串行调用自动化工具，并引用前序出参完成多步骤执行",
           "label": "自动化执行助手"
         },
+        "fixedexecutionsummary": {
+          "description": "依据真实工具执行轨迹和执行账本生成 Fixed 模式最终总结",
+          "label": "自动化 Fixed 执行总结助手"
+        },
         "skillplanning": {
           "description": "加载已发布 Skill 正文并生成等待用户确认的结构化执行计划",
           "label": "自动化 Skill 规划助手"
+        },
+        "skillmodeclassifier": {
+          "description": "分析 Skill 正文并判定使用 Fixed 或 Agentic 执行模式",
+          "label": "自动化 Skill 执行模式分类助手"
         },
         "joblog": {
           "description": "结合日志选区、作业上下文和知识库分析自动化作业问题",

@@ -2447,9 +2447,17 @@
           "description": "Execute automation tools serially from user requests or retrieved Skills, reusing outputs from previous steps",
           "label": "Automation Execution Assistant"
         },
+        "fixedexecutionsummary": {
+          "description": "Generate the final Fixed-mode summary from the actual tool execution trace and execution ledger",
+          "label": "Automation Fixed Execution Summary Assistant"
+        },
         "skillplanning": {
           "description": "Load published Skill content and generate a structured execution plan for user confirmation",
           "label": "Automation Skill Planning Assistant"
+        },
+        "skillmodeclassifier": {
+          "description": "Analyze Skill content and determine whether to use Fixed or Agentic execution mode",
+          "label": "Automation Skill Execution Mode Classification Assistant"
         },
         "joblog": {
           "description": "Analyze automation job issues with selected logs, job context, and knowledge bases",
