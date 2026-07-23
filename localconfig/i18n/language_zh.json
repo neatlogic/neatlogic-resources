@@ -3077,6 +3077,8 @@
     "autoexecskillfixedfallbacksuccess": "Skill执行完成，共{1}步，成功{0}步。AI总结暂不可用，以上状态来自服务端真实执行记录。",
     "autoexecskillfixedfallbackfailed": "Skill执行未全部成功：共{3}步，成功{0}步、失败{1}步、未执行{2}步。AI总结暂不可用，以上状态来自服务端真实执行记录。",
     "autoexecskillagenticcalllimit": "Agentic执行已达到最大工具调用次数{0}",
+    "autoexecskillagentichalted": "Agentic执行已因上一工具失败终止",
+    "autoexecskillagenticactioninvalid": "已确认的Agentic执行只允许action=execute，收到“{0}”",
     "autoexecskillagentictoolinvalid": "Agentic执行只能调用AUTOEXEC_SKILL_TOOL",
     "autoexecskillagentictooloutofscope": "工具“{0}”不在已确认的Agentic执行范围内",
     "autoexecskillagentictoolchanged": "工具“{0}”的活动定义或执行方式已发生变化",

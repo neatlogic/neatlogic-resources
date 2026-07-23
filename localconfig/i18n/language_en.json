@@ -3047,6 +3047,8 @@
     "autoexecskillfixedfallbacksuccess": "Skill execution completed: {0} of {1} steps succeeded. The AI summary is temporarily unavailable; these statuses come from the server's actual execution records.",
     "autoexecskillfixedfallbackfailed": "Skill execution did not fully succeed: {0} succeeded, {1} failed, and {2} were not executed out of {3} steps. The AI summary is temporarily unavailable; these statuses come from the server's actual execution records.",
     "autoexecskillagenticcalllimit": "Agentic execution reached the maximum of {0} tool calls",
+    "autoexecskillagentichalted": "Agentic execution stopped because the previous tool failed",
+    "autoexecskillagenticactioninvalid": "Confirmed Agentic execution only allows action=execute; received \"{0}\"",
     "autoexecskillagentictoolinvalid": "Agentic execution can only call AUTOEXEC_SKILL_TOOL",
     "autoexecskillagentictooloutofscope": "Tool \"{0}\" is outside the confirmed Agentic execution scope",
     "autoexecskillagentictoolchanged": "The active definition or execution mode of tool \"{0}\" changed",
