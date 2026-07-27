@@ -3133,6 +3133,7 @@
       "skillloadstart": "正在读取 Skill 正文",
       "param": {
         "action": "操作类型。load：按 skillKey 读取当前启用的已发布 Skill Markdown；execute：执行 Markdown 中的一个 Autoexec 工具步骤。",
+        "includestdout": "是否返回执行日志。只有 Skill Markdown 明确要求返回日志时才设为 true；执行时由服务端按已确认计划覆盖。",
         "ip": "目标机器 IP。仅 target 或 runner_target 工具需要；runner 工具不要提供。",
         "islaststep": "是否为本次执行的最后一步。仅最后一步必须设为 true，用于在返回结果后清理执行上下文。",
         "operationtype": "Skill 中的工具类型。自定义工具必须使用 script，工具库工具必须使用 tool。",

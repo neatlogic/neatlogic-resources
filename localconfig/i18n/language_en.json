@@ -3103,6 +3103,7 @@
       "skillloadstart": "Loading Skill content",
       "param": {
         "action": "Action type. load reads the enabled published Skill Markdown by skillKey; execute runs one Autoexec operation from that Markdown.",
+        "includestdout": "Whether to return execution logs. Set to true only when the Skill Markdown explicitly requires logs; the server overrides it with the confirmed plan value during execution.",
         "ip": "Target machine IP. Required only for target or runner_target tools; omit it for runner tools.",
         "islaststep": "Whether this is the final execution step. Set it to true only for the final step so the execution context is cleaned after returning.",
         "operationtype": "Operation type from the Skill. Use script for a custom tool and tool for a tool-library tool.",
