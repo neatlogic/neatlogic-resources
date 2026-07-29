@@ -2776,9 +2776,32 @@
         "pendingtoolnotfound": "The pending tool call does not exist",
         "planincomplete": "The controlled execution is incomplete. Call the next required tool and do not return a final answer",
         "toolbatchskipped": "The previous tool call did not succeed; this tool was not executed: {0}",
+        "toolcancelled": "This tool execution was cancelled",
         "tooliterationerror": "An error occurred: tool calls exceeded the maximum number of iterations ({0})",
         "tooliterationlimit": "Tool calls exceeded the maximum number of iterations ({0})",
         "toolunauthorized": "The tool does not exist or is not authorized"
+      }
+    },
+    "chatwithaiapi": {
+      "name": "AI Chat",
+      "param": {
+        "activetoolidlist": "Enabled tool instance ID list for this session",
+        "filelist": "Document attachment list",
+        "imagelist": "Image list",
+        "input": "Content",
+        "projectid": "Project ID; applies when starting a new chat",
+        "sessionid": "Session ID; omit to start a new chat"
+      }
+    },
+    "confirmaichattoolapi": {
+      "name": "Confirm AI Chat Tool Call",
+      "param": {
+        "confirmed": "Whether to confirm",
+        "decision": "Confirmation action: confirm, adjust, or cancel",
+        "messageid": "Pending message ID",
+        "optionindex": "Confirmation option index; required when multiple options are available",
+        "rejectreason": "Rejection reason or additional instructions",
+        "sessionid": "Session ID"
       }
     },
     "aitool": {
@@ -3093,25 +3116,32 @@
     "autoexecskillragunavailableexception": "The Autoexec Skill RAG service is unavailable",
     "autoexecskillragverifyexception": "Read-back verification failed after publishing Autoexec Skill \"{0}\"",
     "autoexecskillragdeleteverifyexception": "Read-back verification failed after unpublishing Autoexec Skill \"{0}\"",
+    "autoexecskillglobalplanrequired": "A Server-Generated Execution Plan Must Be Confirmed Before the Global AI Can Run an Autoexec Skill",
+    "autoexecskillloadrequired": "The Global AI Must Load the Same Skill's Current Published Version Before Planning",
     "autoexecskilltool": {
-      "description": "Two-stage Skill tool. First use action=load with the skillKey selected by RAG to load the current published Skill Markdown from the database. Then use action=execute to run each Autoexec operation defined by that Markdown. Map custom tools to script and tool-library tools to tool. Use $autoexecRef for prior outputs, and set isLastStep to true only for the final step.",
+      "description": "Autoexec Skill planning and execution tool. The global AI may select this tool only when RAG or trusted context provides a skillKey and the Skill matches the user's request; never guess a skillKey. First call action=load alone to read the current published version and Skill Markdown. For action=plan, combine the current request with relevant trusted conversation history and put the complete, self-contained automation request in input; known structured values may be supplied in parameterMap. Never substitute execution-only fields such as ip, param, runnerId, or toolName for planning input. The server generates, validates, and stores a pendingPlan. If plan returns clarification, collect missingParameterList from the user; in the next turn load the Skill again, then call plan with the complete input and supplemented parameterMap. When plan returns NEED_CONFIRM, wait for user confirmation and never call action=execute directly from the global AI. After confirmation, the server follows confirmedPlan.selectedMode: fixed must execute stepList exactly without adding, skipping, reordering, or retrying steps; agentic may select tools only from operationScopeList, must call only one AUTOEXEC_SKILL_TOOL per response and wait for the real observation, is limited to 20 calls, and cannot repeat the same tool with identical parameters. In a dedicated confirmed execution context, action=execute may use only the tools, Runner, target, and parameters fixed by the server plan. stepType=autoexec uses this tool and stepType=information uses the tool named by aiToolName. Use operationType=script for custom tools and tool for tool-library tools. Preserve $skillStepRef for cross-step references, use $autoexecRef for native Autoexec outputs, and use $agentCallRef with the actual callIndex when the same tool ran multiple times; never copy, guess, or fabricate results. In fixed mode only the final Autoexec step sets isLastStep=true; agentic cleanup is controlled by the server. Stop dependent steps after any failure, denial, additional confirmation, or reference validation failure; do not retry or claim overall success. The final answer must distinguish successful, failed, and unexecuted steps using real tool results. Produce a diagnostic report only when required by the Skill Markdown, and use only real observations as evidence.",
       "executefailed": "Autoexec tool execution failed",
       "invalidmcpresponse": "The MCP service returned an invalid response",
       "label": "Skill Autoexec Tool Executor",
       "missingrequestcontext": "No request context is available for calling the MCP service",
       "operationstart": "Starting Skill tool execution",
+      "planconfirm": "The Autoexec Skill Execution Plan Is Ready for Confirmation",
+      "planconfirmoption": "Confirm and Run This Plan",
       "skillloadstart": "Loading Skill content",
+      "skillplanstart": "Generating the Skill Execution Plan",
       "param": {
-        "action": "Action type. load reads the enabled published Skill Markdown by skillKey; execute runs one Autoexec operation from that Markdown.",
+        "action": "Action type. Global planning must call load and plan in order: load supplies only action and skillKey; plan supplies action, skillKey, a complete input, and an optional parameterMap; execute is used only inside a server-bound confirmed-plan context.",
         "includestdout": "Whether to return execution logs. Set to true only when the Skill Markdown explicitly requires logs; the server overrides it with the confirmed plan value during execution.",
-        "ip": "Target machine IP. Required only for target or runner_target tools; omit it for runner tools.",
+        "input": "A self-contained automation request assembled by the global AI from the current request and relevant trusted conversation history. Used only by action=plan, required when no valid parameterMap is provided, and limited to 4,000 characters. Include every known target and constraint here; do not omit them because execute-only fields are also present.",
+        "ip": "Target machine IP for execution. Use only with action=execute for target or runner_target tools; action=plan must not use this field instead of input or parameterMap.",
         "islaststep": "Whether this is the final execution step. Set it to true only for the final step so the execution context is cleaned after returning.",
-        "operationtype": "Operation type from the Skill. Use script for a custom tool and tool for a tool-library tool.",
-        "param": "Business parameters for the Autoexec tool. Use ordinary Skill values or $autoexecRef with tool, key, path, defaultValue, and onMissing to reference an earlier output.",
-        "runnerid": "Runner mapping ID selected in the execution plan. The server overrides it with the confirmed plan value during execution.",
-        "skillkey": "Skill Key selected from the RAG recall result. Required for load and execute.",
-        "skillversion": "Current published version returned by load. Required unchanged only for action=execute.",
-        "toolname": "Exact unique name of the custom tool or tool-library tool specified by the Skill."
+        "operationtype": "Skill operation type for execution. Used only by action=execute; use script for a custom tool and tool for a tool-library tool.",
+        "param": "Business parameters for execution. Used only by action=execute; use ordinary Skill values or $autoexecRef for prior outputs.",
+        "parametermap": "Structured planning values supplied by the user. Used only by action=plan; when supplementing a clarification, keys must come from missingParameterList. Do not substitute execution-only ip or param fields.",
+        "runnerid": "Runner mapping ID selected in the execution plan. Used only by action=execute and overridden by the confirmed server plan.",
+        "skillkey": "Skill Key selected from a RAG result or trusted context. Required for load, plan, and execute.",
+        "skillversion": "Current published version returned by load. action=plan inherits the version loaded in this turn, so omit it; action=execute must provide it unchanged.",
+        "toolname": "Exact unique custom-tool or tool-library name for execution. Used only by action=execute and must match the Skill."
       }
     },
     "execrtoolapi": {
