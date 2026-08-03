@@ -3128,6 +3128,7 @@
       "planconfirm": "The Autoexec Skill Execution Plan Is Ready for Confirmation",
       "planconfirmoption": "Confirm and Run This Plan",
       "skillloadstart": "Loading Skill content",
+      "skillexecutionstart": "Tool Execution",
       "skillplanstart": "Generating the Skill Execution Plan",
       "param": {
         "action": "Action type. Global planning must call load and plan in order: load supplies only action and skillKey; plan supplies action, skillKey, a complete input, and an optional parameterMap; execute is used only inside a server-bound confirmed-plan context.",
