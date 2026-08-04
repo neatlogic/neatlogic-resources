@@ -42,6 +42,7 @@
     "avatar": "头像",
     "basicauth": "Basic认证",
     "bearerauth": "Bearer Token",
+    "between": "属于",
     "boolean": "布尔型",
     "branch": "分支",
     "bug": "缺陷",
@@ -119,11 +120,13 @@
     "encoding": "编码",
     "enddate": "结束日期",
     "endtime": "结束时间",
+    "equal": "等于",
     "enum": "枚举",
     "errorinfo": "错误信息",
     "errormsg": "异常信息",
     "event": "事件",
     "example": "范例",
+    "exclude": "不包括",
     "excludeid": "排除id",
     "excludelist": "用于过滤回显参数",
     "execrtoolauthoritystatus": "直接执行权限状态",
@@ -154,6 +157,8 @@
     "focususerlist": "关注人列表",
     "focususeruuidlist": "关注人uuid列表",
     "form": "表单",
+    "greaterthan": "大于",
+    "greaterthanorequal": "大于等于",
     "group": "分组",
     "groupid": "组id",
     "grouplist": "限制接口返回类型",
@@ -167,6 +172,7 @@
     "icon": "图标",
     "id": "id",
     "importtargettype": "导入目标类型",
+    "include": "包括",
     "includelist": "用于需要回显参数",
     "index": "下标",
     "inittime": "初始化时间",
@@ -194,9 +200,11 @@
     "isfocus": "是否已关注",
     "ishidden": "是否隐藏",
     "islimit": "是否限制个数",
+    "isnull": "为空",
     "ismultiple": "是否多选",
     "ismycreated": "是否我创建",
     "isneedpage": "是否需要分页",
+    "isnotnull": "不为空",
     "isoverride": "是否覆盖",
     "isregister": "是否注册",
     "isrequired": "是否必填",
@@ -212,8 +220,11 @@
     "lastfinishtime": "最后一次完成时间",
     "lastfiretime": "最后一次激活时间",
     "layout": "布局",
+    "lessthan": "小于",
+    "lessthanorequal": "小于等于",
     "level": "层次",
     "lft": "左编码",
+    "like": "包含",
     "loadcommercialmodulefail": "加载商业版模块 {0} 失败, 请核对许可权限信息，联系厂商更换",
     "locktime": "锁定时间",
     "logger": {
@@ -223,6 +234,7 @@
     "long": "长整数",
     "mailaddress": "邮箱地址",
     "maintenanceman": "维护者",
+    "match": "包含（分词）",
     "matrix": "矩阵",
     "memo": "备注",
     "menu": "菜单",
@@ -247,6 +259,7 @@
     "nodeinfo": "节点信息",
     "nostatus": "无状态",
     "notifytype": "通知类型",
+    "notlike": "不包含",
     "notstart": "未开始",
     "notsynced": "未同步",
     "number": "数字",
@@ -388,6 +401,7 @@
     "typename": "类型名称",
     "typeuuid": "分类uuid",
     "uncommited": "未提交",
+    "unequal": "不等于",
     "unique": "唯一",
     "uniquename": "唯一标识",
     "unreadcount": "未读数量",
@@ -7296,6 +7310,65 @@
     },
     "listinspectappenvapi": {
       "getname": "获取发起应用巡检的环境列表"
+    }
+  },
+  "nmicac": {
+    "common": {"param": {"desc": {"conditionrulelist": "条件比较规则"}}},
+    "getinspectbaselinerulefieldapi": {
+      "getname": "获取基线条件规则字段",
+      "input": {"param": {"desc": {"schemaname": "巡检数据结构名称"}}},
+      "output": {"param": {"desc": {"fieldlist": "递归字段列表", "schemalist": "巡检数据结构列表"}}}
+    }
+  },
+  "nmicat": {
+    "common": {"param": {"desc": {"conditionrulelist": "条件比较规则"}}},
+    "saveinspectbaselinetemplateruleapi": {
+      "getname": "保存基线模板条件规则",
+      "input": {"param": {"desc": {"conditionrulelist": "当前层级本地条件规则", "templateid": "模板 ID"}}},
+      "output": {"param": {"desc": {"conditionrulelist": "继承合并后的条件规则"}}}
+    }
+  },
+  "nmics": {
+    "inspectbaselinetemplateservice": {
+      "message": {
+        "conditionruleconflict": "所选模板存在目标相同但配置不同的条件规则：{0}",
+        "conditionrulepermissiondenied": "没有基线模板条件规则编辑权限"
+      }
+    },
+    "inspectconditionruleservice": {
+      "message": {
+        "arraymissing": "采集数组字段不存在：{0}",
+        "arrayrefinvalid": "数组字段引用路径不合法：{0}",
+        "arraytargetmissing": "数组目标字段不存在：{0}",
+        "assertiondifferent": "命中分支“{0}”；目标字段“{1}”的实际值为 {2}，不满足目标断言“{3}”。",
+        "booleantypemismatch": "采集字段类型不匹配，期望布尔值：{0}",
+        "branchempty": "条件规则至少需要一个条件分支",
+        "branchinvalid": "条件规则分支不能为空",
+        "branchmultimatch": "存在多个条件分支同时命中",
+        "branchzeromatch": "没有条件分支命中",
+        "conditionempty": "条件配置不能为空",
+        "conditioninvalid": "条件字段和表达式不能为空",
+        "executionerror": "条件规则执行异常",
+        "expectedbooleaninvalid": "条件期望值不是布尔值：{0}",
+        "expectednumberinvalid": "条件期望值不是数字：{0}",
+        "expressionunsupported": "不支持的条件表达式：{0}",
+        "fieldmissing": "采集字段不存在：{0}",
+        "groupempty": "条件组不能为空",
+        "numbertypemismatch": "采集字段类型不匹配，期望数字：{0}",
+        "refduplicate": "条件规则字段引用重复或为空",
+        "refincomplete": "条件规则字段引用不完整",
+        "refmissing": "字段引用不存在",
+        "refundeclared": "条件引用了未声明的采集字段：{0}",
+        "schemaempty": "条件规则的数据结构不能为空",
+        "selectorfieldmissing": "数组定位条件字段缺失：{0}",
+        "selectormultimatch": "数组目标定位到多个元素：{0}",
+        "selectorzeromatch": "数组目标未定位：{0}",
+        "targetassertioninvalid": "目标断言只能引用当前规则的目标字段",
+        "targetduplicate": "条件规则目标重复：{0}",
+        "targetempty": "条件规则的目标字段不能为空",
+        "targetrefmissing": "条件规则目标字段引用不存在：{0}",
+        "unnamedbranch": "未命名分支"
+      }
     }
   },
   "nmice": {
