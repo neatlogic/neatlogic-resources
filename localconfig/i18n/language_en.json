@@ -12,6 +12,20 @@
     "cimodify": "Model modification"
   },
   "common": {
+    "between": "Between",
+    "equal": "Equal To",
+    "exclude": "Excludes",
+    "greaterthan": "Greater Than",
+    "greaterthanorequal": "Greater Than or Equal To",
+    "include": "Includes",
+    "isnotnull": "Is Not Empty",
+    "isnull": "Is Empty",
+    "lessthan": "Less Than",
+    "lessthanorequal": "Less Than or Equal To",
+    "like": "Contains",
+    "match": "Matches",
+    "notlike": "Does Not Contain",
+    "unequal": "Not Equal To",
     "aborted": "Aborted",
     "account": "Account",
     "action": "action",
@@ -11957,6 +11971,102 @@
     },
     "tenant": {
       "name": "Tenant"
+    }
+  },
+  "nmicac": {
+    "common": {
+      "param": {
+        "desc": {
+          "conditionrulelist": "Conditional comparison rules"
+        }
+      }
+    },
+    "getinspectbaselinerulefieldapi": {
+      "getname": "Get Baseline Conditional Rule Fields",
+      "input": {
+        "param": {
+          "desc": {
+            "schemaname": "Inspection data schema name"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "fieldlist": "Recursive field list",
+            "schemalist": "Inspection data schema list"
+          }
+        }
+      }
+    }
+  },
+  "nmicat": {
+    "common": {
+      "param": {
+        "desc": {
+          "conditionrulelist": "Conditional comparison rules"
+        }
+      }
+    },
+    "saveinspectbaselinetemplateruleapi": {
+      "getname": "Save Baseline Template Conditional Rules",
+      "input": {
+        "param": {
+          "desc": {
+            "conditionrulelist": "Local conditional rules at the current level",
+            "templateid": "Template ID"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "conditionrulelist": "Merged inherited conditional rules"
+          }
+        }
+      }
+    }
+  },
+  "nmics": {
+    "inspectbaselinetemplateservice": {
+      "message": {
+        "conditionruleconflict": "Selected templates contain different conditional rule configurations for the same target: {0}",
+        "conditionrulepermissiondenied": "You do not have permission to edit baseline template conditional rules"
+      }
+    },
+    "inspectconditionruleservice": {
+      "message": {
+        "arraymissing": "Collected array field does not exist: {0}",
+        "arrayrefinvalid": "Invalid array field reference path: {0}",
+        "arraytargetmissing": "Array target field does not exist: {0}",
+        "assertiondifferent": "Matched branch \"{0}\"; the actual value of target field \"{1}\" is {2}, which does not satisfy the target assertion \"{3}\".",
+        "booleantypemismatch": "Collected field type mismatch; expected Boolean: {0}",
+        "branchempty": "A conditional rule must contain at least one branch",
+        "branchinvalid": "A conditional rule branch cannot be empty",
+        "branchmultimatch": "Multiple conditional branches matched",
+        "conditionempty": "Condition configuration cannot be empty",
+        "conditioninvalid": "Condition field and expression are required",
+        "executionerror": "Conditional rule execution failed",
+        "expectedbooleaninvalid": "Condition expected value is not Boolean: {0}",
+        "expectednumberinvalid": "Condition expected value is not numeric: {0}",
+        "expressionunsupported": "Unsupported condition expression: {0}",
+        "fieldmissing": "Collected field does not exist: {0}",
+        "groupempty": "Condition group cannot be empty",
+        "numbertypemismatch": "Collected field type mismatch; expected Number: {0}",
+        "refduplicate": "Conditional rule field references contain a duplicate or empty reference",
+        "refincomplete": "Conditional rule field reference is incomplete",
+        "refmissing": "Field reference does not exist",
+        "refundeclared": "Condition references an undeclared collected field: {0}",
+        "schemaempty": "The conditional rule data schema is required",
+        "selectorfieldmissing": "Array selector field is missing: {0}",
+        "selectormultimatch": "Array selector matched multiple elements: {0}",
+        "selectorzeromatch": "Array selector matched no element: {0}",
+        "targetassertioninvalid": "The target assertion may only reference the current rule target field",
+        "targetduplicate": "Duplicate conditional rule target: {0}",
+        "targetempty": "The conditional rule target field is required",
+        "targetrefmissing": "Conditional rule target field reference does not exist: {0}",
+        "unnamedbranch": "Unnamed Branch"
+      }
     }
   }
 }
