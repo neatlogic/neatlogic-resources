@@ -2451,10 +2451,6 @@
           "description": "Generate the final Fixed-mode summary from the actual tool execution trace and execution ledger",
           "label": "Automation Fixed Execution Summary Assistant"
         },
-        "skillplanning": {
-          "description": "Load published Skill content and generate a structured execution plan for user confirmation",
-          "label": "Automation Skill Planning Assistant"
-        },
         "joblog": {
           "description": "Analyze automation job issues with selected logs, job context, and knowledge bases",
           "label": "Automation Job Log Analysis Assistant"
@@ -2462,6 +2458,10 @@
         "script": {
           "description": "Explain, generate, modify, and fix automation scripts with editor context",
           "label": "Automation Script Assistant"
+        },
+        "skillplanning": {
+          "description": "Load published Skill content and generate a structured execution plan for user confirmation",
+          "label": "Automation Skill Planning Assistant"
         },
         "toolrecommend": {
           "description": "Recommend tool library tools from phase context and the authorized candidate pool",
@@ -2782,28 +2782,6 @@
         "toolunauthorized": "The tool does not exist or is not authorized"
       }
     },
-    "chatwithaiapi": {
-      "name": "AI Chat",
-      "param": {
-        "activetoolidlist": "Enabled tool instance ID list for this session",
-        "filelist": "Document attachment list",
-        "imagelist": "Image list",
-        "input": "Content",
-        "projectid": "Project ID; applies when starting a new chat",
-        "sessionid": "Session ID; omit to start a new chat"
-      }
-    },
-    "confirmaichattoolapi": {
-      "name": "Confirm AI Chat Tool Call",
-      "param": {
-        "confirmed": "Whether to confirm",
-        "decision": "Confirmation action: confirm, adjust, or cancel",
-        "messageid": "Pending message ID",
-        "optionindex": "Confirmation option index; required when multiple options are available",
-        "rejectreason": "Rejection reason or additional instructions",
-        "sessionid": "Session ID"
-      }
-    },
     "aitool": {
       "executeaiworkflowtool": {
         "desc": {
@@ -2876,12 +2854,12 @@
           "nodataset": "No available knowledge base is configured for the current tool instance",
           "nohit": "No relevant content was found in the knowledge base"
         },
+        "output": {
+          "bestmatch": "Best matched object; contains content, score, and source metadata",
+          "matches": "Matched result list; each item contains content, score, and source metadata"
+        },
         "param": {
           "query": "User question or search query"
-        },
-        "output": {
-          "matches": "Matched result list; each item contains content, score, and source metadata",
-          "bestmatch": "Best matched object; contains content, score, and source metadata"
         }
       },
       "readattachmentcontenttool": {
@@ -2960,11 +2938,33 @@
         }
       }
     },
+    "chatwithaiapi": {
+      "name": "AI Chat",
+      "param": {
+        "activetoolidlist": "Enabled tool instance ID list for this session",
+        "filelist": "Document attachment list",
+        "imagelist": "Image list",
+        "input": "Content",
+        "projectid": "Project ID; applies when starting a new chat",
+        "sessionid": "Session ID; omit to start a new chat"
+      }
+    },
     "common": {
       "param": {
         "desc": {
           "datasetid": "Dataset ID"
         }
+      }
+    },
+    "confirmaichattoolapi": {
+      "name": "Confirm AI Chat Tool Call",
+      "param": {
+        "confirmed": "Whether to confirm",
+        "decision": "Confirmation action: confirm, adjust, or cancel",
+        "messageid": "Pending message ID",
+        "optionindex": "Confirmation option index; required when multiple options are available",
+        "rejectreason": "Rejection reason or additional instructions",
+        "sessionid": "Session ID"
       }
     },
     "getdocumentonlinetreeforselectapi": {
@@ -3008,143 +3008,143 @@
   },
   "nmautoexec": {
     "autoexecskill": "Autoexec Skill",
-    "autoexecskillkey": "Skill Key",
-    "autoexecskillkeydescription": "Unique English Skill identifier",
-    "autoexecskilltitledescription": "Skill title",
-    "autoexecskilldescriptiondescription": "Skill description",
-    "autoexecskillpublishstatus": "Publish Failure Status",
-    "autoexecskillstatusdraft": "Draft",
-    "autoexecskillstatussubmitted": "Pending Review",
-    "autoexecskillstatusrejected": "Rejected",
-    "autoexecskillhistoricalversion": "History",
-    "autoexecskillsearchapi": "Search Autoexec Skills",
-    "autoexecskillgetapi": "Get Autoexec Skill Details",
-    "autoexecskillsaveapi": "Save Autoexec Skill",
-    "autoexecskillbaseinfoupdateapi": "Update Autoexec Skill Basic Information",
-    "autoexecskillsubmitapi": "Submit Autoexec Skill",
-    "autoexecskillrevokeapi": "Revoke Autoexec Skill Submission",
-    "autoexecskillreviewapi": "Review Autoexec Skill",
-    "autoexecskillenabledupdateapi": "Update Autoexec Skill Enabled Status",
-    "autoexecskillversionlistapi": "Search Autoexec Skill Versions",
-    "autoexecskillauditlistapi": "Search Autoexec Skill Activities",
+    "autoexecskillactionnotallowedexception": "Skill action \"{0}\" is not allowed in status \"{1}\"",
+    "autoexecskillagenticactioninvalid": "Confirmed Agentic execution only allows action\u003dexecute; received \"{0}\"",
+    "autoexecskillagenticcalllimit": "Agentic execution reached the maximum of {0} tool calls",
+    "autoexecskillagenticduplicate": "The second call to tool \"{0}\" with identical parameters was blocked",
+    "autoexecskillagenticemptyanswerfallback": "The model still returned no final report after one retry. The server generated the following execution evidence from real tool results without inferring a root cause:",
+    "autoexecskillagenticfailedreport": "Execution failed: tool \"{0}\" failed because {1}. Diagnosis stopped without a trustworthy root-cause conclusion.",
+    "autoexecskillagenticfirstcallrequired": "No tool has run. Select the first tool from the confirmed scope using the Skill Markdown instead of returning a conclusion.",
+    "autoexecskillagentichalted": "Agentic execution stopped because the previous tool failed",
+    "autoexecskillagenticledger": "Actual execution ledger:",
+    "autoexecskillagenticonecallperturn": "Agentic mode executes one tool per turn; read this observation before deciding again",
+    "autoexecskillagenticparamrequired": "Tool \"{0}\" is missing required input parameter \"{1}\"",
+    "autoexecskillagenticparamtype": "Input parameter \"{1}\" of tool \"{0}\" has an incompatible type",
+    "autoexecskillagenticparamunknown": "Tool \"{0}\" has no input parameter \"{1}\"",
+    "autoexecskillagenticrefinvalid": "An Agentic output reference must target a valid field of a tool that already succeeded in this run",
+    "autoexecskillagenticscopeinvalid": "The Agentic execution scope lacks trusted parameter bindings required by the current version; create a new plan",
+    "autoexecskillagentictoolchanged": "The active definition or execution mode of tool \"{0}\" changed",
+    "autoexecskillagentictoolinvalid": "Agentic execution can only call AUTOEXEC_SKILL_TOOL",
+    "autoexecskillagentictooloutofscope": "Tool \"{0}\" is outside the confirmed Agentic execution scope",
     "autoexecskillaiexecuteapi": "Execute Autoexec Skill with AI",
     "autoexecskillaiexecutequestion": "AI Execution Question",
     "autoexecskillaiexecutequestionrequired": "Enter the AI execution request",
+    "autoexecskillauditlistapi": "Search Autoexec Skill Activities",
+    "autoexecskillbaseinfoupdateapi": "Update Autoexec Skill Basic Information",
+    "autoexecskillcannotsubmitexception": "A Skill version in status \"{0}\" cannot be submitted",
+    "autoexecskillcontenthashconflictexception": "Skill content hash \"{0}\" conflicts with existing content",
+    "autoexecskillcurrentnotrecalledexception": "The current Autoexec Skill \"{0}\" was not recalled; execution stopped",
+    "autoexecskilldescriptiondescription": "Skill description",
+    "autoexecskilldisabledexception": "Autoexec Skill \"{0}\" is disabled",
+    "autoexecskillenabledupdateapi": "Update Autoexec Skill Enabled Status",
+    "autoexecskillexecutionscopeexception": "This request may only execute published version \"{1}\" of Autoexec Skill \"{0}\"",
+    "autoexecskillfixedfallbackfailed": "Skill execution did not fully succeed: {0} succeeded, {1} failed, and {2} were not executed out of {3} steps. The AI summary is temporarily unavailable; these statuses come from the server\u0027s actual execution records.",
+    "autoexecskillfixedfallbacksuccess": "Skill execution completed: {0} of {1} steps succeeded. The AI summary is temporarily unavailable; these statuses come from the server\u0027s actual execution records.",
+    "autoexecskillgetapi": "Get Autoexec Skill Details",
+    "autoexecskillglobalplanrequired": "A Server-Generated Execution Plan Must Be Confirmed Before the Global AI Can Run an Autoexec Skill",
+    "autoexecskillhassubmittedversionexception": "This Skill already has another version pending review",
+    "autoexecskillhistoricalversion": "History",
+    "autoexecskillkey": "Skill Key",
+    "autoexecskillkeydescription": "Unique English Skill identifier",
+    "autoexecskillloadrequired": "The Global AI Must Load the Same Skill\u0027s Current Published Version Before Planning",
+    "autoexecskillnotfoundexception": "Autoexec Skill \"{0}\" does not exist",
+    "autoexecskillnotpublishedexception": "Autoexec Skill \"{0}\" is not published",
     "autoexecskillplanapi": "Plan Autoexec Skill Execution",
-    "autoexecskillplantoken": "Skill Execution Plan Token",
-    "autoexecskillplantokenrequired": "Confirm the Skill execution plan first",
-    "autoexecskillplantokeninvalid": "The Skill execution plan token is invalid; create a new plan",
-    "autoexecskillplantokenexpired": "The Skill execution plan expired or its published version changed; create a new plan",
-    "autoexecskillplaninvalid": "The Skill execution plan is invalid; create a new plan",
+    "autoexecskillplanexecuteprohibited": "Business tools cannot run during Skill planning",
     "autoexecskillplanexpired": "The Skill execution plan expired, changed state, or its published version was updated; create a new plan",
+    "autoexecskillplanincomplete": "The confirmed Skill execution plan is incomplete. Call the tool for the next step, \"{0}\", now; do not output the final summary.",
+    "autoexecskillplaninvalid": "The Skill execution plan is invalid; create a new plan",
     "autoexecskillplaninvalidwithreason": "The Skill execution plan is invalid: {0}. Create a new plan",
-    "autoexecskillplanreasonjsoninvalid": "the plan content is not a valid JSON object",
-    "autoexecskillplanreasonplannull": "the plan content is empty",
-    "autoexecskillplanreasonresulttype": "planning result type \"{0}\" is invalid",
-    "autoexecskillplanreasonclarificationmissing": "the clarification result has no required parameter for the user to provide",
-    "autoexecskillplanreasonparamcountlimit": "the missing parameter count cannot exceed {0}",
-    "autoexecskillplanreasonparamnamelimit": "a missing parameter name cannot exceed {0} characters",
-    "autoexecskillplanreasonsteplistinvalid": "the step list has an invalid format",
-    "autoexecskillplanreasonstepempty": "the step list is empty",
-    "autoexecskillplanreasonsteplimit": "the step count cannot exceed {0}; the current count is {1}",
-    "autoexecskillplanreasonstepinvalid": "step {0} is not a valid step object",
-    "autoexecskillplanreasonoperationmissing": "step {0} is missing the tool type or tool name",
-    "autoexecskillplanreasonexecmodemissing": "tool \"{1}\" in step {0} has no execution mode",
-    "autoexecskillplanreasonrunnerid": "the runner ID in step {0} has an invalid format",
-    "autoexecskillplanreasonreferenceexpression": "step {0} contains a string step reference; use a structured object instead",
-    "autoexecskillplanreasonskillrefstructure": "the cross-step reference in step {0} has an invalid structure",
-    "autoexecskillplanreasonskillrefsource": "the cross-step reference in step {0} is missing a valid prior step or output field",
-    "autoexecskillplanreasonskillrefstep": "source step {1}, referenced by step {0}, does not exist",
-    "autoexecskillplanreasonoutputkey": "output field \"{1}\", referenced by step {0}, is not declared by the tool in source step {2}",
     "autoexecskillplanreasonautoreference": "the tool output reference in step {0} has an invalid structure",
     "autoexecskillplanreasonautoreferencefield": "the tool output reference in step {0} is missing the tool name or output field",
     "autoexecskillplanreasonautoreferencesource": "tool \"{1}\", referenced by step {0}, has no available preceding execution step",
+    "autoexecskillplanreasonclarificationmissing": "the clarification result has no required parameter for the user to provide",
+    "autoexecskillplanreasondependency": "dependency \"{1}\" in step {0} is not a valid prior step index",
+    "autoexecskillplanreasonexecmodemissing": "tool \"{1}\" in step {0} has no execution mode",
+    "autoexecskillplanreasoninformationtool": "information tool \"{1}\" in step {0} does not exist or is unavailable",
+    "autoexecskillplanreasonjsoninvalid": "the plan content is not a valid JSON object",
+    "autoexecskillplanreasonmisplacedrefambiguous": "the data reference misplaced in the dependency list of step {0} cannot be mapped uniquely to one missing required parameter",
+    "autoexecskillplanreasononmissing": "reference missing-value policy \"{1}\" in step {0} is not supported",
+    "autoexecskillplanreasonoperationmissing": "step {0} is missing the tool type or tool name",
+    "autoexecskillplanreasonoperationtype": "tool type \"{1}\" in step {0} is not supported",
+    "autoexecskillplanreasonoutputkey": "output field \"{1}\", referenced by step {0}, is not declared by the tool in source step {2}",
+    "autoexecskillplanreasonparamcountlimit": "the missing parameter count cannot exceed {0}",
+    "autoexecskillplanreasonparamnamelimit": "a missing parameter name cannot exceed {0} characters",
     "autoexecskillplanreasonpathdatatype": "the reference path in step {0} must be a string",
     "autoexecskillplanreasonpathinvalid": "reference path \"{1}\" in step {0} has an invalid format",
-    "autoexecskillplanreasononmissing": "reference missing-value policy \"{1}\" in step {0} is not supported",
+    "autoexecskillplanreasonplannull": "the plan content is empty",
+    "autoexecskillplanreasonreferenceexpression": "step {0} contains a string step reference; use a structured object instead",
+    "autoexecskillplanreasonresulttype": "planning result type \"{0}\" is invalid",
+    "autoexecskillplanreasonrunnerid": "the runner ID in step {0} has an invalid format",
     "autoexecskillplanreasonrunnerupdate": "step {0} cannot be updated to the specified runner",
+    "autoexecskillplanreasonskillrefsource": "the cross-step reference in step {0} is missing a valid prior step or output field",
+    "autoexecskillplanreasonskillrefstep": "source step {1}, referenced by step {0}, does not exist",
+    "autoexecskillplanreasonskillrefstructure": "the cross-step reference in step {0} has an invalid structure",
+    "autoexecskillplanreasonstepempty": "the step list is empty",
+    "autoexecskillplanreasonstepinvalid": "step {0} is not a valid step object",
+    "autoexecskillplanreasonsteplimit": "the step count cannot exceed {0}; the current count is {1}",
+    "autoexecskillplanreasonsteplistinvalid": "the step list has an invalid format",
     "autoexecskillplanreasonstepnotfound": "step {0} was not found in the plan",
-    "autoexecskillplanreasoninformationtool": "information tool \"{1}\" in step {0} does not exist or is unavailable",
     "autoexecskillplanreasontoolnotfound": "tool \"{1}\" in step {0} does not exist, is inactive, or is unavailable",
-    "autoexecskillplanreasonoperationtype": "tool type \"{1}\" in step {0} is not supported",
-    "autoexecskillplanreasondependency": "dependency \"{1}\" in step {0} is not a valid prior step index",
-    "autoexecskillplanreasonmisplacedrefambiguous": "the data reference misplaced in the dependency list of step {0} cannot be mapped uniquely to one missing required parameter",
-    "autoexecskillplanexecuteprohibited": "Business tools cannot run during Skill planning",
     "autoexecskillplanstepinvalid": "This tool call does not match the confirmed Skill execution plan",
-    "autoexecskillrefparamtypemismatch": "The result referenced by parameter \"{1}\" in step {0} from \"{2}\" is incompatible with target parameter type \"{3}\"",
-    "autoexecskillstepskipped": "Previous step {0} failed; step {1} was not executed",
-    "autoexecskillunknownstepskipped": "A previous step failed; the out-of-plan call was not executed",
-    "autoexecskillplanincomplete": "The confirmed Skill execution plan is incomplete. Call the tool for the next step, \"{0}\", now; do not output the final summary.",
-    "autoexecskillruntimeunavailable": "AI tool \"{0}\" in the plan was disabled, removed, or is unavailable",
-    "autoexecskillfixedfallbacksuccess": "Skill execution completed: {0} of {1} steps succeeded. The AI summary is temporarily unavailable; these statuses come from the server's actual execution records.",
-    "autoexecskillfixedfallbackfailed": "Skill execution did not fully succeed: {0} succeeded, {1} failed, and {2} were not executed out of {3} steps. The AI summary is temporarily unavailable; these statuses come from the server's actual execution records.",
-    "autoexecskillagenticcalllimit": "Agentic execution reached the maximum of {0} tool calls",
-    "autoexecskillagentichalted": "Agentic execution stopped because the previous tool failed",
-    "autoexecskillagenticactioninvalid": "Confirmed Agentic execution only allows action=execute; received \"{0}\"",
-    "autoexecskillagentictoolinvalid": "Agentic execution can only call AUTOEXEC_SKILL_TOOL",
-    "autoexecskillagentictooloutofscope": "Tool \"{0}\" is outside the confirmed Agentic execution scope",
-    "autoexecskillagentictoolchanged": "The active definition or execution mode of tool \"{0}\" changed",
-    "autoexecskillagenticduplicate": "The second call to tool \"{0}\" with identical parameters was blocked",
-    "autoexecskillagenticonecallperturn": "Agentic mode executes one tool per turn; read this observation before deciding again",
-    "autoexecskillagenticfirstcallrequired": "No tool has run. Select the first tool from the confirmed scope using the Skill Markdown instead of returning a conclusion.",
-    "autoexecskillagenticemptyanswerfallback": "The model still returned no final report after one retry. The server generated the following execution evidence from real tool results without inferring a root cause:",
-    "autoexecskillagenticscopeinvalid": "The Agentic execution scope lacks trusted parameter bindings required by the current version; create a new plan",
-    "autoexecskillagenticfailedreport": "Execution failed: tool \"{0}\" failed because {1}. Diagnosis stopped without a trustworthy root-cause conclusion.",
-    "autoexecskillagenticledger": "Actual execution ledger:",
-    "autoexecskillagenticparamunknown": "Tool \"{0}\" has no input parameter \"{1}\"",
-    "autoexecskillagenticparamtype": "Input parameter \"{1}\" of tool \"{0}\" has an incompatible type",
-    "autoexecskillagenticparamrequired": "Tool \"{0}\" is missing required input parameter \"{1}\"",
-    "autoexecskillagenticrefinvalid": "An Agentic output reference must target a valid field of a tool that already succeeded in this run",
-    "autoexecskillcurrentnotrecalledexception": "The current Autoexec Skill \"{0}\" was not recalled; execution stopped",
-    "autoexecskillexecutionscopeexception": "This request may only execute published version \"{1}\" of Autoexec Skill \"{0}\"",
-    "autoexecskillnotfoundexception": "Autoexec Skill \"{0}\" does not exist",
-    "autoexecskillversionnotfoundexception": "Autoexec Skill version \"{0}\" does not exist",
-    "autoexecskillukinvalidexception": "Skill Key \"{0}\" is invalid; use letters and underscores and start with a letter",
-    "autoexecskillukrepeatexception": "Skill Key \"{0}\" already exists",
-    "autoexecskillukimmutableexception": "Skill Key cannot be changed after creation",
-    "autoexecskillversionnoteditableexception": "A Skill version in status \"{0}\" cannot be edited",
-    "autoexecskillcannotsubmitexception": "A Skill version in status \"{0}\" cannot be submitted",
-    "autoexecskillhassubmittedversionexception": "This Skill already has another version pending review",
-    "autoexecskillreviewactioninvalidexception": "Unsupported Skill review action \"{0}\"",
-    "autoexecskillnotpublishedexception": "Autoexec Skill \"{0}\" is not published",
-    "autoexecskilldisabledexception": "Autoexec Skill \"{0}\" is disabled",
-    "autoexecskillversionchangedexception": "The published version of Autoexec Skill \"{0}\" changed; confirm the execution plan again",
-    "autoexecskillstatusinvalidexception": "The current Skill status is \"{0}\"; expected \"{1}\"",
-    "autoexecskillactionnotallowedexception": "Skill action \"{0}\" is not allowed in status \"{1}\"",
-    "autoexecskillcontenthashconflictexception": "Skill content hash \"{0}\" conflicts with existing content",
+    "autoexecskillplantoken": "Skill Execution Plan Token",
+    "autoexecskillplantokenexpired": "The Skill execution plan expired or its published version changed; create a new plan",
+    "autoexecskillplantokeninvalid": "The Skill execution plan token is invalid; create a new plan",
+    "autoexecskillplantokenrequired": "Confirm the Skill execution plan first",
+    "autoexecskillpublishstatus": "Publish Failure Status",
     "autoexecskillragdatasetnotfoundexception": "No Autoexec Skill RAG dataset has been created",
+    "autoexecskillragdeleteverifyexception": "Read-back verification failed after unpublishing Autoexec Skill \"{0}\"",
     "autoexecskillragunavailableexception": "The Autoexec Skill RAG service is unavailable",
     "autoexecskillragverifyexception": "Read-back verification failed after publishing Autoexec Skill \"{0}\"",
-    "autoexecskillragdeleteverifyexception": "Read-back verification failed after unpublishing Autoexec Skill \"{0}\"",
-    "autoexecskillglobalplanrequired": "A Server-Generated Execution Plan Must Be Confirmed Before the Global AI Can Run an Autoexec Skill",
-    "autoexecskillloadrequired": "The Global AI Must Load the Same Skill's Current Published Version Before Planning",
+    "autoexecskillrefparamtypemismatch": "The result referenced by parameter \"{1}\" in step {0} from \"{2}\" is incompatible with target parameter type \"{3}\"",
+    "autoexecskillreviewactioninvalidexception": "Unsupported Skill review action \"{0}\"",
+    "autoexecskillreviewapi": "Review Autoexec Skill",
+    "autoexecskillrevokeapi": "Revoke Autoexec Skill Submission",
+    "autoexecskillruntimeunavailable": "AI tool \"{0}\" in the plan was disabled, removed, or is unavailable",
+    "autoexecskillsaveapi": "Save Autoexec Skill",
+    "autoexecskillsearchapi": "Search Autoexec Skills",
+    "autoexecskillstatusdraft": "Draft",
+    "autoexecskillstatusinvalidexception": "The current Skill status is \"{0}\"; expected \"{1}\"",
+    "autoexecskillstatusrejected": "Rejected",
+    "autoexecskillstatussubmitted": "Pending Review",
+    "autoexecskillstepskipped": "Previous step {0} failed; step {1} was not executed",
+    "autoexecskillsubmitapi": "Submit Autoexec Skill",
+    "autoexecskilltitledescription": "Skill title",
     "autoexecskilltool": {
-      "description": "Autoexec Skill planning and execution tool. The global AI may select this tool only when RAG or trusted context provides a skillKey and the Skill matches the user's request; never guess a skillKey. First call action=load alone to read the current published version and Skill Markdown. For action=plan, combine the current request with relevant trusted conversation history and put the complete, self-contained automation request in input; known structured values may be supplied in parameterMap. Never substitute execution-only fields such as ip, param, runnerId, or toolName for planning input. The server generates, validates, and stores a pendingPlan. If plan returns clarification, collect missingParameterList from the user; in the next turn load the Skill again, then call plan with the complete input and supplemented parameterMap. When plan returns NEED_CONFIRM, wait for user confirmation and never call action=execute directly from the global AI. After confirmation, the server follows confirmedPlan.selectedMode: fixed must execute stepList exactly without adding, skipping, reordering, or retrying steps; agentic may select tools only from operationScopeList, must call only one AUTOEXEC_SKILL_TOOL per response and wait for the real observation, is limited to 20 calls, and cannot repeat the same tool with identical parameters. In a dedicated confirmed execution context, action=execute may use only the tools, Runner, target, and parameters fixed by the server plan. stepType=autoexec uses this tool and stepType=information uses the tool named by aiToolName. Use operationType=script for custom tools and tool for tool-library tools. Preserve $skillStepRef for cross-step references, use $autoexecRef for native Autoexec outputs, and use $agentCallRef with the actual callIndex when the same tool ran multiple times; never copy, guess, or fabricate results. In fixed mode only the final Autoexec step sets isLastStep=true; agentic cleanup is controlled by the server. Stop dependent steps after any failure, denial, additional confirmation, or reference validation failure; do not retry or claim overall success. The final answer must distinguish successful, failed, and unexecuted steps using real tool results. Produce a diagnostic report only when required by the Skill Markdown, and use only real observations as evidence.",
+      "description": "Autoexec Skill planning and execution tool. The global AI may select this tool only when RAG or trusted context provides a skillKey and the Skill matches the user\u0027s request; never guess a skillKey. First call action\u003dload alone to read the current published version and Skill Markdown. For action\u003dplan, combine the current request with relevant trusted conversation history and put the complete, self-contained automation request in input; known structured values may be supplied in parameterMap. Never substitute execution-only fields such as ip, param, runnerId, or toolName for planning input. The server generates, validates, and stores a pendingPlan. If plan returns clarification, collect missingParameterList from the user; in the next turn load the Skill again, then call plan with the complete input and supplemented parameterMap. When plan returns NEED_CONFIRM, wait for user confirmation and never call action\u003dexecute directly from the global AI. After confirmation, the server follows confirmedPlan.selectedMode: fixed must execute stepList exactly without adding, skipping, reordering, or retrying steps; agentic may select tools only from operationScopeList, must call only one AUTOEXEC_SKILL_TOOL per response and wait for the real observation, is limited to 20 calls, and cannot repeat the same tool with identical parameters. In a dedicated confirmed execution context, action\u003dexecute may use only the tools, Runner, target, and parameters fixed by the server plan. stepType\u003dautoexec uses this tool and stepType\u003dinformation uses the tool named by aiToolName. Use operationType\u003dscript for custom tools and tool for tool-library tools. Preserve $skillStepRef for cross-step references, use $autoexecRef for native Autoexec outputs, and use $agentCallRef with the actual callIndex when the same tool ran multiple times; never copy, guess, or fabricate results. In fixed mode only the final Autoexec step sets isLastStep\u003dtrue; agentic cleanup is controlled by the server. Stop dependent steps after any failure, denial, additional confirmation, or reference validation failure; do not retry or claim overall success. The final answer must distinguish successful, failed, and unexecuted steps using real tool results. Produce a diagnostic report only when required by the Skill Markdown, and use only real observations as evidence.",
       "executefailed": "Autoexec tool execution failed",
       "invalidmcpresponse": "The MCP service returned an invalid response",
       "label": "Skill Autoexec Tool Executor",
       "missingrequestcontext": "No request context is available for calling the MCP service",
       "operationstart": "Starting Skill tool execution",
-      "planconfirm": "The Autoexec Skill Execution Plan Is Ready for Confirmation",
-      "planconfirmoption": "Confirm and Run This Plan",
-      "skillloadstart": "Loading Skill content",
-      "skillexecutionstart": "Tool Execution",
-      "skillplanstart": "Generating the Skill Execution Plan",
       "param": {
         "action": "Action type. Global planning must call load and plan in order: load supplies only action and skillKey; plan supplies action, skillKey, a complete input, and an optional parameterMap; execute is used only inside a server-bound confirmed-plan context.",
         "includestdout": "Whether to return execution logs. Set to true only when the Skill Markdown explicitly requires logs; the server overrides it with the confirmed plan value during execution.",
-        "input": "A self-contained automation request assembled by the global AI from the current request and relevant trusted conversation history. Used only by action=plan, required when no valid parameterMap is provided, and limited to 4,000 characters. Include every known target and constraint here; do not omit them because execute-only fields are also present.",
-        "ip": "Target machine IP for execution. Use only with action=execute for target or runner_target tools; action=plan must not use this field instead of input or parameterMap.",
+        "input": "A self-contained automation request assembled by the global AI from the current request and relevant trusted conversation history. Used only by action\u003dplan, required when no valid parameterMap is provided, and limited to 4,000 characters. Include every known target and constraint here; do not omit them because execute-only fields are also present.",
+        "ip": "Target machine IP for execution. Use only with action\u003dexecute for target or runner_target tools; action\u003dplan must not use this field instead of input or parameterMap.",
         "islaststep": "Whether this is the final execution step. Set it to true only for the final step so the execution context is cleaned after returning.",
-        "operationtype": "Skill operation type for execution. Used only by action=execute; use script for a custom tool and tool for a tool-library tool.",
-        "param": "Business parameters for execution. Used only by action=execute; use ordinary Skill values or $autoexecRef for prior outputs.",
-        "parametermap": "Structured planning values supplied by the user. Used only by action=plan; when supplementing a clarification, keys must come from missingParameterList. Do not substitute execution-only ip or param fields.",
-        "runnerid": "Runner mapping ID selected in the execution plan. Used only by action=execute and overridden by the confirmed server plan.",
+        "operationtype": "Skill operation type for execution. Used only by action\u003dexecute; use script for a custom tool and tool for a tool-library tool.",
+        "param": "Business parameters for execution. Used only by action\u003dexecute; use ordinary Skill values or $autoexecRef for prior outputs.",
+        "parametermap": "Structured planning values supplied by the user. Used only by action\u003dplan; when supplementing a clarification, keys must come from missingParameterList. Do not substitute execution-only ip or param fields.",
+        "runnerid": "Runner mapping ID selected in the execution plan. Used only by action\u003dexecute and overridden by the confirmed server plan.",
         "skillkey": "Skill Key selected from a RAG result or trusted context. Required for load, plan, and execute.",
-        "skillversion": "Current published version returned by load. action=plan inherits the version loaded in this turn, so omit it; action=execute must provide it unchanged.",
-        "toolname": "Exact unique custom-tool or tool-library name for execution. Used only by action=execute and must match the Skill."
-      }
+        "skillversion": "Current published version returned by load. action\u003dplan inherits the version loaded in this turn, so omit it; action\u003dexecute must provide it unchanged.",
+        "toolname": "Exact unique custom-tool or tool-library name for execution. Used only by action\u003dexecute and must match the Skill."
+      },
+      "planconfirm": "The Autoexec Skill Execution Plan Is Ready for Confirmation",
+      "planconfirmoption": "Confirm and Run This Plan",
+      "skillexecutionstart": "Tool Execution",
+      "skillloadstart": "Loading Skill content",
+      "skillplanstart": "Generating the Skill Execution Plan"
     },
+    "autoexecskillukimmutableexception": "Skill Key cannot be changed after creation",
+    "autoexecskillukinvalidexception": "Skill Key \"{0}\" is invalid; use letters and underscores and start with a letter",
+    "autoexecskillukrepeatexception": "Skill Key \"{0}\" already exists",
+    "autoexecskillunknownstepskipped": "A previous step failed; the out-of-plan call was not executed",
+    "autoexecskillversionchangedexception": "The published version of Autoexec Skill \"{0}\" changed; confirm the execution plan again",
+    "autoexecskillversionlistapi": "Search Autoexec Skill Versions",
+    "autoexecskillversionnoteditableexception": "A Skill version in status \"{0}\" cannot be edited",
+    "autoexecskillversionnotfoundexception": "Autoexec Skill version \"{0}\" does not exist",
     "execrtoolapi": {
       "param": {
         "jobid": "Cross-step execution context Snowflake ID",
@@ -4020,6 +4020,13 @@
     },
     "dataconversionleftjointablehasmultiplerowsofdataexception": {
       "dataconversionleftjointablehasmultiplerowsofdataexception_a": "The associated table component: {0} obtains multiple rows of data, and the resulting data is: {1}"
+    }
+  },
+  "nmccps": {
+    "cmdbcommercialprocessstephandlertype": {
+      "name": {
+        "dataconversion": "data conversion"
+      }
     }
   },
   "nmcdac": {
@@ -5298,7 +5305,7 @@
       "failedsubprocessdesc": "Trigger when sub process execution fails"
     },
     "subprocessstephandlertype": {
-      "subprocess": "\"Sub process\""
+      "subprocess": "Sub process"
     },
     "subprocesstaskaudittype": {
       "subprocesstask": {
@@ -6157,6 +6164,19 @@
     "checkrunnerstatusapi": {
       "getname": "Check the status of the runner"
     },
+    "deleteregionapi": {
+      "getname": "Delete Region"
+    },
+    "deleteregionteamapi": {
+      "getname": "Delete Regional Grouping",
+      "input": {
+        "param": {
+          "desc": {
+            "teamuuidlist": "Group uuid list"
+          }
+        }
+      }
+    },
     "getrunnerversionapi": {
       "description": "Get runner version information",
       "getname": "Get runner version information",
@@ -6171,19 +6191,6 @@
         "param": {
           "desc": {
             "tbodylist": "Version information list"
-          }
-        }
-      }
-    },
-    "deleteregionapi": {
-      "getname": "Delete Region"
-    },
-    "deleteregionteamapi": {
-      "getname": "Delete Regional Grouping",
-      "input": {
-        "param": {
-          "desc": {
-            "teamuuidlist": "Group uuid list"
           }
         }
       }

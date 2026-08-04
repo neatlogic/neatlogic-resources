@@ -2481,10 +2481,6 @@
           "description": "依据真实工具执行轨迹和执行账本生成 Fixed 模式最终总结",
           "label": "自动化 Fixed 执行总结助手"
         },
-        "skillplanning": {
-          "description": "加载已发布 Skill 正文并生成等待用户确认的结构化执行计划",
-          "label": "自动化 Skill 规划助手"
-        },
         "joblog": {
           "description": "结合日志选区、作业上下文和知识库分析自动化作业问题",
           "label": "自动化作业日志分析助手"
@@ -2492,6 +2488,10 @@
         "script": {
           "description": "结合编辑器上下文解释、生成、修改和修复自动化脚本",
           "label": "自动化脚本助手"
+        },
+        "skillplanning": {
+          "description": "加载已发布 Skill 正文并生成等待用户确认的结构化执行计划",
+          "label": "自动化 Skill 规划助手"
         },
         "toolrecommend": {
           "description": "根据组合工具阶段上下文和授权候选池推荐工具库工具",
@@ -2812,28 +2812,6 @@
         "toolunauthorized": "工具不存在或未授权"
       }
     },
-    "chatwithaiapi": {
-      "name": "AI聊天接口",
-      "param": {
-        "activetoolidlist": "本会话启用的工具实例ID列表",
-        "filelist": "文档附件列表",
-        "imagelist": "图片列表",
-        "input": "内容",
-        "projectid": "项目ID，新对话时生效",
-        "sessionid": "会话ID，不提供代表新对话"
-      }
-    },
-    "confirmaichattoolapi": {
-      "name": "确认AI聊天工具调用",
-      "param": {
-        "confirmed": "是否确认",
-        "decision": "确认动作：确认执行、调整计划或取消",
-        "messageid": "待确认消息ID",
-        "optionindex": "确认选项索引；存在多个选项时必填",
-        "rejectreason": "拒绝或补充说明",
-        "sessionid": "会话ID"
-      }
-    },
     "aitool": {
       "executeaiworkflowtool": {
         "desc": {
@@ -2906,12 +2884,12 @@
           "nodataset": "当前工具实例未配置可用知识库",
           "nohit": "知识库中未命中相关内容"
         },
+        "output": {
+          "bestmatch": "最优命中对象；包含content、score及知识来源元数据",
+          "matches": "命中结果列表；每项包含content、score及知识来源元数据"
+        },
         "param": {
           "query": "用户问题或检索语句"
-        },
-        "output": {
-          "matches": "命中结果列表；每项包含content、score及知识来源元数据",
-          "bestmatch": "最优命中对象；包含content、score及知识来源元数据"
         }
       },
       "readattachmentcontenttool": {
@@ -2990,11 +2968,33 @@
         }
       }
     },
+    "chatwithaiapi": {
+      "name": "AI聊天接口",
+      "param": {
+        "activetoolidlist": "本会话启用的工具实例ID列表",
+        "filelist": "文档附件列表",
+        "imagelist": "图片列表",
+        "input": "内容",
+        "projectid": "项目ID，新对话时生效",
+        "sessionid": "会话ID，不提供代表新对话"
+      }
+    },
     "common": {
       "param": {
         "desc": {
           "datasetid": "数据集id"
         }
+      }
+    },
+    "confirmaichattoolapi": {
+      "name": "确认AI聊天工具调用",
+      "param": {
+        "confirmed": "是否确认",
+        "decision": "确认动作：确认执行、调整计划或取消",
+        "messageid": "待确认消息ID",
+        "optionindex": "确认选项索引；存在多个选项时必填",
+        "rejectreason": "拒绝或补充说明",
+        "sessionid": "会话ID"
       }
     },
     "getdocumentonlinetreeforselectapi": {
@@ -3038,143 +3038,143 @@
   },
   "nmautoexec": {
     "autoexecskill": "自动化Skill",
-    "autoexecskillkey": "Skill Key",
-    "autoexecskillkeydescription": "Skill英文唯一标识",
-    "autoexecskilltitledescription": "Skill标题",
-    "autoexecskilldescriptiondescription": "Skill描述",
-    "autoexecskillpublishstatus": "发布异常状态",
-    "autoexecskillstatusdraft": "草稿",
-    "autoexecskillstatussubmitted": "待审核",
-    "autoexecskillstatusrejected": "已驳回",
-    "autoexecskillhistoricalversion": "历史",
-    "autoexecskillsearchapi": "查询自动化Skill",
-    "autoexecskillgetapi": "获取自动化Skill详情",
-    "autoexecskillsaveapi": "保存自动化Skill",
-    "autoexecskillbaseinfoupdateapi": "更新自动化Skill基本信息",
-    "autoexecskillsubmitapi": "提交自动化Skill审批",
-    "autoexecskillrevokeapi": "撤回自动化Skill审批",
-    "autoexecskillreviewapi": "审批自动化Skill",
-    "autoexecskillenabledupdateapi": "更新自动化Skill启用状态",
-    "autoexecskillversionlistapi": "查询自动化Skill版本",
-    "autoexecskillauditlistapi": "查询自动化Skill活动",
+    "autoexecskillactionnotallowedexception": "当前状态“{1}”不允许执行Skill操作“{0}”",
+    "autoexecskillagenticactioninvalid": "已确认的Agentic执行只允许action\u003dexecute，收到“{0}”",
+    "autoexecskillagenticcalllimit": "Agentic执行已达到最大工具调用次数{0}",
+    "autoexecskillagenticduplicate": "工具“{0}”使用相同参数的第二次调用已被阻断",
+    "autoexecskillagenticemptyanswerfallback": "模型重试后仍未生成最终报告。以下为服务端根据真实工具结果生成的执行证据，不包含推测性根因：",
+    "autoexecskillagenticfailedreport": "执行失败：工具“{0}”执行失败，原因：{1}。诊断已停止，未形成可信根因结论。",
+    "autoexecskillagenticfirstcallrequired": "尚未执行任何工具。请依据Skill Markdown从已确认范围中选择第一个工具，不要直接输出结论。",
+    "autoexecskillagentichalted": "Agentic执行已因上一工具失败终止",
+    "autoexecskillagenticledger": "实际执行账本：",
+    "autoexecskillagenticonecallperturn": "Agentic模式每轮只执行一个工具，请读取本轮observation后重新决策",
+    "autoexecskillagenticparamrequired": "工具“{0}”缺少必填入参“{1}”",
+    "autoexecskillagenticparamtype": "工具“{0}”的入参“{1}”类型不匹配",
+    "autoexecskillagenticparamunknown": "工具“{0}”不存在入参“{1}”",
+    "autoexecskillagenticrefinvalid": "Agentic出参引用必须指向本轮已经成功执行的工具及有效字段",
+    "autoexecskillagenticscopeinvalid": "Agentic执行范围缺少当前版本要求的可信参数绑定，请重新规划",
+    "autoexecskillagentictoolchanged": "工具“{0}”的活动定义或执行方式已发生变化",
+    "autoexecskillagentictoolinvalid": "Agentic执行只能调用AUTOEXEC_SKILL_TOOL",
+    "autoexecskillagentictooloutofscope": "工具“{0}”不在已确认的Agentic执行范围内",
     "autoexecskillaiexecuteapi": "AI执行自动化Skill",
     "autoexecskillaiexecutequestion": "AI执行问题",
     "autoexecskillaiexecutequestionrequired": "请输入AI执行要求",
+    "autoexecskillauditlistapi": "查询自动化Skill活动",
+    "autoexecskillbaseinfoupdateapi": "更新自动化Skill基本信息",
+    "autoexecskillcannotsubmitexception": "当前状态“{0}”的Skill版本不能提交审批",
+    "autoexecskillcontenthashconflictexception": "Skill内容Hash“{0}”冲突",
+    "autoexecskillcurrentnotrecalledexception": "本轮未召回当前自动化Skill“{0}”，已停止执行",
+    "autoexecskilldescriptiondescription": "Skill描述",
+    "autoexecskilldisabledexception": "自动化Skill“{0}”已禁用",
+    "autoexecskillenabledupdateapi": "更新自动化Skill启用状态",
+    "autoexecskillexecutionscopeexception": "本次只允许执行自动化Skill“{0}”的发布版本“{1}”",
+    "autoexecskillfixedfallbackfailed": "Skill执行未全部成功：共{3}步，成功{0}步、失败{1}步、未执行{2}步。AI总结暂不可用，以上状态来自服务端真实执行记录。",
+    "autoexecskillfixedfallbacksuccess": "Skill执行完成，共{1}步，成功{0}步。AI总结暂不可用，以上状态来自服务端真实执行记录。",
+    "autoexecskillgetapi": "获取自动化Skill详情",
+    "autoexecskillglobalplanrequired": "全局AI执行自动化Skill前必须先生成并确认服务端执行计划",
+    "autoexecskillhassubmittedversionexception": "当前Skill已经有其他待审核版本",
+    "autoexecskillhistoricalversion": "历史",
+    "autoexecskillkey": "Skill Key",
+    "autoexecskillkeydescription": "Skill英文唯一标识",
+    "autoexecskillloadrequired": "全局AI生成计划前必须先读取同一Skill的当前发布版本",
+    "autoexecskillnotfoundexception": "自动化Skill“{0}”不存在",
+    "autoexecskillnotpublishedexception": "自动化Skill“{0}”尚未发布",
     "autoexecskillplanapi": "规划自动化Skill执行",
-    "autoexecskillplantoken": "Skill执行计划令牌",
-    "autoexecskillplantokenrequired": "请先确认Skill执行计划",
-    "autoexecskillplantokeninvalid": "Skill执行计划令牌无效，请重新规划",
-    "autoexecskillplantokenexpired": "Skill执行计划已过期或发布版本已变化，请重新规划",
-    "autoexecskillplaninvalid": "Skill执行计划格式不正确，请重新规划",
+    "autoexecskillplanexecuteprohibited": "Skill规划阶段禁止执行业务工具",
     "autoexecskillplanexpired": "Skill执行计划已过期、状态已变化或发布版本已更新，请重新规划",
+    "autoexecskillplanincomplete": "已确认的Skill执行计划尚未完成。请立即调用下一步骤“{0}”对应的工具；不要输出最终总结。",
+    "autoexecskillplaninvalid": "Skill执行计划格式不正确，请重新规划",
     "autoexecskillplaninvalidwithreason": "Skill执行计划格式不正确：{0}，请重新规划",
-    "autoexecskillplanreasonjsoninvalid": "计划内容不是有效的JSON对象",
-    "autoexecskillplanreasonplannull": "计划内容为空",
-    "autoexecskillplanreasonresulttype": "规划结果类型“{0}”不正确",
-    "autoexecskillplanreasonclarificationmissing": "补参结果没有需要用户补充的必填参数",
-    "autoexecskillplanreasonparamcountlimit": "缺失参数数量不能大于{0}",
-    "autoexecskillplanreasonparamnamelimit": "缺失参数名称长度不能大于{0}",
-    "autoexecskillplanreasonsteplistinvalid": "步骤列表格式不正确",
-    "autoexecskillplanreasonstepempty": "步骤为空",
-    "autoexecskillplanreasonsteplimit": "步骤数不能大于{0}，当前为{1}",
-    "autoexecskillplanreasonstepinvalid": "第{0}步不是有效的步骤对象",
-    "autoexecskillplanreasonoperationmissing": "第{0}步缺少工具类型或工具名称",
-    "autoexecskillplanreasonexecmodemissing": "第{0}步工具“{1}”未配置执行方式",
-    "autoexecskillplanreasonrunnerid": "第{0}步的执行器ID格式不正确",
-    "autoexecskillplanreasonreferenceexpression": "第{0}步包含字符串形式的步骤引用，引用必须使用结构化对象",
-    "autoexecskillplanreasonskillrefstructure": "第{0}步的跨步骤引用结构不正确",
-    "autoexecskillplanreasonskillrefsource": "第{0}步的跨步骤引用缺少有效的前序步骤或出参字段",
-    "autoexecskillplanreasonskillrefstep": "第{0}步引用的来源步骤{1}不存在",
-    "autoexecskillplanreasonoutputkey": "第{0}步引用的出参字段“{1}”未在来源步骤{2}的工具中声明",
     "autoexecskillplanreasonautoreference": "第{0}步的工具出参引用结构不正确",
     "autoexecskillplanreasonautoreferencefield": "第{0}步的工具出参引用缺少工具名称或出参字段",
     "autoexecskillplanreasonautoreferencesource": "第{0}步引用的工具“{1}”没有可用的前序执行步骤",
+    "autoexecskillplanreasonclarificationmissing": "补参结果没有需要用户补充的必填参数",
+    "autoexecskillplanreasondependency": "第{0}步的依赖“{1}”不是有效的前序步骤序号",
+    "autoexecskillplanreasonexecmodemissing": "第{0}步工具“{1}”未配置执行方式",
+    "autoexecskillplanreasoninformationtool": "第{0}步的信息工具“{1}”不存在或不可用",
+    "autoexecskillplanreasonjsoninvalid": "计划内容不是有效的JSON对象",
+    "autoexecskillplanreasonmisplacedrefambiguous": "第{0}步错误放入依赖列表的数据引用无法唯一映射到一个缺失的必填参数",
+    "autoexecskillplanreasononmissing": "第{0}步引用的缺失策略“{1}”不受支持",
+    "autoexecskillplanreasonoperationmissing": "第{0}步缺少工具类型或工具名称",
+    "autoexecskillplanreasonoperationtype": "第{0}步的工具类型“{1}”不受支持",
+    "autoexecskillplanreasonoutputkey": "第{0}步引用的出参字段“{1}”未在来源步骤{2}的工具中声明",
+    "autoexecskillplanreasonparamcountlimit": "缺失参数数量不能大于{0}",
+    "autoexecskillplanreasonparamnamelimit": "缺失参数名称长度不能大于{0}",
     "autoexecskillplanreasonpathdatatype": "第{0}步引用的取值路径必须是字符串",
     "autoexecskillplanreasonpathinvalid": "第{0}步引用的取值路径“{1}”格式不正确",
-    "autoexecskillplanreasononmissing": "第{0}步引用的缺失策略“{1}”不受支持",
+    "autoexecskillplanreasonplannull": "计划内容为空",
+    "autoexecskillplanreasonreferenceexpression": "第{0}步包含字符串形式的步骤引用，引用必须使用结构化对象",
+    "autoexecskillplanreasonresulttype": "规划结果类型“{0}”不正确",
+    "autoexecskillplanreasonrunnerid": "第{0}步的执行器ID格式不正确",
     "autoexecskillplanreasonrunnerupdate": "第{0}步不能更新为指定执行器",
+    "autoexecskillplanreasonskillrefsource": "第{0}步的跨步骤引用缺少有效的前序步骤或出参字段",
+    "autoexecskillplanreasonskillrefstep": "第{0}步引用的来源步骤{1}不存在",
+    "autoexecskillplanreasonskillrefstructure": "第{0}步的跨步骤引用结构不正确",
+    "autoexecskillplanreasonstepempty": "步骤为空",
+    "autoexecskillplanreasonstepinvalid": "第{0}步不是有效的步骤对象",
+    "autoexecskillplanreasonsteplimit": "步骤数不能大于{0}，当前为{1}",
+    "autoexecskillplanreasonsteplistinvalid": "步骤列表格式不正确",
     "autoexecskillplanreasonstepnotfound": "未找到计划中的第{0}步",
-    "autoexecskillplanreasoninformationtool": "第{0}步的信息工具“{1}”不存在或不可用",
     "autoexecskillplanreasontoolnotfound": "第{0}步的工具“{1}”不存在、未激活或不可用",
-    "autoexecskillplanreasonoperationtype": "第{0}步的工具类型“{1}”不受支持",
-    "autoexecskillplanreasondependency": "第{0}步的依赖“{1}”不是有效的前序步骤序号",
-    "autoexecskillplanreasonmisplacedrefambiguous": "第{0}步错误放入依赖列表的数据引用无法唯一映射到一个缺失的必填参数",
-    "autoexecskillplanexecuteprohibited": "Skill规划阶段禁止执行业务工具",
     "autoexecskillplanstepinvalid": "本次工具调用不符合已确认的Skill执行计划",
-    "autoexecskillrefparamtypemismatch": "第{0}步参数“{1}”引用“{2}”的结果与目标参数类型“{3}”不兼容",
-    "autoexecskillstepskipped": "前置步骤{0}执行失败，第{1}步未执行",
-    "autoexecskillunknownstepskipped": "前置步骤执行失败，计划外调用未执行",
-    "autoexecskillplanincomplete": "已确认的Skill执行计划尚未完成。请立即调用下一步骤“{0}”对应的工具；不要输出最终总结。",
-    "autoexecskillruntimeunavailable": "计划中的AI工具“{0}”已停用、移除或不可用",
-    "autoexecskillfixedfallbacksuccess": "Skill执行完成，共{1}步，成功{0}步。AI总结暂不可用，以上状态来自服务端真实执行记录。",
-    "autoexecskillfixedfallbackfailed": "Skill执行未全部成功：共{3}步，成功{0}步、失败{1}步、未执行{2}步。AI总结暂不可用，以上状态来自服务端真实执行记录。",
-    "autoexecskillagenticcalllimit": "Agentic执行已达到最大工具调用次数{0}",
-    "autoexecskillagentichalted": "Agentic执行已因上一工具失败终止",
-    "autoexecskillagenticactioninvalid": "已确认的Agentic执行只允许action=execute，收到“{0}”",
-    "autoexecskillagentictoolinvalid": "Agentic执行只能调用AUTOEXEC_SKILL_TOOL",
-    "autoexecskillagentictooloutofscope": "工具“{0}”不在已确认的Agentic执行范围内",
-    "autoexecskillagentictoolchanged": "工具“{0}”的活动定义或执行方式已发生变化",
-    "autoexecskillagenticduplicate": "工具“{0}”使用相同参数的第二次调用已被阻断",
-    "autoexecskillagenticonecallperturn": "Agentic模式每轮只执行一个工具，请读取本轮observation后重新决策",
-    "autoexecskillagenticfirstcallrequired": "尚未执行任何工具。请依据Skill Markdown从已确认范围中选择第一个工具，不要直接输出结论。",
-    "autoexecskillagenticemptyanswerfallback": "模型重试后仍未生成最终报告。以下为服务端根据真实工具结果生成的执行证据，不包含推测性根因：",
-    "autoexecskillagenticscopeinvalid": "Agentic执行范围缺少当前版本要求的可信参数绑定，请重新规划",
-    "autoexecskillagenticfailedreport": "执行失败：工具“{0}”执行失败，原因：{1}。诊断已停止，未形成可信根因结论。",
-    "autoexecskillagenticledger": "实际执行账本：",
-    "autoexecskillagenticparamunknown": "工具“{0}”不存在入参“{1}”",
-    "autoexecskillagenticparamtype": "工具“{0}”的入参“{1}”类型不匹配",
-    "autoexecskillagenticparamrequired": "工具“{0}”缺少必填入参“{1}”",
-    "autoexecskillagenticrefinvalid": "Agentic出参引用必须指向本轮已经成功执行的工具及有效字段",
-    "autoexecskillcurrentnotrecalledexception": "本轮未召回当前自动化Skill“{0}”，已停止执行",
-    "autoexecskillexecutionscopeexception": "本次只允许执行自动化Skill“{0}”的发布版本“{1}”",
-    "autoexecskillnotfoundexception": "自动化Skill“{0}”不存在",
-    "autoexecskillversionnotfoundexception": "自动化Skill版本“{0}”不存在",
-    "autoexecskillukinvalidexception": "Skill Key“{0}”格式不正确，只允许英文字母和下划线且必须以字母开头",
-    "autoexecskillukrepeatexception": "Skill Key“{0}”已存在",
-    "autoexecskillukimmutableexception": "Skill Key创建后不能修改",
-    "autoexecskillversionnoteditableexception": "当前状态“{0}”的Skill版本不能编辑",
-    "autoexecskillcannotsubmitexception": "当前状态“{0}”的Skill版本不能提交审批",
-    "autoexecskillhassubmittedversionexception": "当前Skill已经有其他待审核版本",
-    "autoexecskillreviewactioninvalidexception": "不支持的Skill审批动作“{0}”",
-    "autoexecskillnotpublishedexception": "自动化Skill“{0}”尚未发布",
-    "autoexecskilldisabledexception": "自动化Skill“{0}”已禁用",
-    "autoexecskillversionchangedexception": "自动化Skill“{0}”的发布版本已变化，请重新确认执行计划",
-    "autoexecskillstatusinvalidexception": "当前Skill状态为“{0}”，要求状态为“{1}”",
-    "autoexecskillactionnotallowedexception": "当前状态“{1}”不允许执行Skill操作“{0}”",
-    "autoexecskillcontenthashconflictexception": "Skill内容Hash“{0}”冲突",
+    "autoexecskillplantoken": "Skill执行计划令牌",
+    "autoexecskillplantokenexpired": "Skill执行计划已过期或发布版本已变化，请重新规划",
+    "autoexecskillplantokeninvalid": "Skill执行计划令牌无效，请重新规划",
+    "autoexecskillplantokenrequired": "请先确认Skill执行计划",
+    "autoexecskillpublishstatus": "发布异常状态",
     "autoexecskillragdatasetnotfoundexception": "尚未创建自动化Skill RAG数据集",
+    "autoexecskillragdeleteverifyexception": "自动化Skill“{0}”取消发布后回读校验失败",
     "autoexecskillragunavailableexception": "自动化Skill RAG服务暂时不可用",
     "autoexecskillragverifyexception": "自动化Skill“{0}”发布后回读校验失败",
-    "autoexecskillragdeleteverifyexception": "自动化Skill“{0}”取消发布后回读校验失败",
-    "autoexecskillglobalplanrequired": "全局AI执行自动化Skill前必须先生成并确认服务端执行计划",
-    "autoexecskillloadrequired": "全局AI生成计划前必须先读取同一Skill的当前发布版本",
+    "autoexecskillrefparamtypemismatch": "第{0}步参数“{1}”引用“{2}”的结果与目标参数类型“{3}”不兼容",
+    "autoexecskillreviewactioninvalidexception": "不支持的Skill审批动作“{0}”",
+    "autoexecskillreviewapi": "审批自动化Skill",
+    "autoexecskillrevokeapi": "撤回自动化Skill审批",
+    "autoexecskillruntimeunavailable": "计划中的AI工具“{0}”已停用、移除或不可用",
+    "autoexecskillsaveapi": "保存自动化Skill",
+    "autoexecskillsearchapi": "查询自动化Skill",
+    "autoexecskillstatusdraft": "草稿",
+    "autoexecskillstatusinvalidexception": "当前Skill状态为“{0}”，要求状态为“{1}”",
+    "autoexecskillstatusrejected": "已驳回",
+    "autoexecskillstatussubmitted": "待审核",
+    "autoexecskillstepskipped": "前置步骤{0}执行失败，第{1}步未执行",
+    "autoexecskillsubmitapi": "提交自动化Skill审批",
+    "autoexecskilltitledescription": "Skill标题",
     "autoexecskilltool": {
-      "description": "Autoexec Skill 规划执行工具。全局AI只有在RAG或可信上下文给出skillKey且Skill与用户要求匹配时才能选择本工具，禁止猜测skillKey；必须先单独调用action=load读取当前发布版本和Skill Markdown。调用action=plan时，必须结合当前要求和可信会话历史，将完整、自包含的自动化执行要求写入input；已知结构化变量可写入parameterMap，禁止使用ip、param、runnerId、toolName等执行字段代替规划输入。plan由服务端生成、校验并保存pendingPlan；返回clarification时必须向用户收集missingParameterList，新一轮重新load后携带完整input和补充后的parameterMap再次plan；返回NEED_CONFIRM后必须等待用户确认，禁止全局AI直接调用action=execute。确认后服务端按confirmedPlan.selectedMode执行：fixed严格按stepList执行，不得增删、跳过、重排或重试；agentic只允许从operationScopeList选择工具，每次响应只调用一个AUTOEXEC_SKILL_TOOL并等待真实observation，最多20次，相同工具和相同参数不得重复。专用执行上下文中的action=execute只能使用服务端确认计划固定的工具、Runner、目标和参数；stepType=autoexec调用本工具，stepType=information调用aiToolName指定工具。自定义工具使用operationType=script，工具库工具使用tool。跨步骤引用必须保留$skillStepRef；Autoexec原生输出使用$autoexecRef；同一工具执行多次时使用带实际callIndex的$agentCallRef，禁止复制、猜测或伪造结果。Fixed模式仅最后一个Autoexec步骤设置isLastStep=true，Agentic由服务端统一清理。任何调用失败、拒绝、需要再次确认或引用校验失败后必须停止依赖步骤，不得重试或声称整体成功。最终回答必须依据真实工具结果区分成功、失败和未执行步骤；只有Skill正文明确要求时才输出诊断报告，证据只能来自真实observation。",
+      "description": "Autoexec Skill 规划执行工具。全局AI只有在RAG或可信上下文给出skillKey且Skill与用户要求匹配时才能选择本工具，禁止猜测skillKey；必须先单独调用action\u003dload读取当前发布版本和Skill Markdown。调用action\u003dplan时，必须结合当前要求和可信会话历史，将完整、自包含的自动化执行要求写入input；已知结构化变量可写入parameterMap，禁止使用ip、param、runnerId、toolName等执行字段代替规划输入。plan由服务端生成、校验并保存pendingPlan；返回clarification时必须向用户收集missingParameterList，新一轮重新load后携带完整input和补充后的parameterMap再次plan；返回NEED_CONFIRM后必须等待用户确认，禁止全局AI直接调用action\u003dexecute。确认后服务端按confirmedPlan.selectedMode执行：fixed严格按stepList执行，不得增删、跳过、重排或重试；agentic只允许从operationScopeList选择工具，每次响应只调用一个AUTOEXEC_SKILL_TOOL并等待真实observation，最多20次，相同工具和相同参数不得重复。专用执行上下文中的action\u003dexecute只能使用服务端确认计划固定的工具、Runner、目标和参数；stepType\u003dautoexec调用本工具，stepType\u003dinformation调用aiToolName指定工具。自定义工具使用operationType\u003dscript，工具库工具使用tool。跨步骤引用必须保留$skillStepRef；Autoexec原生输出使用$autoexecRef；同一工具执行多次时使用带实际callIndex的$agentCallRef，禁止复制、猜测或伪造结果。Fixed模式仅最后一个Autoexec步骤设置isLastStep\u003dtrue，Agentic由服务端统一清理。任何调用失败、拒绝、需要再次确认或引用校验失败后必须停止依赖步骤，不得重试或声称整体成功。最终回答必须依据真实工具结果区分成功、失败和未执行步骤；只有Skill正文明确要求时才输出诊断报告，证据只能来自真实observation。",
       "executefailed": "自动化工具执行失败",
       "invalidmcpresponse": "MCP 服务返回格式不正确",
       "label": "Skill 自动化工具执行器",
       "missingrequestcontext": "当前没有可用于调用 MCP 服务的请求上下文",
       "operationstart": "开始执行 Skill 工具",
-      "planconfirm": "自动化Skill执行计划已生成，请确认后执行",
-      "planconfirmoption": "确认执行此计划",
-      "skillloadstart": "正在读取 Skill 正文",
-      "skillexecutionstart": "执行工具",
-      "skillplanstart": "正在生成 Skill 执行计划",
       "param": {
         "action": "操作类型。全局规划必须按load、plan的顺序调用：load只提供action和skillKey；plan提供action、skillKey、完整input及可选parameterMap；execute仅在服务端已绑定确认计划的内部执行上下文中使用。",
         "includestdout": "是否返回执行日志。只有 Skill Markdown 明确要求返回日志时才设为 true；执行时由服务端按已确认计划覆盖。",
-        "input": "全局AI根据当前要求和可信会话历史整理的自包含自动化执行要求。仅action=plan时使用，未提供有效parameterMap时必须填写，最长4000字符；所有已知目标和约束都应包含在本字段中，不能因同时存在execute字段而省略。",
-        "ip": "执行阶段的目标机器IP。仅action=execute且工具执行方式为target或runner_target时使用；action=plan禁止使用本字段代替input或parameterMap。",
+        "input": "全局AI根据当前要求和可信会话历史整理的自包含自动化执行要求。仅action\u003dplan时使用，未提供有效parameterMap时必须填写，最长4000字符；所有已知目标和约束都应包含在本字段中，不能因同时存在execute字段而省略。",
+        "ip": "执行阶段的目标机器IP。仅action\u003dexecute且工具执行方式为target或runner_target时使用；action\u003dplan禁止使用本字段代替input或parameterMap。",
         "islaststep": "是否为本次执行的最后一步。仅最后一步必须设为 true，用于在返回结果后清理执行上下文。",
-        "operationtype": "执行阶段的Skill工具类型。仅action=execute时使用；自定义工具必须使用script，工具库工具必须使用tool。",
-        "param": "执行阶段的自动化工具业务入参对象。仅action=execute时使用；普通值从Skill内容提取，引用前序出参时使用$autoexecRef。",
-        "parametermap": "用户已提供的结构化规划参数。仅action=plan时使用；补参时字段名必须来自规划返回的missingParameterList，不能改用ip或param等执行字段。",
-        "runnerid": "执行计划中选定的Runner映射ID。仅action=execute时使用，并由服务端按已确认计划覆盖。",
+        "operationtype": "执行阶段的Skill工具类型。仅action\u003dexecute时使用；自定义工具必须使用script，工具库工具必须使用tool。",
+        "param": "执行阶段的自动化工具业务入参对象。仅action\u003dexecute时使用；普通值从Skill内容提取，引用前序出参时使用$autoexecRef。",
+        "parametermap": "用户已提供的结构化规划参数。仅action\u003dplan时使用；补参时字段名必须来自规划返回的missingParameterList，不能改用ip或param等执行字段。",
+        "runnerid": "执行计划中选定的Runner映射ID。仅action\u003dexecute时使用，并由服务端按已确认计划覆盖。",
         "skillkey": "从RAG召回结果或可信上下文中选出的Skill Key。load、plan和execute都必须提供。",
-        "skillversion": "load返回的当前已发布版本号。action=plan时由服务端继承本轮load版本，无需提供；action=execute时必须原样提供。",
-        "toolname": "执行阶段的自定义工具或工具库工具唯一名称。仅action=execute时使用，必须与Skill中指定的名称完全一致。"
-      }
+        "skillversion": "load返回的当前已发布版本号。action\u003dplan时由服务端继承本轮load版本，无需提供；action\u003dexecute时必须原样提供。",
+        "toolname": "执行阶段的自定义工具或工具库工具唯一名称。仅action\u003dexecute时使用，必须与Skill中指定的名称完全一致。"
+      },
+      "planconfirm": "自动化Skill执行计划已生成，请确认后执行",
+      "planconfirmoption": "确认执行此计划",
+      "skillexecutionstart": "执行工具",
+      "skillloadstart": "正在读取 Skill 正文",
+      "skillplanstart": "正在生成 Skill 执行计划"
     },
+    "autoexecskillukimmutableexception": "Skill Key创建后不能修改",
+    "autoexecskillukinvalidexception": "Skill Key“{0}”格式不正确，只允许英文字母和下划线且必须以字母开头",
+    "autoexecskillukrepeatexception": "Skill Key“{0}”已存在",
+    "autoexecskillunknownstepskipped": "前置步骤执行失败，计划外调用未执行",
+    "autoexecskillversionchangedexception": "自动化Skill“{0}”的发布版本已变化，请重新确认执行计划",
+    "autoexecskillversionlistapi": "查询自动化Skill版本",
+    "autoexecskillversionnoteditableexception": "当前状态“{0}”的Skill版本不能编辑",
+    "autoexecskillversionnotfoundexception": "自动化Skill版本“{0}”不存在",
     "execrtoolapi": {
       "param": {
         "jobid": "跨步骤执行上下文 Snowflake ID",
@@ -4050,6 +4050,13 @@
     },
     "dataconversionleftjointablehasmultiplerowsofdataexception": {
       "dataconversionleftjointablehasmultiplerowsofdataexception_a": "关联表格组件：{0}得到多行数据，结果数据为：{1}"
+    }
+  },
+  "nmccps": {
+    "cmdbcommercialprocessstephandlertype": {
+      "name": {
+        "dataconversion": "数据转换"
+      }
     }
   },
   "nmcdac": {
@@ -6211,6 +6218,19 @@
     "checkrunnerstatusapi": {
       "getname": "检查runner状态"
     },
+    "deleteregionapi": {
+      "getname": "删除地域"
+    },
+    "deleteregionteamapi": {
+      "getname": "删除地域分组",
+      "input": {
+        "param": {
+          "desc": {
+            "teamuuidlist": "分组uuid列表"
+          }
+        }
+      }
+    },
     "getrunnerversionapi": {
       "description": "获取执行器版本信息",
       "getname": "获取执行器版本信息",
@@ -6225,19 +6245,6 @@
         "param": {
           "desc": {
             "tbodylist": "版本信息列表"
-          }
-        }
-      }
-    },
-    "deleteregionapi": {
-      "getname": "删除地域"
-    },
-    "deleteregionteamapi": {
-      "getname": "删除地域分组",
-      "input": {
-        "param": {
-          "desc": {
-            "teamuuidlist": "分组uuid列表"
           }
         }
       }
