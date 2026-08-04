@@ -1070,6 +1070,26 @@
     "deploy_modify": {
       "getauthdisplayname": "发布管理权限",
       "getauthintroduction": "发布全局参数管理、场景定义"
+    },
+    "batchdeploy_modify": {
+      "getauthdisplayname": "批量发布管理权限",
+      "getauthintroduction": "创建、删除批量发布，允许执行已审核的批量发布作业"
+    },
+    "deploy_base": {
+      "getauthdisplayname": "发布基础权限",
+      "getauthintroduction": "查看发布模块"
+    },
+    "pipeline_modify": {
+      "getauthdisplayname": "超级流水线管理权限",
+      "getauthintroduction": "创建、维护和删除超级流水线"
+    },
+    "deploy_schedule_modify": {
+      "getauthdisplayname": "发布定时管理权限",
+      "getauthintroduction": "发布定时作业管理"
+    },
+    "batchdeploy_verify": {
+      "getauthdisplayname": "批量发布审核权限",
+      "getauthintroduction": "审核待审核的批量发布作业，拥有此权限的用户创建的作业自动通过审核"
     }
   },
   "nfdal": {
@@ -1087,7 +1107,7 @@
       "executedesc": "“一键发布、定时作业”可以执行创建普通作业",
       "pipeline": "超级流水线",
       "pipelinedesc": "“应用配置”可以替添加、编辑和删除应用的超级流水线和“一键发布、定时作业”执行应用的超级流水线",
-      "versionandproductmanager": "版本\u0026制品管理",
+      "versionandproductmanager": "版本&制品管理",
       "versionandproductmanagerdesc": "“版本中心”可以查看应用、添加版本和管理制品",
       "view": "查看配置",
       "viewdesc": "可以查看应用(一键发布、应用配置、定时作业)"
@@ -1102,7 +1122,146 @@
       }
     },
     "deploytenantconfig": {
-      "gitlabwebhookcallbackhost": "gitlab webhook回调主机地址"
+      "gitlabwebhookcallbackhost": "gitlab webhook回调主机地址",
+      "text": {
+        "is_pipeline_need_default_version": "超级流水线是否需要默认版本，默认不需要。0：不需要，1：需要"
+      }
+    },
+    "jobsourcetype": {
+      "text": {
+        "deploy": "发布",
+        "deploy_version_resource": "版本中心制品"
+      }
+    },
+    "deploycitriggertype": {
+      "text": {
+        "manual": "手动触发",
+        "auto": "自动触发",
+        "instant": "立即触发",
+        "delay": "延迟触发"
+      },
+      "description": {
+        "manual": "立即自动创建作业，手动触发作业",
+        "auto": "立即自动创建作业，指定时间自动触发",
+        "instant": "立即自动创建作业，立即触发",
+        "delay": "立即自动创建作业，n秒内相同的集成触发将被忽略(不触发创建作业)"
+      }
+    },
+    "deployciactiontype": {
+      "text": {
+        "create_job": "创建作业",
+        "create_batch_job": "创建批量作业"
+      }
+    },
+    "combopoperationtype": {
+      "text": {
+        "pipeline": "发布流水线"
+      }
+    },
+    "pipelinetype": {
+      "text": {
+        "appsystem": "应用流水线",
+        "global": "全局流水线"
+      }
+    },
+    "autoexectype": {
+      "text": {
+        "build": "编译打包",
+        "deploy": "自动发布"
+      }
+    },
+    "deploywhitetype": {
+      "text": {
+        "start_stop": "启停操作",
+        "native": "调度器内置工具",
+        "basic": "基础工具",
+        "build": "编译打包",
+        "deploy": "自动发布",
+        "sql_file": "SQL处理"
+      }
+    },
+    "jobsource": {
+      "text": {
+        "deploy": "一键发布+作业",
+        "batchdeploy": "一键发布+批量作业",
+        "deploy_schedule_general": "发布定时作业",
+        "deploy_schedule_pipeline": "发布定时批量作业",
+        "deploy_ci": "发布持续集成",
+        "deploy_ci_pipeline": "发布持续集成批量作业"
+      }
+    },
+    "deployjobnotifyparam": {
+      "text": {
+        "appsystemnameandabbrname": "应用",
+        "appmodulenameandabbrname": "模块",
+        "envname": "环境",
+        "version": "版本号",
+        "scenarioname": "场景",
+        "jobid": "作业ID",
+        "jobname": "作业名称",
+        "jobstatus": "作业状态",
+        "jobstatusname": "作业状态名",
+        "jobphaselist": "阶段列表",
+        "triggertypename": "触发方式",
+        "deployjobstarttime": "作业开始时间",
+        "deployjobendtime": "作业结束时间"
+      }
+    },
+    "versionenvstatus": {
+      "text": {
+        "pending": "待构建",
+        "releasing": "释放中",
+        "release_failed": "释放失败",
+        "released": "已释放"
+      }
+    },
+    "deployresourcetype": {
+      "text": {
+        "build_product": "版本制品",
+        "build_sql_script": "SQL脚本",
+        "env_product": "环境制品",
+        "env_diff_directory": "差异目录",
+        "env_sql_script": "SQL脚本",
+        "mirror_product": "镜像制品",
+        "mirror_diff": "镜像差异",
+        "workspace": "工程目录"
+      }
+    },
+    "deploywebhookbuildnopolicy": {
+      "text": {
+        "the_same": "与原作业一致",
+        "new": "新建buildNo"
+      }
+    },
+    "deployversionchart": {
+      "text": {
+        "code_scan": "代码扫描",
+        "unit_test": "单元测试"
+      }
+    },
+    "deployciauditstatus": {
+      "text": {
+        "succeed": "成功",
+        "failed": "失败",
+        "ignored": "已忽略"
+      }
+    },
+    "buildnostatus": {
+      "text": {
+        "pending": "待编译",
+        "compiling": "编译中",
+        "compiled": "已编译",
+        "compile_failed": "编译失败",
+        "releasing": "释放中",
+        "release_failed": "释放失败",
+        "released": "已释放"
+      }
+    },
+    "scheduletype": {
+      "text": {
+        "general": "普通作业",
+        "pipeline": "超级流水线"
+      }
     }
   },
   "nfdd": {
@@ -1209,6 +1368,29 @@
           "name": "迁移目的数据中心"
         }
       }
+    },
+    "deploypackagevo": {
+      "groupid": {
+        "name": "工程组标识"
+      },
+      "artifactid": {
+        "name": "工程标识"
+      },
+      "version": {
+        "name": "工程版本号"
+      },
+      "type": {
+        "name": "包类型"
+      },
+      "license": {
+        "name": "版权许可、开源协议"
+      },
+      "url": {
+        "name": "包在maven仓库中的地址"
+      },
+      "id": {
+        "name": "ID"
+      }
     }
   },
   "nfddv": {
@@ -1276,6 +1458,308 @@
     },
     "deployversionissuevoissueupdateuser": {
       "name": "issue更新人"
+    },
+    "deployversionenvinstancevo": {
+      "resourceid": {
+        "name": "实例id"
+      },
+      "versionid": {
+        "name": "版本id"
+      },
+      "version": {
+        "name": "版本"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "resourcename": {
+        "name": "实例名"
+      },
+      "deployuser": {
+        "name": "发布用户uuid"
+      },
+      "deploytime": {
+        "name": "发布时间"
+      },
+      "status": {
+        "name": "是否发布"
+      },
+      "deployuservo": {
+        "name": "发布用户"
+      },
+      "id": {
+        "name": "ID"
+      },
+      "ip": {
+        "name": "IP地址"
+      }
+    },
+    "deployversionbuildnovo": {
+      "versionid": {
+        "name": "版本id"
+      },
+      "version": {
+        "name": "版本"
+      },
+      "versionisfreeze": {
+        "name": "版本是否封版"
+      },
+      "buildno": {
+        "name": "编译号"
+      },
+      "jobid": {
+        "name": "作业id"
+      },
+      "status": {
+        "name": "编译状态"
+      },
+      "statusname": {
+        "name": "编译状态名称"
+      },
+      "compilestarttime": {
+        "name": "编译开始时间"
+      },
+      "compileendtime": {
+        "name": "编译结束时间"
+      },
+      "endrev": {
+        "name": "结束Rev号"
+      },
+      "appsystemidlist": {
+        "name": "应用系统id列表"
+      },
+      "appmoduleidlist": {
+        "name": "应用模块id列表"
+      },
+      "runnermapid": {
+        "name": "Runner映射ID"
+      },
+      "runnergroup": {
+        "name": "Runner组"
+      }
+    },
+    "deployversiondependencyvo": {
+      "versionid": {
+        "name": "发布版本id"
+      },
+      "packageid": {
+        "name": "依赖包id"
+      },
+      "scope": {
+        "name": "依赖作用域"
+      },
+      "parentid": {
+        "name": "父依赖id"
+      },
+      "buildtime": {
+        "name": "编译时间"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployversionenvvo": {
+      "versionid": {
+        "name": "版本id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "envname": {
+        "name": "环境名称"
+      },
+      "jobid": {
+        "name": "作业id"
+      },
+      "status": {
+        "name": "状态"
+      },
+      "statusname": {
+        "name": "状态名称"
+      },
+      "ismirror": {
+        "name": "是否镜像发布"
+      },
+      "runnermapid": {
+        "name": "Runner映射ID"
+      },
+      "runnergroup": {
+        "name": "Runner组"
+      },
+      "buildno": {
+        "name": "编译号"
+      }
+    },
+    "deployversionvo": {
+      "envid": {
+        "name": "环境Id"
+      },
+      "currentenvbuildno": {
+        "name": "当前环境BuildNo"
+      },
+      "runnermapid": {
+        "name": "Runner映射ID"
+      },
+      "runnergroup": {
+        "name": "Runner组"
+      }
+    },
+    "deploymoduleactiveversionvo": {
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appsystemabbrname": {
+        "name": "应用系统简称"
+      },
+      "appsystemname": {
+        "name": "应用系统名称"
+      },
+      "appmoduleid": {
+        "name": "应用模块id"
+      },
+      "appmoduleabbrname": {
+        "name": "应用模块简称"
+      },
+      "appmodulename": {
+        "name": "应用模块名称"
+      },
+      "envlist": {
+        "name": "环境列表"
+      },
+      "versionlist": {
+        "name": "版本列表"
+      }
+    },
+    "deploysystemactiveversionvo": {
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appsystemabbrname": {
+        "name": "应用系统简称"
+      },
+      "appsystemname": {
+        "name": "应用系统名称"
+      },
+      "modulelist": {
+        "name": "模块列表"
+      }
+    },
+    "deployactiveversionvo": {
+      "versionid": {
+        "name": "版本id"
+      },
+      "version": {
+        "name": "版本号"
+      },
+      "compilecount": {
+        "name": "编译次数"
+      },
+      "compilesuccesscount": {
+        "name": "编译成功次数"
+      },
+      "compilefailcount": {
+        "name": "编译失败次数"
+      },
+      "envlist": {
+        "name": "发布环境列表"
+      }
+    },
+    "deployversionunittestvo": {
+      "versionid": {
+        "name": "版本ID"
+      },
+      "buildtime": {
+        "name": "构建时间"
+      },
+      "tests": {
+        "name": "单元测试总数"
+      },
+      "testsuccessdensity": {
+        "name": "单元测试成功率"
+      },
+      "testerrors": {
+        "name": "单元测试失败数"
+      },
+      "branchcoverage": {
+        "name": "全量代码分支覆盖率"
+      },
+      "newbranchcoverage": {
+        "name": "增量代码分支覆盖率"
+      },
+      "linecoverage": {
+        "name": "全量行覆盖率"
+      },
+      "newlinecoverage": {
+        "name": "增量行覆盖率"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployversionbuildqualityvo": {
+      "versionid": {
+        "name": "版本ID"
+      },
+      "buildtime": {
+        "name": "构建时间"
+      },
+      "lines": {
+        "name": "代码总行数"
+      },
+      "ncloc": {
+        "name": "代码有效行"
+      },
+      "commentlinesdensity": {
+        "name": "行注释率"
+      },
+      "publicdocumentedapidensity": {
+        "name": "API注释率"
+      },
+      "bugs": {
+        "name": "漏洞数量"
+      },
+      "vulnerabilities": {
+        "name": "总体漏洞"
+      },
+      "codesmells": {
+        "name": "总体代码味道"
+      },
+      "newsecurityhotspots": {
+        "name": "新增安全热点"
+      },
+      "newvulnerabilities": {
+        "name": "新增漏洞"
+      },
+      "securityhotspots": {
+        "name": "总体安全热点"
+      },
+      "newlines": {
+        "name": "新增代码行数"
+      },
+      "newbugs": {
+        "name": "新增漏洞数量"
+      },
+      "newreliabilityrating": {
+        "name": "新代码可靠率"
+      },
+      "newcodesmells": {
+        "name": "新增代码异味"
+      },
+      "newtechnicaldebt": {
+        "name": "新增债务"
+      },
+      "sqaleindex": {
+        "name": "债务"
+      },
+      "newmaintainabilityrating": {
+        "name": "新代码可维护率"
+      },
+      "threshold": {
+        "name": "漏洞阈值"
+      },
+      "id": {
+        "name": "ID"
+      }
     }
   },
   "nfde": {
@@ -1300,7 +1784,7 @@
       "deployappscenarioauthexception": "您没有系统：“{0}({1})”下的场景：“{2}({3})”的【场景权限】"
     },
     "deploybatchjobfirewithrevokedandcheckedexception": {
-      "deploybatchjobfirewithrevokedandcheckedexception": "无法执行，批量执行的作业:“{0}({1})”都是\u0027已撤销\u0027或\u0027已验证\u0027的作业"
+      "deploybatchjobfirewithrevokedandcheckedexception": "无法执行，批量执行的作业:“{0}({1})”都是'已撤销'或'已验证'的作业"
     },
     "deployjobnotfoundexception": {
       "deployjobnotfoundexception": {
@@ -1380,6 +1864,234 @@
     },
     "drservicescenerepeatexception": {
       "drservicescenerepeatexception": "服务不能重复关联同一个场景"
+    },
+    "deploybatchjobgroupnotfoundexception": {
+      "deploybatchjobgroupnotfoundexception": "批量发布分组：{0}不存在"
+    },
+    "deploybatchjobcannoteditexception": {
+      "deploybatchjobcannoteditexception": "当批量发布作业状态为：“{0}” 时，无法编辑保存"
+    },
+    "deployversionisrepeatexception": {
+      "deployversionisrepeatexception": "当前模块存在重复版本号“{0}”，请修改版本号后重新保存"
+    },
+    "deployjobhasparentexception": {
+      "deployjobhasparentexception": "作业“{0}”已存在父作业"
+    },
+    "deploycitriggertimelostexception": {
+      "deploycitriggertimelostexception": "持续集成配置缺少触发时间配置"
+    },
+    "deployappoperationauthexception": {
+      "deployappoperationauthexception": "您没有系统：{0}({1})下的：{2}的【操作权限】"
+    },
+    "deployinstanceversionnotfoundexception": {
+      "deployinstanceversionnotfoundexception": "没有找到实例：{0}的当前版本"
+    },
+    "deploysqljobphasenotfoundexception": {
+      "deploysqljobphasenotfoundexception": "该作业找不到对应阶段“{0}”的sql详情"
+    },
+    "getdirectoryfailedexception": {
+      "getdirectoryfailedexception": "获取目录失败，错误：{0}"
+    },
+    "deployappconfigscenarionotfoundexception": {
+      "deployappconfigscenarionotfoundexception": "当前流水线没有配置场景"
+    },
+    "deployappconfignotfoundexception": {
+      "deployappconfignotfoundexception": "应用“{0}”的流水线不存在"
+    },
+    "deployversionrunnernotfoundexception": {
+      "deployversionrunnernotfoundexception": "未找到版本“{0}”对应的runnner",
+      "b": "未找到版本“{0}”(buildNo为{1})对应的runnner",
+      "c": "未找到版本“{0}”({1}环境)对应的runnner"
+    },
+    "deploycigitlabcallbackcommitidlostexception": {
+      "deploycigitlabcallbackcommitidlostexception": "Gitlab回调参数缺少commitId"
+    },
+    "deploycinotfoundexception": {
+      "deploycinotfoundexception": "持续集成配置：{0}不存在"
+    },
+    "deletefilefailedexception": {
+      "deletefilefailedexception": "删除文件失败，错误：{0}"
+    },
+    "deploybatchjobcannotexecuteexception": {
+      "deploybatchjobcannotexecuteexception": "非当前批量发布执行人，无法执行，请先保存或接管"
+    },
+    "deployappconfigenvdbschemanamerepeatexception": {
+      "deployappconfigenvdbschemanamerepeatexception": "数据库schema“{0}”已存在"
+    },
+    "deployappmoduleenvinstancenotfoundexception": {
+      "deployappmoduleenvinstancenotfoundexception": "发布 “{0}/{1}/{2}” 找不到节点"
+    },
+    "deployjoblanenotfoundexception": {
+      "deployjoblanenotfoundexception": "批量发布 {0}({1}) 不存在泳道"
+    },
+    "deployversionredirecturlcredentialusernotfoundexception": {
+      "deployversionredirecturlcredentialusernotfoundexception": "发布跳转url对应验权用户 “{0}” 不存在"
+    },
+    "deployenvversionnotfoundexception": {
+      "deployenvversionnotfoundexception": "没有找到环境：{0}的当前版本"
+    },
+    "deployappconfigenvautoconfigkeyirregularexception": {
+      "deployappconfigenvautoconfigkeyirregularexception": "变量名称：{0}不合法"
+    },
+    "deployappconfigmodulerunnergroupnotfoundexception": {
+      "deployappconfigmodulerunnergroupnotfoundexception": "应用系统 “{0}”,模块“{1}”没有配置runner组"
+    },
+    "deploycigitlabcallbackbranchnamelostexception": {
+      "deploycigitlabcallbackbranchnamelostexception": "Gitlab回调参数缺少分支名称"
+    },
+    "deployversionbuildnostatusisnotreleasedexception": {
+      "deployversionbuildnostatusisnotreleasedexception": "{0}/{1}/{2} 版本:{3} buildNo:{4} 状态不是released,而是{5}"
+    },
+    "deploypackagenotfoundexception": {
+      "deploypackagenotfoundexception": "依赖包：{0}->{1}->{2}不存在"
+    },
+    "deploygitlabhookreponameunknownactionexception": {
+      "deploygitlabhookreponameunknownactionexception": "{0}未知的action：{1}"
+    },
+    "deployjobcannotexecuteexception": {
+      "deployjobcannotexecuteexception": "无法执行，当前用户没有当前应用系统/环境/场景 {0}({1})/{2}({3})/{4}({5}) 执行权限"
+    },
+    "deploycijobnamelostexception": {
+      "deploycijobnamelostexception": "持续集成配置缺少作业名称配置"
+    },
+    "deployversionresourcehasbeenlockedexception": {
+      "deployversionresourcehasbeenlockedexception": "HOME已被锁定，请稍后再试"
+    },
+    "movefilefailedexception": {
+      "movefilefailedexception": "文件移动或重命名失败，错误：{0}"
+    },
+    "deploycigitlabwebhooksavefailedexception": {
+      "deploycigitlabwebhooksavefailedexception": "gitlab webhook设置失败，错误：{0}"
+    },
+    "deployappauthactionirregularexception": {
+      "deployappauthactionirregularexception": "校验数据权限的入参({0})不合法"
+    },
+    "deploycigitlabaccountlostexception": {
+      "deploycigitlabaccountlostexception": "{0}/{1}的gitlab账号用户名与密码不能为空"
+    },
+    "deploybatchjobcannottakeoverexception": {
+      "deploybatchjobcannottakeoverexception": "无法接管，请联系管理员"
+    },
+    "createdirectoryfailedexception": {
+      "createdirectoryfailedexception": "新建目录失败，错误：{0}"
+    },
+    "deploycitriggertypelostexception": {
+      "deploycitriggertypelostexception": "持续集成配置缺少触发类型配置"
+    },
+    "deployappconfigscenariophasenamelistnotfoundexception": {
+      "deployappconfigscenariophasenamelistnotfoundexception": "当前流水线的场景没有绑定阶段"
+    },
+    "deployinstanceinenvnotfoundexception": {
+      "deployinstanceinenvnotfoundexception": "{0}->{1}->{2}下的实例：{3}不存在"
+    },
+    "deployciversionregexillegalexception": {
+      "deployciversionregexillegalexception": "持续集成配置的版本号截取规则格式不正确"
+    },
+    "deploybatchjobnotfoundexception": {
+      "deploybatchjobnotfoundexception": "批量发布作业：“{0}” 不存在",
+      "b": "该组的批量发布作业不存在"
+    },
+    "deploycienvidlostexception": {
+      "deploycienvidlostexception": "持续集成配置缺少环境配置"
+    },
+    "deploygitlabwebhookcallbackhostlostexception": {
+      "deploygitlabwebhookcallbackhostlostexception": "缺失初始化配置“gitlabWebHookCallbackHost“，请联系管理员处理"
+    },
+    "deployschedulenotfoundexception": {
+      "deployschedulenotfoundexception": "定时作业：“{0}”不存在"
+    },
+    "deployappconfigdbconfignotfoundexception": {
+      "deployappconfigdbconfignotfoundexception": "db配置id（{0}）不存在"
+    },
+    "deployappenvauthexception": {
+      "deployappenvauthexception": "您没有系统：{0}({1})下的环境：{2}({3})的【环境权限】"
+    },
+    "deployversionresourcetypenotfoundexception": {
+      "deployversionresourcetypenotfoundexception": "制品类型“{0}”不存在"
+    },
+    "deployciscenarioidlostexception": {
+      "deployciscenarioidlostexception": "持续集成配置缺少场景配置"
+    },
+    "deploypipelinenotfoundexception": {
+      "deploypipelinenotfoundexception": "id为“{0}”的流水线不存在"
+    },
+    "deploybuildnonotfoundexception": {
+      "deploybuildnonotfoundexception": "{0}/{1}/{2} buildNo 不存在"
+    },
+    "deployenvversionwhichcanrollbacknotfoundexception": {
+      "deployenvversionwhichcanrollbacknotfoundexception": "没有找到环境：{0}的可回退版本"
+    },
+    "copyfilefailedexception": {
+      "copyfilefailedexception": "复制文件失败，错误：{0}"
+    },
+    "deploygitlabhooklessreponameexception": {
+      "deploygitlabhooklessreponameexception": "第：{0}个缺少repoName"
+    },
+    "deployappconfigenvautoconfigkeytypeirregularexception": {
+      "deployappconfigenvautoconfigkeytypeirregularexception": "变量：{0}的类型{1}不合法，应该为{2}"
+    },
+    "deployappconfigenvautoconfigkeyrepeatexception": {
+      "deployappconfigenvautoconfigkeyrepeatexception": "变量名称：{0}重复"
+    },
+    "deploypipelineconfignotfoundexception": {
+      "deploypipelineconfignotfoundexception": "该应用系统的流水线不存在"
+    },
+    "changefilepermissionfailedexception": {
+      "changefilepermissionfailedexception": "修改权限失败，错误：{0}"
+    },
+    "deployinstanceversionwhichcanrollbacknotfoundexception": {
+      "deployinstanceversionwhichcanrollbacknotfoundexception": "没有找到实例：{0}的可回退版本"
+    },
+    "deployversionparentdependencynotfoundexception": {
+      "deployversionparentdependencynotfoundexception": "父依赖：{0}->{1}->{2}不存在"
+    },
+    "copyormovefiletosubdirectoryexception": {
+      "copyormovefiletosubdirectoryexception": "禁止复制或移动到自身的子目录"
+    },
+    "deploybatchjobgroupfirewithinvalidstatusexception": {
+      "deploybatchjobgroupfirewithinvalidstatusexception": "不能执行状态为：{0}的分组"
+    },
+    "deploycigitlabwebhookdeletefailedexception": {
+      "deploycigitlabwebhookdeletefailedexception": "{0}/{1}的gitlab webhook删除失败"
+    },
+    "deployjobparamirregularexception": {
+      "deployjobparamirregularexception": "参数“{0}”不能为空"
+    },
+    "downloadfilefailedexception": {
+      "downloadfilefailedexception": "下载文件失败，错误：“{0}”,详细错误请查看error.log"
+    },
+    "deployschedulenamerepeatexception": {
+      "deployschedulenamerepeatexception": "定时作业名称 “{0}” 已存在"
+    },
+    "deployappconfigdbschemaactionirregularexception": {
+      "deployappconfigdbschemaactionirregularexception": "以下schema输入格式不规范，请输入：dbname.username。不规范schema："
+    },
+    "deployversionbuildnonotfoundexception": {
+      "deployversionbuildnonotfoundexception": "版本“{0}”的buildNo“{1}”不存在",
+      "b": "buildNo“{0}”不存在"
+    },
+    "deployversionenvnotfoundexception": {
+      "deployversionenvnotfoundexception": "版本“{0}”的{1}环境不存在",
+      "b": "环境id:{0}不存在",
+      "c": "{0}/{1}/{3} 版本:{2} 不存在"
+    },
+    "deploypackagerequiredattributelostexception": {
+      "deploypackagerequiredattributelostexception": "第：{0}个依赖缺少groupId|artifactIDeployInstanceInEnvNotFoundExceptiond|version属性"
+    },
+    "deploybatchjobcannotcheckexception": {
+      "deploybatchjobcannotcheckexception": "无法验证，请联系管理员"
+    },
+    "deploygitlabhookreponamelessparamexception": {
+      "deploygitlabhookreponamelessparamexception": "{0}缺少{1}"
+    },
+    "deployciisrepeatexception": {
+      "deployciisrepeatexception": "持续集成配置：{0}已存在"
+    },
+    "deploygitlabwebhookcallbackhostilegalexception": {
+      "deploygitlabwebhookcallbackhostilegalexception": "初始化配置“gitlabWebHookCallbackHost“格式非法，请联系管理员处理"
+    },
+    "deploycipipelineidlostexception": {
+      "deploycipipelineidlostexception": "持续集成配置缺少超级流水线配置"
     }
   },
   "nfdej": {
@@ -4301,7 +5013,14 @@
       "input": {
         "param": {
           "desc": {
-            "subdirs": "子目录"
+            "subdirs": "子目录",
+            "buildno": "编译号",
+            "proxytenantjdbcurl": "代理授权信息"
+          },
+          "help": {
+            "buildno": "如果是空的，那么就要到版本对应的envName找到buildNo",
+            "runnerid": "-1则根据应用和模块对应的group随意选择一个runner",
+            "proxytourl": "不从当前环境runner下载,则需要传跳转url，即协议+IP地址（域名）+端口号，不传默认本地环境"
           }
         }
       }
@@ -4338,6 +5057,181 @@
     },
     "savedeployapppipelinedraftapi": {
       "getname": "保存流水线草稿"
+    },
+    "searchdeployactiveversionapi": {
+      "getname": "查询发布活动版本",
+      "input": {
+        "param": {
+          "desc": {
+            "defaultvalue": "默认应用系统ID列表(为空则代表查看所有应用)",
+            "currentpage": "当前页",
+            "pagesize": "每页数据条目",
+            "needpage": "是否需要分页，默认true"
+          }
+        }
+      }
+    },
+    "getdeploymoduleversionauditlistapi": {
+      "getname": "获取模块版本历史",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用 id",
+            "appmoduleid": "模块 id",
+            "envid": "环境 id"
+          }
+        }
+      }
+    },
+    "listdeployapppipelineparamapi": {
+      "getname": "查询应用流水线作业参数列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统ID"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "参数列表"
+          }
+        }
+      }
+    },
+    "checkdeployapppipelinephasebelonggroupapi": {
+      "getname": "检查两个阶段是否在同一个组",
+      "input": {
+        "param": {
+          "desc": {
+            "phasename": "阶段名",
+            "phasegroupsort": "阶段组号",
+            "targetphasename": "目标阶段名",
+            "targetphasegroupsort": "阶段组号"
+          }
+        }
+      },
+      "runtime": {
+        "label": "未配置环境"
+      }
+    },
+    "movedeployapppipelinephasebelonggroupapi": {
+      "getname": "移动阶段到指定组",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemabbrnamelist": "应用系统简称列表",
+            "phaselist": "阶段列表",
+            "targetphasename": "目标阶段名",
+            "targetphasegroupsort": "目标阶段组号",
+            "issave": "是否保存",
+            "isallappsystem": "是否扫描所有应用系统"
+          },
+          "help": {
+            "appsystemabbrnamelist": "isAllAppSystem=0才生效",
+            "phaselist": "[{\"name\":\"阶段名\",\"groupSort\":\"阶段组序号\"}]"
+          }
+        }
+      },
+      "runtime": {
+        "label": "未配置环境"
+      }
+    },
+    "updatedeployapppipelineparameditablefieldapi": {
+      "getname": "更新应用流水线作业参数的可编辑字段值"
+    },
+    "updatedeployapppipelineexecuteuserfieldapi": {
+      "getname": "更新应用流水线的执行用户字段值"
+    },
+    "listdeployapppipelineprofileapi": {
+      "getname": "获取应用流水线预置参数集列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统ID",
+            "appmoduleid": "模块ID",
+            "envid": "环境ID",
+            "defaultvalue": "默认值"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "应用流水线预置参数集列表"
+          }
+        }
+      }
+    },
+    "savedeployapppipelineparamapi": {
+      "getname": "保存应用流水线作业参数",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统ID",
+            "paramlist": "参数列表[{\"key\": \"参数名\", \"name\": \"中文名\", \"defaultValue\": \"默认值\", \"description\": \"描述\", \"isRequired\": \"是否必填\", \"type\": \"参数类型\"}]"
+          }
+        }
+      }
+    },
+    "deletedeployapppipelinedraftapi": {
+      "getname": "删除流水线草稿",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统ID",
+            "appmoduleid": "模块ID",
+            "envid": "环境ID"
+          }
+        }
+      }
+    },
+    "updatedeployapppipelinephaseoperationdescriptionfieldapi": {
+      "getname": "更新应用流水线阶段操作的描述字段值"
+    },
+    "getdeployapppipelinedraftapi": {
+      "getname": "获取应用流水线草稿",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统ID",
+            "appmoduleid": "模块ID",
+            "envid": "环境ID"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "应用流水线草稿"
+          }
+        }
+      }
+    },
+    "listdeployapppipelineprofileparamoverrideapi": {
+      "getname": "获取当前应用下游对某个预置参数修改的列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统ID",
+            "profileid": "预置参数集ID",
+            "key": "参数key"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "数据列表"
+          }
+        }
+      },
+      "runtime": {
+        "label": {
+          "label": "预置参数"
+        }
+      }
     }
   },
   "nmdaae": {
@@ -4345,7 +5239,17 @@
       "getname": "删除发布应用配置DB私有账号"
     },
     "deletedeployappconfiginstanceapi": {
-      "getname": "删除发布应用配置的应用模块环境的实例"
+      "getname": "删除发布应用配置的应用模块环境的实例",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id",
+            "instanceidlist": "实例id列表"
+          }
+        }
+      }
     },
     "listdeployappconfigenvattrapi": {
       "getname": "查询应用环境属性",
@@ -4355,27 +5259,562 @@
             "keylist": "key列表"
           }
         }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "应用配置环境autoConfig列表"
+          }
+        }
       }
     },
     "savedeployappconfigenvapi": {
       "getname": "保存发布应用配置的应用系统环境"
     },
     "savedeployappconfigenvattrapi": {
-      "getname": "保存应用环境属性"
+      "getname": "保存应用环境属性",
+      "input": {
+        "param": {
+          "desc": {
+            "keyvaluelist": "[{\"id\": xxx,\"key\": xxx,\"value\":xxx}]"
+          }
+        }
+      }
     },
     "savedeployappconfigenvdbapi": {
       "getname": "保存发布应用配置资产配置项数据"
     },
     "savedeployappconfigenvdbprivateaccountapi": {
-      "getname": "保存发布应用配置DB私有账号"
+      "getname": "保存发布应用配置DB私有账号",
+      "runtime": {
+        "param": {
+          "idresourceid": "资产ID（resourceId）"
+        }
+      }
     },
     "savedeployappconfigenvdbpublicaccountapi": {
       "getname": "保存发布应用配置DB公共账号"
+    },
+    "listdeployappconfigenvautoconfigauditapi": {
+      "getname": "查询应用环境实例autoConfig审计列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用 id",
+            "appmoduleid": "模块 id",
+            "envid": "环境 id",
+            "instanceid": "应用实例 id"
+          }
+        }
+      },
+      "runtime": {
+        "beforevalue": "设为空",
+        "aftervalue": "设为空"
+      }
+    },
+    "copydeployappconfigenvconfigapi": {
+      "getname": "复制环境层配置",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "fromenvid": "来源环境id",
+            "toenvidlist": "目标环境id列表",
+            "isadd": "是否新增(0:现有，1:新增)"
+          }
+        }
+      }
+    },
+    "savedeployappconfigenvcientityapi": {
+      "input": {
+        "param": {
+          "desc": {
+            "ip": "IP地址",
+            "port": "端口",
+            "attrlist": "属性列表",
+            "rellist": "关系列表",
+            "globalattrlist": "全局属性列表"
+          }
+        }
+      }
+    },
+    "searchdeployappmoduleenvautoconfiginstanceapi": {
+      "getname": "获取发布应用模块环境AutoConfig实例差异的资产列表",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "模糊查询",
+            "appsystemid": "应用 id",
+            "appmoduleid": "模块 id",
+            "envid": "环境 id",
+            "isautoconfig": "是否有AutoConfig",
+            "defaultvalue": "默认值",
+            "currentpage": "当前页",
+            "pagesize": "每页数据条目",
+            "needpage": "是否需要分页，默认true"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "发布应用模块环境AutoConfig实例差异的资产列表"
+          }
+        }
+      }
+    },
+    "savedeployappconfigautoconfigforautoexecapi": {
+      "getname": "保存某个环境的AutoConfig配置的key",
+      "input": {
+        "param": {
+          "desc": {
+            "runnerid": "Runner的ID",
+            "runnergroup": "runner组信息",
+            "jobid": "作业ID",
+            "phasename": "阶段名",
+            "sysid": "应用ID",
+            "moduleid": "模块ID",
+            "envid": "环境ID",
+            "sysname": "应用名",
+            "modulename": "模块名",
+            "envname": "环境名",
+            "autocfgkeys": "key列表"
+          }
+        }
+      }
+    },
+    "savedeployappconfiginstanceapi": {
+      "getname": "保存发布应用配置的应用模块环境的实例",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id",
+            "instanceidlist": "实例id列表",
+            "id": "实例id",
+            "ciid": "模型id",
+            "ip": "IP地址",
+            "port": "端口",
+            "name": "名称",
+            "maintenancewindow": "维护窗口"
+          }
+        }
+      }
+    },
+    "savedeployappconfigdbschemaforautoexecapi": {
+      "getname": "保存某个环境的DBConfig配置的schema",
+      "input": {
+        "param": {
+          "desc": {
+            "runnerid": "Runner的ID",
+            "runnergroup": "runner组信息",
+            "jobid": "作业ID",
+            "phasename": "阶段名",
+            "sysid": "应用ID",
+            "moduleid": "模块ID",
+            "envid": "环境ID",
+            "sysname": "应用名",
+            "modulename": "模块名",
+            "envname": "环境名",
+            "dbschemas": "数据库schema列表（schema格式为：dbname.username）"
+          }
+        }
+      }
+    },
+    "deletedeployappconfigenvconfigapi": {
+      "getname": "删除发布应用配置的应用系统环境配置",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id"
+          }
+        }
+      }
+    },
+    "deletedeployappconfigenvapi": {
+      "getname": "删除发布应用配置的应用系统环境",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id"
+          }
+        }
+      }
+    },
+    "fallbackdeployappconfigenvautoconfigapi": {
+      "getname": "回滚应用环境实例autoConfig",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用 id",
+            "appmoduleid": "模块 id",
+            "envid": "环境 id",
+            "instanceid": "应用实例 id",
+            "uuidlist": "变量名列表"
+          }
+        }
+      }
+    },
+    "getdeployappenvautoconfigapi": {
+      "getname": "获取指定环境下所有实例的autoConfig",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用系统id",
+            "envid": "版本号"
+          }
+        }
+      }
+    },
+    "searchdeployappconfigenvdatabaseapi": {
+      "getname": "查询发布应用配置DB库下的无模块无环境、无模块同环境、同模块无环境、同模块同环境的数据库",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "关键词",
+            "currentpage": "当前页",
+            "defaultvalue": "默认值",
+            "pagesize": "每页数据条目",
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "数据库资产列表",
+            "basepagevo": "查询发布应用配置DB库下的无模块无环境、无模块同环境、同模块无环境、同模块同环境的数据库"
+          }
+        }
+      }
+    },
+    "savedeployappconfigenvautoconfigapi": {
+      "getname": "保存应用环境实例autoConfig",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用 id",
+            "appmoduleid": "模块 id",
+            "envid": "环境 id",
+            "deleteinstanceid": "删除的应用实例 id",
+            "instanceid": "应用实例 id",
+            "keyvaluelist": "[{\"id\": xxx,\"key\": xxx,\"value\":xxx}]"
+          }
+        }
+      }
+    },
+    "getdeployappconfigenvdbconfigapi": {
+      "getname": "获取发布应用配置DB配置",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "DB配置"
+          }
+        }
+      }
+    },
+    "searchdeployappconfiginstanceapi": {
+      "getname": "查询发布应用配置的应用实例下的无模块无环境、无模块同环境、同模块无环境的实例列表",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "模糊查询",
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id",
+            "currentpage": "当前页",
+            "needpage": "是否分页",
+            "pagesize": "每页最大数"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "实例列表"
+          }
+        }
+      }
+    },
+    "getdeployappconfigenvinfoapi": {
+      "getname": "查询应用环境详细配置信息",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用 id",
+            "appmoduleid": "模块 id",
+            "envid": "环境 id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "应用配置环境autoConfig列表"
+          }
+        }
+      }
+    },
+    "deletedeployappconfigenvdbconfigapi": {
+      "getname": "删除发布应用配置的DB配置",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      }
+    },
+    "getdeployappconfigenvdbconfigforautoexecapi": {
+      "getname": "获取某个环境的DBConfig配置",
+      "input": {
+        "param": {
+          "desc": {
+            "runnerid": "Runner的ID",
+            "runnergroup": "runner组信息",
+            "jobid": "作业ID",
+            "phasename": "阶段名",
+            "sysid": "应用ID",
+            "moduleid": "模块ID",
+            "envid": "环境ID",
+            "sysname": "应用名",
+            "modulename": "模块名",
+            "envname": "环境名"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "DB配置"
+          }
+        }
+      }
+    },
+    "deletedeployappconfigenvautoconfigapi": {
+      "getname": "删除应用环境实例autoConfig",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用 id",
+            "appmoduleid": "模块 id",
+            "envid": "环境 id",
+            "instanceid": "应用实例 id"
+          }
+        }
+      }
+    },
+    "savedeployappconfigenvdbconfigapi": {
+      "getname": "保存发布应用配置DB配置",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id",
+            "id": "ID",
+            "dbschema": "数据库schema",
+            "dbresourceid": "数据库资产id",
+            "accountid": "执行用户id",
+            "config": "高级设置"
+          }
+        }
+      }
+    },
+    "listdeployappconfigwithoutconfigenvapi": {
+      "getname": "获取没有继承应用配置的环境列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "没有继承应用配置的环境列表"
+          }
+        }
+      }
     }
   },
   "nmdaam": {
     "listdeployappconfigappenvapi": {
-      "getname": "查询发布应用配置的应用系统环境列表(用于应用树的环境下拉、发布作业时通过模块列表查询环境列表)"
+      "getname": "查询发布应用配置的应用系统环境列表(用于应用树的环境下拉、发布作业时通过模块列表查询环境列表)",
+      "input": {
+        "param": {
+          "help": {
+            "ishasenv": "0:查找现没有的环境，1：查找现有的环境"
+          }
+        }
+      }
+    },
+    "listdeployappconfigwithoutconfigmoduleapi": {
+      "getname": "获取没有继承应用配置的模块列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "发布应用配置的应用系统模块列表"
+          }
+        }
+      }
+    },
+    "getdeployappconfigappmoduleinfoapi": {
+      "getname": "查询应用模块详细配置信息",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "应用模块详细配置信息"
+          }
+        }
+      }
+    },
+    "copydeployappconfigmoduleconfigapi": {
+      "getname": "复制模块层配置",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "fromappmoduleid": "来源模块id",
+            "toappmoduleidlist": "目标模块id列表",
+            "abbrname": "简称(复制配置，并新建模块时使用)",
+            "name": "名称(复制配置，并新建模块时使用)",
+            "stateidlist": "状态(复制配置，并新建模块时使用)",
+            "owneridlist": "负责人(复制配置，并新建模块时使用)",
+            "maintenancewindow": "维护窗口(复制配置，并新建模块时使用)",
+            "description": "备注(复制配置，并新建模块时使用)",
+            "isadd": "是否新增(0:现有，1:新增)"
+          }
+        }
+      }
+    },
+    "getdeploymodulescenarioandenvlistapi": {
+      "getname": "获取应用模块的场景与环境列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "模块id"
+          }
+        }
+      }
+    },
+    "getdeployappconfigappmoduleapi": {
+      "getname": "查询应用模块（配置项）信息",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "应用模块id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "应用模块（配置项）信息"
+          }
+        }
+      }
+    },
+    "savedeployappconfigappmoduleapi": {
+      "getname": "保存发布应用配置的应用模块",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID",
+            "abbrname": "简称",
+            "name": "名称",
+            "state": "状态",
+            "owner": "负责人",
+            "maintenancewindow": "维护窗口",
+            "description": "备注",
+            "appsystemid": "应用系统id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "应用模块id"
+          }
+        }
+      }
+    },
+    "getdeployrunnergroupforautoexecapi": {
+      "getname": "获取发布runner组",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用id",
+            "moduleid": "模块id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "获取发布runner组接口"
+          }
+        }
+      }
+    },
+    "savedeployappconfigmodulerunnergroupapi": {
+      "getname": "保存应用模块runner组",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用id",
+            "appmoduleid": "模块id",
+            "runnergroupid": "runner组id"
+          }
+        }
+      }
+    },
+    "deletedeployappconfigappmoduleconfigapi": {
+      "getname": "删除发布应用配置模块配置",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id"
+          }
+        }
+      }
     }
   },
   "nmdaas": {
@@ -4398,7 +5837,208 @@
         "param": {
           "desc": {
             "actionlist": "动作列表",
-            "includeactionlist": "需要的返回的权限action，用于限制返回没必要的权限。如：[\u0027view\u0027,\u0027edit\u0027,\u0027scenario\u0027,\u0027env\u0027]"
+            "includeactionlist": "需要的返回的权限action，用于限制返回没必要的权限。如：['view','edit','scenario','env']"
+          }
+        }
+      },
+      "runtime": {
+        "label": {
+          "label": "用户"
+        }
+      }
+    },
+    "listdeployappinstanceciattrapi": {
+      "getname": "获取发布应用实例模型的属性列表",
+      "input": {
+        "param": {
+          "desc": {
+            "isall": "是否返回全部属性",
+            "attrnamelist": "需要返回的属性列表"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "发布应用模块实例的属性列表"
+          }
+        }
+      }
+    },
+    "searchdeployappconfigappsystemapi": {
+      "getname": "查询发布应用配置的应用系统列表",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "模糊搜索-应用名|模块名",
+            "isfavorite": "是否只显示已收藏的",
+            "isconfig": "是否只显示已配置的",
+            "appsystemidlist": "应用系统id列表",
+            "appmoduleidlist": "应用模块id列表",
+            "currentpage": "当前页",
+            "pagesize": "每页数据条目",
+            "needpage": "是否需要分页，默认true",
+            "pagerange": "分页范围"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "发布应用配置的应用系统列表"
+          }
+        }
+      }
+    },
+    "savedeployappconfigappsystemfavoriteapi": {
+      "getname": "收藏发布应用配置的应用",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "isfavorite": "是否被收藏（1：收藏，0：取消收藏）"
+          }
+        }
+      }
+    },
+    "listdeployappmoduleciattrapi": {
+      "getname": "获取发布应用模块模型的属性列表",
+      "input": {
+        "param": {
+          "desc": {
+            "isall": "是否返回全部属性",
+            "attrnamelist": "需要返回的属性列表"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "发布应用模块模型的属性列表"
+          }
+        }
+      }
+    },
+    "treedeployappconfigappsystemappmoduleenvapi": {
+      "getname": "查询发布应用配置的应用系统模块环境树",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统ID"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "查询发布应用配置的应用系统模块环境树"
+          }
+        }
+      }
+    },
+    "listdeployappconfigappmoduleapi": {
+      "getname": "查询发布应用配置的应用系统模块列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleidlist": "应用模块id列表"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "发布应用配置的应用系统模块列表"
+          }
+        }
+      }
+    },
+    "deletedeployappconfigappsystemconfigapi": {
+      "getname": "删除发布应用配置应用配置",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id"
+          }
+        }
+      }
+    },
+    "searchdeployappattrapi": {
+      "getname": "查询发布应用属性下拉列表",
+      "input": {
+        "param": {
+          "desc": {
+            "attrname": "属性名称",
+            "ciname": "模型名称",
+            "keyword": "关键字",
+            "defaultvalue": "用于回显列表"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "查询发布应用属性下拉列表"
+          }
+        }
+      }
+    },
+    "getdeployappconfigappsystemapi": {
+      "getname": "查询应用系统（配置项）信息",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "应用系统id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "应用系统（配置项）信息"
+          }
+        }
+      }
+    },
+    "listdeployappciattrapi": {
+      "getname": "获取发布应用模型的属性列表",
+      "input": {
+        "param": {
+          "desc": {
+            "isall": "是否返回全部属性",
+            "attrnamelist": "需要返回的属性列表"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "发布应用模型的属性列表"
+          }
+        }
+      }
+    },
+    "deletebatchdeployappconfigauthorityapi": {
+      "getname": "批量删除应用配置权限",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用资产id",
+            "uuidlist": "授权列表"
+          }
+        }
+      }
+    },
+    "savedeployappconfigauthorityapi": {
+      "getname": "保存应用配置权限",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用资产id",
+            "authoritystrlist": "授权列表",
+            "actionlist": "授权操作列表",
+            "isedit": "是否编辑，0：否，1：是"
           }
         }
       }
@@ -4406,7 +6046,18 @@
   },
   "nmdab": {
     "batchsaveinstancebluegreenapi": {
-      "getname": "批量保存实例蓝绿"
+      "getname": "批量保存实例蓝绿",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用id",
+            "appmoduleid": "模块id",
+            "envid": "环境id",
+            "resourceidlist": "实例id列表",
+            "bluegreenid": "蓝绿id"
+          }
+        }
+      }
     },
     "getsettingsapi": {
       "description": {
@@ -4428,10 +6079,28 @@
       }
     },
     "savebluegreenapi": {
-      "getname": "保存蓝绿"
+      "getname": "保存蓝绿",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      }
     },
     "saveinstancebluegreenapi": {
-      "getname": "保存实例蓝绿"
+      "getname": "保存实例蓝绿",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用id",
+            "appmoduleid": "模块id",
+            "envid": "环境id",
+            "resourceid": "实例id",
+            "bluegreenid": "蓝绿id"
+          }
+        }
+      }
     },
     "searchbluegreenapi": {
       "getname": "查询蓝绿列表",
@@ -4465,6 +6134,13 @@
             "message": "提交信息",
             "modified": "本次提交修改的文件",
             "revision": "提交id"
+          },
+          "help": {
+            "date": "格式yyyy-MM-dd hh:mm:ss",
+            "message": "包含'--nodeploy'时不会执行动作",
+            "added": "多个“,”分割",
+            "modified": "多个“,”分割",
+            "deleted": "多个“,”分割"
           }
         }
       }
@@ -4505,6 +6181,88 @@
         "desc": "保存资产配置接口"
       },
       "getname": "保存资产配置"
+    },
+    "searchdeployciauditapi": {
+      "getname": "查询持续集成触发记录",
+      "input": {
+        "param": {
+          "desc": {
+            "ciid": "持续集成配置id",
+            "currentpage": "当前页",
+            "pagesize": "每页最大数"
+          }
+        }
+      }
+    },
+    "batchupdategitlabhookapi": {
+      "getname": "批量更新gitlab webhook",
+      "input": {
+        "param": {
+          "desc": {
+            "runnerurl": "Runner URL",
+            "reposerveraddress": "仓库服务器地址",
+            "callbackurl": "回调url",
+            "branchfilter": "分支",
+            "username": "gitlab用户",
+            "password": "gitlab密码",
+            "action": "动作类型",
+            "configlist": {
+              "name": "Webhook配置列表",
+              "reposerveraddress": "仓库服务器地址",
+              "reponame": "仓库名称",
+              "branchfilter": "分支",
+              "callbackurl": "回调url",
+              "username": "gitlab用户",
+              "password": "gitlab密码",
+              "action": "动作类型"
+            }
+          }
+        }
+      }
+    },
+    "updatedeployactivestatusapi": {
+      "getname": "激活或禁用持续集成配置",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID",
+            "isactive": "是否激活"
+          }
+        }
+      }
+    },
+    "deletedeployciapi": {
+      "getname": "删除持续集成配置",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      }
+    },
+    "searchdeployciapi": {
+      "getname": "查询持续集成配置",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "系统ID",
+            "keyword": "关键词",
+            "currentpage": "当前页",
+            "pagesize": "每页最大数"
+          }
+        }
+      }
+    },
+    "getdeployciapi": {
+      "getname": "获取持续集成配置",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      }
     }
   },
   "nmdad": {
@@ -4542,10 +6300,144 @@
   },
   "nmdaj": {
     "createmultideployjobapi": {
-      "getname": "创建并执行发布作业"
+      "getname": "创建并执行发布作业",
+      "input": {
+        "param": {
+          "help": {
+            "scenarioname": "如果入参也有scenarioId，则会以scenarioName为准",
+            "appsystemabbrname": "如果入参也有appSystemId，则会以appSystemName为准",
+            "envname": "如果入参也有envId，则会以envName为准",
+            "proxytourl": "不从当前环境runner下载,则需要传跳转url，即协议+IP地址（域名）+端口号"
+          }
+        }
+      }
     },
     "getdeployjobcreateinfoapi": {
       "getname": "获取创建发布作业初始化信息"
+    },
+    "savedeployjobnotifypolicyapi": {
+      "getname": "保存发布作业通知策略",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "policyid": "通知策略id",
+            "iscustom": "通知策略id",
+            "parammappinglist": "参数映射列表",
+            "excludetriggerlist": "排除的触发点列表"
+          }
+        }
+      }
+    },
+    "getdeployjobnotifypolicyapi": {
+      "getname": "获取发布应用的通知策略id",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "invokenotifypolicyconfigvo": "通知策略配置信息"
+          }
+        }
+      }
+    },
+    "searchdeployjobapi": {
+      "getname": "查询发布作业",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id",
+            "parentid": "父作业id",
+            "pipelineid": "超级流水线id",
+            "statuslist": "作业状态",
+            "invokeidlist": "引用id列表",
+            "typeidlist": "组合工具类型",
+            "idlist": "id列表，用于精确查找作业刷新状态",
+            "excludeidlist": "排除id列表",
+            "confid": "自动发现配置id",
+            "starttimerange": "开始时间范围",
+            "endtimerange": "结束时间范围",
+            "planstarttimerange": "计划时间范围",
+            "execuserlist": "操作人",
+            "keyword": "关键词",
+            "currentpage": "当前页",
+            "hasparent": "是否拥有父作业",
+            "sourcelist": "来源，默认是deploy，batchdeploy",
+            "pagesize": "每页数据条目",
+            "isneednameandabbrname": "是否需要查询系统、模块名称简称（1：查询，0：不查询）"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "列表",
+            "basepagevo": "查询发布作业接口"
+          }
+        }
+      }
+    },
+    "listdeployjobmoduleapi": {
+      "getname": "根据系统、环境、场景查询一键发布页面的模块信息列表",
+      "input": {
+        "param": {
+          "desc": {
+            "appsystemid": "应用系统id",
+            "envid": "环境id",
+            "scenarioid": "场景id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "根据系统、环境、场景查询一键发布页面的模块信息列表"
+          }
+        }
+      }
+    },
+    "getdeploygroupjoblistapi": {
+      "getname": "根据指定id获取发布作业组列表",
+      "input": {
+        "param": {
+          "desc": {
+            "idlist": "id列表，用于精确查找作业刷新状态"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "根据指定id获取发布作业组列表接口，用于刷新作业状态"
+          }
+        }
+      }
+    },
+    "createdeployjobapi": {
+      "getname": "创建单个模块发布作业",
+      "input": {
+        "param": {
+          "desc": {
+            "scenarioid": "场景id",
+            "scenarioname": "场景名, 如果入参也有scenarioId，则会以scenarioName为准",
+            "appsystemid": "应用系统id",
+            "appsystemabbrname": "应用系统简称，如果入参也有appSystemId，则会以appSystemName为准",
+            "appmoduleid": "应用模块id",
+            "appmoduleabbrname": "应用模块简称",
+            "envid": "环境id",
+            "envname": "环境id，如果入参也有envId，则会以envName为准",
+            "source": "来源 itsm|human|deploy   ITSM|人工发起的等，不传默认是发布发起的",
+            "isneedfire": "创建完作业是否激活，默认1 激活"
+          }
+        }
+      }
     }
   },
   "nmdajb": {
@@ -4553,7 +6445,145 @@
       "getname": "获取单个批量作业信息"
     },
     "savebatchdeployjobapi": {
-      "getname": "保存批量发布作业"
+      "getname": "保存批量发布作业",
+      "input": {
+        "param": {
+          "help": {
+            "id": "不提供代表添加作业",
+            "savemode": "暂存或提交"
+          }
+        }
+      }
+    },
+    "deletebatchdeployjobapi": {
+      "getname": "删除批量发布作业",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "作业id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "deployjobvo": "删除批量发布作业接口"
+          }
+        }
+      }
+    },
+    "takeoverbatchdeployjobapi": {
+      "getname": "接管批量发布作业",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "批量发布作业id"
+          }
+        }
+      }
+    },
+    "resumebatchdeployjobgroupapi": {
+      "getname": "继续执行批量发布作业组",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "批量作业组id",
+            "batchjobaction": "批量作业执行策略，refireAll：跳过所有已完成的子作业；refireResetAll:执行所有子作业",
+            "jobaction": "子作业执行策略，refireAll：跳过所有已完成、已忽略的节点；refireResetAll:执行所有节点"
+          }
+        }
+      }
+    },
+    "executebatchdeployjobgroupapi": {
+      "getname": "执行批量发布作业组",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "批量作业组id",
+            "isgoon": "执行完当前组是否继续执行后续组，但仍受needWait约束，1：是，0：否",
+            "batchjobaction": "批量作业执行策略，refireAll：跳过所有已完成的子作业；refireResetAll:执行所有子作业",
+            "jobaction": "子作业执行策略，refireAll：跳过所有已完成、已忽略的节点；refireResetAll:执行所有节点"
+          }
+        }
+      }
+    },
+    "checkbatchdeployjobapi": {
+      "getname": "验证批量发布作业",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "批量发布作业id"
+          }
+        }
+      }
+    },
+    "getbatchdeployjobstatusapi": {
+      "getname": "获取单个批量作业状态信息",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "作业id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "deployjobvo": "获取单个批量作业状态信息接口，主要用于刷新状态"
+          }
+        }
+      }
+    },
+    "updatebatchdeployjobreviewstatusapi": {
+      "getname": "修改批量发布作业审核状态",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "作业id",
+            "reviewstatus": "审批动作"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "deployjobvo": "修改批量发布作业审核状态接口"
+          }
+        }
+      }
+    },
+    "executebatchdeployjobapi": {
+      "getname": "执行批量发布作业",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "批量作业id",
+            "batchjobaction": "批量作业执行策略，refireAll：跳过所有已完成的子作业；refireResetAll:执行所有子作业",
+            "jobaction": "子作业执行策略，refireAll：跳过所有已完成、已忽略的节点；refireResetAll:执行所有节点"
+          }
+        }
+      }
+    },
+    "addbatchdeployjobfrompipelineapi": {
+      "getname": "通过超级流水线添加批量发布作业",
+      "input": {
+        "param": {
+          "desc": {
+            "pipelineid": "超级流水线id",
+            "name": "作业名称",
+            "appsystemmoduleversionlist": "选中的系统模块和版本，数组对象需要包含appSystemId,appModuleId和versionId三个字段",
+            "triggertype": "触发方式",
+            "planstarttime": "计划开始时间"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "deployjobvo": "通过超级流水线添加批量发布作业接口"
+          }
+        }
+      }
     }
   },
   "nmdao": {
@@ -4593,7 +6623,98 @@
       "getname": "保存超级流水线",
       "input": {
         "param": {
-          "desc": "默认版本"
+          "desc": {
+            "id": "ID",
+            "name": "名称",
+            "defaultversion": "默认版本"
+          }
+        }
+      }
+    },
+    "listpipelineappsystemmoduleenvscenarioapi": {
+      "getname": "获取超级流水线应用模块环境列表",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "获取超级流水线应用模块环境列表接口"
+          }
+        }
+      }
+    },
+    "deletepipelineapi": {
+      "getname": "删除超级流水线",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      }
+    },
+    "searchpipelineapi": {
+      "getname": "查询超级流水线",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "关键字",
+            "type": "类型",
+            "appsystemid": "应用ID",
+            "needverifyauth": "是否需要验证权限",
+            "currentpage": "当前页码",
+            "pagesize": "页大小"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "超级流水线列表"
+          }
+        }
+      }
+    },
+    "getjobtemplateapi": {
+      "getname": "获取作业模板信息",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "pipelinejobtemplatevo": "获取作业模板信息接口"
+          }
+        }
+      }
+    },
+    "searchjobtemplateapi": {
+      "getname": "搜索流水线作业模板",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "关键字",
+            "excludeidlist": "排除id列表",
+            "appsystemid": "应用系统id",
+            "appmoduleid": "应用模块id",
+            "envid": "环境id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "basepagevo": "搜索流水线作业模板接口"
+          }
         }
       }
     }
@@ -4665,6 +6786,87 @@
     },
     "searchdrserviceapi": {
       "getname": "搜索容灾服务列表"
+    },
+    "savedeployscheduleapi": {
+      "getname": "保存定时作业信息",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "定时作业id",
+            "name": "定时作业名称",
+            "begintime": "开始时间",
+            "endtime": "结束时间",
+            "cron": "corn表达式",
+            "isactive": "是否激活(0:禁用，1：激活)",
+            "config": "执行配置信息",
+            "type": "作业类型",
+            "appsystemid": "应用id",
+            "appmoduleid": "模块id",
+            "pipelineid": "流水线id",
+            "pipelinetype": "流水线类型"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "id": "定时作业id"
+          }
+        }
+      },
+      "runtime": {
+        "param": {
+          "idconfigscenarioid": "场景ID（config.scenarioId）",
+          "idconfigenvid": "环境ID（config.envId）",
+          "configmodulelist": "模块版本列表（config.moduleList）",
+          "idconfigmodulelistid": "模块ID（config.moduleList.id）",
+          "configdeploysystemmodulevers": "应用模块环境（场景）版本列表（config.deploySystemModuleVersionList）",
+          "appsystemid": "应用系统ID（config.deploySystemModuleVersionList.appSystemId）",
+          "appmoduleid": "应用模块ID（config.deploySystemModuleVersionList.appModuleId）"
+        }
+      }
+    },
+    "deletedeployscheduleapi": {
+      "getname": "删除定时作业",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "定时作业id"
+          }
+        }
+      }
+    },
+    "listdeployscheduleapi": {
+      "getname": "查询定时作业列表",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "模糊查询",
+            "isactive": "是否启用",
+            "appsystemid": "应用id",
+            "appmoduleid": "模块id",
+            "currentpage": "当前页码",
+            "pagesize": "页大小"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "定时作业列表"
+          }
+        }
+      }
+    },
+    "updatedeployscheduleisactiveapi": {
+      "getname": "启用/禁用定时作业",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "定时作业id"
+          }
+        }
+      }
     }
   },
   "nmdav": {
@@ -4675,7 +6877,14 @@
       "getname": "获取版本CVE漏洞列表"
     },
     "getdeployversionenvforautoexecapi": {
-      "getname": "获取发布版本环境信息"
+      "getname": "获取发布版本环境信息",
+      "input": {
+        "param": {
+          "help": {
+            "proxytourl": "可选，如果有则表示去其他环境获取"
+          }
+        }
+      }
     },
     "getdeployversionissuelistapi": {
       "description": {
@@ -4686,7 +6895,15 @@
       "getname": "查询发布版本表头配置"
     },
     "listdeploypipelinejobtemplateversionapi": {
-      "getname": "根据超级流水线作业模板获取版本列表"
+      "getname": "根据超级流水线作业模板获取版本列表",
+      "input": {
+        "param": {
+          "desc": {
+            "jobtemplateidlist": "模板id列表",
+            "version": "版本"
+          }
+        }
+      }
     },
     "savedeployversioncommitanalyzeapi": {
       "description": {
@@ -4720,7 +6937,249 @@
       }
     },
     "searchdeployversionapi": {
-      "getname": "查询发布版本列表"
+      "getname": "查询发布版本列表",
+      "input": {
+        "param": {
+          "help": {
+            "starttimerange": "入参：{startTime（开始时间）与endTime（结束时间）}，或者{timeRange（时间范围）与timeUnit（时间范围参数）}"
+          }
+        }
+      }
+    },
+    "unfreezedeployversionapi": {
+      "getname": "解/封发布版本",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "isfreeze": "是否封版(0：解版，1：封版)"
+          }
+        }
+      }
+    },
+    "savedeployversionapi": {
+      "getname": "保存发布版本",
+      "input": {
+        "param": {
+          "desc": {
+            "version": "版本",
+            "appsystemid": "应用系统id",
+            "appsystemname": "应用名称",
+            "appmoduleid": "应用模块id",
+            "appmodulename": "应用模块名称",
+            "isfreeze": "是否封版",
+            "description": "描述"
+          }
+        }
+      }
+    },
+    "savedeployversionunittestapi": {
+      "getname": "保存发布版本单元测试指标",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号",
+            "deployversionunittestvo": "单元测试指标"
+          }
+        }
+      }
+    },
+    "deletedeployversionbuildnoapi": {
+      "getname": "删除发布版本buildNo",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号",
+            "buildno": "编译号"
+          }
+        }
+      }
+    },
+    "getdeployversionchartapi": {
+      "getname": "获取发布版本图表数据",
+      "input": {
+        "param": {
+          "desc": {
+            "versionid": "版本号",
+            "name": "DeployVersionChart定义的图表tab名称",
+            "chart": "图表名称"
+          }
+        }
+      }
+    },
+    "getdeployversioninfoforautoexecapi": {
+      "getname": "获取发布版本配置",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号",
+            "buildno": "编译号"
+          }
+        }
+      }
+    },
+    "getdeployversionlastbuildqualityapi": {
+      "getname": "获取发布版本最后一次构建质量记录",
+      "input": {
+        "param": {
+          "desc": {
+            "versionid": "版本号"
+          }
+        }
+      }
+    },
+    "deletedeployversionapi": {
+      "getname": "删除发布版本",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号"
+          }
+        }
+      }
+    },
+    "getdeployversionenvlistapi": {
+      "getname": "获取版本的环境列表",
+      "input": {
+        "param": {
+          "desc": {
+            "versionid": "版本id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "获取版本的环境列表"
+          }
+        }
+      }
+    },
+    "searchdeployversionbuildnoapi": {
+      "getname": "查询发布作业模块下的版本编译号列表",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "模糊搜索",
+            "appsystemidlist": "应用系统id列表",
+            "appmoduleidlist": "应用模块id列表",
+            "starttimerange": "上传时间范围 (入参：{startTime（开始时间）与endTime（结束时间）}，或者{timeRange（时间范围）与timeUnit（时间范围参数）})",
+            "needpage": "是否需要分页，默认true",
+            "pagesize": "每页条目",
+            "currentpage": "当前页"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "查询发布作业模块下的版本编译号列表"
+          }
+        }
+      }
+    },
+    "savedeployversionforautoexecapi": {
+      "getname": "保存发布版本",
+      "input": {
+        "param": {
+          "desc": {
+            "runnerid": "Runner ID",
+            "runnergroup": "Runner组",
+            "jobid": "作业id",
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号",
+            "buildno": "编译号",
+            "verinfo": "版本信息"
+          }
+        }
+      }
+    },
+    "updatedeployversionenvforautoexecapi": {
+      "getname": "更新发布版本环境信息",
+      "input": {
+        "param": {
+          "desc": {
+            "runnerid": "Runner ID",
+            "runnergroup": "Runner组",
+            "jobid": "作业ID",
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "envid": "环境id",
+            "version": "版本号",
+            "buildno": "编译号",
+            "ismirror": "是否镜像发布",
+            "status": "环境状态"
+          }
+        }
+      }
+    },
+    "updatedeployversioninfoforautoexecapi": {
+      "getname": "更新发布版本配置",
+      "input": {
+        "param": {
+          "desc": {
+            "runnerid": "Runner ID",
+            "runnergroup": "Runner组",
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号",
+            "buildno": "编译号",
+            "verinfo": "版本信息"
+          }
+        }
+      }
+    },
+    "getdeployversionlastunittestapi": {
+      "getname": "获取发布版本最近一次单元测试记录",
+      "input": {
+        "param": {
+          "desc": {
+            "versionid": "版本号"
+          }
+        }
+      }
+    },
+    "searchdeployversioninstanceapi": {
+      "getname": "查询版本实例发布状态",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "关键词",
+            "versionid": "版本id",
+            "envid": "环境id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "查询版本实例发布状态"
+          }
+        }
+      }
+    },
+    "savedeployversionbuildqualityapi": {
+      "getname": "保存发布版本构建质量",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号",
+            "deployversionbuildqualityvo": "代码质量指标"
+          }
+        }
+      }
     }
   },
   "nmeae": {
@@ -7368,6 +9827,2166 @@
     },
     "tenant": {
       "name": "系统配置"
+    }
+  },
+  "nfdda": {
+    "deployappconfigauthorityactionvo": {
+      "action": {
+        "name": "授权操作"
+      },
+      "type": {
+        "name": "授权操作类型"
+      }
+    },
+    "deployappenvautoconfigkeyvaluevo": {
+      "isempty": {
+        "name": "是否为空"
+      }
+    },
+    "deployappconfigvo": {
+      "appsystemid": {
+        "name": "应用系统ID"
+      },
+      "appsystemname": {
+        "name": "应用系统名"
+      },
+      "appsystemabbrname": {
+        "name": "应用系统简称"
+      },
+      "appmoduleid": {
+        "name": "模块ID"
+      },
+      "appmodulename": {
+        "name": "模块名"
+      },
+      "appmoduleabbrname": {
+        "name": "模块简称"
+      },
+      "envid": {
+        "name": "环境ID"
+      },
+      "envname": {
+        "name": "环境名"
+      },
+      "path": {
+        "name": "路径"
+      },
+      "config": {
+        "name": "流水线配置信息"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployappconfigauthorityvo": {
+      "appsystemid": {
+        "name": "应用资产id"
+      },
+      "envid": {
+        "name": "环境资产id"
+      },
+      "authtype": {
+        "name": "授权对象类型"
+      },
+      "authuuid": {
+        "name": "授权对象"
+      },
+      "action": {
+        "name": "授权操作"
+      },
+      "authorityactiontype": {
+        "name": "授权操作类型"
+      }
+    },
+    "deployappconfigenvattrvo": {
+      "appsystemid": {
+        "name": "应用id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      }
+    },
+    "deploypipelinephasevo": {
+      "parentisactive": {
+        "name": "父级启用"
+      },
+      "isactive": {
+        "name": "启用"
+      },
+      "override": {
+        "name": "重载"
+      },
+      "source": {
+        "name": "来源"
+      }
+    },
+    "deployappmodulevo": {
+      "name": {
+        "name": "名称"
+      },
+      "abbrname": {
+        "name": "简称"
+      },
+      "maintenancewindow": {
+        "name": "维护窗口"
+      },
+      "description": {
+        "name": "备注"
+      },
+      "ishasenv": {
+        "name": "是否有环境（1：有，0：没有）"
+      },
+      "isconfig": {
+        "name": "是否有配置（1：有，0：没有）"
+      },
+      "appsystemid": {
+        "name": "系统id"
+      },
+      "ishasbuildtypetool": {
+        "name": "是否拥有BUILD类型的工具库工具"
+      },
+      "ishasdeploytypetool": {
+        "name": "是否拥有DEPLOY类型的工具库工具"
+      },
+      "state": {
+        "name": "状态id列表"
+      },
+      "owner": {
+        "name": "负责人id列表"
+      },
+      "ishasrunner": {
+        "name": "是否有配置执行器（1：有，0：没有）"
+      },
+      "isactive": {
+        "name": "流水线配置中是否存在禁用阶段"
+      },
+      "override": {
+        "name": "流水线配置中是否存在重载阶段"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployresourcesearchvo": {
+      "isconfig": {
+        "name": "是否已配置（1：已配置，0：未配置）"
+      },
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      }
+    },
+    "deploypipelineexecuteconfigvo": {
+      "protocolid": {
+        "name": "协议id"
+      },
+      "executeuser": {
+        "name": "执行用户"
+      },
+      "inherit": {
+        "name": "重载"
+      }
+    },
+    "deployappsystemvo": {
+      "name": {
+        "name": "名称"
+      },
+      "abbrname": {
+        "name": "简称"
+      },
+      "maintenancewindow": {
+        "name": "维护窗口"
+      },
+      "description": {
+        "name": "备注"
+      },
+      "isfavorite": {
+        "name": "是否被收藏（1：收藏，0：取消收藏）"
+      },
+      "isconfig": {
+        "name": "是否已配置（1：已配置，0：未配置）"
+      },
+      "appmodulelist": {
+        "name": "应用模块列表"
+      },
+      "state": {
+        "name": "状态id列表"
+      },
+      "owner": {
+        "name": "负责人id列表"
+      },
+      "ishasmodule": {
+        "name": "是否包含模块"
+      },
+      "ishasenv": {
+        "name": "是否包含环境"
+      },
+      "isconfigauthority": {
+        "name": "是否配置权限"
+      },
+      "ishasallauthority": {
+        "name": "是否拥有所有数据权限"
+      },
+      "ishasresourcelock": {
+        "name": "是否拥有资源锁"
+      },
+      "ishasauthpipeline": {
+        "name": "是否拥有应用超级流水线授权"
+      },
+      "authactionset": {
+        "name": "权限动作列表"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployappmoduleenvvo": {
+      "name": {
+        "name": "名称"
+      },
+      "abbrname": {
+        "name": "简称"
+      },
+      "envlist": {
+        "name": "环境列表"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployappconfiginstancevo": {
+      "port": {
+        "name": "端口"
+      },
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "name": {
+        "name": "实例名"
+      },
+      "id": {
+        "name": "ID"
+      },
+      "ip": {
+        "name": "IP地址"
+      }
+    },
+    "deployappenvautoconfigvo": {
+      "appsystemid": {
+        "name": "应用id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "instanceid": {
+        "name": "实例id"
+      },
+      "instancename": {
+        "name": "实例名称"
+      },
+      "instanceip": {
+        "name": "实例ip"
+      },
+      "instanceport": {
+        "name": "实例名称"
+      },
+      "isautoconfig": {
+        "name": "是否有AutoConfig"
+      }
+    },
+    "deployappenvironmentvo": {
+      "name": {
+        "name": "名称"
+      },
+      "appmodulelist": {
+        "name": "应用模块列表"
+      },
+      "isdeletable": {
+        "name": "是否可删除"
+      },
+      "isconfig": {
+        "name": "是否配置"
+      },
+      "isactive": {
+        "name": "流水线配置中是否存在禁用阶段"
+      },
+      "override": {
+        "name": "流水线配置中是否存在重载阶段"
+      },
+      "isenable": {
+        "name": "前端展示时是否可选"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deploybluegreenvo": {
+      "name": {
+        "name": "名称"
+      },
+      "sort": {
+        "name": "排序"
+      },
+      "isactive": {
+        "name": "是否激活"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployjobresourcebluegreenvo": {
+      "jobid": {
+        "name": "作业id"
+      },
+      "resourceid": {
+        "name": "资产id"
+      },
+      "bluegreenid": {
+        "name": "蓝绿id"
+      },
+      "updatetag": {
+        "name": "跟新标记"
+      },
+      "bluegreenname": {
+        "name": "蓝绿名"
+      },
+      "bluegreensort": {
+        "name": "蓝绿排序"
+      }
+    },
+    "deployappenvautoconfigauditvo": {
+      "appsystemid": {
+        "name": "应用id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "instanceid": {
+        "name": "实例id"
+      },
+      "config": {
+        "name": "修改记录"
+      }
+    },
+    "deployprofileparamvo": {
+      "source": {
+        "name": "来源"
+      },
+      "inherit": {
+        "name": "继承"
+      }
+    },
+    "deployappmodulerunnergroupvo": {
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "应用模块id"
+      },
+      "runnergroupid": {
+        "name": "runner组id"
+      }
+    },
+    "deploypipelinegroupvo": {
+      "inherit": {
+        "name": "重载"
+      }
+    },
+    "deployinstancebluegreenvo": {
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "resourceid": {
+        "name": "实例id"
+      },
+      "bluegreenid": {
+        "name": "蓝绿id"
+      },
+      "bluegreenname": {
+        "name": "蓝绿名"
+      },
+      "bluegreensort": {
+        "name": "蓝绿排序"
+      }
+    },
+    "deploypipelineconfigvo": {
+      "disabledphaseidlist": {
+        "name": "禁用阶段ID列表"
+      },
+      "combopphaselist": {
+        "name": "阶段列表"
+      },
+      "combopgrouplist": {
+        "name": "阶段组列表"
+      },
+      "executeconfig": {
+        "name": "执行信息配置"
+      },
+      "scenariolist": {
+        "name": "场景列表"
+      },
+      "defaultscenarioid": {
+        "name": "默认场景id"
+      },
+      "runtimeparamlist": {
+        "name": "运行时参数列表"
+      },
+      "overrideprofilelist": {
+        "name": "重载预置参数集列表"
+      }
+    },
+    "deployappconfigenvdbconfigvo": {
+      "appsystemid": {
+        "name": "应用id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "dbschema": {
+        "name": "数据库schema"
+      },
+      "dbresourceid": {
+        "name": "数据库资产id"
+      },
+      "accountid": {
+        "name": "账号id"
+      },
+      "account": {
+        "name": "账号"
+      },
+      "dbresourcename": {
+        "name": "数据库名称"
+      },
+      "passwordcipher": {
+        "name": "加密密码"
+      },
+      "config": {
+        "name": "高级设置"
+      },
+      "id": {
+        "name": "ID"
+      }
+    }
+  },
+  "nfddc": {
+    "deployciauditvo": {
+      "ciid": {
+        "name": "持续集成id"
+      },
+      "commitid": {
+        "name": "提交ID"
+      },
+      "action": {
+        "name": "动作"
+      },
+      "actionname": {
+        "name": "动作类型名称"
+      },
+      "status": {
+        "name": "状态"
+      },
+      "statusname": {
+        "name": "状态名称"
+      },
+      "jobid": {
+        "name": "作业ID"
+      },
+      "jobname": {
+        "name": "作业名称"
+      },
+      "param": {
+        "name": "请求参数"
+      },
+      "result": {
+        "name": "返回结果"
+      },
+      "error": {
+        "name": "异常"
+      },
+      "paramfilepath": {
+        "name": "参数内容文件路径"
+      },
+      "resultfilepath": {
+        "name": "结果内容文件路径"
+      },
+      "errorfilepath": {
+        "name": "错误内容文件路径"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deploycivo": {
+      "name": {
+        "name": "名称"
+      },
+      "isactive": {
+        "name": "是否激活"
+      },
+      "appsystemid": {
+        "name": "系统id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "appmodulename": {
+        "name": "模块名称"
+      },
+      "appmoduleabbrname": {
+        "name": "模块简称"
+      },
+      "repotype": {
+        "name": "仓库类型"
+      },
+      "reposerveraddress": {
+        "name": "仓库服务器地址"
+      },
+      "reponame": {
+        "name": "仓库名称"
+      },
+      "branchfilter": {
+        "name": "分支过滤"
+      },
+      "event": {
+        "name": "事件"
+      },
+      "action": {
+        "name": "动作类型"
+      },
+      "actionname": {
+        "name": "动作类型名称"
+      },
+      "triggertype": {
+        "name": "触发方式"
+      },
+      "triggertime": {
+        "name": "触发时间"
+      },
+      "delaytime": {
+        "name": "延迟时间"
+      },
+      "versionrule": {
+        "name": "版本号规则"
+      },
+      "config": {
+        "name": "配置"
+      },
+      "id": {
+        "name": "ID"
+      },
+      "hookid": {
+        "name": "Webhook ID"
+      }
+    },
+    "repositoryservicevo": {
+      "name": {
+        "name": "服务名称"
+      },
+      "type": {
+        "name": "仓库类型...[gitlab,svn]"
+      },
+      "address": {
+        "name": "服务地址"
+      },
+      "username": {
+        "name": "用户名"
+      },
+      "password": {
+        "name": "密码"
+      },
+      "status": {
+        "name": "同步状态，success：成功，failed：失败...[success,failed]"
+      },
+      "sortcolumn": {
+        "name": "排序规则,如: lcd ASC"
+      },
+      "codehubagentid": {
+        "name": "服务代理id"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "repositoryvo": {
+      "reposerviceid": {
+        "name": "关联代码库服务的id"
+      },
+      "name": {
+        "name": "仓库名称"
+      },
+      "type": {
+        "name": "仓库类型，git、gitlab、svn"
+      },
+      "address": {
+        "name": "仓库地址"
+      },
+      "mainbranch": {
+        "name": "主干分支 ，git仓库默认master，svn仓库默认为空"
+      },
+      "defaultbranch": {
+        "name": "默认分支 ，git仓库默认master，svn仓库不支持此字段"
+      },
+      "branchespath": {
+        "name": "分支路径"
+      },
+      "tagspath": {
+        "name": "标签路径"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "createmode": {
+        "name": "import：导入，manual：手动创建...[import,manual]"
+      },
+      "description": {
+        "name": "仓库描述"
+      },
+      "syncstatus": {
+        "name": "同步状态，success：成功，failed：失败...[success,failed,none]"
+      },
+      "synctime": {
+        "name": "最后同步时间"
+      },
+      "sortcolumn": {
+        "name": "排序规则, 如: repository.lcd DESC"
+      },
+      "appsystemid": {
+        "name": "系统id"
+      },
+      "repositoryservicevo": {
+        "name": "仓库服务对象"
+      },
+      "runnername": {
+        "name": "节点名"
+      },
+      "ishasallauthority": {
+        "name": "是否拥有发布管理员权限"
+      },
+      "authorityactionlist": {
+        "name": "权限列表"
+      },
+      "authuuidlist": {
+        "name": "用户、分组、角色的uuid列表"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "commitvo": {
+      "repositoryid": {
+        "name": "仓库id"
+      },
+      "author": {
+        "name": "作者"
+      },
+      "authoremail": {
+        "name": "作者邮箱"
+      },
+      "authordate": {
+        "name": "作者编写时间"
+      },
+      "committer": {
+        "name": "提交者"
+      },
+      "committeremail": {
+        "name": "提交者邮箱"
+      },
+      "committerdate": {
+        "name": "提交者编写时间"
+      },
+      "message": {
+        "name": "commit消息"
+      },
+      "sortcolumn": {
+        "name": "排序规则"
+      },
+      "branchlist": {
+        "name": "所属分支列表"
+      },
+      "issueno": {
+        "name": "需求号"
+      },
+      "branchname": {
+        "name": "分支名称"
+      },
+      "filepaths": {
+        "name": "Json字符串存储的文件变更记录"
+      },
+      "mergestatus": {
+        "name": "Commit的合并状态"
+      },
+      "isnew": {
+        "name": "本次mr合并的commit，该值为 1"
+      },
+      "fileaddcount": {
+        "name": "文件添加计数"
+      },
+      "filemodifycount": {
+        "name": "文件修改计数"
+      },
+      "filedeletecount": {
+        "name": "文件删除计数"
+      },
+      "lineaddcount": {
+        "name": "行添加计数"
+      },
+      "linedeletecount": {
+        "name": "行删除计数"
+      },
+      "commitid": {
+        "name": "Commit ID"
+      },
+      "mrid": {
+        "name": "MR ID"
+      }
+    }
+  },
+  "nfdde": {
+    "deployenvversionauditvo": {
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "应用模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "newversionid": {
+        "name": "新版本id"
+      },
+      "newversion": {
+        "name": "新版本号"
+      },
+      "oldversionid": {
+        "name": "旧版本id"
+      },
+      "oldversion": {
+        "name": "旧版本号"
+      },
+      "newbuildno": {
+        "name": "新编译号"
+      },
+      "oldbuildno": {
+        "name": "旧编译号"
+      },
+      "direction": {
+        "name": "方向"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployenvversionvo": {
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "应用模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "envname": {
+        "name": "环境名称"
+      },
+      "versionid": {
+        "name": "版本id"
+      },
+      "version": {
+        "name": "版本"
+      },
+      "buildno": {
+        "name": "编译号"
+      },
+      "status": {
+        "name": "发布状态"
+      },
+      "deploytime": {
+        "name": "发布时间"
+      },
+      "rollbacktime": {
+        "name": "回滚时间"
+      }
+    }
+  },
+  "nfddi": {
+    "deployinstanceversionauditvo": {
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "应用模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "resourceid": {
+        "name": "实例id"
+      },
+      "newversionid": {
+        "name": "新版本id"
+      },
+      "oldversionid": {
+        "name": "旧版本id"
+      },
+      "newbuildno": {
+        "name": "新编译号"
+      },
+      "oldbuildno": {
+        "name": "旧编译号"
+      },
+      "direction": {
+        "name": "方向"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployinstanceversionvo": {
+      "resourceid": {
+        "name": "实例id"
+      },
+      "buildno": {
+        "name": "编译号"
+      }
+    }
+  },
+  "nfddj": {
+    "deployjobvo": {
+      "appsystemid": {
+        "name": "应用资产id"
+      },
+      "appsystemname": {
+        "name": "应用资产名称"
+      },
+      "appsystemabbrname": {
+        "name": "应用资产简称"
+      },
+      "appmoduleid": {
+        "name": "系统模块id"
+      },
+      "appmodulename": {
+        "name": "系统模块名称"
+      },
+      "appmoduleabbrname": {
+        "name": "系统模块简称"
+      },
+      "envid": {
+        "name": "环境资产id"
+      },
+      "envname": {
+        "name": "环境资产名称"
+      },
+      "version": {
+        "name": "版本"
+      },
+      "versionid": {
+        "name": "版本Id"
+      },
+      "buildno": {
+        "name": "编译号"
+      },
+      "runnermapid": {
+        "name": "编译|构造的runner_id"
+      },
+      "pipelineconfig": {
+        "name": "流水线配置信息"
+      },
+      "iscangroupexecute": {
+        "name": "是否有执行组权限"
+      },
+      "lanelist": {
+        "name": "泳道列表"
+      },
+      "authlist": {
+        "name": "授权列表"
+      },
+      "pipelineid": {
+        "name": "超级流水线id"
+      }
+    },
+    "lanegroupvo": {
+      "laneid": {
+        "name": "通道id"
+      },
+      "needwait": {
+        "name": "是否需要等待"
+      },
+      "isgoon": {
+        "name": "执行完当前组是否停止不继续执行后续组，但仍受needWait约束，1：是，0：否"
+      },
+      "isgrouprun": {
+        "name": "是否是强行执行组，1：是，0：否"
+      },
+      "status": {
+        "name": "状态"
+      },
+      "joblist": {
+        "name": "作业列表"
+      },
+      "batchjobaction": {
+        "name": "批量作业执行策略，refire：跳过所有已完成的子作业；reset_refire:执行所有子作业"
+      },
+      "jobaction": {
+        "name": "子作业执行策略，refire：跳过所有已完成、已忽略的节点；reset_refire:执行所有节点"
+      },
+      "sort": {
+        "name": "排序"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployjobmodulevo": {
+      "id": {
+        "name": "模块id"
+      },
+      "name": {
+        "name": "模块名"
+      },
+      "abbrname": {
+        "name": "模块简称"
+      },
+      "version": {
+        "name": "版本"
+      },
+      "buildno": {
+        "name": "编译号"
+      },
+      "selectnodelist": {
+        "name": "目标发布节点"
+      }
+    },
+    "deployjobauthvo": {
+      "jobid": {
+        "name": "作业id"
+      },
+      "type": {
+        "name": "授权类型"
+      },
+      "authuuid": {
+        "name": "授权对象"
+      }
+    },
+    "lanevo": {
+      "status": {
+        "name": "状态"
+      },
+      "batchjobid": {
+        "name": "批量作业id"
+      },
+      "grouplist": {
+        "name": "组列表"
+      },
+      "sort": {
+        "name": "排序"
+      },
+      "id": {
+        "name": "ID"
+      }
+    }
+  },
+  "nfddp": {
+    "pipelinevo": {
+      "name": {
+        "name": "名称"
+      },
+      "isactive": {
+        "name": "是否激活"
+      },
+      "type": {
+        "name": "类型"
+      },
+      "typename": {
+        "name": "类型名"
+      },
+      "appsystemid": {
+        "name": "应用ID"
+      },
+      "appsystemname": {
+        "name": "应用名称"
+      },
+      "appsystemabbrname": {
+        "name": "应用简称"
+      },
+      "fcd": {
+        "name": "创建时间"
+      },
+      "fcu": {
+        "name": "创建用户"
+      },
+      "lcd": {
+        "name": "修改时间"
+      },
+      "lcu": {
+        "name": "修改用户"
+      },
+      "lanelist": {
+        "name": "通道列表"
+      },
+      "authlist": {
+        "name": "授权列表"
+      },
+      "ishasbuildtypetool": {
+        "name": "是否拥有BUILD类型的工具库工具"
+      },
+      "ishasdeploytypetool": {
+        "name": "是否拥有DEPLOY类型的工具库工具"
+      },
+      "appconfiglist": {
+        "name": "应用流水线列表"
+      },
+      "defaultversion": {
+        "name": "默认版本"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "pipelinejobtemplateversionvo": {
+      "versionid": {
+        "name": "版本 Id"
+      },
+      "versionname": {
+        "name": "版本名"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "pipelinejobtemplatevo": {
+      "idlist": {
+        "name": "作业id列表"
+      },
+      "excludeidlist": {
+        "name": "排除作业id列表"
+      },
+      "groupid": {
+        "name": "泳道分组id"
+      },
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appmoduleid": {
+        "name": "应用系统模块id"
+      },
+      "envid": {
+        "name": "环境id"
+      },
+      "appsystemname": {
+        "name": "应用系统名称"
+      },
+      "appsystemabbrname": {
+        "name": "应用系统简称"
+      },
+      "appmodulename": {
+        "name": "应用系统模块名称"
+      },
+      "appmoduleabbrname": {
+        "name": "系统系统模块简称"
+      },
+      "envname": {
+        "name": "环境名称"
+      },
+      "config": {
+        "name": "配置"
+      },
+      "scenarioid": {
+        "name": "场景id"
+      },
+      "scenarioname": {
+        "name": "场景名称"
+      },
+      "roundcount": {
+        "name": "分批数量"
+      },
+      "parallelcount": {
+        "name": "并发数量"
+      },
+      "parallelpolicy": {
+        "name": "并发策略"
+      },
+      "sort": {
+        "name": "排序"
+      },
+      "ishasbuildtypetool": {
+        "name": "是否拥有BUILD类型的工具库工具"
+      },
+      "ishasdeploytypetool": {
+        "name": "是否拥有DEPLOY类型的工具库工具"
+      },
+      "envscenariolist": {
+        "name": "场景列表"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "pipelinesearchvo": {
+      "type": {
+        "name": "类型"
+      },
+      "appsystemid": {
+        "name": "应用ID"
+      },
+      "needverifyauth": {
+        "name": "是否需要验证权限"
+      },
+      "ishasallauthority": {
+        "name": "是否拥有所有权限"
+      },
+      "authuuid": {
+        "name": "用户uuid"
+      }
+    },
+    "pipelineenvscenariovo": {
+      "envid": {
+        "name": "环境id"
+      },
+      "envname": {
+        "name": "环境名称"
+      },
+      "scenarioid": {
+        "name": "场景id"
+      },
+      "scenarioname": {
+        "name": "场景名称"
+      }
+    },
+    "pipelinegroupvo": {
+      "laneid": {
+        "name": "泳道id"
+      },
+      "needwait": {
+        "name": "是否需要等待"
+      },
+      "sort": {
+        "name": "排序"
+      },
+      "jobtemplatelist": {
+        "name": "作业模板列表"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "pipelineauthvo": {
+      "pipelineid": {
+        "name": "流水线id"
+      },
+      "type": {
+        "name": "授权类型"
+      },
+      "authuuid": {
+        "name": "授权对象"
+      }
+    },
+    "pipelinelanevo": {
+      "pipelineid": {
+        "name": "流水线id"
+      },
+      "sort": {
+        "name": "培训"
+      },
+      "id": {
+        "name": "ID"
+      }
+    }
+  },
+  "nfdds": {
+    "deployscheduleconfigvo": {
+      "scenarioid": {
+        "name": "场景id"
+      },
+      "scenarioname": {
+        "name": "场景名称"
+      },
+      "envid": {
+        "name": "环境资产id"
+      },
+      "envname": {
+        "name": "环境资产名称"
+      },
+      "roundcount": {
+        "name": "分批数量"
+      },
+      "parallelcount": {
+        "name": "并发数量"
+      },
+      "parallelpolicy": {
+        "name": "并发策略"
+      },
+      "param": {
+        "name": "作业参数映射列表"
+      },
+      "modulelist": {
+        "name": "模块列表"
+      }
+    },
+    "deployschedulevo": {
+      "id": {
+        "name": "定时作业id"
+      },
+      "uuid": {
+        "name": "定时作业uuid"
+      },
+      "name": {
+        "name": "定时作业名称"
+      },
+      "begintime": {
+        "name": "开始时间"
+      },
+      "endtime": {
+        "name": "结束时间"
+      },
+      "cron": {
+        "name": "cron表达式"
+      },
+      "config": {
+        "name": "执行配置信息"
+      },
+      "execcount": {
+        "name": "执行次数"
+      },
+      "type": {
+        "name": "作业类型"
+      },
+      "typename": {
+        "name": "作业类型名"
+      },
+      "appsystemid": {
+        "name": "应用id"
+      },
+      "appsystemname": {
+        "name": "应用名称"
+      },
+      "appsystemabbrname": {
+        "name": "应用简称"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "appmodulename": {
+        "name": "模块名称"
+      },
+      "appmoduleabbrname": {
+        "name": "模块简称"
+      },
+      "pipelineid": {
+        "name": "流水线id"
+      },
+      "pipelinename": {
+        "name": "流水线名称"
+      },
+      "pipelinetype": {
+        "name": "流水线类型"
+      },
+      "editable": {
+        "name": "是否可编辑"
+      },
+      "deletable": {
+        "name": "是否可删除"
+      },
+      "isactive": {
+        "name": "状态(0:禁用，1：启用)"
+      }
+    },
+    "deployschedulesearchvo": {
+      "appsystemid": {
+        "name": "应用id"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      },
+      "ishasallauthority": {
+        "name": "是否拥有发布管理员权限"
+      },
+      "authorityactionlist": {
+        "name": "权限列表"
+      },
+      "authuuidlist": {
+        "name": "用户、分组、角色的uuid列表"
+      },
+      "isactive": {
+        "name": "状态(0:禁用，1：启用)"
+      }
+    },
+    "deploysqljobphasevo": {
+      "jobid": {
+        "name": "作业id"
+      },
+      "phaseid": {
+        "name": "作业剧本id"
+      },
+      "phasename": {
+        "name": "作业剧本名"
+      },
+      "sqlid": {
+        "name": "sql文件id"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deploysqlnodedetailvo": {
+      "resourceid": {
+        "name": "资源id"
+      },
+      "runnerport": {
+        "name": "runner 端口"
+      },
+      "sqlfile": {
+        "name": "sql文件名"
+      },
+      "nodename": {
+        "name": "作业节点名"
+      },
+      "port": {
+        "name": "端口"
+      },
+      "username": {
+        "name": "用户名"
+      },
+      "serviceaddr": {
+        "name": "服务地址"
+      },
+      "nodetype": {
+        "name": "节点类型"
+      },
+      "status": {
+        "name": "状态"
+      },
+      "statusname": {
+        "name": "状态名"
+      },
+      "completionrate": {
+        "name": "完成率"
+      },
+      "jobid": {
+        "name": "作业id"
+      },
+      "phasename": {
+        "name": "作业剧本名"
+      },
+      "isdelete": {
+        "name": "是否已经被删除"
+      },
+      "starttime": {
+        "name": "开始时间"
+      },
+      "endtime": {
+        "name": "结束时间"
+      },
+      "costtime": {
+        "name": "耗时"
+      },
+      "sort": {
+        "name": "sql排序"
+      },
+      "ismodified": {
+        "name": "是否改动"
+      },
+      "warncount": {
+        "name": "告警个数"
+      },
+      "sqlfiles": {
+        "name": "sql文件名列表"
+      },
+      "id": {
+        "name": "ID"
+      },
+      "runnerid": {
+        "name": "Runner ID"
+      },
+      "runnerhost": {
+        "name": "Runner IP地址"
+      },
+      "runnerurl": {
+        "name": "Runner URL"
+      },
+      "sysid": {
+        "name": "系统ID"
+      },
+      "moduleid": {
+        "name": "模块ID"
+      },
+      "envid": {
+        "name": "环境ID"
+      },
+      "version": {
+        "name": "版本"
+      },
+      "host": {
+        "name": "IP地址"
+      },
+      "md5": {
+        "name": "MD5"
+      }
+    }
+  },
+  "nfddw": {
+    "deployjobwebhookconfigvo": {
+      "envnamelist": {
+        "name": "源环境集合"
+      },
+      "jobstatuslist": {
+        "name": "作业状态集合"
+      },
+      "integrationinputparam": {
+        "name": "集成入参"
+      },
+      "webhookappmodulelist": {
+        "name": "配置"
+      },
+      "pipelineid": {
+        "name": "流水线id"
+      }
+    },
+    "deployjobwebhookappmodulevo": {
+      "webhookid": {
+        "name": "触发器id"
+      },
+      "appsystemid": {
+        "name": "应用系统id"
+      },
+      "appsystemabbrname": {
+        "name": "应用系统简称"
+      },
+      "appmoduleabbrname": {
+        "name": "应用系统简称"
+      },
+      "appmoduleid": {
+        "name": "模块id"
+      }
+    },
+    "deployjobwebhookauditvo": {
+      "webhookid": {
+        "name": "触发器id"
+      },
+      "name": {
+        "name": "记录名"
+      },
+      "status": {
+        "name": "状态"
+      },
+      "statusname": {
+        "name": "状态名"
+      },
+      "integrationauditid": {
+        "name": "集成记录id"
+      },
+      "lcd": {
+        "name": "触发时间"
+      },
+      "paramfilepath": {
+        "name": "入参文件路径"
+      },
+      "resultfilepath": {
+        "name": "结果文件路径"
+      },
+      "errorfilepath": {
+        "name": "异常文件路径"
+      },
+      "fromjobid": {
+        "name": "来源作业id"
+      },
+      "fromjobname": {
+        "name": "来源作业名"
+      },
+      "id": {
+        "name": "ID"
+      }
+    },
+    "deployjobwebhookvo": {
+      "name": {
+        "name": "名称"
+      },
+      "isactive": {
+        "name": "是否激活"
+      },
+      "integrationuuid": {
+        "name": "集成uuid"
+      },
+      "integrationname": {
+        "name": "集成名称"
+      },
+      "type": {
+        "name": "作业类型"
+      },
+      "typename": {
+        "name": "作业类型名"
+      },
+      "pipelinetype": {
+        "name": "流水线类型"
+      },
+      "config": {
+        "name": "配置"
+      },
+      "jobstatuslist": {
+        "name": "作业状态集合"
+      },
+      "buildnopolicy": {
+        "name": "编译号策略"
+      },
+      "id": {
+        "name": "ID"
+      }
+    }
+  },
+  "nfdew": {
+    "deploywebhooknamerepeatexception": {
+      "deploywebhooknamerepeatexception": "触发器名称 “{0}” 已存在"
+    },
+    "deploywebhooknotfoundexception": {
+      "deploywebhooknotfoundexception": "触发器id “{0}” 不存在"
+    }
+  },
+  "nmdae": {
+    "rollbackdeployenvversionapi": {
+      "getname": "回退环境的版本",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "envid": "环境id"
+          }
+        }
+      }
+    },
+    "savedeployenvversionapi": {
+      "getname": "设置环境的版本号",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "envid": "环境id",
+            "version": "版本号",
+            "buildno": "编译号",
+            "execuser": "发布用户",
+            "deploytime": "发布时间（时间戳为秒数）"
+          }
+        }
+      }
+    }
+  },
+  "nmdai": {
+    "savedeployinstanceversionapi": {
+      "getname": "设置实例的版本号",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "envid": "环境id",
+            "resourceid": "实例id",
+            "version": "版本号",
+            "buildno": "编译号",
+            "execuser": "发布用户",
+            "deploytime": "发布时间（时间戳为秒数）"
+          }
+        }
+      }
+    },
+    "rollbackdeployinstanceversionapi": {
+      "getname": "回退实例的版本",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "envid": "环境id",
+            "resourceid": "实例id"
+          }
+        }
+      }
+    }
+  },
+  "nmdant": {
+    "testnotifypolicyapi": {
+      "getname": "测试作业通知策略",
+      "input": {
+        "param": {
+          "desc": {
+            "jobid": "作业ID",
+            "jobstatus": "作业状态"
+          }
+        }
+      }
+    }
+  },
+  "nmdat": {
+    "deployappconfigservicetestapi": {
+      "getname": "测试DeployAppConfigService方法"
+    },
+    "searchdeploytypeapi": {
+      "getname": "查询发布工具类型列表",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "关键词",
+            "isactive": "是否激活(0:禁用，1：激活)",
+            "currentpage": "当前页",
+            "pagesize": "每页数据条目",
+            "needpage": "是否需要分页，默认true"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "类型列表",
+            "basepagevo": "查询发布工具类型列表"
+          }
+        }
+      }
+    },
+    "updatedeploytypestatusapi": {
+      "getname": "激活/禁用发布工具类型",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "工具类型D",
+            "isactive": "是否激活(0:禁用，1：激活)"
+          }
+        }
+      }
+    }
+  },
+  "nmdavd": {
+    "deletedeployversiondependencyforautoexecapi": {
+      "getname": "删除发布版本依赖",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号"
+          }
+        }
+      }
+    },
+    "getdeployversiondependencyforautoexecapi": {
+      "getname": "获取发布版本依赖",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号"
+          }
+        }
+      }
+    },
+    "savedeployversiondependencyforautoexecapi": {
+      "getname": "保存发布版本依赖",
+      "input": {
+        "param": {
+          "desc": {
+            "sysid": "应用ID",
+            "moduleid": "应用模块id",
+            "version": "版本号",
+            "dependencelist": {
+              "name": "依赖包列表，每个元素均为JSON对象",
+              "groupid": "dependenceList->json中的属性，项目组标识",
+              "artifactid": "dependenceList->json中的属性，项目标识",
+              "version": "dependenceList->json中的属性，项目版本号",
+              "licenses": "dependenceList->json中的属性，版权许可，开源协议等",
+              "scope": "dependenceList->json中的属性，依赖作用域，默认compile",
+              "type": "dependenceList->json中的属性，包类型，默认jar",
+              "url": "dependenceList->json中的属性，此包在maven仓库的地址",
+              "parent": "dependenceList->json中的属性，父依赖属性集，包含groupId、artifactId、version三个属性"
+            }
+          }
+        }
+      }
+    }
+  },
+  "nmdavr": {
+    "createdirectoryapi": {
+      "getname": "新建目录",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "path": "目标路径(路径一律以'/'开头，HOME本身的路径为'/')"
+          }
+        }
+      }
+    },
+    "uploadloadfileapi": {
+      "getname": "上传文件",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "path": "文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
+            "unpack": "是否解压",
+            "fileparamname": "文件参数名称"
+          }
+        }
+      }
+    },
+    "listresourcetypeapi": {
+      "getname": "获取制品类型列表",
+      "input": {
+        "param": {
+          "desc": {
+            "type": "查看制品的来源(build:从buildNo查看;env:从环境查看)",
+            "ismirror": "是否有镜像制品(环境才可能有镜像制品，type=env时才需要此参数)"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "return": "获取制品类型列表"
+          }
+        }
+      }
+    },
+    "changefilepermissionapi": {
+      "getname": "修改文件权限",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "mode": "权限(e.g:rwxr-xr-x)"
+          }
+        }
+      }
+    },
+    "deletefileapi": {
+      "getname": "删除文件",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "path": "目录或文件路径(路径一律以'/'开头，HOME本身的路径为'/')"
+          }
+        }
+      }
+    },
+    "movefileapi": {
+      "getname": "文件移动或重命名",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "name": "新文件名(重命名时需指定)",
+            "src": "源文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
+            "dest": "目标文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
+            "operation": "操作(move:移动;rename:重命名)"
+          }
+        }
+      }
+    },
+    "downloadfileapi": {
+      "getname": "下载文件",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "path": "文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
+            "ispack": "是否打包"
+          }
+        }
+      }
+    },
+    "getdirectorycontentapi": {
+      "getname": "获取目录内容",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "path": "目标路径(路径一律以'/'开头，HOME本身的路径为'/')"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "name": "文件名",
+            "type": "文件类型",
+            "size": "文件大小",
+            "fcd": "最后修改时间",
+            "fcdtext": "最后修改时间(格式化为yyyy-MM-dd HH:mm:ss)",
+            "permission": "文件权限",
+            "hasitems": "目录是否有内容"
+          }
+        }
+      }
+    },
+    "copyfileapi": {
+      "getname": "复制文件",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "版本id",
+            "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
+            "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
+            "resourcetype": "制品类型",
+            "src": "源文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
+            "dest": "目标目录路径(路径一律以'/'开头，HOME本身的路径为'/')"
+          }
+        }
+      }
+    }
+  },
+  "nmdaw": {
+    "getdeployjobwebhookapi": {
+      "getname": "获取触发器配置",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "触发器id"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "deployschedulevo": "触发器详情"
+          }
+        }
+      }
+    },
+    "savedeployjobwebhookapi": {
+      "getname": "保存发布作业触发器",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "触发器id",
+            "name": "触发器名称",
+            "isactive": "是否激活",
+            "integrationuuid": "集成uuid",
+            "type": "作业类型",
+            "pipelinetype": "流水线类型",
+            "buildnopolicy": "编译号策略",
+            "config": "配置信息"
+          }
+        }
+      }
+    },
+    "deletedeployjobwebhookapi": {
+      "getname": "删除发布作业触发器",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "触发器id"
+          }
+        }
+      }
+    },
+    "activatedeployjobwebhookapi": {
+      "getname": "激活/禁用触发器配置",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "触发器id",
+            "isactive": "是否激活（1：激活，0：禁用）"
+          }
+        }
+      }
+    },
+    "searchdeployjobwebhookauditapi": {
+      "getname": "查询发布作业触发器记录",
+      "input": {
+        "param": {
+          "desc": {
+            "webhookid": "触发器id",
+            "currentpage": "当前页码",
+            "pagesize": "页大小"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "作业触发器记录列表"
+          }
+        }
+      }
+    },
+    "searchdeployjobwebhookapi": {
+      "getname": "查询发布作业触发器",
+      "input": {
+        "param": {
+          "desc": {
+            "keyword": "模糊查询",
+            "currentpage": "当前页码",
+            "pagesize": "页大小"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "tbodylist": "定时作业列表"
+          }
+        }
+      }
+    }
+  },
+  "nmdc": {
+    "deployversioncodescancharthandler": {
+      "runtime": {
+        "commentlinesdensity": "行注释率",
+        "publicdocumentedapidensity": "API注释率",
+        "lines": "代码总行数",
+        "ncloc": "代码有效行",
+        "vulnerabilities": "漏洞",
+        "codesmells": "代码异味",
+        "duplicatedlinesdensity": "重复度"
+      }
+    },
+    "deployversionunittestcharthandler": {
+      "runtime": {
+        "name": {
+          "succeeded": "成功",
+          "failed": "失败"
+        },
+        "newbranchcoverage": "分支",
+        "newlinecoverage": "行",
+        "branchcoverage": "分支",
+        "linecoverage": "行"
+      }
+    }
+  },
+  "nmddh": {
+    "autoexecscenariodeploypipelinedependencyhandler": {
+      "runtime": {
+        "label": {
+          "appconfig": "应用配置",
+          "deploymentpipeline": "发布流水线"
+        }
+      }
+    },
+    "matrix2deployapppipelineparamdependencyhandler": {
+      "runtime": {
+        "label": {
+          "appconfig": "应用配置",
+          "jobparams": "作业参数"
+        }
+      }
+    },
+    "notifypolicydeployjobdependencyhandler": {
+      "runtime": {
+        "label": "应用配置"
+      }
+    },
+    "autoexecglobalparam2deployapppipelinephaseoperationargumentparamdependencyhandler": {
+      "runtime": {
+        "label": {
+          "appconfig": "应用配置",
+          "freeparam": "自由参数"
+        }
+      }
+    },
+    "autoexecprofile2deployapppipelinephaseoperationdependencyhandler": {
+      "runtime": {
+        "label": "应用配置"
+      }
+    },
+    "autoexecglobalparam2deployapppipelinephaseoperationinputparamdependencyhandler": {
+      "runtime": {
+        "label": {
+          "appconfig": "应用配置",
+          "inputparammapping": "输入参数映射"
+        }
+      }
+    }
+  },
+  "nmdih": {
+    "deploytriggerintegrationhandler": {
+      "runtime": {
+        "pattern": {
+          "appsystemid": "应用系统id",
+          "appsystemname": "应用系统名",
+          "appsystemabbrname": "应用系统简称",
+          "appmoduleid": "应用模块id",
+          "appmodulename": "应用模块名",
+          "appmoduleabbrname": "应用模块简称",
+          "envname": "目标环境名",
+          "buildno": "编译号",
+          "scenarioname": "场景",
+          "targetenvname": "目标环境"
+        }
+      },
+      "getname": "发布触发器数据规范"
+    }
+  },
+  "nmddrs": {
+    "appinstanceenvappmoduleappsystemvo": {
+      "name": {
+        "name": "名称"
+      },
+      "ip": {
+        "name": "IP地址"
+      },
+      "port": {
+        "name": "端口"
+      },
+      "typeid": {
+        "name": "类型ID"
+      },
+      "typename": {
+        "name": "类型名称"
+      },
+      "typelabel": {
+        "name": "类型Label"
+      },
+      "envid": {
+        "name": "环境ID"
+      },
+      "envname": {
+        "name": "环境名称"
+      },
+      "envseqno": {
+        "name": "环境序号"
+      },
+      "appmoduleid": {
+        "name": "应用模块ID"
+      },
+      "appmodulename": {
+        "name": "应用模块名"
+      },
+      "appmoduleabbrname": {
+        "name": "应用模块简称"
+      },
+      "appsystemid": {
+        "name": "应用系统ID"
+      },
+      "appsystemname": {
+        "name": "应用系统名"
+      },
+      "appsystemabbrname": {
+        "name": "应用系统简称"
+      }
+    },
+    "databaseipportenvappmodulevo": {
+      "name": {
+        "name": "名称"
+      },
+      "ip": {
+        "name": "IP地址"
+      },
+      "port": {
+        "name": "端口"
+      },
+      "typeid": {
+        "name": "类型ID"
+      },
+      "typename": {
+        "name": "类型名称"
+      },
+      "typelabel": {
+        "name": "类型Label"
+      },
+      "envid": {
+        "name": "环境ID"
+      },
+      "envname": {
+        "name": "环境名称"
+      },
+      "envseqno": {
+        "name": "环境序号"
+      },
+      "appmoduleid": {
+        "name": "应用模块ID"
+      },
+      "appmodulename": {
+        "name": "应用模块名"
+      },
+      "appmoduleabbrname": {
+        "name": "应用模块简称"
+      }
+    }
+  },
+  "nmdh": {
+    "deployjobmessagehandler": {
+      "getname": "发布",
+      "getdescription": "实时显示发布作业相关信息"
+    }
+  },
+  "nmdsp": {
+    "deployjobautofirejob": {
+      "getname": "发布作业计划启动"
+    },
+    "deployjobschedulejob": {
+      "getname": "发布定时作业执行"
+    },
+    "deploybatchjobautofirejob": {
+      "getname": "发布批量作业计划启动"
+    }
+  },
+  "nfddt": {
+    "deploytypevo": {
+      "isactive": {
+        "name": "是否激活(0:禁用，1：激活)"
+      }
+    }
+  },
+  "nmdjsh": {
+    "batchdeployjobsourcehandler": {
+      "runtime": {
+        "label": {
+          "directcreate": "直接创建",
+          "superpipeline": "超级流水线"
+        }
+      }
     }
   }
 }
