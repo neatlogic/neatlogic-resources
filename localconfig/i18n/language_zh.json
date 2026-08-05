@@ -801,7 +801,7 @@
       "mobilefiledownloadenabled": "是否允许移动端下载附件",
       "passwordexpiredays": "用户密码有效期(天)，超过有效期则强制跳转改密码页面",
       "passwordneedexpiredcheck": "是否需要检验用户密码有效期，默认为0，不需要检查",
-      "tenantdefaultlanguage": "租户默认语言，支持 zh/en"
+      "tenantdefaultlanguage": "租户默认语言，支持 zh/en。语言优先级：Cookie > 租户默认语言 > 浏览器首选语言 > 中文"
     }
   },
   "nfcal": {

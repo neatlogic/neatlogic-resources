@@ -800,7 +800,7 @@
       "mobilefiledownloadenabled": "Do you allow mobile devices to download attachments",
       "passwordexpiredays": "User password validity period (days), if it exceeds the validity period, it will be forcibly redirected to the password change page",
       "passwordneedexpiredcheck": "Do you need to verify the validity period of the user password? It defaults to 0 and does not need to be checked",
-      "tenantdefaultlanguage": "Tenant default language. Supported values: zh/en"
+      "tenantdefaultlanguage": "Tenant default language. Supported values: zh/en. Language priority: Cookie > tenant default language > browser preferred language > Chinese"
     }
   },
   "nfcal": {
