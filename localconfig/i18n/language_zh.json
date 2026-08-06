@@ -12457,6 +12457,30 @@
     "exportinspectresourcereportapi": {
       "getname": "导出巡检资产报告列表"
     },
+    "inspectreportexportapi": {
+      "description": "导出巡检报告",
+      "getname": "导出巡检报告",
+      "input": {
+        "param": {
+          "desc": {
+            "id": "ID",
+            "jobid": "作业ID",
+            "resourceid": "资产ID",
+            "type": "类型"
+          }
+        }
+      },
+      "text": {
+        "alert": "告警",
+        "alertfield": "告警字段",
+        "alertlevel": "告警级别",
+        "alertmessage": "告警提示",
+        "nodata": "暂无数据",
+        "reportfilesuffix": "巡检报告",
+        "reporttitle": "巡检报告",
+        "rulenameseparator": "、"
+      }
+    },
     "inspectschedulesearchapi": {
       "getname": "查询巡检定时任务列表"
     },
