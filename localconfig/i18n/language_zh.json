@@ -11373,6 +11373,36 @@
       "getname": "获取发起应用巡检的环境列表"
     }
   },
+  "nmiat": {
+    "informantmcptool": {
+      "label": "Informant 故障诊断",
+      "message": {
+        "actionrequired": "action 不能为空",
+        "callcapabilityinformantidrequired": "callCapability 动作的 informantId 不能为空",
+        "callcapabilitytoolnamerequired": "callCapability 动作的 toolName 不能为空",
+        "listcapabilitiesinformantidrequired": "listCapabilities 动作的 informantId 不能为空",
+        "searchnodekeywordrequired": "searchNode 动作的 keyword 不能为空",
+        "unsupportedaction": "不支持的 action：{0}"
+      },
+      "progress": {
+        "callingcapability": "调用只读诊断能力“{0}”",
+        "capabilitiesloaded": "已获取 {0} 个只读诊断能力",
+        "connectingnode": "连接目标 Informant 节点",
+        "loadingcapabilities": "获取节点可用的诊断能力",
+        "nodematched": "已完成节点匹配，共找到 {0} 个候选节点",
+        "organizingresult": "“{0}”的诊断结果已就绪",
+        "searchingnode": "查找匹配的 Informant 节点",
+        "validatingcapability": "校验目标节点和工具权限"
+      },
+      "schema": {
+        "action": "操作类型",
+        "arguments": "远端 MCP 工具 inputSchema 要求的原始参数对象，仅供 callCapability 使用",
+        "informantid": "searchNode 返回的 Informant 节点 ID",
+        "keyword": "Informant 节点 IP 或主机名前缀，仅供 searchNode 使用",
+        "toolname": "listCapabilities 返回的只读 MCP 工具名"
+      }
+    }
+  },
   "nmice": {
     "inspectbaselinesnapshotnotfoundexception": {
       "inspectbaselinesnapshotnotfoundexception": "巡检基线快照“{0}”不存在"

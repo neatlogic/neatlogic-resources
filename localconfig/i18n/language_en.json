@@ -11348,6 +11348,36 @@
       "getname": "Obtain a list of environments that initiate application patrols"
     }
   },
+  "nmiat": {
+    "informantmcptool": {
+      "label": "Informant Diagnostics",
+      "message": {
+        "actionrequired": "action is required",
+        "callcapabilityinformantidrequired": "informantId is required for callCapability",
+        "callcapabilitytoolnamerequired": "toolName is required for callCapability",
+        "listcapabilitiesinformantidrequired": "informantId is required for listCapabilities",
+        "searchnodekeywordrequired": "keyword is required for searchNode",
+        "unsupportedaction": "Unsupported action: {0}"
+      },
+      "progress": {
+        "callingcapability": "Call Read-Only Diagnostic Capability “{0}”",
+        "capabilitiesloaded": "Loaded {0} read-only diagnostic capabilities",
+        "connectingnode": "Connect to Target Informant Node",
+        "loadingcapabilities": "Load Available Diagnostic Capabilities",
+        "nodematched": "Node matching complete. Found {0} candidate nodes",
+        "organizingresult": "Diagnostic results from “{0}” are ready",
+        "searchingnode": "Search for Matching Informant Nodes",
+        "validatingcapability": "Validate Target Node and Tool Permissions"
+      },
+      "schema": {
+        "action": "Action Type",
+        "arguments": "Original parameter object required by the remote MCP tool inputSchema; used only by callCapability",
+        "informantid": "Informant node ID returned by searchNode",
+        "keyword": "Informant node IP address or hostname prefix; used only by searchNode",
+        "toolname": "Read-only MCP tool name returned by listCapabilities"
+      }
+    }
+  },
   "nmice": {
     "inspectbaselinesnapshotnotfoundexception": {
       "inspectbaselinesnapshotnotfoundexception": "The inspection baseline snapshot \u0027{0}\u0027 does not exist"
