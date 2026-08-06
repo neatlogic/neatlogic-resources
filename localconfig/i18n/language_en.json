@@ -28,6 +28,7 @@
     "alerttime": "Alarm time",
     "alertvalue": "Alarm value",
     "all": "All",
+    "alluser": "Everyone",
     "anchorpoint": "Anchor point",
     "anonymous": "anonymous authentication ",
     "attachment": "attachment",
@@ -236,6 +237,10 @@
     "logger": {
       "level": "log level"
     },
+    "logincenter": "The center where the current logged in person is located",
+    "logindepartment": "The department where the current logged in person is located",
+    "loginteam": "The current logged in person belongs to the same group",
+    "loginuser": "Currently logged-in user",
     "loglist": "Log List",
     "long": "long integer",
     "mailaddress": "Email address",
@@ -444,6 +449,7 @@
     "viewable": "Can I view it",
     "viewauthoritylist": "View Permission List",
     "viewcount": "View volume",
+    "vipuser": "VIP users",
     "waiting": "In line",
     "wechatnotify": "WeChat notification",
     "widgetlist": "Component List",
