@@ -28,6 +28,7 @@
     "alerttime": "告警时间",
     "alertvalue": "告警值",
     "all": "所有",
+    "alluser": "所有人",
     "anchorpoint": "锚点",
     "anonymous": "匿名认证",
     "attachment": "附件",
@@ -236,6 +237,10 @@
     "logger": {
       "level": "日志级别"
     },
+    "logincenter": "当前登录人所在中心",
+    "logindepartment": "当前登录人所在部",
+    "loginteam": "当前登录人所在组",
+    "loginuser": "当前登录人",
     "loglist": "日志列表",
     "long": "长整数",
     "mailaddress": "邮箱地址",
@@ -444,6 +449,7 @@
     "viewable": "是否可查看",
     "viewauthoritylist": "查看权限列表",
     "viewcount": "浏览量",
+    "vipuser": "vip用户",
     "waiting": "排队中",
     "wechatnotify": "微信通知",
     "widgetlist": "组件列表",
