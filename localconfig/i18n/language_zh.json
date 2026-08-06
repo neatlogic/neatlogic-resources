@@ -66,12 +66,14 @@
     "commentcount": "评论数量",
     "commitcheck": "提交审核",
     "common": "公共",
+    "compare": "对比",
     "condition": "条件配置",
     "config": "配置",
     "configfilepath": "配置文件路径",
     "configfilepathlist": "配置文件路径列表",
     "configlist": "配置列表",
     "content": "内容",
+    "copy": "复制",
     "count": "数量",
     "create": "创建",
     "createdate": "创建日期",
@@ -137,6 +139,7 @@
     "executeauthoritylist": "执行权限列表",
     "expired": "过期",
     "expireddays": "超时天数",
+    "export": "导出",
     "expressionlist": "表达式列表",
     "failed": "失败",
     "failedcount": "错误次数",
@@ -323,6 +326,7 @@
     "rule": "规则",
     "runnergroup": "执行器组",
     "runnergrouptag": "执行器组标签",
+    "saveasdraft": "存为草稿",
     "savemode": "保存模式",
     "sceneuuid": "场景uuid",
     "schedule": "定时任务",
@@ -384,6 +388,7 @@
     "templatename": "模板名称",
     "tenantname": "租户名称",
     "tenantuuid": "租户uuid",
+    "test": "测试",
     "testcase": "测试用例",
     "testenv": "测试环境",
     "testplan": "测试计划",
@@ -424,6 +429,7 @@
     "useruuid": "用户uuid",
     "useruuidlist": "用户uuid列表",
     "uuid": "uuid",
+    "validate": "校验",
     "validcode": "注册验证码",
     "validtype": "验证方式",
     "value": "值",
@@ -542,6 +548,11 @@
     "reviewstatus": {
       "failed": "审批未通过",
       "waiting": "待审核"
+    },
+    "scriptandtooloperate": {
+      "active": {
+        "text": "启用/禁用"
+      }
     }
   },
   "nfadc": {
@@ -18137,6 +18148,7 @@
       "executeuser": "执行用户",
       "existrunnerorsqlexecmode": "存在Runner或SQL执行方式的阶段",
       "freeparam": "自由参数",
+      "generatetocombop": "发布为组合工具",
       "globalparam": "全局参数",
       "groupdesc": "自动化平台",
       "groupid": "阶段组id",

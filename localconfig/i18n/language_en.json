@@ -66,12 +66,14 @@
     "commentcount": "Number of comments",
     "commitcheck": "Submit for review",
     "common": "public",
+    "compare": "Comparison",
     "condition": "Condition configuration",
     "config": "Configuration",
     "configfilepath": "Configuration file path",
     "configfilepathlist": "Configuration file path list",
     "configlist": "Configuration List",
     "content": "Content",
+    "copy": "Copy",
     "count": "Quantity",
     "create": "establish",
     "createdate": "Created On",
@@ -137,6 +139,7 @@
     "executeauthoritylist": "Execution permission list",
     "expired": "overdue",
     "expireddays": "Number of timeout days",
+    "export": "Export",
     "expressionlist": "Expression List",
     "failed": "failure",
     "failedcount": "Number of errors",
@@ -323,6 +326,7 @@
     "rule": "rule",
     "runnergroup": "Actuator group",
     "runnergrouptag": "Actuator group label",
+    "saveasdraft": "Save As Draft",
     "savemode": "Save Mode",
     "sceneuuid": "Scenario uuid",
     "schedule": "Scheduled Tasks",
@@ -384,6 +388,7 @@
     "templatename": "Template Name",
     "tenantname": "Tenant Name",
     "tenantuuid": "Tenant uuid",
+    "test": "Test",
     "testcase": "test case",
     "testenv": "testing environment",
     "testplan": "test plan",
@@ -424,6 +429,7 @@
     "useruuid": "User UUID",
     "useruuidlist": "User uuid list",
     "uuid": "UUID",
+    "validate": "Verify",
     "validcode": "Registration verification code",
     "validtype": "Verification method",
     "value": "value",
@@ -541,6 +547,11 @@
     "reviewstatus": {
       "failed": "Approval not approved",
       "waiting": "Pending Review"
+    },
+    "scriptandtooloperate": {
+      "active": {
+        "text": "Enable"
+      }
     }
   },
   "nfadc": {
@@ -18093,6 +18104,7 @@
       "executeuser": "Execute user",
       "existrunnerorsqlexecmode": "Stage with Runner or SQL execution mode",
       "freeparam": "Free parameter",
+      "generatetocombop": "Publish As A Combination Tool",
       "globalparam": "Global parameters",
       "groupdesc": "Automation platform",
       "groupid": "Stage group ID",
