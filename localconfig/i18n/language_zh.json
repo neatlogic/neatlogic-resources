@@ -495,6 +495,21 @@
       "autoexecjoblogencoding": "自动化作业日志字符编码集合",
       "maxnumofcombopversion": "组合工具版本数量上限，例如设置最多10个版本，创建保存第11个版本时，自动删除掉最老的一个，非激活状态的版本。"
     },
+    "execmode": {
+      "description": {
+        "runner": "无需指定执行目标。工具在 Runner 上执行，适用于数据汇总等处理。",
+        "runner_target": "需指定执行目标。工具在 Runner 上执行，适用于对网络设备、存储设备、软件系统等进行信息采集或命令下发。",
+        "sqlfile": "需选定 DB 执行目标。工具在 Runner 上执行，适用于 SQL 文件检查、执行等操作。",
+        "target": "需指定执行目标。工具在指定的远程主机上执行，适用于主机信息采集或命令下发。"
+      },
+      "text": {
+        "native": "原生执行",
+        "runner": "Runner 执行",
+        "runner_target": "Runner 到目标节点执行",
+        "sqlfile": "SQL 文件执行",
+        "target": "目标节点执行"
+      }
+    },
     "outputparamtype": {
       "desc": {
         "jsonobject": "支持json对象和json数组，输出内容需是合法Json格式",
@@ -1205,6 +1220,13 @@
         "scenarioname": "场景",
         "triggertypename": "触发方式",
         "version": "版本号"
+      }
+    },
+    "deploypipelineconfigsource": {
+      "text": {
+        "appmodule": "模块",
+        "appsystem": "应用",
+        "env": "环境"
       }
     },
     "deployresourcetype": {

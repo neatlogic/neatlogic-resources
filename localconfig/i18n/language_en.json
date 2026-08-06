@@ -495,6 +495,21 @@
       "autoexecjoblogencoding": "Automation job log Character encoding set",
       "maxnumofcombopversion": "The maximum number of versions of the combination tool, such as setting a maximum of 10 versions, will automatically delete the oldest and inactive version when creating and saving the 11th version."
     },
+    "execmode": {
+      "description": {
+        "runner": "No execution target is required. The tool runs on the Runner and is suitable for data aggregation and similar processing.",
+        "runner_target": "An execution target is required. The tool runs on the Runner and connects to network devices, storage devices, software systems, and other targets for data collection or command execution.",
+        "sqlfile": "A DB execution target is required. The tool runs on the Runner and is suitable for validating and executing SQL files.",
+        "target": "An execution target is required. The tool runs on the specified remote host and is suitable for host data collection or command execution."
+      },
+      "text": {
+        "native": "Native Execution",
+        "runner": "Runner Execution",
+        "runner_target": "Runner-to-Target Execution",
+        "sqlfile": "SQL File Execution",
+        "target": "Target Execution"
+      }
+    },
     "outputparamtype": {
       "desc": {
         "jsonobject": "Support JSON objects and JSON arrays, with output content in legal JSON format",
@@ -1186,6 +1201,13 @@
         "scenarioname": "Scenario",
         "triggertypename": "Trigger Method",
         "version": "Version Number"
+      }
+    },
+    "deploypipelineconfigsource": {
+      "text": {
+        "appmodule": "Module",
+        "appsystem": "Application",
+        "env": "Environment"
       }
     },
     "deployresourcetype": {
