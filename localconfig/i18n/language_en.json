@@ -5899,6 +5899,9 @@
     }
   },
   "nfem": {
+    "modulegroupnotfoundexception": {
+      "modulegroupnotfoundexception": "Module group \u0027{0}\u0027 does not exist"
+    },
     "subscribehandlerisembedexception": {
       "subscribehandlerisembedexception": "System subscription processor: {0} is not allowed for custom subscriptions"
     },
@@ -8382,6 +8385,14 @@
   "nfpshc": {
     "processstephandlerbase": {
       "assignexceptionreason": "The current Step could not be assigned and was assigned to the exception Assignee: {0}"
+    }
+  },
+  "nfpw": {
+    "frameworkportalwidget": {
+      "text": {
+        "quickentry": "Quick Access",
+        "welcomeoverview": "Welcome Overview"
+      }
     }
   },
   "nfpwc": {
@@ -20221,6 +20232,14 @@
       "getname_2": "Task"
     }
   },
+  "nmppw": {
+    "processportalwidget": {
+      "text": {
+        "personalprocesstaskoverview": "Overview of Personal Work Order Status",
+        "processfavoriteservice": "Collection service"
+      }
+    }
+  },
   "nmps": {
     "catalogserviceimpl": {
       "all": "All"
@@ -21603,6 +21622,79 @@
       "init": {
         "mongodbexception": "Tenant: {0} is unable to connect to MongoDB. Please confirm that the MongoDB service is functioning properly and verify that the authentication information for the corresponding tenant in the MongoDB table of the netlogic library is correct before trying again"
       }
+    }
+  },
+  "nmtca": {
+    "portal_manage": {
+      "getauthdisplayname": "Portal management permissions",
+      "getauthintroduction": "Having this permission allows you to operate the portal management page"
+    },
+    "portal_widget_manage": {
+      "getauthdisplayname": "Portal widget management permissions",
+      "getauthintroduction": "Having this permission allows you to operate the portal widget management page"
+    }
+  },
+  "nmtcap": {
+    "deleteportalapi": {
+      "getname": "Delete portal information"
+    },
+    "getcurrentuserportalapi": {
+      "getname": "Retrieve current user portal settings information"
+    },
+    "getportalapi": {
+      "getname": "Get portal settings information"
+    },
+    "listportalapi": {
+      "getname": "Query portal information list"
+    },
+    "saveportalapi": {
+      "getname": "Save portal settings information"
+    },
+    "toggleactiveportalapi": {
+      "getname": "Activate or disable portal settings"
+    },
+    "toggleenableportalapi": {
+      "getname": "User enables portal configuration"
+    }
+  },
+  "nmtcapw": {
+    "batchsaveportalwidgetauthorityapi": {
+      "getname": "Batch save portal widget authorization information"
+    },
+    "getportalwidgetapi": {
+      "getname": "Get portal widget information"
+    },
+    "listportalwidgetforhasauthorityapi": {
+      "getname": "Query the list of authorized portal widgets for the current user"
+    },
+    "listportalwidgetformanageapi": {
+      "getname": "Query the management list of portal widgets"
+    },
+    "saveportalwidgetapi": {
+      "getname": "Save portal widget information"
+    }
+  },
+  "nmtcapwd": {
+    "searchportalwidgetdataapi": {
+      "getname": "Query portal widget data",
+      "input": {
+        "param": {
+          "desc": {
+            "param": "Component query data parameters"
+          }
+        }
+      }
+    }
+  },
+  "nmtce": {
+    "portalisnotactiveexception": {
+      "portalisnotactiveexception": "Portal configuration \u0027{0}\u0027 is not activated"
+    },
+    "portalnotfoundexception": {
+      "portalnotfoundexception": "Portal configuration \u0027{0}\u0027 does not exist"
+    },
+    "portalwidgetnotfoundexception": {
+      "portalwidgetnotfoundexception": "Portal widget \u0027{0}\u0027 does not exist"
     }
   },
   "nmteu": {

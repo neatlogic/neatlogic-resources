@@ -5919,6 +5919,9 @@
     }
   },
   "nfem": {
+    "modulegroupnotfoundexception": {
+      "modulegroupnotfoundexception": "模块组“{0}”不存在"
+    },
     "subscribehandlerisembedexception": {
       "subscribehandlerisembedexception": "系统订阅处理器：{0}不允许用于自定义订阅"
     },
@@ -8401,6 +8404,14 @@
   "nfpshc": {
     "processstephandlerbase": {
       "assignexceptionreason": "当前步骤分派异常，已分派给异常处理人：{0}"
+    }
+  },
+  "nfpw": {
+    "frameworkportalwidget": {
+      "text": {
+        "quickentry": "快捷入口",
+        "welcomeoverview": "欢迎概况"
+      }
     }
   },
   "nfpwc": {
@@ -20254,6 +20265,14 @@
       "getname_2": "工单月度流水号重置"
     }
   },
+  "nmppw": {
+    "processportalwidget": {
+      "text": {
+        "personalprocesstaskoverview": "个人工单状态概览",
+        "processfavoriteservice": "收藏服务"
+      }
+    }
+  },
   "nmps": {
     "catalogserviceimpl": {
       "all": "所有"
@@ -21638,6 +21657,79 @@
       "init": {
         "mongodbexception": "租户:{0} 无法连接mongodb，请确认mongdb服务正常，并核对neatlogic库中的mongodb表对应租户的认证信息正确无误后重试"
       }
+    }
+  },
+  "nmtca": {
+    "portal_manage": {
+      "getauthdisplayname": "门户管理权限",
+      "getauthintroduction": "拥有该权限可以操作门户管理页面"
+    },
+    "portal_widget_manage": {
+      "getauthdisplayname": "门户小部件管理权限",
+      "getauthintroduction": "拥有该权限可以操作门户小部件管理页面"
+    }
+  },
+  "nmtcap": {
+    "deleteportalapi": {
+      "getname": "删除门户信息"
+    },
+    "getcurrentuserportalapi": {
+      "getname": "获取当前用户门户设置信息"
+    },
+    "getportalapi": {
+      "getname": "获取门户设置信息"
+    },
+    "listportalapi": {
+      "getname": "查询门户信息列表"
+    },
+    "saveportalapi": {
+      "getname": "保存门户设置信息"
+    },
+    "toggleactiveportalapi": {
+      "getname": "激活或禁用门户设置"
+    },
+    "toggleenableportalapi": {
+      "getname": "用户启用门户配置"
+    }
+  },
+  "nmtcapw": {
+    "batchsaveportalwidgetauthorityapi": {
+      "getname": "批量保存门户小部件授权信息"
+    },
+    "getportalwidgetapi": {
+      "getname": "获取门户小部件信息"
+    },
+    "listportalwidgetforhasauthorityapi": {
+      "getname": "查询当前用户已授权的门户小部件列表"
+    },
+    "listportalwidgetformanageapi": {
+      "getname": "查询门户小部件管理列表"
+    },
+    "saveportalwidgetapi": {
+      "getname": "保存门户小部件信息"
+    }
+  },
+  "nmtcapwd": {
+    "searchportalwidgetdataapi": {
+      "getname": "查询门户小组件数据",
+      "input": {
+        "param": {
+          "desc": {
+            "param": "组件查询数据参数"
+          }
+        }
+      }
+    }
+  },
+  "nmtce": {
+    "portalisnotactiveexception": {
+      "portalisnotactiveexception": "门户配置“{0}”未激活"
+    },
+    "portalnotfoundexception": {
+      "portalnotfoundexception": "门户配置“{0}”不存在"
+    },
+    "portalwidgetnotfoundexception": {
+      "portalwidgetnotfoundexception": "门户小组件“{0}”不存在"
     }
   },
   "nmteu": {
