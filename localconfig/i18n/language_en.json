@@ -15622,18 +15622,6 @@
       "getname": "Export inspection asset report list"
     },
     "inspectreportexportapi": {
-      "description": "Export Inspection Report",
-      "getname": "Export Inspection Report",
-      "input": {
-        "param": {
-          "desc": {
-            "id": "ID",
-            "jobid": "Job ID",
-            "resourceid": "Asset ID",
-            "type": "Type"
-          }
-        }
-      },
       "text": {
         "alert": "Alert",
         "alertfield": "Alert Field",
@@ -15641,8 +15629,7 @@
         "alertmessage": "Alert Message",
         "nodata": "No Data",
         "reportfilesuffix": "Inspection_Report",
-        "reporttitle": "Inspection Report",
-        "rulenameseparator": ", "
+        "reporttitle": "Inspection Report"
       }
     },
     "inspectschedulesearchapi": {
