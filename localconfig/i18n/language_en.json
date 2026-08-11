@@ -11149,6 +11149,14 @@
         }
       }
     },
+    "chatsessionsource": {
+      "handlernotfound": "Chat session source handler does not exist: {0}",
+      "invalid": "Chat session source parameters are incomplete",
+      "projectunsupported": "A source session cannot be assigned to a standard chat project",
+      "readonly": "The source of an existing session cannot be changed",
+      "toolselectionunsupported": "The tool scope of a source session is fixed by its business source and cannot be selected manually",
+      "toolunavailable": "The AI tool required by the current source is disabled or unauthorized"
+    },
     "chatwithaiapi": {
       "name": "AI Chat",
       "param": {
@@ -11157,7 +11165,9 @@
         "imagelist": "Image list",
         "input": "Content",
         "projectid": "Project ID; applies when starting a new chat",
-        "sessionid": "Session ID; omit to start a new chat"
+        "sessionid": "Session ID; omit to start a new chat",
+        "sourceid": "Source business object ID; applies only when starting a new chat",
+        "sourcetype": "Source type; applies only when starting a new chat"
       }
     },
     "common": {
@@ -11575,7 +11585,8 @@
       "skillexecutionstart": "Tool Execution",
       "skillloadstart": "Loading Skill content",
       "skillpreparestart": "Confirming Autoexec Operations Used by the Skill",
-      "skillplanstart": "Generating the Skill Execution Plan"
+      "skillplanstart": "Generating the Skill Execution Plan",
+      "sourcecontext": "This chat is bound by the server to an Autoexec Skill. Use only AUTOEXEC_SKILL_TOOL to plan and execute this Skill. Do not search for, select, or switch to another Skill. For plan calls, skillKey must be {0}; the current published version is {1}. Skill name: {2}."
     },
     "autoexecskillukimmutableexception": "Skill Key cannot be changed after creation",
     "autoexecskillukinvalidexception": "Skill Key \"{0}\" is invalid; use letters and underscores and start with a letter",

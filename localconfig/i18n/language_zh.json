@@ -11160,6 +11160,14 @@
         }
       }
     },
+    "chatsessionsource": {
+      "handlernotfound": "会话来源处理器不存在：{0}",
+      "invalid": "会话来源参数不完整",
+      "projectunsupported": "来源会话不能归入普通会话项目",
+      "readonly": "已有会话不能切换来源",
+      "toolselectionunsupported": "来源会话的工具范围由业务来源固定，不能手动选择工具",
+      "toolunavailable": "当前来源要求的AI工具未启用或未授权"
+    },
     "chatwithaiapi": {
       "name": "AI聊天接口",
       "param": {
@@ -11168,7 +11176,9 @@
         "imagelist": "图片列表",
         "input": "内容",
         "projectid": "项目ID，新对话时生效",
-        "sessionid": "会话ID，不提供代表新对话"
+        "sessionid": "会话ID，不提供代表新对话",
+        "sourceid": "来源业务对象ID，仅新对话时生效",
+        "sourcetype": "来源类型，仅新对话时生效"
       }
     },
     "common": {
@@ -11586,7 +11596,8 @@
       "skillexecutionstart": "执行工具",
       "skillloadstart": "正在读取 Skill 正文",
       "skillpreparestart": "正在确认 Skill 使用的 Autoexec 工具",
-      "skillplanstart": "正在生成 Skill 执行计划"
+      "skillplanstart": "正在生成 Skill 执行计划",
+      "sourcecontext": "当前会话已由服务端绑定到 Autoexec Skill。只允许使用 AUTOEXEC_SKILL_TOOL 规划和执行该 Skill，禁止检索、选择或改用其他 Skill。调用 plan 时 skillKey 必须为 {0}，当前发布版本为 {1}。Skill名称：{2}。"
     },
     "autoexecskillukimmutableexception": "Skill Key创建后不能修改",
     "autoexecskillukinvalidexception": "Skill Key“{0}”格式不正确，只允许英文字母和下划线且必须以字母开头",
