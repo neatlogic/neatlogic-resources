@@ -11579,9 +11579,7 @@
     "autoexecskilltitledescription": "Skill标题",
     "autoexecskilltool": {
       "executefailed": "自动化工具执行失败",
-      "invalidmcpresponse": "MCP 服务返回格式不正确",
       "label": "Skill 自动化工具执行器",
-      "missingrequestcontext": "当前没有可用于调用 MCP 服务的请求上下文",
       "modelpurposeexecute": "决定 Skill 下一执行步骤",
       "modelpurposeplan": "生成 Skill 执行计划",
       "modelpurposeprepare": "分析 Skill 工具需求",

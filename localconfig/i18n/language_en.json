@@ -11568,9 +11568,7 @@
     "autoexecskilltitledescription": "Skill title",
     "autoexecskilltool": {
       "executefailed": "Autoexec tool execution failed",
-      "invalidmcpresponse": "The MCP service returned an invalid response",
       "label": "Skill Autoexec Tool Executor",
-      "missingrequestcontext": "No request context is available for calling the MCP service",
       "modelpurposeexecute": "Decide the Next Skill Execution Step",
       "modelpurposeplan": "Generate Skill Execution Plan",
       "modelpurposeprepare": "Analyze Skill Tool Requirements",
