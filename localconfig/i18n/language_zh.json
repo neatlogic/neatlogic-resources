@@ -341,6 +341,7 @@
     "scopeofuse": "使用范围",
     "scoreinfo": "评分信息",
     "select": "下拉框",
+    "servergroup": "服务器组",
     "serviceid": "服务ID",
     "servicename": "服务名",
     "singleselect": "单选下拉",
@@ -21492,6 +21493,21 @@
         "param": {
           "desc": {
             "popupnoticeidlist": "需要弹窗的公告ID列表"
+          }
+        }
+      }
+    }
+  },
+  "nmtass": {
+    "jobsourcesearchapi": {
+      "getname": "查询定时作业来源列表"
+    },
+    "jobsourceservergroupupdateapi": {
+      "getname": "修改定时作业来源服务器组",
+      "input": {
+        "param": {
+          "desc": {
+            "jobsourcelist": "待修改的作业来源列表"
           }
         }
       }
