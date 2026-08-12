@@ -2532,7 +2532,8 @@
       "execrtoolparamvalueinvalidexception": "Value of Execution Tool parameter \"{0}\" is invalid."
     },
     "execrtoolresourcenotfoundexception": {
-      "execrtoolresourcenotfoundexception": "No resource was found for IP address {0}."
+      "execrtoolresourcenotfoundexception": "No resource was found for IP address {0}.",
+      "execrtoolresourcenotfoundbyipandport": "No resource was found for IP address {0} and port {1}."
     },
     "execrtoolrunnerunavailableexception": {
       "execrtoolrunnerunavailableexception": "No healthy Runner is available for Execution Tool execution."
@@ -10855,7 +10856,8 @@
         "param": {
           "desc": {
             "includestdout": "Whether to return standard output.",
-            "ip": "IP"
+            "ip": "IP",
+            "port": "Target Asset Port"
           }
         }
       },

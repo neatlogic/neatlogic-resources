@@ -2532,7 +2532,8 @@
       "execrtoolparamvalueinvalidexception": "execrtool参数“{0}”的值不合法"
     },
     "execrtoolresourcenotfoundexception": {
-      "execrtoolresourcenotfoundexception": "通过IP：{0}找不到资产"
+      "execrtoolresourcenotfoundexception": "通过IP：{0}找不到资产",
+      "execrtoolresourcenotfoundbyipandport": "未找到IP地址为{0}、端口为{1}的资产"
     },
     "execrtoolrunnerunavailableexception": {
       "execrtoolrunnerunavailableexception": "没有可用于execrtool执行的健康Runner"
@@ -10866,7 +10867,8 @@
         "param": {
           "desc": {
             "includestdout": "是否返回stdout",
-            "ip": "目标ip"
+            "ip": "目标ip",
+            "port": "目标资产端口"
           }
         }
       },
