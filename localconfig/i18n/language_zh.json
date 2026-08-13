@@ -10870,15 +10870,20 @@
       "input": {
         "param": {
           "desc": {
-            "includestdout": "是否返回stdout",
-            "ip": "目标IP。TARGET和RUNNER_TARGET模式未提供资源ID时必填",
-            "nodename": "目标资产名称。未提供资源ID时与IP、端口组合定位资产，特别用于区分共用同一IP和端口的数据库实例",
-            "port": "目标资产端口。未提供资源ID时与IP、资产名称组合定位资产",
-            "protocol": "RUNNER_TARGET模式使用的连接协议。未提供时默认使用tagent协议",
-            "resourceid": "目标资源ID。优先级高于IP、端口和资产名称",
-            "runnerid": "Runner映射ID。优先级高于Runner名称，在目标执行模式下必须匹配目标网络",
-            "runnername": "Runner名称。仅在未提供Runner映射ID时使用，在目标执行模式下必须匹配目标网络。两个Runner选择参数都未提供时，RUNNER模式从健康Runner中随机分配，目标执行模式从目标IP匹配的网络组中分配健康Runner",
-            "username": "RUNNER_TARGET模式使用的连接用户名。显式提供协议时必填；使用默认tagent协议时默认为root"
+            "includestdout": "包含标准输出",
+            "runnername": "Runner名称"
+          },
+          "help": {
+            "ip": "TARGET和RUNNER_TARGET模式未提供资源ID时必填",
+            "nodename": "未提供资源ID时与IP、端口组合定位资产，特别用于区分共用同一IP和端口的数据库实例",
+            "operationid": "可选。同时提供工具ID和工具名称时优先使用工具ID；工具ID和工具名称不能同时为空",
+            "operationname": "可选。仅在未提供工具ID时使用，并在选定的工具类型内精确匹配；工具ID和工具名称不能同时为空",
+            "port": "未提供资源ID时与IP、资产名称组合定位资产",
+            "protocol": "RUNNER_TARGET模式使用。未提供时默认使用tagent协议",
+            "resourceid": "优先级高于IP、端口和资产名称",
+            "runnerid": "优先级高于Runner名称，在目标执行模式下必须匹配目标网络",
+            "runnername": "仅在未提供Runner映射ID时使用，在目标执行模式下必须匹配目标网络。两个Runner选择参数都未提供时，RUNNER模式从健康Runner中随机分配，目标执行模式从目标IP匹配的网络组中分配健康Runner",
+            "username": "RUNNER_TARGET模式使用。显式提供协议时必填；使用默认tagent协议时默认为root"
           }
         }
       },
