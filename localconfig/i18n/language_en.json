@@ -341,6 +341,7 @@
     "scopeofuse": "Scope of Use",
     "scoreinfo": "Rating Information",
     "select": "Dropdown box",
+    "servergroup": "Server group",
     "serviceid": "Service ID",
     "servicename": "service name",
     "singleselect": "Single-Select",
@@ -2321,19 +2322,19 @@
       "autoexecparamvaluerepeatexception": "In phase \"{0}\", Tool \"{1}\" has parameter {2} ({3}) with duplicate value {4}."
     },
     "autoexecprofilehasbeenreferredexception": {
-      "autoexecprofilehasbeenreferredexception": "Preset Parameter Set \"{0}\" is referenced and cannot be deleted."
+      "autoexecprofilehasbeenreferredexception": "The current profile \u0027{0}\u0027 has been referenced and cannot be deleted"
     },
     "autoexecprofileishasreferenceexception": {
-      "autoexecprofileishasreferenceexception": "Preset Parameter Set \"{0}\" is referenced and cannot be deleted."
+      "autoexecprofileishasreferenceexception": "Profile: {0} \"has been referenced and cannot be deleted"
     },
     "autoexecprofileisnotfoundexception": {
       "autoexecprofileisnotfoundexception": "Preset Parameter Set \"{0}\" does not exist."
     },
     "autoexecprofilenamerepeatsexception": {
-      "autoexecprofilenamerepeatsexception": "Preset Parameter Set name \"{0}\" already exists."
+      "autoexecprofilenamerepeatsexception": "Profile name: \u0027{0}\u0027 already exists"
     },
     "autoexecprofilenotreferencedbyoperationexception": {
-      "autoexecprofilenotreferencedbyoperationexception": "Preset Parameter Set \"{0}\" is not associated with tool {1}."
+      "autoexecprofilenotreferencedbyoperationexception": "Profile: \u0027{0}\u0027 not associated with tool: {1}"
     },
     "autoexecprotocolisrequiredexception": {
       "autoexecprotocolisrequiredexception": "A connection protocol is required."
@@ -2360,6 +2361,7 @@
     },
     "autoexecrunnergrouprulenotmatchexception": {
       "autoexecrunnergrouprulenotmatchexception": "Runner group \"{1}\" ({2}), configured by {0}, does not satisfy the rule.",
+      "autoexecrunnergrouprulenotmatchexception_a": "The executor group \u0027{1} ({2})\u0027 set by \u0027{0}\u0027 and \u0027{3}\u0027 does not meet the rules",
       "autoexecrunnergrouprulenotmatchexceptionwithformname": "{0} \"{3}\" configures Runner group \"{1}\" ({2}), which does not satisfy the rule."
     },
     "autoexecrunnergrouptaginvalidexception": {
@@ -2532,8 +2534,8 @@
       "execrtoolparamvalueinvalidexception": "Value of Execution Tool parameter \"{0}\" is invalid."
     },
     "execrtoolresourcenotfoundexception": {
-      "execrtoolresourcenotfoundexception": "No resource was found for IP address {0}.",
-      "execrtoolresourcenotfoundbyipandport": "No resource was found for IP address {0} and port {1}."
+      "execrtoolresourcenotfoundbyipandport": "No resource was found for IP address {0} and port {1}.",
+      "execrtoolresourcenotfoundexception": "No resource was found for IP address {0}."
     },
     "execrtoolrunnerunavailableexception": {
       "execrtoolrunnerunavailableexception": "No healthy Runner is available for Execution Tool execution."
@@ -10552,13 +10554,13 @@
           "description": "Explain, generate, modify, and fix automation scripts with editor context",
           "label": "Automation Script Assistant"
         },
-        "skillplanning": {
-          "description": "Load published Skill content and generate a structured execution plan for user confirmation",
-          "label": "Automation Skill Planning Assistant"
-        },
         "skilloperationpreparation": {
           "description": "Read published Skill content and confirm the tool library and custom tools required by the plan",
           "label": "Automation Skill Operation Preparation Assistant"
+        },
+        "skillplanning": {
+          "description": "Load published Skill content and generate a structured execution plan for user confirmation",
+          "label": "Automation Skill Planning Assistant"
         },
         "toolrecommend": {
           "description": "Recommend tool library tools from phase context and the authorized candidate pool",
@@ -10995,6 +10997,8 @@
         "toolunauthorized": "The tool does not exist or is not authorized"
       }
     },
+    "aichatsessionconfiginvalid": "The AI chat session configuration is invalid.",
+    "aichattoolunauthorized": "The AI tool does not exist or is not authorized: {0}",
     "aitool": {
       "executeaiworkflowtool": {
         "desc": {
@@ -11163,8 +11167,6 @@
       }
     },
     "aichatagentunsupported": "System Agent \"{0}\" does not support the generic AI chat endpoint.",
-    "aichatsessionconfiginvalid": "The AI chat session configuration is invalid.",
-    "aichattoolunauthorized": "The AI tool does not exist or is not authorized: {0}",
     "common": {
       "param": {
         "desc": {
@@ -11442,6 +11444,11 @@
     }
   },
   "nmautoexec": {
+    "autoexecoperationindexhandler": "Index Handler",
+    "autoexecoperationindexrebuildapi": "Rebuild Autoexec Skill Tool Lucene Index",
+    "autoexecoperationindexreconcilejob": "Reconcile Autoexec Skill Tool Lucene Index",
+    "autoexecoperationindexschemaversion": "Index Schema Version",
+    "autoexecoperationindextype": "Index Type",
     "autoexecskill": "Autoexec Skill",
     "autoexecskillactionnotallowedexception": "Skill action \"{0}\" is not allowed in status \"{1}\"",
     "autoexecskillagenticactioninvalid": "Confirmed Agentic execution only allows action\u003dexecute; received \"{0}\"",
@@ -11467,6 +11474,9 @@
     "autoexecskillauditlistapi": "Search Autoexec Skill Activities",
     "autoexecskillbaseinfoupdateapi": "Update Autoexec Skill Basic Information",
     "autoexecskillcannotsubmitexception": "A Skill version in status \"{0}\" cannot be submitted",
+    "autoexecskillchatcontextlabel": "Current Skill: {0}",
+    "autoexecskillchatsessioninvalidexception": "The current automation execution session is not correctly bound to a Skill. Close it and open it again.",
+    "autoexecskillchatsessiontoolunavailableexception": "The Skill tool is not enabled for the Automation Execution Assistant.",
     "autoexecskillcontenthashconflictexception": "Skill content hash \"{0}\" conflicts with existing content",
     "autoexecskillchatpermissiondeniedexception": "You do not have permission to edit Autoexec Skills and cannot continue this AI chat.",
     "autoexecskillcurrentnotrecalledexception": "The current Autoexec Skill \"{0}\" was not recalled; execution stopped",
@@ -11485,22 +11495,18 @@
     "autoexecskillloadrequired": "The Global AI Must Load the Same Skill\u0027s Current Published Version Before Planning",
     "autoexecskillnotfoundexception": "Autoexec Skill \"{0}\" does not exist",
     "autoexecskillnotpublishedexception": "Autoexec Skill \"{0}\" is not published",
-    "autoexecskilloperationexplicitnotfound": "The tool \"{0}\" explicitly specified by the Skill does not exist, is inactive, or is unavailable",
     "autoexecskilloperationdiscoveryphaseinvalid": "Autoexec operation discovery is available only during internal Skill planning",
-    "autoexecskilloperationsearchqueryrequired": "The Autoexec operation search query cannot be empty",
+    "autoexecskilloperationexplicitnotfound": "The tool \"{0}\" explicitly specified by the Skill does not exist, is inactive, or is unavailable",
     "autoexecskilloperationsearchfailed": "Autoexec operation search failed; try again later",
+    "autoexecskilloperationsearchqueryrequired": "The Autoexec operation search query cannot be empty",
     "autoexecskilloperationsearchquerytoolong": "The Autoexec operation search query cannot exceed {0} characters",
     "autoexecskilloperationunavailable": "Autoexec operation \"{0}\" does not exist, is inactive, or is not authorized",
-    "autoexecskillpreparationinvalid": "The Skill operation preparation result is invalid; load the Skill and prepare its operations again",
-    "autoexecskillpreparationrequired": "Operations must be prepared for this request before generating the Skill plan",
-    "autoexecskillpreparationtoolconfiginvalid": "Skill operation preparation requires exactly one Skill tool instance; {0} are currently configured",
-    "autoexecskillpreparationunresolved": "No operation could be confirmed for these Skill execution steps: {0}",
     "autoexecskillplanapi": "Plan Autoexec Skill Execution",
-    "autoexecskillplaninputapi": "Update Skill Execution Plan Inputs",
-    "autoexecskillplaninputrequired": "Provide the required Skill execution plan inputs and select runners before execution",
     "autoexecskillplanexecuteprohibited": "Business tools cannot run during Skill planning",
     "autoexecskillplanexpired": "The Skill execution plan expired, changed state, or its published version was updated; create a new plan",
     "autoexecskillplanincomplete": "The confirmed Skill execution plan is incomplete. Call the tool for the next step, \"{0}\", now; do not output the final summary.",
+    "autoexecskillplaninputapi": "Update Skill Execution Plan Inputs",
+    "autoexecskillplaninputrequired": "Provide the required Skill execution plan inputs and select runners before execution",
     "autoexecskillplaninvalid": "The Skill execution plan is invalid; create a new plan",
     "autoexecskillplaninvalidwithreason": "The Skill execution plan is invalid: {0}. Create a new plan",
     "autoexecskillplanreasonautoreference": "the tool output reference in step {0} has an invalid structure",
@@ -11544,6 +11550,10 @@
     "autoexecskillplantokenexpired": "The Skill execution plan expired or its published version changed; create a new plan",
     "autoexecskillplantokeninvalid": "The Skill execution plan token is invalid; create a new plan",
     "autoexecskillplantokenrequired": "Confirm the Skill execution plan first",
+    "autoexecskillpreparationinvalid": "The Skill operation preparation result is invalid; load the Skill and prepare its operations again",
+    "autoexecskillpreparationrequired": "Operations must be prepared for this request before generating the Skill plan",
+    "autoexecskillpreparationtoolconfiginvalid": "Skill operation preparation requires exactly one Skill tool instance; {0} are currently configured",
+    "autoexecskillpreparationunresolved": "No operation could be confirmed for these Skill execution steps: {0}",
     "autoexecskillpublishstatus": "Publish Failure Status",
     "autoexecskillragdatasetnotfoundexception": "No Autoexec Skill RAG dataset has been created",
     "autoexecskillragdeleteverifyexception": "Read-back verification failed after unpublishing Autoexec Skill \"{0}\"",
@@ -11559,11 +11569,6 @@
     "autoexecskillstatusdraft": "Draft",
     "autoexecskillstatusinvalidexception": "The current Skill status is \"{0}\"; expected \"{1}\"",
     "autoexecskillstatusrejected": "Rejected",
-    "autoexecoperationindexhandler": "Index Handler",
-    "autoexecoperationindexrebuildapi": "Rebuild Autoexec Skill Tool Lucene Index",
-    "autoexecoperationindexreconcilejob": "Reconcile Autoexec Skill Tool Lucene Index",
-    "autoexecoperationindexschemaversion": "Index Schema Version",
-    "autoexecoperationindextype": "Index Type",
     "autoexecskillstatussubmitted": "Pending Review",
     "autoexecskillstepskipped": "Previous step {0} failed; step {1} was not executed",
     "autoexecskillsubmitapi": "Submit Autoexec Skill",
@@ -11577,20 +11582,16 @@
       "modelpurposepreparesearchquery": "Batch Generate Tool Search Queries from Skill",
       "modelpurposeprepareselecttool": "Batch Select Tools to Validate from Search Candidates",
       "modelpurposesummary": "Summarize Skill Execution Results",
-      "operationstart": "Starting Skill tool execution",
       "operationdescribestart": "Loading Autoexec Operation Definition",
       "operationsearchstart": "Searching Autoexec Operations",
+      "operationstart": "Starting Skill tool execution",
       "planconfirm": "The Autoexec Skill Execution Plan Is Ready for Confirmation",
       "planconfirmoption": "Confirm and Run This Plan",
       "skillexecutionstart": "Tool Execution",
       "skillloadstart": "Loading Skill content",
-      "skillpreparestart": "Confirming Autoexec Operations Used by the Skill",
-      "skillplanstart": "Generating the Skill Execution Plan"
+      "skillplanstart": "Generating the Skill Execution Plan",
+      "skillpreparestart": "Confirming Autoexec Operations Used by the Skill"
     },
-    "autoexecskillchatcontextlabel": "Current Skill: {0}",
-    "autoexecskillchatsessioninvalidexception": "The current automation execution session is not correctly bound to a Skill. Close it and open it again.",
-    "autoexecskillchatsessiontoolunavailableexception": "The Skill tool is not enabled for the Automation Execution Assistant.",
-    "createautoexecskillaichatsessionapi": "Create Autoexec Skill AI Session",
     "autoexecskillukimmutableexception": "Skill Key cannot be changed after creation",
     "autoexecskillukinvalidexception": "Skill Key \"{0}\" is invalid; use letters and underscores and start with a letter",
     "autoexecskillukrepeatexception": "Skill Key \"{0}\" already exists",
@@ -11599,6 +11600,7 @@
     "autoexecskillversionlistapi": "Search Autoexec Skill Versions",
     "autoexecskillversionnoteditableexception": "A Skill version in status \"{0}\" cannot be edited",
     "autoexecskillversionnotfoundexception": "Autoexec Skill version \"{0}\" does not exist",
+    "createautoexecskillaichatsessionapi": "Create Autoexec Skill AI Session",
     "execrtoolapi": {
       "param": {
         "jobid": "Cross-step execution context Snowflake ID",
@@ -21459,6 +21461,21 @@
         "param": {
           "desc": {
             "popupnoticeidlist": "List of announcement IDs that need to pop up"
+          }
+        }
+      }
+    }
+  },
+  "nmtass": {
+    "jobsourcesearchapi": {
+      "getname": "Query the source list of scheduled assignments"
+    },
+    "jobsourceservergroupupdateapi": {
+      "getname": "Modify the source server group for scheduled assignments",
+      "input": {
+        "param": {
+          "desc": {
+            "jobsourcelist": "List of homework sources to be modified"
           }
         }
       }
