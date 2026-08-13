@@ -2534,7 +2534,9 @@
       "execrtoolparamvalueinvalidexception": "Value of Execution Tool parameter \"{0}\" is invalid."
     },
     "execrtoolresourcenotfoundexception": {
+      "execrtoolresourcenotfoundbyid": "No resource was found for Resource ID {0}.",
       "execrtoolresourcenotfoundbyipandport": "No resource was found for IP address {0} and port {1}.",
+      "execrtoolresourcenotfoundbyipportandname": "No resource was found for IP address {0}, port {1}, and resource name {2}.",
       "execrtoolresourcenotfoundexception": "No resource was found for IP address {0}."
     },
     "execrtoolrunnerunavailableexception": {
@@ -10858,8 +10860,14 @@
         "param": {
           "desc": {
             "includestdout": "Whether to return standard output.",
-            "ip": "IP",
-            "port": "Target Asset Port"
+            "ip": "Target IP. Required for target and runner_target modes when Resource ID is not provided.",
+            "nodename": "Target resource name. Used with IP and port only when Resource ID is not provided, especially to distinguish database instances sharing the same IP and port.",
+            "port": "Target resource port. Used with IP and resource name when Resource ID is not provided.",
+            "protocol": "Connection protocol for runner_target mode. Defaults to tagent when not provided.",
+            "resourceid": "Target Resource ID. Takes precedence over IP, port, and resource name.",
+            "runnerid": "Runner mapping ID. Takes precedence over Runner name and must match the target network in target modes.",
+            "runnername": "Runner name. Used only when Runner mapping ID is not provided and must match the target network in target modes. When neither selector is provided, runner mode randomly selects a healthy Runner, while target modes select a healthy Runner from the group matching the target IP network.",
+            "username": "Connection username for runner_target mode. Required when a protocol is explicitly provided; defaults to root with the default tagent protocol."
           }
         }
       },
