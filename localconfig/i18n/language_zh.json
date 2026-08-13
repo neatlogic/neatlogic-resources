@@ -2322,19 +2322,19 @@
       "autoexecparamvaluerepeatexception": "阶段[{0}] 工具[{1}]的参数：{2}（{3}）的值：{4} 重复"
     },
     "autoexecprofilehasbeenreferredexception": {
-      "autoexecprofilehasbeenreferredexception": "当前预置参数集“{0}”已被引用，无法删除"
+      "autoexecprofilehasbeenreferredexception": "当前profile“{0}”已被引用，无法删除"
     },
     "autoexecprofileishasreferenceexception": {
-      "autoexecprofileishasreferenceexception": "预置参数集：{0}”已被引用，无法删除"
+      "autoexecprofileishasreferenceexception": "profile：{0}”已被引用，无法删除"
     },
     "autoexecprofileisnotfoundexception": {
       "autoexecprofileisnotfoundexception": "预置参数集{0}不存在"
     },
     "autoexecprofilenamerepeatsexception": {
-      "autoexecprofilenamerepeatsexception": "预置参数集名称：“{0}”已存在"
+      "autoexecprofilenamerepeatsexception": "profile名称：“{0}”已存在"
     },
     "autoexecprofilenotreferencedbyoperationexception": {
-      "autoexecprofilenotreferencedbyoperationexception": "预置参数集：“{0}”未关联工具：{1}"
+      "autoexecprofilenotreferencedbyoperationexception": "profile：“{0}”未关联工具：{1}"
     },
     "autoexecprotocolisrequiredexception": {
       "autoexecprotocolisrequiredexception": "连接协议必须设置"
@@ -2361,6 +2361,7 @@
     },
     "autoexecrunnergrouprulenotmatchexception": {
       "autoexecrunnergrouprulenotmatchexception": "{0}设置的Runner组“{1}（{2}）”不满足规则。",
+      "autoexecrunnergrouprulenotmatchexception_a": "{0}“{3}”设置的执行器组“{1}({2})”,不满足规则",
       "autoexecrunnergrouprulenotmatchexceptionwithformname": "{0}“{3}”设置的Runner组“{1}（{2}）”不满足规则。"
     },
     "autoexecrunnergrouptaginvalidexception": {
