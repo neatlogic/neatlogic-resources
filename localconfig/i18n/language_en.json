@@ -2322,19 +2322,19 @@
       "autoexecparamvaluerepeatexception": "In phase \"{0}\", Tool \"{1}\" has parameter {2} ({3}) with duplicate value {4}."
     },
     "autoexecprofilehasbeenreferredexception": {
-      "autoexecprofilehasbeenreferredexception": "Preset Parameter Set \"{0}\" is referenced and cannot be deleted."
+      "autoexecprofilehasbeenreferredexception": "The current profile \u0027{0}\u0027 has been referenced and cannot be deleted"
     },
     "autoexecprofileishasreferenceexception": {
-      "autoexecprofileishasreferenceexception": "Preset Parameter Set \"{0}\" is referenced and cannot be deleted."
+      "autoexecprofileishasreferenceexception": "Profile: {0} \"has been referenced and cannot be deleted"
     },
     "autoexecprofileisnotfoundexception": {
       "autoexecprofileisnotfoundexception": "Preset Parameter Set \"{0}\" does not exist."
     },
     "autoexecprofilenamerepeatsexception": {
-      "autoexecprofilenamerepeatsexception": "Preset Parameter Set name \"{0}\" already exists."
+      "autoexecprofilenamerepeatsexception": "Profile name: \u0027{0}\u0027 already exists"
     },
     "autoexecprofilenotreferencedbyoperationexception": {
-      "autoexecprofilenotreferencedbyoperationexception": "Preset Parameter Set \"{0}\" is not associated with tool {1}."
+      "autoexecprofilenotreferencedbyoperationexception": "Profile: \u0027{0}\u0027 not associated with tool: {1}"
     },
     "autoexecprotocolisrequiredexception": {
       "autoexecprotocolisrequiredexception": "A connection protocol is required."
@@ -2361,6 +2361,7 @@
     },
     "autoexecrunnergrouprulenotmatchexception": {
       "autoexecrunnergrouprulenotmatchexception": "Runner group \"{1}\" ({2}), configured by {0}, does not satisfy the rule.",
+      "autoexecrunnergrouprulenotmatchexception_a": "The executor group \u0027{1} ({2})\u0027 set by \u0027{0}\u0027 and \u0027{3}\u0027 does not meet the rules",
       "autoexecrunnergrouprulenotmatchexceptionwithformname": "{0} \"{3}\" configures Runner group \"{1}\" ({2}), which does not satisfy the rule."
     },
     "autoexecrunnergrouptaginvalidexception": {
