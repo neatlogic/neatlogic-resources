@@ -11173,6 +11173,7 @@
         "sessionid": "会话ID，不提供代表新对话"
       }
     },
+    "aichatagentunsupported": "系统智能体“{0}”不支持通过通用AI会话入口运行",
     "aichatsessionconfiginvalid": "AI会话配置格式不正确",
     "aichattoolunauthorized": "AI工具不存在或未授权：{0}",
     "common": {
@@ -11478,6 +11479,7 @@
     "autoexecskillbaseinfoupdateapi": "更新自动化Skill基本信息",
     "autoexecskillcannotsubmitexception": "当前状态“{0}”的Skill版本不能提交审批",
     "autoexecskillcontenthashconflictexception": "Skill内容Hash“{0}”冲突",
+    "autoexecskillchatpermissiondeniedexception": "当前用户没有自动化Skill编辑权限，无法继续该AI会话",
     "autoexecskillcurrentnotrecalledexception": "本轮未召回当前自动化Skill“{0}”，已停止执行",
     "autoexecskilldescriptiondescription": "Skill描述",
     "autoexecskilldisabledexception": "自动化Skill“{0}”已禁用",

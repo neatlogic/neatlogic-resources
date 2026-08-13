@@ -11162,6 +11162,7 @@
         "sessionid": "Session ID; omit to start a new chat"
       }
     },
+    "aichatagentunsupported": "System Agent \"{0}\" does not support the generic AI chat endpoint.",
     "aichatsessionconfiginvalid": "The AI chat session configuration is invalid.",
     "aichattoolunauthorized": "The AI tool does not exist or is not authorized: {0}",
     "common": {
@@ -11467,6 +11468,7 @@
     "autoexecskillbaseinfoupdateapi": "Update Autoexec Skill Basic Information",
     "autoexecskillcannotsubmitexception": "A Skill version in status \"{0}\" cannot be submitted",
     "autoexecskillcontenthashconflictexception": "Skill content hash \"{0}\" conflicts with existing content",
+    "autoexecskillchatpermissiondeniedexception": "You do not have permission to edit Autoexec Skills and cannot continue this AI chat.",
     "autoexecskillcurrentnotrecalledexception": "The current Autoexec Skill \"{0}\" was not recalled; execution stopped",
     "autoexecskilldescriptiondescription": "Skill description",
     "autoexecskilldisabledexception": "Autoexec Skill \"{0}\" is disabled",
