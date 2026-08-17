@@ -2516,7 +2516,7 @@
       "execrtoolauditpayloademptyexception": "execrtool审计执行入参为空"
     },
     "execrtoolauthoritydeniedexception": {
-      "execrtoolauthoritydeniedexception": "当前用户未获得execrtool执行授权"
+      "execrtoolauthoritydeniedexception": "当前用户未获得“直接执行权限”，请联系管理员到需要执行的工具对应详情页进行“直接执行授权”授权"
     },
     "execrtoolauthorityiteminvalidexception": {
       "execrtoolauthorityiteminvalidexception": "execrtool授权项不合法"
@@ -11466,6 +11466,13 @@
     "scriptparamtypeuserselect": {
       "description": "用于选择系统用户、分组、角色"
     }
+  },
+  "nmalert": {
+    "alertaichatcontextlabel": "当前告警：{0}",
+    "alertaichatsessioninvalidexception": "当前 AI 会话未正确绑定告警，请关闭告警详情后重新打开",
+    "alerttitleagentdescription": "结合告警详情快照分析故障并回答后续问题",
+    "alerttitleagentlabel": "告警分析助手",
+    "createalertaichatsessionapi": "创建告警 AI 会话"
   },
   "nmautoexec": {
     "autoexecoperationindexhandler": "索引处理器",

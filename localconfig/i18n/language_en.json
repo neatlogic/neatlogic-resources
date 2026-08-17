@@ -11456,6 +11456,13 @@
       "description": "Selects system users, groups, or roles."
     }
   },
+  "nmalert": {
+    "alertaichatcontextlabel": "Current Alert: {0}",
+    "alertaichatsessioninvalidexception": "The current AI chat is not correctly linked to an alert. Close the alert details and open them again.",
+    "alerttitleagentdescription": "Analyze incidents from an alert detail snapshot and answer follow-up questions",
+    "alerttitleagentlabel": "Alert Analysis Assistant",
+    "createalertaichatsessionapi": "Create Alert AI Chat"
+  },
   "nmautoexec": {
     "autoexecoperationindexhandler": "Index Handler",
     "autoexecoperationindexrebuildapi": "Rebuild Autoexec Skill Tool Lucene Index",
