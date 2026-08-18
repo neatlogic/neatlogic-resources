@@ -10643,10 +10643,6 @@
         "searchdataset": "Searching bound knowledge bases",
         "start": "Starting log analysis"
       },
-      "streamapi": {
-        "description": "Return automation log analysis progress and final result through SSE",
-        "getname": "Stream automation job log analysis with AI assistant"
-      },
       "tool": {
         "description": "Analyze failure causes, evidence, and handling suggestions from the selected automation job logs, job context, and administrator-bound custom knowledge bases.",
         "label": "Automation Log Analysis Assistant",
@@ -10657,6 +10653,16 @@
           "question": "Current user question about the log snippet",
           "selectedlog": "Log snippet selected by the user"
         }
+      }
+    },
+    "autoexecjoblogchat": {
+      "createapi": {
+        "name": "Create Autoexec Job Log AI Chat"
+      },
+      "param": {
+        "logcontext": "Job Log Context",
+        "logcontexthelp": "Optional. Only allowed job, phase, node, and runner context fields are accepted.",
+        "selectedlog": "Selected Log Snippet"
       }
     },
     "autoexecscriptaiassistant": {
@@ -10673,10 +10679,6 @@
             }
           }
         }
-      },
-      "generateapi": {
-        "description": "Handle script Q\u0026A, analysis, generation, and modification requests with the script AI assistant",
-        "getname": "Handle Script Request With AI Assistant"
       },
       "input": {
         "param": {
@@ -10731,6 +10733,19 @@
         }
       }
     },
+    "autoexecscriptchat": {
+      "createapi": {
+        "name": "Create Autoexec Script AI Chat"
+      },
+      "param": {
+        "scriptcontext": "Script Editor Context",
+        "scriptcontexthelp": "Only allowed script identifiers, parsers, parameters, current code, and AI draft fields are accepted.",
+        "sessionid": "AI Chat ID"
+      },
+      "updatecontextapi": {
+        "name": "Update Autoexec Script AI Chat Context"
+      }
+    },
     "autoexectoolrecommendaiassistant": {
       "configapi": {
         "getname": "Get Automation Tool Recommendation Assistant Configuration",
@@ -10778,10 +10793,6 @@
           }
         }
       },
-      "recommendapi": {
-        "description": "Recommend tool library tools from the current phase context and authorized candidate pool",
-        "getname": "Recommend Automation Tools With AI Assistant"
-      },
       "tool": {
         "description": "Recommend tool library tools suitable for the current phase from the add-tool context, execution mode, filters, authorized tool library candidate pool, and administrator-bound knowledge bases; does not recommend custom tools, save, or execute.",
         "label": "Tool Recommendation Assistant",
@@ -10791,6 +10802,19 @@
           "recommendcontext": "Current add-tool context as a JSON string, including execution mode, phase, upstream outputs, filters, and excluded tool IDs",
           "requirement": "Current user requirement for tool recommendation"
         }
+      }
+    },
+    "autoexectoolrecommendchat": {
+      "createapi": {
+        "name": "Create Autoexec Tool Recommendation AI Chat"
+      },
+      "param": {
+        "recommendcontext": "Tool Recommendation Context",
+        "recommendcontexthelp": "Only allowed phase, execution mode, filter, and selected or excluded tool ID fields are accepted.",
+        "sessionid": "AI Chat ID"
+      },
+      "updatecontextapi": {
+        "name": "Update Autoexec Tool Recommendation AI Chat Context"
       }
     },
     "autoexectoolusageaiassistant": {
@@ -10810,9 +10834,19 @@
           }
         }
       },
-      "explainapi": {
-        "description": "Explain a single tool library tool from the current tool context and bound knowledge bases",
-        "getname": "Explain Automation Tool Usage With AI Assistant"
+      "createchatsessionapi": {
+        "description": "Create an AI chat bound to a fixed snapshot of the current automation tool",
+        "getname": "Create Automation Tool Usage AI Chat",
+        "input": {
+          "param": {
+            "desc": {
+              "pagecontext": "Combined Tool Instance Page Context"
+            },
+            "help": {
+              "pagecontext": "Optional. Accepts only page-context fields for the phase, combined tool, operation instance, failure policy, execution mode, Profile, and parameter mappings."
+            }
+          }
+        }
       },
       "input": {
         "param": {
@@ -11464,11 +11498,18 @@
     "createalertaichatsessionapi": "Create Alert AI Chat"
   },
   "nmautoexec": {
+    "autoexecaichatsessioninvalidexception": "The Autoexec AI chat configuration is invalid. Close and reopen the assistant.",
+    "autoexecjoblogchatcontextlabel": "Current Log: {0}",
+    "autoexecjoblogchatpermissiondeniedexception": "You do not have permission to view Autoexec job logs and cannot continue this AI chat.",
+    "autoexecjoblogchatselectedlog": "Selected Log",
     "autoexecoperationindexhandler": "Index Handler",
     "autoexecoperationindexrebuildapi": "Rebuild Autoexec Skill Tool Lucene Index",
     "autoexecoperationindexreconcilejob": "Reconcile Autoexec Skill Tool Lucene Index",
     "autoexecoperationindexschemaversion": "Index Schema Version",
     "autoexecoperationindextype": "Index Type",
+    "autoexecscriptchatcontextlabel": "Current Script: {0}",
+    "autoexecscriptchatpermissiondeniedexception": "You do not have permission to modify Autoexec scripts and cannot continue this AI chat.",
+    "autoexecscriptchatunnamed": "Untitled Script",
     "autoexecskill": "Autoexec Skill",
     "autoexecskillactionnotallowedexception": "Skill action \"{0}\" is not allowed in status \"{1}\"",
     "autoexecskillagenticactioninvalid": "Confirmed Agentic execution only allows action\u003dexecute; received \"{0}\"",
@@ -11620,6 +11661,11 @@
     "autoexecskillversionlistapi": "Search Autoexec Skill Versions",
     "autoexecskillversionnoteditableexception": "A Skill version in status \"{0}\" cannot be edited",
     "autoexecskillversionnotfoundexception": "Autoexec Skill version \"{0}\" does not exist",
+    "autoexectoolrecommendchatcontextlabel": "Current Recommendation Scenario: {0}",
+    "autoexectoolrecommendchatname": "Tool Recommendation",
+    "autoexectoolrecommendchatpermissiondeniedexception": "You do not have permission to add combined tools and cannot continue this AI chat.",
+    "autoexectoolusagechatcontextlabel": "Current Tool: {0}",
+    "autoexectoolusagechatpermissiondeniedexception": "You do not have permission to add combined tools and cannot continue this tool AI chat.",
     "createautoexecskillaichatsessionapi": "Create Autoexec Skill AI Session",
     "execrtoolapi": {
       "param": {

@@ -10654,10 +10654,6 @@
         "searchdataset": "开始检索绑定知识库",
         "start": "开始分析日志"
       },
-      "streamapi": {
-        "description": "自动化日志分析助手通过SSE返回分析过程和最终结果",
-        "getname": "自动化日志分析助手流式分析日志"
-      },
       "tool": {
         "description": "根据用户选中的自动化作业日志、作业上下文和管理员绑定的自定义知识库，分析失败原因、证据和处理建议。",
         "label": "自动化日志分析助手",
@@ -10668,6 +10664,16 @@
           "question": "本轮用户对日志片段的分析问题",
           "selectedlog": "用户选中的日志片段"
         }
+      }
+    },
+    "autoexecjoblogchat": {
+      "createapi": {
+        "name": "创建自动化作业日志 AI 会话"
+      },
+      "param": {
+        "logcontext": "作业日志上下文",
+        "logcontexthelp": "可选，仅接收作业、阶段、节点和执行器等允许的日志上下文字段",
+        "selectedlog": "选中的日志片段"
       }
     },
     "autoexecscriptaiassistant": {
@@ -10684,10 +10690,6 @@
             }
           }
         }
-      },
-      "generateapi": {
-        "description": "脚本AI助手处理脚本问答、分析、生成或修改需求",
-        "getname": "脚本AI助手处理脚本需求"
       },
       "input": {
         "param": {
@@ -10742,6 +10744,19 @@
         }
       }
     },
+    "autoexecscriptchat": {
+      "createapi": {
+        "name": "创建自动化脚本 AI 会话"
+      },
+      "param": {
+        "scriptcontext": "脚本编辑器上下文",
+        "scriptcontexthelp": "仅接收脚本标识、解析器、参数、当前代码和 AI 工作稿等允许字段",
+        "sessionid": "AI 会话 ID"
+      },
+      "updatecontextapi": {
+        "name": "更新自动化脚本 AI 会话上下文"
+      }
+    },
     "autoexectoolrecommendaiassistant": {
       "configapi": {
         "getname": "获取自动化工具库推荐助手配置",
@@ -10789,10 +10804,6 @@
           }
         }
       },
-      "recommendapi": {
-        "description": "自动化工具库推荐助手根据当前阶段上下文和授权候选池推荐工具库工具",
-        "getname": "自动化工具库推荐助手推荐工具"
-      },
       "tool": {
         "description": "根据组合工具新增工具页的阶段上下文、执行方式、筛选条件、授权工具库候选池和管理员绑定知识库，推荐适合加入当前阶段的工具库工具；不推荐自定义工具，不保存、不执行。",
         "label": "工具库推荐助手",
@@ -10802,6 +10813,19 @@
           "recommendcontext": "当前新增工具上下文JSON字符串，包含执行方式、阶段、上游输出、筛选条件和排除工具ID",
           "requirement": "本轮用户输入的工具推荐需求"
         }
+      }
+    },
+    "autoexectoolrecommendchat": {
+      "createapi": {
+        "name": "创建自动化工具推荐 AI 会话"
+      },
+      "param": {
+        "recommendcontext": "工具推荐上下文",
+        "recommendcontexthelp": "仅接收阶段、执行方式、筛选条件和已选择或排除工具 ID 等允许字段",
+        "sessionid": "AI 会话 ID"
+      },
+      "updatecontextapi": {
+        "name": "更新自动化工具推荐 AI 会话上下文"
       }
     },
     "autoexectoolusageaiassistant": {
@@ -10821,9 +10845,19 @@
           }
         }
       },
-      "explainapi": {
-        "description": "自动化工具使用解释助手根据当前工具上下文和绑定知识库解释单个工具库工具",
-        "getname": "自动化工具使用解释助手解释工具"
+      "createchatsessionapi": {
+        "description": "为当前自动化工具创建绑定固定工具快照的 AI 会话",
+        "getname": "创建自动化工具使用 AI 会话",
+        "input": {
+          "param": {
+            "desc": {
+              "pagecontext": "组合工具实例页面上下文"
+            },
+            "help": {
+              "pagecontext": "可选，仅接收阶段、组合工具、操作实例、失败策略、执行方式、Profile 和参数映射等页面上下文字段"
+            }
+          }
+        }
       },
       "input": {
         "param": {
@@ -11475,11 +11509,18 @@
     "createalertaichatsessionapi": "创建告警 AI 会话"
   },
   "nmautoexec": {
+    "autoexecaichatsessioninvalidexception": "当前自动化 AI 会话配置无效，请关闭助手后重新打开",
+    "autoexecjoblogchatcontextlabel": "当前日志：{0}",
+    "autoexecjoblogchatpermissiondeniedexception": "当前用户没有查看自动化作业日志的权限，无法继续该 AI 会话",
+    "autoexecjoblogchatselectedlog": "选中日志",
     "autoexecoperationindexhandler": "索引处理器",
     "autoexecoperationindexrebuildapi": "全量重建Autoexec Skill工具Lucene索引",
     "autoexecoperationindexreconcilejob": "校准Autoexec Skill工具Lucene索引",
     "autoexecoperationindexschemaversion": "索引结构版本",
     "autoexecoperationindextype": "索引类型",
+    "autoexecscriptchatcontextlabel": "当前脚本：{0}",
+    "autoexecscriptchatpermissiondeniedexception": "当前用户没有修改自动化脚本的权限，无法继续该 AI 会话",
+    "autoexecscriptchatunnamed": "未命名脚本",
     "autoexecskill": "自动化Skill",
     "autoexecskillactionnotallowedexception": "当前状态“{1}”不允许执行Skill操作“{0}”",
     "autoexecskillagenticactioninvalid": "已确认的Agentic执行只允许action\u003dexecute，收到“{0}”",
@@ -11631,6 +11672,11 @@
     "autoexecskillversionlistapi": "查询自动化Skill版本",
     "autoexecskillversionnoteditableexception": "当前状态“{0}”的Skill版本不能编辑",
     "autoexecskillversionnotfoundexception": "自动化Skill版本“{0}”不存在",
+    "autoexectoolrecommendchatcontextlabel": "当前推荐场景：{0}",
+    "autoexectoolrecommendchatname": "工具推荐",
+    "autoexectoolrecommendchatpermissiondeniedexception": "当前用户没有新增组合工具的权限，无法继续该 AI 会话",
+    "autoexectoolusagechatcontextlabel": "当前工具：{0}",
+    "autoexectoolusagechatpermissiondeniedexception": "当前用户没有新增组合工具权限，无法继续该工具 AI 会话",
     "createautoexecskillaichatsessionapi": "创建自动化 Skill AI 会话",
     "execrtoolapi": {
       "param": {
