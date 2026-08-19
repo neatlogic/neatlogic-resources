@@ -10907,7 +10907,7 @@
             "port": "Used with IP and resource name when Resource ID is not provided.",
             "protocol": "Used for runner_target mode. Defaults to tagent when not provided.",
             "resourceid": "Takes precedence over IP, port, and resource name.",
-            "runnergroup": "Used only in runner mode. Accepts a Runner group ID, name, or -1. Defaults to -1, which randomly matches within groups satisfying the request-header rule and tag constraints.",
+            "runnergroup": "Used only in runner mode. Accepts a Runner group ID, name. Defaults to -1, which randomly matches within groups satisfying the request-header rule and tag constraints.",
             "runnergrouptag": "Optional. Accepts Runner group tag IDs or names. The selected Runner must satisfy the request-header rule, tags, and the Runner group or network constraint for the execution mode. Example: [\"PRD\",\"UAT\"].",
             "runnerid": "Takes precedence over Runner name and must belong to the candidate set determined by the request-header rule, tags, and the Runner group or network constraint for the execution mode.",
             "runnername": "Used only when Runner Mapping ID is not provided and must belong to the candidate set determined by the request-header rule, tags, and the Runner group or network constraint for the execution mode. When neither selector is provided, a healthy Runner is automatically selected from the candidate set.",
