@@ -10905,18 +10905,21 @@
         "param": {
           "desc": {
             "includestdout": "包含标准输出",
+            "param": "工具入参",
             "runnername": "Runner名称"
           },
           "help": {
+            "argument": "自由参数数组，元素按顺序传递，具体数量、类型和组织方式以工具的自由参数定义及帮助为准；工具无自由参数时可省略或传[]。示例：deprecate/sshexec的固定位置参数[\"hostname\"]；osbasic/getcmdout的有序列表[\"uname -a\",\"df -h\"]；osbasic/createdirs的多行文本[\"/data/app\\n/data/log\"]；basic/createjob的交替键值对[\"appSystemId\",\"1001\",\"envName\",\"PRD\"]（元素数量须为偶数）；build/compileinjenkins中每项为key=value格式[\"BRANCH=main\",\"ENV=PRD\"]。",
             "ip": "TARGET和RUNNER_TARGET模式未提供资源ID时必填",
             "nodename": "未提供资源ID时与IP、端口组合定位资产，特别用于区分共用同一IP和端口的数据库实例",
             "operationid": "可选。同时提供工具ID和工具名称时优先使用工具ID；工具ID和工具名称不能同时为空",
             "operationname": "可选。仅在未提供工具ID时使用，并在选定的工具类型内精确匹配；工具ID和工具名称不能同时为空",
+            "param": "按工具入参名称组织的键值对象，例如：{\"message\":\"hello\",\"timeout\":60}",
             "port": "未提供资源ID时与IP、资产名称组合定位资产",
             "protocol": "RUNNER_TARGET模式使用。未提供时默认使用tagent协议",
             "resourceid": "优先级高于IP、端口和资产名称",
             "runnergroup": "仅RUNNER模式生效，支持执行器组ID、名称或-1；未提供时默认为-1，表示在满足请求头规则和标签约束的执行器组中随机匹配",
-            "runnergrouptag": "可选，支持执行器组标签ID或名称数组；提供时Runner必须同时满足请求头规则、标签以及当前执行方式的执行器组或网段约束",
+            "runnergrouptag": "可选，支持执行器组标签ID或名称数组；提供时Runner必须同时满足请求头规则、标签以及当前执行方式的执行器组或网段约束，例如：[\"PRD\",\"UAT\"]",
             "runnerid": "优先级高于Runner名称，且必须属于请求头规则、标签以及当前执行方式的执行器组或网段约束共同确定的候选集",
             "runnername": "仅在未提供Runner映射ID时使用，且必须属于请求头规则、标签以及当前执行方式的执行器组或网段约束共同确定的候选集。两个Runner选择参数都未提供时，将从候选集的健康Runner中自动分配",
             "username": "RUNNER_TARGET模式使用。显式提供协议时必填；使用默认tagent协议时默认为root"

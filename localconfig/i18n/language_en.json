@@ -10894,18 +10894,21 @@
         "param": {
           "desc": {
             "includestdout": "Include Standard Output",
+            "param": "Tool Input Parameters",
             "runnername": "Runner Name"
           },
           "help": {
+            "argument": "A free-form argument array whose elements are passed to the tool in order. The number, types, and organization of elements depend on the tool's free-form argument definition and help. Omit it or pass [] when the tool has no free-form arguments. Examples: deprecate/sshexec uses a fixed positional argument [\"hostname\"]; osbasic/getcmdout uses an ordered list [\"uname -a\",\"df -h\"]; osbasic/createdirs uses multiline text [\"/data/app\\n/data/log\"]; basic/createjob uses alternating key-value pairs [\"appSystemId\",\"1001\",\"envName\",\"PRD\"] and requires an even number of elements; build/compileinjenkins uses key=value for each element [\"BRANCH=main\",\"ENV=PRD\"].",
             "ip": "Required for target and runner_target modes when Resource ID is not provided.",
             "nodename": "Used with IP and port only when Resource ID is not provided, especially to distinguish database instances sharing the same IP and port.",
             "operationid": "Optional. Takes precedence over Tool Name when both are provided; Tool ID and Tool Name cannot both be empty.",
             "operationname": "Optional. Used only when Tool ID is not provided and matched exactly within the selected Tool Type; Tool ID and Tool Name cannot both be empty.",
+            "param": "A key-value object organized by tool input parameter name. Example: {\"message\":\"hello\",\"timeout\":60}.",
             "port": "Used with IP and resource name when Resource ID is not provided.",
             "protocol": "Used for runner_target mode. Defaults to tagent when not provided.",
             "resourceid": "Takes precedence over IP, port, and resource name.",
             "runnergroup": "Used only in runner mode. Accepts a Runner group ID, name, or -1. Defaults to -1, which randomly matches within groups satisfying the request-header rule and tag constraints.",
-            "runnergrouptag": "Optional. Accepts Runner group tag IDs or names. The selected Runner must satisfy the request-header rule, tags, and the Runner group or network constraint for the execution mode.",
+            "runnergrouptag": "Optional. Accepts Runner group tag IDs or names. The selected Runner must satisfy the request-header rule, tags, and the Runner group or network constraint for the execution mode. Example: [\"PRD\",\"UAT\"].",
             "runnerid": "Takes precedence over Runner name and must belong to the candidate set determined by the request-header rule, tags, and the Runner group or network constraint for the execution mode.",
             "runnername": "Used only when Runner Mapping ID is not provided and must belong to the candidate set determined by the request-header rule, tags, and the Runner group or network constraint for the execution mode. When neither selector is provided, a healthy Runner is automatically selected from the candidate set.",
             "username": "Used for runner_target mode. Required when a protocol is explicitly provided; defaults to root with the default tagent protocol."
