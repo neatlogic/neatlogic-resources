@@ -11060,6 +11060,7 @@
         "toolunauthorized": "工具不存在或未授权"
       }
     },
+    "aichatagentunsupported": "系统智能体“{0}”不支持通过通用AI会话入口运行",
     "aichatsessionconfiginvalid": "AI会话配置格式不正确",
     "aichattoolunauthorized": "AI工具不存在或未授权：{0}",
     "aitool": {
@@ -11229,7 +11230,6 @@
         "sessionid": "会话ID，不提供代表新对话"
       }
     },
-    "aichatagentunsupported": "系统智能体“{0}”不支持通过通用AI会话入口运行",
     "common": {
       "param": {
         "desc": {
@@ -11280,6 +11280,13 @@
     "autoexecjobsourcetypehandler": {
       "getrunnermaplist": "作业"
     }
+  },
+  "nmalert": {
+    "alertaichatcontextlabel": "当前告警：{0}",
+    "alertaichatsessioninvalidexception": "当前 AI 会话未正确绑定告警，请关闭告警详情后重新打开",
+    "alerttitleagentdescription": "结合告警详情快照分析故障并回答后续问题",
+    "alerttitleagentlabel": "告警分析助手",
+    "createalertaichatsessionapi": "创建告警 AI 会话"
   },
   "nmar": {
     "combopimport": {
@@ -11506,13 +11513,6 @@
       "description": "用于选择系统用户、分组、角色"
     }
   },
-  "nmalert": {
-    "alertaichatcontextlabel": "当前告警：{0}",
-    "alertaichatsessioninvalidexception": "当前 AI 会话未正确绑定告警，请关闭告警详情后重新打开",
-    "alerttitleagentdescription": "结合告警详情快照分析故障并回答后续问题",
-    "alerttitleagentlabel": "告警分析助手",
-    "createalertaichatsessionapi": "创建告警 AI 会话"
-  },
   "nmautoexec": {
     "autoexecaichatsessioninvalidexception": "当前自动化 AI 会话配置无效，请关闭助手后重新打开",
     "autoexecjoblogchatcontextlabel": "当前日志：{0}",
@@ -11552,10 +11552,10 @@
     "autoexecskillbaseinfoupdateapi": "更新自动化Skill基本信息",
     "autoexecskillcannotsubmitexception": "当前状态“{0}”的Skill版本不能提交审批",
     "autoexecskillchatcontextlabel": "当前 Skill：{0}",
+    "autoexecskillchatpermissiondeniedexception": "当前用户没有自动化Skill编辑权限，无法继续该AI会话",
     "autoexecskillchatsessioninvalidexception": "当前自动化执行会话未正确绑定 Skill，请关闭后重新打开",
     "autoexecskillchatsessiontoolunavailableexception": "自动化执行助手未启用 Skill 工具",
     "autoexecskillcontenthashconflictexception": "Skill内容Hash“{0}”冲突",
-    "autoexecskillchatpermissiondeniedexception": "当前用户没有自动化Skill编辑权限，无法继续该AI会话",
     "autoexecskillcurrentnotrecalledexception": "本轮未召回当前自动化Skill“{0}”，已停止执行",
     "autoexecskilldescriptiondescription": "Skill描述",
     "autoexecskilldisabledexception": "自动化Skill“{0}”已禁用",

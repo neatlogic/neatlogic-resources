@@ -11049,6 +11049,7 @@
         "toolunauthorized": "The tool does not exist or is not authorized"
       }
     },
+    "aichatagentunsupported": "System Agent \"{0}\" does not support the generic AI chat endpoint.",
     "aichatsessionconfiginvalid": "The AI chat session configuration is invalid.",
     "aichattoolunauthorized": "The AI tool does not exist or is not authorized: {0}",
     "aitool": {
@@ -11218,7 +11219,6 @@
         "sessionid": "Session ID; omit to start a new chat"
       }
     },
-    "aichatagentunsupported": "System Agent \"{0}\" does not support the generic AI chat endpoint.",
     "common": {
       "param": {
         "desc": {
@@ -11269,6 +11269,13 @@
     "autoexecjobsourcetypehandler": {
       "getrunnermaplist": "school assignment"
     }
+  },
+  "nmalert": {
+    "alertaichatcontextlabel": "Current Alert: {0}",
+    "alertaichatsessioninvalidexception": "The current AI chat is not correctly linked to an alert. Close the alert details and open them again.",
+    "alerttitleagentdescription": "Analyze incidents from an alert detail snapshot and answer follow-up questions",
+    "alerttitleagentlabel": "Alert Analysis Assistant",
+    "createalertaichatsessionapi": "Create Alert AI Chat"
   },
   "nmar": {
     "combopimport": {
@@ -11495,13 +11502,6 @@
       "description": "Selects system users, groups, or roles."
     }
   },
-  "nmalert": {
-    "alertaichatcontextlabel": "Current Alert: {0}",
-    "alertaichatsessioninvalidexception": "The current AI chat is not correctly linked to an alert. Close the alert details and open them again.",
-    "alerttitleagentdescription": "Analyze incidents from an alert detail snapshot and answer follow-up questions",
-    "alerttitleagentlabel": "Alert Analysis Assistant",
-    "createalertaichatsessionapi": "Create Alert AI Chat"
-  },
   "nmautoexec": {
     "autoexecaichatsessioninvalidexception": "The Autoexec AI chat configuration is invalid. Close and reopen the assistant.",
     "autoexecjoblogchatcontextlabel": "Current Log: {0}",
@@ -11541,10 +11541,10 @@
     "autoexecskillbaseinfoupdateapi": "Update Autoexec Skill Basic Information",
     "autoexecskillcannotsubmitexception": "A Skill version in status \"{0}\" cannot be submitted",
     "autoexecskillchatcontextlabel": "Current Skill: {0}",
+    "autoexecskillchatpermissiondeniedexception": "You do not have permission to edit Autoexec Skills and cannot continue this AI chat.",
     "autoexecskillchatsessioninvalidexception": "The current automation execution session is not correctly bound to a Skill. Close it and open it again.",
     "autoexecskillchatsessiontoolunavailableexception": "The Skill tool is not enabled for the Automation Execution Assistant.",
     "autoexecskillcontenthashconflictexception": "Skill content hash \"{0}\" conflicts with existing content",
-    "autoexecskillchatpermissiondeniedexception": "You do not have permission to edit Autoexec Skills and cannot continue this AI chat.",
     "autoexecskillcurrentnotrecalledexception": "The current Autoexec Skill \"{0}\" was not recalled; execution stopped",
     "autoexecskilldescriptiondescription": "Skill description",
     "autoexecskilldisabledexception": "Autoexec Skill \"{0}\" is disabled",
