@@ -726,7 +726,10 @@
     "autoexectenantconfig": {
       "text": {
         "autoexec_execrtool_runner_read_timeout": "Timeout for the execution tool to read a response from Runner, in milliseconds. Default: 5 minutes.",
-        "autoexec_job_param_valid": "Enable job parameter validation. Validation is enabled by default."
+        "autoexec_job_param_valid": "Enable job parameter validation. Validation is enabled by default.",
+        "autoexec_job_sync_max_concurrent": "Maximum number of synchronous Job requests being created or monitored per tenant on the current server instance. Default: 20.",
+        "autoexec_job_sync_output_max_target_count": "Maximum number of target-node outputs returned by the synchronous Job creation API. Default: 10.",
+        "autoexec_job_sync_wait_timeout": "Maximum time that the synchronous Job creation API monitors Job status, in milliseconds. Default: 5 minutes."
       }
     },
     "autoexectypeauthorityaction": {
@@ -2567,6 +2570,15 @@
     },
     "autoexecjobnotfoundedittargetexception": {
       "autoexecjobnotfoundedittargetexception": "Job {0} does not exist."
+    },
+    "autoexecjobsyncinterruptedexception": {
+      "autoexecjobsyncinterruptedexception": "The thread was interrupted while monitoring Job {0}."
+    },
+    "autoexecjobsynclimitexception": {
+      "autoexecjobsynclimitexception": "The number of synchronous Job requests being created or monitored has reached the limit of {0}."
+    },
+    "autoexecjobtargetinvalidexception": {
+      "autoexecjobtargetinvalidexception": "Execution target {0} has an invalid format. Use IP, IP:port, or IP:port/name."
     },
     "autoexecjobtargetorrunnernotfoundexception": {
       "autoexecjobtargetorrunnernotfoundexception": "No execution target or Runner group exists. A phase may depend on upstream Tool output, but the upstream phase is missing or failed to produce targets."
@@ -10394,6 +10406,20 @@
     "autoexecjobinfogetapi": {
       "getname": "Obtain automation job details"
     },
+    "getautoexeccombopjobsyncapi": {
+      "description": {
+        "desc": "Get Combination Tool synchronous Job creation monitoring information for the current tenant on this server instance."
+      },
+      "getname": "Get Combination Tool Synchronous Job Creation Monitoring Information",
+      "output": {
+        "availablecount": "Available Request Count",
+        "joblist": "Monitored Job List",
+        "listeningcount": "Requests Being Created or Monitored",
+        "maxlisteningcount": "Maximum Monitoring Request Count",
+        "scope": "Statistics Scope",
+        "serverid": "Server Instance ID"
+      }
+    },
     "getautoexecjobqueuestatusapi": {
       "getname": "Get the queue status of homework"
     },
@@ -10427,6 +10453,55 @@
           },
           "roundcount": "Number of groups"
         }
+      }
+    },
+    "createautoexeccombopjobsyncapi": {
+      "description": {
+        "desc": "Create and run a Job from the active Combination Tool version, then return after the Job terminates or monitoring times out."
+      },
+      "getname": "Synchronously Create and Run a Combination Tool Job",
+      "input": {
+        "param": {
+          "desc": {
+            "combopname": "Combination Tool Name",
+            "jobname": "Job Name",
+            "protocol": "Connection Protocol",
+            "targets": "Execution Targets"
+          },
+          "help": {
+            "combopname": "Find the Combination Tool by name and use its active version.",
+            "executeuser": "Remote execution account for target nodes, not the Job initiator. The Combination Tool setting is used when omitted.",
+            "jobname": "Duplicate names are allowed. The Combination Tool name is used when this field is omitted or blank.",
+            "parallelcount": "Used when the concurrency strategy is not roundCount. The Combination Tool setting is used when omitted.",
+            "parallelpolicy": "roundCount uses batch count; other strategies use concurrency count. The Combination Tool setting is used when omitted.",
+            "param": "Combination Tool runtime parameters. Missing values use defaults and are converted according to parameter types.",
+            "protocol": "Remote connection protocol name. The Combination Tool setting is used when omitted.",
+            "roundcount": "Used when parallelPolicy is roundCount. The Combination Tool setting is used when omitted.",
+            "runnergroup": "Runner group name or ID. The Combination Tool setting is used when omitted.",
+            "runnergrouptag": "A single Runner group tag or a JSON-array string of tags. The Combination Tool setting is used when omitted.",
+            "scenarioname": "Combination Tool scenario name. The default scenario is used when omitted.",
+            "targets": "String array whose items use IP, IP:port, or IP:port/name. The Combination Tool setting is used when omitted."
+          }
+        }
+      },
+      "message": {
+        "outputreadfailed": "The Job succeeded, but its node output could not be read."
+      },
+      "output": {
+        "host": "Node Host Address",
+        "nodeoutputlist": "Node Output List",
+        "output": "Node Output",
+        "outputreadmessage": "Node Output Read Message",
+        "outputreadsuccess": "Whether Node Output Was Read Successfully",
+        "outputtargetcount": "Total Node Output Count",
+        "outputtruncated": "Whether Node Output Was Truncated",
+        "port": "Node Port",
+        "resourceid": "Resource ID",
+        "returnedoutputtargetcount": "Returned Node Output Count",
+        "success": "Whether the Job Succeeded",
+        "terminal": "Whether the Job Is in a Terminal State",
+        "timedout": "Whether Monitoring Timed Out",
+        "waittimems": "Wait Time (Milliseconds)"
       }
     },
     "createautoexecjobfromcombopapi": {

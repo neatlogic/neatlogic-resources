@@ -726,7 +726,10 @@
     "autoexectenantconfig": {
       "text": {
         "autoexec_execrtool_runner_read_timeout": "execrtool请求Runner读取超时时间，单位毫秒，默认5分钟",
-        "autoexec_job_param_valid": "启用作业参数校验,默认启动校验"
+        "autoexec_job_param_valid": "启用作业参数校验,默认启动校验",
+        "autoexec_job_sync_max_concurrent": "当前服务实例内每个租户允许同时创建或监听的同步作业请求数，默认20个",
+        "autoexec_job_sync_output_max_target_count": "同步创建作业接口最多返回的目标节点输出数，默认10个",
+        "autoexec_job_sync_wait_timeout": "同步创建作业接口监听作业状态的最长时间，单位毫秒，默认5分钟"
       }
     },
     "autoexectypeauthorityaction": {
@@ -2567,6 +2570,15 @@
     },
     "autoexecjobnotfoundedittargetexception": {
       "autoexecjobnotfoundedittargetexception": "作业：{0}不存在"
+    },
+    "autoexecjobsyncinterruptedexception": {
+      "autoexecjobsyncinterruptedexception": "监听作业“{0}”状态时线程被中断"
+    },
+    "autoexecjobsynclimitexception": {
+      "autoexecjobsynclimitexception": "当前正在创建或监听的同步作业请求数已达到上限“{0}”"
+    },
+    "autoexecjobtargetinvalidexception": {
+      "autoexecjobtargetinvalidexception": "执行目标“{0}”格式不正确，应为IP、IP:端口或IP:端口/名称"
     },
     "autoexecjobtargetorrunnernotfoundexception": {
       "autoexecjobtargetorrunnernotfoundexception": "不存在执行目标或执行器组。可能存在阶段的目标来源于上游阶段工具出参，然而上游阶段不存在或设置目标失败"
@@ -10406,6 +10418,20 @@
     "autoexecjobinfogetapi": {
       "getname": "获取自动化作业详情"
     },
+    "getautoexeccombopjobsyncapi": {
+      "description": {
+        "desc": "获取当前服务实例中当前租户的组合工具同步创建作业监听信息"
+      },
+      "getname": "获取组合工具同步创建作业监听信息",
+      "output": {
+        "availablecount": "剩余可用数量",
+        "joblist": "正在监听的作业列表",
+        "listeningcount": "正在创建或监听的请求数量",
+        "maxlisteningcount": "最大监听请求数量",
+        "scope": "统计范围",
+        "serverid": "服务实例ID"
+      }
+    },
     "getautoexecjobqueuestatusapi": {
       "getname": "获取作业排队状态"
     },
@@ -10439,6 +10465,55 @@
           },
           "roundcount": "分组数"
         }
+      }
+    },
+    "createautoexeccombopjobsyncapi": {
+      "description": {
+        "desc": "使用组合工具活动版本创建并执行作业，等待作业终止或监听超时后返回结果"
+      },
+      "getname": "同步创建并执行组合工具作业",
+      "input": {
+        "param": {
+          "desc": {
+            "combopname": "组合工具名称",
+            "jobname": "作业名称",
+            "protocol": "连接协议",
+            "targets": "执行目标"
+          },
+          "help": {
+            "combopname": "按名称查找组合工具并使用其活动版本。",
+            "executeuser": "远程目标的执行账号，不是作业发起用户；未传时沿用组合工具配置。",
+            "jobname": "允许重名；未传或为空时使用组合工具名称。",
+            "parallelcount": "并发策略不是roundCount时生效；未传时沿用组合工具配置。",
+            "parallelpolicy": "roundCount表示按分批数执行，其他策略按并发数执行；未传时沿用组合工具配置。",
+            "param": "组合工具运行参数对象；缺少的参数使用组合工具默认值并按参数类型转换。",
+            "protocol": "远程连接协议名称；未传时沿用组合工具配置。",
+            "roundcount": "parallelPolicy为roundCount时生效；未传时沿用组合工具配置。",
+            "runnergroup": "Runner执行组名称或ID；未传时沿用组合工具配置。",
+            "runnergrouptag": "单个Runner执行组标签，或标签字符串组成的JSON数组字符串；未传时沿用组合工具配置。",
+            "scenarioname": "组合工具场景名称；未传时使用组合工具默认场景。",
+            "targets": "字符串数组，每项格式为IP、IP:端口或IP:端口/名称；未传时沿用组合工具配置。"
+          }
+        }
+      },
+      "message": {
+        "outputreadfailed": "作业执行成功，但读取节点输出失败"
+      },
+      "output": {
+        "host": "节点主机地址",
+        "nodeoutputlist": "节点输出列表",
+        "output": "节点输出",
+        "outputreadmessage": "节点输出读取信息",
+        "outputreadsuccess": "节点输出是否读取成功",
+        "outputtargetcount": "节点输出总数",
+        "outputtruncated": "节点输出是否被截断",
+        "port": "节点端口",
+        "resourceid": "资源ID",
+        "returnedoutputtargetcount": "实际返回的节点输出数",
+        "success": "作业是否执行成功",
+        "terminal": "作业是否已处于终止状态",
+        "timedout": "监听是否超时",
+        "waittimems": "等待时间（毫秒）"
       }
     },
     "createautoexecjobfromcombopapi": {
