@@ -329,6 +329,7 @@
     "roleuuid": "Role uuid",
     "roleuuidlist": "Role uuid List",
     "rownum": "Data Entry",
+    "rsapublickey": "RSA Public Key",
     "rule": "rule",
     "runnergroup": "Runner Group",
     "runnergrouptag": "Runner Group Tag",
@@ -6009,6 +6010,18 @@
     },
     "loginlockedexception": {
       "loginlockedexception": "Login failed more than the limit (\u0027{0}\u0027 times), account locked, please try again after \u0027{1}\u0027"
+    },
+    "passworddecryptexception": {
+      "passworddecryptexception": "Password decryption failed"
+    },
+    "passwordencryptexception": {
+      "passwordencryptexception": "Password encryption failed"
+    },
+    "passwordtoolongexception": {
+      "passwordtoolongexception": "The password content is too long to perform RSA encryption"
+    },
+    "rsaprivatekeyinitializationfailedexception": {
+      "rsaprivatekeyinitializationfailedexception": "RSA private key initialization failed"
     },
     "userpasswordexpiredexception": {
       "userpasswordexpiredexception": "The user password has expired, please change the password"
@@ -15684,6 +15697,11 @@
         "faileda": "[Ldap authentication failed]",
         "succeed": "[Ldap authentication successful] user dn:"
       }
+    }
+  },
+  "nmfra": {
+    "getpasswordpublickeyapi": {
+      "getname": "Obtain password RSA encryption public key"
     }
   },
   "nmfs": {

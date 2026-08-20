@@ -329,6 +329,7 @@
     "roleuuid": "角色uuid",
     "roleuuidlist": "角色uuid列表",
     "rownum": "数据条目",
+    "rsapublickey": "RSA公钥",
     "rule": "规则",
     "runnergroup": "执行器组",
     "runnergrouptag": "执行器组标签",
@@ -6029,6 +6030,18 @@
     },
     "loginlockedexception": {
       "loginlockedexception": "登录失败已超过“{0}”次，账号已锁定，请于“{1}”后重试"
+    },
+    "passworddecryptexception": {
+      "passworddecryptexception": "密码解密失败"
+    },
+    "passwordencryptexception": {
+      "passwordencryptexception": "密码加密失败"
+    },
+    "passwordtoolongexception": {
+      "passwordtoolongexception": "密码内容过长，无法进行RSA加密"
+    },
+    "rsaprivatekeyinitializationfailedexception": {
+      "rsaprivatekeyinitializationfailedexception": "RSA私钥初始化失败"
     },
     "userpasswordexpiredexception": {
       "userpasswordexpiredexception": "用户密码已过期，请修改密码"
@@ -15695,6 +15708,11 @@
         "faileda": "[Ldap认证失败]",
         "succeed": "[Ldap认证成功]user dn:"
       }
+    }
+  },
+  "nmfra": {
+    "getpasswordpublickeyapi": {
+      "getname": "获取密码RSA加密公钥"
     }
   },
   "nmfs": {
