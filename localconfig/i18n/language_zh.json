@@ -329,6 +329,7 @@
     "roleuuid": "角色uuid",
     "roleuuidlist": "角色uuid列表",
     "rownum": "数据条目",
+    "rsapublickey": "RSA公钥",
     "rule": "规则",
     "runnergroup": "执行器组",
     "runnergrouptag": "执行器组标签",
@@ -725,7 +726,10 @@
     "autoexectenantconfig": {
       "text": {
         "autoexec_execrtool_runner_read_timeout": "execrtool请求Runner读取超时时间，单位毫秒，默认5分钟",
-        "autoexec_job_param_valid": "启用作业参数校验,默认启动校验"
+        "autoexec_job_param_valid": "启用作业参数校验,默认启动校验",
+        "autoexec_job_sync_max_concurrent": "当前服务实例内每个租户允许同时创建或监听的同步作业请求数，默认20个",
+        "autoexec_job_sync_output_max_target_count": "同步创建作业接口最多返回的目标节点输出数，默认10个",
+        "autoexec_job_sync_wait_timeout": "同步创建作业接口监听作业状态的最长时间，单位毫秒，默认5分钟"
       }
     },
     "autoexectypeauthorityaction": {
@@ -2566,6 +2570,15 @@
     },
     "autoexecjobnotfoundedittargetexception": {
       "autoexecjobnotfoundedittargetexception": "作业：{0}不存在"
+    },
+    "autoexecjobsyncinterruptedexception": {
+      "autoexecjobsyncinterruptedexception": "监听作业“{0}”状态时线程被中断"
+    },
+    "autoexecjobsynclimitexception": {
+      "autoexecjobsynclimitexception": "当前正在创建或监听的同步作业请求数已达到上限“{0}”"
+    },
+    "autoexecjobtargetinvalidexception": {
+      "autoexecjobtargetinvalidexception": "执行目标“{0}”格式不正确，应为IP、IP:端口或IP:端口/名称"
     },
     "autoexecjobtargetorrunnernotfoundexception": {
       "autoexecjobtargetorrunnernotfoundexception": "不存在执行目标或执行器组。可能存在阶段的目标来源于上游阶段工具出参，然而上游阶段不存在或设置目标失败"
@@ -6029,6 +6042,18 @@
     },
     "loginlockedexception": {
       "loginlockedexception": "登录失败已超过“{0}”次，账号已锁定，请于“{1}”后重试"
+    },
+    "passworddecryptexception": {
+      "passworddecryptexception": "密码解密失败"
+    },
+    "passwordencryptexception": {
+      "passwordencryptexception": "密码加密失败"
+    },
+    "passwordtoolongexception": {
+      "passwordtoolongexception": "密码内容过长，无法进行RSA加密"
+    },
+    "rsaprivatekeyinitializationfailedexception": {
+      "rsaprivatekeyinitializationfailedexception": "RSA私钥初始化失败"
     },
     "userpasswordexpiredexception": {
       "userpasswordexpiredexception": "用户密码已过期，请修改密码"
@@ -10393,6 +10418,20 @@
     "autoexecjobinfogetapi": {
       "getname": "获取自动化作业详情"
     },
+    "getautoexeccombopjobsyncapi": {
+      "description": {
+        "desc": "获取当前服务实例中当前租户的组合工具同步创建作业监听信息"
+      },
+      "getname": "获取组合工具同步创建作业监听信息",
+      "output": {
+        "availablecount": "剩余可用数量",
+        "joblist": "正在监听的作业列表",
+        "listeningcount": "正在创建或监听的请求数量",
+        "maxlisteningcount": "最大监听请求数量",
+        "scope": "统计范围",
+        "serverid": "服务实例ID"
+      }
+    },
     "getautoexecjobqueuestatusapi": {
       "getname": "获取作业排队状态"
     },
@@ -10426,6 +10465,55 @@
           },
           "roundcount": "分组数"
         }
+      }
+    },
+    "createautoexeccombopjobsyncapi": {
+      "description": {
+        "desc": "使用组合工具活动版本创建并执行作业，等待作业终止或监听超时后返回结果"
+      },
+      "getname": "同步创建并执行组合工具作业",
+      "input": {
+        "param": {
+          "desc": {
+            "combopname": "组合工具名称",
+            "jobname": "作业名称",
+            "protocol": "连接协议",
+            "targets": "执行目标"
+          },
+          "help": {
+            "combopname": "按名称查找组合工具并使用其活动版本。",
+            "executeuser": "远程目标的执行账号，不是作业发起用户；未传时沿用组合工具配置。",
+            "jobname": "允许重名；未传或为空时使用组合工具名称。",
+            "parallelcount": "并发策略不是roundCount时生效；未传时沿用组合工具配置。",
+            "parallelpolicy": "roundCount表示按分批数执行，其他策略按并发数执行；未传时沿用组合工具配置。",
+            "param": "组合工具运行参数对象；缺少的参数使用组合工具默认值并按参数类型转换。",
+            "protocol": "远程连接协议名称；未传时沿用组合工具配置。",
+            "roundcount": "parallelPolicy为roundCount时生效；未传时沿用组合工具配置。",
+            "runnergroup": "Runner执行组名称或ID；未传时沿用组合工具配置。",
+            "runnergrouptag": "单个Runner执行组标签，或标签字符串组成的JSON数组字符串；未传时沿用组合工具配置。",
+            "scenarioname": "组合工具场景名称；未传时使用组合工具默认场景。",
+            "targets": "字符串数组，每项格式为IP、IP:端口或IP:端口/名称；未传时沿用组合工具配置。"
+          }
+        }
+      },
+      "message": {
+        "outputreadfailed": "作业执行成功，但读取节点输出失败"
+      },
+      "output": {
+        "host": "节点主机地址",
+        "nodeoutputlist": "节点输出列表",
+        "output": "节点输出",
+        "outputreadmessage": "节点输出读取信息",
+        "outputreadsuccess": "节点输出是否读取成功",
+        "outputtargetcount": "节点输出总数",
+        "outputtruncated": "节点输出是否被截断",
+        "port": "节点端口",
+        "resourceid": "资源ID",
+        "returnedoutputtargetcount": "实际返回的节点输出数",
+        "success": "作业是否执行成功",
+        "terminal": "作业是否已处于终止状态",
+        "timedout": "监听是否超时",
+        "waittimems": "等待时间（毫秒）"
       }
     },
     "createautoexecjobfromcombopapi": {
@@ -11060,6 +11148,7 @@
         "toolunauthorized": "工具不存在或未授权"
       }
     },
+    "aichatagentunsupported": "系统智能体“{0}”不支持通过通用AI会话入口运行",
     "aichatsessionconfiginvalid": "AI会话配置格式不正确",
     "aichattoolunauthorized": "AI工具不存在或未授权：{0}",
     "aitool": {
@@ -11229,7 +11318,6 @@
         "sessionid": "会话ID，不提供代表新对话"
       }
     },
-    "aichatagentunsupported": "系统智能体“{0}”不支持通过通用AI会话入口运行",
     "common": {
       "param": {
         "desc": {
@@ -11280,6 +11368,13 @@
     "autoexecjobsourcetypehandler": {
       "getrunnermaplist": "作业"
     }
+  },
+  "nmalert": {
+    "alertaichatcontextlabel": "当前告警：{0}",
+    "alertaichatsessioninvalidexception": "当前 AI 会话未正确绑定告警，请关闭告警详情后重新打开",
+    "alerttitleagentdescription": "结合告警详情快照分析故障并回答后续问题",
+    "alerttitleagentlabel": "告警分析助手",
+    "createalertaichatsessionapi": "创建告警 AI 会话"
   },
   "nmar": {
     "combopimport": {
@@ -11506,13 +11601,6 @@
       "description": "用于选择系统用户、分组、角色"
     }
   },
-  "nmalert": {
-    "alertaichatcontextlabel": "当前告警：{0}",
-    "alertaichatsessioninvalidexception": "当前 AI 会话未正确绑定告警，请关闭告警详情后重新打开",
-    "alerttitleagentdescription": "结合告警详情快照分析故障并回答后续问题",
-    "alerttitleagentlabel": "告警分析助手",
-    "createalertaichatsessionapi": "创建告警 AI 会话"
-  },
   "nmautoexec": {
     "autoexecaichatsessioninvalidexception": "当前自动化 AI 会话配置无效，请关闭助手后重新打开",
     "autoexecjoblogchatcontextlabel": "当前日志：{0}",
@@ -11552,10 +11640,10 @@
     "autoexecskillbaseinfoupdateapi": "更新自动化Skill基本信息",
     "autoexecskillcannotsubmitexception": "当前状态“{0}”的Skill版本不能提交审批",
     "autoexecskillchatcontextlabel": "当前 Skill：{0}",
+    "autoexecskillchatpermissiondeniedexception": "当前用户没有自动化Skill编辑权限，无法继续该AI会话",
     "autoexecskillchatsessioninvalidexception": "当前自动化执行会话未正确绑定 Skill，请关闭后重新打开",
     "autoexecskillchatsessiontoolunavailableexception": "自动化执行助手未启用 Skill 工具",
     "autoexecskillcontenthashconflictexception": "Skill内容Hash“{0}”冲突",
-    "autoexecskillchatpermissiondeniedexception": "当前用户没有自动化Skill编辑权限，无法继续该AI会话",
     "autoexecskillcurrentnotrecalledexception": "本轮未召回当前自动化Skill“{0}”，已停止执行",
     "autoexecskilldescriptiondescription": "Skill描述",
     "autoexecskilldisabledexception": "自动化Skill“{0}”已禁用",
@@ -15695,6 +15783,11 @@
         "faileda": "[Ldap认证失败]",
         "succeed": "[Ldap认证成功]user dn:"
       }
+    }
+  },
+  "nmfra": {
+    "getpasswordpublickeyapi": {
+      "getname": "获取密码RSA加密公钥"
     }
   },
   "nmfs": {
