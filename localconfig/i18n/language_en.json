@@ -15756,6 +15756,13 @@
     }
   },
   "nmiat": {
+    "createinformantaichatsessionapi": "Create Informant Terminal AI Chat",
+    "informantaichatconfigunavailableexception": "Configure a model and an active INFORMANT_MCP tool for the Informant diagnostic assistant first",
+    "informantaichatcontextlabel": "Current terminal: {0}",
+    "informantaichatpermissiondeniedexception": "You do not have permission to diagnose Informant terminals.",
+    "informantaichatsessioninvalidexception": "The current AI chat is not correctly linked to an Informant terminal. Close the assistant and open it again.",
+    "informantdiagnosticagentdescription": "Bind a specific Informant terminal and diagnose it in real time through read-only MCP capabilities",
+    "informantdiagnosticagentlabel": "Informant Terminal Diagnostic Assistant",
     "informantmcptool": {
       "label": "Informant Diagnostics",
       "message": {
