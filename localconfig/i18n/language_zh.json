@@ -10988,6 +10988,7 @@
       }
     },
     "execautoexecscriptbytagentapi": {
+      "description": "用于在指定资产或 Runner 上直接执行已授权的自定义脚本或工具库工具，适合即时执行单个自动化操作并获取输出。",
       "getname": "直接通过tagent执行自定义工具或工具库",
       "input": {
         "param": {
@@ -15825,6 +15826,14 @@
     },
     "inspectcombopsearchapi": {
       "getname": "查询巡检组合工具列表"
+    }
+  },
+  "nmiai": {
+    "getinformanthealthstateapi": {
+      "description": "用于查询指定主机上 Informant 采集到的操作系统或服务健康状态，适合判断主机或服务是否存在异常。"
+    },
+    "getinformantremotedataapi": {
+      "description": "用于通过已注册的 Informant 节点调用指定数据接口，适合在已知 Informant 节点 ID 和目标接口路径时查询或操作节点数据。"
     }
   },
   "nmiaj": {

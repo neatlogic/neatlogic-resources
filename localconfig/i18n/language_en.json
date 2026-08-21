@@ -10977,6 +10977,7 @@
       }
     },
     "execautoexecscriptbytagentapi": {
+      "description": "Use this interface to directly execute an authorized custom script or tool library tool on a specified asset or Runner when a single automation operation must be run immediately and its output retrieved.",
       "getname": "Execute Custom Tool or Tool Directly Through Tagent",
       "input": {
         "param": {
@@ -15814,6 +15815,14 @@
     },
     "inspectcombopsearchapi": {
       "getname": "Query the list of inspection combination tools"
+    }
+  },
+  "nmiai": {
+    "getinformanthealthstateapi": {
+      "description": "Use this interface to query operating system or service health states collected by Informant on a specified host when determining whether the host or its services are unhealthy."
+    },
+    "getinformantremotedataapi": {
+      "description": "Use this general-purpose interface to call a specified data endpoint through a registered Informant node when the Informant node ID and target endpoint path are known, for querying or operating on node data."
     }
   },
   "nmiaj": {
