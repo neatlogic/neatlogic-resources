@@ -15869,6 +15869,13 @@
     }
   },
   "nmiat": {
+    "createinformantaichatsessionapi": "创建 Informant 终端 AI 会话",
+    "informantaichatconfigunavailableexception": "Informant 诊断助手尚未完成模型或 INFORMANT_MCP 工具配置",
+    "informantaichatcontextlabel": "当前终端：{0}",
+    "informantaichatpermissiondeniedexception": "您没有 Informant 终端诊断权限",
+    "informantaichatsessioninvalidexception": "当前 AI 会话未正确绑定 Informant 终端，请关闭助手后重新打开",
+    "informantdiagnosticagentdescription": "绑定指定 Informant 终端并使用只读 MCP 能力进行实时诊断",
+    "informantdiagnosticagentlabel": "Informant 终端诊断助手",
     "informantmcptool": {
       "label": "Informant 故障诊断",
       "message": {
