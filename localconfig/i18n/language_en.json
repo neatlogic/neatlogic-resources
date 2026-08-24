@@ -546,6 +546,9 @@
         "jobwaitinput": "Job Waiting for Input"
       }
     },
+    "autoexecjobvo": {
+      "unknownsource": "Unknown Source"
+    },
     "autoexecnotifytriggertype": {
       "description": {
         "createjobfailed": "Trigger notification when job creation fails"

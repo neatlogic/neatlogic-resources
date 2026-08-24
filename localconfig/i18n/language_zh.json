@@ -546,6 +546,9 @@
         "jobwaitinput": "作业待输入"
       }
     },
+    "autoexecjobvo": {
+      "unknownsource": "未知来源"
+    },
     "autoexecnotifytriggertype": {
       "description": {
         "createjobfailed": "创建作业失败时触发通知"
