@@ -2580,6 +2580,9 @@
     "autoexecjobsynclimitexception": {
       "autoexecjobsynclimitexception": "The number of synchronous Job requests being created or monitored has reached the limit of {0}."
     },
+    "autoexecjobsyncparamnotsupportedexception": {
+      "autoexecjobsyncparamnotsupportedexception": "Parameter {0} is not supported in synchronous execution mode."
+    },
     "autoexecjobtargetinvalidexception": {
       "autoexecjobtargetinvalidexception": "Execution target {0} has an invalid format. Use IP, IP:port, or IP:port/name."
     },
@@ -10458,55 +10461,6 @@
         }
       }
     },
-    "createautoexeccombopjobsyncapi": {
-      "description": {
-        "desc": "Create and run a Job from the active Combination Tool version, then return after the Job terminates or monitoring times out."
-      },
-      "getname": "Synchronously Create and Run a Combination Tool Job",
-      "input": {
-        "param": {
-          "desc": {
-            "combopname": "Combination Tool Name",
-            "jobname": "Job Name",
-            "protocol": "Connection Protocol",
-            "targets": "Execution Targets"
-          },
-          "help": {
-            "combopname": "Find the Combination Tool by name and use its active version.",
-            "executeuser": "Remote execution account for target nodes, not the Job initiator. The Combination Tool setting is used when omitted.",
-            "jobname": "Duplicate names are allowed. The Combination Tool name is used when this field is omitted or blank.",
-            "parallelcount": "Used when the concurrency strategy is not roundCount. The Combination Tool setting is used when omitted.",
-            "parallelpolicy": "roundCount uses batch count; other strategies use concurrency count. The Combination Tool setting is used when omitted.",
-            "param": "Combination Tool runtime parameters. Missing values use defaults and are converted according to parameter types.",
-            "protocol": "Remote connection protocol name. The Combination Tool setting is used when omitted.",
-            "roundcount": "Used when parallelPolicy is roundCount. The Combination Tool setting is used when omitted.",
-            "runnergroup": "Runner group name or ID. The Combination Tool setting is used when omitted.",
-            "runnergrouptag": "A single Runner group tag or a JSON-array string of tags. The Combination Tool setting is used when omitted.",
-            "scenarioname": "Combination Tool scenario name. The default scenario is used when omitted.",
-            "targets": "String array whose items use IP, IP:port, or IP:port/name. The Combination Tool setting is used when omitted."
-          }
-        }
-      },
-      "message": {
-        "outputreadfailed": "The Job succeeded, but its node output could not be read."
-      },
-      "output": {
-        "host": "Node Host Address",
-        "nodeoutputlist": "Node Output List",
-        "output": "Node Output",
-        "outputreadmessage": "Node Output Read Message",
-        "outputreadsuccess": "Whether Node Output Was Read Successfully",
-        "outputtargetcount": "Total Node Output Count",
-        "outputtruncated": "Whether Node Output Was Truncated",
-        "port": "Node Port",
-        "resourceid": "Resource ID",
-        "returnedoutputtargetcount": "Returned Node Output Count",
-        "success": "Whether the Job Succeeded",
-        "terminal": "Whether the Job Is in a Terminal State",
-        "timedout": "Whether Monitoring Timed Out",
-        "waittimems": "Wait Time (Milliseconds)"
-      }
-    },
     "createautoexecjobfromcombopapi": {
       "getname": "Job creation (from combination tool)",
       "input": {
@@ -10526,14 +10480,59 @@
     },
     "createautoexecjobfromcomboppublicapi": {
       "description": {
-        "desc": "Create a job for external calls (from the combination tool)"
+        "desc": "Create and run a Job from the active Combination Tool version. When isSync is false, return the Job ID after activation; when true, wait for termination or timeout and return status and node output."
       },
       "getname": "Create a job for external calls",
       "input": {
         "param": {
-          "assign": "Specify the execution user ID. If not specified, it defaults to the current authenticated user",
-          "combop": "Combination tool name"
+          "desc": {
+            "combopname": "Combination Tool Name",
+            "ipportlist": "Execution Targets",
+            "issync": "Wait Synchronously",
+            "name": "Job Name",
+            "protocol": "Connection Protocol"
+          },
+          "help": {
+          "assignexecuser": "Specifies the Job initiator UUID. The Job is created with that user's identity and permissions. The current authenticated user is used when omitted. When isSync is true, the current authenticated user is always used and this parameter is not supported.",
+          "combopname": "Specifies the Combination Tool to run. The service finds it by name and builds the Job from its active version.",
+          "executeuser": "Specifies the account used to connect to remote targets, not the Job initiator. A supplied value overrides the Combination Tool setting; otherwise, the Combination Tool setting is used.",
+          "ipportlist": "Specifies the Job targets as a string array. Each item uses IP, IP:port, or IP:port/name. A non-empty array overrides the Combination Tool target configuration; an empty or omitted array uses the Combination Tool setting. Example: [\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"].",
+          "invokeid": "Specifies the invocation source ID that associates the caller with the Job for source tracing, queries, and callbacks. The active Combination Tool version ID is used when omitted.",
+          "issync": "Controls whether the API waits for the Job result. false returns the Job ID after creation and trigger-mode setup. true immediately runs the Job as the current authenticated user and waits for termination or the listener timeout before returning status and node output. A listener timeout does not terminate the Job.",
+          "name": "Specifies the Job name used for display and queries. Duplicate names are allowed. The Combination Tool name is used when omitted or blank.",
+          "parallelcount": "Specifies the number of targets that may run concurrently. It is used only when parallelPolicy is parallel and ignored by other policies. The Combination Tool setting is used when omitted; the default is 32 when the tool also has no value.",
+          "parallelpolicy": "Specifies the target concurrency policy. parallel uses parallelCount; roundCount divides targets into batches and uses roundCount. The Combination Tool setting is used when omitted.",
+          "param": "Specifies Job parameters as key-value pairs. Each key should match a Job parameter key defined by the active Combination Tool version. Missing parameters use the tool defaults and are converted by parameter type; an empty JSON object is used when omitted. Example: {\"paramKey\":\"paramValue\"}.",
+          "parentid": "Specifies the parent Job ID and associates the current Job as its child. The parent Job must exist, and the parent chain supports at most two levels.",
+          "planstarttime": "Specifies the planned start time as a Unix timestamp in milliseconds. When triggerType is auto and the time is in the future, the Job runs automatically at that time. This parameter is not supported when isSync is true.",
+          "protocol": "Specifies the protocol name used to connect to remote targets, such as ssh. A supplied value overrides the Combination Tool setting; creation is rejected when the protocol does not exist. The tool setting is used when omitted.",
+          "roundcount": "Specifies the number of batches used to divide the targets. It is used only when parallelPolicy is roundCount and ignored by other policies. The Combination Tool setting is used when omitted; the default is 64 when the tool also has no value.",
+          "runnergroup": "Specifies the Runner group name or ID used to match and dispatch the Job. -1 selects a group at random. The Combination Tool setting is used when omitted.",
+          "runnergrouptag": "Specifies Runner group tag names or IDs used to filter eligible groups. Use a single tag or a JSON-array string of tags. A group must satisfy both the tags and routing rules. The Combination Tool setting is used when omitted.",
+          "scenarioname": "Specifies the Combination Tool scenario whose configured stages will run. Creation is rejected when the scenario does not exist. The tool's default execution scope is used when omitted.",
+          "triggertype": "Specifies how the Job is triggered. auto runs immediately or at planStartTime; manual creates the Job and waits for a manual trigger. The Job runs immediately when omitted. This parameter is not supported when isSync is true."
+          }
         }
+      },
+      "message": {
+        "outputreadfailed": "Failed to read the Job node output.",
+        "outputreadskippednotterminal": "The Job has not terminated, so its node output was not read."
+      },
+      "output": {
+        "host": "Node Host Address",
+        "nodeoutputlist": "Node Output List",
+        "output": "Node Output",
+        "outputreadmessage": "Node Output Read Message",
+        "outputreadsuccess": "Whether Node Output Was Read Successfully",
+        "outputtargetcount": "Total Node Output Count",
+        "outputtruncated": "Whether Node Output Was Truncated",
+        "port": "Node Port",
+        "resourceid": "Resource ID",
+        "returnedoutputtargetcount": "Returned Node Output Count",
+        "success": "Whether the Job Succeeded",
+        "terminal": "Whether the Job Is in a Terminal State",
+        "timedout": "Whether Monitoring Timed Out",
+        "waittimems": "Wait Time (Milliseconds)"
       }
     },
     "downloadautoexecjoboutputfilebatchapi": {

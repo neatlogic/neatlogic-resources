@@ -2580,6 +2580,9 @@
     "autoexecjobsynclimitexception": {
       "autoexecjobsynclimitexception": "当前正在创建或监听的同步作业请求数已达到上限“{0}”"
     },
+    "autoexecjobsyncparamnotsupportedexception": {
+      "autoexecjobsyncparamnotsupportedexception": "同步执行模式不支持参数“{0}”"
+    },
     "autoexecjobtargetinvalidexception": {
       "autoexecjobtargetinvalidexception": "执行目标“{0}”格式不正确，应为IP、IP:端口或IP:端口/名称"
     },
@@ -10470,55 +10473,6 @@
         }
       }
     },
-    "createautoexeccombopjobsyncapi": {
-      "description": {
-        "desc": "使用组合工具活动版本创建并执行作业，等待作业终止或监听超时后返回结果"
-      },
-      "getname": "同步创建并执行组合工具作业",
-      "input": {
-        "param": {
-          "desc": {
-            "combopname": "组合工具名称",
-            "jobname": "作业名称",
-            "protocol": "连接协议",
-            "targets": "执行目标"
-          },
-          "help": {
-            "combopname": "按名称查找组合工具并使用其活动版本。",
-            "executeuser": "远程目标的执行账号，不是作业发起用户；未传时沿用组合工具配置。",
-            "jobname": "允许重名；未传或为空时使用组合工具名称。",
-            "parallelcount": "并发策略不是roundCount时生效；未传时沿用组合工具配置。",
-            "parallelpolicy": "roundCount表示按分批数执行，其他策略按并发数执行；未传时沿用组合工具配置。",
-            "param": "组合工具运行参数对象；缺少的参数使用组合工具默认值并按参数类型转换。",
-            "protocol": "远程连接协议名称；未传时沿用组合工具配置。",
-            "roundcount": "parallelPolicy为roundCount时生效；未传时沿用组合工具配置。",
-            "runnergroup": "Runner执行组名称或ID；未传时沿用组合工具配置。",
-            "runnergrouptag": "单个Runner执行组标签，或标签字符串组成的JSON数组字符串；未传时沿用组合工具配置。",
-            "scenarioname": "组合工具场景名称；未传时使用组合工具默认场景。",
-            "targets": "字符串数组，每项格式为IP、IP:端口或IP:端口/名称；未传时沿用组合工具配置。"
-          }
-        }
-      },
-      "message": {
-        "outputreadfailed": "作业执行成功，但读取节点输出失败"
-      },
-      "output": {
-        "host": "节点主机地址",
-        "nodeoutputlist": "节点输出列表",
-        "output": "节点输出",
-        "outputreadmessage": "节点输出读取信息",
-        "outputreadsuccess": "节点输出是否读取成功",
-        "outputtargetcount": "节点输出总数",
-        "outputtruncated": "节点输出是否被截断",
-        "port": "节点端口",
-        "resourceid": "资源ID",
-        "returnedoutputtargetcount": "实际返回的节点输出数",
-        "success": "作业是否执行成功",
-        "terminal": "作业是否已处于终止状态",
-        "timedout": "监听是否超时",
-        "waittimems": "等待时间（毫秒）"
-      }
-    },
     "createautoexecjobfromcombopapi": {
       "getname": "作业创建（来自组合工具）",
       "input": {
@@ -10538,13 +10492,59 @@
     },
     "createautoexecjobfromcomboppublicapi": {
       "description": {
-        "desc": "创建作业供外部调用（来自组合工具）"
+        "desc": "使用激活的组合工具创建并执行自动化作业；isSync为false时创建并激活后立即返回作业ID，isSync为true时等待作业终止或监听超时后返回状态和节点输出"
       },
       "getname": "创建作业供外部调用",
       "input": {
         "param": {
-          "combop": "组合工具名"
+          "desc": {
+            "combopname": "组合工具名称",
+            "ipportlist": "执行目标",
+            "issync": "是否同步等待",
+            "name": "作业名称",
+            "protocol": "连接协议"
+          },
+          "help": {
+          "assignexecuser": "指定作业发起用户UUID，作业将按该用户的权限和身份创建；未传时使用当前认证用户。isSync为true时固定使用当前认证用户，不支持该参数。",
+          "combopname": "指定要执行的组合工具名称；服务端按名称查找组合工具，并使用其活动版本构建作业。",
+          "executeuser": "指定连接远程目标时使用的执行账号，不是作业发起用户；传入时覆盖组合工具配置，未传时沿用组合工具配置。",
+          "ipportlist": "指定作业执行目标的字符串数组，每项格式为IP、IP:端口或IP:端口/名称；传入非空数组时覆盖组合工具目标配置，为空或未传时沿用组合工具配置。例如：[\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]。",
+          "invokeid": "指定调用来源ID，用于关联调用方与作业，供来源追踪、查询和回调使用；未传时使用组合工具活动版本ID。",
+          "issync": "控制接口是否等待作业结果。false表示创建作业并完成触发方式设置后立即返回作业ID；true表示以当前认证用户立即执行，并等待作业终止或监听超时后返回状态和节点输出。监听超时不会终止作业。",
+          "name": "指定用于展示和查询的作业名称，允许重名；未传或为空时使用组合工具名称。",
+          "parallelcount": "指定同时执行的目标数量，仅在parallelPolicy为parallel时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为32。",
+          "parallelpolicy": "指定目标并发策略。parallel按并发数执行并使用parallelCount；roundCount按分批数执行并使用roundCount。未传时沿用组合工具配置。",
+          "param": "指定作业参数键值对象，键应为组合工具活动版本中定义的作业参数Key；缺少的参数使用组合工具默认值并按参数类型转换，未传时使用空JSON。例如：{\"paramKey\":\"paramValue\"}。",
+          "parentid": "指定父作业ID，用于将当前作业关联为其子作业；父作业必须存在，父作业链最多支持两级。",
+          "planstarttime": "指定计划开始时间，值为Unix时间戳（毫秒）；triggerType为auto且时间晚于当前时间时，作业将在该时间自动执行。isSync为true时不支持该参数。",
+          "protocol": "指定连接远程目标使用的协议名称，例如ssh；传入时覆盖组合工具配置，协议不存在时拒绝创建，未传时沿用组合工具配置。",
+          "roundcount": "指定将执行目标拆分成的批次数，仅在parallelPolicy为roundCount时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为64。",
+          "runnergroup": "指定作业匹配和调度使用的Runner执行组名称或ID，-1表示随机匹配；未传时沿用组合工具配置。",
+          "runnergrouptag": "指定用于筛选Runner执行组的标签名称或ID，支持单个标签或标签字符串组成的JSON数组字符串；作业只会匹配同时满足标签和路由规则的执行组，未传时沿用组合工具配置。",
+          "scenarioname": "指定组合工具场景名称，用于选择该场景配置的执行阶段；场景不存在时拒绝创建，未传时使用组合工具默认执行范围。",
+          "triggertype": "指定作业触发方式。auto表示立即执行或按planStartTime自动执行；manual表示创建后等待手动触发；未传时立即执行。isSync为true时不支持该参数。"
+          }
         }
+      },
+      "message": {
+        "outputreadfailed": "读取作业节点输出失败",
+        "outputreadskippednotterminal": "作业尚未终止，因此未读取节点输出"
+      },
+      "output": {
+        "host": "节点主机地址",
+        "nodeoutputlist": "节点输出列表",
+        "output": "节点输出",
+        "outputreadmessage": "节点输出读取信息",
+        "outputreadsuccess": "节点输出是否读取成功",
+        "outputtargetcount": "节点输出总数",
+        "outputtruncated": "节点输出是否被截断",
+        "port": "节点端口",
+        "resourceid": "资源ID",
+        "returnedoutputtargetcount": "实际返回的节点输出数",
+        "success": "作业是否执行成功",
+        "terminal": "作业是否已处于终止状态",
+        "timedout": "监听是否超时",
+        "waittimems": "等待时间（毫秒）"
       }
     },
     "downloadautoexecjoboutputfilebatchapi": {
