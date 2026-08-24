@@ -96,6 +96,7 @@
     "defaultvalue": "默认值列表",
     "defaultvaluelist": "用于回显的参数列表",
     "delaytime": "延迟时间",
+    "delegateauthoritylist": "代报权限列表",
     "deletable": "是否可删除",
     "delete": "删除",
     "dependency": "依赖",
@@ -198,6 +199,7 @@
     "iscanmodify": "是否能修改",
     "iscanview": "是否能查看",
     "isdefault": "是否默认",
+    "isdelegateauthority": "是否有代报权限",
     "isdeleted": "是否已删除",
     "isdisplaypriority": "是否显示优先级",
     "isend": "是否完结",
@@ -6275,6 +6277,7 @@
     },
     "catalogchannelauthorityaction": {
       "text": {
+        "delegate": "代报工单",
         "report": "上报工单",
         "view": "查看工单"
       }

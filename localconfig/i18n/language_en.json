@@ -96,6 +96,7 @@
     "defaultvalue": "Default Value List",
     "defaultvaluelist": "List of parameters for echo",
     "delaytime": "Delay Time",
+    "delegateauthoritylist": "List of Authorization for Proxy Reporting",
     "deletable": "Can I delete it",
     "delete": "Delete",
     "dependency": "Dependency",
@@ -198,6 +199,7 @@
     "iscanmodify": "Can I modify it",
     "iscanview": "Can I view it",
     "isdefault": "Default",
+    "isdelegateauthority": "Do you have authorization for proxy reporting",
     "isdeleted": "Has IT Been Deleted",
     "isdisplaypriority": "Display Priority",
     "isend": "Completed or not",
@@ -6256,6 +6258,7 @@
     },
     "catalogchannelauthorityaction": {
       "text": {
+        "delegate": "Proxy work order",
         "report": "Submit Task",
         "view": "View Task"
       }
