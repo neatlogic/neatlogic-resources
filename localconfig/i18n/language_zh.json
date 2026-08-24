@@ -8076,6 +8076,9 @@
     "processtasknopermissionexception": {
       "processtasknopermissionexception": "您没有执行“{0}”操作权限"
     },
+    "processtasknotdelegatereportpermissionexception": {
+      "processtasknotdelegatereportpermissionexception": "你没有{0}服务的代报权限"
+    },
     "processtasknotfoundedittargetexception": {
       "processtasknotfoundedittargetexception": "工单：{0}不存在"
     },

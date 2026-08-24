@@ -8057,6 +8057,9 @@
     "processtasknopermissionexception": {
       "processtasknopermissionexception": "You do not have permission to perform the {0} operation."
     },
+    "processtasknotdelegatereportpermissionexception": {
+      "processtasknotdelegatereportpermissionexception": "You do not have the reporting permission for {0} service"
+    },
     "processtasknotfoundedittargetexception": {
       "processtasknotfoundedittargetexception": "Task: {0} does not exist"
     },
