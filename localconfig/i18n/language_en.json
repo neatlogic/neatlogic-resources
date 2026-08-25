@@ -11340,6 +11340,14 @@
         }
       }
     },
+    "searchaiagenttokenusageapi": {
+      "name": "Search AI Assistant Token Usage",
+      "param": {
+        "agentid": "AI Assistant ID",
+        "timerange": "Date Range",
+        "timerangehelp": "Start and end dates in yyyy-MM-dd format; defaults to the last 30 days including today when omitted"
+      }
+    },
     "searchragdatasetapi": {
       "getname": "Search LLM knowledge bases"
     },

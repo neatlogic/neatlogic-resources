@@ -11352,6 +11352,14 @@
         }
       }
     },
+    "searchaiagenttokenusageapi": {
+      "name": "查询智能助手 Token 消耗",
+      "param": {
+        "agentid": "智能助手ID",
+        "timerange": "日期范围",
+        "timerangehelp": "开始日期和结束日期，格式为yyyy-MM-dd；不提供时默认查询包含当天的近30天"
+      }
+    },
     "searchragdatasetapi": {
       "getname": "搜索大模型知识库"
     },
