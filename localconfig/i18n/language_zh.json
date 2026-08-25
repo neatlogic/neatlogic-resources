@@ -11358,6 +11358,23 @@
         }
       }
     },
+    "listaiagentchildsessiontokenusageapi": {
+      "name": "查询智能助手子会话 Token 消耗",
+      "param": {
+        "agentid": "智能助手ID",
+        "date": "日期",
+        "datehelp": "消息产生日期，格式为yyyy-MM-dd",
+        "parentsessionid": "父会话ID"
+      }
+    },
+    "searchaiagentrootsessiontokenusageapi": {
+      "name": "分页查询智能助手父会话 Token 消耗",
+      "param": {
+        "agentid": "智能助手ID",
+        "date": "日期",
+        "datehelp": "消息产生日期，格式为yyyy-MM-dd"
+      }
+    },
     "searchaiagenttokenusageapi": {
       "name": "查询智能助手 Token 消耗",
       "param": {

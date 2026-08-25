@@ -11346,6 +11346,23 @@
         }
       }
     },
+    "listaiagentchildsessiontokenusageapi": {
+      "name": "List AI Assistant Child Session Token Usage",
+      "param": {
+        "agentid": "AI Assistant ID",
+        "date": "Date",
+        "datehelp": "Message creation date in yyyy-MM-dd format",
+        "parentsessionid": "Parent Session ID"
+      }
+    },
+    "searchaiagentrootsessiontokenusageapi": {
+      "name": "Search AI Assistant Parent Session Token Usage",
+      "param": {
+        "agentid": "AI Assistant ID",
+        "date": "Date",
+        "datehelp": "Message creation date in yyyy-MM-dd format"
+      }
+    },
     "searchaiagenttokenusageapi": {
       "name": "Search AI Assistant Token Usage",
       "param": {
