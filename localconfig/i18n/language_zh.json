@@ -10649,20 +10649,20 @@
     "autoexecaiassistant": {
       "agent": {
         "execution": {
-          "description": "根据用户要求或召回的 Skill 串行调用自动化工具，并引用前序出参完成多步骤执行",
-          "label": "自动化执行助手"
+          "description": "用于自动化模块Skill详情页执行入口。根据当前Skill规划并执行（串行调用自动化工具，并引用前序出参完成多步骤执行）",
+          "label": "自动化技能执行助手"
         },
         "fixedexecutionsummary": {
           "description": "依据真实工具执行轨迹和执行账本生成 Fixed 模式最终总结",
           "label": "自动化 Fixed 执行总结助手"
         },
         "joblog": {
-          "description": "结合日志选区、作业上下文和知识库分析自动化作业问题",
+          "description": "用于自动化模块作业详情页选中日志后的“在日志分析助手中提问”入口。结合日志选区、作业上下文和知识库分析自动化作业问题",
           "label": "自动化作业日志分析助手"
         },
         "script": {
-          "description": "结合编辑器上下文解释、生成、修改和修复自动化脚本",
-          "label": "自动化脚本助手"
+          "description": "用于自动化模块脚本详情页的“编写脚本”入口。结合当前脚本和编辑器上下文解释、生成、修改和修复自动化脚本",
+          "label": "自动化脚本编写助手"
         },
         "skilloperationpreparation": {
           "description": "读取已发布 Skill 正文并确认计划所需的工具库工具和自定义工具",
@@ -10673,11 +10673,11 @@
           "label": "自动化 Skill 规划助手"
         },
         "toolrecommend": {
-          "description": "根据组合工具阶段上下文和授权候选池推荐工具库工具",
+          "description": "用于自动化模块组合工具详情页添加工具弹窗中的“工具推荐”入口。根据当前阶段上下文和授权候选池推荐工具库工具",
           "label": "自动化工具库推荐助手"
         },
         "toolusage": {
-          "description": "结合工具详情和知识库解释自动化工具的使用方法",
+          "description": "用于自动化模块工具库详情页和组合工具详情页工具帮助弹窗中的“AI 辅助”入口。结合当前工具详情和知识库解释自动化工具的使用方法",
           "label": "自动化工具使用解释助手"
         }
       },
@@ -11775,7 +11775,7 @@
     "autoexecskilltitledescription": "Skill标题",
     "autoexecskilltool": {
       "executefailed": "自动化工具执行失败",
-      "label": "Skill 自动化工具执行器",
+      "label": "自动化技能规划执行",
       "modelpurposeexecute": "决定 Skill 下一执行步骤",
       "modelpurposeplan": "生成 Skill 执行计划",
       "modelpurposeprepare": "分析 Skill 工具需求",

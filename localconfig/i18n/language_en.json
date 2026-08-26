@@ -10637,20 +10637,20 @@
     "autoexecaiassistant": {
       "agent": {
         "execution": {
-          "description": "Execute automation tools serially from user requests or retrieved Skills, reusing outputs from previous steps",
-          "label": "Automation Execution Assistant"
+          "description": "Used as the execution entry point on the Skill Details page of the Automation module. Plan and execute based on the current Skill configuration by sequentially invoking automation tools and using outputs from previous steps to complete multi-step workflows.\n",
+          "label": "Automation Skill Execution Assistant"
         },
         "fixedexecutionsummary": {
           "description": "Generate the final Fixed-mode summary from the actual tool execution trace and execution ledger",
           "label": "Automation Fixed Execution Summary Assistant"
         },
         "joblog": {
-          "description": "Analyze automation job issues with selected logs, job context, and knowledge bases",
+          "description": "Used by the “Ask in Log Analysis Assistant” entry point after selecting logs on the Job Details page in the Automation module. Analyze automation job issues using the selected log snippet, job context, and knowledge bases.",
           "label": "Automation Job Log Analysis Assistant"
         },
         "script": {
-          "description": "Explain, generate, modify, and fix automation scripts with editor context",
-          "label": "Automation Script Assistant"
+          "description": "Used by the “Write Script” entry point on the Script Details page in the Automation module. Explain, generate, modify, and fix automation scripts using the current script and editor context.",
+          "label": "Automation Script Edit Assistant"
         },
         "skilloperationpreparation": {
           "description": "Read published Skill content and confirm the tool library and custom tools required by the plan",
@@ -10661,11 +10661,11 @@
           "label": "Automation Skill Planning Assistant"
         },
         "toolrecommend": {
-          "description": "Recommend tool library tools from phase context and the authorized candidate pool",
+          "description": "Used by the “Tool Recommendation” entry point in the Add Tools dialog on the Combination Tool Details page in the Automation module. Recommend tool library tools based on the current phase context and authorized candidate pool.",
           "label": "Automation Tool Recommendation Assistant"
         },
         "toolusage": {
-          "description": "Explain automation tool usage with tool details and knowledge bases",
+          "description": "Used by the “AI Assistance” entry point in the Tool Help dialogs on the Tool Library Details and Combination Tool Details pages in the Automation module. Explain how to use the current automation tool using its details and knowledge bases.",
           "label": "Automation Tool Usage Assistant"
         }
       },
@@ -11763,7 +11763,7 @@
     "autoexecskilltitledescription": "Skill title",
     "autoexecskilltool": {
       "executefailed": "Autoexec tool execution failed",
-      "label": "Skill Autoexec Tool Executor",
+      "label": "Autoexec Skill Plan Executor",
       "modelpurposeexecute": "Decide the Next Skill Execution Step",
       "modelpurposeplan": "Generate Skill Execution Plan",
       "modelpurposeprepare": "Analyze Skill Tool Requirements",
