@@ -11355,6 +11355,9 @@
         "parentsessionid": "Parent Session ID"
       }
     },
+    "ragdatasetbuildinprogressexception": "The build task for RAG dataset \"{0}\" is pending or running",
+    "ragdatasetbuildsubmitexception": "Failed to submit the build task for RAG dataset \"{0}\"",
+    "ragdatasetnotfoundexception": "RAG dataset \"{0}\" does not exist",
     "searchaiagentrootsessiontokenusageapi": {
       "name": "Search AI Assistant Parent Session Token Usage",
       "param": {

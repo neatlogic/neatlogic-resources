@@ -11367,6 +11367,9 @@
         "parentsessionid": "父会话ID"
       }
     },
+    "ragdatasetbuildinprogressexception": "RAG数据集“{0}”的构建任务已在等待或执行中",
+    "ragdatasetbuildsubmitexception": "RAG数据集“{0}”的构建任务提交失败",
+    "ragdatasetnotfoundexception": "RAG数据集“{0}”不存在",
     "searchaiagentrootsessiontokenusageapi": {
       "name": "分页查询智能助手父会话 Token 消耗",
       "param": {
