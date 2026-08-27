@@ -259,7 +259,7 @@
       "name": "模块名称"
     },
     "modulegroup": "模块组",
-    "moduleid": "模块IDID",
+    "moduleid": "模块ID",
     "modulespolicy": "模块规则",
     "multiselect": "多选下拉",
     "mustinput": "必填",
@@ -10404,6 +10404,54 @@
     "autoexeccombopversionsaveapi": {
       "getname": "保存组合工具版本信息"
     },
+    "autoexeccombopversionyamlgenerateapi": {
+      "getname": "生成组合工具版本 YML",
+      "input": {
+        "param": {
+          "help": {
+            "config": "待转换的组合工具版本配置，字段结构与组合工具版本保存接口一致"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "result": "YML 生成结果"
+          }
+        }
+      }
+    },
+    "autoexeccombopversionyamlparseapi": {
+      "getname": "解析并校验组合工具版本 YML",
+      "input": {
+        "param": {
+          "desc": {
+            "yaml": "组合工具版本 YML"
+          },
+          "help": {
+            "baseconfig": "用于保留作业参数、执行目标和场景等不属于 runFlow 的原配置",
+            "yaml": "使用 opName 标识工具或脚本，重名操作使用 opLetter 区分；支持参数引用及 IF-Block、LOOP-Block 递归嵌套"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "code": "问题编码",
+            "column": "列号",
+            "config": "解析后的组合工具版本配置",
+            "issuelist": "错误列表",
+            "line": "行号",
+            "message": "问题说明",
+            "path": "YML 字段路径",
+            "result": "YML 解析结果",
+            "valid": "是否校验通过",
+            "warninglist": "警告列表",
+            "yaml": "组合工具版本 YML"
+          }
+        }
+      }
+    },
     "listautoexeccomboptypeexecutableapi": {
       "getname": "查询当前用户可执行的组合工具所属分类列表"
     },
@@ -11158,6 +11206,20 @@
         "toolunauthorized": "工具不存在或未授权"
       }
     },
+    "aiagentvo": {
+      "field": {
+        "agentname": "系统智能体",
+        "modeldisplayname": "模型显示名称",
+        "modelid": "模型ID",
+        "modelname": "模型名称",
+        "modeltype": "模型类型",
+        "outputtype": "输出类型",
+        "raglist": "前置RAG召回配置列表",
+        "systemprompt": "系统提示词",
+        "toolidlist": "工具实例ID列表",
+        "toollist": "工具实例列表"
+      }
+    },
     "aichatagentunsupported": "系统智能体“{0}”不支持通过通用AI会话入口运行",
     "aichatsessionconfiginvalid": "AI会话配置格式不正确",
     "aichattoolunauthorized": "AI工具不存在或未授权：{0}",
@@ -11346,6 +11408,18 @@
         "sessionid": "会话ID"
       }
     },
+    "generateaichatsuggestionapi": {
+      "name": "生成AI聊天问题联想",
+      "output": {
+        "enabled": "是否启用问题联想",
+        "messageid": "关联的AI回答消息ID",
+        "mode": "联想模式",
+        "suggestionlist": "问题联想列表"
+      },
+      "param": {
+        "sessionid": "会话ID"
+      }
+    },
     "getdocumentonlinetreeforselectapi": {
       "getname": "获取在线文档RAG选择树",
       "output": {
@@ -11370,6 +11444,11 @@
     "ragdatasetbuildinprogressexception": "RAG数据集“{0}”的构建任务已在等待或执行中",
     "ragdatasetbuildsubmitexception": "RAG数据集“{0}”的构建任务提交失败",
     "ragdatasetnotfoundexception": "RAG数据集“{0}”不存在",
+    "saveaiagentapi": {
+      "param": {
+        "issuggestionenabled": "是否启用问题联想"
+      }
+    },
     "searchaiagentrootsessiontokenusageapi": {
       "name": "分页查询智能助手父会话 Token 消耗",
       "param": {
@@ -11569,7 +11648,25 @@
   "nmas": {
     "autoexec": {
       "loopitems": "循环项",
-      "loopitemvar": "循环项变量"
+      "loopitemvar": "循环项变量",
+      "yamlconfiginvalid": "组合工具配置校验失败：{0}",
+      "yamlduplicatevalue": "{0} 的值 {1} 重复",
+      "yamlempty": "YML 内容不能为空",
+      "yamlenuminvalid": "字段 {0} 的值 {1} 不在允许范围内",
+      "yamlfieldrequired": "缺少必填字段 {0}",
+      "yamlfieldtypeinvalid": "字段 {0} 的数据类型不正确",
+      "yamlifempty": "IF-Block 的 if 和 else 不能同时为空",
+      "yamloperationduplicate": "阶段 {0} 中的操作标识 {1}_{2} 重复",
+      "yamloperationnotfound": "未找到或无法唯一定位操作 {0}",
+      "yamloutputnotfound": "操作 {0} 不存在输出参数 {1}",
+      "yamlprofilenotfound": "预置参数集 {0} 不存在",
+      "yamlreferenceambiguous": "参数引用无法唯一定位到阶段 {0} 的操作 {1}，请补充 opLetter",
+      "yamlreferenceinvalid": "参数引用 {0} 的格式不正确",
+      "yamlreferenceunreachable": "参数引用指向不可达的后置操作或互斥分支：阶段 {0}，操作 {1}",
+      "yamlrootinvalid": "YML 根节点必须是对象",
+      "yamlsyntaxinvalid": "YML 语法错误：{0}",
+      "yamlunknownfield": "未知字段 {0} 将被忽略",
+      "yamlversioninvalid": "apiVersion 不受支持，当前仅支持 {0}"
     }
   },
   "nmaspt": {

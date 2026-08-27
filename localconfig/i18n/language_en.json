@@ -166,7 +166,7 @@
     "form": "Form",
     "greaterthan": "Greater Than",
     "greaterthanorequal": "Greater Than or Equal To",
-    "group": "grouping",
+    "group": "Group",
     "groupid": "Group",
     "grouplist": "Restrict interface return types",
     "handler": "Processor identification",
@@ -423,7 +423,7 @@
     "uncommited": "Not Submitted",
     "unequal": "Not Equal To",
     "unique": "only",
-    "uniquename": "Unique Identification",
+    "uniquename": "Unique Identifier",
     "unreadcount": "Unread count",
     "upwardnamelist": "Upper level name list",
     "user": "user",
@@ -10392,6 +10392,54 @@
     "autoexeccombopversionsaveapi": {
       "getname": "Save the version information of the combination tool"
     },
+    "autoexeccombopversionyamlgenerateapi": {
+      "getname": "Generate Combination Tool Version YML",
+      "input": {
+        "param": {
+          "help": {
+            "config": "Combination tool version configuration to convert. Its structure is the same as the version save API."
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "result": "YML Generation Result"
+          }
+        }
+      }
+    },
+    "autoexeccombopversionyamlparseapi": {
+      "getname": "Parse and Validate Combination Tool Version YML",
+      "input": {
+        "param": {
+          "desc": {
+            "yaml": "Combination Tool Version YML"
+          },
+          "help": {
+            "baseconfig": "Original configuration used to preserve job parameters, execution targets, scenarios, and other fields outside runFlow.",
+            "yaml": "Use opName to identify a tool or script and opLetter to distinguish repeated operations. Parameter references and recursive IF-Block and LOOP-Block nesting are supported."
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "code": "Issue Code",
+            "column": "Column Number",
+            "config": "Parsed Combination Tool Version Configuration",
+            "issuelist": "Error List",
+            "line": "Line Number",
+            "message": "Issue Description",
+            "path": "YML Field Path",
+            "result": "YML Parse Result",
+            "valid": "Whether Validation Passed",
+            "warninglist": "Warning List",
+            "yaml": "Combination Tool Version YML"
+          }
+        }
+      }
+    },
     "listautoexeccomboptypeexecutableapi": {
       "getname": "Query the classification list of the combination tools that the current user can execute"
     },
@@ -11146,6 +11194,20 @@
         "toolunauthorized": "The tool does not exist or is not authorized"
       }
     },
+    "aiagentvo": {
+      "field": {
+        "agentname": "System AI Agent",
+        "modeldisplayname": "Model Display Name",
+        "modelid": "Model ID",
+        "modelname": "Model Name",
+        "modeltype": "Model Type",
+        "outputtype": "Output Type",
+        "raglist": "Pre-Generation RAG Retrieval Configuration List",
+        "systemprompt": "System Prompt",
+        "toolidlist": "Tool Instance ID List",
+        "toollist": "Tool Instance List"
+      }
+    },
     "aichatagentunsupported": "System Agent \"{0}\" does not support the generic AI chat endpoint.",
     "aichatsessionconfiginvalid": "The AI chat session configuration is invalid.",
     "aichattoolunauthorized": "The AI tool does not exist or is not authorized: {0}",
@@ -11334,6 +11396,18 @@
         "sessionid": "Session ID"
       }
     },
+    "generateaichatsuggestionapi": {
+      "name": "Generate AI Chat Question Suggestions",
+      "output": {
+        "enabled": "Whether question suggestions are enabled",
+        "messageid": "Related AI response message ID",
+        "mode": "Suggestion mode",
+        "suggestionlist": "Question suggestion list"
+      },
+      "param": {
+        "sessionid": "Session ID"
+      }
+    },
     "getdocumentonlinetreeforselectapi": {
       "getname": "Get online document RAG selection tree",
       "output": {
@@ -11358,6 +11432,11 @@
     "ragdatasetbuildinprogressexception": "The build task for RAG dataset \"{0}\" is pending or running",
     "ragdatasetbuildsubmitexception": "Failed to submit the build task for RAG dataset \"{0}\"",
     "ragdatasetnotfoundexception": "RAG dataset \"{0}\" does not exist",
+    "saveaiagentapi": {
+      "param": {
+        "issuggestionenabled": "Enable Question Suggestions"
+      }
+    },
     "searchaiagentrootsessiontokenusageapi": {
       "name": "Search AI Assistant Parent Session Token Usage",
       "param": {
@@ -11557,7 +11636,25 @@
   "nmas": {
     "autoexec": {
       "loopitems": "Loop item",
-      "loopitemvar": "Loop term variable"
+      "loopitemvar": "Loop term variable",
+      "yamlconfiginvalid": "Combination tool configuration validation failed: {0}",
+      "yamlduplicatevalue": "The value {1} for {0} is duplicated.",
+      "yamlempty": "YML content cannot be empty.",
+      "yamlenuminvalid": "The value {1} for field {0} is not allowed.",
+      "yamlfieldrequired": "Required field {0} is missing.",
+      "yamlfieldtypeinvalid": "Field {0} has an invalid data type.",
+      "yamlifempty": "The if and else branches of IF-Block cannot both be empty.",
+      "yamloperationduplicate": "Operation identifier {1}_{2} is duplicated in phase {0}.",
+      "yamloperationnotfound": "Operation {0} was not found or could not be uniquely identified.",
+      "yamloutputnotfound": "Operation {0} does not have output parameter {1}.",
+      "yamlprofilenotfound": "Preset parameter set {0} does not exist.",
+      "yamlreferenceambiguous": "The parameter reference cannot uniquely identify operation {1} in phase {0}. Specify opLetter.",
+      "yamlreferenceinvalid": "Parameter reference {0} has an invalid structure.",
+      "yamlreferenceunreachable": "The parameter reference points to a later operation or a mutually exclusive branch: phase {0}, operation {1}.",
+      "yamlrootinvalid": "The YML root node must be an object.",
+      "yamlsyntaxinvalid": "Invalid YML syntax: {0}",
+      "yamlunknownfield": "Unknown field {0} will be ignored.",
+      "yamlversioninvalid": "The apiVersion is not supported. The current version is {0}."
     }
   },
   "nmaspt": {
