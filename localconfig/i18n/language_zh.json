@@ -2077,13 +2077,13 @@
       "autoexeccombopdraftversionnotfoundexception": "组合工具：“{0}”没有草稿版本"
     },
     "autoexeccombopexecutenodecannotbeemptyexception": {
-      "autoexeccombopexecutenodecannotbeemptyexception": "选择\u0027现在指定执行目标\u0027时，执行目标不能为空"
+      "autoexeccombopexecutenodecannotbeemptyexception": "选择'现在指定执行目标'时，执行目标不能为空"
     },
     "autoexeccombopexecuteparamcannotbeemptyexception": {
       "autoexeccombopexecuteparamcannotbeemptyexception": "选择运行参数作为执行目标时，运行参数不能为空"
     },
     "autoexeccombopexecuteusercannotbeemptyexception": {
-      "autoexeccombopexecuteusercannotbeemptyexception": "选择\u0027现在指定执行目标\u0027时，执行用户不能为空"
+      "autoexeccombopexecuteusercannotbeemptyexception": "选择'现在指定执行目标'时，执行用户不能为空"
     },
     "autoexeccombophassubmittedversionexception": {
       "autoexeccombophassubmittedversionexception": "组合工具：{0}已经有其他待审核版本"
@@ -2108,7 +2108,7 @@
       "autoexeccombopphasenamerepeatexception": "组合工具阶段名称“{0}”已存在"
     },
     "autoexeccombopprotocolcannotbeemptyexception": {
-      "autoexeccombopprotocolcannotbeemptyexception": "选择\u0027现在指定执行目标\u0027时，协议不能为空"
+      "autoexeccombopprotocolcannotbeemptyexception": "选择'现在指定执行目标'时，协议不能为空"
     },
     "autoexeccomboprejectedversionnotfoundexception": {
       "autoexeccomboprejectedversionnotfoundexception": "组合工具：“{0}”没有已驳回版本"
@@ -2153,31 +2153,31 @@
       "autoexecjobcannotcreateexception": "无法创建作业，没有组合工具: “{0}” 执行权限"
     },
     "autoexecjobcannotexecuteexception": {
-      "autoexecjobcannotexecuteexception": "无法执行作业: {0}，需同时满足：状态为\u0027已就绪\u0027且当前用户为\u0027执行用户\u0027"
+      "autoexecjobcannotexecuteexception": "无法执行作业: {0}，需同时满足：状态为'已就绪'且当前用户为'执行用户'"
     },
     "autoexecjobcannotexecuteinadvanceexception": {
       "autoexecjobcannotexecuteinadvanceexception": "禁止提前执行作业"
     },
     "autoexecjobcannotfireexception": {
-      "autoexecjobcannotfireexception": "无法激活作业: {0}，请确保作业以及作业所有阶段处于\u0027未开始（pending）\u0027状态"
+      "autoexecjobcannotfireexception": "无法激活作业: {0}，请确保作业以及作业所有阶段处于'未开始（pending）'状态"
     },
     "autoexecjobcannotignorejobnodeexception": {
       "autoexecjobcannotignorejobnodeexception": "无法忽略作业节点：{0}，请确保作业处于已中止、已暂停或已完成状态"
     },
     "autoexecjobcannotpauseexception": {
-      "autoexecjobcannotpauseexception": "无法暂停作业: {0}，请确保作业存于\u0027运行中（running）\u0027状态"
+      "autoexecjobcannotpauseexception": "无法暂停作业: {0}，请确保作业存于'运行中（running）'状态"
     },
     "autoexecjobcannotrefirejobnodeexception": {
-      "autoexecjobcannotrefirejobnodeexception": "无法重跑作业: {0}，请确保作业存于\u0027运行中（running）\u0027状态"
+      "autoexecjobcannotrefirejobnodeexception": "无法重跑作业: {0}，请确保作业存于'运行中（running）'状态"
     },
     "autoexecjobcannotrevokeexception": {
-      "autoexecjobcannotrevokeexception": "无法撤销作业: {0}，执行用户才有权限撤销，且作业需要处于\u0027已就绪\u0027状态"
+      "autoexecjobcannotrevokeexception": "无法撤销作业: {0}，执行用户才有权限撤销，且作业需要处于'已就绪'状态"
     },
     "autoexecjobcannottestexception": {
       "autoexecjobcannottestexception": "无法测试工具库: {0}，存在正在测试该工具库的作业"
     },
     "autoexecjobcannotupdateexception": {
-      "autoexecjobcannotupdateexception": "无法修改作业计划时间与触发方式: {0}，作业处于\u0027已就绪\u0027状态且执行用户才能修改"
+      "autoexecjobcannotupdateexception": "无法修改作业计划时间与触发方式: {0}，作业处于'已就绪'状态且执行用户才能修改"
     },
     "autoexecjobcheckedexception": {
       "autoexecjobcheckedexception": "作业 “{0}” 已验证"
@@ -2244,7 +2244,7 @@
       "autoexecjobphasenotfoundexceptionb": "作业“{0}” 组：“{1}” 的phase不存在"
     },
     "autoexecjobphaseoperationmustbecombopexception": {
-      "autoexecjobphaseoperationmustbecombopexception": "此操作仅支持\u0027组合工具\u0027"
+      "autoexecjobphaseoperationmustbecombopexception": "此操作仅支持'组合工具'"
     },
     "autoexecjobphaseoperationnotfoundexception": {
       "autoexecjobphaseoperationnotfoundexception": "作业阶段工具“{0}”不存在"
@@ -2421,7 +2421,7 @@
       "autoexecscripthassubmittedversionexception": "当前自定义工具已经有其他待审核版本"
     },
     "autoexecscriptjobcannotexecuteexception": {
-      "autoexecscriptjobcannotexecuteexception": "无法执行作业: {0}，当前用户没有\u0027工具、自定义工具管理权限\u0027"
+      "autoexecscriptjobcannotexecuteexception": "无法执行作业: {0}，当前用户没有'工具、自定义工具管理权限'"
     },
     "autoexecscriptnameorukrepeatexception": {
       "autoexecscriptnameorukrepeatexception": "自定义工具：“{0}”已存在"
@@ -2708,7 +2708,7 @@
       "mobilefiledownloadenabled": "是否允许移动端下载附件",
       "passwordexpiredays": "用户密码有效期(天)，超过有效期则强制跳转改密码页面",
       "passwordneedexpiredcheck": "是否需要检验用户密码有效期，默认为0，不需要检查",
-      "tenantdefaultlanguage": "租户默认语言，支持 zh/en。语言优先级：Cookie \u003e 租户默认语言 \u003e 浏览器首选语言 \u003e 中文"
+      "tenantdefaultlanguage": "租户默认语言，支持 zh/en。语言优先级：Cookie > 租户默认语言 > 浏览器首选语言 > 中文"
     }
   },
   "nfcal": {
@@ -2966,7 +2966,7 @@
       "ciuniqueattrnotfoundexception_b": "模型“{0}({1})”的唯一规则属性“{2}({3})”没有配置匹配字段，请先配置",
       "ciuniqueattrnotfoundexception_c": "模型“{0}({1})”的唯一规则属性“{2}({3})”的值为空",
       "ciuniqueattrnotfoundexception_d": "获取模型“{0}”的配置项事务hash失败，唯一属性“{1}”没有值",
-      "ciuniqueattrnotfoundexception_e": "配置“{0}-\u003e{1}({2})”的唯一键映射属性“{3}”的值不存在，原始数据：{4}",
+      "ciuniqueattrnotfoundexception_e": "配置“{0}->{1}({2})”的唯一键映射属性“{3}”的值不存在，原始数据：{4}",
       "ciuniqueattrnotfoundexception_f": "模型“{0}({1})”的唯一规则属性“{2}({3})”的值为空，配置路径：{4}，实际路径：{5}"
     },
     "ciuniqueruleattrtypeirregularexception": {
@@ -3179,7 +3179,7 @@
       "executedesc": "“一键发布、定时作业”可以执行创建普通作业",
       "pipeline": "超级流水线",
       "pipelinedesc": "“应用配置”可以替添加、编辑和删除应用的超级流水线和“一键发布、定时作业”执行应用的超级流水线",
-      "versionandproductmanager": "版本\u0026制品管理",
+      "versionandproductmanager": "版本&制品管理",
       "versionandproductmanagerdesc": "“版本中心”可以查看应用、添加版本和管理制品",
       "view": "查看配置",
       "viewdesc": "可以查看应用(一键发布、应用配置、定时作业)"
@@ -5452,7 +5452,7 @@
       "deploybatchjobcannottakeoverexception": "无法接管，请联系管理员"
     },
     "deploybatchjobfirewithrevokedandcheckedexception": {
-      "deploybatchjobfirewithrevokedandcheckedexception": "无法执行，批量执行的作业:“{0}({1})”都是\u0027已撤销\u0027或\u0027已验证\u0027的作业"
+      "deploybatchjobfirewithrevokedandcheckedexception": "无法执行，批量执行的作业:“{0}({1})”都是'已撤销'或'已验证'的作业"
     },
     "deploybatchjobgroupfirewithinvalidstatusexception": {
       "deploybatchjobgroupfirewithinvalidstatusexception": "不能执行状态为：{0}的分组"
@@ -5531,7 +5531,7 @@
       "deploygitlabwebhookcallbackhostlostexception": "缺失初始化配置“gitlabWebHookCallbackHost“，请联系管理员处理"
     },
     "deployinstanceinenvnotfoundexception": {
-      "deployinstanceinenvnotfoundexception": "{0}-\u003e{1}-\u003e{2}下的实例：{3}不存在"
+      "deployinstanceinenvnotfoundexception": "{0}->{1}->{2}下的实例：{3}不存在"
     },
     "deployinstanceversionnotfoundexception": {
       "deployinstanceversionnotfoundexception": "没有找到实例：{0}的当前版本"
@@ -5558,7 +5558,7 @@
       "deployjobparamirregularexception": "参数“{0}”不能为空"
     },
     "deploypackagenotfoundexception": {
-      "deploypackagenotfoundexception": "依赖包：{0}-\u003e{1}-\u003e{2}不存在"
+      "deploypackagenotfoundexception": "依赖包：{0}->{1}->{2}不存在"
     },
     "deploypackagerequiredattributelostexception": {
       "deploypackagerequiredattributelostexception": "第：{0}个依赖缺少groupId|artifactIDeployInstanceInEnvNotFoundExceptiond|version属性"
@@ -5601,7 +5601,7 @@
       }
     },
     "deployversionparentdependencynotfoundexception": {
-      "deployversionparentdependencynotfoundexception": "父依赖：{0}-\u003e{1}-\u003e{2}不存在"
+      "deployversionparentdependencynotfoundexception": "父依赖：{0}->{1}->{2}不存在"
     },
     "deployversionredirecturlcredentialusernotfoundexception": {
       "deployversionredirecturlcredentialusernotfoundexception": "发布跳转url对应验权用户 “{0}” 不存在"
@@ -5745,7 +5745,7 @@
   },
   "nfea": {
     "authencryptexception": {
-      "authencryptexception": "前端加密方式异常，请在后端服务配置文件配置login.auth.password.encrypt\u003d{0}后，重启后端服务后，刷新前端页面重新登录"
+      "authencryptexception": "前端加密方式异常，请在后端服务配置文件配置login.auth.password.encrypt={0}后，重启后端服务后，刷新前端页面重新登录"
     },
     "authnotfoundexception": {
       "authnotfoundexception": {
@@ -8267,7 +8267,7 @@
       "workcenternocustomauthexception": "不是自定义工单分类的创建人，操作失败"
     },
     "workcenternomodifyauthexception": {
-      "workcenternomodifyauthexception": "没有\u0027工单中心管理权限\u0027，请联系管理员"
+      "workcenternomodifyauthexception": "没有'工单中心管理权限'，请联系管理员"
     },
     "workcenternotfoundexception": {
       "workcenternotfoundexception": "工单中心分类“{0}”不存在"
@@ -8279,7 +8279,7 @@
   "nfpnc": {
     "idefaulttemplate": {
       "defaulttemplatetype": "默认",
-      "processtaskdetailslink": "查看详情：\u003ca target\u003d\"_blank\" href\u003d{0}\u003e【工单链接】\u003c/a\u003e"
+      "processtaskdetailslink": "查看详情：<a target=\"_blank\" href={0}>【工单链接】</a>"
     },
     "processnotifypolicyhandlergroup": {
       "text": {
@@ -8288,7 +8288,7 @@
     },
     "processtasknotifyparam": {
       "description": {
-        "form_json": "这里根据需要进行自定义处理显示信息item数据结构为{\u0027attributeKey\u0027:\u0027a\u0027,\u0027attributeLabel\u0027:\u0027A\u0027,\u0027extendedData\u0027:\u0027有些表单组件值是数组需要进行处理\u0027}\n"
+        "form_json": "这里根据需要进行自定义处理显示信息item数据结构为{'attributeKey':'a','attributeLabel':'A','extendedData':'有些表单组件值是数组需要进行处理'}\n"
       },
       "text": {
         "approvalcommentlist": "审批意见",
@@ -10301,7 +10301,7 @@
       "input": {
         "param": {
           "desc": {
-            "logpos": "日志读取位置,-1:获取最新的数据。如果是向上读\u0027up\u0027，则每次向上滚动加载传startPos。如果是向下读 \u0027down\u0027，则每次向下加载传endPos"
+            "logpos": "日志读取位置,-1:获取最新的数据。如果是向上读'up'，则每次向上滚动加载传startPos。如果是向下读 'down'，则每次向下加载传endPos"
           }
         }
       },
@@ -10403,54 +10403,6 @@
     },
     "autoexeccombopversionsaveapi": {
       "getname": "保存组合工具版本信息"
-    },
-    "autoexeccombopversionyamlgenerateapi": {
-      "getname": "生成组合工具版本 YML",
-      "input": {
-        "param": {
-          "help": {
-            "config": "待转换的组合工具版本配置，字段结构与组合工具版本保存接口一致"
-          }
-        }
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "result": "YML 生成结果"
-          }
-        }
-      }
-    },
-    "autoexeccombopversionyamlparseapi": {
-      "getname": "解析并校验组合工具版本 YML",
-      "input": {
-        "param": {
-          "desc": {
-            "yaml": "组合工具版本 YML"
-          },
-          "help": {
-            "baseconfig": "用于保留作业参数、执行目标和场景等不属于 runFlow 的原配置",
-            "yaml": "使用 opName 标识工具或脚本，重名操作使用 opLetter 区分；支持参数引用及 IF-Block、LOOP-Block 递归嵌套"
-          }
-        }
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "code": "问题编码",
-            "column": "列号",
-            "config": "解析后的组合工具版本配置",
-            "issuelist": "错误列表",
-            "line": "行号",
-            "message": "问题说明",
-            "path": "YML 字段路径",
-            "result": "YML 解析结果",
-            "valid": "是否校验通过",
-            "warninglist": "警告列表",
-            "yaml": "组合工具版本 YML"
-          }
-        }
-      }
     },
     "listautoexeccomboptypeexecutableapi": {
       "getname": "查询当前用户可执行的组合工具所属分类列表"
@@ -10559,24 +10511,24 @@
             "protocol": "连接协议"
           },
           "help": {
-          "assignexecuser": "指定作业发起用户UUID，作业将按该用户的权限和身份创建；未传时使用当前认证用户。isSync为true时固定使用当前认证用户，不支持该参数。",
-          "combopname": "指定要执行的组合工具名称；服务端按名称查找组合工具，并使用其活动版本构建作业。",
-          "executeuser": "指定连接远程目标时使用的执行账号，不是作业发起用户；传入时覆盖组合工具配置，未传时沿用组合工具配置。",
-          "ipportlist": "指定作业执行目标的字符串数组，每项格式为IP、IP:端口或IP:端口/名称；传入非空数组时覆盖组合工具目标配置，为空或未传时沿用组合工具配置。例如：[\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]。",
-          "invokeid": "指定调用来源ID，用于关联调用方与作业，供来源追踪、查询和回调使用；未传时使用组合工具活动版本ID。",
-          "issync": "控制接口是否等待作业结果。false表示创建作业并完成触发方式设置后立即返回作业ID；true表示以当前认证用户立即执行，并等待作业终止或监听超时后返回状态和节点输出。监听超时不会终止作业。",
-          "name": "指定用于展示和查询的作业名称，允许重名；未传或为空时使用组合工具名称。",
-          "parallelcount": "指定同时执行的目标数量，仅在parallelPolicy为parallel时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为32。",
-          "parallelpolicy": "指定目标并发策略。parallel按并发数执行并使用parallelCount；roundCount按分批数执行并使用roundCount。未传时沿用组合工具配置。",
-          "param": "指定作业参数键值对象，键应为组合工具活动版本中定义的作业参数Key；缺少的参数使用组合工具默认值并按参数类型转换，未传时使用空JSON。例如：{\"paramKey\":\"paramValue\"}。",
-          "parentid": "指定父作业ID，用于将当前作业关联为其子作业；父作业必须存在，父作业链最多支持两级。",
-          "planstarttime": "指定计划开始时间，值为Unix时间戳（毫秒）；triggerType为auto且时间晚于当前时间时，作业将在该时间自动执行。isSync为true时不支持该参数。",
-          "protocol": "指定连接远程目标使用的协议名称，例如ssh；传入时覆盖组合工具配置，协议不存在时拒绝创建，未传时沿用组合工具配置。",
-          "roundcount": "指定将执行目标拆分成的批次数，仅在parallelPolicy为roundCount时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为64。",
-          "runnergroup": "指定作业匹配和调度使用的Runner执行组名称或ID，-1表示随机匹配；未传时沿用组合工具配置。",
-          "runnergrouptag": "指定用于筛选Runner执行组的标签名称或ID，支持单个标签或标签字符串组成的JSON数组字符串；作业只会匹配同时满足标签和路由规则的执行组，未传时沿用组合工具配置。",
-          "scenarioname": "指定组合工具场景名称，用于选择该场景配置的执行阶段；场景不存在时拒绝创建，未传时使用组合工具默认执行范围。",
-          "triggertype": "指定作业触发方式。auto表示立即执行或按planStartTime自动执行；manual表示创建后等待手动触发；未传时立即执行。isSync为true时不支持该参数。"
+            "assignexecuser": "指定作业发起用户UUID，作业将按该用户的权限和身份创建；未传时使用当前认证用户。isSync为true时固定使用当前认证用户，不支持该参数。",
+            "combopname": "指定要执行的组合工具名称；服务端按名称查找组合工具，并使用其活动版本构建作业。",
+            "executeuser": "指定连接远程目标时使用的执行账号，不是作业发起用户；传入时覆盖组合工具配置，未传时沿用组合工具配置。",
+            "ipportlist": "指定作业执行目标的字符串数组，每项格式为IP、IP:端口或IP:端口/名称；传入非空数组时覆盖组合工具目标配置，为空或未传时沿用组合工具配置。例如：[\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]。",
+            "invokeid": "指定调用来源ID，用于关联调用方与作业，供来源追踪、查询和回调使用；未传时使用组合工具活动版本ID。",
+            "issync": "控制接口是否等待作业结果。false表示创建作业并完成触发方式设置后立即返回作业ID；true表示以当前认证用户立即执行，并等待作业终止或监听超时后返回状态和节点输出。监听超时不会终止作业。",
+            "name": "指定用于展示和查询的作业名称，允许重名；未传或为空时使用组合工具名称。",
+            "parallelcount": "指定同时执行的目标数量，仅在parallelPolicy为parallel时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为32。",
+            "parallelpolicy": "指定目标并发策略。parallel按并发数执行并使用parallelCount；roundCount按分批数执行并使用roundCount。未传时沿用组合工具配置。",
+            "param": "指定作业参数键值对象，键应为组合工具活动版本中定义的作业参数Key；缺少的参数使用组合工具默认值并按参数类型转换，未传时使用空JSON。例如：{\"paramKey\":\"paramValue\"}。",
+            "parentid": "指定父作业ID，用于将当前作业关联为其子作业；父作业必须存在，父作业链最多支持两级。",
+            "planstarttime": "指定计划开始时间，值为Unix时间戳（毫秒）；triggerType为auto且时间晚于当前时间时，作业将在该时间自动执行。isSync为true时不支持该参数。",
+            "protocol": "指定连接远程目标使用的协议名称，例如ssh；传入时覆盖组合工具配置，协议不存在时拒绝创建，未传时沿用组合工具配置。",
+            "roundcount": "指定将执行目标拆分成的批次数，仅在parallelPolicy为roundCount时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为64。",
+            "runnergroup": "指定作业匹配和调度使用的Runner执行组名称或ID，-1表示随机匹配；未传时沿用组合工具配置。",
+            "runnergrouptag": "指定用于筛选Runner执行组的标签名称或ID，支持单个标签或标签字符串组成的JSON数组字符串；作业只会匹配同时满足标签和路由规则的执行组，未传时沿用组合工具配置。",
+            "scenarioname": "指定组合工具场景名称，用于选择该场景配置的执行阶段；场景不存在时拒绝创建，未传时使用组合工具默认执行范围。",
+            "triggertype": "指定作业触发方式。auto表示立即执行或按planStartTime自动执行；manual表示创建后等待手动触发；未传时立即执行。isSync为true时不支持该参数。"
           }
         }
       },
@@ -10776,7 +10728,7 @@
         "missinganswer": "模型返回内容缺少 answer。",
         "modelnotconfigured": "日志分析助手工具实例未配置模型。",
         "modelunavailable": "日志分析助手工具实例配置的模型不可用。",
-        "noenabledtool": "未找到已启用的日志分析助手工具实例，请在人工智能模块 \u003e 工具管理中新增并启用日志分析助手工具实例。",
+        "noenabledtool": "未找到已启用的日志分析助手工具实例，请在人工智能模块 > 工具管理中新增并启用日志分析助手工具实例。",
         "questionrequired": "请输入需要分析的问题。",
         "selectedlogrequired": "请选择需要分析的日志内容。",
         "toolnotfound": "日志分析助手工具实例不存在。"
@@ -10856,7 +10808,7 @@
         "modelbusy": "模型繁忙，请稍后重试。",
         "modelnotconfigured": "编写脚本工具实例未配置模型。",
         "modelunavailable": "编写脚本工具实例配置的模型不可用。",
-        "noenabledtool": "未找到已启用的编写脚本工具实例，请在人工智能模块 \u003e 工具管理中新增并启用编写脚本工具实例。",
+        "noenabledtool": "未找到已启用的编写脚本工具实例，请在人工智能模块 > 工具管理中新增并启用编写脚本工具实例。",
         "requirementrequired": "请输入本轮脚本需求。",
         "toolnotfound": "编写脚本工具实例不存在。"
       },
@@ -10935,7 +10887,7 @@
         "modelnotconfigured": "工具库推荐助手工具实例未配置模型。",
         "modelunavailable": "工具库推荐助手工具实例配置的模型不可用。",
         "nocandidate": "当前筛选条件下没有可推荐的工具库工具，请调整执行方式、分类、操作级别或关键词后重试。",
-        "noenabledtool": "未找到已启用的工具库推荐助手工具实例，请在人工智能模块 \u003e 工具管理中新增并启用工具库推荐助手工具实例。",
+        "noenabledtool": "未找到已启用的工具库推荐助手工具实例，请在人工智能模块 > 工具管理中新增并启用工具库推荐助手工具实例。",
         "recommendcontextrequired": "缺少当前新增工具上下文。",
         "recommendfailed": "工具库推荐失败：{0}",
         "requirementrequired": "请输入需要推荐工具的需求。",
@@ -11020,7 +10972,7 @@
         "missinganswer": "模型返回内容缺少 answer。",
         "modelnotconfigured": "工具使用解释助手工具实例未配置模型。",
         "modelunavailable": "工具使用解释助手工具实例配置的模型不可用。",
-        "noenabledtool": "未找到已启用的工具使用解释助手工具实例，请在人工智能模块 \u003e 工具管理中新增并启用工具使用解释助手工具实例。",
+        "noenabledtool": "未找到已启用的工具使用解释助手工具实例，请在人工智能模块 > 工具管理中新增并启用工具使用解释助手工具实例。",
         "questionrequired": "请输入需要解释的问题。",
         "toolcontextrequired": "缺少当前工具上下文。",
         "toolnotfound": "工具使用解释助手工具实例不存在。"
@@ -11238,7 +11190,7 @@
         },
         "label": "执行AI工作流",
         "message": {
-          "attachmentunreadable": "附件不属于当前会话或当前用户无权读取，fileId\u003d{0}。可用图片附件：{1}",
+          "attachmentunreadable": "附件不属于当前会话或当前用户无权读取，fileId={0}。可用图片附件：{1}",
           "confirmworkflow": "请确认是否执行AI工作流：{0}",
           "failedinstruction": "请告知用户工作流未成功，并结合错误原因说明当前无法完成，不要把失败结果表述为成功。",
           "fileidinvalid": "fileList[{0}].id 必须是当前会话附件清单中的真实数字id，不能使用占位文本：{1}。可用图片附件：{2}",
@@ -11246,7 +11198,7 @@
           "missingcontext": "缺少AI聊天会话上下文，无法执行AI工作流",
           "missingworkflowid": "缺少 workflowId，无法执行AI工作流",
           "multipleimageattachments": "存在多个图片附件，请明确选择要传入工作流的附件。可用图片附件：{0}",
-          "notimageattachment": "execute_ai_workflow.fileList 只接受当前会话图片附件，fileId\u003d{0} 不是可用图片附件。可用图片附件：{1}",
+          "notimageattachment": "execute_ai_workflow.fileList 只接受当前会话图片附件，fileId={0} 不是可用图片附件。可用图片附件：{1}",
           "succeedinstruction": "请根据工作流最终输出整理给用户一个简洁结论，不要展开无关的执行日志。",
           "tasknotfound": "任务不存在",
           "timeout": "AI工作流执行超时",
@@ -11495,17 +11447,17 @@
   },
   "nmar": {
     "combopimport": {
-      "inactivesuffix": "\u0027未启用",
-      "missingglobalparamprefix": "缺少全局参数：\u0027",
-      "missingnotifypolicyprefix": "缺少引用的通知策略：\u0027",
-      "missingscenarioprefix": "缺少场景\u0027",
-      "missingscenariosuffix": "\u0027场景未导入",
-      "missingscriptprefix": "缺少引用的自定义工具：\u0027",
-      "missingtoolprefix": "缺少引用的工具：\u0027",
-      "missingtypeprefix": "缺少引用的工具类型：\u0027",
-      "noactiveversionsuffix": "\u0027没有激活版本",
-      "scriptprefix": "自定义工具：\u0027",
-      "toolprefix": "工具：\u0027"
+      "inactivesuffix": "'未启用",
+      "missingglobalparamprefix": "缺少全局参数：'",
+      "missingnotifypolicyprefix": "缺少引用的通知策略：'",
+      "missingscenarioprefix": "缺少场景'",
+      "missingscenariosuffix": "'场景未导入",
+      "missingscriptprefix": "缺少引用的自定义工具：'",
+      "missingtoolprefix": "缺少引用的工具：'",
+      "missingtypeprefix": "缺少引用的工具类型：'",
+      "noactiveversionsuffix": "'没有激活版本",
+      "scriptprefix": "自定义工具：'",
+      "toolprefix": "工具：'"
     },
     "commercial": {
       "comboprequired": "发起配置: 组合工具不能为空",
@@ -11556,7 +11508,7 @@
       "detailprefix": "导入：",
       "detailsuffix": "时出现如下问题：",
       "execmodeempty": "执行方式为空",
-      "execmodenotfoundprefix": "执行方式：\u0027",
+      "execmodenotfoundprefix": "执行方式：'",
       "failed": "失败",
       "import": "导入",
       "invalidexecmode": "不存在的执行方式：",
@@ -11567,18 +11519,18 @@
       "itemsuffix": "]个失败",
       "missingpackages": "以下依赖脚本包（tar）未上传：",
       "missingtools": "以下依赖工具不存在：",
-      "notfoundsuffix": "\u0027不存在",
+      "notfoundsuffix": "'不存在",
       "packagemissing": "脚本依赖包缺失",
       "packagemustbetar": "脚本依赖包必须是tar文件",
       "packagenameempty": "脚本依赖包名字为空",
       "parserempty": "脚本解析器为空",
-      "parsernotfoundprefix": "脚本解析器：\u0027",
+      "parsernotfoundprefix": "脚本解析器：'",
       "riskempty": "操作级别为空",
-      "risknotfoundprefix": "操作级别：\u0027",
+      "risknotfoundprefix": "操作级别：'",
       "scriptcontentempty": "脚本内容为空",
       "scriptnameempty": "自定义工具名称为空",
       "typeempty": "工具分类为空",
-      "typenotfoundprefix": "工具分类：\u0027",
+      "typenotfoundprefix": "工具分类：'",
       "versionprefix": "版本-"
     },
     "operate": {
@@ -11648,25 +11600,7 @@
   "nmas": {
     "autoexec": {
       "loopitems": "循环项",
-      "loopitemvar": "循环项变量",
-      "yamlconfiginvalid": "组合工具配置校验失败：{0}",
-      "yamlduplicatevalue": "{0} 的值 {1} 重复",
-      "yamlempty": "YML 内容不能为空",
-      "yamlenuminvalid": "字段 {0} 的值 {1} 不在允许范围内",
-      "yamlfieldrequired": "缺少必填字段 {0}",
-      "yamlfieldtypeinvalid": "字段 {0} 的数据类型不正确",
-      "yamlifempty": "IF-Block 的 if 和 else 不能同时为空",
-      "yamloperationduplicate": "阶段 {0} 中的操作标识 {1}_{2} 重复",
-      "yamloperationnotfound": "未找到或无法唯一定位操作 {0}",
-      "yamloutputnotfound": "操作 {0} 不存在输出参数 {1}",
-      "yamlprofilenotfound": "预置参数集 {0} 不存在",
-      "yamlreferenceambiguous": "参数引用无法唯一定位到阶段 {0} 的操作 {1}，请补充 opLetter",
-      "yamlreferenceinvalid": "参数引用 {0} 的格式不正确",
-      "yamlreferenceunreachable": "参数引用指向不可达的后置操作或互斥分支：阶段 {0}，操作 {1}",
-      "yamlrootinvalid": "YML 根节点必须是对象",
-      "yamlsyntaxinvalid": "YML 语法错误：{0}",
-      "yamlunknownfield": "未知字段 {0} 将被忽略",
-      "yamlversioninvalid": "apiVersion 不受支持，当前仅支持 {0}"
+      "loopitemvar": "循环项变量"
     }
   },
   "nmaspt": {
@@ -11738,6 +11672,71 @@
   },
   "nmautoexec": {
     "autoexecaichatsessioninvalidexception": "当前自动化 AI 会话配置无效，请关闭助手后重新打开",
+    "autoexeccombopversionyamlgenerateapi": {
+      "getname": "生成组合工具版本 YML",
+      "input": {
+        "param": {
+          "help": {
+            "config": "待转换的组合工具版本配置，字段结构与组合工具版本保存接口一致"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "result": "YML 生成结果"
+          }
+        }
+      }
+    },
+    "autoexeccombopversionyamlhelpapi": {
+      "getname": "获取组合工具 YML 字段帮助",
+      "input": {
+        "param": {
+          "help": {
+            "config": "当前版本快照，用于读取固定工具版本元数据；接口只读，不保存或返回部分配置。"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "result": "YML 字段帮助结果"
+          }
+        }
+      }
+    },
+    "autoexeccombopversionyamlparseapi": {
+      "getname": "解析并校验组合工具版本 YML",
+      "input": {
+        "param": {
+          "desc": {
+            "yaml": "组合工具版本 YML"
+          },
+          "help": {
+            "baseconfig": "原始配置快照，用于稳定节点/组绑定和固定版本。格式 1 还保留原先未开放的业务设置；格式 2 按完整业务快照解析。",
+            "yaml": "使用 opName、profileName 及显式引用编辑业务配置。格式 2 开放阶段执行方式、阶段组配置、作业参数和场景，删除可选字段即清空或恢复默认；系统字段不能覆盖内部绑定。支持 IF/LOOP 嵌套。"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "code": "问题编码",
+            "column": "列号",
+            "config": "解析后的组合工具版本配置",
+            "issuelist": "错误列表",
+            "line": "行号",
+            "message": "问题说明",
+            "path": "YML 字段路径",
+            "result": "YML 解析结果",
+            "valid": "是否校验通过",
+            "warninglist": "警告列表",
+            "yaml": "组合工具版本 YML"
+          }
+        }
+      }
+    },
     "autoexecjoblogchatcontextlabel": "当前日志：{0}",
     "autoexecjoblogchatpermissiondeniedexception": "当前用户没有查看自动化作业日志的权限，无法继续该 AI 会话",
     "autoexecjoblogchatselectedlog": "选中日志",
@@ -11751,7 +11750,7 @@
     "autoexecscriptchatunnamed": "未命名脚本",
     "autoexecskill": "自动化Skill",
     "autoexecskillactionnotallowedexception": "当前状态“{1}”不允许执行Skill操作“{0}”",
-    "autoexecskillagenticactioninvalid": "已确认的Agentic执行只允许action\u003dexecute，收到“{0}”",
+    "autoexecskillagenticactioninvalid": "已确认的Agentic执行只允许action=execute，收到“{0}”",
     "autoexecskillagenticcalllimit": "Agentic执行已达到最大工具调用次数{0}",
     "autoexecskillagenticduplicate": "工具“{0}”使用相同参数的第二次调用已被阻断",
     "autoexecskillagenticemptyanswerfallback": "模型重试后仍未生成最终报告。以下为服务端根据真实工具结果生成的执行证据，不包含推测性根因：",
@@ -11911,7 +11910,459 @@
         "jobid": "跨步骤执行上下文 Snowflake ID",
         "reserverunpath": "是否保留执行目录"
       }
-    }
+    },
+    "yamlbindingambiguous": "无法唯一对应原有节点或组配置，请保留明确的业务绑定；请在图形化编辑器中处理拆分、合并或重名节点的歧义",
+    "yamlconfigconflict": "配置项互斥或不适用于当前执行方式，请与图形化配置规则保持一致",
+    "yamlconfiginvalid": "组合工具配置校验失败：{0}",
+    "yamlconstantambiguous": "对象常量包含保留的 mappingMode 字段或与参数映射结构冲突，无法无歧义转换",
+    "yamldeleteoptional": "删除后清空或恢复图形化默认值；内部绑定不变",
+    "yamldeleterequired": "不可删除；缺失时校验失败",
+    "yamlduplicatevalue": "{0} 的值 {1} 重复",
+    "yamlempty": "YML 内容不能为空",
+    "yamlenuminvalid": "字段 {0} 的值 {1} 不在允许范围内",
+    "yamlfielddetails": {
+      "controldatalist": "静态选项列表，沿用图形化选项对象结构，不把列表写成字符串。",
+      "controldatasource": "控件数据来源选择，沿用图形化支持的值并配置对应静态选项或矩阵。",
+      "controldefaultvalue": "控件内部默认值，使用该控件既有数据结构。",
+      "controlfilter": "控件数据源过滤条件，沿用图形化结构，与执行目标 filter 不混用。",
+      "controlgrouplist": "用户选择控件的用户组／角色范围，沿用既有控件结构。",
+      "controlismultiple": "控件多选开关，沿用该控件已有配置值；与参数必填无关。",
+      "controlisrequired": "控件校验开关，布尔 true／false；不同于参数定义 isRequired 的数字 0／1。",
+      "controlmapping": "矩阵字段到控件选项的映射，沿用原控件结构。",
+      "controlmatrixlabel": "已有矩阵的唯一标识，替代内部 matrixUuid；不能通过 YML 创建或修改共享矩阵。",
+      "controlnodetype": "节点控件允许的节点类型，沿用对应控件定义。",
+      "controltype": "控件配置中的类型，需符合当前参数控件的结构，不是工具入参元数据。",
+      "controlvalidatelist": "控件校验规则列表，沿用图形化支持的规则。",
+      "executeblacklist": "已有资源的黑名单列表，使用业务标识解析；不要与目标来源配置混淆。",
+      "executeexecutenodeconfig": "目标来源对象：selectNodeList、inputNodeList、filter、paramList、preOutputList 只配置一种；切换时删除旧来源。",
+      "executeexecuteuser": "执行用户常量直接写用户名；引用作业参数时使用 mappingMode: runtimeparam。未预置时按全局／作业规则补齐。",
+      "executeispresetexecuteconfig": "1：允许按需预置本阶段协议、用户、目标、并发等选项，不要求全部填写。0：关闭并清空预置内容。查看关联场景获取完整示例。",
+      "executeispresetrunnergroup": "1：允许预置本阶段 Runner 组／标签；0：清空本阶段 Runner 配置，使用全局／作业配置。",
+      "executeparallelcount": "并发数，正整数；parallelPolicy 为 parallel 时填写。与本层 executeConfig 外的 roundCount 互斥。",
+      "executeparallelpolicy": "parallel 配 executeConfig.parallelCount；roundCount 配上一级 roundCount，两种数量互斥。取消策略需一并删除数量字段。",
+      "executeprecondition": "沿用图形化前置条件结构，用于约束目标筛选；不是 IF 条件表达式，不另造条件语法。",
+      "executeprotocol": "协议名称及可选端口组成的对象，如 name: ssh、port: 22。阶段未预置时由全局／作业规则补齐。",
+      "executerunnergroup": "Runner 组常量填组名称，'-1' 表示自动分配；也可明确引用作业参数，不能填内部组 ID。",
+      "executerunnergrouptag": "Runner 组标签使用名称列表，或明确作业参数引用。空选择不输出，不等同于开启预置开关。",
+      "executewhentospecify": "全局目标指定时机：now 现在指定，runtime 创建作业时指定，runtimeparam 使用作业参数。runtime 会清空 executeNodeConfig。",
+      "executewhitelist": "已有资源的白名单列表，使用 IP、端口、名称和类型定位，不填写内部资源 ID。",
+      "groupexecstrategy": "oneShot 使用阶段自己的配置；grayScale 按组分批，组执行配置与阶段 execRound 共同决定执行方式。",
+      "groupexecuteconfig": "组级执行配置由本组维护，grayScale 时在这里配置组目标和分批策略，不复制到阶段。",
+      "groupphases": "本阶段组的阶段列表，至少一个阶段。阶段名用于稳定匹配与引用，不按新位置重新绑定。",
+      "grouproundcount": "分批数量，正整数，与本层 executeConfig 同级。对应 executeConfig.parallelPolicy: roundCount，不能同时设置 parallelCount。",
+      "mappingmappingmode": "明确的参数来源标记；常量直接写值。运行参数、上游输出、预置参数和全局参数使用对应模式。",
+      "mappingvalue": "参数值或引用地址；除 isempty 外必须提供，引用结构取决于 mappingMode。",
+      "nodeip": "节点 IP 地址；手工节点必填，资源节点用于业务定位。",
+      "nodename": "已有资源的节点名称，作为消歧条件；不会重命名资源。",
+      "nodeport": "节点端口，用于区分同 IP 的资源；不是全局协议定义。",
+      "nodetypename": "已有资源类型名称，作为消歧条件；不填写类型 ID。",
+      "operationarg": "自由参数按列表顺序传递；元素可为常量或明确引用，不要靠重排修正内部绑定。",
+      "operationcondition": "native/IF-Block 的条件表达式，沿用原生工具语法；必须与 if／else 分支一起配置。",
+      "operationelse": "条件不满足时执行的工具列表；不可引用 if 独有输出，省略表示没有该分支。",
+      "operationfailignore": "0：工具失败时不忽略错误；1：按底座失败忽略策略继续。显式 0 也是有效业务配置。",
+      "operationif": "条件满足时执行的工具列表；if 和 else 至少一个非空，不可引用 else 独有的输出。",
+      "operationloopitems": "native/LOOP-Block 的循环数据表达式，沿用图形化原生工具约束；需同时指定 loopItemVar 和 operations。",
+      "operationloopitemvar": "循环单项的变量名称，供循环体使用；不是作业参数定义。",
+      "operationoperations": "LOOP 循环体中的工具列表，可继续嵌套 IF／LOOP；块内输出不能从块外引用。",
+      "operationopname": "使用实际工具名称定位工具，不填写内部 ID；同名工具必须能沿用明确绑定，否则报错。",
+      "operationopt": "工具输入参数映射；YML 使用工具定义的英文 key，中文名称和参数说明在帮助中查看。兼容已有中文显示名写法，重名用“名称 [key]”。常量直接写值，引用用明确映射。",
+      "operationprofilename": "选择已有预置参数集名称；配合 opt 下 mappingMode: profile，不能用 profileId 覆盖绑定。",
+      "paramconfig": "参数控件配置，沿用图形化结构；仅调整本版本参数，不修改共享矩阵等数据源。",
+      "paramdefaultvalue": "参数默认值，数据结构与控件匹配；0、false 和合法空字符串均保留，不当作未配置。",
+      "paramdescription": "参数用途说明，作为业务数据原样保留，不翻译用户输入。",
+      "parameditable": "1：创建作业时可编辑；0：不可编辑。省略时默认 1。",
+      "paramisrequired": "1：作业参数必填；0：允许不填。省略时默认 0。",
+      "paramkey": "用户定义的英文参数 key，可编辑；修改后同步更新引用，不能因中文显示名而删除。",
+      "paramname": "用户定义的显示名称；中文重复时引用使用“名称 [key]”，无名称则回退 key。",
+      "paramtype": "作业参数控件类型，是业务选择；填写图形化支持的控件类型，config 需与该控件匹配。",
+      "phaseexecround": "仅用于 grayScale 组中的 runner／sqlfile 阶段：first 首批、middle 中间批次、last 末批。middle 不是每批执行。",
+      "phaseexecuteconfig": "阶段预置配置；target／runner_target 使用 isPresetExecuteConfig，runner 使用 isPresetRunnerGroup，grayScale 组改用组级配置。",
+      "phaseoperations": "阶段工具执行列表，至少一个工具；顺序决定执行先后，引用只能指向可达的先前输出。",
+      "phasephasename": "阶段名称；引用中必须与来源阶段一致，重命名阶段后同步更新相关引用。",
+      "phasephasetype": "执行方式需与非 native 工具兼容；target／runner_target 可共存，纯 native 阶段需显式填写。",
+      "phaseroundcount": "分批数量，正整数，与本层 executeConfig 同级。对应 executeConfig.parallelPolicy: roundCount，不能同时设置 parallelCount。",
+      "protocolname": "已有协议名称；与 port 一起定位协议。无法唯一匹配且没有原绑定时需补全端口。",
+      "protocolport": "协议端口，可省略但重名协议可能需要它消歧；不会修改共享协议定义。",
+      "referenceopletter": "仅用于重名来源的稳定引用地址，沿用系统生成值；不是工具自身可编辑编号。",
+      "referenceopname": "使用实际工具名称定位工具，不填写内部 ID；同名工具必须能沿用明确绑定，否则报错。",
+      "referenceoutput": "来源工具的输出参数显示名或英文 key；必须存在于实际工具版本并在引用位置可达。",
+      "referencephasename": "阶段名称；引用中必须与来源阶段一致，重命名阶段后同步更新相关引用。",
+      "rootdefaultscenarioname": "默认场景名称必须出现在 scenarioList 中；删除后本版本不再指定默认场景。",
+      "rootexecuteconfig": "配置全局协议、用户、Runner 和执行目标，为未预置的阶段／组提供选项；不使用阶段预置开关。",
+      "rootroundcount": "分批数量，正整数，与本层 executeConfig 同级。对应 executeConfig.parallelPolicy: roundCount，不能同时设置 parallelCount。",
+      "rootrunflow": "按列表顺序配置阶段组；每组包含 phases 和独立执行选项。不能填写 groupNo 或 UUID。",
+      "rootruntimeparamlist": "本版本作业参数定义。保留英文 key、显示名和控件类型；修改或删除后需同步更新所有引用。",
+      "rootscenariolist": "按已有场景名称绑定阶段列表，仅修改本版本关联，不创建或修改共享场景。",
+      "scenariocombopphasenamelist": "该场景包含的阶段名称列表，名称必须在 runFlow 中存在。",
+      "scenarioscenarioname": "已有场景名称；只绑定到当前版本，不修改共享场景定义。",
+      "targetfilter": "沿用资源中心筛选结构，例如 ipList；复杂过滤器从图形化现有配置获取，不使用自定义查询字符串。",
+      "targetinputnodelist": "手工节点列表，至少提供 IP；不要求资源中心已有对应记录。",
+      "targetparamlist": "提供目标节点数据的作业参数名称列表，参数需先在 runtimeParamList 定义，可用显示名或英文 key。",
+      "targetpreoutputlist": "来源阶段、工具和输出参数组成的引用对象；来源阶段必须先执行，不能引用当前阶段的工具来确定当前阶段目标。",
+      "targetselectnodelist": "从资源中心选择的节点列表，必须定位已有资源；重名时补全 IP、端口、名称及类型或沿用明确绑定。"
+    },
+    "yamlfieldhelp": "YML 字段帮助",
+    "yamlfieldrequired": "缺少必填字段 {0}",
+    "yamlfields": {
+      "controldatalist": "静态选项",
+      "controldatasource": "数据源",
+      "controldefaultvalue": "控件默认值",
+      "controlfilter": "过滤条件",
+      "controlgrouplist": "用户组角色范围",
+      "controlismultiple": "多选",
+      "controlisrequired": "必填校验",
+      "controlmapping": "字段映射",
+      "controlmatrixlabel": "矩阵唯一标识",
+      "controltype": "控件类型",
+      "controlvalidatelist": "校验规则",
+      "executeblacklist": "黑名单",
+      "executeexecutenodeconfig": "执行目标",
+      "executeispresetexecuteconfig": "预置执行目标",
+      "executeispresetrunnergroup": "预置 Runner 组",
+      "executeparallelcount": "并发数",
+      "executeprecondition": "前置条件",
+      "executeprotocol": "连接协议",
+      "executerunnergroup": "Runner 组",
+      "executerunnergrouptag": "Runner 组标签",
+      "executewhentospecify": "目标指定方式",
+      "executewhitelist": "白名单",
+      "groupexecstrategy": "执行策略",
+      "groupexecuteconfig": "组执行配置",
+      "groupphases": "阶段",
+      "grouproundcount": "批次数量",
+      "mappingmappingmode": "参数来源",
+      "mappingvalue": "参数值或引用",
+      "nodeip": "IP 地址",
+      "nodeport": "端口",
+      "nodetypename": "资源类型",
+      "operationarg": "自由参数",
+      "operationcondition": "IF 条件",
+      "operationelse": "不满足条件分支",
+      "operationif": "满足条件分支",
+      "operationloopitems": "循环数据",
+      "operationloopitemvar": "循环变量",
+      "operationoperations": "循环工具列表",
+      "operationopname": "工具名称",
+      "operationopt": "输入参数",
+      "paramconfig": "控件配置",
+      "paramdescription": "说明",
+      "parameditable": "可编辑",
+      "paramkey": "参数英文名",
+      "paramname": "参数中文名",
+      "paramtype": "控件类型",
+      "phaseexecround": "执行轮次",
+      "phaseexecuteconfig": "阶段执行配置",
+      "phaseoperations": "工具列表",
+      "phasephasename": "阶段名称",
+      "phaseroundcount": "批次数量",
+      "protocolname": "协议名称",
+      "protocolport": "协议端口",
+      "referenceopletter": "重名来源地址",
+      "referenceopname": "来源工具",
+      "referenceoutput": "输出参数",
+      "referencephasename": "来源阶段",
+      "rootdefaultscenarioname": "默认场景",
+      "rootexecuteconfig": "全局执行配置",
+      "rootroundcount": "批次数量",
+      "rootrunflow": "阶段组",
+      "rootruntimeparamlist": "作业参数",
+      "rootscenariolist": "场景",
+      "scenariocombopphasenamelist": "场景阶段列表",
+      "scenarioscenarioname": "场景名称",
+      "targetfilter": "资源筛选条件",
+      "targetinputnodelist": "手工输入节点",
+      "targetparamlist": "作业参数引用",
+      "targetpreoutputlist": "上游输出引用",
+      "targetselectnodelist": "选择的资源"
+    },
+    "yamlfieldtypeinvalid": "字段 {0} 的数据类型不正确",
+    "yamlformatversion": "YML 格式版本",
+    "yamlformatversionhelp": "不传或 1：兼容旧格式并保留未开放配置；2：完整版本配置，删除可选字段即清空或恢复默认。版本信息不写入正文",
+    "yamlguide": {
+      "batches": {
+        "parallel": {
+          "notes": "5 为示例并发数；删除阶段层 roundCount，保留已有协议、用户及目标。",
+          "title": "并发执行"
+        },
+        "rounds": {
+          "notes": "roundCount 与 executeConfig 同级；删除 executeConfig.parallelCount，保留已有协议、用户及目标。",
+          "title": "分批执行"
+        },
+        "step1": "非分批组中的目标阶段需要开启 isPresetExecuteConfig；片段合并到阶段而不是 executeConfig 内。",
+        "step2": "parallelPolicy: parallel 对应 executeConfig.parallelCount；parallelPolicy: roundCount 对应阶段层 roundCount。",
+        "step3": "示例中的 5 不是默认值。取消策略时删除 parallelPolicy、parallelCount 和 roundCount；保留已有连接与目标配置。",
+        "summary": "并发数与批次数量的层级不同，切换时需要删除互斥字段。",
+        "title": "阶段并发与分批"
+      },
+      "blocks": {
+        "nested": {
+          "notes": "合并到阶段 P，替换示例工具、输入输出参数、循环列表表达式 items 和条件 true；保留既有执行树。",
+          "title": "IF 内 LOOP 的输出引用"
+        },
+        "step1": "IF 使用 condition 和 if／else，至少保留一个非空分支；LOOP 使用 loopItems、loopItemVar、operations。",
+        "step2": "示例是阶段 P 内 IF 包含 LOOP，循环内先执行 source 再由 consume 引用输出；items 和条件需替换成业务表达式。",
+        "step3": "同分支先执行的输出可引用；不能跨 if／else 互斥分支，也不能从块外引用只在块内产生的输出。",
+        "summary": "子工具沿用普通工具结构，引用必须在实际执行路径上可达。",
+        "title": "IF／LOOP 嵌套引用"
+      },
+      "delete": {
+        "execute": "删除只清空当前层级该选项；阶段／组未预置的选项由底座按全局／创建作业规则补齐，不从旧 YML 配置自动补回。",
+        "parallel": "切换为 parallel 时同时删除同层 roundCount；切换为 roundCount 时删除 executeConfig.parallelCount。取消策略时三个字段一并删除，避免留下互斥或缺失配置。",
+        "preset": "删除或设为 0：清除本阶段的 {0}，以及阶段层 roundCount；内部绑定不变，未预置项按底座规则由全局／创建作业时补齐。",
+        "references": "删除会清空本版本对应定义／绑定；仍有引用时转换失败并报告引用路径，不会保存部分配置。",
+        "runner": "删除或设为 0：清除本阶段 runnerGroup、runnerGroupTag，恢复使用全局／作业 Runner 配置。"
+      },
+      "enums": {
+        "editable": {
+          "0": "创建作业时不可编辑",
+          "1": "创建作业时可编辑"
+        },
+        "execround": {
+          "first": "首批执行",
+          "last": "末批执行",
+          "middle": "中间批次执行，不是每批执行"
+        },
+        "execstrategy": {
+          "grayScale": "按阶段组分批",
+          "oneShot": "一次执行"
+        },
+        "failignore": {
+          "0": "不忽略失败",
+          "1": "忽略失败"
+        },
+        "ispresetexecuteconfig": {
+          "0": "关闭并清除阶段预置目标配置",
+          "1": "开启按需预置，关联字段不要求全部填写"
+        },
+        "ispresetrunnergroup": {
+          "0": "清除阶段 Runner 组及标签",
+          "1": "开启阶段 Runner 预置"
+        },
+        "isrequired": {
+          "0": "非必填"
+        },
+        "mappingmode": {
+          "constant": "常量，建议直接写值",
+          "globalparam": "全局参数引用",
+          "isempty": "明确不传值，无需 value",
+          "prenodeoutputparam": "上游工具输出值",
+          "prenodeoutputparamkey": "上游工具输出键",
+          "profile": "预置参数集参数",
+          "runtimeparam": "作业参数引用"
+        },
+        "parallelpolicy": {
+          "parallel": "使用 parallelCount 并发数",
+          "roundCount": "使用上一级 roundCount 分批数量"
+        },
+        "phasetype": {
+          "runner": "Runner 执行",
+          "runner_target": "Runner 面向目标执行",
+          "sqlfile": "SQL 文件执行",
+          "target": "目标节点执行"
+        },
+        "whentospecify": {
+          "now": "现在指定目标",
+          "runtime": "创建作业时指定，清空当前目标配置",
+          "runtimeparam": "使用作业参数提供目标"
+        }
+      },
+      "global": {
+        "now": {
+          "notes": "合并根层 executeConfig。替换协议、执行用户和 IP，不要额外添加阶段预置开关。",
+          "title": "现在指定全局目标"
+        },
+        "runtime": {
+          "notes": "runtime 会移除正文 executeNodeConfig；运行时再选择目标。",
+          "title": "创建作业时指定目标"
+        },
+        "step1": "片段合并到 YML 根层级的 executeConfig，不能放进 runFlow 条目；全局无需预置开关。",
+        "step2": "whenToSpecify: now 现在配置目标；runtime 在创建作业时指定，正文中的目标配置会被清空。",
+        "step3": "协议使用名称和端口，执行用户直接写值或明确参数引用；Runner '-1' 为自动分配。",
+        "summary": "配置未在阶段／阶段组预置的全局选项。",
+        "title": "全局执行配置"
+      },
+      "group": {
+        "gray": {
+          "notes": "这是一个 runFlow 条目，不是完整文档。示例工具名需替换；合并阶段列表，勿覆盖原阶段或重排重复绑定。",
+          "title": "组级分批及准备阶段"
+        },
+        "step1": "设置组级 execStrategy: grayScale；组 roundCount 与组 executeConfig 同级，不能写 groupNo。",
+        "step2": "执行目标及组级并发策略放到组 executeConfig；不要用阶段预置开关控制组配置。",
+        "step3": "runner／sqlfile 阶段通过 execRound 选择 first、middle、last；目标阶段不使用该选项。示例 phases 仅演示层级，需合并而非覆盖现有阶段。",
+        "summary": "分批配置归阶段组所有，不复制到每个阶段。",
+        "title": "阶段组分批及执行轮次"
+      },
+      "output": {
+        "reference": {
+          "notes": "合并到阶段 P；替换工具名和参数名，并保留现有 operations，不能覆盖整份配置。",
+          "title": "先执行再引用"
+        },
+        "step1": "示例 operations 合并到阶段 P，工具名 example/source、example/consume 和输入输出参数需替换为实际定义。",
+        "step2": "mappingMode: prenodeoutputparam 的 value 必须保留明确的 phaseName、opName、output 结构，不改成 '${...}'。",
+        "step3": "输出支持中文显示名或英文 key；重名工具沿用系统给出的必要引用地址，不手工重编号，不引用后置或互斥分支。",
+        "summary": "通过阶段名、工具名及输出参数定位先执行的工具。",
+        "title": "引用上游工具输出"
+      },
+      "preset": {
+        "off": {
+          "notes": "关闭会清空预置的协议、用户、目标、并发、前置条件及黑白名单，并清空阶段 roundCount；不是仅隐藏这些字段。",
+          "title": "关闭预置目标"
+        },
+        "on": {
+          "notes": "合并到当前阶段，保留原有 operations。协议、执行用户和并发为可选预置示例；需要时将 ssh/22、deploy 替换为实际配置，5 不是默认并发数。切换目标来源时不要覆盖已有连接和并发设置。",
+          "title": "开启并配置执行目标"
+        },
+        "partial": {
+          "notes": "仅合并 executeUser；不要替换现有 executeConfig。未预置项按全局／作业规则补齐，需确认相应来源已配置。",
+          "title": "仅预置执行用户"
+        },
+        "step1": "确认阶段为 target／runner_target，且所在组不是 grayScale；合并片段到当前阶段，保留 operations。",
+        "step2": "开启 isPresetExecuteConfig: 1 后按需填写，不要求把所有关联项填满；未预置项仍使用底座的全局／作业规则。",
+        "step3": "在下方页签选择目标来源，inputNodeList 只是其中一种；仅配置一种来源并删除旧来源字段，保留协议、用户、并发与 operations。关闭开关会清除预置内容。",
+        "summary": "为目标节点阶段单独指定协议、用户、执行目标或并发策略。",
+        "title": "预置阶段执行目标"
+      },
+      "profile": {
+        "reference": {
+          "notes": "替换 example-profile 为已有参数集名，p 分别对应工具入参和参数集参数；不修改参数集本体。",
+          "title": "绑定已有预置参数"
+        },
+        "step1": "profileName 位于工具操作层，填写已有参数集名称；不能填写 profileId。",
+        "step2": "opt 下输入参数使用 mappingMode: profile；value 是预置参数集中的参数 key。",
+        "step3": "替换示例参数集与参数名，保留工具 opName；缺失或歧义会报错，不创建共享参数集。",
+        "summary": "选择已有预置参数集，不在版本 YML 中修改参数集本体。",
+        "title": "引用预置参数集"
+      },
+      "runner": {
+        "auto": {
+          "notes": "保留 '-1' 的引号，表示自动分配，不是内部组 ID。",
+          "title": "自动分配 Runner"
+        },
+        "named": {
+          "notes": "example-runner、example-tag 必须替换为已有组名和标签名；标签是列表，不是逗号分隔文本。",
+          "title": "按组名和标签选择"
+        },
+        "off": {
+          "notes": "会清空阶段 runnerGroup 和 runnerGroupTag；恢复使用全局／作业配置。",
+          "title": "关闭 Runner 预置"
+        },
+        "step1": "确认阶段类型为 runner 且所在组不是 grayScale；使用 isPresetRunnerGroup，而不是预置目标开关。",
+        "step2": "组常量填写组名称，标签填写名称列表；'-1' 表示自动分配，不填写内部 ID。",
+        "step3": "关闭开关会删除阶段 Runner 组与标签；已有重名选择仅继承明确绑定，否则需消除歧义。",
+        "summary": "为 Runner 执行阶段指定执行器组，或使用自动分配。",
+        "title": "预置 Runner 组和标签"
+      },
+      "runtime": {
+        "definition": {
+          "notes": "deployPath 为可编辑英文 key；Deployment Path 为示例显示名，/srv/example 为示例默认值。",
+          "title": "定义作业参数"
+        },
+        "reference": {
+          "notes": "先合并定义示例；替换 p 为工具真实入参。引用名称对应定义中的 name 或 key。",
+          "title": "在工具中引用"
+        },
+        "step1": "将定义示例合并进根层 runtimeParamList；保留已有参数，不要用示例列表替换整个列表。",
+        "step2": "将引用示例合并到需要参数的工具操作 opt 中；参数名 p 需替换为该工具的实际输入参数。",
+        "step3": "引用可使用显示名称或英文 key。删除或重命名参数后同步更新引用；普通 '${...}' 字符串不会被自动识别为引用。",
+        "summary": "先定义英文 key 与显示名称，再通过明确映射引用。",
+        "title": "定义并引用作业参数"
+      },
+      "scope": {
+        "group": "阶段组配置：runFlow 中的一个条目。",
+        "operation": "工具操作及 IF／LOOP 子工具；示例中的阶段名和工具名需对应实际配置。",
+        "phase": "阶段配置：runFlow[].phases[] 中的一个条目。",
+        "phaseGray": "grayScale 阶段组；execRound 只用于其中的 runner／sqlfile 阶段。",
+        "phaseRunner": "仅用于非 grayScale 阶段组中的 runner 阶段。",
+        "phaseTarget": "仅用于非 grayScale 阶段组中的 target／runner_target 阶段。不是全局或组级开关。",
+        "root": "全局版本配置，位于 YML 根层级。"
+      },
+      "targets": {
+        "filter": {
+          "applicability": "适合按资源属性动态筛选执行目标，使用资源中心已有过滤结构。",
+          "label": "过滤器",
+          "notes": "沿用资源中心 filter 结构，ipList 是已有筛选字段。复杂条件从图形化复制现有过滤结构，不编造新查询语法。",
+          "purpose": "用 filter 描述筛选条件，执行时按条件确定目标节点，不固化为手工节点列表。",
+          "title": "资源过滤器"
+        },
+        "manual": {
+          "applicability": "适合直接提供节点 IP；无需资源中心已有对应节点记录。",
+          "label": "输入文本",
+          "notes": "示例 IP 为文档地址，请替换。手工节点不要求资源中心中有对应记录。替换原目标来源而非追加第二种来源。",
+          "purpose": "图形化的“输入文本”在 YML 中对应 inputNodeList，每个条目描述一个手工节点。",
+          "title": "手工节点"
+        },
+        "output": {
+          "applicability": "需存在可引用的前置阶段，且其工具输出能提供目标节点数据。首阶段没有前置阶段，因此图形化不显示此选项；帮助仍保留供查询。",
+          "label": "上游参数",
+          "notes": "sourcePhase 必须先于当前阶段执行，example/source 的 result 必须是可用节点数据；不能引用当前阶段的工具来确定本阶段目标。",
+          "purpose": "用 preOutputList 的 phaseName、opName、output 定位前置阶段工具的输出，作为当前阶段执行目标。",
+          "title": "先前阶段的输出目标"
+        },
+        "param": {
+          "applicability": "先在 runtimeParamList 定义 type 为 node 的作业参数，并由其默认值或创建作业时提供节点数据。",
+          "notes": "先定义 node 类型的 targetNodes 作业参数，保存执行目标所需的节点数据；也可使用其中文显示名。",
+          "purpose": "用 paramList 引用一个或多个节点类型的作业参数；列表元素是参数名或英文 key，不是节点 IP。",
+          "title": "作业参数中的目标"
+        },
+        "select": {
+          "applicability": "适合选择资源中心已有节点；业务标识必须能唯一定位资源，或存在明确的原绑定。",
+          "label": "节点",
+          "notes": "替换 IP、端口、名称和类型；必须能唯一定位已有资源，或沿用明确原绑定。",
+          "purpose": "用 selectNodeList 指定已选择的资源中心节点，与无需已有资源记录的输入文本方式不同。",
+          "title": "资源中心节点"
+        },
+        "step1": "将一个示例合并到当前阶段；开启预置目标，并保留已有协议、用户和 operations。",
+        "step2": "filter、selectNodeList、inputNodeList、paramList、preOutputList 一次只配置一种；切换时删除旧来源字段，保留协议、执行用户、并发配置和 operations。",
+        "step3": "资源选择使用已有资源的业务标识；手工节点无需资源记录。参数需先定义，上游输出需来自先执行的阶段。",
+        "summary": "五种目标来源分别配置，一次只选一种。",
+        "title": "选择执行目标来源"
+      },
+      "title": "配置场景"
+    },
+    "yamlhelp": {
+      "control": "控件配置沿用图形化原有结构；矩阵、资源过滤器和校验规则保留原有协议，不在这里编辑共享数据源。",
+      "execute": "对应当前层级图形化选项。parallelPolicy=parallel 使用 parallelCount；roundCount 使用上层 roundCount，二者互斥。预置开关为 0 时清空对应预置配置。Runner 常量使用名称，-1 表示自动分配。",
+      "group": "阶段组独立维护执行策略、批次及执行配置。grayScale 启用分批策略；列表顺序确定组顺序，组编号由系统维护。",
+      "mapping": "常量直接写值；引用必须使用显式 mappingMode/value。普通 ${...} 字符串仍是常量。isempty 不填写 value。含 mappingMode 的对象常量会报歧义错误。",
+      "node": "资源以 IP、端口、名称和资源类型定位；有歧义时只能继承明确原绑定，否则报错。手工节点不要求资源中心已有记录。",
+      "operation": "按 opName 选择工具；IF-Block 使用 condition/if/else，LOOP-Block 使用 loopItems/loopItemVar/operations，子工具复用相同结构。参数常量直接写值，引用使用 mappingMode/value。",
+      "param": "保留英文 key 和显示名称，type 为图形化控件类型。默认值及 config 使用该控件既有结构。英文 key 改动或删除后需要同步更新所有引用。",
+      "phase": "phaseType 是图形化的执行方式，纯 native 阶段需显式填写。target/runner_target 相互兼容。execRound 用于分批组的 runner/sqlfile 阶段。",
+      "protocol": "使用协议名称和可选端口定位现有协议；重名时补全端口。不能修改协议定义或内部 ID。",
+      "reference": "使用阶段名、工具名和输出参数定位上游工具。重名工具引用保留系统生成的 opLetter 地址，但不能用它编辑工具本身。",
+      "root": "完整版本配置；runFlow 每项是独立阶段组。名称、权限和通知不属于版本配置。",
+      "scenario": "选择已有场景名称并关联阶段名称；这里只修改组合工具版本内的场景绑定，不修改共享场景定义。",
+      "target": "沿用资源中心过滤器结构；选择资源、手工节点、过滤器、运行参数、上游输出互斥。运行参数用显示名或英文 key。"
+    },
+    "yamlifempty": "IF-Block 的 if 和 else 不能同时为空",
+    "yamlkeylocations": "YML 字段位置索引",
+    "yamlmetadataunavailable": "无法从工具定义获取参数或预置参数集元数据，请检查工具定义及原有绑定",
+    "yamloperationduplicate": "阶段 {0} 中的操作标识 {1}_{2} 重复",
+    "yamloperationnotfound": "未找到或无法唯一定位操作 {0}",
+    "yamloutputhelp": "输出参数只读；可使用显式映射引用，来源必须在当前执行路径上先执行",
+    "yamloutputnotfound": "操作 {0} 不存在输出参数 {1}",
+    "yamlparameterinvalid": "参数 {0} 不存在或名称有歧义；请使用英文 key 或“中文名 [key]”",
+    "yamlparametermatrixinvalid": "作业参数“{0}”的配置中绑定的矩阵数据源已失效",
+    "yamlphasetypeambiguous": "无法从工具推导执行方式；完整格式的纯 native 阶段必须填写 phaseType",
+    "yamlphasetypeconflict": "阶段执行方式与工具不兼容；target 和 runner_target 可共用阶段，其他不兼容工具请拆分阶段",
+    "yamlprofilenotfound": "预置参数集 {0} 不存在",
+    "yamlreferenceambiguous": "参数引用无法唯一定位到阶段 {0} 的操作 {1}，请保留原有引用地址中的 opLetter；无法确定绑定时请使用图形化编辑器",
+    "yamlreferenceinvalid": "参数引用 {0} 的格式不正确",
+    "yamlreferenceunreachable": "参数引用指向不可达的后置操作或互斥分支：阶段 {0}，操作 {1}",
+    "yamlrequiredwhen": {
+      "ifblock": "IF-Block 需要条件；if/else 至少一个分支非空。",
+      "loopblock": "LOOP-Block 的循环配置；按原生工具约束校验。",
+      "mappingvalue": "mappingMode 不为 isempty 时必填。",
+      "nativephase": "纯 native 阶段必填；其他阶段可从兼容的工具定义推导。",
+      "parallel": "parallelPolicy=parallel 时必填。",
+      "roundcount": "同层 executeConfig.parallelPolicy=roundCount 时必填。"
+    },
+    "yamlresourceinvalid": "业务标识 {0} 不存在或无法唯一解析，请补全标识或保留明确的原绑定",
+    "yamlrootinvalid": "YML 根节点必须是对象",
+    "yamlsyntaxinvalid": "YML 语法错误：{0}",
+    "yamlsystemfieldreadonly": "字段 {0} 由系统自动确定，必须与自动解析结果 {1} 一致，不能手动覆盖",
+    "yamlunknownfield": "不支持字段 {0}，请删除该字段；系统内部字段不能通过 YML 编辑",
+    "yamlversioninvalid": "不支持 YML 格式版本 {0}，仅支持 1 和 2"
   },
   "nmcaa": {
     "deleteattrapi": {
@@ -11971,7 +12422,7 @@
       "input": {
         "param": {
           "desc": {
-            "action": "append:只添加;update:只更新;all:添加\u0026更新"
+            "action": "append:只添加;update:只更新;all:添加&更新"
           }
         }
       }
@@ -12287,7 +12738,7 @@
       "input": {
         "param": {
           "desc": {
-            "authlist": "授权列表，为空代表清空所有授权，范例：{authType:\u0027user\u0027,authUuid:\u0027xxxx\u0027,action:\u0027cimaange\u0027}"
+            "authlist": "授权列表，为空代表清空所有授权，范例：{authType:'user',authUuid:'xxxx',action:'cimaange'}"
           }
         }
       }
@@ -12415,7 +12866,7 @@
         "param": {
           "desc": {
             "attr": "需要返回的属性，不定义则返回所有属性，空数组代表不返回任何属性",
-            "dsl": "查询表达式，逻辑运算符支持\u0026\u0026、||，关系运算符支持：\u003d\u003d、\u003e\u003d、\u003c\u003d、\u003e、\u003c、!\u003d、like、not like、include、exclude。如果需要搜索关系或引用属性字段，可以使用a.b表示，例如env.name \u003d\u003d \"STG\" \u0026\u0026 (port \u003d\u003d 80 || port \u003d\u003d 443 )",
+            "dsl": "查询表达式，逻辑运算符支持&&、||，关系运算符支持：==、>=、<=、>、<、!=、like、not like、include、exclude。如果需要搜索关系或引用属性字段，可以使用a.b表示，例如env.name == \"STG\" && (port == 80 || port == 443 )",
             "rel": "需要返回的关系，不定义则返回所有关系，空数组代表不返回任何关系"
           }
         }
@@ -12450,7 +12901,7 @@
         "param": {
           "desc": {
             "groupby": "分组属性的uuid",
-            "mode": "搜索模式，支持page和api两种，主要影响返回的数据结构，page是默认模式，用于页面展示，api会返回字段名，用于api调用，api模式仅支持searchMode\u003dnormal这种场景",
+            "mode": "搜索模式，支持page和api两种，主要影响返回的数据结构，page是默认模式，用于页面展示，api会返回字段名，用于api调用，api模式仅支持searchMode=normal这种场景",
             "searchmode": "normal:视图列表模式、group:视图列表分组模式、data:数据模式"
           }
         }
@@ -13200,7 +13651,7 @@
             "targetphasename": "目标阶段名"
           },
           "help": {
-            "appsystemabbrnamelist": "isAllAppSystem\u003d0才生效",
+            "appsystemabbrnamelist": "isAllAppSystem=0才生效",
             "phaselist": "[{\"name\":\"阶段名\",\"groupSort\":\"阶段组序号\"}]"
           }
         }
@@ -14042,7 +14493,7 @@
         "param": {
           "desc": {
             "actionlist": "动作列表",
-            "includeactionlist": "需要的返回的权限action，用于限制返回没必要的权限。如：[\u0027view\u0027,\u0027edit\u0027,\u0027scenario\u0027,\u0027env\u0027]"
+            "includeactionlist": "需要的返回的权限action，用于限制返回没必要的权限。如：['view','edit','scenario','env']"
           }
         }
       },
@@ -14191,7 +14642,7 @@
             "added": "多个“,”分割",
             "date": "格式yyyy-MM-dd hh:mm:ss",
             "deleted": "多个“,”分割",
-            "message": "包含\u0027--nodeploy\u0027时不会执行动作",
+            "message": "包含'--nodeploy'时不会执行动作",
             "modified": "多个“,”分割"
           }
         }
@@ -15352,15 +15803,15 @@
         "param": {
           "desc": {
             "dependencelist": {
-              "artifactid": "dependenceList-\u003ejson中的属性，项目标识",
-              "groupid": "dependenceList-\u003ejson中的属性，项目组标识",
-              "licenses": "dependenceList-\u003ejson中的属性，版权许可，开源协议等",
+              "artifactid": "dependenceList->json中的属性，项目标识",
+              "groupid": "dependenceList->json中的属性，项目组标识",
+              "licenses": "dependenceList->json中的属性，版权许可，开源协议等",
               "name": "依赖包列表，每个元素均为JSON对象",
-              "parent": "dependenceList-\u003ejson中的属性，父依赖属性集，包含groupId、artifactId、version三个属性",
-              "scope": "dependenceList-\u003ejson中的属性，依赖作用域，默认compile",
-              "type": "dependenceList-\u003ejson中的属性，包类型，默认jar",
-              "url": "dependenceList-\u003ejson中的属性，此包在maven仓库的地址",
-              "version": "dependenceList-\u003ejson中的属性，项目版本号"
+              "parent": "dependenceList->json中的属性，父依赖属性集，包含groupId、artifactId、version三个属性",
+              "scope": "dependenceList->json中的属性，依赖作用域，默认compile",
+              "type": "dependenceList->json中的属性，包类型，默认jar",
+              "url": "dependenceList->json中的属性，此包在maven仓库的地址",
+              "version": "dependenceList->json中的属性，项目版本号"
             },
             "moduleid": "应用模块id",
             "sysid": "应用ID",
@@ -15391,11 +15842,11 @@
         "param": {
           "desc": {
             "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
-            "dest": "目标目录路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)",
+            "dest": "目标目录路径(路径一律以'/'开头，HOME本身的路径为'/')",
             "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
             "id": "版本id",
             "resourcetype": "制品类型",
-            "src": "源文件路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)"
+            "src": "源文件路径(路径一律以'/'开头，HOME本身的路径为'/')"
           }
         }
       }
@@ -15408,7 +15859,7 @@
             "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
             "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
             "id": "版本id",
-            "path": "目标路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)",
+            "path": "目标路径(路径一律以'/'开头，HOME本身的路径为'/')",
             "resourcetype": "制品类型"
           }
         }
@@ -15422,7 +15873,7 @@
             "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
             "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
             "id": "版本id",
-            "path": "目录或文件路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)",
+            "path": "目录或文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
             "resourcetype": "制品类型"
           }
         }
@@ -15437,7 +15888,7 @@
             "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
             "id": "版本id",
             "ispack": "是否打包",
-            "path": "文件路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)",
+            "path": "文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
             "resourcetype": "制品类型"
           }
         }
@@ -15451,7 +15902,7 @@
             "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
             "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
             "id": "版本id",
-            "path": "目标路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)",
+            "path": "目标路径(路径一律以'/'开头，HOME本身的路径为'/')",
             "resourcetype": "制品类型"
           }
         }
@@ -15475,7 +15926,7 @@
       "input": {
         "param": {
           "desc": {
-            "ismirror": "是否有镜像制品(环境才可能有镜像制品，type\u003denv时才需要此参数)",
+            "ismirror": "是否有镜像制品(环境才可能有镜像制品，type=env时才需要此参数)",
             "type": "查看制品的来源(build:从buildNo查看;env:从环境查看)"
           }
         }
@@ -15494,13 +15945,13 @@
         "param": {
           "desc": {
             "buildno": "buildNo(当resourceType为[mirror*|workspace]时不需要)",
-            "dest": "目标文件路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)",
+            "dest": "目标文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
             "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
             "id": "版本id",
             "name": "新文件名(重命名时需指定)",
             "operation": "操作(move:移动;rename:重命名)",
             "resourcetype": "制品类型",
-            "src": "源文件路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)"
+            "src": "源文件路径(路径一律以'/'开头，HOME本身的路径为'/')"
           }
         }
       }
@@ -15514,7 +15965,7 @@
             "envid": "环境ID(当resourceType为[build*|workspace]时不需要)",
             "fileparamname": "文件参数名称",
             "id": "版本id",
-            "path": "文件路径(路径一律以\u0027/\u0027开头，HOME本身的路径为\u0027/\u0027)",
+            "path": "文件路径(路径一律以'/'开头，HOME本身的路径为'/')",
             "resourcetype": "制品类型",
             "unpack": "是否解压"
           }
@@ -19248,8 +19699,8 @@
         "param": {
           "desc": {
             "documentidlist": "documentId数组",
-            "fromdate": "创建时间\u003e\u003dfromDate",
-            "todate": "创建时间\u003ctoDate"
+            "fromdate": "创建时间>=fromDate",
+            "todate": "创建时间<toDate"
           }
         }
       }
@@ -19527,7 +19978,7 @@
       }
     },
     "reportprocesstasktool": {
-      "description": "该工具用于上报工单。\n1. 用户必须通过服务上报工单；不同服务的参数可能不同，应使用服务名称调用 SERVICE_REPORT_PARAM_LIST 获取参数列表。\n2. 如果用户未指定服务，应调用当前用户有上报权限的服务列表工具，并提示用户提供服务名称。\n3. 用户提供部分参数后，应再次调用 SERVICE_REPORT_PARAM_LIST，检查所有必填参数并提示补充缺失数据。\n4. 参数齐全后调用当前工具上报工单。\n5. 上报失败时返回失败原因。\n6. 上报成功时返回可跳转到工单详情页的链接。链接模板为 ${homeUrl}/process.html#/task-detail?processTaskId\u003d${processTaskId}。请用返回数据替换变量，不要直接展示 URL；应生成可点击的工单标题，并在新窗口中打开。\n7. 表单数据使用以下 JSON 结构：{\"formAttributeDataList\":[{\"key\":\"表单属性key\",\"label\":\"表单属性label\",\"dataList\":\"用户输入的表单属性值\"}]}。\n8. 不要修改用户输入的数据，也不要在中文、英文或数字字符之间擅自添加空格。",
+      "description": "该工具用于上报工单。\n1. 用户必须通过服务上报工单；不同服务的参数可能不同，应使用服务名称调用 SERVICE_REPORT_PARAM_LIST 获取参数列表。\n2. 如果用户未指定服务，应调用当前用户有上报权限的服务列表工具，并提示用户提供服务名称。\n3. 用户提供部分参数后，应再次调用 SERVICE_REPORT_PARAM_LIST，检查所有必填参数并提示补充缺失数据。\n4. 参数齐全后调用当前工具上报工单。\n5. 上报失败时返回失败原因。\n6. 上报成功时返回可跳转到工单详情页的链接。链接模板为 ${homeUrl}/process.html#/task-detail?processTaskId=${processTaskId}。请用返回数据替换变量，不要直接展示 URL；应生成可点击的工单标题，并在新窗口中打开。\n7. 表单数据使用以下 JSON 结构：{\"formAttributeDataList\":[{\"key\":\"表单属性key\",\"label\":\"表单属性label\",\"dataList\":\"用户输入的表单属性值\"}]}。\n8. 不要修改用户输入的数据，也不要在中文、英文或数字字符之间擅自添加空格。",
       "label": "上报工单"
     },
     "servicereportparamlisttool": {
@@ -20132,13 +20583,13 @@
   "nmpnc": {
     "processingtaskofminehandler": {
       "content": {
-        "withouturl": "您有 \u003cspan style\u003d\"color:red\"\u003e{0}\u003c/span\u003e 条待处理工单，请前往【IT服务-\u003e工单中心-\u003e所有】，点击【我的待办】按钮查看",
-        "withurl": "您有 \u003cspan style\u003d\"color:red\"\u003e{0}\u003c/span\u003e 条待处理工单，请前往\u003ca href\u003d\"{1}\" target\u003d\"_blank\"\u003e【工单中心】\u003c/a\u003e，点击【我的待办】按钮查看"
+        "withouturl": "您有 <span style=\"color:red\">{0}</span> 条待处理工单，请前往【IT服务->工单中心->所有】，点击【我的待办】按钮查看",
+        "withurl": "您有 <span style=\"color:red\">{0}</span> 条待处理工单，请前往<a href=\"{1}\" target=\"_blank\">【工单中心】</a>，点击【我的待办】按钮查看"
       },
       "getname": "待我处理的工单",
       "preview": {
-        "withouturl": "您有 \u003cspan style\u003d\"color:red\"\u003e5\u003c/span\u003e 条待处理工单，请前往【IT服务-\u003e工单中心-\u003e所有】，点击【我的待办】按钮查看",
-        "withurl": "您有 \u003cspan style\u003d\"color:red\"\u003e5\u003c/span\u003e 条待处理工单，请前往\u003ca href\u003d\"{0}\" target\u003d\"_blank\"\u003e【工单中心】\u003c/a\u003e，点击【我的待办】按钮查看"
+        "withouturl": "您有 <span style=\"color:red\">5</span> 条待处理工单，请前往【IT服务->工单中心->所有】，点击【我的待办】按钮查看",
+        "withurl": "您有 <span style=\"color:red\">5</span> 条待处理工单，请前往<a href=\"{0}\" target=\"_blank\">【工单中心】</a>，点击【我的待办】按钮查看"
       },
       "runtime": {
         "label": {
@@ -20501,7 +20952,7 @@
         },
         "getcontent": {
           "1": "工单",
-          "2": "已流转至【${DATA.step.name}】；\u003cbr\u003e"
+          "2": "已流转至【${DATA.step.name}】；<br>"
         },
         "gettitle": {
           "1": "步骤激活提醒——"
@@ -20513,8 +20964,8 @@
         },
         "getcontent": {
           "1": "工单",
-          "2": "已回退至【${DATA.step.name}】；\u003cbr\u003e",
-          "3": "原因：【${DATA.content}】 ；\u003cbr\u003e"
+          "2": "已回退至【${DATA.step.name}】；<br>",
+          "3": "原因：【${DATA.content}】 ；<br>"
         },
         "gettitle": {
           "1": "步骤退回提醒——"
@@ -20526,8 +20977,8 @@
         },
         "getcontent": {
           "1": "工单",
-          "2": "中，【${DATA.step.name}】步骤流转失败；\u003cbr\u003e",
-          "3": "原因：【${DATA.step.error}】  ；\u003cbr\u003e"
+          "2": "中，【${DATA.step.name}】步骤流转失败；<br>",
+          "3": "原因：【${DATA.step.error}】  ；<br>"
         },
         "gettitle": {
           "1": "步骤失败提醒——"
@@ -20539,8 +20990,8 @@
         },
         "getcontent": {
           "1": "工单",
-          "2": "中，【${DATA.step.name}】步骤已挂起；\u003cbr\u003e",
-          "3": "原因：因【步骤名称】步骤回退导致  ；\u003cbr\u003e"
+          "2": "中，【${DATA.step.name}】步骤已挂起；<br>",
+          "3": "原因：因【步骤名称】步骤回退导致  ；<br>"
         },
         "gettitle": {
           "1": "步骤挂起提醒——"
@@ -20563,8 +21014,8 @@
         },
         "getcontent": {
           "1": "【${DATA.currentUserName}】已将工单",
-          "2": "的【${DATA.step.name}】步骤撤回；\u003cbr\u003e",
-          "3": "原因：【${DATA.content}】 ；\u003cbr\u003e"
+          "2": "的【${DATA.step.name}】步骤撤回；<br>",
+          "3": "原因：【${DATA.content}】 ；<br>"
         },
         "gettitle": {
           "1": "步骤撤回提醒——"
@@ -20576,7 +21027,7 @@
         },
         "getcontent": {
           "1": "工单",
-          "2": "的【${DATA.step.name}】步骤已由处理人【${DATA.step.majorUser.userName}】受理；\u003cbr\u003e"
+          "2": "的【${DATA.step.name}】步骤已由处理人【${DATA.step.majorUser.userName}】受理；<br>"
         },
         "gettitle": {
           "1": "处理人响应提醒——"
@@ -20588,7 +21039,7 @@
         },
         "getcontent": {
           "1": "工单",
-          "2": "的【${DATA.step.name}】步骤已处理完成；\u003cbr\u003e"
+          "2": "的【${DATA.step.name}】步骤已处理完成；<br>"
         },
         "gettitle": {
           "1": "步骤完成提醒——"
@@ -20601,8 +21052,8 @@
         "getcontent": {
           "1": "工单",
           "2": "中，【${DATA.currentUserName}】已将【${DATA.step.name}】步骤转交给",
-          "3": "处理；\u003cbr\u003e",
-          "4": "原因：【${DATA.content}】 ；\u003cbr\u003e"
+          "3": "处理；<br>",
+          "4": "原因：【${DATA.content}】 ；<br>"
         },
         "gettitle": {
           "1": "步骤转交提醒——"
@@ -20614,7 +21065,7 @@
         },
         "getcontent": {
           "1": "工单",
-          "2": "中，【${DATA.currentUserName}】发起了一条催办通知，请尽快处理；\u003cbr\u003e"
+          "2": "中，【${DATA.currentUserName}】发起了一条催办通知，请尽快处理；<br>"
         },
         "gettitle": {
           "1": "您收到了一条催办提醒——"
@@ -20675,8 +21126,8 @@
       "getname": "清除工单步骤后台执行记录表数据"
     },
     "defaultslacalculatehandler": {
-      "description": "1. 正常情况下，步骤处理耗时为完成时间减去激活时间。\u003cbr\u003e2. 如果步骤处理期间发生暂停，则暂停到恢复之间的时间不计入耗时。\u003cbr\u003e3. 如果步骤被多次重新激活，则累计每个处理时间段。\u003cbr\u003e4. 如果两个或多个步骤的处理时间段重叠，则重叠部分仅计算一次。",
-      "getdescription": "耗时计算规则如下：\u003cbr\u003e",
+      "description": "1. 正常情况下，步骤处理耗时为完成时间减去激活时间。<br>2. 如果步骤处理期间发生暂停，则暂停到恢复之间的时间不计入耗时。<br>3. 如果步骤被多次重新激活，则累计每个处理时间段。<br>4. 如果两个或多个步骤的处理时间段重叠，则重叠部分仅计算一次。",
+      "getdescription": "耗时计算规则如下：<br>",
       "getname": "处理时效计算规则（出厂默认）"
     }
   },
@@ -22299,7 +22750,7 @@
       "workerteam": "处理组",
       "workerteamaccountphone": "处理组成员电话",
       "workerteamemail": "处理组邮箱",
-      "workerteamleaderphone": "处理组电话\u0026领导电话",
+      "workerteamleaderphone": "处理组电话&领导电话",
       "workerteammemberemail": "处理组成员邮箱",
       "workerteamphone": "处理组电话",
       "workerteamuuid": "处理组uuid",

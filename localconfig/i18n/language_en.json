@@ -162,7 +162,7 @@
     "filetype": "Attachment Type",
     "filter": "Filter conditions",
     "focususerlist": "List of Followers",
-    "focususeruuidlist": "List of Followers\u0027 Uuids",
+    "focususeruuidlist": "List of Followers' Uuids",
     "form": "Form",
     "greaterthan": "Greater Than",
     "greaterthanorequal": "Greater Than or Equal To",
@@ -469,7 +469,7 @@
   "enum": {
     "rdm": {
       "fullindextype": {
-        "issue": "R\u0026D management tasks"
+        "issue": "R&D management tasks"
       }
     }
   },
@@ -504,7 +504,7 @@
     },
     "autoexec_modify": {
       "getauthdisplayname": "Automation Administrator Permission",
-      "getauthintroduction": "Access all functions under Automation \u003e Configuration."
+      "getauthintroduction": "Access all functions under Automation > Configuration."
     },
     "autoexec_schedule_modify": {
       "getauthdisplayname": "Scheduled Job Management Permission",
@@ -2331,7 +2331,7 @@
       "autoexecparamvaluerepeatexception": "In phase \"{0}\", Tool \"{1}\" has parameter {2} ({3}) with duplicate value {4}."
     },
     "autoexecprofilehasbeenreferredexception": {
-      "autoexecprofilehasbeenreferredexception": "The current profile \u0027{0}\u0027 has been referenced and cannot be deleted"
+      "autoexecprofilehasbeenreferredexception": "The current profile '{0}' has been referenced and cannot be deleted"
     },
     "autoexecprofileishasreferenceexception": {
       "autoexecprofileishasreferenceexception": "Profile: {0} \"has been referenced and cannot be deleted"
@@ -2340,10 +2340,10 @@
       "autoexecprofileisnotfoundexception": "Preset Parameter Set \"{0}\" does not exist."
     },
     "autoexecprofilenamerepeatsexception": {
-      "autoexecprofilenamerepeatsexception": "Profile name: \u0027{0}\u0027 already exists"
+      "autoexecprofilenamerepeatsexception": "Profile name: '{0}' already exists"
     },
     "autoexecprofilenotreferencedbyoperationexception": {
-      "autoexecprofilenotreferencedbyoperationexception": "Profile: \u0027{0}\u0027 not associated with tool: {1}"
+      "autoexecprofilenotreferencedbyoperationexception": "Profile: '{0}' not associated with tool: {1}"
     },
     "autoexecprotocolisrequiredexception": {
       "autoexecprotocolisrequiredexception": "A connection protocol is required."
@@ -2370,7 +2370,7 @@
     },
     "autoexecrunnergrouprulenotmatchexception": {
       "autoexecrunnergrouprulenotmatchexception": "Runner group \"{1}\" ({2}), configured by {0}, does not satisfy the rule.",
-      "autoexecrunnergrouprulenotmatchexception_a": "The executor group \u0027{1} ({2})\u0027 set by \u0027{0}\u0027 and \u0027{3}\u0027 does not meet the rules",
+      "autoexecrunnergrouprulenotmatchexception_a": "The executor group '{1} ({2})' set by '{0}' and '{3}' does not meet the rules",
       "autoexecrunnergrouprulenotmatchexceptionwithformname": "{0} \"{3}\" configures Runner group \"{1}\" ({2}), which does not satisfy the rule."
     },
     "autoexecrunnergrouptaginvalidexception": {
@@ -2708,7 +2708,7 @@
       "mobilefiledownloadenabled": "Do you allow mobile devices to download attachments",
       "passwordexpiredays": "User password validity period (days), if it exceeds the validity period, it will be forcibly redirected to the password change page",
       "passwordneedexpiredcheck": "Do you need to verify the validity period of the user password? It defaults to 0 and does not need to be checked",
-      "tenantdefaultlanguage": "Tenant default language. Supported values: zh/en. Language priority: Cookie \u003e tenant default language \u003e browser preferred language \u003e Chinese"
+      "tenantdefaultlanguage": "Tenant default language. Supported values: zh/en. Language priority: Cookie > tenant default language > browser preferred language > Chinese"
     }
   },
   "nfcal": {
@@ -2907,15 +2907,15 @@
       "codehubprojectsourcesyncerrorexception": "Failed to obtain project list from source {0}"
     },
     "codehubrepositoryappmodulenotfoundexception": {
-      "codehubrepositoryappmodulenotfoundexception": "Warehouse: \u0027{0}\u0027 has not been associated with any application modules within the application configuration yet"
+      "codehubrepositoryappmodulenotfoundexception": "Warehouse: '{0}' has not been associated with any application modules within the application configuration yet"
     },
     "codehubrepositoryrunnernotfoundexception": {
-      "codehubrepositoryrunnernotfoundexception": "Warehouse: The application module associated with \u0027{0}\u0027 is not associated with a runner"
+      "codehubrepositoryrunnernotfoundexception": "Warehouse: The application module associated with '{0}' is not associated with a runner"
     }
   },
   "nfcea": {
     "attrvalueirregularexception": {
-      "attrvalueirregularexception_a": "The value \u0027{4}\u0027 of property \u0027{2} ({3})\u0027 in model \u0027{0} ({1})\u0027 is not a valid {5} type",
+      "attrvalueirregularexception_a": "The value '{4}' of property '{2} ({3})' in model '{0} ({1})' is not a valid {5} type",
       "attrvalueirregularexception_b": "The value \"{4}\" of property \"{2} ({3})\" in model \"{0} ({1})\" is not a valid {5} type. Configuration path: {6}, actual path: {7}"
     }
   },
@@ -2926,8 +2926,8 @@
   },
   "nfcec": {
     "attrentityvalueemptyexception": {
-      "attrentityvalueemptyexception_a": "The value of attribute \u0027{0}\u0027 cannot be empty",
-      "attrentityvalueemptyexception_b": "The value of property \u0027{2} ({3})\u0027 in model \u0027{0} ({1})\u0027 cannot be empty"
+      "attrentityvalueemptyexception_a": "The value of attribute '{0}' cannot be empty",
+      "attrentityvalueemptyexception_b": "The value of property '{2} ({3})' in model '{0} ({1})' cannot be empty"
     },
     "cicatalogisinusedexception": {
       "cicatalogisinusedexception": "The current directory node: {0} has been referenced. Please remove the reference before deleting it"
@@ -2941,45 +2941,45 @@
     "cientityauthexception": {
       "action": "You do not have permission for the {0} configuration item",
       "ciaction": "You do not have permission to configure the item for {0} \"{1} ({2})\"",
-      "cientityidnameaction": "You do not have permission to configure item \u0027{1} ({2})\u0027 for {0}",
-      "cilabelaction": "You do not have permission to configure the item for {0} \u0027{1}\u0027"
+      "cientityidnameaction": "You do not have permission to configure item '{1} ({2})' for {0}",
+      "cilabelaction": "You do not have permission to configure the item for {0} '{1}'"
     },
     "ciisabstractedexception": {
       "ciisabstractedexception_a": "Configuration item model: \"{0} ({1})\" is an abstract model and cannot directly add data. Configuration path: {2}, actual path: {3}",
-      "data": "The configuration item model \u0027{0}\u0027 is an abstract model and direct addition of data is not allowed",
-      "updateabstract": "Configuration item model \u0027{0}\u0027 has already been inherited or data already exists, cannot change whether it is an abstract model",
-      "updateparent": "The configuration item model \u0027{0}\u0027 already has data and cannot change the parent model"
+      "data": "The configuration item model '{0}' is an abstract model and direct addition of data is not allowed",
+      "updateabstract": "Configuration item model '{0}' has already been inherited or data already exists, cannot change whether it is an abstract model",
+      "updateparent": "The configuration item model '{0}' already has data and cannot change the parent model"
     },
     "cinotfoundexception": {
-      "cinotfoundexception_a": "The configuration item model \u0027{0}\u0027 does not exist",
-      "cinotfoundexception_b": "Configuration item model \u0027{0}\u0027 does not exist, configuration path: {1}, actual path: {2}",
+      "cinotfoundexception_a": "The configuration item model '{0}' does not exist",
+      "cinotfoundexception_b": "Configuration item model '{0}' does not exist, configuration path: {1}, actual path: {2}",
       "cinotfoundexception_d": "The model corresponding to the configuration item does not exist"
     },
     "citopotemplatenotfoundexception": {
-      "citopotemplatenotfoundexception": "Topology template \u0027{0}\u0027 does not exist"
+      "citopotemplatenotfoundexception": "Topology template '{0}' does not exist"
     },
     "citypenotfoundexception": {
       "citypenotfoundexception": "Model type: {0} does not exist"
     },
     "ciuniqueattrnotfoundexception": {
-      "ciuniqueattrnotfoundexception_a": "Configuration item model \u0027{0}\u0027 is missing a unique attribute, please set it",
-      "ciuniqueattrnotfoundexception_b": "The unique rule property \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 does not have a matching field configured. Please configure it first",
-      "ciuniqueattrnotfoundexception_c": "The value of the unique rule attribute \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 is empty",
-      "ciuniqueattrnotfoundexception_d": "Failed to obtain transaction hash for configuration item of model \u0027{0}\u0027, unique attribute \u0027{1}\u0027 has no value",
-      "ciuniqueattrnotfoundexception_e": "Configuration“ {0}- \u003e{1} The value of the unique key mapping attribute \u0027{3}\u0027 for ({2}) does not exist, original data: {4}",
-      "ciuniqueattrnotfoundexception_f": "The value of the unique rule attribute \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 is empty, configured path: {4}, actual path: {5}"
+      "ciuniqueattrnotfoundexception_a": "Configuration item model '{0}' is missing a unique attribute, please set it",
+      "ciuniqueattrnotfoundexception_b": "The unique rule property '{2} ({3})' of model '{0} ({1})' does not have a matching field configured. Please configure it first",
+      "ciuniqueattrnotfoundexception_c": "The value of the unique rule attribute '{2} ({3})' of model '{0} ({1})' is empty",
+      "ciuniqueattrnotfoundexception_d": "Failed to obtain transaction hash for configuration item of model '{0}', unique attribute '{1}' has no value",
+      "ciuniqueattrnotfoundexception_e": "Configuration“ {0}- >{1} The value of the unique key mapping attribute '{3}' for ({2}) does not exist, original data: {4}",
+      "ciuniqueattrnotfoundexception_f": "The value of the unique rule attribute '{2} ({3})' of model '{0} ({1})' is empty, configured path: {4}, actual path: {5}"
     },
     "ciuniqueruleattrtypeirregularexception": {
-      "ciuniqueruleattrtypeirregularexception_a": "The unique rule property \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 cannot be an expression property or a reference property",
-      "ciuniqueruleattrtypeirregularexception_b": "The unique rule attribute \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 cannot be an expression attribute",
-      "ciuniqueruleattrtypeirregularexception_c": "The unique rule property \u0027{2} ({3})\u0027 of model \u0027{0} ({1})\u0027 cannot be an expression property, configured path: {4}, actual path: {5}"
+      "ciuniqueruleattrtypeirregularexception_a": "The unique rule property '{2} ({3})' of model '{0} ({1})' cannot be an expression property or a reference property",
+      "ciuniqueruleattrtypeirregularexception_b": "The unique rule attribute '{2} ({3})' of model '{0} ({1})' cannot be an expression attribute",
+      "ciuniqueruleattrtypeirregularexception_c": "The unique rule property '{2} ({3})' of model '{0} ({1})' cannot be an expression property, configured path: {4}, actual path: {5}"
     },
     "customviewcichangeexception": {
-      "customviewcichangeexception": "The model used in the custom view \u0027{0}\u0027 has changed, causing the view query to fail. Please re edit the view configuration"
+      "customviewcichangeexception": "The model used in the custom view '{0}' has changed, causing the view query to fail. Please re edit the view configuration"
     },
     "downwardcinotfoundexception": {
-      "downwardcinotfoundexception": "Unable to find configuration item model \u0027{2}\u0027 in the downstream model of configuration item model \u0027{0} ({1})\u0027",
-      "downwardcinotfoundexception_b": "Configuration item model \u0027{2}\u0027 cannot be found in the downstream model of configuration item model \u0027{0} ({1})\u0027, configuration path: {3}, actual path: {4}"
+      "downwardcinotfoundexception": "Unable to find configuration item model '{2}' in the downstream model of configuration item model '{0} ({1})'",
+      "downwardcinotfoundexception_b": "Configuration item model '{2}' cannot be found in the downstream model of configuration item model '{0} ({1})', configuration path: {3}, actual path: {4}"
     }
   },
   "nfceg": {
@@ -2987,14 +2987,14 @@
       "globalattrisinusedexception": "The current attribute is in use and cannot be deleted"
     },
     "globalattrvalueirregularexception": {
-      "globalattrvalueirregularexception": "The value \u0027{2}\u0027 of global attribute \u0027{0} ({1})\u0027 is illegal",
+      "globalattrvalueirregularexception": "The value '{2}' of global attribute '{0} ({1})' is illegal",
       "globalattrvalueirregularexception_b": "The value \"{4}\" of the global attribute \"{2} {3}\" in model \"{0} {1}\" is illegal. Configuration path: {5}, actual path: {6}"
     },
     "graphisinvokedexception": {
       "graphisinvokedexception": "The current view is already referenced by another view, please delete it first"
     },
     "graphnotfoundexception": {
-      "graphnotfoundexception": "Topology view \u0027{0}\u0027 does not exist"
+      "graphnotfoundexception": "Topology view '{0}' does not exist"
     },
     "graphprivilegedeleteexception": {
       "graphprivilegedeleteexception": "You do not have permission to delete the current topology view"
@@ -3020,10 +3020,10 @@
       "reltypenotfoundexception": "Relationship type: {0} does not exist"
     },
     "resourceaccountaccesstesthostexception": {
-      "resourceaccountaccesstesthostexception": "\u0027{0}\u0027 does not meet the IP format and attempts to resolve domain names have failed"
+      "resourceaccountaccesstesthostexception": "'{0}' does not meet the IP format and attempts to resolve domain names have failed"
     },
     "resourcecenteraccountnotprivateexception": {
-      "resourcecenteraccountnotprivateexception": "Account: \u0027{0}\u0027 is not a private type"
+      "resourcecenteraccountnotprivateexception": "Account: '{0}' is not a private type"
     },
     "resourcecenteraccountprotocolnotfoundexception": {
       "resourcecenteraccountprotocolnotfoundexception": {
@@ -3031,7 +3031,7 @@
       }
     },
     "resourcecenterresourcenotexistaccountexception": {
-      "resourcecenterresourcenotexistaccountexception": "Account \u0027{1}\u0027 does not exist in resource \u0027{0}\u0027"
+      "resourcecenterresourcenotexistaccountexception": "Account '{1}' does not exist in resource '{0}'"
     },
     "resourcecenterviewconfigexception": {
       "resourcecenterviewconfigexception": "Field declared in view {0}: {1}, but definition not found in configuration file"
@@ -3161,7 +3161,7 @@
       "executedesc": "Create and Execute Standard Jobs From One-Click Deployment and Scheduled Jobs",
       "pipeline": "Super Pipeline",
       "pipelinedesc": "Create, Edit, and Delete Application Super Pipelines in Application Configuration, and Execute Them From One-Click Deployment or Scheduled Jobs",
-      "versionandproductmanager": "Version \u0026 Artifact Management",
+      "versionandproductmanager": "Version & Artifact Management",
       "versionandproductmanagerdesc": "View Applications, Add Versions, and Manage Artifacts in Version Center",
       "view": "View Configuration",
       "viewdesc": "View Applications in One-Click Deployment, Application Configuration, and Scheduled Jobs"
@@ -5513,7 +5513,7 @@
       "deploygitlabwebhookcallbackhostlostexception": "The initialization setting \"GitLabWebhookCallbackHost\" is missing. Contact the administrator"
     },
     "deployinstanceinenvnotfoundexception": {
-      "deployinstanceinenvnotfoundexception": "Instance {3} under {0}-\u003e{1}-\u003e{2} does not exist."
+      "deployinstanceinenvnotfoundexception": "Instance {3} under {0}->{1}->{2} does not exist."
     },
     "deployinstanceversionnotfoundexception": {
       "deployinstanceversionnotfoundexception": "No current version was found for instance {0}"
@@ -5540,7 +5540,7 @@
       "deployjobparamirregularexception": "Parameter \"{0}\" cannot be empty"
     },
     "deploypackagenotfoundexception": {
-      "deploypackagenotfoundexception": "Dependency package {0}-\u003e{1}-\u003e{2} does not exist"
+      "deploypackagenotfoundexception": "Dependency package {0}->{1}->{2} does not exist"
     },
     "deploypackagerequiredattributelostexception": {
       "deploypackagerequiredattributelostexception": "Dependency {0} is missing groupId, artifactId, or version"
@@ -5583,7 +5583,7 @@
       }
     },
     "deployversionparentdependencynotfoundexception": {
-      "deployversionparentdependencynotfoundexception": "Parent dependency {0}-\u003e{1}-\u003e{2} does not exist"
+      "deployversionparentdependencynotfoundexception": "Parent dependency {0}->{1}->{2} does not exist"
     },
     "deployversionredirecturlcredentialusernotfoundexception": {
       "deployversionredirecturlcredentialusernotfoundexception": "Authentication user \"{0}\" for the deployment redirect URL does not exist"
@@ -5717,20 +5717,20 @@
       "confignotfoundexception": "NACOS cannot obtain the configuration and the local config.properties acquisition failed. Please confirm if the NACOS service is functioning properly or if the config.properties file exists, and if so, if the file permissions are normal"
     },
     "loadbalanceexception": {
-      "loadbalanceexception": "Backend node drift, permission server ID \u0027{0}\u0027, current server ID \u0027{1}\u0027, please contact the administrator!"
+      "loadbalanceexception": "Backend node drift, permission server ID '{0}', current server ID '{1}', please contact the administrator!"
     },
     "systempropertynotfoundexception": {
-      "systempropertynotfoundexception": "The system property \u0027{0}\u0027 does not exist"
+      "systempropertynotfoundexception": "The system property '{0}' does not exist"
     }
   },
   "nfea": {
     "authencryptexception": {
-      "authencryptexception": "The front-end encryption method is abnormal. Please configure login. auth. password. encryption\u003d{0} in the back-end service configuration file, restart the back-end service, refresh the front-end page, and log in again"
+      "authencryptexception": "The front-end encryption method is abnormal. Please configure login. auth. password. encryption={0} in the back-end service configuration file, restart the back-end service, refresh the front-end page, and log in again"
     },
     "authnotfoundexception": {
       "authnotfoundexception": {
         "apiauthname": "”{0} \"Interface permission\" {1} \"does not exist",
-        "authname": "Permission \u0027{0}\u0027 does not exist"
+        "authname": "Permission '{0}' does not exist"
       }
     },
     "notsupportbasicauthexception": {
@@ -5895,10 +5895,10 @@
       "filenamenotnullexception": "Upload file name cannot be empty"
     },
     "filenotfoundexception": {
-      "filenotfoundexception": "Attachment \u0027{0}\u0027 does not exist",
+      "filenotfoundexception": "Attachment '{0}' does not exist",
       "getmessage": {
-        "directory": "\u0027{0}\u0027 is a directory",
-        "nonexistent": "The file or directory \u0027{0}\u0027 does not exist"
+        "directory": "'{0}' is a directory",
+        "nonexistent": "The file or directory '{0}' does not exist"
       }
     },
     "mkdirpermissiondeniedexception": {
@@ -5913,10 +5913,10 @@
   },
   "nfeh": {
     "homepagenamerepeatexception": {
-      "homepagenamerepeatexception": "Homepage configuration: \u0027{0}\u0027 already exists"
+      "homepagenamerepeatexception": "Homepage configuration: '{0}' already exists"
     },
     "homepagenotfoundexception": {
-      "homepagenotfoundexception": "Homepage configuration: \u0027{0}\u0027 does not exist"
+      "homepagenotfoundexception": "Homepage configuration: '{0}' does not exist"
     }
   },
   "nfel": {
@@ -5926,7 +5926,7 @@
   },
   "nfem": {
     "modulegroupnotfoundexception": {
-      "modulegroupnotfoundexception": "Module group \u0027{0}\u0027 does not exist"
+      "modulegroupnotfoundexception": "Module group '{0}' does not exist"
     },
     "subscribehandlerisembedexception": {
       "subscribehandlerisembedexception": "System subscription processor: {0} is not allowed for custom subscriptions"
@@ -5937,11 +5937,11 @@
   },
   "nfer": {
     "rolenamerepeatexception": {
-      "rolenamerepeatexception": "Role: \u0027{0}\u0027 already exists"
+      "rolenamerepeatexception": "Role: '{0}' already exists"
     },
     "runnerconnectrefusedexception": {
       "runnerconnectrefusedexceptiona": "Runner link failed: {0}",
-      "runnerconnectrefusedexceptionmsg": "Runner: \u0027{0}\u0027 connection failed, please check if the runner service is functioning properly and try again. Exception message: {1}"
+      "runnerconnectrefusedexceptionmsg": "Runner: '{0}' connection failed, please check if the runner service is functioning properly and try again. Exception message: {1}"
     },
     "runnergroupnotfoundexception": {
       "runnergroupnotfoundexception": "The actuator group does not exist. Please configure the actuator group first",
@@ -5951,18 +5951,18 @@
       "runnergrouprunnerlistemptyexception": "Executor group: {0} ({1}) does not have an executor"
     },
     "runnergrouprunnernotfoundexception": {
-      "runnergrouprunnernotfoundexceptionid": "The actuator group \u0027{0}\u0027 does not exist or the runner is not configured",
+      "runnergrouprunnernotfoundexceptionid": "The actuator group '{0}' does not exist or the runner is not configured",
       "runnergrouprunnernotfoundexceptionname": "RunnerGroup: {0} Runner not configured"
     },
     "runnernotfoundbytagentidexception": {
-      "runnernotfoundbytagentidexception": "Cannot find the corresponding runner for tag: \u0027{0} ({1})\u0027, please check logs/taggerAndNetty.log for abnormal heartbeat"
+      "runnernotfoundbytagentidexception": "Cannot find the corresponding runner for tag: '{0} ({1})', please check logs/taggerAndNetty.log for abnormal heartbeat"
     },
     "runnernotfoundbytagentrunneridexception": {
-      "runnernotfoundbytagentrunneridexception": "Unable to find the corresponding runner \u0027{1}\u0027 for tag \u0027{0}\u0027. Please check logs/taggentReginalAndNetty.log for abnormal heartbeat"
+      "runnernotfoundbytagentrunneridexception": "Unable to find the corresponding runner '{1}' for tag '{0}'. Please check logs/taggentReginalAndNetty.log for abnormal heartbeat"
     },
     "runnernotfoundexception": {
       "runnernotfoundexception": {
-        "all": "The runenr does not exist. Please go to the \u0027Runenr Management\u0027 to confirm if the runenr has been configured",
+        "all": "The runenr does not exist. Please go to the 'Runenr Management' to confirm if the runenr has been configured",
         "ipport": "{0}: {1} No matching runner found, please confirm if the runner exists in the executor management",
         "not": "Runner does not exist"
       }
@@ -6021,7 +6021,7 @@
       "tenantinvalidexception": "Tenant {0} is illegal"
     },
     "updateteamfoundmultiexception": {
-      "updateteamfoundmultiexception": "There are multiple groups\u0027 {0} \u0027, please update with uuid"
+      "updateteamfoundmultiexception": "There are multiple groups' {0} ', please update with uuid"
     }
   },
   "nfeu": {
@@ -6029,7 +6029,7 @@
       "ipsubnetmaskexception": "IP: {0} encountered an exception when matching the actuator group. Please check the network segment/subnet mask configuration of the actuator group and try again! Abnormal network segment/subnet mask: {1}"
     },
     "loginlockedexception": {
-      "loginlockedexception": "Login failed more than the limit (\u0027{0}\u0027 times), account locked, please try again after \u0027{1}\u0027"
+      "loginlockedexception": "Login failed more than the limit ('{0}' times), account locked, please try again after '{1}'"
     },
     "passworddecryptexception": {
       "passworddecryptexception": "Password decryption failed"
@@ -6057,7 +6057,7 @@
       "dofilterinternal": {
         "authfailed": "Authentication failed ( {0} ), please login again",
         "authfailederrorlog": "Authentication failed",
-        "authfailedlog": "\u003d\u003d\u003d\u003d\u003d\u003d\u003dLogin error: Failed to authenticate through  {0} , please login again",
+        "authfailedlog": "=======Login error: Failed to authenticate through  {0} , please login again",
         "authtypeinvalid": "Unable to find authType:  {0} ",
         "lacktenant": "Tenant  {0}  does not exist or has been disabled",
         "unexpired": "The session has timed out or been terminated. Please login again"
@@ -6081,10 +6081,10 @@
       "formextendattributeconfigillegalexception_b": "In the form extension data, the configuration of the {0} type attribute {1} has an invalid {2} field value of {3}"
     },
     "formnotfoundexception": {
-      "formnotfoundexception": "Form \u0027{0}\u0027 does not exist"
+      "formnotfoundexception": "Form '{0}' does not exist"
     },
     "formversionnotfoundexception": {
-      "formversionnotfoundexception": "Form version \u0027{0}\u0027 does not exist"
+      "formversionnotfoundexception": "Form version '{0}' does not exist"
     },
     "formversionscenenotfoundexception": {
       "formversionscenenotfoundexception": "In version: {1} of form: {0}, scenario: {2} does not exist"
@@ -6310,7 +6310,7 @@
         "processtask_step_in_operation_audit_enabled": "Enabled",
         "processtask_tab_layout": "Layout"
       },
-      "workcentercustomlimit": "The \u0027Personal Category\u0027 in the Work Center exceeds the limit and cannot add custom categories",
+      "workcentercustomlimit": "The 'Personal Category' in the Work Center exceeds the limit and cannot add custom categories",
       "workcenterprocesstasknewpage": "Click on the Task center to open a new page. The default value is 0, which means IT will not be opened by default",
       "workcenterrefresh": "Does the Work Center automatically refresh"
     },
@@ -7842,7 +7842,7 @@
       }
     },
     "processcommenttemplatenamerepeatexception": {
-      "processcommenttemplatenamerepeatexception": "Template \u0027{0}\u0027 already exists"
+      "processcommenttemplatenamerepeatexception": "Template '{0}' already exists"
     },
     "processcommenttemplatenotfoundexception": {
       "processcommenttemplatenotfoundexception": "Reply template: {0} does not exist"
@@ -8093,7 +8093,7 @@
       "processtaskserialnumberpolicyhandlernotfoundexception": "The Task Serial Number Policy Handler does not exist {0}"
     },
     "processtaskserialnumberpolicynotfoundexception": {
-      "processtaskserialnumberpolicynotfoundexception": "Service type: {0} does not have a configured Task number generation strategy. Please contact the administrator and edit the Task prefix, Task rule, start position, and Task number digits for this service type in \u0027IT Service/Service Type Management\u0027"
+      "processtaskserialnumberpolicynotfoundexception": "Service type: {0} does not have a configured Task number generation strategy. Please contact the administrator and edit the Task prefix, Task rule, start position, and Task number digits for this service type in 'IT Service/Service Type Management'"
     },
     "processtaskserialnumberupdateinprocessexception": {
       "processtaskserialnumberupdateinprocessexception": "Task Numbers are being updated in batches. Try again later."
@@ -8260,7 +8260,7 @@
   "nfpnc": {
     "idefaulttemplate": {
       "defaulttemplatetype": "Default",
-      "processtaskdetailslink": "View Details: \u003ca target\u003d\"_blank\" href\u003d{0}\u003e[Task Link]\u003c/a\u003e"
+      "processtaskdetailslink": "View Details: <a target=\"_blank\" href={0}>[Task Link]</a>"
     },
     "processnotifypolicyhandlergroup": {
       "text": {
@@ -8269,7 +8269,7 @@
     },
     "processtasknotifyparam": {
       "description": {
-        "form_json": "Information item Data is {\u0027attributeKey\u0027:\u0027a\u0027,\u0027attributeLabel\u0027:\u0027A\u0027,\u0027extendedData\u0027:\u0027 Form \u0027}"
+        "form_json": "Information item Data is {'attributeKey':'a','attributeLabel':'A','extendedData':' Form '}"
       },
       "text": {
         "approvalcommentlist": "Approvalcommentlist",
@@ -8974,7 +8974,7 @@
     },
     "tagentnotfoundexception": {
       "tagentnotfoundexception": {
-        "ipport": "Tagent cannot be found through IP: \u0027{0}\u0027 and port: \u0027{1}\u0027, please register again",
+        "ipport": "Tagent cannot be found through IP: '{0}' and port: '{1}', please register again",
         "tagentidipport": "Cannot find tagent (id: \"{0}\", ip: \"{1}\", port: \"{2}\"), please register again"
       }
     },
@@ -8995,16 +8995,16 @@
       "userexportfiledownloaddeniedexception": "You do not have permission to download the {0} file"
     },
     "userexportfilenotfoundexception": {
-      "userexportfilenotfoundexception": "The user exported file \u0027{0}\u0027 does not exist"
+      "userexportfilenotfoundexception": "The user exported file '{0}' does not exist"
     },
     "userexportfiletypenotfoundexception": {
-      "userexportfiletypenotfoundexception": "The user exported file type \u0027{0}\u0027 does not exist"
+      "userexportfiletypenotfoundexception": "The user exported file type '{0}' does not exist"
     }
   },
   "nfwe": {
     "worktimerangenotfoundexception": {
-      "worktimerangenotfoundexception_a": "Service time: \u0027{0}\u0027 has no scheduled time or calendar set",
-      "worktimerangenotfoundexception_b": "Service time: The \u0027{1}\u0027 year of \u0027{0}\u0027 does not have a scheduling calendar set",
+      "worktimerangenotfoundexception_a": "Service time: '{0}' has no scheduled time or calendar set",
+      "worktimerangenotfoundexception_b": "Service time: The '{1}' year of '{0}' does not have a scheduling calendar set",
       "worktimerangenotfoundexception_c": "Service time: The deadline for scheduling in the \"{1}\" year of \"{0}\" is \"{2}\", and a scheduling calendar needs to be added"
     }
   },
@@ -10289,7 +10289,7 @@
       "input": {
         "param": {
           "desc": {
-            "logpos": "Log read position. Use -1 to retrieve the latest data. When reading upward with \u0027up\u0027, pass startPos to load the previous segment; when reading downward with \u0027down\u0027, pass endPos to load the next segment."
+            "logpos": "Log read position. Use -1 to retrieve the latest data. When reading upward with 'up', pass startPos to load the previous segment; when reading downward with 'down', pass endPos to load the next segment."
           }
         }
       },
@@ -10391,54 +10391,6 @@
     },
     "autoexeccombopversionsaveapi": {
       "getname": "Save the version information of the combination tool"
-    },
-    "autoexeccombopversionyamlgenerateapi": {
-      "getname": "Generate Combination Tool Version YML",
-      "input": {
-        "param": {
-          "help": {
-            "config": "Combination tool version configuration to convert. Its structure is the same as the version save API."
-          }
-        }
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "result": "YML Generation Result"
-          }
-        }
-      }
-    },
-    "autoexeccombopversionyamlparseapi": {
-      "getname": "Parse and Validate Combination Tool Version YML",
-      "input": {
-        "param": {
-          "desc": {
-            "yaml": "Combination Tool Version YML"
-          },
-          "help": {
-            "baseconfig": "Original configuration used to preserve job parameters, execution targets, scenarios, and other fields outside runFlow.",
-            "yaml": "Use opName to identify a tool or script and opLetter to distinguish repeated operations. Parameter references and recursive IF-Block and LOOP-Block nesting are supported."
-          }
-        }
-      },
-      "output": {
-        "param": {
-          "desc": {
-            "code": "Issue Code",
-            "column": "Column Number",
-            "config": "Parsed Combination Tool Version Configuration",
-            "issuelist": "Error List",
-            "line": "Line Number",
-            "message": "Issue Description",
-            "path": "YML Field Path",
-            "result": "YML Parse Result",
-            "valid": "Whether Validation Passed",
-            "warninglist": "Warning List",
-            "yaml": "Combination Tool Version YML"
-          }
-        }
-      }
     },
     "listautoexeccomboptypeexecutableapi": {
       "getname": "Query the classification list of the combination tools that the current user can execute"
@@ -10547,24 +10499,24 @@
             "protocol": "Connection Protocol"
           },
           "help": {
-          "assignexecuser": "Specifies the Job initiator UUID. The Job is created with that user's identity and permissions. The current authenticated user is used when omitted. When isSync is true, the current authenticated user is always used and this parameter is not supported.",
-          "combopname": "Specifies the Combination Tool to run. The service finds it by name and builds the Job from its active version.",
-          "executeuser": "Specifies the account used to connect to remote targets, not the Job initiator. A supplied value overrides the Combination Tool setting; otherwise, the Combination Tool setting is used.",
-          "ipportlist": "Specifies the Job targets as a string array. Each item uses IP, IP:port, or IP:port/name. A non-empty array overrides the Combination Tool target configuration; an empty or omitted array uses the Combination Tool setting. Example: [\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"].",
-          "invokeid": "Specifies the invocation source ID that associates the caller with the Job for source tracing, queries, and callbacks. The active Combination Tool version ID is used when omitted.",
-          "issync": "Controls whether the API waits for the Job result. false returns the Job ID after creation and trigger-mode setup. true immediately runs the Job as the current authenticated user and waits for termination or the listener timeout before returning status and node output. A listener timeout does not terminate the Job.",
-          "name": "Specifies the Job name used for display and queries. Duplicate names are allowed. The Combination Tool name is used when omitted or blank.",
-          "parallelcount": "Specifies the number of targets that may run concurrently. It is used only when parallelPolicy is parallel and ignored by other policies. The Combination Tool setting is used when omitted; the default is 32 when the tool also has no value.",
-          "parallelpolicy": "Specifies the target concurrency policy. parallel uses parallelCount; roundCount divides targets into batches and uses roundCount. The Combination Tool setting is used when omitted.",
-          "param": "Specifies Job parameters as key-value pairs. Each key should match a Job parameter key defined by the active Combination Tool version. Missing parameters use the tool defaults and are converted by parameter type; an empty JSON object is used when omitted. Example: {\"paramKey\":\"paramValue\"}.",
-          "parentid": "Specifies the parent Job ID and associates the current Job as its child. The parent Job must exist, and the parent chain supports at most two levels.",
-          "planstarttime": "Specifies the planned start time as a Unix timestamp in milliseconds. When triggerType is auto and the time is in the future, the Job runs automatically at that time. This parameter is not supported when isSync is true.",
-          "protocol": "Specifies the protocol name used to connect to remote targets, such as ssh. A supplied value overrides the Combination Tool setting; creation is rejected when the protocol does not exist. The tool setting is used when omitted.",
-          "roundcount": "Specifies the number of batches used to divide the targets. It is used only when parallelPolicy is roundCount and ignored by other policies. The Combination Tool setting is used when omitted; the default is 64 when the tool also has no value.",
-          "runnergroup": "Specifies the Runner group name or ID used to match and dispatch the Job. -1 selects a group at random. The Combination Tool setting is used when omitted.",
-          "runnergrouptag": "Specifies Runner group tag names or IDs used to filter eligible groups. Use a single tag or a JSON-array string of tags. A group must satisfy both the tags and routing rules. The Combination Tool setting is used when omitted.",
-          "scenarioname": "Specifies the Combination Tool scenario whose configured stages will run. Creation is rejected when the scenario does not exist. The tool's default execution scope is used when omitted.",
-          "triggertype": "Specifies how the Job is triggered. auto runs immediately or at planStartTime; manual creates the Job and waits for a manual trigger. The Job runs immediately when omitted. This parameter is not supported when isSync is true."
+            "assignexecuser": "Specifies the Job initiator UUID. The Job is created with that user's identity and permissions. The current authenticated user is used when omitted. When isSync is true, the current authenticated user is always used and this parameter is not supported.",
+            "combopname": "Specifies the Combination Tool to run. The service finds it by name and builds the Job from its active version.",
+            "executeuser": "Specifies the account used to connect to remote targets, not the Job initiator. A supplied value overrides the Combination Tool setting; otherwise, the Combination Tool setting is used.",
+            "ipportlist": "Specifies the Job targets as a string array. Each item uses IP, IP:port, or IP:port/name. A non-empty array overrides the Combination Tool target configuration; an empty or omitted array uses the Combination Tool setting. Example: [\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"].",
+            "invokeid": "Specifies the invocation source ID that associates the caller with the Job for source tracing, queries, and callbacks. The active Combination Tool version ID is used when omitted.",
+            "issync": "Controls whether the API waits for the Job result. false returns the Job ID after creation and trigger-mode setup. true immediately runs the Job as the current authenticated user and waits for termination or the listener timeout before returning status and node output. A listener timeout does not terminate the Job.",
+            "name": "Specifies the Job name used for display and queries. Duplicate names are allowed. The Combination Tool name is used when omitted or blank.",
+            "parallelcount": "Specifies the number of targets that may run concurrently. It is used only when parallelPolicy is parallel and ignored by other policies. The Combination Tool setting is used when omitted; the default is 32 when the tool also has no value.",
+            "parallelpolicy": "Specifies the target concurrency policy. parallel uses parallelCount; roundCount divides targets into batches and uses roundCount. The Combination Tool setting is used when omitted.",
+            "param": "Specifies Job parameters as key-value pairs. Each key should match a Job parameter key defined by the active Combination Tool version. Missing parameters use the tool defaults and are converted by parameter type; an empty JSON object is used when omitted. Example: {\"paramKey\":\"paramValue\"}.",
+            "parentid": "Specifies the parent Job ID and associates the current Job as its child. The parent Job must exist, and the parent chain supports at most two levels.",
+            "planstarttime": "Specifies the planned start time as a Unix timestamp in milliseconds. When triggerType is auto and the time is in the future, the Job runs automatically at that time. This parameter is not supported when isSync is true.",
+            "protocol": "Specifies the protocol name used to connect to remote targets, such as ssh. A supplied value overrides the Combination Tool setting; creation is rejected when the protocol does not exist. The tool setting is used when omitted.",
+            "roundcount": "Specifies the number of batches used to divide the targets. It is used only when parallelPolicy is roundCount and ignored by other policies. The Combination Tool setting is used when omitted; the default is 64 when the tool also has no value.",
+            "runnergroup": "Specifies the Runner group name or ID used to match and dispatch the Job. -1 selects a group at random. The Combination Tool setting is used when omitted.",
+            "runnergrouptag": "Specifies Runner group tag names or IDs used to filter eligible groups. Use a single tag or a JSON-array string of tags. A group must satisfy both the tags and routing rules. The Combination Tool setting is used when omitted.",
+            "scenarioname": "Specifies the Combination Tool scenario whose configured stages will run. Creation is rejected when the scenario does not exist. The tool's default execution scope is used when omitted.",
+            "triggertype": "Specifies how the Job is triggered. auto runs immediately or at planStartTime; manual creates the Job and waits for a manual trigger. The Job runs immediately when omitted. This parameter is not supported when isSync is true."
           }
         }
       },
@@ -10764,7 +10716,7 @@
         "missinganswer": "The model response is missing answer.",
         "modelnotconfigured": "The log analysis assistant tool instance has no model configured.",
         "modelunavailable": "The model configured for the log analysis assistant tool instance is unavailable.",
-        "noenabledtool": "No enabled log analysis assistant tool instance was found. Add and enable one in AI \u003e Tool Management.",
+        "noenabledtool": "No enabled log analysis assistant tool instance was found. Add and enable one in AI > Tool Management.",
         "questionrequired": "Enter the question to analyze.",
         "selectedlogrequired": "Select the log content to analyze.",
         "toolnotfound": "The log analysis assistant tool instance does not exist."
@@ -10844,7 +10796,7 @@
         "modelbusy": "The model is busy. Try again later.",
         "modelnotconfigured": "The script writing tool instance has no model configured.",
         "modelunavailable": "The model configured for the script writing tool instance is unavailable.",
-        "noenabledtool": "No enabled script writing tool instance was found. Add and enable one in AI \u003e Tool Management.",
+        "noenabledtool": "No enabled script writing tool instance was found. Add and enable one in AI > Tool Management.",
         "requirementrequired": "Enter the current script requirement.",
         "toolnotfound": "The script writing tool instance does not exist."
       },
@@ -10923,7 +10875,7 @@
         "modelnotconfigured": "The tool recommendation assistant tool instance has no model configured.",
         "modelunavailable": "The model configured for the tool recommendation assistant tool instance is unavailable.",
         "nocandidate": "No tool library tools can be recommended under the current filters. Adjust execution mode, category, risk level, or keyword and try again.",
-        "noenabledtool": "No enabled tool recommendation assistant tool instance was found. Add and enable one in AI \u003e Tool Management.",
+        "noenabledtool": "No enabled tool recommendation assistant tool instance was found. Add and enable one in AI > Tool Management.",
         "recommendcontextrequired": "Current add-tool context is missing.",
         "recommendfailed": "Tool recommendation failed: {0}",
         "requirementrequired": "Enter the requirement for tool recommendation.",
@@ -11008,7 +10960,7 @@
         "missinganswer": "The model response is missing answer.",
         "modelnotconfigured": "The tool usage assistant tool instance has no model configured.",
         "modelunavailable": "The model configured for the tool usage assistant tool instance is unavailable.",
-        "noenabledtool": "No enabled tool usage assistant tool instance was found. Add and enable one in AI \u003e Tool Management.",
+        "noenabledtool": "No enabled tool usage assistant tool instance was found. Add and enable one in AI > Tool Management.",
         "questionrequired": "Enter the question to explain.",
         "toolcontextrequired": "Current tool context is missing.",
         "toolnotfound": "The tool usage assistant tool instance does not exist."
@@ -11226,7 +11178,7 @@
         },
         "label": "Execute AI Workflow",
         "message": {
-          "attachmentunreadable": "The attachment does not belong to the current session or the current user has no permission to read it, fileId\u003d{0}. Available image attachments: {1}",
+          "attachmentunreadable": "The attachment does not belong to the current session or the current user has no permission to read it, fileId={0}. Available image attachments: {1}",
           "confirmworkflow": "Please confirm whether to execute the AI workflow: {0}",
           "failedinstruction": "Tell the user that the workflow did not complete successfully, explain why the current request cannot be completed based on the error, and do not present the failed result as successful.",
           "fileidinvalid": "fileList[{0}].id must be a real numeric ID from the current session attachment list, not a placeholder: {1}. Available image attachments: {2}",
@@ -11234,7 +11186,7 @@
           "missingcontext": "Missing AI chat session context, unable to execute the AI workflow",
           "missingworkflowid": "Missing workflowId, unable to execute the AI workflow",
           "multipleimageattachments": "Multiple image attachments exist. Please explicitly choose the attachment to pass into the workflow. Available image attachments: {0}",
-          "notimageattachment": "execute_ai_workflow.fileList only accepts image attachments from the current session. fileId\u003d{0} is not an available image attachment. Available image attachments: {1}",
+          "notimageattachment": "execute_ai_workflow.fileList only accepts image attachments from the current session. fileId={0} is not an available image attachment. Available image attachments: {1}",
           "succeedinstruction": "Summarize a concise conclusion for the user based on the final workflow output, and do not expand unrelated execution logs.",
           "tasknotfound": "Task not found",
           "timeout": "AI workflow execution timed out",
@@ -11274,7 +11226,7 @@
       "ragsearchtool": {
         "desc": {
           "followup": "If the hit result already provides objectId or key business identifiers in meta, use those fields to call detail tools for complete information instead of searching again.",
-          "main": "This tool performs semantic retrieval within the configured knowledge bases and returns the knowledge snippets most relevant to the user question.\nIt applies to product documentation Q\u0026A, operation guide retrieval, rule knowledge lookup, and similar scenarios.\nIf the current question clearly depends on knowledge base content, call this tool before answering.\n\nReturned result structure:\n1. The returned object contains:\n- matches: hit result list\n- bestMatch: best hit result, with the same structure as an item in matches\n\n2. Each item in matches contains these common fields:\n- datasetId: knowledge base ID\n- datasetName: knowledge base name\n- handler: knowledge base handler name\n- chunkId: hit chunk ID\n- sourceId: source record ID\n- objectId: business object ID\n- objectType: business object type\n- name: business object name\n- content: matched text snippet\n- status: chunk status\n- score: match score\n- meta: knowledge base custom extension information",
+          "main": "This tool performs semantic retrieval within the configured knowledge bases and returns the knowledge snippets most relevant to the user question.\nIt applies to product documentation Q&A, operation guide retrieval, rule knowledge lookup, and similar scenarios.\nIf the current question clearly depends on knowledge base content, call this tool before answering.\n\nReturned result structure:\n1. The returned object contains:\n- matches: hit result list\n- bestMatch: best hit result, with the same structure as an item in matches\n\n2. Each item in matches contains these common fields:\n- datasetId: knowledge base ID\n- datasetName: knowledge base name\n- handler: knowledge base handler name\n- chunkId: hit chunk ID\n- sourceId: source record ID\n- objectId: business object ID\n- objectType: business object type\n- name: business object name\n- content: matched text snippet\n- status: chunk status\n- score: match score\n- meta: knowledge base custom extension information",
           "metafields": "3. Meta field descriptions for currently configured knowledge bases:"
         },
         "label": "Knowledge Base Search",
@@ -11483,17 +11435,17 @@
   },
   "nmar": {
     "combopimport": {
-      "inactivesuffix": "\u0027 is not enabled.",
-      "missingglobalparamprefix": "Global Parameter is missing: \u0027",
-      "missingnotifypolicyprefix": "Referenced notification policy is missing: \u0027",
-      "missingscenarioprefix": "Scenario \u0027",
-      "missingscenariosuffix": "\u0027 was not imported.",
-      "missingscriptprefix": "Referenced Custom Tool is missing: \u0027",
-      "missingtoolprefix": "Referenced Tool is missing: \u0027",
-      "missingtypeprefix": "Referenced Tool Classification is missing: \u0027",
-      "noactiveversionsuffix": "\u0027 has no active version.",
-      "scriptprefix": "Custom Tool \u0027",
-      "toolprefix": "Tool \u0027"
+      "inactivesuffix": "' is not enabled.",
+      "missingglobalparamprefix": "Global Parameter is missing: '",
+      "missingnotifypolicyprefix": "Referenced notification policy is missing: '",
+      "missingscenarioprefix": "Scenario '",
+      "missingscenariosuffix": "' was not imported.",
+      "missingscriptprefix": "Referenced Custom Tool is missing: '",
+      "missingtoolprefix": "Referenced Tool is missing: '",
+      "missingtypeprefix": "Referenced Tool Classification is missing: '",
+      "noactiveversionsuffix": "' has no active version.",
+      "scriptprefix": "Custom Tool '",
+      "toolprefix": "Tool '"
     },
     "commercial": {
       "comboprequired": "Start configuration: Combination Tool is required.",
@@ -11544,7 +11496,7 @@
       "detailprefix": "Import ",
       "detailsuffix": " encountered the following issues: ",
       "execmodeempty": "Execution Mode is empty.",
-      "execmodenotfoundprefix": "Execution Mode \u0027",
+      "execmodenotfoundprefix": "Execution Mode '",
       "failed": " failed.",
       "import": "Import ",
       "invalidexecmode": "Execution Mode does not exist: ",
@@ -11555,18 +11507,18 @@
       "itemsuffix": "] failed.",
       "missingpackages": "The following dependent Custom Tool packages (tar) were not uploaded: ",
       "missingtools": "The following dependent Tools do not exist: ",
-      "notfoundsuffix": "\u0027 does not exist.",
+      "notfoundsuffix": "' does not exist.",
       "packagemissing": "Custom Tool dependency package is missing.",
       "packagemustbetar": "The Custom Tool dependency package must be a tar file.",
       "packagenameempty": "Custom Tool dependency package name is empty.",
       "parserempty": "Custom Tool parser is empty.",
-      "parsernotfoundprefix": "Custom Tool parser \u0027",
+      "parsernotfoundprefix": "Custom Tool parser '",
       "riskempty": "Operation Level is empty.",
-      "risknotfoundprefix": "Operation Level \u0027",
+      "risknotfoundprefix": "Operation Level '",
       "scriptcontentempty": "Custom Tool content is empty.",
       "scriptnameempty": "Custom Tool name is empty.",
       "typeempty": "Tool Classification is empty.",
-      "typenotfoundprefix": "Tool Classification \u0027",
+      "typenotfoundprefix": "Tool Classification '",
       "versionprefix": "Version - "
     },
     "operate": {
@@ -11636,25 +11588,7 @@
   "nmas": {
     "autoexec": {
       "loopitems": "Loop item",
-      "loopitemvar": "Loop term variable",
-      "yamlconfiginvalid": "Combination tool configuration validation failed: {0}",
-      "yamlduplicatevalue": "The value {1} for {0} is duplicated.",
-      "yamlempty": "YML content cannot be empty.",
-      "yamlenuminvalid": "The value {1} for field {0} is not allowed.",
-      "yamlfieldrequired": "Required field {0} is missing.",
-      "yamlfieldtypeinvalid": "Field {0} has an invalid data type.",
-      "yamlifempty": "The if and else branches of IF-Block cannot both be empty.",
-      "yamloperationduplicate": "Operation identifier {1}_{2} is duplicated in phase {0}.",
-      "yamloperationnotfound": "Operation {0} was not found or could not be uniquely identified.",
-      "yamloutputnotfound": "Operation {0} does not have output parameter {1}.",
-      "yamlprofilenotfound": "Preset parameter set {0} does not exist.",
-      "yamlreferenceambiguous": "The parameter reference cannot uniquely identify operation {1} in phase {0}. Specify opLetter.",
-      "yamlreferenceinvalid": "Parameter reference {0} has an invalid structure.",
-      "yamlreferenceunreachable": "The parameter reference points to a later operation or a mutually exclusive branch: phase {0}, operation {1}.",
-      "yamlrootinvalid": "The YML root node must be an object.",
-      "yamlsyntaxinvalid": "Invalid YML syntax: {0}",
-      "yamlunknownfield": "Unknown field {0} will be ignored.",
-      "yamlversioninvalid": "The apiVersion is not supported. The current version is {0}."
+      "loopitemvar": "Loop term variable"
     }
   },
   "nmaspt": {
@@ -11726,6 +11660,71 @@
   },
   "nmautoexec": {
     "autoexecaichatsessioninvalidexception": "The Autoexec AI chat configuration is invalid. Close and reopen the assistant.",
+    "autoexeccombopversionyamlgenerateapi": {
+      "getname": "Generate Combination Tool Version YML",
+      "input": {
+        "param": {
+          "help": {
+            "config": "Combination tool version configuration to convert. Its structure is the same as the version save API."
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "result": "YML Generation Result"
+          }
+        }
+      }
+    },
+    "autoexeccombopversionyamlhelpapi": {
+      "getname": "Get Combination Tool YML Field Help",
+      "input": {
+        "param": {
+          "help": {
+            "config": "Current version snapshot for reading pinned operation metadata. This endpoint does not save or return partial configuration."
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "result": "YML Field Help Result"
+          }
+        }
+      }
+    },
+    "autoexeccombopversionyamlparseapi": {
+      "getname": "Parse and Validate Combination Tool Version YML",
+      "input": {
+        "param": {
+          "desc": {
+            "yaml": "Combination Tool Version YML"
+          },
+          "help": {
+            "baseconfig": "Original snapshot for stable node/group bindings and pinned versions. Format 1 also preserves previously hidden business settings; format 2 treats business settings as a full snapshot.",
+            "yaml": "Edit business configuration using opName, profileName and explicit references. Format 2 includes phase mode, group settings, runtime definitions and scenarios; deleting optional fields clears them or restores defaults. System fields cannot override resolved bindings. IF/LOOP nesting is supported."
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "code": "Issue Code",
+            "column": "Column Number",
+            "config": "Parsed Combination Tool Version Configuration",
+            "issuelist": "Error List",
+            "line": "Line Number",
+            "message": "Issue Description",
+            "path": "YML Field Path",
+            "result": "YML Parse Result",
+            "valid": "Whether Validation Passed",
+            "warninglist": "Warning List",
+            "yaml": "Combination Tool Version YML"
+          }
+        }
+      }
+    },
     "autoexecjoblogchatcontextlabel": "Current Log: {0}",
     "autoexecjoblogchatpermissiondeniedexception": "You do not have permission to view Autoexec job logs and cannot continue this AI chat.",
     "autoexecjoblogchatselectedlog": "Selected Log",
@@ -11739,7 +11738,7 @@
     "autoexecscriptchatunnamed": "Untitled Script",
     "autoexecskill": "Autoexec Skill",
     "autoexecskillactionnotallowedexception": "Skill action \"{0}\" is not allowed in status \"{1}\"",
-    "autoexecskillagenticactioninvalid": "Confirmed Agentic execution only allows action\u003dexecute; received \"{0}\"",
+    "autoexecskillagenticactioninvalid": "Confirmed Agentic execution only allows action=execute; received \"{0}\"",
     "autoexecskillagenticcalllimit": "Agentic execution reached the maximum of {0} tool calls",
     "autoexecskillagenticduplicate": "The second call to tool \"{0}\" with identical parameters was blocked",
     "autoexecskillagenticemptyanswerfallback": "The model still returned no final report after one retry. The server generated the following execution evidence from real tool results without inferring a root cause:",
@@ -11772,15 +11771,15 @@
     "autoexecskilldisabledexception": "Autoexec Skill \"{0}\" is disabled",
     "autoexecskillenabledupdateapi": "Update Autoexec Skill Enabled Status",
     "autoexecskillexecutionscopeexception": "This request may only execute published version \"{1}\" of Autoexec Skill \"{0}\"",
-    "autoexecskillfixedfallbackfailed": "Skill execution did not fully succeed: {0} succeeded, {1} failed, and {2} were not executed out of {3} steps. The AI summary is temporarily unavailable; these statuses come from the server\u0027s actual execution records.",
-    "autoexecskillfixedfallbacksuccess": "Skill execution completed: {0} of {1} steps succeeded. The AI summary is temporarily unavailable; these statuses come from the server\u0027s actual execution records.",
+    "autoexecskillfixedfallbackfailed": "Skill execution did not fully succeed: {0} succeeded, {1} failed, and {2} were not executed out of {3} steps. The AI summary is temporarily unavailable; these statuses come from the server's actual execution records.",
+    "autoexecskillfixedfallbacksuccess": "Skill execution completed: {0} of {1} steps succeeded. The AI summary is temporarily unavailable; these statuses come from the server's actual execution records.",
     "autoexecskillgetapi": "Get Autoexec Skill Details",
     "autoexecskillglobalplanrequired": "A Server-Generated Execution Plan Must Be Confirmed Before the Global AI Can Run an Autoexec Skill",
     "autoexecskillhassubmittedversionexception": "This Skill already has another version pending review",
     "autoexecskillhistoricalversion": "History",
     "autoexecskillkey": "Skill Key",
     "autoexecskillkeydescription": "Unique English Skill identifier",
-    "autoexecskillloadrequired": "The Global AI Must Load the Same Skill\u0027s Current Published Version Before Planning",
+    "autoexecskillloadrequired": "The Global AI Must Load the Same Skill's Current Published Version Before Planning",
     "autoexecskillnotfoundexception": "Autoexec Skill \"{0}\" does not exist",
     "autoexecskillnotpublishedexception": "Autoexec Skill \"{0}\" is not published",
     "autoexecskilloperationdiscoveryphaseinvalid": "Autoexec operation discovery is available only during internal Skill planning",
@@ -11899,7 +11898,459 @@
         "jobid": "Cross-step execution context Snowflake ID",
         "reserverunpath": "Whether to preserve the execution directory"
       }
-    }
+    },
+    "yamlbindingambiguous": "The original node or group configuration cannot be uniquely matched. Preserve an unambiguous business binding, or use the graphical editor to resolve splits, merges, or repeated nodes.",
+    "yamlconfigconflict": "Configuration options conflict or do not apply to this execution mode.",
+    "yamlconfiginvalid": "Combination tool configuration validation failed: {0}",
+    "yamlconstantambiguous": "An object constant contains the reserved mappingMode field or conflicts with the parameter mapping structure and cannot be converted unambiguously.",
+    "yamldeleteoptional": "Removing this field clears it or restores the graphical default; internal bindings are retained.",
+    "yamldeleterequired": "Required; removing this field fails validation.",
+    "yamlduplicatevalue": "The value {1} for {0} is duplicated.",
+    "yamlempty": "YML content cannot be empty.",
+    "yamlenuminvalid": "The value {1} for field {0} is not allowed.",
+    "yamlfielddetails": {
+      "controldatalist": "Static options using the graphical option-object structure, not a string.",
+      "controldatasource": "Control data source using a supported graphical value with corresponding static options or matrix.",
+      "controldefaultvalue": "Control-level default value using the control's existing data structure.",
+      "controlfilter": "Control data-source filter in the graphical structure, distinct from an execution-target filter.",
+      "controlgrouplist": "Group/role scope for user selection using the existing control structure.",
+      "controlismultiple": "Control multiselect setting using its existing values, unrelated to whether the parameter is required.",
+      "controlisrequired": "Boolean control validation switch, true/false, distinct from parameter-level numeric isRequired.",
+      "controlmapping": "Mapping from matrix fields to control options using the existing control structure.",
+      "controlmatrixlabel": "Unique label of an existing matrix instead of matrixUuid. YAML cannot create or modify shared matrices.",
+      "controlnodetype": "Allowed node types for the node control, following its existing definition.",
+      "controltype": "Type in the control configuration, which must match the current parameter control; not tool-input metadata.",
+      "controlvalidatelist": "Control validation rules using the supported graphical rule structure.",
+      "executeblacklist": "Blocklist of existing resources resolved by business identifiers; distinct from the target source.",
+      "executeexecutenodeconfig": "Target source object: configure only one of selectNodeList, inputNodeList, filter, paramList or preOutputList. Remove the old source when switching.",
+      "executeexecuteuser": "Write a literal execution user directly or use mappingMode: runtimeparam for a job parameter. Unpreset values use global/job rules.",
+      "executeispresetexecuteconfig": "1 allows selected phase overrides for protocol, user, targets and concurrency; not all fields are required. 0 disables and clears presets. See the related guide for complete examples.",
+      "executeispresetrunnergroup": "1 enables phase Runner group/tag presets. 0 clears phase Runner settings and uses global/job settings.",
+      "executeparallelcount": "Positive concurrency count for parallelPolicy: parallel. Mutually exclusive with roundCount outside this executeConfig.",
+      "executeparallelpolicy": "parallel uses executeConfig.parallelCount; roundCount uses parent-level roundCount. Counts are mutually exclusive and must also be removed when clearing the policy.",
+      "executeprecondition": "Use the graphical precondition structure to constrain target filtering. This is not an IF expression or a new condition language.",
+      "executeprotocol": "Object containing protocol name and optional port, e.g. name: ssh and port: 22. Unpreset phases use global/job rules.",
+      "executerunnergroup": "Use a Runner group name or '-1' for automatic assignment; an explicit job parameter reference is also supported. Do not enter internal IDs.",
+      "executerunnergrouptag": "Use tag names as a list or an explicit job parameter reference. An empty selection is omitted and does not enable presets.",
+      "executewhentospecify": "Global target selection timing: now, runtime at job creation, or runtimeparam from parameters. runtime clears executeNodeConfig.",
+      "executewhitelist": "Allowlist of existing resources identified by IP, port, name and type, without internal resource IDs.",
+      "groupexecstrategy": "oneShot uses phase-level settings; grayScale batches by group and uses group execution settings with phase execRound.",
+      "groupexecuteconfig": "Execution settings belong to this group. For grayScale, configure group targets and batch policy here rather than copying them to phases.",
+      "groupphases": "Phases in this group; at least one is required. Phase names support stable matching and references, not positional rebinding.",
+      "grouproundcount": "Positive batch count, a sibling of executeConfig at this level. Used with executeConfig.parallelPolicy: roundCount and mutually exclusive with parallelCount.",
+      "mappingmappingmode": "Explicit parameter-source marker. Write constants directly; use the corresponding mode for job parameters, upstream outputs, profiles or global parameters.",
+      "mappingvalue": "Parameter value or reference address, required except for isempty. The reference shape depends on mappingMode.",
+      "nodeip": "Node IP address, required for manual nodes and used for resource lookup.",
+      "nodename": "Existing resource name used for disambiguation; it does not rename the resource.",
+      "nodeport": "Node port used to distinguish resources sharing an IP; not a global protocol definition.",
+      "nodetypename": "Existing resource type name used for disambiguation, not a type ID.",
+      "operationarg": "Free arguments are passed in list order. Each may be a literal or explicit reference; reordering does not repair internal bindings.",
+      "operationcondition": "Condition expression for native/IF-Block, using native syntax. Configure it together with if/else branches.",
+      "operationelse": "Operations executed when the condition does not match. if-only outputs are unreachable; omission removes this branch.",
+      "operationfailignore": "0 does not ignore operation failure; 1 continues according to the existing failure-ignore policy. Explicit 0 is a meaningful setting.",
+      "operationif": "Operations executed when the condition matches. At least one of if/else must be nonempty; else-only outputs are unreachable here.",
+      "operationloopitems": "Loop data expression for native/LOOP-Block using existing native constraints. Specify loopItemVar and operations as well.",
+      "operationloopitemvar": "Name of the per-item variable available inside the loop; not a job parameter definition.",
+      "operationoperations": "Operations in the LOOP body, which may nest IF/LOOP. Block-only outputs cannot be referenced from outside.",
+      "operationopname": "Use the actual operation name, not an internal ID. Duplicate names require an explicit existing binding or fail.",
+      "operationopt": "YML uses input parameter keys from the tool definition; display names and parameter descriptions are shown in help. Existing display-name aliases remain accepted, with “name [key]” for duplicates. Write literals directly and references as explicit mappings.",
+      "operationprofilename": "Select an existing profile name and use mappingMode: profile under opt. profileId cannot override the binding.",
+      "paramconfig": "Control configuration using the graphical structure. Changes affect this version's parameter, not shared data sources such as matrices.",
+      "paramdefaultvalue": "Default value matching the control structure. 0, false and valid empty strings are retained.",
+      "paramdescription": "Parameter description, preserved as business data without translating user content.",
+      "parameditable": "1 allows editing at job creation; 0 disables editing. The default is 1.",
+      "paramisrequired": "1 requires a job parameter value; 0 allows omission. The default is 0.",
+      "paramkey": "Editable user-defined English parameter key. Update references after changes; do not remove it when adding a display name.",
+      "paramname": "User-defined display name. Duplicate names use “name [key]” in references; missing names fall back to the key.",
+      "paramtype": "Job parameter control type, an editable business choice. Use a graphical editor control type with matching config.",
+      "phaseexecround": "Only for runner/sqlfile phases in grayScale groups: first for the first batch, middle for the midpoint batch, last for the final batch. middle does not execute in every batch.",
+      "phaseexecuteconfig": "Phase presets: target/runner_target use isPresetExecuteConfig, runner uses isPresetRunnerGroup, and grayScale groups use group-level settings.",
+      "phaseoperations": "At least one operation is required. List order determines execution order; references must target reachable earlier outputs.",
+      "phasephasename": "Phase name; references must match the source phase. Update related references when renaming.",
+      "phasephasetype": "Execution mode must match non-native operations. target/runner_target can coexist; native-only phases require an explicit mode.",
+      "phaseroundcount": "Positive batch count, a sibling of executeConfig at this level. Used with executeConfig.parallelPolicy: roundCount and mutually exclusive with parallelCount.",
+      "protocolname": "Existing protocol name, resolved with port. Add the port when the name is ambiguous and no original binding exists.",
+      "protocolport": "Optional protocol port, which may be needed to disambiguate names. It does not modify the shared protocol.",
+      "referenceopletter": "Stable address for duplicate source operations. Retain the generated value; it is not an editable operation number.",
+      "referenceopname": "Use the actual operation name, not an internal ID. Duplicate names require an explicit existing binding or fail.",
+      "referenceoutput": "Source output display name or key, which must exist in the actual tool version and be reachable from the reference.",
+      "referencephasename": "Phase name; references must match the source phase. Update related references when renaming.",
+      "rootdefaultscenarioname": "The default scenario name must appear in scenarioList. Deletion removes the version's default selection.",
+      "rootexecuteconfig": "Define global protocol, user, Runner and targets for unpreset phases/groups. Do not add phase preset switches.",
+      "rootroundcount": "Positive batch count, a sibling of executeConfig at this level. Used with executeConfig.parallelPolicy: roundCount and mutually exclusive with parallelCount.",
+      "rootrunflow": "Define phase groups in list order, each with phases and independent execution options. Do not specify groupNo or UUIDs.",
+      "rootruntimeparamlist": "Job parameter definitions for this version. Retain keys, labels and control types; update all references after changes or deletion.",
+      "rootscenariolist": "Bind phase lists to existing scenario names for this version; shared scenarios are not created or modified.",
+      "scenariocombopphasenamelist": "Names of phases included in this scenario; every name must exist in runFlow.",
+      "scenarioscenarioname": "Existing scenario name bound to this version without modifying the shared definition.",
+      "targetfilter": "Use the resource-center filter structure, e.g. ipList. Obtain complex filters from graphical settings rather than custom query strings.",
+      "targetinputnodelist": "Manual node list with at least an IP address per node; no existing resource-center record is required.",
+      "targetparamlist": "Names of job parameters providing target-node data. Define them in runtimeParamList first; display names or keys are accepted.",
+      "targetpreoutputlist": "Reference object identifying source phase, operation and output. The source phase must execute earlier; a phase cannot use its own operations to determine its targets.",
+      "targetselectnodelist": "Selected resource-center nodes must identify existing resources. Add IP, port, name and type or retain an explicit binding to disambiguate."
+    },
+    "yamlfieldhelp": "YML Field Help",
+    "yamlfieldrequired": "Required field {0} is missing.",
+    "yamlfields": {
+      "controldatalist": "Static Options",
+      "controldatasource": "Data Source",
+      "controldefaultvalue": "Control Default Value",
+      "controlfilter": "Filter",
+      "controlgrouplist": "User, Group and Role Scope",
+      "controlismultiple": "Multiple Selection",
+      "controlisrequired": "Required Validation",
+      "controlmapping": "Field Mapping",
+      "controlmatrixlabel": "Matrix Business Identifier",
+      "controltype": "Control Type",
+      "controlvalidatelist": "Validation Rules",
+      "executeblacklist": "Blocklist",
+      "executeexecutenodeconfig": "Execution Targets",
+      "executeispresetexecuteconfig": "Preset Execution Targets",
+      "executeispresetrunnergroup": "Preset Runner Group",
+      "executeparallelcount": "Concurrency",
+      "executeprecondition": "Precondition",
+      "executeprotocol": "Connection Protocol",
+      "executerunnergroup": "Runner Group",
+      "executerunnergrouptag": "Runner Group Tags",
+      "executewhentospecify": "Target Selection",
+      "executewhitelist": "Allowlist",
+      "groupexecstrategy": "Execution Strategy",
+      "groupexecuteconfig": "Group Execution Configuration",
+      "groupphases": "Phases",
+      "grouproundcount": "Batch Size",
+      "mappingmappingmode": "Parameter Source",
+      "mappingvalue": "Value or Reference",
+      "nodeip": "IP Address",
+      "nodeport": "Port",
+      "nodetypename": "Resource Type",
+      "operationarg": "Arguments",
+      "operationcondition": "IF Condition",
+      "operationelse": "Else Branch",
+      "operationif": "If Branch",
+      "operationloopitems": "Loop Items",
+      "operationloopitemvar": "Loop Variable",
+      "operationoperations": "Loop Operations",
+      "operationopname": "Operation Name",
+      "operationopt": "Input Parameters",
+      "paramconfig": "Control Configuration",
+      "paramdescription": "Description",
+      "parameditable": "Editable",
+      "paramkey": "Parameter Key",
+      "paramname": "Parameter Display Name",
+      "paramtype": "Control Type",
+      "phaseexecround": "Execution Round",
+      "phaseexecuteconfig": "Phase Execution Configuration",
+      "phaseoperations": "Operations",
+      "phasephasename": "Phase Name",
+      "phaseroundcount": "Batch Size",
+      "protocolname": "Protocol Name",
+      "protocolport": "Protocol Port",
+      "referenceopletter": "Repeated Operation Address",
+      "referenceopname": "Source Operation",
+      "referenceoutput": "Output Parameter",
+      "referencephasename": "Source Phase",
+      "rootdefaultscenarioname": "Default Scenario",
+      "rootexecuteconfig": "Global Execution Configuration",
+      "rootroundcount": "Batch Size",
+      "rootrunflow": "Stage Groups",
+      "rootruntimeparamlist": "Job Parameters",
+      "rootscenariolist": "Scenarios",
+      "scenariocombopphasenamelist": "Scenario Phases",
+      "scenarioscenarioname": "Scenario Name",
+      "targetfilter": "Resource Filter",
+      "targetinputnodelist": "Manually Entered Nodes",
+      "targetparamlist": "Job Parameter References",
+      "targetpreoutputlist": "Upstream Output Reference",
+      "targetselectnodelist": "Selected Resources"
+    },
+    "yamlfieldtypeinvalid": "Field {0} has an invalid data type.",
+    "yamlformatversion": "YML Format Version",
+    "yamlformatversionhelp": "Omit or use 1 for legacy semantics, preserving previously hidden settings. Use 2 for a full configuration snapshot, where removing optional fields clears them or restores defaults. The version is not written into YML.",
+    "yamlguide": {
+      "batches": {
+        "parallel": {
+          "notes": "5 is example concurrency. Remove phase roundCount and retain protocol, user and targets.",
+          "title": "Concurrent Execution"
+        },
+        "rounds": {
+          "notes": "roundCount is a sibling of executeConfig. Remove executeConfig.parallelCount and retain protocol, user and targets.",
+          "title": "Batched Execution"
+        },
+        "step1": "Enable isPresetExecuteConfig for a target phase in a non-grayScale group. Merge into the phase, not inside executeConfig.",
+        "step2": "parallelPolicy: parallel uses executeConfig.parallelCount; parallelPolicy: roundCount uses phase-level roundCount.",
+        "step3": "5 is an example, not a default. Clear parallelPolicy, parallelCount and roundCount together to remove the strategy. Retain connection and target settings.",
+        "summary": "Concurrency and batch counts have different nesting levels; remove conflicting fields when switching.",
+        "title": "Phase Concurrency and Batching"
+      },
+      "blocks": {
+        "nested": {
+          "notes": "Merge into phase P. Replace sample operations, parameters, loop expression items and condition true; retain the existing execution tree.",
+          "title": "Output Reference in LOOP Inside IF"
+        },
+        "step1": "IF uses condition and if/else with at least one nonempty branch. LOOP uses loopItems, loopItemVar and operations.",
+        "step2": "The example places LOOP inside IF in phase P, then source before consume. Replace items and the condition with your business expressions.",
+        "step3": "Earlier outputs on the same branch are reachable; references across if/else or from outside a block to block-only outputs are not.",
+        "summary": "Nested operations use the standard structure; references must be reachable on the execution path.",
+        "title": "References Inside IF/LOOP Blocks"
+      },
+      "delete": {
+        "execute": "Deletion clears this option at the current level. Unpreset phase/group options follow global/job creation rules; omitted values are not restored from the previous YAML.",
+        "parallel": "When switching to parallel, remove sibling roundCount. For roundCount, remove executeConfig.parallelCount. To clear the strategy, remove all three fields to avoid conflicting or incomplete settings.",
+        "preset": "Deleting or setting to 0 clears these phase settings: {0}, plus phase-level roundCount. Internal bindings remain; unpreset settings are supplied globally or when creating the job.",
+        "references": "Deletion clears the version's definitions/bindings. Remaining references fail conversion with their paths; no partial configuration is saved.",
+        "runner": "Deleting or setting to 0 clears phase runnerGroup and runnerGroupTag and restores global/job Runner settings."
+      },
+      "enums": {
+        "editable": {
+          "0": "Not editable at job creation",
+          "1": "Editable at job creation"
+        },
+        "execround": {
+          "first": "Execute in the first batch",
+          "last": "Execute in the final batch",
+          "middle": "Execute in the midpoint batch, not every batch"
+        },
+        "execstrategy": {
+          "grayScale": "Batch by phase group",
+          "oneShot": "One-shot execution"
+        },
+        "failignore": {
+          "0": "Do not ignore failure",
+          "1": "Ignore failure"
+        },
+        "ispresetexecuteconfig": {
+          "0": "Disable and clear phase target presets",
+          "1": "Enable selected overrides; not all related fields are required"
+        },
+        "ispresetrunnergroup": {
+          "0": "Clear phase Runner group and tags",
+          "1": "Enable phase Runner presets"
+        },
+        "isrequired": {
+          "0": "Optional"
+        },
+        "mappingmode": {
+          "constant": "Constant; prefer writing the value directly",
+          "globalparam": "Global parameter reference",
+          "isempty": "Explicitly empty; no value field",
+          "prenodeoutputparam": "Upstream output value",
+          "prenodeoutputparamkey": "Upstream output key",
+          "profile": "Profile parameter",
+          "runtimeparam": "Job parameter reference"
+        },
+        "parallelpolicy": {
+          "parallel": "Use parallelCount for concurrency",
+          "roundCount": "Use parent-level roundCount for batching"
+        },
+        "phasetype": {
+          "runner": "Execute on Runner",
+          "runner_target": "Runner execution against targets",
+          "sqlfile": "Execute SQL files",
+          "target": "Execute on target nodes"
+        },
+        "whentospecify": {
+          "now": "Specify targets now",
+          "runtime": "Specify at job creation; clear current targets",
+          "runtimeparam": "Use job parameters for targets"
+        }
+      },
+      "global": {
+        "now": {
+          "notes": "Merge root executeConfig. Replace protocol, user and IP; do not add a phase preset switch.",
+          "title": "Specify Global Targets Now"
+        },
+        "runtime": {
+          "notes": "runtime removes executeNodeConfig from this document; select targets at job creation.",
+          "title": "Specify Targets at Job Creation"
+        },
+        "step1": "Merge at root executeConfig, not inside a runFlow entry. No preset switch is needed globally.",
+        "step2": "whenToSpecify: now configures targets now; runtime defers them to job creation and clears target configuration in the document.",
+        "step3": "Identify protocols by name and port. Use a literal user or explicit parameter reference; Runner '-1' means automatic assignment.",
+        "summary": "Configure global options not preset by a phase or phase group.",
+        "title": "Global Execution Configuration"
+      },
+      "group": {
+        "gray": {
+          "notes": "This is one runFlow entry, not a full document. Replace operation names and merge phases without overwriting them or reassigning duplicate bindings.",
+          "title": "Group Batching With Preparation"
+        },
+        "step1": "Set group execStrategy: grayScale. Group roundCount is a sibling of group executeConfig; do not add groupNo.",
+        "step2": "Place group targets and concurrency policy in group executeConfig. Phase preset switches do not control group settings.",
+        "step3": "runner/sqlfile phases use execRound: first, middle or last. Target phases do not. Merge the sample phases into your flow; do not replace existing phases.",
+        "summary": "Batch settings belong to the phase group, not each individual phase.",
+        "title": "Group Batching and Execution Rounds"
+      },
+      "output": {
+        "reference": {
+          "notes": "Merge into phase P; replace operation/parameter names and retain existing operations instead of replacing the configuration.",
+          "title": "Execute Before Referencing"
+        },
+        "step1": "Merge operations into phase P. Replace example/source, example/consume and parameter names with actual definitions.",
+        "step2": "Keep an explicit phaseName, opName and output structure in value for mappingMode: prenodeoutputparam; do not replace it with '${...}'.",
+        "step3": "Output names accept display labels or keys. Retain generated addresses for duplicate operations; do not renumber or reference later/mutually exclusive branches.",
+        "summary": "Locate an earlier operation by phase name, operation name and output parameter.",
+        "title": "Reference Upstream Operation Output"
+      },
+      "preset": {
+        "off": {
+          "notes": "Disabling clears preset protocol, user, targets, concurrency, preconditions, allow/block lists and phase roundCount; it does not merely hide them.",
+          "title": "Disable Target Presets"
+        },
+        "on": {
+          "notes": "Merge into the current phase and retain operations. Protocol, execution user and concurrency are optional preset examples. Replace ssh/22 and deploy if needed; 5 is not the default concurrency. Switching target sources must not overwrite existing connection or concurrency settings.",
+          "title": "Enable Target Presets"
+        },
+        "partial": {
+          "notes": "Merge only executeUser; do not replace existing executeConfig. Verify global/job settings supply unpreset options.",
+          "title": "Preset Only the Execution User"
+        },
+        "step1": "Ensure the phase is target/runner_target and its group is not grayScale. Merge the snippet into the phase and retain operations.",
+        "step2": "Set isPresetExecuteConfig: 1 and fill only the overrides you need. Unpreset options still use global/job rules.",
+        "step3": "Choose a target source in the tabs below; inputNodeList is only one option. Keep exactly one source, remove the old source field, and retain protocol, user, concurrency and operations. Turning the switch off clears presets.",
+        "summary": "Override protocol, user, targets or concurrency for a target phase.",
+        "title": "Preset Phase Execution Targets"
+      },
+      "profile": {
+        "reference": {
+          "notes": "Replace example-profile with an existing profile. The two p values identify tool input and profile parameter; the shared profile is unchanged.",
+          "title": "Bind an Existing Profile Parameter"
+        },
+        "step1": "Set profileName at operation level to an existing profile name; do not specify profileId.",
+        "step2": "Use mappingMode: profile under opt; value identifies the profile parameter key.",
+        "step3": "Replace profile and parameter names and retain opName. Missing or ambiguous profiles fail; shared profiles are not created.",
+        "summary": "Select an existing parameter profile without modifying its shared definition.",
+        "title": "Reference a Parameter Profile"
+      },
+      "runner": {
+        "auto": {
+          "notes": "Keep '-1' quoted: it denotes automatic assignment, not an internal group ID.",
+          "title": "Automatic Runner Assignment"
+        },
+        "named": {
+          "notes": "Replace example-runner and example-tag with existing names. Tags are a list, not comma-separated text.",
+          "title": "Select by Group and Tags"
+        },
+        "off": {
+          "notes": "Clears phase runnerGroup and runnerGroupTag and restores global/job settings.",
+          "title": "Disable Runner Presets"
+        },
+        "step1": "Use a runner phase in a non-grayScale group and isPresetRunnerGroup, not the target preset switch.",
+        "step2": "Use group names and a list of tag names. '-1' means automatic assignment; do not enter internal IDs.",
+        "step3": "Turning off the switch removes the phase's Runner group and tags. Ambiguous names require an explicit existing binding or disambiguation.",
+        "summary": "Select a Runner group for a Runner phase, or use automatic assignment.",
+        "title": "Preset Runner Groups and Tags"
+      },
+      "runtime": {
+        "definition": {
+          "notes": "deployPath is an editable key; Deployment Path is a sample label and /srv/example is a sample default.",
+          "title": "Define a Job Parameter"
+        },
+        "reference": {
+          "notes": "Merge the definition first. Replace p with an actual tool input. The reference matches the definition's name or key.",
+          "title": "Reference From an Operation"
+        },
+        "step1": "Merge definitions into root runtimeParamList; retain existing parameters instead of replacing the entire list.",
+        "step2": "Merge the reference into the operation's opt. Replace p with the tool's actual input parameter.",
+        "step3": "References accept display names or English keys. Update references after deletion or renaming; ordinary '${...}' strings remain literals.",
+        "summary": "Define an English key and display name, then use an explicit reference.",
+        "title": "Define and Reference Job Parameters"
+      },
+      "scope": {
+        "group": "Phase group configuration: one entry in runFlow.",
+        "operation": "Operations and nested IF/LOOP operations; phase and operation names must match your configuration.",
+        "phase": "Phase configuration: one entry in runFlow[].phases[].",
+        "phaseGray": "grayScale phase groups; execRound applies only to their runner/sqlfile phases.",
+        "phaseRunner": "Only for runner phases in non-grayScale groups.",
+        "phaseTarget": "Only for target/runner_target phases in non-grayScale groups. This is not a global or group-level switch.",
+        "root": "Global version configuration at the YAML root."
+      },
+      "targets": {
+        "filter": {
+          "applicability": "Use for dynamic selection by resource attributes, with the existing Resource Center filter structure.",
+          "label": "Filter",
+          "notes": "Use the existing resource-center filter structure; ipList is an existing field. Copy complex filters from the graphical editor, without inventing a query language.",
+          "purpose": "Describe criteria under filter to resolve target nodes at execution time instead of hard-coding manual nodes.",
+          "title": "Resource Filter"
+        },
+        "manual": {
+          "applicability": "Use when supplying node IP addresses directly. Existing Resource Center records are not required.",
+          "label": "Input Text",
+          "notes": "Replace the documentation IP. Manual nodes need no resource-center record. Replace the old target source rather than adding another.",
+          "purpose": "The graphical Input Text option maps to inputNodeList in YML. Each entry describes a manually supplied node.",
+          "title": "Manual Nodes"
+        },
+        "output": {
+          "applicability": "Requires a referenceable earlier phase whose operation output provides target-node data. The first phase has no earlier phase, so the graphical editor hides this option; help remains available.",
+          "label": "Upstream Parameter",
+          "notes": "sourcePhase must precede the current phase, and result from example/source must contain target-node data. A phase cannot derive its targets from its own operations.",
+          "purpose": "Use phaseName, opName and output under preOutputList to identify an earlier operation output as the current phase's targets.",
+          "title": "Targets From an Earlier Phase"
+        },
+        "param": {
+          "applicability": "First define a job parameter with type node in runtimeParamList. Supply node data through its default value or when creating the job.",
+          "notes": "First define targetNodes with type node and provide target-node data; its display name is also accepted.",
+          "purpose": "Use paramList to reference one or more node-type job parameters. Entries are parameter names or English keys, not node IP addresses.",
+          "title": "Targets From a Job Parameter"
+        },
+        "select": {
+          "applicability": "Use for existing Resource Center nodes. Business identifiers must resolve uniquely, or an explicit original binding must be available.",
+          "label": "Node",
+          "notes": "Replace IP, port, name and type to uniquely locate an existing resource or retain an explicit original binding.",
+          "purpose": "Use selectNodeList for selected Resource Center nodes, unlike Input Text, which requires no existing resource record.",
+          "title": "Resource Center Nodes"
+        },
+        "step1": "Merge one example into the phase, enable target presets, and retain existing protocol, user and operations.",
+        "step2": "Configure only one of filter, selectNodeList, inputNodeList, paramList and preOutputList. When switching, remove the old source field and retain protocol, execution user, concurrency and operations.",
+        "step3": "Selected resources need existing business identifiers; manual nodes do not. Define parameters first; output targets must come from an earlier phase.",
+        "summary": "Configure one of five target sources at a time.",
+        "title": "Choose a Target Source"
+      },
+      "title": "Configuration Guides"
+    },
+    "yamlhelp": {
+      "control": "Control configuration uses the existing graphical schema. Matrices, resource filters and validation rules retain their existing protocols; shared data sources are not edited here.",
+      "execute": "Use the graphical options applicable to this level. parallelPolicy=parallel uses parallelCount; roundCount uses the parent roundCount. These are mutually exclusive. A preset switch of 0 clears its preset settings. Runner constants use names; -1 means automatic assignment.",
+      "group": "Each phase group owns its strategy, batch size and execution settings. grayScale enables staged execution. List order determines group order; group numbers are internal.",
+      "mapping": "Write constants directly; references require explicit mappingMode/value. Ordinary ${...} strings remain constants. isempty omits value. Object constants containing mappingMode are rejected as ambiguous.",
+      "node": "Resources are identified by IP, port, name and resource type. Ambiguous matches require an unambiguous existing binding. Manual nodes need not exist in the Resource Center.",
+      "operation": "Select the operation by opName. IF-Block uses condition/if/else; LOOP-Block uses loopItems/loopItemVar/operations. Nested operations use the same structure. Write constants directly and references with mappingMode/value.",
+      "param": "Retain both the key and display name. type is the graphical control type. defaultValue and config use the existing control structure. Update references when changing or deleting a key.",
+      "phase": "phaseType is the graphical execution mode and is required for native-only phases. target and runner_target are compatible. execRound applies to runner/sqlfile phases in staged groups.",
+      "protocol": "Select an existing protocol by name and optional port. Provide the port to disambiguate. Protocol definitions and internal IDs cannot be edited.",
+      "reference": "Identify an upstream operation by phase, operation name and output parameter. Repeated operation references retain the system-provided opLetter address; it cannot edit the operation itself.",
+      "root": "Full version configuration. Each runFlow entry is a phase group. Basic information, permissions and notifications are outside this snapshot.",
+      "scenario": "Select an existing scenario by name and associate phase names. This changes version bindings only, not shared scenario definitions.",
+      "target": "Use the existing Resource Center filter structure. Selected resources, manual nodes, filters, runtime parameters and upstream output are mutually exclusive. Runtime parameters accept display names or keys."
+    },
+    "yamlifempty": "The if and else branches of IF-Block cannot both be empty.",
+    "yamlkeylocations": "YML Field Location Index",
+    "yamlmetadataunavailable": "Parameter or preset parameter set metadata could not be resolved from the tool definition. Check the definition and existing binding.",
+    "yamloperationduplicate": "Operation identifier {1}_{2} is duplicated in phase {0}.",
+    "yamloperationnotfound": "Operation {0} was not found or could not be uniquely identified.",
+    "yamloutputhelp": "Output parameters are read-only. Reference them explicitly from an earlier operation on the same execution path.",
+    "yamloutputnotfound": "Operation {0} does not have output parameter {1}.",
+    "yamlparameterinvalid": "Parameter {0} is missing or ambiguous. Use its key or disambiguated display name [key].",
+    "yamlparametermatrixinvalid": "The matrix data source bound in the configuration of job parameter “{0}” is no longer valid.",
+    "yamlphasetypeambiguous": "Cannot infer the execution mode. Native-only phases in the full format require phaseType.",
+    "yamlphasetypeconflict": "The phase execution mode is incompatible with its operations. target and runner_target can share a phase; separate other incompatible operations.",
+    "yamlprofilenotfound": "Preset parameter set {0} does not exist.",
+    "yamlreferenceambiguous": "The parameter reference cannot uniquely identify operation {1} in phase {0}. Preserve opLetter in the existing reference address, or use the graphical editor to resolve the binding.",
+    "yamlreferenceinvalid": "Parameter reference {0} has an invalid structure.",
+    "yamlreferenceunreachable": "The parameter reference points to a later operation or a mutually exclusive branch: phase {0}, operation {1}.",
+    "yamlrequiredwhen": {
+      "ifblock": "IF-Block requires a condition and at least one nonempty if/else branch.",
+      "loopblock": "Loop settings for LOOP-Block, validated using the native operation constraints.",
+      "mappingvalue": "Required unless mappingMode is isempty.",
+      "nativephase": "Required for native-only phases; otherwise inferred from compatible operation definitions.",
+      "parallel": "Required when parallelPolicy=parallel.",
+      "roundcount": "Required when executeConfig.parallelPolicy=roundCount at the same level."
+    },
+    "yamlresourceinvalid": "Business identifier {0} is missing or ambiguous. Complete the identifier or retain an unambiguous existing binding.",
+    "yamlrootinvalid": "The YML root node must be an object.",
+    "yamlsyntaxinvalid": "Invalid YML syntax: {0}",
+    "yamlsystemfieldreadonly": "Field {0} is system-derived and must match the automatically resolved value {1}; it cannot be overridden.",
+    "yamlunknownfield": "Field {0} is not supported. Remove it; internal system fields cannot be edited in YML.",
+    "yamlversioninvalid": "Unsupported YML format version {0}; supported versions are 1 and 2."
   },
   "nmcaa": {
     "deleteattrapi": {
@@ -11959,7 +12410,7 @@
       "input": {
         "param": {
           "desc": {
-            "action": "Append: only add; Update: only update; All: Add\u0026Update"
+            "action": "Append: only add; Update: only update; All: Add&Update"
           }
         }
       }
@@ -12275,7 +12726,7 @@
       "input": {
         "param": {
           "desc": {
-            "authlist": "Authorization list, empty means clearing all authorizations. Example: {authType: \u0027user\u0027, authUuid: \u0027xxxx\u0027, action: \u0027cimaange\u0027}"
+            "authlist": "Authorization list, empty means clearing all authorizations. Example: {authType: 'user', authUuid: 'xxxx', action: 'cimaange'}"
           }
         }
       }
@@ -12403,7 +12854,7 @@
         "param": {
           "desc": {
             "attr": "The attributes that need to be returned. If not defined, all attributes will be returned. An empty array represents that no attributes will be returned",
-            "dsl": "Query expression, Logical connective supports\u0026\u0026, | |, and relational operator supports:\u003d\u003d,\u003e\u003d,\u003c\u003d,\u003e,\u003c,!\u003d,like,not like, include, exclude. If you need to search for relationship or reference attribute fields, you can use a.b representation, such as env. name\u003d\u003d STG \u0026\u0026(port\u003d\u003d80 | | port\u003d\u003d443)",
+            "dsl": "Query expression, Logical connective supports&&, | |, and relational operator supports:==,>=,<=,>,<,!=,like,not like, include, exclude. If you need to search for relationship or reference attribute fields, you can use a.b representation, such as env. name== STG &&(port==80 | | port==443)",
             "rel": "The relationships that need to be returned. If not defined, all relationships will be returned. An empty array represents that no relationships will be returned"
           }
         }
@@ -12438,7 +12889,7 @@
         "param": {
           "desc": {
             "groupby": "Uuid of grouping attributes",
-            "mode": "Search mode supports two types: page and api, which mainly affect the structure of returned data. Page is the default mode for displaying on pages, while api returns field names for api calls. Api mode only supports scenarios where searchMode\u003dnormal.",
+            "mode": "Search mode supports two types: page and api, which mainly affect the structure of returned data. Page is the default mode for displaying on pages, while api returns field names for api calls. Api mode only supports scenarios where searchMode=normal.",
             "searchmode": "Normal: view list mode, group: view list group mode, data: data mode"
           }
         }
@@ -12745,19 +13196,19 @@
       "diagramversionnotfoundexception": "The current architecture diagram does not have a version of {0}"
     },
     "edgenotfoundexception": {
-      "edgenotfoundexception": "Edge \u0027{0}\u0027 does not exist"
+      "edgenotfoundexception": "Edge '{0}' does not exist"
     },
     "processdiagramstatusirregularexception": {
       "processdiagramstatusirregularexception": "The architecture diagram {0} needs to enter state {2} before it can flow. The current state is {1}"
     },
     "templatenameisexistsexception": {
-      "templatenameisexistsexception": "Template \u0027{0}\u0027 already exists"
+      "templatenameisexistsexception": "Template '{0}' already exists"
     },
     "templatestatusisexistsexception": {
       "templatestatusisexistsexception": "Template status {0} already exists"
     },
     "widgetnameisexistsexception": {
-      "widgetnameisexistsexception": "Element \u0027{0}\u0027 already exists"
+      "widgetnameisexistsexception": "Element '{0}' already exists"
     }
   },
   "nmccpe": {
@@ -12913,7 +13364,7 @@
     },
     "diagramnotfoundexception": {
       "diagramnotfoundexception": "The architecture diagram  {0}  does not exist",
-      "diagramversionnotfoundexception": "Version \u0027{1}\u0027 of architecture diagram  {0}  does not exist"
+      "diagramversionnotfoundexception": "Version '{1}' of architecture diagram  {0}  does not exist"
     },
     "diagramstatusirregularexception": {
       "diagramstatusirregularexception": "The current architecture diagram state has changed. Please refresh the page and edit again"
@@ -12992,7 +13443,7 @@
   },
   "nmcwe": {
     "cmdbdispatcherdispatchfailedexception": {
-      "cmdbdispatcherdispatchfailedexception_a": "The configuration item model or view \u0027{0}\u0027 does not exist",
+      "cmdbdispatcherdispatchfailedexception_a": "The configuration item model or view '{0}' does not exist",
       "cmdbdispatcherdispatchfailedexception_b": "Unable to find handler in matching result: {0}",
       "cmdbdispatcherdispatchfailedexception_c": "In the {0} ({1}) model, configuration item data cannot be found based on the matching condition: {2}",
       "cmdbdispatcherdispatchfailedexception_d": "In the {0} ({1}) model, find {3} configuration item data based on matching criteria: {2}",
@@ -13188,7 +13639,7 @@
             "targetphasename": "Target Phase Name"
           },
           "help": {
-            "appsystemabbrnamelist": "Effective Only When isAllAppSystem\u003d0",
+            "appsystemabbrnamelist": "Effective Only When isAllAppSystem=0",
             "phaselist": "[{\"name\":\"Phase Name\",\"groupSort\":\"Phase Group Sort\"}]"
           }
         }
@@ -14030,7 +14481,7 @@
         "param": {
           "desc": {
             "actionlist": "Action List",
-            "includeactionlist": "Permission Actions to Return, Such As [\u0027view\u0027, \u0027edit\u0027, \u0027scenario\u0027, \u0027env\u0027]"
+            "includeactionlist": "Permission Actions to Return, Such As ['view', 'edit', 'scenario', 'env']"
           }
         }
       },
@@ -14179,7 +14630,7 @@
             "added": "Separate Multiple Values With Commas",
             "date": "Format: yyyy-MM-dd HH:mm:ss",
             "deleted": "Separate Multiple Values With Commas",
-            "message": "No Action Is Executed When the Message Contains \u0027--nodeploy\u0027",
+            "message": "No Action Is Executed When the Message Contains '--nodeploy'",
             "modified": "Separate Multiple Values With Commas"
           }
         }
@@ -15342,11 +15793,11 @@
             "dependencelist": {
               "artifactid": "Artifact ID in Each dependenceList JSON Object",
               "groupid": "Project Group ID in Each dependenceList JSON Object",
-              "licenses": "DependenceList-\u003eJSON in Attribute, License, Open-Source License etc.",
+              "licenses": "DependenceList->JSON in Attribute, License, Open-Source License etc.",
               "name": "Dependency package list; each element is a JSON object",
-              "parent": "DependenceList-\u003eJSON in Attribute, Parent Dependency Attribute Set, Contains groupId、artifactId、version Three Attribute",
-              "scope": "DependenceList-\u003eJSON in Attribute, Dependency Scope, Default compile",
-              "type": "DependenceList-\u003eJSON in Attribute, Package Type, Default jar",
+              "parent": "DependenceList->JSON in Attribute, Parent Dependency Attribute Set, Contains groupId、artifactId、version Three Attribute",
+              "scope": "DependenceList->JSON in Attribute, Dependency Scope, Default compile",
+              "type": "DependenceList->JSON in Attribute, Package Type, Default jar",
               "url": "Package URL in the Maven Repository",
               "version": "Version in Each dependenceList JSON Object"
             },
@@ -15379,11 +15830,11 @@
         "param": {
           "desc": {
             "buildno": "Build Number(When resourceType Is [mirror*|workspace], It Is Not Required)",
-            "dest": "Target Directory Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)",
+            "dest": "Target Directory Path (Must Start With '/'; HOME Is '/')",
             "envid": "Environment ID(When resourceType Is [build*|workspace], It Is Not Required)",
             "id": "Version ID",
             "resourcetype": "Artifact Type",
-            "src": "Source File Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)"
+            "src": "Source File Path (Must Start With '/'; HOME Is '/')"
           }
         }
       }
@@ -15396,7 +15847,7 @@
             "buildno": "Build Number(When resourceType Is [mirror*|workspace], It Is Not Required)",
             "envid": "Environment ID(When resourceType Is [build*|workspace], It Is Not Required)",
             "id": "Version ID",
-            "path": "Target Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)",
+            "path": "Target Path (Must Start With '/'; HOME Is '/')",
             "resourcetype": "Artifact Type"
           }
         }
@@ -15410,7 +15861,7 @@
             "buildno": "Build Number(When resourceType Is [mirror*|workspace], It Is Not Required)",
             "envid": "Environment ID(When resourceType Is [build*|workspace], It Is Not Required)",
             "id": "Version ID",
-            "path": "Directory or File Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)",
+            "path": "Directory or File Path (Must Start With '/'; HOME Is '/')",
             "resourcetype": "Artifact Type"
           }
         }
@@ -15425,7 +15876,7 @@
             "envid": "Environment ID(When resourceType Is [build*|workspace], It Is Not Required)",
             "id": "Version ID",
             "ispack": "Package Files",
-            "path": "File Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)",
+            "path": "File Path (Must Start With '/'; HOME Is '/')",
             "resourcetype": "Artifact Type"
           }
         }
@@ -15439,7 +15890,7 @@
             "buildno": "Build Number(When resourceType Is [mirror*|workspace], It Is Not Required)",
             "envid": "Environment ID(When resourceType Is [build*|workspace], It Is Not Required)",
             "id": "Version ID",
-            "path": "Target Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)",
+            "path": "Target Path (Must Start With '/'; HOME Is '/')",
             "resourcetype": "Artifact Type"
           }
         }
@@ -15463,7 +15914,7 @@
       "input": {
         "param": {
           "desc": {
-            "ismirror": "Whether an Image Artifact Exists (Required Only When type\u003denv)",
+            "ismirror": "Whether an Image Artifact Exists (Required Only When type=env)",
             "type": "View Artifact Source (build: from Build Number View;env: from Environment View)"
           }
         }
@@ -15482,13 +15933,13 @@
         "param": {
           "desc": {
             "buildno": "Build Number(When resourceType Is [mirror*|workspace], It Is Not Required)",
-            "dest": "Target File Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)",
+            "dest": "Target File Path (Must Start With '/'; HOME Is '/')",
             "envid": "Environment ID(When resourceType Is [build*|workspace], It Is Not Required)",
             "id": "Version ID",
             "name": "New File Name (Required for Rename)",
             "operation": "Operation (move: Move; rename: Rename)",
             "resourcetype": "Artifact Type",
-            "src": "Source File Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)"
+            "src": "Source File Path (Must Start With '/'; HOME Is '/')"
           }
         }
       }
@@ -15502,7 +15953,7 @@
             "envid": "Environment ID(When resourceType Is [build*|workspace], It Is Not Required)",
             "fileparamname": "File Parameter Name",
             "id": "Version ID",
-            "path": "File Path (Must Start With \u0027/\u0027; HOME Is \u0027/\u0027)",
+            "path": "File Path (Must Start With '/'; HOME Is '/')",
             "resourcetype": "Artifact Type",
             "unpack": "Extract Files"
           }
@@ -16083,7 +16534,7 @@
   },
   "nmice": {
     "inspectbaselinesnapshotnotfoundexception": {
-      "inspectbaselinesnapshotnotfoundexception": "The inspection baseline snapshot \u0027{0}\u0027 does not exist"
+      "inspectbaselinesnapshotnotfoundexception": "The inspection baseline snapshot '{0}' does not exist"
     }
   },
   "nmics": {
@@ -19493,7 +19944,7 @@
       }
     },
     "reportprocesstasktool": {
-      "description": "Use this tool to submit a Task.\n1. A Task must be submitted through a Service. Parameters vary by Service, so call SERVICE_REPORT_PARAM_LIST with the Service name to obtain them.\n2. If the user has not specified a Service, call the tool that lists the Services available to the current user and ask for a Service name.\n3. After the user provides partial data, call SERVICE_REPORT_PARAM_LIST again, validate every required parameter, and request missing values.\n4. When all required data is available, call this tool to submit the Task.\n5. If submission fails, return the failure reason.\n6. If submission succeeds, return a link to the Task details page. The link template is ${homeUrl}/process.html#/task-detail?processTaskId\u003d${processTaskId}. Replace the variables with returned data. Do not display the raw URL; generate a linked Task title that opens in a new window.\n7. Use this JSON structure for form data: {\"formAttributeDataList\":[{\"key\":\"form attribute key\",\"label\":\"form attribute label\",\"dataList\":\"user-provided form attribute value\"}]}.\n8. Do not modify user input or insert spaces between Chinese, English, or numeric characters.",
+      "description": "Use this tool to submit a Task.\n1. A Task must be submitted through a Service. Parameters vary by Service, so call SERVICE_REPORT_PARAM_LIST with the Service name to obtain them.\n2. If the user has not specified a Service, call the tool that lists the Services available to the current user and ask for a Service name.\n3. After the user provides partial data, call SERVICE_REPORT_PARAM_LIST again, validate every required parameter, and request missing values.\n4. When all required data is available, call this tool to submit the Task.\n5. If submission fails, return the failure reason.\n6. If submission succeeds, return a link to the Task details page. The link template is ${homeUrl}/process.html#/task-detail?processTaskId=${processTaskId}. Replace the variables with returned data. Do not display the raw URL; generate a linked Task title that opens in a new window.\n7. Use this JSON structure for form data: {\"formAttributeDataList\":[{\"key\":\"form attribute key\",\"label\":\"form attribute label\",\"dataList\":\"user-provided form attribute value\"}]}.\n8. Do not modify user input or insert spaces between Chinese, English, or numeric characters.",
       "label": "Submit Task"
     },
     "servicereportparamlisttool": {
@@ -20020,7 +20471,7 @@
       "getdisplayname": "Team"
     },
     "processtasksteponlyusercondition": {
-      "getdesc": "Filter Tasks assigned to or currently handled by this user. Tasks assigned to the user\u0027s team or role for claiming are excluded.",
+      "getdesc": "Filter Tasks assigned to or currently handled by this user. Tasks assigned to the user's team or role for claiming are excluded.",
       "getdisplayname": "Step Assignee"
     },
     "processtaskstepstatuscondition": {
@@ -20036,7 +20487,7 @@
       "getdisplayname": "Treatment Group"
     },
     "processtaskstepusercondition": {
-      "getdesc": "Filter Tasks pending for, being handled by, or previously handled by this user, including claimable Tasks assigned to the user\u0027s team or role.",
+      "getdesc": "Filter Tasks pending for, being handled by, or previously handled by this user, including claimable Tasks assigned to the user's team or role.",
       "getdisplayname": "Assignee"
     },
     "processtaskstepuseridcondition": {
@@ -20098,13 +20549,13 @@
   "nmpnc": {
     "processingtaskofminehandler": {
       "content": {
-        "withouturl": "You have \u003cspan style\u003d\"color:red\"\u003e{0}\u003c/span\u003e pending Tasks. Go to [IT Services -\u003e Work Center -\u003e All] and select [My Pending Tasks].",
-        "withurl": "You have \u003cspan style\u003d\"color:red\"\u003e{0}\u003c/span\u003e pending Tasks. Go to \u003ca href\u003d\"{1}\" target\u003d\"_blank\"\u003e[Work Center]\u003c/a\u003e and select [My Pending Tasks]."
+        "withouturl": "You have <span style=\"color:red\">{0}</span> pending Tasks. Go to [IT Services -> Work Center -> All] and select [My Pending Tasks].",
+        "withurl": "You have <span style=\"color:red\">{0}</span> pending Tasks. Go to <a href=\"{1}\" target=\"_blank\">[Work Center]</a> and select [My Pending Tasks]."
       },
       "getname": "Task",
       "preview": {
-        "withouturl": "You have \u003cspan style\u003d\"color:red\"\u003e5\u003c/span\u003e pending Tasks. Go to [IT Services -\u003e Work Center -\u003e All] and select [My Pending Tasks].",
-        "withurl": "You have \u003cspan style\u003d\"color:red\"\u003e5\u003c/span\u003e pending Tasks. Go to \u003ca href\u003d\"{0}\" target\u003d\"_blank\"\u003e[Work Center]\u003c/a\u003e and select [My Pending Tasks]."
+        "withouturl": "You have <span style=\"color:red\">5</span> pending Tasks. Go to [IT Services -> Work Center -> All] and select [My Pending Tasks].",
+        "withurl": "You have <span style=\"color:red\">5</span> pending Tasks. Go to <a href=\"{0}\" target=\"_blank\">[Work Center]</a> and select [My Pending Tasks]."
       },
       "runtime": {
         "label": {
@@ -20467,7 +20918,7 @@
         },
         "getcontent": {
           "1": "Task",
-          "2": "Transition [${DATA.step.name}]; \u003cbr\u003e"
+          "2": "Transition [${DATA.step.name}]; <br>"
         },
         "gettitle": {
           "1": "Step Activate ——"
@@ -20479,8 +20930,8 @@
         },
         "getcontent": {
           "1": "Task",
-          "2": "Roll Back [${DATA.step.name}]; \u003cbr\u003e",
-          "3": "Reason: [${DATA.content}]; \u003cbr\u003e"
+          "2": "Roll Back [${DATA.step.name}]; <br>",
+          "3": "Reason: [${DATA.content}]; <br>"
         },
         "gettitle": {
           "1": "Step ——"
@@ -20492,8 +20943,8 @@
         },
         "getcontent": {
           "1": "Task",
-          "2": "In, [${DATA.step.name}] Step Transition Failed; \u003cbr\u003e",
-          "3": "Reason: [${DATA.step.error}]; \u003cbr\u003e"
+          "2": "In, [${DATA.step.name}] Step Transition Failed; <br>",
+          "3": "Reason: [${DATA.step.error}]; <br>"
         },
         "gettitle": {
           "1": "Step Failed ——"
@@ -20505,8 +20956,8 @@
         },
         "getcontent": {
           "1": "Task",
-          "2": "In, [${DATA.step.name}] Step Suspend; \u003cbr\u003e",
-          "3": "Reason: [Step Name ] Step Roll Back; \u003cbr\u003e"
+          "2": "In, [${DATA.step.name}] Step Suspend; <br>",
+          "3": "Reason: [Step Name ] Step Roll Back; <br>"
         },
         "gettitle": {
           "1": "Step Suspend ——"
@@ -20529,8 +20980,8 @@
         },
         "getcontent": {
           "1": "[${DATA.currentUserName}] Task",
-          "2": "[${DATA.step.name}] Step Withdraw; \u003cbr\u003e",
-          "3": "Reason: [${DATA.content}]; \u003cbr\u003e"
+          "2": "[${DATA.step.name}] Step Withdraw; <br>",
+          "3": "Reason: [${DATA.content}]; <br>"
         },
         "gettitle": {
           "1": "Step Withdraw ——"
@@ -20542,7 +20993,7 @@
         },
         "getcontent": {
           "1": "Task",
-          "2": "[${DATA.step.name}] Step Assignee [${DATA.step.majorUser.userName}] Accept; \u003cbr\u003e"
+          "2": "[${DATA.step.name}] Step Assignee [${DATA.step.majorUser.userName}] Accept; <br>"
         },
         "gettitle": {
           "1": "Assignee ——"
@@ -20554,7 +21005,7 @@
         },
         "getcontent": {
           "1": "Task",
-          "2": "[${DATA.step.name}] Step Complete; \u003cbr\u003e"
+          "2": "[${DATA.step.name}] Step Complete; <br>"
         },
         "gettitle": {
           "1": "Step Complete ——"
@@ -20567,8 +21018,8 @@
         "getcontent": {
           "1": "Task",
           "2": "In, [${DATA.currentUserName}] [${DATA.step.name}] Step Transfer",
-          "3": "\u003cBr\u003e",
-          "4": "Reason: [${DATA.content}]; \u003cbr\u003e"
+          "3": "<Br>",
+          "4": "Reason: [${DATA.content}]; <br>"
         },
         "gettitle": {
           "1": "Step Transfer ——"
@@ -20580,7 +21031,7 @@
         },
         "getcontent": {
           "1": "Task",
-          "2": "In, [${DATA.currentUserName}] Reminder,; \u003cbr\u003e"
+          "2": "In, [${DATA.currentUserName}] Reminder,; <br>"
         },
         "gettitle": {
           "1": "Reminder ——"
@@ -20641,8 +21092,8 @@
       "getname": "Clearprocesstaskstepinoperationstartuphandler"
     },
     "defaultslacalculatehandler": {
-      "description": "1. Normally, Step handling time is the completion time minus the activation time.\u003cbr\u003e2. If a Step is paused, the interval from pause to recovery is excluded.\u003cbr\u003e3. If a Step is reactivated multiple times, all handling intervals are accumulated.\u003cbr\u003e4. If handling intervals for two or more Steps overlap, the overlap is counted only once.",
-      "getdescription": "When: \u003cbr\u003e",
+      "description": "1. Normally, Step handling time is the completion time minus the activation time.<br>2. If a Step is paused, the interval from pause to recovery is excluded.<br>3. If a Step is reactivated multiple times, all handling intervals are accumulated.<br>4. If handling intervals for two or more Steps overlap, the overlap is counted only once.",
+      "getdescription": "When: <br>",
       "getname": "SLA (Default)"
     }
   },
@@ -20866,7 +21317,7 @@
       "input": {
         "param": {
           "desc": {
-            "ismine": "Do you want to only query the application list containing the current user\u0027s tasks",
+            "ismine": "Do you want to only query the application list containing the current user's tasks",
             "ismyreported": "Whether to only query the application list reported by the current user",
             "needissuecount": "Do you need to return the number of tasks"
           }
@@ -21180,7 +21631,7 @@
     },
     "authmodulegetapi": {
       "description": {
-        "desc": "According to the user\u0027s module and corresponding permission list"
+        "desc": "According to the user's module and corresponding permission list"
       },
       "getname": "Obtain the corresponding permissions for the user module",
       "output": {
@@ -21868,7 +22319,7 @@
       "getname": "Export user files"
     },
     "getcurrentusertokenapi": {
-      "getname": "Obtain the user\u0027s own token"
+      "getname": "Obtain the user's own token"
     },
     "getserverinfoapi": {
       "getname": "Retrieve server information"
@@ -21883,10 +22334,10 @@
       "getname": "Number of unread user exported files"
     },
     "getusertokenapi": {
-      "getname": "Obtain the user\u0027s token"
+      "getname": "Obtain the user's token"
     },
     "resetcurrentusertokenapi": {
-      "getname": "Reset the user\u0027s own token",
+      "getname": "Reset the user's own token",
       "output": {
         "param": {
           "return": {
@@ -21896,13 +22347,13 @@
       }
     },
     "resetusertokenapi": {
-      "getname": "Reset user\u0027s token"
+      "getname": "Reset user's token"
     },
     "searchuserexportfileapi": {
       "getname": "User exported file list",
       "input": {
         "param": {
-          "desc": "Do you want to view everyone\u0027s data"
+          "desc": "Do you want to view everyone's data"
         }
       }
     },
@@ -22072,13 +22523,13 @@
   },
   "nmtce": {
     "portalisnotactiveexception": {
-      "portalisnotactiveexception": "Portal configuration \u0027{0}\u0027 is not activated"
+      "portalisnotactiveexception": "Portal configuration '{0}' is not activated"
     },
     "portalnotfoundexception": {
-      "portalnotfoundexception": "Portal configuration \u0027{0}\u0027 does not exist"
+      "portalnotfoundexception": "Portal configuration '{0}' does not exist"
     },
     "portalwidgetnotfoundexception": {
-      "portalwidgetnotfoundexception": "Portal widget \u0027{0}\u0027 does not exist"
+      "portalwidgetnotfoundexception": "Portal widget '{0}' does not exist"
     }
   },
   "nmteu": {
@@ -22089,8 +22540,8 @@
   "nmts": {
     "serverserviceimpl": {
       "postotherserverapi": {
-        "notfound": "Cannot find application server with server ID \u0027{0}\u0027",
-        "nothost": "The corresponding data in the \u0027serverless\u0027 table of the application server with server ID\u0027 {0} \u0027is not configured with a host"
+        "notfound": "Cannot find application server with server ID '{0}'",
+        "nothost": "The corresponding data in the 'serverless' table of the application server with server ID' {0} 'is not configured with a host"
       }
     }
   },
@@ -22258,16 +22709,16 @@
       "updatetime": "Update Time",
       "updatetimetext": "Update Time (Text)",
       "workeraccount": "Processor account",
-      "workeremail": "Processor\u0027s email",
-      "workerphone": "Handler\u0027s phone",
+      "workeremail": "Processor's email",
+      "workerphone": "Handler's phone",
       "workerteam": "Treatment Group",
-      "workerteamaccountphone": "Handling group members\u0027 phone numbers",
+      "workerteamaccountphone": "Handling group members' phone numbers",
       "workerteamemail": "Processing group email",
-      "workerteamleaderphone": "Handling group calls\u0026leader calls",
-      "workerteammemberemail": "Handling group members\u0027 email addresses",
+      "workerteamleaderphone": "Handling group calls&leader calls",
+      "workerteammemberemail": "Handling group members' email addresses",
       "workerteamphone": "Handling group phone calls",
       "workerteamuuid": "Processing group uuid",
-      "workeruuid": "Processing person\u0027s uuid"
+      "workeruuid": "Processing person's uuid"
     },
     "appsystemidlist": "Application System ID List",
     "autoexec": {
