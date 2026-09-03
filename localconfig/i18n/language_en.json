@@ -11974,6 +11974,8 @@
     "autoexecskilltitledescription": "Skill title",
     "autoexecskilltool": {
       "executefailed": "Autoexec tool execution failed",
+      "executescript": "{0} Execution",
+      "executeskill": "{0} Skill Execution",
       "label": "Autoexec Skill Execution",
       "modelpurposeexecute": "Execute Skill Workflow",
       "modelpurposesummary": "Summarize Skill Execution Results"

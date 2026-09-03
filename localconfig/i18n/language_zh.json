@@ -11986,6 +11986,8 @@
     "autoexecskilltitledescription": "Skill标题",
     "autoexecskilltool": {
       "executefailed": "自动化工具执行失败",
+      "executescript": "执行 {0}",
+      "executeskill": "执行 {0} Skill",
       "label": "自动化Skill执行",
       "modelpurposeexecute": "执行Skill流程",
       "modelpurposesummary": "汇总Skill执行结果"
