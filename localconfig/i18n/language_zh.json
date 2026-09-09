@@ -177,6 +177,7 @@
     "help": "帮助",
     "hmac": "Hmac认证",
     "homeurl": "应用服务器地址",
+    "hostname": "主机名",
     "icon": "图标",
     "id": "ID",
     "importtargettype": "导入目标类型",
@@ -427,6 +428,7 @@
     "uniquename": "唯一标识",
     "unreadcount": "未读数量",
     "upwardnamelist": "上层名称列表",
+    "url": "请求路径",
     "user": "用户",
     "userenname": "用户英文名",
     "userid": "用户ID",
@@ -471,6 +473,20 @@
     "rdm": {
       "fullindextype": {
         "issue": "研发管理任务"
+      }
+    }
+  },
+  "nf": {
+    "api": {
+      "example": {
+        "fullupdate": "全量更新配置项",
+        "invalid": "接口 {0} 的场景 {1} 请求示例不是有效的 JSON 对象或数组。",
+        "mcparguments": "以下各场景的 JSON 是 tools/call 的 params.arguments。先根据适用条件选择场景，再替换示例值；不要把标题、说明或整个示例列表放入 arguments。",
+        "partialupdate": "局部更新配置项",
+        "replaceconfig": "示例包含静态配置占位值；调用前请替换为当前租户配置及实际业务数据。",
+        "replacevalues": "示例值仅用于说明请求结构；调用前请替换为当前环境的实际数据，并遵循参数说明。",
+        "simple": "简化格式",
+        "standard": "标准格式"
       }
     }
   },
@@ -11000,7 +11016,25 @@
     },
     "execautoexecscriptbytagentapi": {
       "description": "用于在指定资产或 Runner 上直接执行已授权的自定义脚本或工具库工具，适合即时执行单个自动化操作并获取输出。",
-      "getname": "直接通过tagent执行自定义工具或工具库",
+      "example": {
+        "protocol": {
+          "description": "适用于已授权、执行方式为 runner_target 的工具库工具。将 operationName 的示例值 example/runner-target-tool 替换为工具库中实际的工具名称，param 按该工具的输入参数定义填写。resourceId 指向目标资产；示例使用 ssh 协议及 deploy 账号，须与目标资产的实际配置一致。显式填写 protocol 时 username 必填，连接端口来自协议配置。MCP 调用时这些字段位于 params.arguments 中，params.name 固定为 autoexec.script.execrtool.exec。",
+          "title": "Runner 连接目标：指定协议与账号"
+        },
+        "runner": {
+          "description": "适用于已授权、执行方式为 runner 的工具库工具。将 operationName 的示例值 example/runner-tool 替换为工具库中实际的工具名称，param 按该工具的输入参数定义填写；无需目标资产参数。runnerGroup、runnerGroupTag 用于限制候选 Runner，填写满足当前请求头规则的实际组及标签，也可按需省略。MCP 调用时这些字段位于 params.arguments 中，params.name 固定为 autoexec.script.execrtool.exec。",
+          "title": "Runner 上执行工具库工具"
+        },
+        "tagent": {
+          "description": "前提：按名称和完整目录定位已授权、有激活版本且执行方式为 runner_target 的自定义工具，示例假定其自由参数接收有序命令列表。将 operationName、fullCatalogName、ip 的示例值替换为实际自定义工具名称、完整目录路径及目标资产 IP，并按实际定义调整 argument。省略 protocol 和 username 固定使用 tagent/root；ip 必须能定位资源中心资产。",
+          "title": "Runner 连接目标：默认 Tagent 账号"
+        },
+        "target": {
+          "description": "前提：operationId 对应已授权、有激活版本且执行方式为 target 的自定义工具，示例假定其定义了 message 输入参数。将 operationId、resourceId 替换为实际工具 ID 和资源中心资产 ID，并按工具定义填写 param；不要将资源 ID 当作 Informant ID。Runner 按目标资产 IP 自动选择。",
+          "title": "在目标资产执行自定义工具"
+        }
+      },
+      "getname": "直接执行自定义工具或工具库工具",
       "input": {
         "param": {
           "desc": {
@@ -11009,22 +11043,23 @@
             "runnername": "Runner名称"
           },
           "help": {
-            "argument": "自由参数数组，元素按顺序传递，具体数量、类型和组织方式以工具的自由参数定义及帮助为准；工具无自由参数时可省略或传[]。示例：deprecate/sshexec的固定位置参数[\"hostname\"]；osbasic/getcmdout的有序列表[\"uname -a\",\"df -h\"]；osbasic/createdirs的多行文本[\"/data/app\\n/data/log\"]；basic/createjob的交替键值对[\"appSystemId\",\"1001\",\"envName\",\"PRD\"]（元素数量须为偶数）；build/compileinjenkins中每项为key=value格式[\"BRANCH=main\",\"ENV=PRD\"]。",
-            "fullcatalogname": "按名称查找自定义工具时用于指定完整目录；根目录填写 /。名称匹配多个工具时必须提供，operationId 优先。",
-            "includestdout": "未传或为null时，工具未定义出参则默认true，已定义出参则默认false；显式传入true或false时优先使用调用方设置。",
-            "ip": "TARGET和RUNNER_TARGET模式未提供资源ID时必填",
-            "nodename": "未提供资源ID时与IP、端口组合定位资产，特别用于区分共用同一IP和端口的数据库实例",
-            "operationid": "可选。同时提供工具ID和工具名称时优先使用工具ID；工具ID和工具名称不能同时为空",
-            "operationname": "可选。仅在未提供工具ID时使用，并在选定的工具类型内精确匹配；工具ID和工具名称不能同时为空",
-            "param": "按工具入参名称组织的键值对象，例如：{\"message\":\"hello\",\"timeout\":60}",
-            "port": "未提供资源ID时与IP、资产名称组合定位资产",
-            "protocol": "RUNNER_TARGET模式使用。未提供时默认使用tagent协议",
-            "resourceid": "优先级高于IP、端口和资产名称",
-            "runnergroup": "仅RUNNER模式生效，支持执行器组ID、名称；未提供时在满足请求头规则和标签约束的执行器组中随机匹配",
-            "runnergrouptag": "可选，支持执行器组标签ID或名称数组；提供时Runner必须同时满足请求头规则、标签以及当前执行方式的执行器组或网段约束，例如：[\"PRD\",\"UAT\"]",
-            "runnerid": "优先级高于Runner名称，且必须属于请求头规则、标签以及当前执行方式的执行器组或网段约束共同确定的候选集",
-            "runnername": "仅在未提供Runner映射ID时使用，且必须属于请求头规则、标签以及当前执行方式的执行器组或网段约束共同确定的候选集。两个Runner选择参数都未提供时，将从候选集的健康Runner中自动分配",
-            "username": "RUNNER_TARGET模式使用。显式提供协议时必填；使用默认tagent协议时默认为root"
+            "argument": "自由参数数组，元素按顺序传递，具体数量、类型和组织方式以工具的自由参数定义及帮助为准；工具无自由参数时可省略或传[]。示例：deprecate/sshexec的固定位置参数[\"hostname\"]；osbasic/getcmdout的有序列表[\"uname -a\",\"df -h\"]；osbasic/createdirs的多行文本[\"/data/app\\n/data/log\"]；basic/createjob的交替键值对[\"appSystemId\",\"1001\",\"envName\",\"PRD\"]（元素数量须为偶数）；build/compileinjenkins中每项为key=value格式[\"BRANCH=main\",\"ENV=PRD\"]。 未提供或为 null 时使用工具定义的自由参数默认值；显式 [] 不回退默认值，定义为必填时会校验。",
+            "fullcatalogname": "仅 operationType=script 且按 operationName 查找时生效，用完整目录路径消除同名歧义；根目录填写 /。提供 operationId 时忽略；工具库工具不使用此字段。",
+            "includestdout": "显式 true/false 优先；省略或 null 时，无定义出参的工具默认 true，已定义出参的工具默认 false。启用后返回 _stdout；若工具已定义同名出参则拒绝执行，避免覆盖。",
+            "ip": "目标资产 IP。target 和 runner_target 执行方式下，resourceId 与 ip 至少提供一个；有 resourceId 时忽略 ip。runner 执行方式无需目标资产。",
+            "nodename": "未提供 resourceId 时，辅助 ip 和 port 定位资产，适用于共用 IP、端口的实例。不能单独代替 ip；提供 resourceId 后不参与查找。",
+            "operationid": "工具 ID，与 operationName 至少提供一个。同时提供时以 ID 为准，忽略名称和目录；ID 必须属于 operationType 指定的类型，无效 ID 不回退到名称查找。",
+            "operationname": "仅未提供 operationId 时使用，在 operationType 指定的类型内精确匹配名称。script 名称重复时需 fullCatalogName 消歧；tool 使用工具库中的名称（通常包含路径）。不是任意命令或脚本内容。",
+            "operationtype": "必填，script 表示自定义工具，tool 表示工具库工具；决定 operationId 或 operationName 的查询范围。自定义工具使用激活版本。执行方式 runner、target、runner_target 由工具定义决定，不通过本字段指定；仅可执行已授权的工具。",
+            "param": "按所选工具输入参数 key 组织的 JSON 对象，不是参数定义列表。参数类型、必填要求以工具定义（自定义工具为激活版本）为准；未提供的 key 使用工具默认值，显式 null 不触发默认值回退；缺少必填值会失败。无输入参数时可省略或传 {}。",
+            "port": "仅在未提供 resourceId 时，与 ip、nodeName 组合查找资源中心资产；这是资产定位端口，不是连接协议端口。runner_target 的连接端口读取资源中心协议配置。",
+            "protocol": "仅 runner_target 执行方式使用，填写资源中心已配置的协议名称，例如 tagent 或 ssh。显式提供协议时 username 必填；省略或为空时固定使用 tagent/root，此时传入的 username 不生效。协议端口由资源中心配置提供。",
+            "resourceid": "资源中心资产 ID，不是 Informant 节点 ID。target 和 runner_target 执行方式下优先使用；提供后忽略 ip、port、nodeName，ID 无效时不会回退到 IP 查询。runner 执行方式不使用目标资产。",
+            "runnergroup": "仅 runner 执行方式生效，字符串形式的执行器组 ID 或名称。省略、空值或 -1 表示在满足请求头规则和标签约束的组内自动分配；target 和 runner_target 根据目标资产 IP 匹配网段，不使用此字段指定组。",
+            "runnergrouptag": "可选字符串数组，元素为执行器组标签 ID 或名称，例如 [\"PRD\"]。标签匹配结果还要与请求头规则取交集，并满足当前执行方式的组或目标网段限制；显式指定 Runner 也不能绕过这些限制。省略或 [] 表示不额外按标签筛选。",
+            "runnerid": "Runner 映射 ID（runnerMapId），不是 Runner 实例 ID。优先于 runnerName；必须属于请求头规则、标签和当前执行方式共同确定的候选集。候选范围不符时失败；健康检查失败时可回退到同一候选集中的其他健康 Runner。",
+            "runnername": "仅未提供 runnerId 时按名称选择 Runner，仍须满足候选范围约束；健康检查失败时可回退到同一候选集。两者都省略时从符合条件的健康 Runner 中自动分配。",
+            "username": "仅 runner_target 执行方式使用。显式提供 protocol 时必须指定已配置的连接账号名；不在请求中传密码。省略 protocol 时使用 root，username 不生效；其他执行方式不使用此字段。"
           }
         }
       },
@@ -16637,10 +16672,59 @@
   },
   "nmiai": {
     "getinformanthealthstateapi": {
-      "description": "用于查询指定主机上 Informant 采集到的操作系统或服务健康状态，适合判断主机或服务是否存在异常。"
+      "description": "用于查询指定主机上 Informant 采集到的操作系统或服务健康状态，适合判断主机或服务是否存在异常。",
+      "example": {
+        "os": {
+          "description": "将 hostname 替换为已注册节点主机名；节点必须关联有效 Runner。type=os，一次请求只查询这一类健康状态。",
+          "title": "查询操作系统健康状态"
+        },
+        "services": {
+          "description": "将 hostname 替换为已注册节点主机名；节点必须关联有效 Runner。type=services，一次请求只查询这一类健康状态。",
+          "title": "查询服务健康状态"
+        }
+      },
+      "getname": "获取 Informant 健康状态",
+      "input": {
+        "param": {
+          "help": {
+            "hostname": "已注册 Informant 节点的主机名，按主机名查找节点，不是节点 ID 或 IP。节点必须关联有效 Runner；未找到节点或 Runner 时调用失败。",
+            "type": "必填，请使用小写值：os 查询操作系统健康状态，services 查询服务健康状态。一次请求只能选择一种类型。"
+          }
+        }
+      }
     },
     "getinformantremotedataapi": {
-      "description": "用于通过已注册的 Informant 节点调用指定数据接口，适合在已知 Informant 节点 ID 和目标接口路径时查询或操作节点数据。"
+      "description": "用于通过已注册的 Informant 节点调用指定数据接口，适合在已知 Informant 节点 ID 和目标接口路径时查询或操作节点数据。",
+      "example": {
+        "get": {
+          "description": "无节点参数的 GET 请求，省略 param。将 informantId 替换为实际节点 ID；url 是节点内部路径。",
+          "title": "GET：查询操作系统信息"
+        },
+        "getparams": {
+          "description": "将 informantId 和 object_ids 替换为实际节点及服务对象 ID。多个对象 ID 使用逗号拼接的字符串；param 转为查询参数。",
+          "title": "GET：按服务对象查询健康状态"
+        },
+        "post": {
+          "description": "要求 INFORMANT_MODIFY 权限。将 yaml 替换为待校验的完整节点配置文本，revision 替换为当前配置版本；这里的简化 YAML 仅说明字符串传参形式。param 转为表单参数，不是 JSON 请求体。",
+          "title": "POST：校验节点配置"
+        }
+      },
+      "getname": "获取 Informant 数据",
+      "input": {
+        "param": {
+          "desc": {
+            "informantid": "Informant 节点 ID",
+            "method": "请求方法",
+            "param": "请求参数"
+          },
+          "help": {
+            "informantid": "已注册 Informant 节点的 ID，可从 Informant 查询接口或节点列表获取；不是资源 ID、主机名或 Runner ID。平台解析该节点和关联 Runner 后转发请求。",
+            "method": "必填，请使用小写 get 或 post，表示转发到 Informant 的请求方法，并不是调用当前 NeatLogic 接口的 HTTP 方法。必须与 url 对应的节点接口一致。",
+            "param": "可选 JSON 对象，字段由 url 对应的 Informant 接口定义。get 时转为查询参数，post 时转为表单参数（不是 JSON 请求体）；无参数时可省略或传 {}。不要再次嵌套 url、method 或 informantId。",
+            "url": "Informant 节点内部接口路径，例如 /api/monitor/data/periodical/os_info；不要填写协议、主机或 NeatLogic 的 /api/rest 前缀。目标节点地址由 informantId 决定。/api/admin/ 下的路径额外要求 INFORMANT_MODIFY 权限，日志列表和日志下载路径除外。"
+          }
+        }
+      }
     }
   },
   "nmiaj": {
