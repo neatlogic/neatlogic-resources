@@ -434,6 +434,7 @@
     "help": "帮助",
     "hmac": "Hmac认证",
     "homeurl": "应用服务器地址",
+    "hostname": "主机名",
     "icon": "图标",
     "id": "ID",
     "importtargettype": "导入目标类型",
@@ -684,6 +685,7 @@
     "uniquename": "唯一标识",
     "unreadcount": "未读数量",
     "upwardnamelist": "上层名称列表",
+    "url": "请求路径",
     "user": "用户",
     "userenname": "用户英文名",
     "userid": "用户ID",
@@ -728,6 +730,20 @@
     "rdm": {
       "fullindextype": {
         "issue": "研发管理任务"
+      }
+    }
+  },
+  "nf": {
+    "api": {
+      "example": {
+        "fullupdate": "全量更新配置项",
+        "invalid": "接口 {0} 的场景 {1} 请求示例不是有效的 JSON 对象或数组。",
+        "mcparguments": "以下各场景的 JSON 是 tools/call 的 params.arguments。先根据适用条件选择场景，再替换示例值；不要把标题、说明或整个示例列表放入 arguments。",
+        "partialupdate": "局部更新配置项",
+        "replaceconfig": "示例包含静态配置占位值；调用前请替换为当前租户配置及实际业务数据。",
+        "replacevalues": "示例值仅用于说明请求结构；调用前请替换为当前环境的实际数据，并遵循参数说明。",
+        "simple": "简化格式",
+        "standard": "标准格式"
       }
     }
   },
@@ -2681,8 +2697,9 @@
     "autoexecscriptjobcannotexecuteexception": {
       "autoexecscriptjobcannotexecuteexception": "无法执行作业: {0}，当前用户没有'工具、自定义工具管理权限'"
     },
+    "autoexecscriptnameambiguousexception": "存在多个名为“{0}”的自定义工具，请补充完整工具目录 fullCatalogName。匹配目录：{1}。",
     "autoexecscriptnameorukrepeatexception": {
-      "autoexecscriptnameorukrepeatexception": "自定义工具：“{0}”已存在"
+      "autoexecscriptnameorukrepeatexception": "当前目录下已存在名为“{0}”的自定义工具"
     },
     "autoexecscriptnotfoundexception": {
       "autoexecscriptnotfoundexception": "自定义工具：“{0}”不存在"
@@ -10756,7 +10773,21 @@
     },
     "createautoexecjobfromcomboppublicapi": {
       "description": {
-        "desc": "使用激活的组合工具创建并执行自动化作业；isSync为false时创建并激活后立即返回作业ID，isSync为true时等待作业终止或监听超时后返回状态和节点输出"
+        "desc": "使用组合工具活动版本创建作业。异步模式按自动或手动触发方式处理后返回作业ID；同步模式以当前认证用户立即执行，等待作业终止或监听超时后返回状态。"
+      },
+      "example": {
+        "auto": {
+          "description": "isSync 为 false，创建并设置触发方式后返回 jobId；请将 assignExecUser 替换为实际发起用户 UUID，未指定时省略。planStartTime 为毫秒时间戳，未来时间安排执行，当前或过去时间立即触发；示例时间须按实际计划替换。 完整参数参考，可选字段并非必填。请替换为有执行权限且存在活动版本的组合工具；param 的 Key 须由该版本定义，invokeId 为调用来源，parentId 须为存在且满足层级限制的父作业，否则省略。场景须关联到该组合工具且配置非空阶段列表。目标、协议、远程账号及 Runner 组和标签须与实际环境匹配；这里设置作业层配置，阶段预设或灰度组配置可能优先，Runner 还须满足路由规则。并发策略与执行方式无绑定：本例选择 parallel，仅传 parallelCount；如需分批，改为 roundCount 策略、删除 parallelCount 并传 roundCount。",
+          "title": "自动执行"
+        },
+        "manual": {
+          "description": "isSync 为 false，triggerType 为 manual；创建后返回 jobId，等待后续手动触发，本请求不会立即执行。请替换 assignExecUser 或省略以使用当前用户；不传计划时间。 完整参数参考，可选字段并非必填。请替换为有执行权限且存在活动版本的组合工具；param 的 Key 须由该版本定义，invokeId 为调用来源，parentId 须为存在且满足层级限制的父作业，否则省略。场景须关联到该组合工具且配置非空阶段列表。目标、协议、远程账号及 Runner 组和标签须与实际环境匹配；这里设置作业层配置，阶段预设或灰度组配置可能优先，Runner 还须满足路由规则。并发策略与执行方式无绑定：本例选择 parallel，仅传 parallelCount；如需分批，改为 roundCount 策略、删除 parallelCount 并传 roundCount。",
+          "title": "手动触发"
+        },
+        "sync": {
+          "description": "isSync 为 true，固定以当前认证用户立即执行，不得传 assignExecUser、planStartTime、triggerType。等待作业终止或监听超时后返回状态；仅终止后尝试读取节点输出。监听超时不会停止作业，也不代表执行失败，应结合 terminal、timedOut、success 和 status 判断结果。 完整参数参考，可选字段并非必填。请替换为有执行权限且存在活动版本的组合工具；param 的 Key 须由该版本定义，invokeId 为调用来源，parentId 须为存在且满足层级限制的父作业，否则省略。场景须关联到该组合工具且配置非空阶段列表。目标、协议、远程账号及 Runner 组和标签须与实际环境匹配；这里设置作业层配置，阶段预设或灰度组配置可能优先，Runner 还须满足路由规则。并发策略与执行方式无绑定：本例选择 parallel，仅传 parallelCount；如需分批，改为 roundCount 策略、删除 parallelCount 并传 roundCount。",
+          "title": "同步执行并等待"
+        }
       },
       "getname": "创建作业供外部调用",
       "input": {
@@ -10771,22 +10802,22 @@
           "help": {
             "assignexecuser": "指定作业发起用户UUID，作业将按该用户的权限和身份创建；未传时使用当前认证用户。isSync为true时固定使用当前认证用户，不支持该参数。",
             "combopname": "指定要执行的组合工具名称；服务端按名称查找组合工具，并使用其活动版本构建作业。",
-            "executeuser": "指定连接远程目标时使用的执行账号，不是作业发起用户；传入时覆盖组合工具配置，未传时沿用组合工具配置。",
+            "executeuser": "指定连接远程目标时使用的执行账号，不是作业发起用户；传入时覆盖组合工具配置，未传时沿用组合工具配置。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
             "invokeid": "指定调用来源ID，用于关联调用方与作业，供来源追踪、查询和回调使用；未传时使用组合工具活动版本ID。",
-            "ipportlist": "指定作业执行目标的字符串数组，每项格式为IP、IP:端口或IP:端口/名称；传入非空数组时覆盖组合工具目标配置，为空或未传时沿用组合工具配置。例如：[\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]。",
+            "ipportlist": "指定作业执行目标的字符串数组，每项格式为IP、IP:端口或IP:端口/名称；传入非空数组时覆盖组合工具目标配置，为空或未传时沿用组合工具配置。例如：[\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
             "issync": "控制接口是否等待作业结果。false表示创建作业并完成触发方式设置后立即返回作业ID；true表示以当前认证用户立即执行，并等待作业终止或监听超时后返回状态和节点输出。监听超时不会终止作业。",
             "name": "指定用于展示和查询的作业名称，允许重名；未传或为空时使用组合工具名称。",
-            "parallelcount": "指定同时执行的目标数量，仅在parallelPolicy为parallel时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为32。",
-            "parallelpolicy": "指定目标并发策略。parallel按并发数执行并使用parallelCount；roundCount按分批数执行并使用roundCount。未传时沿用组合工具配置。",
-            "param": "指定作业参数键值对象，键应为组合工具活动版本中定义的作业参数Key；缺少的参数使用组合工具默认值并按参数类型转换，未传时使用空JSON。例如：{\"paramKey\":\"paramValue\"}。",
+            "parallelcount": "指定同时执行的目标数量，仅在parallelPolicy为parallel时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为32。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
+            "parallelpolicy": "指定目标并发策略。parallel按并发数执行并使用parallelCount；roundCount按分批数执行并使用roundCount。未传时沿用组合工具配置。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。 两种策略与同步、自动或手动执行方式无关；parallel 仅传 parallelCount，roundCount 仅传 roundCount。",
+            "param": "运行参数对象。仅提取活动版本定义的非文件参数，未定义的 Key 不会传入作业；缺失或为 null 时使用参数默认值，并按参数类型转换。未传时按空对象处理，仍须满足组合工具的参数要求。",
             "parentid": "指定父作业ID，用于将当前作业关联为其子作业；父作业必须存在，父作业链最多支持两级。",
-            "planstarttime": "指定计划开始时间，值为Unix时间戳（毫秒）；triggerType为auto且时间晚于当前时间时，作业将在该时间自动执行。isSync为true时不支持该参数。",
-            "protocol": "指定连接远程目标使用的协议名称，例如ssh；传入时覆盖组合工具配置，协议不存在时拒绝创建，未传时沿用组合工具配置。",
-            "roundcount": "指定将执行目标拆分成的批次数，仅在parallelPolicy为roundCount时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为64。",
+            "planstarttime": "Unix 时间戳（毫秒），未传时默认当前时间。自动触发时，未来时间安排执行，当前或过去时间立即触发；手动触发时不用于自动执行。isSync 为 true 时禁止传入。",
+            "protocol": "指定连接远程目标使用的协议名称，例如ssh；传入时覆盖组合工具配置，协议不存在时拒绝创建，未传时沿用组合工具配置。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
+            "roundcount": "指定将执行目标拆分成的批次数，仅在parallelPolicy为roundCount时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为64。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
             "runnergroup": "指定作业匹配和调度使用的Runner执行组名称或ID，-1表示随机匹配；未传时沿用组合工具配置。",
-            "runnergrouptag": "指定用于筛选Runner执行组的标签名称或ID，支持单个标签或标签字符串组成的JSON数组字符串；作业只会匹配同时满足标签和路由规则的执行组，未传时沿用组合工具配置。",
-            "scenarioname": "指定组合工具场景名称，用于选择该场景配置的执行阶段；场景不存在时拒绝创建，未传时使用组合工具默认执行范围。",
-            "triggertype": "指定作业触发方式。auto表示立即执行或按planStartTime自动执行；manual表示创建后等待手动触发；未传时立即执行。isSync为true时不支持该参数。"
+            "runnergrouptag": "指定用于筛选Runner执行组的标签名称或ID，支持单个标签或标签字符串组成的JSON数组字符串；作业只会匹配同时满足标签和路由规则的执行组，未传时沿用组合工具配置。 字段类型为字符串，多标签示例：\"[\\\"TagA\\\",\\\"TagB\\\"]\"。Runner 阶段自身配置的有效标签优先于作业层标签；此参数不控制执行目标的并发数或分批数。",
+            "scenarioname": "按名称查找场景，不存在时拒绝创建。只有组合工具关联该场景且配置了非空阶段列表时，才按该列表筛选阶段；未传、未关联或列表为空时不会按场景筛选。",
+            "triggertype": "异步模式的触发方式，默认 auto。auto 按 planStartTime 执行，时间缺省为当前时间；未来时间安排执行，当前或过去时间立即触发。manual 创建后等待手动触发。isSync 为 true 时禁止传入。"
           }
         }
       },
@@ -11256,7 +11287,25 @@
     },
     "execautoexecscriptbytagentapi": {
       "description": "用于在指定资产或 Runner 上直接执行已授权的自定义脚本或工具库工具，适合即时执行单个自动化操作并获取输出。",
-      "getname": "直接通过tagent执行自定义工具或工具库",
+      "example": {
+        "protocol": {
+          "description": "所选工具的 execMode 必须为 runner_target；显式传 protocol 时 username 必填。请将 ssh、deploy 替换为实际协议和账号；连接端口读取协议配置。 resourceId 优先于 ip、port、nodeName；同时展示的值须指向同一资源中心资产。按 IP 定位时省略 resourceId，port 和 nodeName 用于进一步定位资产；port 不是本次连接协议端口。 执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
+          "title": "Runner 连接目标：指定协议和账号"
+        },
+        "runner": {
+          "description": "所选工具的 execMode 必须为 runner；本分支不使用目标定位或连接参数。  执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
+          "title": "在 Runner 上执行"
+        },
+        "tagent": {
+          "description": "所选工具的 execMode 必须为 runner_target。本例按自定义工具名称及 fullCatalogName 定位，因此不传 operationId；fullCatalogName 不适用于工具库工具。省略 protocol、username 时固定使用 tagent/root，目标须有对应可用账号；连接端口读取协议配置。 resourceId 优先于 ip、port、nodeName；同时展示的值须指向同一资源中心资产。按 IP 定位时省略 resourceId，port 和 nodeName 用于进一步定位资产；port 不是本次连接协议端口。 执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
+          "title": "Runner 连接目标：默认 Tagent 账号"
+        },
+        "target": {
+          "description": "所选工具的 execMode 必须为 target；本分支不使用 protocol、username。 resourceId 优先于 ip、port、nodeName；同时展示的值须指向同一资源中心资产。按 IP 定位时省略 resourceId，port 和 nodeName 用于进一步定位资产；port 不是本次连接协议端口。 执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
+          "title": "在目标资产上执行"
+        }
+      },
+      "getname": "直接执行自定义工具或工具库工具",
       "input": {
         "param": {
           "desc": {
@@ -11265,20 +11314,23 @@
             "runnername": "Runner名称"
           },
           "help": {
-            "argument": "自由参数数组，元素按顺序传递，具体数量、类型和组织方式以工具的自由参数定义及帮助为准；工具无自由参数时可省略或传[]。示例：deprecate/sshexec的固定位置参数[\"hostname\"]；osbasic/getcmdout的有序列表[\"uname -a\",\"df -h\"]；osbasic/createdirs的多行文本[\"/data/app\\n/data/log\"]；basic/createjob的交替键值对[\"appSystemId\",\"1001\",\"envName\",\"PRD\"]（元素数量须为偶数）；build/compileinjenkins中每项为key=value格式[\"BRANCH=main\",\"ENV=PRD\"]。",
-            "ip": "TARGET和RUNNER_TARGET模式未提供资源ID时必填",
-            "nodename": "未提供资源ID时与IP、端口组合定位资产，特别用于区分共用同一IP和端口的数据库实例",
-            "operationid": "可选。同时提供工具ID和工具名称时优先使用工具ID；工具ID和工具名称不能同时为空",
-            "operationname": "可选。仅在未提供工具ID时使用，并在选定的工具类型内精确匹配；工具ID和工具名称不能同时为空",
-            "param": "按工具入参名称组织的键值对象，例如：{\"message\":\"hello\",\"timeout\":60}",
-            "port": "未提供资源ID时与IP、资产名称组合定位资产",
-            "protocol": "RUNNER_TARGET模式使用。未提供时默认使用tagent协议",
-            "resourceid": "优先级高于IP、端口和资产名称",
-            "runnergroup": "仅RUNNER模式生效，支持执行器组ID、名称；未提供时在满足请求头规则和标签约束的执行器组中随机匹配",
-            "runnergrouptag": "可选，支持执行器组标签ID或名称数组；提供时Runner必须同时满足请求头规则、标签以及当前执行方式的执行器组或网段约束，例如：[\"PRD\",\"UAT\"]",
-            "runnerid": "优先级高于Runner名称，且必须属于请求头规则、标签以及当前执行方式的执行器组或网段约束共同确定的候选集",
-            "runnername": "仅在未提供Runner映射ID时使用，且必须属于请求头规则、标签以及当前执行方式的执行器组或网段约束共同确定的候选集。两个Runner选择参数都未提供时，将从候选集的健康Runner中自动分配",
-            "username": "RUNNER_TARGET模式使用。显式提供协议时必填；使用默认tagent协议时默认为root"
+            "argument": "自由参数数组，元素按顺序传递，具体数量、类型和组织方式以工具的自由参数定义及帮助为准；工具无自由参数时可省略或传[]。示例：deprecate/sshexec的固定位置参数[\"hostname\"]；osbasic/getcmdout的有序列表[\"uname -a\",\"df -h\"]；osbasic/createdirs的多行文本[\"/data/app\\n/data/log\"]；basic/createjob的交替键值对[\"appSystemId\",\"1001\",\"envName\",\"PRD\"]（元素数量须为偶数）；build/compileinjenkins中每项为key=value格式[\"BRANCH=main\",\"ENV=PRD\"]。 未提供或为 null 时使用工具定义的自由参数默认值；显式 [] 不回退默认值，定义为必填时会校验。",
+            "fullcatalogname": "仅 operationType=script 且按 operationName 查找时生效，用完整目录路径消除同名歧义；根目录填写 /。提供 operationId 时忽略；工具库工具不使用此字段。",
+            "includestdout": "显式 true/false 优先；省略或 null 时，无定义出参的工具默认 true，已定义出参的工具默认 false。启用后返回 _stdout；若工具已定义同名出参则拒绝执行，避免覆盖。",
+            "ip": "目标资产 IP。target 和 runner_target 执行方式下，resourceId 与 ip 至少提供一个；有 resourceId 时忽略 ip。runner 执行方式无需目标资产。",
+            "nodename": "未提供 resourceId 时，辅助 ip 和 port 定位资产，适用于共用 IP、端口的实例。不能单独代替 ip；提供 resourceId 后不参与查找。",
+            "operationid": "工具 ID，与 operationName 至少提供一个。同时提供时以 ID 为准，忽略名称和目录；ID 必须属于 operationType 指定的类型，无效 ID 不回退到名称查找。",
+            "operationname": "仅未提供 operationId 时使用，在 operationType 指定的类型内精确匹配名称。script 名称重复时需 fullCatalogName 消歧；tool 使用工具库中的名称（通常包含路径）。不是任意命令或脚本内容。",
+            "operationtype": "必填，script 表示自定义工具，tool 表示工具库工具；决定 operationId 或 operationName 的查询范围。自定义工具使用激活版本。执行方式 runner、target、runner_target 由工具定义决定，不通过本字段指定；仅可执行已授权的工具。",
+            "param": "按所选工具输入参数 key 组织的 JSON 对象，不是参数定义列表。参数类型、必填要求以工具定义（自定义工具为激活版本）为准；未提供的 key 使用工具默认值，显式 null 不触发默认值回退；缺少必填值会失败。无输入参数时可省略或传 {}。",
+            "port": "仅在未提供 resourceId 时，与 ip、nodeName 组合查找资源中心资产；这是资产定位端口，不是连接协议端口。runner_target 的连接端口读取资源中心协议配置。",
+            "protocol": "仅 runner_target 执行方式使用，填写资源中心已配置的协议名称，例如 tagent 或 ssh。显式提供协议时 username 必填；省略或为空时固定使用 tagent/root，此时传入的 username 不生效。协议端口由资源中心配置提供。",
+            "resourceid": "资源中心资产 ID，不是 Informant 节点 ID。target 和 runner_target 执行方式下优先使用；提供后忽略 ip、port、nodeName，ID 无效时不会回退到 IP 查询。runner 执行方式不使用目标资产。",
+            "runnergroup": "仅 runner 执行方式生效，字符串形式的执行器组 ID 或名称。省略、空值或 -1 表示在满足请求头规则和标签约束的组内自动分配；target 和 runner_target 根据目标资产 IP 匹配网段，不使用此字段指定组。",
+            "runnergrouptag": "可选字符串数组，元素为执行器组标签 ID 或名称，例如 [\"PRD\"]。标签匹配结果还要与请求头规则取交集，并满足当前执行方式的组或目标网段限制；显式指定 Runner 也不能绕过这些限制。省略或 [] 表示不额外按标签筛选。",
+            "runnerid": "Runner 映射 ID（runnerMapId），不是 Runner 实例 ID。优先于 runnerName；必须属于请求头规则、标签和当前执行方式共同确定的候选集。候选范围不符时失败；健康检查失败时可回退到同一候选集中的其他健康 Runner。",
+            "runnername": "仅未提供 runnerId 时按名称选择 Runner，仍须满足候选范围约束；健康检查失败时可回退到同一候选集。两者都省略时从符合条件的健康 Runner 中自动分配。",
+            "username": "仅 runner_target 执行方式使用。显式提供 protocol 时必须指定已配置的连接账号名；不在请求中传密码。省略 protocol 时使用 root，username 不生效；其他执行方式不使用此字段。"
           }
         }
       },
@@ -12228,6 +12280,7 @@
     "autoexecskillaiexecutequestionrequired": "请输入AI执行要求",
     "autoexecskillauditlistapi": "查询自动化Skill活动",
     "autoexecskillbaseinfoupdateapi": "更新自动化Skill基本信息",
+    "autoexecskillbindingsearchapi": "查询Skill可绑定工具",
     "autoexecskillcannotsubmitexception": "当前状态“{0}”的Skill版本不能提交审批",
     "autoexecskillchatcontextlabel": "当前 Skill：{0}",
     "autoexecskillchatpermissiondeniedexception": "当前用户没有自动化Skill编辑权限，无法继续该AI会话",
@@ -12241,7 +12294,14 @@
     "autoexecskilldisabledexception": "自动化Skill“{0}”已禁用",
     "autoexecskillenabled": "Skill是否启用",
     "autoexecskillenabledupdateapi": "更新自动化Skill启用状态",
+    "autoexecskillexecutioncontext": {
+      "jobid": "Skill 执行作业ID",
+      "localrunnerid": "Skill 公共Runner ID",
+      "targetrunnerids": "资产Runner绑定",
+      "usedrunnerids": "已使用Runner列表"
+    },
     "autoexecskillexecutionscopeexception": "本次只允许执行自动化Skill“{0}”的发布版本“{1}”",
+    "autoexecskillexportapi": "导出自动化Skill压缩包",
     "autoexecskillfilecategory": "Skill包文件分类",
     "autoexecskillfilegetapi": "获取自动化Skill包文件正文",
     "autoexecskillfileisbinary": "是否为二进制文件",
@@ -12253,11 +12313,16 @@
     "autoexecskillhassubmittedversionexception": "当前Skill已经有其他待审核版本",
     "autoexecskillhistoricalversion": "历史",
     "autoexecskillid": "Skill ID",
+    "autoexecskillimportapi": "导入自动化Skill草稿",
+    "autoexecskillimportcannotbind": "工具目录“{0}”下的自定义工具“{1}”没有已审批的激活版本，请选择覆盖或先处理工具状态。",
     "autoexecskillimportentrysizeexception": "Skill包内单个文件不能超过{0}字节",
     "autoexecskillimportfilecountexception": "每次只能上传一个Skill文件",
     "autoexecskillimportfilesizeexception": "Skill导入文件不能超过{0}字节",
     "autoexecskillimportparseapi": "解析自动化Skill导入文件",
     "autoexecskillimportparseexception": "Skill导入文件“{0}”解析失败",
+    "autoexecskillimportpreviewtoken": "导入预检标识",
+    "autoexecskillimportreconfirm": "导入包或目标工具已变化，或覆盖选择不完整，请重新预检并确认。",
+    "autoexecskillimportselection": "工具覆盖选择",
     "autoexecskillimportskillcountexception": "Skill压缩包必须且只能包含一个SKILL.md",
     "autoexecskillimporttypeexception": "仅支持导入Markdown或ZIP格式的Skill文件",
     "autoexecskillkey": "Skill Key",
@@ -12266,11 +12331,22 @@
     "autoexecskillnotfoundexception": "自动化Skill“{0}”不存在",
     "autoexecskillnotpublishedexception": "自动化Skill“{0}”尚未发布",
     "autoexecskilloperationsearchfailed": "Autoexec工具搜索失败，请稍后重试",
+    "autoexecskillpackagedescriptionmissing": "导入文件未声明Skill描述，请在草稿中补充",
+    "autoexecskillpackageinvalidtoolname": "工具名称“{0}”不合法：须符合自定义工具命名规则且不超过50个字符",
+    "autoexecskillpackagemetadatainvalid": "Skill扩展元数据格式不受支持或映射无效：{0}",
+    "autoexecskillpackagenamemissing": "导入文件未声明Skill名称，已使用目录名或文件名生成",
+    "autoexecskillpackagenonportable": "Skill包无法完整恢复必要资源或转换平台关联：{0}",
+    "autoexecskillpackageresolutionfailed": "Skill包缺少必要配置或关联，无法导入：{0}",
+    "autoexecskillpackagetoolimportresultlist": "工具导入结果列表",
+    "autoexecskillpackageukadjusted": "Skill Key 已由“{0}”转换为“{1}”。",
+    "autoexecskillpackageunresolved": "文件“{0}”尚未解析为可用工具，请补充配置、绑定工具或明确设为资源后再提交Skill",
+    "autoexecskillpackagewarninglist": "Skill导入兼容提示列表",
     "autoexecskillpolicyargumentcount": "脚本“{0}”要求{1}个自由参数，实际收到{2}个",
     "autoexecskillpolicyargumentduplicate": "同一参数值不能同时作为命名参数和自由参数传入",
     "autoexecskillpolicyargumentprohibited": "脚本“{0}”未声明自由参数",
     "autoexecskillpolicyargumentrequired": "脚本“{0}”缺少必填自由参数",
     "autoexecskillpolicyargumentsinvalid": "Skill脚本调用参数不是合法JSON",
+    "autoexecskillpolicyargumentsyntax": "Skill自由参数必须是字符串，且不能包含未闭合引号、悬空转义或空字符。",
     "autoexecskillpolicycalllimit": "Skill单轮脚本调用不能超过{0}次",
     "autoexecskillpolicycontractinvalid": "脚本别名“{0}”不在当前Skill执行契约中",
     "autoexecskillpolicyduplicate": "脚本“{0}”的相同调用本轮已执行，禁止重复执行",
@@ -12304,14 +12380,17 @@
     "autoexecskillreviewactioninvalidexception": "不支持的Skill审批动作“{0}”",
     "autoexecskillreviewapi": "审批自动化Skill",
     "autoexecskillrevokeapi": "撤回自动化Skill审批",
+    "autoexecskillrunnerbindingconflictexception": "本轮 Skill 已绑定 Runner {0}，后续步骤的 Runner 或执行器组要求与绑定冲突，不能切换执行器。",
     "autoexecskillsaveapi": "保存自动化Skill",
+    "autoexecskillscriptauthoritydeniedexception": "当前用户没有工具“{0}”的直接执行权限。请联系管理员在 Skill 文件树中悬停对应脚本，点击授权图标进行“直接执行授权”，也可在工具详情页完成授权。",
     "autoexecskillscriptbinaryexception": "scripts文件“{0}”必须是UTF-8文本",
     "autoexecskillscriptbinding": "Skill脚本路径绑定",
     "autoexecskillscriptcountlimitexception": "脚本别名数量不能超过{0}",
-    "autoexecskillscriptdefaultconfigexception": "缺少或错误配置Skill导入脚本默认配置“{0}”",
-    "autoexecskillscriptdefaultriskid": "Skill导入脚本默认风险等级ID",
-    "autoexecskillscriptdefaulttypeid": "Skill导入脚本默认自定义工具类型ID",
+    "autoexecskillscriptdefaultconfigexception": "Skill导入脚本配置“{0}”未匹配到已有记录，请修改名称配置或手动创建对应的工具分类、操作级别",
+    "autoexecskillscriptdefaultriskname": "Skill导入脚本默认操作级别名称",
+    "autoexecskillscriptdefaulttypename": "Skill导入脚本默认工具分类名称",
     "autoexecskillscriptexecutionprohibitedexception": "Skill Agent只能按需读取包文件或执行已加载Skill的脚本别名",
+    "autoexecskillscriptgenerateapi": "生成Skill自定义工具激活版本",
     "autoexecskillscriptinvalidexception": "Skill脚本别名列表格式不正确",
     "autoexecskillscriptnotloadedexception": "Skill“{0}”尚未通过skill_view加载，不能执行其脚本",
     "autoexecskillscriptoperationinvalidexception": "脚本别名“{0}”绑定的工具不存在或不可用",
@@ -12355,6 +12434,11 @@
         "reserverunpath": "是否保留执行目录"
       }
     },
+    "skillbatchactiveonly": "仅当前激活的已发布 Skill 版本支持批量授权。",
+    "skillbatchauthority": "批量追加 Skill 工具执行授权",
+    "skillbatchauthoritycount": "新增授权数量",
+    "skillbatchinvalidbinding": "脚本绑定无效或工具没有可用激活版本：{0}",
+    "skillbatchtoolcount": "处理工具数量",
     "yamlbindingambiguous": "无法唯一对应原有节点或组配置，请保留明确的业务绑定；请在图形化编辑器中处理拆分、合并或重名节点的歧义",
     "yamlconfigconflict": "配置项互斥或不适用于当前执行方式，请与图形化配置规则保持一致",
     "yamlconfiginvalid": "组合工具配置校验失败：{0}",
@@ -16859,10 +16943,59 @@
   },
   "nmiai": {
     "getinformanthealthstateapi": {
-      "description": "用于查询指定主机上 Informant 采集到的操作系统或服务健康状态，适合判断主机或服务是否存在异常。"
+      "description": "用于查询指定主机上 Informant 采集到的操作系统或服务健康状态，适合判断主机或服务是否存在异常。",
+      "example": {
+        "os": {
+          "description": "将 hostname 替换为已注册节点主机名；节点必须关联有效 Runner。type=os，一次请求只查询这一类健康状态。",
+          "title": "查询操作系统健康状态"
+        },
+        "services": {
+          "description": "将 hostname 替换为已注册节点主机名；节点必须关联有效 Runner。type=services，一次请求只查询这一类健康状态。",
+          "title": "查询服务健康状态"
+        }
+      },
+      "getname": "获取 Informant 健康状态",
+      "input": {
+        "param": {
+          "help": {
+            "hostname": "已注册 Informant 节点的主机名，按主机名查找节点，不是节点 ID 或 IP。节点必须关联有效 Runner；未找到节点或 Runner 时调用失败。",
+            "type": "必填，请使用小写值：os 查询操作系统健康状态，services 查询服务健康状态。一次请求只能选择一种类型。"
+          }
+        }
+      }
     },
     "getinformantremotedataapi": {
-      "description": "用于通过已注册的 Informant 节点调用指定数据接口，适合在已知 Informant 节点 ID 和目标接口路径时查询或操作节点数据。"
+      "description": "用于通过已注册的 Informant 节点调用指定数据接口，适合在已知 Informant 节点 ID 和目标接口路径时查询或操作节点数据。",
+      "example": {
+        "get": {
+          "description": "查询节点操作系统信息，param 为空对象，表示不附加节点查询参数。将 informantId 替换为实际节点 ID，节点须关联有效 Runner；url 为节点内部路径。",
+          "title": "查询操作系统信息"
+        },
+        "getparams": {
+          "description": "将 informantId 和 object_ids 替换为实际节点及服务对象 ID。多个对象 ID 使用逗号拼接的字符串；param 转为查询参数。",
+          "title": "查询服务健康状态"
+        },
+        "post": {
+          "description": "要求 INFORMANT_MODIFY 权限。将 yaml 替换为待校验的完整节点配置文本，revision 替换为当前配置版本；这里的简化 YAML 仅说明字符串传参形式。param 转为表单参数，不是 JSON 请求体。",
+          "title": "校验 Informant 配置"
+        }
+      },
+      "getname": "获取 Informant 数据",
+      "input": {
+        "param": {
+          "desc": {
+            "informantid": "Informant 节点 ID",
+            "method": "请求方法",
+            "param": "请求参数"
+          },
+          "help": {
+            "informantid": "已注册 Informant 节点的 ID，可从 Informant 查询接口或节点列表获取；不是资源 ID、主机名或 Runner ID。平台解析该节点和关联 Runner 后转发请求。",
+            "method": "必填，请使用小写 get 或 post，表示转发到 Informant 的请求方法，并不是调用当前 NeatLogic 接口的 HTTP 方法。必须与 url 对应的节点接口一致。",
+            "param": "可选 JSON 对象，字段由 url 对应的 Informant 接口定义。get 时转为查询参数，post 时转为表单参数（不是 JSON 请求体）；无参数时可省略或传 {}。不要再次嵌套 url、method 或 informantId。",
+            "url": "Informant 节点内部接口路径，例如 /api/monitor/data/periodical/os_info；不要填写协议、主机或 NeatLogic 的 /api/rest 前缀。目标节点地址由 informantId 决定。/api/admin/ 下的路径额外要求 INFORMANT_MODIFY 权限，日志列表和日志下载路径除外。"
+          }
+        }
+      }
     }
   },
   "nmiaj": {

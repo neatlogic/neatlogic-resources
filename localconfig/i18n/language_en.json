@@ -434,6 +434,7 @@
     "help": "help",
     "hmac": "Hmac certification",
     "homeurl": "Application server address",
+    "hostname": "Hostname",
     "icon": "Icon",
     "id": "ID",
     "importtargettype": "Import Target Type",
@@ -684,6 +685,7 @@
     "uniquename": "Unique Identifier",
     "unreadcount": "Unread count",
     "upwardnamelist": "Upper level name list",
+    "url": "Request Path",
     "user": "user",
     "userenname": "User English Name",
     "userid": "User ID",
@@ -728,6 +730,20 @@
     "rdm": {
       "fullindextype": {
         "issue": "R&D management tasks"
+      }
+    }
+  },
+  "nf": {
+    "api": {
+      "example": {
+        "fullupdate": "Fully Update Configuration Items",
+        "invalid": "The request example for scenario {1} in API {0} is not a valid JSON object or array.",
+        "mcparguments": "The JSON in each scenario below is params.arguments for tools/call. Select a scenario based on its prerequisites and replace the example values. Do not include titles, descriptions, or the entire example list in arguments.",
+        "partialupdate": "Partially Update Configuration Items",
+        "replaceconfig": "This example contains static configuration placeholders. Replace them with the current tenant configuration and actual business data before calling.",
+        "replacevalues": "Example values illustrate the request structure. Replace them with actual data from your environment and follow the parameter descriptions before calling.",
+        "simple": "Simple Format",
+        "standard": "Standard Format"
       }
     }
   },
@@ -2681,8 +2697,9 @@
     "autoexecscriptjobcannotexecuteexception": {
       "autoexecscriptjobcannotexecuteexception": "Job {0} cannot be executed because the current user lacks Tool and Custom Tool management permission."
     },
+    "autoexecscriptnameambiguousexception": "Multiple custom tools named \"{0}\" exist. Specify fullCatalogName to identify the tool. Matching directories: {1}.",
     "autoexecscriptnameorukrepeatexception": {
-      "autoexecscriptnameorukrepeatexception": "Custom Tool \"{0}\" already exists."
+      "autoexecscriptnameorukrepeatexception": "A custom tool named \"{0}\" already exists in this catalog."
     },
     "autoexecscriptnotfoundexception": {
       "autoexecscriptnotfoundexception": "Custom Tool \"{0}\" does not exist."
@@ -10744,7 +10761,21 @@
     },
     "createautoexecjobfromcomboppublicapi": {
       "description": {
-        "desc": "Create and run a Job from the active Combination Tool version. When isSync is false, return the Job ID after activation; when true, wait for termination or timeout and return status and node output."
+        "desc": "Create a job from the active combination tool version. Asynchronous mode returns the job ID after configuring automatic or manual triggering. Synchronous mode starts immediately as the current authenticated user and returns status after termination or a wait timeout."
+      },
+      "example": {
+        "auto": {
+          "description": "With isSync false, the API returns jobId after creation and trigger setup. Replace assignExecUser with the initiating user UUID, or omit it to use the current user. planStartTime is a Unix timestamp in milliseconds: a future value schedules execution; a current or past value triggers immediately. Replace the example timestamp with your intended time. Full parameter reference; optional fields are not required. Replace the combination tool with one that has an active version and that you are authorized to execute. The param keys must be defined in that version. invokeId identifies the caller; parentId must reference an existing parent job within the hierarchy limit, or be omitted. The scenario must be associated with this combination tool and contain a nonempty phase list. Targets, protocol, remote account, Runner group and tags must match your environment. These are job-level settings; preset phase or grayscale group settings may take precedence, and Runner routing rules still apply. The parallel policy is independent of the execution mode: this example selects parallel and provides only parallelCount. To use batches, select roundCount, remove parallelCount and provide roundCount.",
+          "title": "Automatic Execution"
+        },
+        "manual": {
+          "description": "With isSync false and triggerType manual, the API returns jobId after creation and waits for a later manual trigger. This request does not start execution. Replace assignExecUser or omit it to use the current user; do not supply a planned start time. Full parameter reference; optional fields are not required. Replace the combination tool with one that has an active version and that you are authorized to execute. The param keys must be defined in that version. invokeId identifies the caller; parentId must reference an existing parent job within the hierarchy limit, or be omitted. The scenario must be associated with this combination tool and contain a nonempty phase list. Targets, protocol, remote account, Runner group and tags must match your environment. These are job-level settings; preset phase or grayscale group settings may take precedence, and Runner routing rules still apply. The parallel policy is independent of the execution mode: this example selects parallel and provides only parallelCount. To use batches, select roundCount, remove parallelCount and provide roundCount.",
+          "title": "Manual Trigger"
+        },
+        "sync": {
+          "description": "With isSync true, execution starts immediately as the current authenticated user. Do not supply assignExecUser, planStartTime or triggerType. The API returns status when the job terminates or the wait times out; node output is read only after termination. A wait timeout neither stops the job nor means execution failed. Inspect terminal, timedOut, success and status together. Full parameter reference; optional fields are not required. Replace the combination tool with one that has an active version and that you are authorized to execute. The param keys must be defined in that version. invokeId identifies the caller; parentId must reference an existing parent job within the hierarchy limit, or be omitted. The scenario must be associated with this combination tool and contain a nonempty phase list. Targets, protocol, remote account, Runner group and tags must match your environment. These are job-level settings; preset phase or grayscale group settings may take precedence, and Runner routing rules still apply. The parallel policy is independent of the execution mode: this example selects parallel and provides only parallelCount. To use batches, select roundCount, remove parallelCount and provide roundCount.",
+          "title": "Synchronous Execution and Wait"
+        }
       },
       "getname": "Create a job for external calls",
       "input": {
@@ -10759,22 +10790,22 @@
           "help": {
             "assignexecuser": "Specifies the Job initiator UUID. The Job is created with that user's identity and permissions. The current authenticated user is used when omitted. When isSync is true, the current authenticated user is always used and this parameter is not supported.",
             "combopname": "Specifies the Combination Tool to run. The service finds it by name and builds the Job from its active version.",
-            "executeuser": "Specifies the account used to connect to remote targets, not the Job initiator. A supplied value overrides the Combination Tool setting; otherwise, the Combination Tool setting is used.",
+            "executeuser": "Specifies the account used to connect to remote targets, not the Job initiator. A supplied value overrides the Combination Tool setting; otherwise, the Combination Tool setting is used. This sets job-level configuration; corresponding preset phase or grayscale group settings may take precedence.",
             "invokeid": "Specifies the invocation source ID that associates the caller with the Job for source tracing, queries, and callbacks. The active Combination Tool version ID is used when omitted.",
-            "ipportlist": "Specifies the Job targets as a string array. Each item uses IP, IP:port, or IP:port/name. A non-empty array overrides the Combination Tool target configuration; an empty or omitted array uses the Combination Tool setting. Example: [\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"].",
+            "ipportlist": "Specifies the Job targets as a string array. Each item uses IP, IP:port, or IP:port/name. A non-empty array overrides the Combination Tool target configuration; an empty or omitted array uses the Combination Tool setting. Example: [\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]. This sets job-level configuration; corresponding preset phase or grayscale group settings may take precedence.",
             "issync": "Controls whether the API waits for the Job result. false returns the Job ID after creation and trigger-mode setup. true immediately runs the Job as the current authenticated user and waits for termination or the listener timeout before returning status and node output. A listener timeout does not terminate the Job.",
             "name": "Specifies the Job name used for display and queries. Duplicate names are allowed. The Combination Tool name is used when omitted or blank.",
-            "parallelcount": "Specifies the number of targets that may run concurrently. It is used only when parallelPolicy is parallel and ignored by other policies. The Combination Tool setting is used when omitted; the default is 32 when the tool also has no value.",
-            "parallelpolicy": "Specifies the target concurrency policy. parallel uses parallelCount; roundCount divides targets into batches and uses roundCount. The Combination Tool setting is used when omitted.",
-            "param": "Specifies Job parameters as key-value pairs. Each key should match a Job parameter key defined by the active Combination Tool version. Missing parameters use the tool defaults and are converted by parameter type; an empty JSON object is used when omitted. Example: {\"paramKey\":\"paramValue\"}.",
+            "parallelcount": "Specifies the number of targets that may run concurrently. It is used only when parallelPolicy is parallel and ignored by other policies. The Combination Tool setting is used when omitted; the default is 32 when the tool also has no value. This sets job-level configuration; corresponding preset phase or grayscale group settings may take precedence.",
+            "parallelpolicy": "Specifies the target concurrency policy. parallel uses parallelCount; roundCount divides targets into batches and uses roundCount. The Combination Tool setting is used when omitted. This sets job-level configuration; corresponding preset phase or grayscale group settings may take precedence. These policies are independent of synchronous, automatic or manual execution. Supply only parallelCount for parallel, or roundCount for roundCount.",
+            "param": "Runtime parameter object. Only non-file parameters defined in the active version are included; undefined keys are ignored. Missing or null values use parameter defaults and undergo type conversion. Omission is treated as an empty object; the combination tool parameter requirements still apply.",
             "parentid": "Specifies the parent Job ID and associates the current Job as its child. The parent Job must exist, and the parent chain supports at most two levels.",
-            "planstarttime": "Specifies the planned start time as a Unix timestamp in milliseconds. When triggerType is auto and the time is in the future, the Job runs automatically at that time. This parameter is not supported when isSync is true.",
-            "protocol": "Specifies the protocol name used to connect to remote targets, such as ssh. A supplied value overrides the Combination Tool setting; creation is rejected when the protocol does not exist. The tool setting is used when omitted.",
-            "roundcount": "Specifies the number of batches used to divide the targets. It is used only when parallelPolicy is roundCount and ignored by other policies. The Combination Tool setting is used when omitted; the default is 64 when the tool also has no value.",
+            "planstarttime": "Unix timestamp in milliseconds; defaults to the current time. With automatic triggering, future values schedule execution and current or past values trigger immediately. It does not schedule automatic execution in manual mode. Must be omitted when isSync is true.",
+            "protocol": "Specifies the protocol name used to connect to remote targets, such as ssh. A supplied value overrides the Combination Tool setting; creation is rejected when the protocol does not exist. The tool setting is used when omitted. This sets job-level configuration; corresponding preset phase or grayscale group settings may take precedence.",
+            "roundcount": "Specifies the number of batches used to divide the targets. It is used only when parallelPolicy is roundCount and ignored by other policies. The Combination Tool setting is used when omitted; the default is 64 when the tool also has no value. This sets job-level configuration; corresponding preset phase or grayscale group settings may take precedence.",
             "runnergroup": "Specifies the Runner group name or ID used to match and dispatch the Job. -1 selects a group at random. The Combination Tool setting is used when omitted.",
-            "runnergrouptag": "Specifies Runner group tag names or IDs used to filter eligible groups. Use a single tag or a JSON-array string of tags. A group must satisfy both the tags and routing rules. The Combination Tool setting is used when omitted.",
-            "scenarioname": "Specifies the Combination Tool scenario whose configured stages will run. Creation is rejected when the scenario does not exist. The tool's default execution scope is used when omitted.",
-            "triggertype": "Specifies how the Job is triggered. auto runs immediately or at planStartTime; manual creates the Job and waits for a manual trigger. The Job runs immediately when omitted. This parameter is not supported when isSync is true."
+            "runnergrouptag": "Specifies Runner group tag names or IDs used to filter eligible groups. Use a single tag or a JSON-array string of tags. A group must satisfy both the tags and routing rules. The Combination Tool setting is used when omitted. This field is a string; a multiple-tag value is an encoded JSON array string, for example \"[\\\"TagA\\\",\\\"TagB\\\"]\". Valid tags configured on a Runner phase take precedence over job-level tags. This parameter does not control target concurrency or batch count.",
+            "scenarioname": "Look up the scenario by name; an unknown name is rejected. Phases are filtered only if the combination tool associates this scenario with a nonempty phase list. No scenario filtering occurs when omitted, unassociated or configured with an empty list.",
+            "triggertype": "Asynchronous trigger mode; defaults to auto. auto uses planStartTime, which defaults to the current time: future values schedule execution, while current or past values trigger immediately. manual waits for a manual trigger after creation. Must be omitted when isSync is true."
           }
         }
       },
@@ -11244,7 +11275,25 @@
     },
     "execautoexecscriptbytagentapi": {
       "description": "Use this interface to directly execute an authorized custom script or tool library tool on a specified asset or Runner when a single automation operation must be run immediately and its output retrieved.",
-      "getname": "Execute Custom Tool or Tool Directly Through Tagent",
+      "example": {
+        "protocol": {
+          "description": "The selected tool must have execMode runner_target. An explicit protocol requires username. Replace ssh and deploy with the actual protocol and account; the connection port comes from protocol configuration. resourceId takes precedence over ip, port and nodeName; the values shown together must identify the same resource-center asset. Omit resourceId to locate by IP, with port and nodeName refining the asset lookup. port is not the connection protocol port. The selected tool definition determines execMode; operationType does not. Both custom and library tools may use this execution mode. This is a complete reference of applicable fields, not a list of required fields. Replace the example with a real tool authorized for execrtool; a custom tool also needs an active version. operationId takes precedence over operationName; when supplying both, identify the same tool. runnerId is a Runner mapping ID and takes precedence over runnerName; both must identify the same Runner. An explicit Runner must still satisfy group, tag and routing constraints; a failed health check may fall back within the candidate set. Fill param according to the tool input definitions. argument contains ordered free arguments as defined by the tool, not necessarily commands. Replace message and example-argument, or omit them when unnecessary. includeStdout=true requires that the tool have no output parameter named _stdout. For MCP calls, place these fields in params.arguments.",
+          "title": "Runner Target Connection: Explicit Protocol and Account"
+        },
+        "runner": {
+          "description": "The selected tool must have execMode runner; this branch uses no target lookup or connection parameters.  The selected tool definition determines execMode; operationType does not. Both custom and library tools may use this execution mode. This is a complete reference of applicable fields, not a list of required fields. Replace the example with a real tool authorized for execrtool; a custom tool also needs an active version. operationId takes precedence over operationName; when supplying both, identify the same tool. runnerId is a Runner mapping ID and takes precedence over runnerName; both must identify the same Runner. An explicit Runner must still satisfy group, tag and routing constraints; a failed health check may fall back within the candidate set. Fill param according to the tool input definitions. argument contains ordered free arguments as defined by the tool, not necessarily commands. Replace message and example-argument, or omit them when unnecessary. includeStdout=true requires that the tool have no output parameter named _stdout. For MCP calls, place these fields in params.arguments.",
+          "title": "Execute on Runner"
+        },
+        "tagent": {
+          "description": "The selected tool must have execMode runner_target. This example locates a custom tool by name and fullCatalogName, so operationId is omitted; fullCatalogName does not apply to library tools. Omitting protocol and username selects tagent/root; the target must have a usable matching account. The connection port comes from protocol configuration. resourceId takes precedence over ip, port and nodeName; the values shown together must identify the same resource-center asset. Omit resourceId to locate by IP, with port and nodeName refining the asset lookup. port is not the connection protocol port. The selected tool definition determines execMode; operationType does not. Both custom and library tools may use this execution mode. This is a complete reference of applicable fields, not a list of required fields. Replace the example with a real tool authorized for execrtool; a custom tool also needs an active version. operationId takes precedence over operationName; when supplying both, identify the same tool. runnerId is a Runner mapping ID and takes precedence over runnerName; both must identify the same Runner. An explicit Runner must still satisfy group, tag and routing constraints; a failed health check may fall back within the candidate set. Fill param according to the tool input definitions. argument contains ordered free arguments as defined by the tool, not necessarily commands. Replace message and example-argument, or omit them when unnecessary. includeStdout=true requires that the tool have no output parameter named _stdout. For MCP calls, place these fields in params.arguments.",
+          "title": "Runner Target Connection: Default Tagent Account"
+        },
+        "target": {
+          "description": "The selected tool must have execMode target; this branch does not use protocol or username. resourceId takes precedence over ip, port and nodeName; the values shown together must identify the same resource-center asset. Omit resourceId to locate by IP, with port and nodeName refining the asset lookup. port is not the connection protocol port. The selected tool definition determines execMode; operationType does not. Both custom and library tools may use this execution mode. This is a complete reference of applicable fields, not a list of required fields. Replace the example with a real tool authorized for execrtool; a custom tool also needs an active version. operationId takes precedence over operationName; when supplying both, identify the same tool. runnerId is a Runner mapping ID and takes precedence over runnerName; both must identify the same Runner. An explicit Runner must still satisfy group, tag and routing constraints; a failed health check may fall back within the candidate set. Fill param according to the tool input definitions. argument contains ordered free arguments as defined by the tool, not necessarily commands. Replace message and example-argument, or omit them when unnecessary. includeStdout=true requires that the tool have no output parameter named _stdout. For MCP calls, place these fields in params.arguments.",
+          "title": "Execute on Target Asset"
+        }
+      },
+      "getname": "Directly Execute Custom or Library Tools",
       "input": {
         "param": {
           "desc": {
@@ -11253,20 +11302,23 @@
             "runnername": "Runner Name"
           },
           "help": {
-            "argument": "A free-form argument array whose elements are passed to the tool in order. The number, types, and organization of elements depend on the tool's free-form argument definition and help. Omit it or pass [] when the tool has no free-form arguments. Examples: deprecate/sshexec uses a fixed positional argument [\"hostname\"]; osbasic/getcmdout uses an ordered list [\"uname -a\",\"df -h\"]; osbasic/createdirs uses multiline text [\"/data/app\\n/data/log\"]; basic/createjob uses alternating key-value pairs [\"appSystemId\",\"1001\",\"envName\",\"PRD\"] and requires an even number of elements; build/compileinjenkins uses key=value for each element [\"BRANCH=main\",\"ENV=PRD\"].",
-            "ip": "Required for target and runner_target modes when Resource ID is not provided.",
-            "nodename": "Used with IP and port only when Resource ID is not provided, especially to distinguish database instances sharing the same IP and port.",
-            "operationid": "Optional. Takes precedence over Tool Name when both are provided; Tool ID and Tool Name cannot both be empty.",
-            "operationname": "Optional. Used only when Tool ID is not provided and matched exactly within the selected Tool Type; Tool ID and Tool Name cannot both be empty.",
-            "param": "A key-value object organized by tool input parameter name. Example: {\"message\":\"hello\",\"timeout\":60}.",
-            "port": "Used with IP and resource name when Resource ID is not provided.",
-            "protocol": "Used for runner_target mode. Defaults to tagent when not provided.",
-            "resourceid": "Takes precedence over IP, port, and resource name.",
-            "runnergroup": "Used only in runner mode. Accepts a Runner group ID, name. Defaults to -1, which randomly matches within groups satisfying the request-header rule and tag constraints.",
-            "runnergrouptag": "Optional. Accepts Runner group tag IDs or names. The selected Runner must satisfy the request-header rule, tags, and the Runner group or network constraint for the execution mode. Example: [\"PRD\",\"UAT\"].",
-            "runnerid": "Takes precedence over Runner name and must belong to the candidate set determined by the request-header rule, tags, and the Runner group or network constraint for the execution mode.",
-            "runnername": "Used only when Runner Mapping ID is not provided and must belong to the candidate set determined by the request-header rule, tags, and the Runner group or network constraint for the execution mode. When neither selector is provided, a healthy Runner is automatically selected from the candidate set.",
-            "username": "Used for runner_target mode. Required when a protocol is explicitly provided; defaults to root with the default tagent protocol."
+            "argument": "A free-form argument array whose elements are passed to the tool in order. The number, types, and organization of elements depend on the tool's free-form argument definition and help. Omit it or pass [] when the tool has no free-form arguments. Examples: deprecate/sshexec uses a fixed positional argument [\"hostname\"]; osbasic/getcmdout uses an ordered list [\"uname -a\",\"df -h\"]; osbasic/createdirs uses multiline text [\"/data/app\\n/data/log\"]; basic/createjob uses alternating key-value pairs [\"appSystemId\",\"1001\",\"envName\",\"PRD\"] and requires an even number of elements; build/compileinjenkins uses key=value for each element [\"BRANCH=main\",\"ENV=PRD\"]. Omitted or null uses the operation's default free arguments. An explicit [] does not fall back to defaults and is validated against the required setting.",
+            "fullcatalogname": "Applies only when operationType=script and lookup uses operationName. Specify the full catalog path to disambiguate duplicate names; use / for the root catalog. Ignored when operationId is supplied and not used for tool library operations.",
+            "includestdout": "An explicit true or false takes precedence. When omitted or null, defaults to true for operations without output parameters and false for those with output parameters. Enabling it returns _stdout; execution is rejected if an output parameter already uses that reserved name.",
+            "ip": "Target asset IP. For target and runner_target execution, provide resourceId or ip. ip is ignored when resourceId is supplied. runner execution does not require a target asset.",
+            "nodename": "Helps locate an asset together with ip and port when resourceId is omitted, for example instances sharing an IP and port. It cannot replace ip by itself and is ignored when resourceId is provided.",
+            "operationid": "Operation ID. Provide this or operationName. When both are supplied, the ID takes precedence and the name and catalog are ignored. The ID must belong to operationType; an invalid ID does not fall back to name lookup.",
+            "operationname": "Used only when operationId is omitted, with exact name matching within operationType. Duplicate script names require fullCatalogName. For tool, use the registered library name, usually including its path. This is not an arbitrary command or script body.",
+            "operationtype": "Required: script selects a custom tool; tool selects a tool library operation. It determines the lookup scope for operationId or operationName. Custom tools use the active version. The runner, target, or runner_target execution mode comes from the tool definition, not this field. Only authorized operations may be executed.",
+            "param": "JSON object keyed by the selected operation's input parameter keys, not a list of parameter definitions. Types and required values follow the operation definition (the active version for custom tools). Missing keys use operation defaults; explicit null does not trigger default fallback. Missing required values fail. Omit or pass {} if there are no input parameters.",
+            "port": "Used with ip and nodeName to find an asset when resourceId is omitted. This is the asset lookup port, not the connection protocol port. runner_target reads the connection port from the resource center protocol configuration.",
+            "protocol": "Used only for runner_target execution. Specify a protocol configured in the resource center, such as tagent or ssh. An explicit protocol requires username. When omitted or blank, tagent/root is used and any supplied username is ignored. The protocol port comes from the resource center configuration.",
+            "resourceid": "Resource center asset ID, not an Informant node ID. It takes precedence for target and runner_target execution. When provided, ip, port, and nodeName are ignored; an invalid ID does not fall back to IP lookup. runner execution does not use a target asset.",
+            "runnergroup": "Applies only to runner execution: a Runner group ID as a string or a group name. Omitted, blank, or -1 means automatic assignment within groups matching request header rules and tags. target and runner_target match the target asset IP to network segments and do not use this field to select a group.",
+            "runnergrouptag": "Optional string array containing Runner group tag IDs or names, for example [\"PRD\"]. Tag matches are intersected with request header rules and restricted by the execution mode or target network segment. Explicit Runner selection does not bypass these constraints. Omit or use [] for no additional tag filter.",
+            "runnerid": "Runner mapping ID (runnerMapId), not the Runner instance ID. Takes precedence over runnerName. It must belong to the candidate set allowed by request header rules, tags, and execution mode. A constraint mismatch fails; a failed health check may fall back to another healthy Runner in the same candidate set.",
+            "runnername": "Selects a Runner by name only when runnerId is omitted, subject to candidate constraints. A failed health check may fall back within the same candidate set. If both fields are omitted, a healthy eligible Runner is assigned automatically.",
+            "username": "Used only for runner_target execution. An explicit protocol requires a configured connection account name. Do not pass a password in this request. If protocol is omitted, root is used and username is ignored. Other execution modes do not use this field."
           }
         }
       },
@@ -12216,6 +12268,7 @@
     "autoexecskillaiexecutequestionrequired": "Enter the AI execution request",
     "autoexecskillauditlistapi": "Search Autoexec Skill Activities",
     "autoexecskillbaseinfoupdateapi": "Update Autoexec Skill Basic Information",
+    "autoexecskillbindingsearchapi": "Search Skill Binding Candidates",
     "autoexecskillcannotsubmitexception": "A Skill version in status \"{0}\" cannot be submitted",
     "autoexecskillchatcontextlabel": "Current Skill: {0}",
     "autoexecskillchatpermissiondeniedexception": "You do not have permission to edit Autoexec Skills and cannot continue this AI chat.",
@@ -12229,7 +12282,14 @@
     "autoexecskilldisabledexception": "Autoexec Skill \"{0}\" is disabled",
     "autoexecskillenabled": "Skill Enabled",
     "autoexecskillenabledupdateapi": "Update Autoexec Skill Enabled Status",
+    "autoexecskillexecutioncontext": {
+      "jobid": "Skill Execution Job ID",
+      "localrunnerid": "Skill Shared Runner ID",
+      "targetrunnerids": "Asset Runner Bindings",
+      "usedrunnerids": "Used Runner IDs"
+    },
     "autoexecskillexecutionscopeexception": "This request may only execute published version \"{1}\" of Autoexec Skill \"{0}\"",
+    "autoexecskillexportapi": "Export Autoexec Skill Archive",
     "autoexecskillfilecategory": "Skill Package File Category",
     "autoexecskillfilegetapi": "Get Autoexec Skill Package File Content",
     "autoexecskillfileisbinary": "Binary File",
@@ -12241,11 +12301,16 @@
     "autoexecskillhassubmittedversionexception": "This Skill already has another version pending review",
     "autoexecskillhistoricalversion": "History",
     "autoexecskillid": "Skill ID",
+    "autoexecskillimportapi": "Import Autoexec Skill Draft",
+    "autoexecskillimportcannotbind": "Custom tool \"{1}\" in catalog \"{0}\" has no approved active version. Select overwrite or resolve its status first.",
     "autoexecskillimportentrysizeexception": "A file in the Skill package cannot exceed {0} bytes",
     "autoexecskillimportfilecountexception": "Upload exactly one Skill file at a time",
     "autoexecskillimportfilesizeexception": "The Skill import file cannot exceed {0} bytes",
     "autoexecskillimportparseapi": "Parse Autoexec Skill Import File",
     "autoexecskillimportparseexception": "Failed to parse Skill import file \"{0}\"",
+    "autoexecskillimportpreviewtoken": "Import Preflight Token",
+    "autoexecskillimportreconfirm": "The package or target tools have changed, or overwrite choices are incomplete. Run preflight again and confirm.",
+    "autoexecskillimportselection": "Tool Overwrite Choices",
     "autoexecskillimportskillcountexception": "A Skill archive must contain exactly one SKILL.md",
     "autoexecskillimporttypeexception": "Only Markdown or ZIP Skill imports are supported",
     "autoexecskillkey": "Skill Key",
@@ -12254,11 +12319,22 @@
     "autoexecskillnotfoundexception": "Autoexec Skill \"{0}\" does not exist",
     "autoexecskillnotpublishedexception": "Autoexec Skill \"{0}\" is not published",
     "autoexecskilloperationsearchfailed": "Autoexec operation search failed; try again later",
+    "autoexecskillpackagedescriptionmissing": "The import does not declare a Skill description. Add one to the draft.",
+    "autoexecskillpackageinvalidtoolname": "Tool name “{0}” is invalid: it must follow custom tool naming rules and contain no more than 50 characters",
+    "autoexecskillpackagemetadatainvalid": "The Skill extension metadata format is unsupported or contains an invalid mapping: {0}",
+    "autoexecskillpackagenamemissing": "The import does not declare a Skill name. The directory or file name has been used instead.",
+    "autoexecskillpackagenonportable": "The Skill package cannot fully restore a required resource or convert a platform reference: {0}",
+    "autoexecskillpackageresolutionfailed": "The Skill package cannot be imported because a required configuration or reference is missing: {0}",
+    "autoexecskillpackagetoolimportresultlist": "Tool Import Result List",
+    "autoexecskillpackageukadjusted": "The Skill Key has been converted from “{0}” to “{1}”.",
+    "autoexecskillpackageunresolved": "File \"{0}\" has not been resolved to an available tool. Complete its configuration, bind a tool, or explicitly mark it as a resource before submitting the Skill.",
+    "autoexecskillpackagewarninglist": "Skill Import Compatibility Warning List",
     "autoexecskillpolicyargumentcount": "Script \"{0}\" requires {1} positional arguments but received {2}.",
     "autoexecskillpolicyargumentduplicate": "The same value cannot be passed through both a named parameter and the positional argument channel.",
     "autoexecskillpolicyargumentprohibited": "Script \"{0}\" does not declare positional arguments.",
     "autoexecskillpolicyargumentrequired": "Script \"{0}\" is missing its required positional argument.",
     "autoexecskillpolicyargumentsinvalid": "The Skill script call arguments are not valid JSON.",
+    "autoexecskillpolicyargumentsyntax": "Skill command-line arguments must be a string without unclosed quotes, dangling escapes, or null characters.",
     "autoexecskillpolicycalllimit": "A Skill run cannot execute more than {0} scripts.",
     "autoexecskillpolicycontractinvalid": "Script alias \"{0}\" is not in the current Skill execution contract.",
     "autoexecskillpolicyduplicate": "The same call to script \"{0}\" has already run and cannot be repeated in this Skill run.",
@@ -12292,14 +12368,17 @@
     "autoexecskillreviewactioninvalidexception": "Unsupported Skill review action \"{0}\"",
     "autoexecskillreviewapi": "Review Autoexec Skill",
     "autoexecskillrevokeapi": "Revoke Autoexec Skill Submission",
+    "autoexecskillrunnerbindingconflictexception": "This Skill run is bound to Runner {0}. The requested runner or runner group conflicts with this binding; switching runners is not allowed.",
     "autoexecskillsaveapi": "Save Autoexec Skill",
+    "autoexecskillscriptauthoritydeniedexception": "The current user does not have Direct Execution permission for tool “{0}”. Ask an administrator to hover over the corresponding script in the Skill file tree and click the authorization icon to configure Direct Execution Authorization, or grant access on the tool details page.",
     "autoexecskillscriptbinaryexception": "scripts file \"{0}\" must be UTF-8 text",
     "autoexecskillscriptbinding": "Skill Script Path Binding",
     "autoexecskillscriptcountlimitexception": "The script alias count cannot exceed {0}",
-    "autoexecskillscriptdefaultconfigexception": "Skill import script default configuration \"{0}\" is missing or invalid",
-    "autoexecskillscriptdefaultriskid": "Default Risk Level ID for Skill Import Scripts",
-    "autoexecskillscriptdefaulttypeid": "Default Custom Tool Type ID for Skill Import Scripts",
+    "autoexecskillscriptdefaultconfigexception": "Skill import script configuration \"{0}\" does not match an existing record. Change the configured name or manually create the tool classification or operation level.",
+    "autoexecskillscriptdefaultriskname": "Default Operation Level Name for Skill Import Scripts",
+    "autoexecskillscriptdefaulttypename": "Default Tool Classification Name for Skill Import Scripts",
     "autoexecskillscriptexecutionprohibitedexception": "A Skill Agent may only read package files on demand or execute script aliases from loaded Skills",
+    "autoexecskillscriptgenerateapi": "Generate Active Skill Custom Tool",
     "autoexecskillscriptinvalidexception": "The Skill script alias list has an invalid format",
     "autoexecskillscriptnotloadedexception": "Skill \"{0}\" has not been loaded through skill_view, so its scripts cannot run",
     "autoexecskillscriptoperationinvalidexception": "The tool bound to script alias \"{0}\" does not exist or is unavailable",
@@ -12343,6 +12422,11 @@
         "reserverunpath": "Whether to preserve the execution directory"
       }
     },
+    "skillbatchactiveonly": "Batch authorization requires the currently active published Skill version.",
+    "skillbatchauthority": "Append Skill Tool Execution Grants",
+    "skillbatchauthoritycount": "Added Grant Count",
+    "skillbatchinvalidbinding": "Invalid script binding or no usable active tool version: {0}",
+    "skillbatchtoolcount": "Processed Tool Count",
     "yamlbindingambiguous": "The original node or group configuration cannot be uniquely matched. Preserve an unambiguous business binding, or use the graphical editor to resolve splits, merges, or repeated nodes.",
     "yamlconfigconflict": "Configuration options conflict or do not apply to this execution mode.",
     "yamlconfiginvalid": "Combination tool configuration validation failed: {0}",
@@ -16847,10 +16931,59 @@
   },
   "nmiai": {
     "getinformanthealthstateapi": {
-      "description": "Use this interface to query operating system or service health states collected by Informant on a specified host when determining whether the host or its services are unhealthy."
+      "description": "Use this interface to query operating system or service health states collected by Informant on a specified host when determining whether the host or its services are unhealthy.",
+      "example": {
+        "os": {
+          "description": "Replace hostname with a registered node hostname associated with a valid Runner. type=os selects one health category per request.",
+          "title": "Query Operating System Health"
+        },
+        "services": {
+          "description": "Replace hostname with a registered node hostname associated with a valid Runner. type=services selects one health category per request.",
+          "title": "Query Service Health"
+        }
+      },
+      "getname": "Get Informant Health Status",
+      "input": {
+        "param": {
+          "help": {
+            "hostname": "Hostname of a registered Informant node, used to locate the node rather than its ID or IP address. The node must be associated with a valid Runner. The request fails if the node or Runner cannot be found.",
+            "type": "Required; use lowercase values: os retrieves operating system health status; services retrieves service health status. Select one type per request."
+          }
+        }
+      }
     },
     "getinformantremotedataapi": {
-      "description": "Use this general-purpose interface to call a specified data endpoint through a registered Informant node when the Informant node ID and target endpoint path are known, for querying or operating on node data."
+      "description": "Use this general-purpose interface to call a specified data endpoint through a registered Informant node when the Informant node ID and target endpoint path are known, for querying or operating on node data.",
+      "example": {
+        "get": {
+          "description": "Query operating system information. An empty param object adds no node query parameters. Replace informantId with the actual node ID, which must be associated with a valid Runner; url is an internal node path.",
+          "title": "Query Operating System Information"
+        },
+        "getparams": {
+          "description": "Replace informantId and object_ids with actual node and service object IDs. Join multiple object IDs with commas in a string. param is forwarded as query parameters.",
+          "title": "Query Service Health"
+        },
+        "post": {
+          "description": "Requires INFORMANT_MODIFY. Replace yaml with the complete node configuration to validate and revision with the current configuration revision. The abbreviated YAML only illustrates passing a string. param is forwarded as form fields, not a JSON request body.",
+          "title": "Validate Informant Configuration"
+        }
+      },
+      "getname": "Get Informant Data",
+      "input": {
+        "param": {
+          "desc": {
+            "informantid": "Informant Node ID",
+            "method": "Request Method",
+            "param": "Request Parameters"
+          },
+          "help": {
+            "informantid": "ID of a registered Informant node, available from the Informant query API or node list. This is not a resource ID, hostname, or Runner ID. The platform resolves the node and its associated Runner before forwarding the request.",
+            "method": "Required: use lowercase get or post. This is the method forwarded to Informant, not the HTTP method used to call this NeatLogic API. It must match the node API selected by url.",
+            "param": "Optional JSON object whose fields are defined by the Informant API selected by url. For get, fields become query parameters; for post, they become form fields, not a JSON request body. Omit it or pass {} when no parameters are needed. Do not nest url, method, or informantId inside it.",
+            "url": "Internal API path on the Informant node, such as /api/monitor/data/periodical/os_info. Do not include a scheme, host, or the NeatLogic /api/rest prefix. informantId determines the target node. Paths under /api/admin/ additionally require INFORMANT_MODIFY, except the log list and log download paths."
+          }
+        }
+      }
     }
   },
   "nmiaj": {
@@ -23247,7 +23380,7 @@
       "executionstatusname": "Execution Status Name",
       "existrunnerorsqlexecmode": "Stage with Runner or SQL execution mode",
       "freeparam": "Free-Form Argument",
-      "fullcatalogname": "Full Tool Catalog Name",
+      "fullcatalogname": "Full Tool Catalog Path",
       "generatetocombop": "Publish As A Combination Tool",
       "globalparam": "Global Parameter",
       "globalparamid": "Global Parameter ID",
