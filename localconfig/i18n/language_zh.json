@@ -10516,7 +10516,21 @@
     },
     "createautoexecjobfromcomboppublicapi": {
       "description": {
-        "desc": "使用激活的组合工具创建并执行自动化作业；isSync为false时创建并激活后立即返回作业ID，isSync为true时等待作业终止或监听超时后返回状态和节点输出"
+        "desc": "使用组合工具活动版本创建作业。异步模式按自动或手动触发方式处理后返回作业ID；同步模式以当前认证用户立即执行，等待作业终止或监听超时后返回状态。"
+      },
+      "example": {
+        "auto": {
+          "description": "isSync 为 false，创建并设置触发方式后返回 jobId；请将 assignExecUser 替换为实际发起用户 UUID，未指定时省略。planStartTime 为毫秒时间戳，未来时间安排执行，当前或过去时间立即触发；示例时间须按实际计划替换。 完整参数参考，可选字段并非必填。请替换为有执行权限且存在活动版本的组合工具；param 的 Key 须由该版本定义，invokeId 为调用来源，parentId 须为存在且满足层级限制的父作业，否则省略。场景须关联到该组合工具且配置非空阶段列表。目标、协议、远程账号及 Runner 组和标签须与实际环境匹配；这里设置作业层配置，阶段预设或灰度组配置可能优先，Runner 还须满足路由规则。并发策略与执行方式无绑定：本例选择 parallel，仅传 parallelCount；如需分批，改为 roundCount 策略、删除 parallelCount 并传 roundCount。",
+          "title": "自动执行"
+        },
+        "manual": {
+          "description": "isSync 为 false，triggerType 为 manual；创建后返回 jobId，等待后续手动触发，本请求不会立即执行。请替换 assignExecUser 或省略以使用当前用户；不传计划时间。 完整参数参考，可选字段并非必填。请替换为有执行权限且存在活动版本的组合工具；param 的 Key 须由该版本定义，invokeId 为调用来源，parentId 须为存在且满足层级限制的父作业，否则省略。场景须关联到该组合工具且配置非空阶段列表。目标、协议、远程账号及 Runner 组和标签须与实际环境匹配；这里设置作业层配置，阶段预设或灰度组配置可能优先，Runner 还须满足路由规则。并发策略与执行方式无绑定：本例选择 parallel，仅传 parallelCount；如需分批，改为 roundCount 策略、删除 parallelCount 并传 roundCount。",
+          "title": "手动触发"
+        },
+        "sync": {
+          "description": "isSync 为 true，固定以当前认证用户立即执行，不得传 assignExecUser、planStartTime、triggerType。等待作业终止或监听超时后返回状态；仅终止后尝试读取节点输出。监听超时不会停止作业，也不代表执行失败，应结合 terminal、timedOut、success 和 status 判断结果。 完整参数参考，可选字段并非必填。请替换为有执行权限且存在活动版本的组合工具；param 的 Key 须由该版本定义，invokeId 为调用来源，parentId 须为存在且满足层级限制的父作业，否则省略。场景须关联到该组合工具且配置非空阶段列表。目标、协议、远程账号及 Runner 组和标签须与实际环境匹配；这里设置作业层配置，阶段预设或灰度组配置可能优先，Runner 还须满足路由规则。并发策略与执行方式无绑定：本例选择 parallel，仅传 parallelCount；如需分批，改为 roundCount 策略、删除 parallelCount 并传 roundCount。",
+          "title": "同步执行并等待"
+        }
       },
       "getname": "创建作业供外部调用",
       "input": {
@@ -10531,22 +10545,22 @@
           "help": {
             "assignexecuser": "指定作业发起用户UUID，作业将按该用户的权限和身份创建；未传时使用当前认证用户。isSync为true时固定使用当前认证用户，不支持该参数。",
             "combopname": "指定要执行的组合工具名称；服务端按名称查找组合工具，并使用其活动版本构建作业。",
-            "executeuser": "指定连接远程目标时使用的执行账号，不是作业发起用户；传入时覆盖组合工具配置，未传时沿用组合工具配置。",
+            "executeuser": "指定连接远程目标时使用的执行账号，不是作业发起用户；传入时覆盖组合工具配置，未传时沿用组合工具配置。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
             "invokeid": "指定调用来源ID，用于关联调用方与作业，供来源追踪、查询和回调使用；未传时使用组合工具活动版本ID。",
-            "ipportlist": "指定作业执行目标的字符串数组，每项格式为IP、IP:端口或IP:端口/名称；传入非空数组时覆盖组合工具目标配置，为空或未传时沿用组合工具配置。例如：[\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]。",
+            "ipportlist": "指定作业执行目标的字符串数组，每项格式为IP、IP:端口或IP:端口/名称；传入非空数组时覆盖组合工具目标配置，为空或未传时沿用组合工具配置。例如：[\"192.168.1.10\",\"192.168.1.11:22\",\"192.168.1.12:2222/app\"]。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
             "issync": "控制接口是否等待作业结果。false表示创建作业并完成触发方式设置后立即返回作业ID；true表示以当前认证用户立即执行，并等待作业终止或监听超时后返回状态和节点输出。监听超时不会终止作业。",
             "name": "指定用于展示和查询的作业名称，允许重名；未传或为空时使用组合工具名称。",
-            "parallelcount": "指定同时执行的目标数量，仅在parallelPolicy为parallel时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为32。",
-            "parallelpolicy": "指定目标并发策略。parallel按并发数执行并使用parallelCount；roundCount按分批数执行并使用roundCount。未传时沿用组合工具配置。",
-            "param": "指定作业参数键值对象，键应为组合工具活动版本中定义的作业参数Key；缺少的参数使用组合工具默认值并按参数类型转换，未传时使用空JSON。例如：{\"paramKey\":\"paramValue\"}。",
+            "parallelcount": "指定同时执行的目标数量，仅在parallelPolicy为parallel时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为32。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
+            "parallelpolicy": "指定目标并发策略。parallel按并发数执行并使用parallelCount；roundCount按分批数执行并使用roundCount。未传时沿用组合工具配置。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。 两种策略与同步、自动或手动执行方式无关；parallel 仅传 parallelCount，roundCount 仅传 roundCount。",
+            "param": "运行参数对象。仅提取活动版本定义的非文件参数，未定义的 Key 不会传入作业；缺失或为 null 时使用参数默认值，并按参数类型转换。未传时按空对象处理，仍须满足组合工具的参数要求。",
             "parentid": "指定父作业ID，用于将当前作业关联为其子作业；父作业必须存在，父作业链最多支持两级。",
-            "planstarttime": "指定计划开始时间，值为Unix时间戳（毫秒）；triggerType为auto且时间晚于当前时间时，作业将在该时间自动执行。isSync为true时不支持该参数。",
-            "protocol": "指定连接远程目标使用的协议名称，例如ssh；传入时覆盖组合工具配置，协议不存在时拒绝创建，未传时沿用组合工具配置。",
-            "roundcount": "指定将执行目标拆分成的批次数，仅在parallelPolicy为roundCount时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为64。",
+            "planstarttime": "Unix 时间戳（毫秒），未传时默认当前时间。自动触发时，未来时间安排执行，当前或过去时间立即触发；手动触发时不用于自动执行。isSync 为 true 时禁止传入。",
+            "protocol": "指定连接远程目标使用的协议名称，例如ssh；传入时覆盖组合工具配置，协议不存在时拒绝创建，未传时沿用组合工具配置。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
+            "roundcount": "指定将执行目标拆分成的批次数，仅在parallelPolicy为roundCount时生效；其他策略会忽略该参数。未传时沿用组合工具配置，组合工具也未配置时默认为64。 此处设置作业层配置，阶段预设或灰度组对应配置可能优先。",
             "runnergroup": "指定作业匹配和调度使用的Runner执行组名称或ID，-1表示随机匹配；未传时沿用组合工具配置。",
-            "runnergrouptag": "指定用于筛选Runner执行组的标签名称或ID，支持单个标签或标签字符串组成的JSON数组字符串；作业只会匹配同时满足标签和路由规则的执行组，未传时沿用组合工具配置。",
-            "scenarioname": "指定组合工具场景名称，用于选择该场景配置的执行阶段；场景不存在时拒绝创建，未传时使用组合工具默认执行范围。",
-            "triggertype": "指定作业触发方式。auto表示立即执行或按planStartTime自动执行；manual表示创建后等待手动触发；未传时立即执行。isSync为true时不支持该参数。"
+            "runnergrouptag": "指定用于筛选Runner执行组的标签名称或ID，支持单个标签或标签字符串组成的JSON数组字符串；作业只会匹配同时满足标签和路由规则的执行组，未传时沿用组合工具配置。 字段类型为字符串，多标签示例：\"[\\\"TagA\\\",\\\"TagB\\\"]\"。Runner 阶段自身配置的有效标签优先于作业层标签；此参数不控制执行目标的并发数或分批数。",
+            "scenarioname": "按名称查找场景，不存在时拒绝创建。只有组合工具关联该场景且配置了非空阶段列表时，才按该列表筛选阶段；未传、未关联或列表为空时不会按场景筛选。",
+            "triggertype": "异步模式的触发方式，默认 auto。auto 按 planStartTime 执行，时间缺省为当前时间；未来时间安排执行，当前或过去时间立即触发。manual 创建后等待手动触发。isSync 为 true 时禁止传入。"
           }
         }
       },
@@ -11018,20 +11032,20 @@
       "description": "用于在指定资产或 Runner 上直接执行已授权的自定义脚本或工具库工具，适合即时执行单个自动化操作并获取输出。",
       "example": {
         "protocol": {
-          "description": "适用于已授权、执行方式为 runner_target 的工具库工具。将 operationName 的示例值 example/runner-target-tool 替换为工具库中实际的工具名称，param 按该工具的输入参数定义填写。resourceId 指向目标资产；示例使用 ssh 协议及 deploy 账号，须与目标资产的实际配置一致。显式填写 protocol 时 username 必填，连接端口来自协议配置。MCP 调用时这些字段位于 params.arguments 中，params.name 固定为 autoexec.script.execrtool.exec。",
-          "title": "Runner 连接目标：指定协议与账号"
+          "description": "所选工具的 execMode 必须为 runner_target；显式传 protocol 时 username 必填。请将 ssh、deploy 替换为实际协议和账号；连接端口读取协议配置。 resourceId 优先于 ip、port、nodeName；同时展示的值须指向同一资源中心资产。按 IP 定位时省略 resourceId，port 和 nodeName 用于进一步定位资产；port 不是本次连接协议端口。 执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
+          "title": "Runner 连接目标：指定协议和账号"
         },
         "runner": {
-          "description": "适用于已授权、执行方式为 runner 的工具库工具。将 operationName 的示例值 example/runner-tool 替换为工具库中实际的工具名称，param 按该工具的输入参数定义填写；无需目标资产参数。runnerGroup、runnerGroupTag 用于限制候选 Runner，填写满足当前请求头规则的实际组及标签，也可按需省略。MCP 调用时这些字段位于 params.arguments 中，params.name 固定为 autoexec.script.execrtool.exec。",
-          "title": "Runner 上执行工具库工具"
+          "description": "所选工具的 execMode 必须为 runner；本分支不使用目标定位或连接参数。  执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
+          "title": "在 Runner 上执行"
         },
         "tagent": {
-          "description": "前提：按名称和完整目录定位已授权、有激活版本且执行方式为 runner_target 的自定义工具，示例假定其自由参数接收有序命令列表。将 operationName、fullCatalogName、ip 的示例值替换为实际自定义工具名称、完整目录路径及目标资产 IP，并按实际定义调整 argument。省略 protocol 和 username 固定使用 tagent/root；ip 必须能定位资源中心资产。",
+          "description": "所选工具的 execMode 必须为 runner_target。本例按自定义工具名称及 fullCatalogName 定位，因此不传 operationId；fullCatalogName 不适用于工具库工具。省略 protocol、username 时固定使用 tagent/root，目标须有对应可用账号；连接端口读取协议配置。 resourceId 优先于 ip、port、nodeName；同时展示的值须指向同一资源中心资产。按 IP 定位时省略 resourceId，port 和 nodeName 用于进一步定位资产；port 不是本次连接协议端口。 执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
           "title": "Runner 连接目标：默认 Tagent 账号"
         },
         "target": {
-          "description": "前提：operationId 对应已授权、有激活版本且执行方式为 target 的自定义工具，示例假定其定义了 message 输入参数。将 operationId、resourceId 替换为实际工具 ID 和资源中心资产 ID，并按工具定义填写 param；不要将资源 ID 当作 Informant ID。Runner 按目标资产 IP 自动选择。",
-          "title": "在目标资产执行自定义工具"
+          "description": "所选工具的 execMode 必须为 target；本分支不使用 protocol、username。 resourceId 优先于 ip、port、nodeName；同时展示的值须指向同一资源中心资产。按 IP 定位时省略 resourceId，port 和 nodeName 用于进一步定位资产；port 不是本次连接协议端口。 执行方式由所选工具定义的 execMode 决定，不由 operationType 决定；自定义工具和工具库工具均可具有该执行方式。示例完整展示适用字段，不代表全部必填。请替换为已获 execrtool 授权的真实工具，自定义工具还须有活动版本。operationId 优先于 operationName；同时传入时请指向同一工具。runnerId 为 Runner 映射 ID，优先于 runnerName，同时传入时须指向同一 Runner；指定 Runner 仍须满足执行组、标签及路由约束，健康检查失败时可能在候选范围内回退。param 按工具输入参数定义填写，argument 是按定义传入的有序自由参数，不默认表示命令列表；请替换示例 message 和 example-argument，不需要时可省略。includeStdout=true 要求工具未定义名为 _stdout 的输出参数。MCP 调用时这些字段放在 params.arguments 中。",
+          "title": "在目标资产上执行"
         }
       },
       "getname": "直接执行自定义工具或工具库工具",
@@ -16697,16 +16711,16 @@
       "description": "用于通过已注册的 Informant 节点调用指定数据接口，适合在已知 Informant 节点 ID 和目标接口路径时查询或操作节点数据。",
       "example": {
         "get": {
-          "description": "无节点参数的 GET 请求，省略 param。将 informantId 替换为实际节点 ID；url 是节点内部路径。",
-          "title": "GET：查询操作系统信息"
+          "description": "查询节点操作系统信息，param 为空对象，表示不附加节点查询参数。将 informantId 替换为实际节点 ID，节点须关联有效 Runner；url 为节点内部路径。",
+          "title": "查询操作系统信息"
         },
         "getparams": {
           "description": "将 informantId 和 object_ids 替换为实际节点及服务对象 ID。多个对象 ID 使用逗号拼接的字符串；param 转为查询参数。",
-          "title": "GET：按服务对象查询健康状态"
+          "title": "查询服务健康状态"
         },
         "post": {
           "description": "要求 INFORMANT_MODIFY 权限。将 yaml 替换为待校验的完整节点配置文本，revision 替换为当前配置版本；这里的简化 YAML 仅说明字符串传参形式。param 转为表单参数，不是 JSON 请求体。",
-          "title": "POST：校验节点配置"
+          "title": "校验 Informant 配置"
         }
       },
       "getname": "获取 Informant 数据",
