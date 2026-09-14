@@ -24063,5 +24063,12 @@
     "tenant": {
       "name": "系统配置"
     }
+  },
+  "haday": {
+    "status": {
+      "finalized": "已定版",
+      "active": "已启用",
+      "history": "历史版本"
+    }
   }
 }

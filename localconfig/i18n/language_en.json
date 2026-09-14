@@ -24027,5 +24027,12 @@
     "tenant": {
       "name": "Tenant"
     }
+  },
+  "haday": {
+    "status": {
+      "finalized": "Finalized",
+      "active": "Active",
+      "history": "Historical version"
+    }
   }
 }
