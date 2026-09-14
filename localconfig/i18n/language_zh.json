@@ -1,4 +1,54 @@
 {
+  "globallock.action": "操作",
+  "globallock.api": "全局锁操作",
+  "globallock.currentpage": "当前页",
+  "globallock.error.actioninvalid": "不支持全局锁操作 action={0}；lockId={1}，handler={2}。允许的操作为 lock、unlock、cancel、retry。",
+  "globallock.error.enqueuemissing": "入队后未找到锁记录；lockId={0}，key={1}，uuid={2}，handler={3}。无法确认入队结果，拒绝返回获锁成功。",
+  "globallock.error.handlerunknown": "未注册全局锁处理器 handler={0}；lockId={1}，action={2}。请核对 operType 及处理器注册配置。",
+  "globallock.error.identitymismatch": "锁身份冲突，拒绝复用或修改记录；lockId={0}，冲突字段={1}，原值={2}，请求值={3}；原 key={4}，请求 key={5}，原 handler={6}，请求 handler={7}。",
+  "globallock.error.jobrequired": "申请作业资源锁缺少 handlerParam.jobId；lockId={0}，key={1}，handler={2}。无法校验作业状态及锁归属。",
+  "globallock.error.operationaction": "交互式锁操作仅支持 unlock 或 cancel；operationId={0}，lockId={1}，实际 action={2}。",
+  "globallock.error.operationmismatch": "操作记录与请求不匹配，拒绝执行；operationId={0}，绑定 lockId={1}、action={2}，请求 lockId={3}、action={4}。",
+  "globallock.error.operationunavailable": "操作记录不存在、已过期或当前用户无权访问，拒绝执行；operationId={0}，请求 lockId={1}、action={2}。请重新准备操作。",
+  "globallock.error.ownerrequired": "批量释放资源锁要求非空处理器列表及业务归属标识；实际 handlers={0}，ownerId={1}。",
+  "globallock.error.prepareinvalid": "准备交互式锁操作要求 lockId 非空且 action 为 unlock 或 cancel；实际 lockId={0}，action={1}。",
+  "globallock.error.releasefailed": "资源锁操作失败；action={0}，lockId={1}，key={2}，uuid={3}，handler={4}，operationId={5}；原因：{6}。",
+  "globallock.error.terminalrequest": "作业已进入终结状态，拒绝申请资源锁；jobId={0}，status={1}，lockId={2}，key={3}，handler={4}，execId={5}，runnerId={6}。",
+  "globallock.error.transactionrequired": "批量释放资源锁必须加入调用方的活动事务，当前无活动事务；handlers={0}，ownerId={1}。请在业务状态更新事务内调用。",
+  "globallock.filters": "筛选条件",
+  "globallock.filtershelp": "筛选字段及其语义由 handler 对应的处理器定义。",
+  "globallock.getgloballockapi": "查看资源锁详情",
+  "globallock.getgloballockoperationapi": "查询资源锁操作进度",
+  "globallock.handler": "处理器",
+  "globallock.lockid": "锁 ID",
+  "globallock.locks": "锁列表",
+  "globallock.notifyerror": "通知异常",
+  "globallock.operationid": "操作 ID",
+  "globallock.ownerid": "业务归属标识",
+  "globallock.pagesize": "每页数量",
+  "globallock.preparegloballockoperationapi": "准备资源锁操作",
+  "globallock.search": "搜索全局锁",
+  "globallock.status.notification.empty": "无可通知的等待锁",
+  "globallock.status.notification.failed": "通知失败",
+  "globallock.status.notification.success": "通知成功",
+  "globallock.status.operation.done": "操作结束",
+  "globallock.status.operation.failed": "操作失败",
+  "globallock.status.operation.prepared": "已准备",
+  "globallock.status.operation.running": "执行中",
+  "globallock.status.release.failed": "释放失败",
+  "globallock.status.release.pending": "等待释放",
+  "globallock.status.release.released": "已释放",
+  "globallock.status.release.releasing": "释放中",
+  "globallock.status.waiter.failed": "通知失败",
+  "globallock.status.waiter.notifying": "通知中",
+  "globallock.status.waiter.notnotified": "未通知",
+  "globallock.status.waiter.pending": "等待通知",
+  "globallock.status.waiter.skipped": "已跳过",
+  "globallock.status.waiter.success": "通知成功",
+  "globallock.terminal": "作业 {0} 当前状态为 {1}，不允许申请资源锁",
+  "globallock.unlockerror": "解锁异常",
+  "globallock.wait": "是否等待",
+  "globallock.waitreason": "等待原因",
   "haday": {
     "status": {
       "active": "已启用"
@@ -11770,6 +11820,9 @@
       "getbusinesstransactiondetail": "获取APM业务交易详情",
       "getbusinesstransactionoverview": "获取APM业务交易趋势",
       "getdataqualityoverview": "获取APM数据质量概览",
+      "getoverviewcore": "获取APM概览核心统计",
+      "getoverviewquality": "获取APM概览资产质量",
+      "getoverviewtopology": "获取APM概览服务流",
       "getsamplingpolicy": "获取APM采样策略",
       "getslo": "获取APM SLO",
       "getslooverview": "获取APM SLO概览",
@@ -17034,10 +17087,10 @@
   "nmiat": {
     "createinformantaichatsessionapi": "创建 Informant 终端 AI 会话",
     "informantaichatconfigunavailableexception": "Informant 诊断助手尚未完成模型或 INFORMANT_MCP 工具配置",
-    "informantaichatcontextlabel": "当前终端：{0}",
+    "informantaichatcontextlabel": "入口终端：{0}",
     "informantaichatpermissiondeniedexception": "您没有 Informant 终端诊断权限",
-    "informantaichatsessioninvalidexception": "当前 AI 会话未正确绑定 Informant 终端，请关闭助手后重新打开",
-    "informantdiagnosticagentdescription": "绑定指定 Informant 终端并使用只读 MCP 能力进行实时诊断",
+    "informantaichatsessioninvalidexception": "当前 AI 会话的 Informant 入口配置无效，请关闭助手后重新打开",
+    "informantdiagnosticagentdescription": "从指定 Informant 入口终端出发，按用户要求使用只读 MCP 能力跨节点定位故障",
     "informantdiagnosticagentlabel": "Informant 终端诊断助手",
     "informantmcptool": {
       "label": "Informant 故障诊断",
@@ -17062,7 +17115,7 @@
       "schema": {
         "action": "操作类型",
         "arguments": "远端 MCP 工具 inputSchema 要求的原始参数对象，仅供 callCapability 使用",
-        "informantid": "searchNode 返回的 Informant 节点 ID",
+        "informantid": "可信会话入口或 searchNode 返回的 Informant 节点 ID",
         "keyword": "Informant 节点 IP 或主机名前缀，仅供 searchNode 使用",
         "toolname": "listCapabilities 返回的只读 MCP 工具名"
       }
@@ -17278,6 +17331,14 @@
           }
         }
       }
+    }
+  },
+  "nmmae": {
+    "saveexagentapi": {
+      "agentid": "绑定采集器ID",
+      "name": "保存ExAgent",
+      "port": "端口",
+      "sendinterval": "数据上报间隔"
     }
   },
   "nmmal": {
