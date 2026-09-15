@@ -1,4 +1,26 @@
 {
+  "ai.workflow.status.ignored": "已忽略",
+  "ai.workflow.status.paused": "已暂停",
+  "ai.workflow.status.pausing": "暂停中",
+  "ai.workflow.status.pending": "待开始",
+  "ai.workflow.status.ready": "待执行",
+  "ai.workflow.status.running": "执行中",
+  "ai.workflow.status.succeed": "成功",
+  "ai.workflow.status.terminated": "终止",
+  "ai.workflow.status.terminating": "终止中",
+  "cmdb.attrtype.enum": "枚举型",
+  "cmdb.attrtype.expression": "表达式",
+  "cmdb.attrtype.hyperlink": "超链接",
+  "cmdb.attrtype.set": "多选集合",
+  "cmdb.attrtype.table": "表格",
+  "cmdb.batchimport.action.all": "添加并更新",
+  "cmdb.batchimport.action.append": "只添加",
+  "cmdb.batchimport.action.update": "只更新",
+  "cmdb.batchimport.status.running": "导入中",
+  "cmdb.batchimport.status.success": "成功",
+  "fileservice.resourceview.cluster": "文件服务集群",
+  "fileservice.resourceview.instance": "文件服务节点",
+  "fileservice.resourceview.management": "文件服务管理",
   "globallock.action": "操作",
   "globallock.api": "全局锁操作",
   "globallock.currentpage": "当前页",
@@ -783,6 +805,9 @@
       }
     }
   },
+  "knowledge.category.myfavorites": "我的收藏",
+  "knowledge.category.submittedbyme": "我提交的",
+  "knowledge.category.waitingforreview": "待我审批",
   "nf": {
     "api": {
       "example": {
