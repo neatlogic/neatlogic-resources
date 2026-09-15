@@ -109,6 +109,335 @@
   "ai.workflow.prompt.structuredoutput": "\nThe output must be a structured JSON object or array.",
   "ai.workflow.prompt.systemrole": "You are an LLM node in a workflow. Complete the task strictly based on the input.",
   "ai.workflow.prompt.taskheading": "Task Instructions:\n",
+  "auth.admin.description": "Manage selected system features, such as rebuilding nested set indices.",
+  "auth.admin.name": "Core System Administration Permission",
+  "auth.ai_agent_modify.description": "Add, modify, and delete AI agents.",
+  "auth.ai_agent_modify.name": "AI Agent Management Permission",
+  "auth.ai_chat.description": "Use AI chat features.",
+  "auth.ai_chat.name": "AI Chat Access Permission",
+  "auth.ai_model_modify.description": "Add, modify, and delete AI models.",
+  "auth.ai_model_modify.name": "AI Model Management Permission",
+  "auth.ai_rag_modify.description": "Add, modify, and delete AI knowledge bases.",
+  "auth.ai_rag_modify.name": "AI Knowledge Base Management Permission",
+  "auth.ai_tool_modify.description": "Add, modify, and delete AI tool instances.",
+  "auth.ai_tool_modify.name": "AI Tool Management Permission",
+  "auth.ai_workflow_modify.description": "Add, modify, and delete AI workflows, and view execution records.",
+  "auth.ai_workflow_modify.name": "AI Workflow Management Permission",
+  "auth.ai_workflow_task_modify.description": "View and delete AI workflow tasks and execution records.",
+  "auth.ai_workflow_task_modify.name": "AI Workflow Task Management Permission",
+  "auth.alert_action_modify.description": "Add and modify alert custom actions.",
+  "auth.alert_action_modify.name": "Alert Custom Action Management Permission",
+  "auth.alert_admin.description": "Modify status, close, delete, and perform other operations on all alerts.",
+  "auth.alert_admin.name": "Alert Administration Permission",
+  "auth.alert_allalertconfig_modify.description": "Modify display attributes, filters, and sorting settings on the All Alerts page.",
+  "auth.alert_allalertconfig_modify.name": "All Alerts Configuration Management Permission",
+  "auth.alert_attr_modify.description": "Add and modify alert extended attributes.",
+  "auth.alert_attr_modify.name": "Alert Extended Attribute Management Permission",
+  "auth.alert_base.description": "Use the unified alert platform module.",
+  "auth.alert_base.name": "Unified Alert Platform Access Permission",
+  "auth.alert_batch_delete.description": "Delete alerts matching advanced search rules in batches.",
+  "auth.alert_batch_delete.name": "Alert Batch Deletion Permission",
+  "auth.alert_breaker_modify.description": "Add, modify, and delete alert circuit breaker policies.",
+  "auth.alert_breaker_modify.name": "Alert Circuit Breaker Policy Management Permission",
+  "auth.alert_event_modify.description": "Add and modify alert events.",
+  "auth.alert_event_modify.name": "Alert Event Management Permission",
+  "auth.alert_event_plugin_modify.description": "Modify alert event plugin configuration.",
+  "auth.alert_event_plugin_modify.name": "Alert Event Plugin Management Permission",
+  "auth.alert_export.description": "Export alert data.",
+  "auth.alert_export.name": "Alert Export Permission",
+  "auth.alert_index.description": "Rebuild the index for an individual alert.",
+  "auth.alert_index.name": "Alert Index Rebuild Permission",
+  "auth.alert_level_modify.description": "Add and modify alert levels.",
+  "auth.alert_level_modify.name": "Alert Level Management Permission",
+  "auth.alert_mark_modify.description": "Add and modify alert tags.",
+  "auth.alert_mark_modify.name": "Alert Tag Management Permission",
+  "auth.alert_notify_template_modify.description": "Add and modify notification templates.",
+  "auth.alert_notify_template_modify.name": "Notification Template Management Permission",
+  "auth.alert_rule_modify.description": "Add and modify alert signatures.",
+  "auth.alert_rule_modify.name": "Alert Signature Management Permission",
+  "auth.alert_source_modify.description": "Add and modify alert sources.",
+  "auth.alert_source_modify.name": "Alert Source Management Permission",
+  "auth.alert_status_modify.description": "Add, modify, and delete alert statuses.",
+  "auth.alert_status_modify.name": "Alert Status Management Permission",
+  "auth.alert_subscribe_modify.description": "Add and modify alert subscriptions.",
+  "auth.alert_subscribe_modify.name": "Alert Subscription Management Permission",
+  "auth.alert_suppression_modify.description": "Add and modify alert suppression policies.",
+  "auth.alert_suppression_modify.name": "Alert Suppression Management Permission",
+  "auth.alert_title_ai.description": "Use large language models to analyze alert content.",
+  "auth.alert_title_ai.name": "AI Alert Analysis Permission",
+  "auth.alert_topo_modify.description": "Add and modify alert topologies.",
+  "auth.alert_topo_modify.name": "Alert Topology Management Permission",
+  "auth.alert_type_modify.description": "Add and modify alert types.",
+  "auth.alert_type_modify.name": "Alert Type Management Permission",
+  "auth.alert_view_modify.description": "Add and modify alert views.",
+  "auth.alert_view_modify.name": "Alert View Management Permission",
+  "auth.alertlevel_modify.description": "Add, modify, and delete configuration item alert levels.",
+  "auth.alertlevel_modify.name": "Configuration Item Alert Level Management Permission",
+  "auth.api_audit_view.description": "View operation audits.",
+  "auth.api_audit_view.name": "Operation Audit View Permission",
+  "auth.assest_auth.description": "Perform asset management operations.",
+  "auth.assest_auth.name": "Asset Management Permission",
+  "auth.assign_modify.description": "Manage registration records, including modification and deletion.",
+  "auth.assign_modify.name": "Registration Management Permission",
+  "auth.authority_modify.description": "Add, modify, and delete permissions.",
+  "auth.authority_modify.name": "Permission Management Permission",
+  "auth.bsm_cientity_sync_modify.description": "Synchronize BSM configuration data.",
+  "auth.bsm_cientity_sync_modify.name": "BSM Configuration Item Synchronization Management Permission",
+  "auth.change_modify.description": "Add, modify, and delete changes.",
+  "auth.change_modify.name": "Change Management Permission",
+  "auth.ci_modify.description": "Add, modify, and delete configuration item models.",
+  "auth.ci_modify.name": "Configuration Item Model Management Permission",
+  "auth.cientity_alert_modify.description": "Update configuration item alert status.",
+  "auth.cientity_alert_modify.name": "Configuration Item Alert Management Permission",
+  "auth.cientity_batch_import.description": "Import configuration items in batches.",
+  "auth.cientity_batch_import.name": "Configuration Item Batch Import Permission",
+  "auth.cientity_export.description": "Export configuration item data.",
+  "auth.cientity_export.name": "Configuration Item Export Permission",
+  "auth.cientity_modify.description": "Add, modify, and delete configuration items, and submit and modify transactions.",
+  "auth.cientity_modify.name": "Configuration Item Management Permission",
+  "auth.codehub_base.description": "Access basic Codehub features.",
+  "auth.codehub_base.name": "Codehub Access Permission",
+  "auth.codehub_manager.description": "Maintain Codehub settings, including repository services, repositories, version policies, and application mappings.",
+  "auth.codehub_manager.name": "Codehub Management Permission",
+  "auth.codehub_version.description": "Maintain Codehub versions and perform version status transitions and other version management operations.",
+  "auth.codehub_version.name": "Version Management Role",
+  "auth.customview_modify.description": "Add, modify, and delete public views.",
+  "auth.customview_modify.name": "Public Custom View Management Permission",
+  "auth.dashboard_base.description": "View system dashboards.",
+  "auth.dashboard_base.name": "Dashboard View Permission",
+  "auth.dashboard_modify.description": "Create, edit, authorize access to, and delete system dashboards.",
+  "auth.dashboard_modify.name": "Dashboard Management Permission",
+  "auth.data_warehouse_base.description": "Access data warehouse data sources.",
+  "auth.data_warehouse_base.name": "Data Warehouse Default Permission",
+  "auth.data_warehouse_modify.description": "Add, modify, and delete data warehouses.",
+  "auth.data_warehouse_modify.name": "Data Warehouse Management Permission",
+  "auth.diagram_base.description": "Access basic diagram features.",
+  "auth.diagram_base.name": "Diagram Access Permission",
+  "auth.diagram_catalog_modify.description": "Add, edit, and delete catalogs and catalog entries.",
+  "auth.diagram_catalog_modify.name": "Diagram Catalog Management Permission",
+  "auth.diagram_task_config.description": "Configure custom task statuses and related settings.",
+  "auth.diagram_task_config.name": "Task Configuration Permission",
+  "auth.diagram_template_modify.description": "Edit diagram templates.",
+  "auth.diagram_template_modify.name": "Diagram Template Editing Permission",
+  "auth.diagram_widget_modify.description": "Add, edit, and delete diagram elements.",
+  "auth.diagram_widget_modify.name": "Diagram Element Editing Permission",
+  "auth.documentonline_config_modify.description": "Add, remove, and otherwise modify online help documentation associated with modules and menus.",
+  "auth.documentonline_config_modify.name": "Online Help Documentation Configuration Permission",
+  "auth.dr_admin.description": "Manage basic configuration.",
+  "auth.dr_admin.name": "Disaster Recovery Switchover Administration Permission",
+  "auth.edu_base.description": "Access basic education module features.",
+  "auth.edu_base.name": "Education Module Access Permission",
+  "auth.event_solution_modify.description": "Add, modify, and delete solutions.",
+  "auth.event_solution_modify.name": "Solution Management Permission",
+  "auth.event_type_modify.description": "Add, modify, and delete event types.",
+  "auth.event_type_modify.name": "Event Type Management Permission",
+  "auth.exagent_file_edit.description": "Add, modify, and delete Exagent file management content.",
+  "auth.exagent_file_edit.name": "Exagent File Management Permission",
+  "auth.exagent_manage_edit.description": "Maintain Exagent management content and perform operations such as restarts.",
+  "auth.exagent_manage_edit.name": "Exagent Maintenance Permission",
+  "auth.exagent_scope_view.description": "Display the Exagent menu in system settings.",
+  "auth.exagent_scope_view.name": "Exagent Menu Visibility Permission",
+  "auth.exagent_version_edit.description": "Add, modify, and delete Exagent version management content.",
+  "auth.exagent_version_edit.name": "Exagent Version Management Permission",
+  "auth.exercise_modify.description": "Add, modify, and delete exercise plans.",
+  "auth.exercise_modify.name": "Exercise Plan Management Permission",
+  "auth.fdbank_containerservice_base.description": "View application container service configuration and modify allowlisted configuration settings.",
+  "auth.fdbank_containerservice_base.name": "Application Container Service Configuration Access Permission",
+  "auth.fdbank_containerservice_modify.description": "Manage application container service configuration.",
+  "auth.fdbank_containerservice_modify.name": "Application Container Service Configuration Management Permission",
+  "auth.file_modify.description": "Manage all attachments.",
+  "auth.file_modify.name": "Attachment Management Permission",
+  "auth.fileservice_base.description": "View file service management data.",
+  "auth.fileservice_base.name": "File Service Access Permission",
+  "auth.fileservice_execute.description": "Start file service data collection.",
+  "auth.fileservice_execute.name": "File Service Collection Execution Permission",
+  "auth.fileservice_modify.description": "Maintain file service clusters and CMDB mappings.",
+  "auth.fileservice_modify.name": "File Service Maintenance Permission",
+  "auth.form_modify.description": "Add, modify, and delete forms.",
+  "auth.form_modify.name": "Form Management Permission",
+  "auth.fulltextindex_modify.description": "Rebuild the global search index.",
+  "auth.fulltextindex_modify.name": "Search Center Index Rebuild Permission",
+  "auth.globalsearch_base.description": "Use basic search center features.",
+  "auth.globalsearch_base.name": "Search Center Access Permission",
+  "auth.graph_modify.description": "Add, modify, and delete public topology views.",
+  "auth.graph_modify.name": "Public Topology View Editing Permission",
+  "auth.group.items": "Permission Group List",
+  "auth.group.list": "Get Permission Group List",
+  "auth.group_modify.description": "Add, modify, and delete groups.",
+  "auth.group_modify.name": "Group Management Permission",
+  "auth.informant_ai.description": "Use the AI assistant on Informant endpoint details pages for read-only diagnosis.",
+  "auth.informant_ai.name": "Informant AI Assistant Access Permission",
+  "auth.informant_base.description": "Use the Informant module.",
+  "auth.informant_base.name": "Informant Access Permission",
+  "auth.informant_batch_delete.description": "Delete Informant nodes in batches based on search criteria.",
+  "auth.informant_batch_delete.name": "Informant Batch Deletion Permission",
+  "auth.informant_heartbeat.description": "Receive Informant heartbeats and update agent status.",
+  "auth.informant_heartbeat.name": "Informant Heartbeat Update Permission",
+  "auth.informant_modify.description": "Manage Informant nodes.",
+  "auth.informant_modify.name": "Informant Management Permission",
+  "auth.inspect_base.description": "View application, asset, and historical inspection reports, and export reports.",
+  "auth.inspect_base.name": "Inspection Access Permission",
+  "auth.inspect_baseline_modify.description": "Maintain baseline template hierarchies, descriptions, and editing permissions.",
+  "auth.inspect_baseline_modify.name": "Baseline Inspection Management Permission",
+  "auth.inspect_baseline_template_modify.name": "Baseline Inspection Template Permission",
+  "auth.inspect_baseline_view.description": "View baseline inspections, create inspection jobs, and generate baseline drafts.",
+  "auth.inspect_baseline_view.name": "Baseline Inspection View Permission",
+  "auth.inspect_config_file_modify.description": "Add and delete file paths and clean up files.",
+  "auth.inspect_config_file_modify.name": "Configuration File Management Permission",
+  "auth.inspect_execute.description": "Start individual and batch inspection jobs.",
+  "auth.inspect_execute.name": "Individual and Batch Inspection Execution Permission",
+  "auth.inspect_modify.description": "Configure threshold rules and predefine inspection tools for models.",
+  "auth.inspect_modify.name": "Inspection Administration Permission",
+  "auth.inspect_schedule_execute.description": "Start scheduled inspection jobs.",
+  "auth.inspect_schedule_execute.name": "Scheduled Inspection Execution Permission",
+  "auth.integration_modify.description": "Add, modify, and delete integrations.",
+  "auth.integration_modify.name": "Integration Management Permission",
+  "auth.interface_modify.description": "Add, modify, and delete APIs.",
+  "auth.interface_modify.name": "API Management Permission",
+  "auth.intstitution_modify.description": "Manage institutions, including modification and deletion.",
+  "auth.intstitution_modify.name": "Institution Management Permission",
+  "auth.ip_manage.description": "Operate the IP resource pool management page.",
+  "auth.ip_manage.name": "IP Resource Pool Management Permission",
+  "auth.knowledge.description": "Access underlying knowledge base features through APIs, such as querying knowledge base files.",
+  "auth.knowledge.name": "Knowledge Base API Access Permission",
+  "auth.knowledge_base.description": "View knowledge articles.",
+  "auth.knowledge_base.name": "Knowledge Access Permission",
+  "auth.knowledge_circle_modify.description": "Add, modify, and delete knowledge circles.",
+  "auth.knowledge_circle_modify.name": "Knowledge Circle Management Permission",
+  "auth.knowledge_feishu_sync_modify.description": "Manage Feishu cloud document synchronization settings, manual synchronization, and synchronization records.",
+  "auth.knowledge_feishu_sync_modify.name": "Feishu Cloud Document Synchronization Management Permission",
+  "auth.knowledge_template_modify.description": "Add, modify, and delete knowledge templates.",
+  "auth.knowledge_template_modify.name": "Knowledge Template Management Permission",
+  "auth.knowledge_test.description": "Test commercial knowledge module features.",
+  "auth.knowledge_test.name": "Knowledge Commercial Module Test",
+  "auth.license_modify.description": "View and update licenses.",
+  "auth.license_modify.name": "License Management Permission",
+  "auth.lsbank_messageremind_admin.description": "Manage the scheduled message reminder module.",
+  "auth.lsbank_messageremind_admin.name": "Scheduled Message Reminder Administration Permission",
+  "auth.master_base.description": "Use tenant management features.",
+  "auth.master_base.name": "Tenant Management Access Permission",
+  "auth.master_manager.description": "Perform limited node management operations.",
+  "auth.master_manager.name": "Tenant Management Super Administrator Permission",
+  "auth.module_modify.description": "View module version information and import and export module initialization data files.",
+  "auth.module_modify.name": "System Module Management Permission",
+  "auth.monitor_action_edit.description": "Maintain monitoring action configuration.",
+  "auth.monitor_action_edit.name": "Monitoring Action Maintenance Permission",
+  "auth.monitor_agent_edit.description": "Maintain monitoring agent configuration.",
+  "auth.monitor_agent_edit.name": "Monitoring Agent Maintenance Permission",
+  "auth.monitor_alert_edit.description": "Maintain alert rules and configuration.",
+  "auth.monitor_alert_edit.name": "Monitoring Alert Maintenance Permission",
+  "auth.monitor_base.description": "Use the monitoring module.",
+  "auth.monitor_base.name": "Monitoring Access Permission",
+  "auth.monitor_job_edit.description": "Maintain monitoring job configuration.",
+  "auth.monitor_job_edit.name": "Monitoring Job Maintenance Permission",
+  "auth.monitor_plugin_edit.description": "Maintain monitoring plugin configuration.",
+  "auth.monitor_plugin_edit.name": "Monitoring Plugin Maintenance Permission",
+  "auth.monitor_scope_edit.description": "Maintain monitoring scope configuration.",
+  "auth.monitor_scope_edit.name": "Monitoring Scope Maintenance Permission",
+  "auth.monitor_scope_view.description": "View monitoring scopes and target information.",
+  "auth.monitor_scope_view.name": "Monitoring Scope View Permission",
+  "auth.monitor_table_edit.description": "Maintain monitoring table configuration.",
+  "auth.monitor_table_edit.name": "Monitoring Table Maintenance Permission",
+  "auth.monitor_target_add.description": "Add monitoring targets.",
+  "auth.monitor_target_add.name": "Monitoring Target Creation Permission",
+  "auth.monitor_target_edit.description": "Maintain monitoring target configuration.",
+  "auth.monitor_target_edit.name": "Monitoring Target Maintenance Permission",
+  "auth.monitor_target_lock.description": "Lock or unlock monitoring targets.",
+  "auth.monitor_target_lock.name": "Monitoring Target Lock Permission",
+  "auth.monitor_template_edit.description": "Maintain monitoring template configuration.",
+  "auth.monitor_template_edit.name": "Monitoring Template Maintenance Permission",
+  "auth.monitor_tmpexp_edit.description": "Maintain monitoring maintenance plan configuration.",
+  "auth.monitor_tmpexp_edit.name": "Monitoring Maintenance Plan Permission",
+  "auth.monitor_topo_edit.description": "Maintain monitoring topology configuration.",
+  "auth.monitor_topo_edit.name": "Monitoring Topology Maintenance Permission",
+  "auth.mq_modify.description": "Add, modify, and delete message queue topics and subscriptions.",
+  "auth.mq_modify.name": "Message Queue Management Permission",
+  "auth.newmodule_base.description": "Access basic features of the new module.",
+  "auth.newmodule_base.name": "New Module Access Permission",
+  "auth.noauth.description": "No permission.",
+  "auth.noauth.name": "No Permission",
+  "auth.notify_job_modify.description": "Add, modify, and delete scheduled tasks in notification policies.",
+  "auth.notify_job_modify.name": "Scheduled Notification Task Management Permission",
+  "auth.notify_policy_modify.description": "Add, modify, and delete notification policies.",
+  "auth.notify_policy_modify.name": "Notification Policy Management Permission",
+  "auth.operations_maintenance_manage.description": "Manage operations activities.",
+  "auth.operations_maintenance_manage.name": "Operations Activity Management Permission",
+  "auth.pbc_base.description": "Access basic features of the financial information infrastructure management platform.",
+  "auth.pbc_base.name": "Financial Information Infrastructure Platform Access Permission",
+  "auth.pbc_interface_modify.description": "Manage and operate data reporting features of the financial information infrastructure management platform.",
+  "auth.pbc_interface_modify.name": "Financial Information Infrastructure Reporting Management Permission",
+  "auth.preparation_execute.description": "Execute disaster recovery switchover plans.",
+  "auth.preparation_execute.name": "Recovery Plan Execution Permission",
+  "auth.preparation_modify.description": "Add, modify, and delete disaster recovery switchover plans.",
+  "auth.preparation_modify.name": "Recovery Plan Management Permission",
+  "auth.private_customview_modify.description": "Add, modify, and delete personal views.",
+  "auth.private_customview_modify.name": "Personal Custom View Permission",
+  "auth.production_helper.description": "Use the production deployment assistant.",
+  "auth.production_helper.name": "Production Deployment Assistant Permission",
+  "auth.project_modify.description": "Manage projects, including modification, deletion, and review.",
+  "auth.project_modify.name": "Project Management Permission",
+  "auth.project_template_manage.description": "Add, modify, and delete project templates, and save projects as templates.",
+  "auth.project_template_manage.name": "Project Template Management Permission",
+  "auth.qualify_modify.description": "Approve or reject project certification.",
+  "auth.qualify_modify.name": "Project Certification Permission",
+  "auth.rdm_base.description": "Use standard development management features.",
+  "auth.rdm_base.name": "Development Management Access Permission",
+  "auth.region_modify.description": "Add, modify, and delete regions.",
+  "auth.region_modify.name": "Region Management Permission",
+  "auth.reltype_modify.description": "Add, modify, and delete relationship types.",
+  "auth.reltype_modify.name": "Relationship Type Management Permission",
+  "auth.report_admin.description": "Use all report module management features.",
+  "auth.report_admin.name": "Report Module Super Administrator Permission",
+  "auth.report_base.description": "View reports.",
+  "auth.report_base.name": "Report View Permission",
+  "auth.report_modify.description": "View all reports and modify reports.",
+  "auth.report_modify.name": "Report Management Permission",
+  "auth.report_statement_modify.description": "Create and modify large screen dashboards.",
+  "auth.report_statement_modify.name": "Large Screen Dashboard Management Permission",
+  "auth.report_template_modify.description": "View and modify report templates.",
+  "auth.report_template_modify.name": "Report Template Management Permission",
+  "auth.resourcecenter_account_modify.description": "Add, modify, delete, and edit accounts in the resource center.",
+  "auth.resourcecenter_account_modify.name": "Resource Center Account Management Permission",
+  "auth.resourcecenter_app_view.description": "View the application list in the resource center.",
+  "auth.resourcecenter_app_view.name": "Resource Center Application List View Permission",
+  "auth.resourcecenter_modify.description": "Initialize the resource center.",
+  "auth.resourcecenter_modify.name": "Resource Center Management Permission",
+  "auth.resourcecenter_resource_view.description": "View the asset list in the resource center.",
+  "auth.resourcecenter_resource_view.name": "Resource Center Asset List View Permission",
+  "auth.resourcecenter_tag_modify.description": "Add, modify, delete, and edit tags in the resource center.",
+  "auth.resourcecenter_tag_modify.name": "Resource Center Tag Management Permission",
+  "auth.resourcepool_manage.description": "Operate the resource pool control page.",
+  "auth.resourcepool_manage.name": "Resource Pool Control Permission",
+  "auth.role_modify.description": "Add, modify, and delete roles.",
+  "auth.role_modify.name": "Role Management Permission",
+  "auth.runner_modify.description": "Add, modify, and delete Runners.",
+  "auth.runner_modify.name": "Runner Management Permission",
+  "auth.schedule_job_modify.description": "Add, modify, and delete scheduled jobs.",
+  "auth.schedule_job_modify.name": "Scheduled Job Management Permission",
+  "auth.student_modify.description": "Manage students.",
+  "auth.student_modify.name": "Student Management Permission",
+  "auth.sync_modify.description": "Manage mappings between configuration item model attributes or relationships and collected data. Configure these mappings before using automated collection.",
+  "auth.sync_modify.name": "Configuration Item Collection Mapping Management Permission",
+  "auth.system_notice_modify.description": "Add, modify, and delete system announcements.",
+  "auth.system_notice_modify.name": "System Announcement Management Permission",
+  "auth.tagent_base.description": "View Tagent agents.",
+  "auth.tagent_base.name": "Tagent View Permission",
+  "auth.tagent_manage.description": "Manage Tagent agents.",
+  "auth.tagent_manage.name": "Tagent Management Permission",
+  "auth.teacher_modify.description": "Edit, certify, and delete teachers.",
+  "auth.teacher_modify.name": "Teacher Management Permission",
+  "auth.team_modify.description": "Add, modify, and delete user groups.",
+  "auth.team_modify.name": "User Group Management Permission",
+  "auth.theme_modify.description": "Configure theme colors.",
+  "auth.theme_modify.name": "Theme Configuration Permission",
+  "auth.transaction_manage.description": "View transaction audits and modification records for all configuration items.",
+  "auth.transaction_manage.name": "Transaction Audit Permission",
+  "auth.user_modify.description": "Add, modify, and delete users.",
+  "auth.user_modify.name": "User Management Permission",
+  "auth.vip_view.description": "View the VIP indicator on VIP user avatars.",
+  "auth.vip_view.name": "VIP Indicator View Permission",
+  "auth.worktime_modify.description": "Add, modify, and delete service windows.",
+  "auth.worktime_modify.name": "Service Window Management Permission",
   "cmdb.attrtype.enum": "Enumeration",
   "cmdb.attrtype.expression": "Expression",
   "cmdb.attrtype.hyperlink": "Hyperlink",
@@ -119,6 +448,15 @@
   "cmdb.batchimport.action.update": "Update Only",
   "cmdb.batchimport.status.running": "Importing",
   "cmdb.batchimport.status.success": "Succeeded",
+  "cmdb.transaction.action.insert": "Add",
+  "cmdb.transaction.action.recover": "Restore",
+  "cmdb.transaction.action.update": "Update",
+  "cmdb.transaction.status.commited": "Committed",
+  "cmdb.transaction.status.expired": "Invalidated",
+  "cmdb.transaction.status.recover": "Restored",
+  "cmdb.transaction.status.uncommit": "Uncommitted",
+  "codehub.notifypolicy.mergerequest": "Merge Request (MR)",
+  "codehub.notifypolicy.versionlifecycle": "Version Status Management",
   "fileservice.resourceview.cluster": "File Service Cluster",
   "fileservice.resourceview.instance": "File Service Node",
   "fileservice.resourceview.management": "File Service Management",
@@ -478,7 +816,7 @@
     "between": "Between",
     "boolean": "Boolean type",
     "branch": "Branch",
-    "bug": "defect",
+    "bug": "Defect",
     "buildinauth": "Internal verification",
     "cacheandvalid": "Cache but revalidate",
     "canceled": "Canceled",
@@ -652,7 +990,7 @@
     "isreviewable": "Can approval be granted",
     "isshow": "Display or Not",
     "isunique": "Is it unique",
-    "iteration": "iteration",
+    "iteration": "Iteration",
     "jobuuid": "Timed homework UUID",
     "jsonarray": "JSON array",
     "jsonobject": "JSON Object",
@@ -752,7 +1090,7 @@
     "relname": "Relationship Name",
     "reltype": "Relationship Type",
     "reportauthoritylist": "Report Permission List",
-    "request": "demand",
+    "request": "Requirement",
     "retreat": "Withdrawal",
     "reviewable": "Is it auditable",
     "reviewer": "Reviewed by",
@@ -818,7 +1156,7 @@
     "taglist": "Label List",
     "tagsdir": "Tag Directory",
     "targetid": "Target ID",
-    "task": "task",
+    "task": "Task",
     "tbodylist": "Data List",
     "team": "group",
     "teamlist": "Group List",
@@ -831,9 +1169,9 @@
     "tenantname": "Tenant Name",
     "tenantuuid": "Tenant uuid",
     "test": "Test",
-    "testcase": "test case",
+    "testcase": "Test Case",
     "testenv": "testing environment",
-    "testplan": "test plan",
+    "testplan": "Test Plan",
     "text": "Text",
     "textarea": "Text Area",
     "textbox": "Text Box",
@@ -883,7 +1221,7 @@
     "versionname": "Version Name",
     "versionnum": "Version Number",
     "versionuuid": "Version uuid",
-    "view": "check",
+    "view": "View",
     "viewable": "Can I view it",
     "viewauthoritylist": "View Permission List",
     "viewcount": "View volume",
@@ -925,64 +1263,64 @@
   },
   "nfaa": {
     "autoexec": {
-      "getauthdisplayname": "Automated data consumption permissions",
-      "getauthintroduction": "Query tool library and custom tool library related data"
+      "getauthdisplayname": "Automation Data Access Permission",
+      "getauthintroduction": "Query tool library and custom tool library data."
     },
     "autoexec_base": {
-      "getauthdisplayname": "Automation Base Permission",
-      "getauthintroduction": "View Combination Tools"
+      "getauthdisplayname": "Automation Access Permission",
+      "getauthintroduction": "View composite tools."
     },
     "autoexec_combop_add": {
-      "getauthdisplayname": "Create new permissions for combination tools",
-      "getauthintroduction": "Add, copy, import/export composite tools"
+      "getauthdisplayname": "Composite Tool Creation Permission",
+      "getauthintroduction": "Add, copy, import, and export composite tools."
     },
     "autoexec_combop_search": {
-      "getauthdisplayname": "View permissions for combination tools",
-      "getauthintroduction": "View permissions for the combination tool menu"
+      "getauthdisplayname": "Composite Tool Viewing Permission",
+      "getauthintroduction": "View the composite tool menu."
     },
     "autoexec_create_public_job": {
       "getauthdisplayname": "External Job Creation Permission",
-      "getauthintroduction": "Create Jobs through external APIs."
+      "getauthintroduction": "Create external jobs."
     },
     "autoexec_customtemplate_modify": {
       "getauthdisplayname": "Custom Template Management Permission",
-      "getauthintroduction": "Create, edit, view, and delete Custom Templates."
+      "getauthintroduction": "Add, edit, view, and delete custom templates."
     },
     "autoexec_job_modify": {
       "getauthdisplayname": "Job Maintenance Permission",
-      "getauthintroduction": "Delete Jobs."
+      "getauthintroduction": "Delete jobs."
     },
     "autoexec_modify": {
       "getauthdisplayname": "Automation Administrator Permission",
       "getauthintroduction": "Access all functions under Automation > Configuration."
     },
     "autoexec_schedule_modify": {
-      "getauthdisplayname": "Scheduled Job Management Permission",
-      "getauthintroduction": "Manage Automation Scheduled Jobs."
+      "getauthdisplayname": "Scheduled Automation Management Permission",
+      "getauthintroduction": "Manage scheduled automation jobs."
     },
     "autoexec_script_manage": {
       "getauthdisplayname": "Tool and Custom Tool Management Permission",
-      "getauthintroduction": "View, edit, copy, test, review, activate, and delete Tools and Custom Tools."
+      "getauthintroduction": "View, edit, copy, test, approve, activate, and delete tools and custom tools."
     },
     "autoexec_script_modify": {
       "getauthdisplayname": "Tool and Custom Tool Maintenance Permission",
-      "getauthintroduction": "View, edit, copy, and test Tools and Custom Tools."
+      "getauthintroduction": "View, edit, copy, and test tools and custom tools."
     },
     "autoexec_script_search": {
-      "getauthdisplayname": "Tool and Custom Tool View Permission",
-      "getauthintroduction": "View Tools and Custom Tools."
+      "getauthdisplayname": "Tool and Custom Tool Viewing Permission",
+      "getauthintroduction": "View tools and custom tools."
     },
     "autoexec_service_manage": {
       "getauthdisplayname": "Service Catalog Management Permission",
-      "getauthintroduction": "Create, edit, and delete Service Catalogs."
+      "getauthintroduction": "Add, modify, and delete service catalogs."
     },
     "autoexec_skill_manage": {
       "getauthdisplayname": "Skill Management Permission",
-      "getauthintroduction": "Review, publish, unpublish, enable, and disable Automation Skills."
+      "getauthintroduction": "Approve, publish, unpublish, enable, and disable automation skills."
     },
     "autoexec_skill_modify": {
       "getauthdisplayname": "Skill Maintenance Permission",
-      "getauthintroduction": "View, edit, submit, and test Automation Skills."
+      "getauthintroduction": "View, edit, submit, and test automation skills."
     }
   },
   "nfac": {
@@ -3106,24 +3444,24 @@
   },
   "nfal": {
     "extra_menu_modify": {
-      "getauthdisplayname": "Extra menu management permissions",
-      "getauthintroduction": "Configure extra menus"
+      "getauthdisplayname": "Additional Menu Management Permission",
+      "getauthintroduction": "Configure additional menus."
     },
     "home_page_modify": {
-      "getauthdisplayname": "Default homepage management permissions",
-      "getauthintroduction": "Add, modify, and delete the default homepage"
+      "getauthdisplayname": "Default Home Page Management Permission",
+      "getauthintroduction": "Add, modify, and delete default home pages."
     },
     "matrix_modify": {
       "getauthdisplayname": "Matrix Management Permissions",
       "getauthintroduction": "Adding, modifying, and deleting matrices"
     },
     "notify_config_modify": {
-      "getauthdisplayname": "Notification Configuration Management Permissions",
-      "getauthintroduction": "Modify notification configuration"
+      "getauthdisplayname": "Notification Configuration Management Permission",
+      "getauthintroduction": "Modify notification configurations."
     },
     "user_export_file_modify": {
-      "getauthdisplayname": "Export file management permissions",
-      "getauthintroduction": "All users have access to view, download, and delete exported files"
+      "getauthdisplayname": "Export File Management Permission",
+      "getauthintroduction": "View, download, and delete exported files belonging to any user."
     }
   },
   "nfb": {
@@ -3164,12 +3502,12 @@
   },
   "nfcal": {
     "cmdb": {
-      "getauthdisplayname": "Basic permissions for configuration management (interface)",
-      "getauthintroduction": "Having this permission allows access to configuration and management of some underlying functions through interfaces, such as the Consumer Resource Center"
+      "getauthdisplayname": "Configuration Management API Access Permission",
+      "getauthintroduction": "Access underlying configuration management features through APIs, such as resource center data access."
     },
     "cmdb_base": {
-      "getauthdisplayname": "Basic permissions for configuration management",
-      "getauthintroduction": "Only with this permission can you view the configuration management module on the page and use the basic functions of configuration management"
+      "getauthdisplayname": "Configuration Management Access Permission",
+      "getauthintroduction": "View the configuration management module and use its basic features."
     }
   },
   "nfcc": {
@@ -3542,45 +3880,45 @@
   },
   "nfda": {
     "app_config_modify": {
-      "getauthdisplayname": "Deployment Application Configuration Maintain Permission",
-      "getauthintroduction": "View Deployment Application Configuration"
+      "getauthdisplayname": "Deployment Application Configuration Maintenance Permission",
+      "getauthintroduction": "View deployment application configurations."
     },
     "app_config_modify_share": {
       "getauthdisplayname": "Application Configuration Maintenance Permission (Backend Only)",
-      "getauthintroduction": "View application configurations and add applications; edit configurations for applications for which the user has data permission (shared across modules)"
+      "getauthintroduction": "View application configurations, add applications, and modify configurations for applications with configuration editing data permissions. Used for sharing permissions across modules."
     },
     "batchdeploy_modify": {
       "getauthdisplayname": "Batch Deployment Management Permission",
-      "getauthintroduction": "Create and delete batch deployments, and execute approved batch deployment jobs"
+      "getauthintroduction": "Create and delete batch deployments, and execute approved batch deployment jobs."
     },
     "batchdeploy_verify": {
-      "getauthdisplayname": "Batch Deployment Review Permission",
-      "getauthintroduction": "Review pending batch deployment jobs; jobs created by users with this permission are approved automatically"
+      "getauthdisplayname": "Batch Deployment Approval Permission",
+      "getauthintroduction": "Approve pending batch deployment jobs. Jobs created by users with this permission are approved automatically."
     },
     "deploy": {
-      "getauthdisplayname": "Deployment Basic Permission (API)",
-      "getauthintroduction": "View the Deployment module"
+      "getauthdisplayname": "Deployment API Access Permission",
+      "getauthintroduction": "View the deployment module."
     },
     "deploy_base": {
-      "getauthdisplayname": "Deployment Base Permission",
-      "getauthintroduction": "View the Deployment module"
+      "getauthdisplayname": "Deployment Access Permission",
+      "getauthintroduction": "View the deployment module."
     },
     "deploy_modify": {
       "getauthdisplayname": "Deployment Management Permission",
-      "getauthintroduction": "Manage deployment global parameters and define scenarios"
+      "getauthintroduction": "Manage global deployment parameters and scenario definitions."
     },
     "deploy_schedule_modify": {
-      "getauthdisplayname": "Deployment Schedule Management Permission",
-      "getauthintroduction": "Manage scheduled deployment jobs"
+      "getauthdisplayname": "Scheduled Deployment Management Permission",
+      "getauthintroduction": "Manage scheduled deployment jobs."
     },
     "pipeline_modify": {
       "getauthdisplayname": "Super Pipeline Management Permission",
-      "getauthintroduction": "Create, maintain, and delete Super Pipelines"
+      "getauthintroduction": "Create, maintain, and delete super pipelines."
     }
   },
   "nfdal": {
     "dr_base": {
-      "getauthdisplayname": "Basic permissions for disaster recovery switching"
+      "getauthdisplayname": "Disaster Recovery Switchover Access Permission"
     }
   },
   "nfdc": {
@@ -6193,7 +6531,7 @@
   },
   "nfeal": {
     "eoa_base": {
-      "getauthdisplayname": "EOA Basic Permissions"
+      "getauthdisplayname": "EOA Access Permission"
     }
   },
   "nfec": {
@@ -6647,59 +6985,59 @@
   "nfpa": {
     "batch_report_process_task": {
       "getauthdisplayname": "Batch Task Submission Permission",
-      "getauthintroduction": "Manage Batch Submit Task."
+      "getauthintroduction": "Submit tasks in batches for services the user is authorized to access."
     },
     "catalog_modify": {
       "getauthdisplayname": "Service Catalog Management Permission",
-      "getauthintroduction": "Manage Catalog."
+      "getauthintroduction": "Add, modify, and delete service catalogs."
     },
     "channeltype_modify": {
       "getauthdisplayname": "Service Type Management Permission",
-      "getauthintroduction": "Manage Service Type."
+      "getauthintroduction": "Add, modify, and delete service types."
     },
     "priority_modify": {
       "getauthdisplayname": "Priority Management Permission",
-      "getauthintroduction": "Manage Priority."
+      "getauthintroduction": "Add, modify, and delete priorities."
     },
     "process": {
-      "getauthdisplayname": "IT Service Basic Permissions (Interface)",
-      "getauthintroduction": "Having this permission allows access to IT services and query data interfaces through interfaces"
+      "getauthdisplayname": "IT Service API Access Permission",
+      "getauthintroduction": "Access IT service data query APIs."
     },
     "process_base": {
-      "getauthdisplayname": "Basic Permissions for IT Services",
-      "getauthintroduction": "View IT service related basic functions"
+      "getauthdisplayname": "IT Service Access Permission",
+      "getauthintroduction": "View basic IT service features."
     },
     "process_comment_template_modify": {
-      "getauthdisplayname": "Workflow Comment Template Management Permission",
-      "getauthintroduction": "Manage Workflow Comment Template."
+      "getauthdisplayname": "System Reply Template Management Permission",
+      "getauthintroduction": "Add, modify, and delete system reply templates."
     },
     "process_modify": {
       "getauthdisplayname": "Workflow Management Permission",
-      "getauthintroduction": "Manage Workflow."
+      "getauthintroduction": "Add, modify, and delete workflows."
     },
     "process_step_handler_modify": {
-      "getauthdisplayname": "Workflow Step Handler Management Permission",
-      "getauthintroduction": "Manage Workflow Step Handler."
+      "getauthdisplayname": "Workflow Step Management Permission",
+      "getauthintroduction": "Modify component configurations in workflow step management."
     },
     "processtask_modify": {
       "getauthdisplayname": "Task Management Permission",
-      "getauthintroduction": "Manage Task."
+      "getauthintroduction": "Hide, show, and delete tasks."
     },
     "score_template_modify": {
       "getauthdisplayname": "Rating Template Management Permission",
-      "getauthintroduction": "Manage Rating Template."
+      "getauthintroduction": "Add, modify, and delete rating templates."
     },
     "workcenter_advanced_search": {
       "getauthdisplayname": "Work Center Advanced Search Permission",
-      "getauthintroduction": "Manage Work Center Advanced Search."
+      "getauthintroduction": "Use advanced search in the work center."
     },
     "workcenter_modify": {
       "getauthdisplayname": "Work Center Management Permission",
-      "getauthintroduction": "Manage Work Center."
+      "getauthintroduction": "Add, modify, authorize, and delete system categories in the work center, and authorize built-in categories."
     },
     "workcenter_new_type": {
-      "getauthdisplayname": "Work Center New Type Permission",
-      "getauthintroduction": "Manage Work Center New Type."
+      "getauthdisplayname": "Work Center Save as New Category Permission",
+      "getauthintroduction": "Save searches as new categories in the work center. Categories saved this way are not constrained by fixed conditions and are hidden when this permission is revoked."
     }
   },
   "nfpc": {
@@ -9252,12 +9590,12 @@
   },
   "nfral": {
     "priority_manage": {
-      "getauthdisplayname": "Priority management permissions",
-      "getauthintroduction": "Adding, editing, and deleting priorities"
+      "getauthdisplayname": "Priority Management Permission",
+      "getauthintroduction": "Add, edit, and delete priorities."
     },
     "project_manage": {
-      "getauthdisplayname": "Project management permissions",
-      "getauthintroduction": "Reopen Project"
+      "getauthdisplayname": "Project Management Permission",
+      "getauthintroduction": "Reopen projects."
     },
     "template_manage": {
       "getauthdisplayname": "Project Template Management Permissions",
@@ -11969,14 +12307,14 @@
       "searchtracefacet": "Search Trace Facets"
     },
     "auth": {
-      "apmbase": "View APM",
-      "apmbaseintroduction": "View application performance, traces, and business transactions",
-      "apmbusinessmodify": "Manage APM Business Configuration",
-      "apmbusinessmodifyintroduction": "Create, update, and delete APM business definitions and result rules",
-      "apmconfigmodify": "Manage APM Configuration",
-      "apmconfigmodifyintroduction": "Manage APM sampling and retention policies",
-      "apmslomodify": "Manage APM Service Levels",
-      "apmslomodifyintroduction": "Create, update, and delete APM SLOs"
+      "apmbase": "APM Viewing Permission",
+      "apmbaseintroduction": "View application performance, distributed traces, and business transactions.",
+      "apmbusinessmodify": "APM Business Configuration Permission",
+      "apmbusinessmodifyintroduction": "Add, modify, and delete APM business definitions and business code rules.",
+      "apmconfigmodify": "APM Basic Configuration Permission",
+      "apmconfigmodifyintroduction": "Manage APM sampling and retention policies.",
+      "apmslomodify": "APM Service Level Configuration Permission",
+      "apmslomodifyintroduction": "Add, modify, and delete APM SLOs."
     },
     "exception": {
       "businessdefinitionnamerepeat": "Business definition name \"{0}\" already exists",
@@ -13984,8 +14322,8 @@
   },
   "nmcdal": {
     "diagram_graph_modify": {
-      "getauthdisplayname": "Architecture diagram editing permissions",
-      "getauthintroduction": "Edit and delete permissions for architecture diagrams"
+      "getauthdisplayname": "Architecture Diagram Editing Permission",
+      "getauthintroduction": "Edit and delete architecture diagrams."
     },
     "getdiagramlockapi": {
       "getname": "Obtain Architecture Diagram Editing Lock"
@@ -17460,8 +17798,8 @@
   },
   "nmmal": {
     "master_admin": {
-      "getauthdisplayname": "Tenant Management Super Administrator Permissions",
-      "getauthintroduction": "Perform any actions on tenant management"
+      "getauthdisplayname": "Tenant Management Super Administrator Permission",
+      "getauthintroduction": "Perform any tenant management operation."
     }
   },
   "nmmam": {
@@ -20448,16 +20786,16 @@
   },
   "nmpca": {
     "process_collection": {
-      "getauthdisplayname": "Workflow Collection Permission",
-      "getauthintroduction": "Manage Workflow Collection."
+      "getauthdisplayname": "Task Collection Usage Permission",
+      "getauthintroduction": "Submit multiple tasks using a task collection."
     },
     "process_collection_preparation_modify": {
-      "getauthdisplayname": "Workflow Collection Preparation Management Permission",
-      "getauthintroduction": "Manage Workflow Collection Preparation."
+      "getauthdisplayname": "Task Collection Plan Maintenance Permission",
+      "getauthintroduction": "Add, edit, and delete task collection plans."
     },
     "process_collection_template_modify": {
-      "getauthdisplayname": "Workflow Collection Template Management Permission",
-      "getauthintroduction": "Manage Workflow Collection Template."
+      "getauthdisplayname": "Task Collection Template Maintenance Permission",
+      "getauthintroduction": "Add, edit, and delete task collection templates."
     },
     "searchsubprocesstaskapi": {
       "description": {
@@ -23256,12 +23594,12 @@
   },
   "nmtca": {
     "portal_manage": {
-      "getauthdisplayname": "Portal management permissions",
-      "getauthintroduction": "Having this permission allows you to operate the portal management page"
+      "getauthdisplayname": "Portal Management Permission",
+      "getauthintroduction": "Use the portal management page."
     },
     "portal_widget_manage": {
-      "getauthdisplayname": "Portal widget management permissions",
-      "getauthintroduction": "Having this permission allows you to operate the portal widget management page"
+      "getauthdisplayname": "Portal Widget Management Permission",
+      "getauthintroduction": "Use the portal widget management page."
     }
   },
   "nmtcap": {
@@ -24161,7 +24499,7 @@
       "costtime": "Labor hours spent",
       "dashboardid": "Dashboard ID",
       "enddate": "Expected end",
-      "gantt": "Gantt chart Chart",
+      "gantt": "Gantt Chart",
       "groupdesc": "RDM platform",
       "groupname": "RDM",
       "isend": "Is it over",
