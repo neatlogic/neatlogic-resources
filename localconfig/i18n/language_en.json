@@ -11,6 +11,24 @@
   "ai.agent.chatagent.label": "Service Assistant",
   "ai.agent.inspectagent.description": "Generate AI risk assessments and remediation recommendations for inspection configuration differences.",
   "ai.agent.inspectagent.label": "Inspection Risk Analysis Assistant",
+  "ai.api.aichattestapi.name": "Test AI Chat",
+  "ai.api.checkaiagentenableapi.name": "Check AI Assistant Readiness",
+  "ai.api.deleteaiagentapi.name": "Delete AI Assistant",
+  "ai.api.deleteaichatprojectapi.name": "Delete AI Chat Project",
+  "ai.api.deleteaichatsessionapi.name": "Delete Chat Session",
+  "ai.api.getaiagentapi.name": "Get AI Assistant",
+  "ai.api.getaiagentauditapi.name": "Get AI Assistant Execution Audit Details",
+  "ai.api.listaichattoolapi.name": "List Available AI Chat Tools",
+  "ai.api.previewaiagentsystempromptapi.name": "Preview AI Assistant System Prompt",
+  "ai.api.saveaiagentapi.name": "Save AI Assistant",
+  "ai.api.saveaichatprojectapi.name": "Save AI Chat Project",
+  "ai.api.saveaichatsessionapi.name": "Update Chat Session Name",
+  "ai.api.searchaiagentapi.name": "Search AI Assistants",
+  "ai.api.searchaiagentauditapi.name": "Search AI Assistant Execution Audits",
+  "ai.api.searchaichatmessageapi.name": "Search User Chat Messages",
+  "ai.api.searchaichatprojectapi.name": "Search AI Chat Projects",
+  "ai.api.searchaichatsessionapi.name": "Search User Chat Sessions",
+  "ai.api.testaiagentapi.name": "Test AI Assistant",
   "ai.modeltype.chat": "Large Language Model",
   "ai.modeltype.embedding": "Embedding Model",
   "ai.modeltype.rerank": "Reranking Model",
@@ -470,11 +488,22 @@
   "cmdb.transaction.status.expired": "Invalidated",
   "cmdb.transaction.status.recover": "Restored",
   "cmdb.transaction.status.uncommit": "Uncommitted",
+  "cmdb.validator.regex.name": "Regular Expression Validator",
   "codehub.notifypolicy.mergerequest": "Merge Request (MR)",
   "codehub.notifypolicy.versionlifecycle": "Version Status Management",
+  "datawarehouse.status.aborted": "Sync Aborted",
+  "datawarehouse.status.doing": "Syncing",
+  "datawarehouse.status.done": "Sync Completed",
+  "datawarehouse.status.failed": "Sync Failed",
+  "file.type.cientityimport": "Configuration Item Import Attachment",
+  "file.type.cmdb": "Configuration Management Attachment",
+  "file.type.image": "Image File",
+  "file.type.virtualci": "Virtual Model Configuration File",
   "fileservice.resourceview.cluster": "File Service Cluster",
   "fileservice.resourceview.instance": "File Service Node",
   "fileservice.resourceview.management": "File Service Management",
+  "fulltextindex.type.integrationaudit": "Integration Audit",
+  "fulltextindex.type.workflowtask": "Workflow Task",
   "globallock.action": "Action",
   "globallock.api": "Global Lock Operation",
   "globallock.currentpage": "Current Page",
@@ -958,7 +987,7 @@
     "hasmore": "More Data Available",
     "hasparent": "Do you have a parent",
     "help": "help",
-    "hmac": "Hmac certification",
+    "hmac": "HMAC Authentication",
     "homeurl": "Application server address",
     "hostname": "Hostname",
     "icon": "Icon",
@@ -1098,7 +1127,7 @@
     "readonly": "read-only",
     "recall": "Withdraw",
     "referencecount": "Reference Count",
-    "regex": "regular expression ",
+    "regex": "Regular Expression",
     "region": "Region",
     "reject": "Reject",
     "release": "release",
@@ -1255,13 +1284,25 @@
   "enum": {
     "rdm": {
       "fullindextype": {
-        "issue": "R&D management tasks"
+        "issue": "R&D Management Tasks"
       }
     }
   },
   "knowledge.category.myfavorites": "My Favorites",
   "knowledge.category.submittedbyme": "Submitted by Me",
   "knowledge.category.waitingforreview": "Pending My Approval",
+  "mq.subscribe.exagent.description": "After Exagent changes, the collector broadcasts updates to the Exagent status in NeatLogic Monitor.",
+  "mq.topic.cientitydeletetopic.description": "Triggered after a configuration item is deleted and the change takes effect.",
+  "mq.topic.cientityinserttopic.description": "Triggered after a configuration item is created and the change takes effect.",
+  "mq.topic.cientityrecovertopic.description": "Triggered after a configuration item is restored and the change takes effect.",
+  "mq.topic.cientityrecovertopic.label": "Configuration Item Restoration",
+  "mq.topic.cientityupdatetopic.description": "Triggered after a configuration item is updated and the change takes effect.",
+  "mq.topic.exagentcontroltopic.description": "NeatLogic currently subscribes only and does not broadcast messages.",
+  "mq.topic.exagentcontroltopic.label": "Exagent Changes",
+  "mq.topic.informantincidenttopic.description": "Publish received Informant incidents to Kafka.",
+  "mq.topic.informantincidenttopic.label": "Informant Incidents",
+  "mq.topic.monitoragentcontroltopic.description": "Load, unload, and reload jobs;\nReload and unload templates;\nReload and unload actions;\nUnload metrics;\nUpdate attributes;\nNotify collectors to refresh after plugin or template changes;\nControl Exagent operations, including restart, upgrade, registration, disabling, and configuration updates.",
+  "mq.topic.monitoragentcontroltopic.label": "NeatLogic Monitor Collector Commands",
   "nf": {
     "api": {
       "example": {
@@ -6897,8 +6938,8 @@
       "formversionscenenotfoundexception": "In version: {1} of form: {0}, scenario: {2} does not exist"
     },
     "status": {
-      "doing": "Reconstruction in progress",
-      "done": "Reconstruction completed"
+      "doing": "Rebuilding",
+      "done": "Rebuild Completed"
     }
   },
   "nffs": {
@@ -14456,7 +14497,7 @@
   },
   "nmcfe": {
     "cmdbfulltextindextype": {
-      "cientity": "Configuration items"
+      "cientity": "Configuration Items"
     }
   },
   "nmcmc": {
@@ -14472,15 +14513,15 @@
       },
       "cientitydelete": {
         "desc": "Trigger notification when configuration item is deleted and takes effect",
-        "text": "Configuration item deletion"
+        "text": "Configuration Item Deletion"
       },
       "cientityinsert": {
         "desc": "Trigger notification when configuration items are added and take effect",
-        "text": "Add configuration items"
+        "text": "Configuration Item Creation"
       },
       "cientitymodify": {
         "desc": "Trigger notification when configuration items change and take effect",
-        "text": "Configuration item modification"
+        "text": "Configuration Item Update"
       },
       "cimodify": {
         "desc": "Trigger notifications when changes occur in the basic configuration, attributes, relationships, and authorization related to the model"
