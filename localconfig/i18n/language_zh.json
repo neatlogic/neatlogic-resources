@@ -13882,7 +13882,8 @@
         "param": {
           "desc": {
             "id": "id，不存在代表添加",
-            "ismenu": "是否在菜单中显示"
+            "ismenu": "是否在菜单中显示",
+            "isshowincientityquery": "是否在配置项查询中显示"
           }
         }
       }
@@ -24131,6 +24132,7 @@
       "type": "类型，attr或rel"
     },
     "cmdb": {
+      "showincientityquery": "配置项查询中显示",
       "abbrname": "简称",
       "accountidlist": "账号ID列表",
       "addid": "id，不提供代表添加",

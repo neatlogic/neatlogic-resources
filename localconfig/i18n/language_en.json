@@ -13870,7 +13870,8 @@
         "param": {
           "desc": {
             "id": "ID, does not exist to represent adding",
-            "ismenu": "Is it displayed in the menu"
+            "ismenu": "Is it displayed in the menu",
+            "isshowincientityquery": "Whether to show in CI Query"
           }
         }
       }
@@ -24095,6 +24096,7 @@
       "type": "Type, attr or rel"
     },
     "cmdb": {
+      "showincientityquery": "Show in CI Query",
       "abbrname": "Abbreviation",
       "accountidlist": "Account ID List",
       "addid": "ID, do not provide a representative to add",
