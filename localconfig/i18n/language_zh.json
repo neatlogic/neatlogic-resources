@@ -24133,6 +24133,7 @@
     },
     "cmdb": {
       "showincientityquery": "配置项查询中显示",
+      "filterbycientityqueryvisibility": "仅返回在配置项查询中显示的层级及模型，传1时过滤，不传时保持原逻辑",
       "abbrname": "简称",
       "accountidlist": "账号ID列表",
       "addid": "id，不提供代表添加",
