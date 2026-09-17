@@ -1,26 +1,4 @@
 {
-  "exception.cmdb.relfilterinvalidexception.model_missing": "The corresponding model does not exist",
-  "exception.cmdb.relfilterinvalidexception.child_model_invalid": "The child model does not belong to the corresponding model",
-  "exception.cmdb.relfilterinvalidexception.group_invalid": "The configuration item group is invalid or does not belong to the corresponding model",
-  "exception.cmdb.relfilterinvalidexception.attribute_invalid": "The attribute is invalid or does not belong to the corresponding model",
-  "exception.cmdb.relfilterinvalidexception.attribute_operator_invalid": "The attribute does not support the selected operator",
-  "exception.cmdb.relfilterinvalidexception.global_attribute_invalid": "The global attribute is invalid or does not belong to the corresponding model",
-  "exception.cmdb.relfilterinvalidexception.relation_invalid": "The relationship is invalid or its direction does not belong to the corresponding model",
-  "exception.cmdb.relfilterinvalidexception.collection_operator_invalid": "The relationship or global attribute does not support the selected operator",
-  "exception.cmdb.relfilterinvalidexception.unsupported_field": "Unsupported filter field: {0}",
-  "exception.cmdb.relfilterinvalidexception.array_required": "{0} must be an array of conditions",
-  "exception.cmdb.relfilterinvalidexception.invalid_condition": "{0} contains an invalid condition",
-  "exception.cmdb.relfilterinvalidexception.unsupported_condition_field": "The condition contains unsupported fields",
-  "exception.cmdb.relfilterinvalidexception.operator_invalid": "The filter operator does not exist",
-  "exception.cmdb.relfilterinvalidexception.direction_invalid": "The relationship direction is invalid",
-  "exception.cmdb.relfilterinvalidexception.value_required": "The filter condition requires a value",
-  "exception.cmdb.relfilterinvalidexception.range_bounds_required": "The date range requires two boundaries",
-  "exception.cmdb.relfilterinvalidexception.value_invalid": "The filter condition value is invalid",
-  "exception.cmdb.relfilterinvalidexception.value_empty": "The filter condition value must not be empty",
-  "exception.cmdb.relfilterinvalidexception.range_array_unsupported": "This attribute does not support a date range array",
-  "exception.cmdb.relfilterinvalidexception.range_bound_required": "The range condition requires at least one boundary",
-  "exception.cmdb.relfilterinvalidexception.id_invalid": "{0} must be a valid ID",
-  "exception.cmdb.relfilterinvalidexception.parameter": "Invalid filter \"{0}\": {1}",
   "ai": {
     "agent": {
       "alertactionstreamagent": {
@@ -1527,6 +1505,34 @@
     "rdm": {
       "fullindextype": {
         "issue": "R&D Management Tasks"
+      }
+    }
+  },
+  "exception": {
+    "cmdb": {
+      "relfilterinvalidexception": {
+        "array_required": "{0} must be an array of conditions",
+        "attribute_invalid": "The attribute is invalid or does not belong to the corresponding model",
+        "attribute_operator_invalid": "The attribute does not support the selected operator",
+        "child_model_invalid": "The child model does not belong to the corresponding model",
+        "collection_operator_invalid": "The relationship or global attribute does not support the selected operator",
+        "direction_invalid": "The relationship direction is invalid",
+        "global_attribute_invalid": "The global attribute is invalid or does not belong to the corresponding model",
+        "group_invalid": "The configuration item group is invalid or does not belong to the corresponding model",
+        "id_invalid": "{0} must be a valid ID",
+        "invalid_condition": "{0} contains an invalid condition",
+        "model_missing": "The corresponding model does not exist",
+        "operator_invalid": "The filter operator does not exist",
+        "parameter": "Invalid filter \"{0}\": {1}",
+        "range_array_unsupported": "This attribute does not support a date range array",
+        "range_bound_required": "The range condition requires at least one boundary",
+        "range_bounds_required": "The date range requires two boundaries",
+        "relation_invalid": "The relationship is invalid or its direction does not belong to the corresponding model",
+        "unsupported_condition_field": "The condition contains unsupported fields",
+        "unsupported_field": "Unsupported filter field: {0}",
+        "value_empty": "The filter condition value must not be empty",
+        "value_invalid": "The filter condition value is invalid",
+        "value_required": "The filter condition requires a value"
       }
     }
   },

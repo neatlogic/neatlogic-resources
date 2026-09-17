@@ -1,26 +1,4 @@
 {
-  "exception.cmdb.relfilterinvalidexception.model_missing": "对应模型不存在",
-  "exception.cmdb.relfilterinvalidexception.child_model_invalid": "子模型不属于对应模型",
-  "exception.cmdb.relfilterinvalidexception.group_invalid": "配置项分组已失效或不属于对应模型",
-  "exception.cmdb.relfilterinvalidexception.attribute_invalid": "普通属性已失效或不属于对应模型",
-  "exception.cmdb.relfilterinvalidexception.attribute_operator_invalid": "普通属性不支持所选操作符",
-  "exception.cmdb.relfilterinvalidexception.global_attribute_invalid": "全局属性已失效或不属于对应模型",
-  "exception.cmdb.relfilterinvalidexception.relation_invalid": "关系已失效或方向不属于对应模型",
-  "exception.cmdb.relfilterinvalidexception.collection_operator_invalid": "关系或全局属性不支持所选操作符",
-  "exception.cmdb.relfilterinvalidexception.unsupported_field": "不支持的过滤字段：{0}",
-  "exception.cmdb.relfilterinvalidexception.array_required": "{0}必须是条件数组",
-  "exception.cmdb.relfilterinvalidexception.invalid_condition": "{0}包含非法条件",
-  "exception.cmdb.relfilterinvalidexception.unsupported_condition_field": "条件包含不支持的字段",
-  "exception.cmdb.relfilterinvalidexception.operator_invalid": "过滤操作符不存在",
-  "exception.cmdb.relfilterinvalidexception.direction_invalid": "关系方向不正确",
-  "exception.cmdb.relfilterinvalidexception.value_required": "过滤条件缺少值",
-  "exception.cmdb.relfilterinvalidexception.range_bounds_required": "日期范围必须提供两个边界",
-  "exception.cmdb.relfilterinvalidexception.value_invalid": "过滤条件值不正确",
-  "exception.cmdb.relfilterinvalidexception.value_empty": "过滤条件值不能为空",
-  "exception.cmdb.relfilterinvalidexception.range_array_unsupported": "此属性不支持日期范围数组",
-  "exception.cmdb.relfilterinvalidexception.range_bound_required": "范围条件至少需要一个边界",
-  "exception.cmdb.relfilterinvalidexception.id_invalid": "{0}必须是有效编号",
-  "exception.cmdb.relfilterinvalidexception.parameter": "过滤条件“{0}”无效：{1}",
   "ai": {
     "agent": {
       "alertactionstreamagent": {
@@ -1527,6 +1505,34 @@
     "rdm": {
       "fullindextype": {
         "issue": "研发管理任务"
+      }
+    }
+  },
+  "exception": {
+    "cmdb": {
+      "relfilterinvalidexception": {
+        "array_required": "{0}必须是条件数组",
+        "attribute_invalid": "普通属性已失效或不属于对应模型",
+        "attribute_operator_invalid": "普通属性不支持所选操作符",
+        "child_model_invalid": "子模型不属于对应模型",
+        "collection_operator_invalid": "关系或全局属性不支持所选操作符",
+        "direction_invalid": "关系方向不正确",
+        "global_attribute_invalid": "全局属性已失效或不属于对应模型",
+        "group_invalid": "配置项分组已失效或不属于对应模型",
+        "id_invalid": "{0}必须是有效编号",
+        "invalid_condition": "{0}包含非法条件",
+        "model_missing": "对应模型不存在",
+        "operator_invalid": "过滤操作符不存在",
+        "parameter": "过滤条件“{0}”无效：{1}",
+        "range_array_unsupported": "此属性不支持日期范围数组",
+        "range_bound_required": "范围条件至少需要一个边界",
+        "range_bounds_required": "日期范围必须提供两个边界",
+        "relation_invalid": "关系已失效或方向不属于对应模型",
+        "unsupported_condition_field": "条件包含不支持的字段",
+        "unsupported_field": "不支持的过滤字段：{0}",
+        "value_empty": "过滤条件值不能为空",
+        "value_invalid": "过滤条件值不正确",
+        "value_required": "过滤条件缺少值"
       }
     }
   },
