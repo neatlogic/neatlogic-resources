@@ -1559,6 +1559,14 @@
       "workflowtask": "流程任务"
     }
   },
+  "framework": {
+    "matrixtype": {
+      "customdatasource": "自定义数据源",
+      "databaseview": "数据库视图",
+      "externaldatasource": "外部数据源",
+      "privatedatasource": "私有数据源"
+    }
+  },
   "globallock": {
     "action": "操作",
     "api": "全局锁操作",

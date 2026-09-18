@@ -1559,6 +1559,14 @@
       "workflowtask": "Workflow Task"
     }
   },
+  "framework": {
+    "matrixtype": {
+      "customdatasource": "Custom Data Source",
+      "databaseview": "Database View",
+      "externaldatasource": "External Data Source",
+      "privatedatasource": "Private Data Source"
+    }
+  },
   "globallock": {
     "action": "Action",
     "api": "Global Lock Operation",
