@@ -13943,6 +13943,7 @@
         }
       }
     },
+    "cientityragdatasetunavailableexception": "Dataset {0} is not an available configuration item knowledge base. It must be active, use the RAG_CIENTITY handler, and have an embedding model configured.",
     "deletealertlevelapi": {
       "getname": "Delete alarm level"
     },
@@ -14325,6 +14326,48 @@
             "attr": "The attributes that need to be returned. If not defined, all attributes will be returned. An empty array represents that no attributes will be returned",
             "dsl": "Query expression, Logical connective supports&&, | |, and relational operator supports:==,>=,<=,>,<,!=,like,not like, include, exclude. If you need to search for relationship or reference attribute fields, you can use a.b representation, such as env. name== STG &&(port==80 | | port==443)",
             "rel": "The relationships that need to be returned. If not defined, all relationships will be returned. An empty array represents that no relationships will be returned"
+          }
+        }
+      }
+    },
+    "searchcientityragapi": {
+      "description": "Query configuration item knowledge bases. First use action=ragList to obtain the available knowledge bases. Then select the knowledge base that best matches the current question and copy its datasetId unchanged into an action=search call. If no knowledge base is suitable, do not call search and do not guess a datasetId.",
+      "example": {
+        "raglist": {
+          "description": "Call this before searching to return the active configuration item knowledge bases available for selection.",
+          "title": "List Configuration Item Knowledge Bases"
+        },
+        "search": {
+          "description": "Replace datasetId with a real value returned by ragList and search with a natural-language question relevant to that knowledge base. maxResults and minScore are optional.",
+          "title": "Search the Selected Configuration Item Knowledge Base"
+        }
+      },
+      "getname": "Search Configuration Item Knowledge Base",
+      "input": {
+        "param": {
+          "desc": {
+            "action": "Action",
+            "datasetid": "Configuration Item Knowledge Base ID",
+            "maxresults": "Maximum Result Count",
+            "minscore": "Minimum Match Score",
+            "query": "Search Query"
+          },
+          "help": {
+            "action": "Use ragList to list selectable knowledge bases and search to query one selected knowledge base. Call ragList before search.",
+            "datasetid": "Required only when action=search. Copy the datasetId returned by ragList unchanged.",
+            "maxresults": "Used only when action=search. Optional; defaults to 5 and is normalized to the range 1 through 20.",
+            "minscore": "Used only when action=search. Optional; defaults to 1.2 and is normalized to the range 1.0 through 2.0.",
+            "query": "Required only when action=search. Provide a natural-language question or search statement relevant to the selected knowledge base."
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "action": "Action that was executed",
+            "bestmatch": "Best search match, or null when no content matches",
+            "matches": "Search matches containing content, scores, and source metadata",
+            "raglist": "Available configuration item knowledge bases returned by the ragList action"
           }
         }
       }

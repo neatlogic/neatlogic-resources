@@ -13955,6 +13955,7 @@
         }
       }
     },
+    "cientityragdatasetunavailableexception": "数据集 {0} 不是可用的配置项知识库；数据集必须已启用、处理器为 RAG_CIENTITY 且已配置向量模型",
     "deletealertlevelapi": {
       "getname": "删除告警级别"
     },
@@ -14337,6 +14338,48 @@
             "attr": "需要返回的属性，不定义则返回所有属性，空数组代表不返回任何属性",
             "dsl": "查询表达式，逻辑运算符支持&&、||，关系运算符支持：==、>=、<=、>、<、!=、like、not like、include、exclude。如果需要搜索关系或引用属性字段，可以使用a.b表示，例如env.name == \"STG\" && (port == 80 || port == 443 )",
             "rel": "需要返回的关系，不定义则返回所有关系，空数组代表不返回任何关系"
+          }
+        }
+      }
+    },
+    "searchcientityragapi": {
+      "description": "查询配置项知识库。必须先使用 action=ragList 获取可用知识库，再从 ragList 中选择最符合当前问题的知识库，并将其 datasetId 原样用于 action=search。没有合适知识库时不要执行 search，也不要猜测 datasetId。",
+      "example": {
+        "raglist": {
+          "description": "在检索前调用，返回模型可选择的已启用配置项知识库。",
+          "title": "列出配置项知识库"
+        },
+        "search": {
+          "description": "将 datasetId 替换为 ragList 返回的真实值，并使用与该知识库相关的自然语言问题进行检索；maxResults 和 minScore 均为可选参数。",
+          "title": "检索选中的配置项知识库"
+        }
+      },
+      "getname": "查询配置项知识库",
+      "input": {
+        "param": {
+          "desc": {
+            "action": "执行动作",
+            "datasetid": "配置项知识库 ID",
+            "maxresults": "最大召回数量",
+            "minscore": "最低匹配分数",
+            "query": "检索问题"
+          },
+          "help": {
+            "action": "ragList 用于列出可选知识库；search 用于检索选中的单个知识库。应先调用 ragList，再调用 search。",
+            "datasetid": "仅 action=search 时必填，必须原样使用 ragList 返回的 datasetId。",
+            "maxresults": "仅 action=search 时有效；可选，默认 5，有效范围 1 至 20，超出范围时自动规范。",
+            "minscore": "仅 action=search 时有效；可选，默认 1.2，有效范围 1.0 至 2.0，超出范围时自动规范。",
+            "query": "仅 action=search 时必填，填写与所选知识库相关的自然语言问题或检索语句。"
+          }
+        }
+      },
+      "output": {
+        "param": {
+          "desc": {
+            "action": "实际执行的动作",
+            "bestmatch": "search 动作的最优命中；无命中时为 null",
+            "matches": "search 动作的命中列表，包含内容、分数及来源元数据",
+            "raglist": "ragList 动作返回的可用配置项知识库列表"
           }
         }
       }
