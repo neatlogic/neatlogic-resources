@@ -1144,7 +1144,7 @@
     "editorname": "Modifier Name",
     "editorobject": "Modifier Object",
     "edittime": "Modification time",
-    "email": "mailbox",
+    "email": "Email",
     "emailnotify": "Email notification",
     "embed": "built-in",
     "enabledebugmode": "Do You Want to Enable Debug Mode",
@@ -1295,6 +1295,7 @@
     "networkarea": "Network Area",
     "newvalue": "New value",
     "nextfiretime": "Next activation time",
+    "no": "No",
     "noauth": "No certification required",
     "nocache": "No cache",
     "nodeinfo": "Node Information",
@@ -1320,7 +1321,7 @@
     "path": "path",
     "pc": "Computer side",
     "phase": "Phase",
-    "phone": "Telephone number",
+    "phone": "Phone Number",
     "planstarttime": "Planned Time",
     "policy": "strategy",
     "prefix": "prefix",
@@ -1488,6 +1489,7 @@
     "worker": "Assignee",
     "worktimename": "Working Time Window Name",
     "worktimeuuid": "Working Time Window UUID",
+    "yes": "Yes",
     "year": "particular year"
   },
   "config": {
@@ -24748,10 +24750,12 @@
       "smptsslenable": "Whether to use SSL",
       "team": {
         "fullpath": "Grouping full path",
+        "parentname": "Parent Name",
         "parentpathlist": "Parent Path List"
       },
       "togglemqtopicisactive": "Update message queue topic activation status",
       "user": {
+        "isvip": "VIP",
         "viplevel": "VIP level"
       },
       "userotherinfo": "Other user information",
